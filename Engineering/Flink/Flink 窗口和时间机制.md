@@ -1,0 +1,107 @@
+---
+title: "4. Flink 窗口 / 时间机制"
+type: concept
+domain: engineering/flink
+created: "2026-02-13"
+updated: "2026-02-13"
+tags:
+  - engineering/flink
+  - type/concept
+---
+# 4. Flink 窗口 / 时间机制
+
+## 一、窗口
+
+### 1.1、窗口分类
+
+将无界流按照 **时间/数据区间**，划分为多份，分别进行统计聚合。支持两种划分窗口方式：按时间驱动划分、按数据驱动划分。
+
+- 都可以划分为滚动窗口Tumbling Window和滑动窗口Sliding Window，通过窗口长度size和滑动间隔interval来区分。
+- 如果size=interval就是滚动窗口；如果size>interval就是滑动窗口。
+**组合形成四种窗口：**
+
+- **time-tumbling-window**，无重叠的时间窗口。
+- SQL：`select count(*) from table group by TUMBLE(rowtime, INTERVAL '10' MINUTE);`
+- **time-sliding-window**，有重叠的时间窗口。
+- SQL：`select count(*) from table group by HOP(rowtime, INTERVAL '10' MINUTE, INTERVAL '1' HOUR)`。
+- **count-tumbling-window**，无重叠的数据窗口。
+- 代码（flink sql未实现count window）：`countWindow(1000)`
+- **count-sliding-window**，有重叠的数据窗口。
+- 代码：`countWindow(1000, 250)`。
+**会话窗口SessionWindow**，没有窗口重叠，没有固定窗口大小，在一个固定时间内没有收到数据，即会话断开时，窗口关闭。
+
+- `select count(*) from table group by SESSION(rowtime, INTERVAL '30' SECOND);`
+- 如果超过gap 30s时间没有收到新数据，则关闭窗口。
+### 1.2、窗口机制
+
+WindowAssigner：决定数据放到哪个或哪些窗口，Flink提供了多种WindowAssigner，例如tumbling windows、sliding windows等。窗口中的数据存储在状态中，window只是一个id标识符，存储一些元数据，比如开始结束时间，但不会存储窗口中的数据。
+
+WindowTrigger：
+
+- 每个窗口都有trigger，决定窗口何时被计算或被清除，Flink定义了多种触发器：
+- **EventTimeTrigger**：如果**事件时间**Watermark大于窗口结束时间则触发。
+- **ProcessTimeTrigger**：如果**处理时间**大于窗口结束时间则触发。
+- **ContinuousEventTimeTrigger**：根据间隔时间周期性触发窗口，或**事件时间**大于窗口结束时间则触发。
+- **ContinuousProcessTimeTrigger**：根据间隔时间周期性触发窗口，如果**处理时间**大于窗口结束时间则触发。
+- **CounterTrigger**：如果**数据量**超过设定阈值则触发。
+- **PurgingTrigger**：可以将任意触发器转为Purge类型触发器，**窗口触发后数据将被清除**。
+- **DeltaTrigger**：根据数据计算出的**Delta指标是否超过threshold**判断是否触发窗口计算。
+- **NeverTrigger**：从不触发窗口。
+- 触发返回结果：
+- **CONTINUE**：窗口不执行任何操作。
+- **FIRE**：触发窗口计算，保留窗口元素，占用内存。
+- **FIRE_AND_PURGE**：触发窗口计算，删除窗口元素。
+- **PURGE**：不触发窗口计算，删除窗口元素。
+移除器Evictor：应用在WindowAssigner和Trigger之间，能够在元素进入窗口之前或Trigger触发之前被移除。
+
+- **CountEvictor**：遍历窗口并决定窗口开头的多少个元素会被移除。
+- **DeltaEvictor**：计算最后一个元素与窗口中所有元素的差值，移除差值大于等于threshold的元素。
+- **TimeEvictor**：遍历找到窗口中最大timestamp max_ts，移除比max_ts-intrerval小的所有元素。
+WindowFunction：计算窗口结果并下发。
+
+- ReduceFunction、AggregateFunction执行更高效，因为可以进行增量聚合。每个进入窗口的元素执行聚合函数并修改result值，从而降低内存消耗提升性能。
+- ProcessFunction 需要缓存窗口内的所有数据，能获取窗口内所有元素，更灵活。
+### 1.3、Keyd/Non-Keyed窗口
+
+keyed stream的窗口计算由多个task并行，相同key的元素会被分配到同一个task。
+
+non-keyed stream的窗口会被一个task执行，即并行度为1。
+
+## 二、时间机制
+
+### 2.1、时间分类
+
+事件时间EventTime，事件发生的事件，如订单下单时间，需要消息本身携带事件时间。
+
+摄入时间IngestionTime，数据进入Flink时间，以source的SystemTime为准。
+
+处理时间ProcessingTime，数据进入算子的时间，以算子的SystemTime为准。
+
+### 2.2、水印Watermark
+
+水印用于解决数据延迟和乱序问题，会流动在数据流中，并携带时间戳。
+
+水印时间=最大事件时间-最大允许延迟时间，当水印时间>=窗口结束时间时，会触发窗口计算，没有生成水印之前不会触发窗口计算。
+
+**多线程下，每个线程有一1水印，触发窗口计算以多个水印中最小的那个为准。**
+
+水印生成分为两种：周期性生成水印PeriodicWatermarks和根据特殊标记生成水印PunctuatedWatermarks。
+
+- PeriodicWatermarks：一定时间间隔（默认200ms）后产生Watermark，水印根据间隔内数据的事件时间计算。
+- PunctuatedWatermarks：检查流中携带特殊标记的数据生成水印。
+### 2.3、迟到事件
+
+数据延迟严重，迟到数据到达时窗口已经关闭并产出计算结果，Flink默认会将延迟严重的数据丢弃。
+
+使用AllowedLateness机制可以将一定时间范围延迟的数据收集起来：
+
+- `.allowedLateness(Time)`设置允许延迟的时间，Flink会在窗口关闭后一直保存窗口状态直到超过允许延迟时间，这期间迟到的数据会触发窗口重新计算，但是会占用额外内存空间，计算代价也比较大。
+- `.sideOutputLateData(lateOutputTag)`保存延迟数据给指定的outputTag。
+- ` DataStream.getSideOutput(lateOutputTag)`获取延迟数据。
+### 2.4、空闲数据源
+
+数据少，一段时间内没有数据产生，也就没有水印产生，导致下游依赖水印的一些操作就会出问题。
+
+某个算子上游有多个算子，水印取两个上游的中的较小值，如果某一个上游因为缺少数据没有生成水印，就会出现EventTime倾斜，导致下游无法触发计算。
+
+通过`WatermarkStrategy.withIdleness()`方法配置超时事件，在配置的时间内流中无数据到达，就将该流标记为空闲，下游算子就不需要等待该流水印到来。

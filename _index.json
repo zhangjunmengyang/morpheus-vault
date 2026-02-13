@@ -1,4646 +1,4212 @@
 [
   {
-    "path": "Hi！我是 Morpheus.md",
-    "title": "Hi！我是 Morpheus",
-    "category": "其他",
+    "path": "00-Home/HOME.md",
+    "title": "HOME",
+    "domain": "home",
+    "type": "moc",
     "tags": [
-      "Agent",
-      "KL散度",
-      "LLM",
-      "MCTS",
-      "Multi-Agent"
+      "type/reference"
     ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Hi！我是 Morpheus"
+    "created": "",
+    "updated": "",
+    "filename": "HOME"
   },
   {
-    "path": "3. 认知/3. 认知.md",
-    "title": "3. 认知",
-    "category": "认知",
+    "path": "00-Home/Inbox.md",
+    "title": "Inbox",
+    "domain": "home",
+    "type": "reference",
     "tags": [
-      "认知"
+      "type/reference"
     ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "3. 认知"
+    "created": "",
+    "updated": "",
+    "filename": "Inbox"
   },
   {
-    "path": "3. 认知/AI 伦理和治理.md",
-    "title": "AI 伦理和治理",
-    "category": "认知",
-    "tags": [
-      "AI伦理",
-      "认知"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "AI 伦理和治理"
-  },
-  {
-    "path": "3. 认知/AI 安全及隐私保护.md",
-    "title": "AI 安全及隐私保护",
-    "category": "认知",
-    "tags": [
-      "AI安全",
-      "隐私保护"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "AI 安全及隐私保护"
-  },
-  {
-    "path": "3. 认知/AI 应用工程师职业路径.md",
-    "title": "AI 应用工程师职业路径",
-    "category": "认知",
-    "tags": [
-      "AI伦理",
-      "AI安全",
-      "Agent",
-      "AutoGen",
-      "Embedding"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "AI 应用工程师职业路径"
-  },
-  {
-    "path": "3. 认知/AI 思考.md",
+    "path": "AI/AI 思考.md",
     "title": "AI 思考",
-    "category": "认知",
+    "domain": "ai",
+    "type": "thought",
     "tags": [
-      "LLM",
-      "认知"
+      "ai",
+      "type/thought"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "AI 思考"
   },
   {
-    "path": "3. 认知/AI 时代 业务这么做？.md",
+    "path": "AI/AI 时代 业务这么做？.md",
     "title": "AI 时代 业务这么做？",
-    "category": "认知",
+    "domain": "ai",
+    "type": "concept",
     "tags": [
-      "LLM",
-      "认知"
+      "ai",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "AI 时代 业务这么做？"
   },
   {
-    "path": "3. 认知/AI.md",
+    "path": "AI/AI 综合.md",
     "title": "AI",
-    "category": "认知",
+    "domain": "ai",
+    "type": "concept",
     "tags": [
-      "认知"
+      "ai",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "AI"
+    "filename": "AI 综合"
   },
   {
-    "path": "3. 认知/Agent or Workflow？.md",
-    "title": "Agent or Workflow？",
-    "category": "认知",
+    "path": "AI/Agent/Agentic-RL/Agentic RL Survey.md",
+    "title": "The Landscape of Agentic Reinforcement Learning for LLMs: A Survey",
+    "domain": "ai/agent/agentic-rl",
+    "type": "paper",
     "tags": [
-      "Agent",
-      "Workflow"
+      "ai/agent/agentic-rl",
+      "type/paper"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Agent or Workflow？"
+    "filename": "Agentic RL Survey"
   },
   {
-    "path": "3. 认知/Agent vs MAS.md",
-    "title": "Agent vs MAS",
-    "category": "认知",
-    "tags": [
-      "Agent",
-      "MCP",
-      "Multi-Agent",
-      "上下文",
-      "产品方法论"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Agent vs MAS"
-  },
-  {
-    "path": "3. 认知/Agent 简历描述重点.md",
-    "title": "Agent 简历描述重点",
-    "category": "认知",
-    "tags": [
-      "Agent",
-      "LLM",
-      "Workflow",
-      "产品方法论",
-      "多模态"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Agent 简历描述重点"
-  },
-  {
-    "path": "3. 认知/产品方法论整理.md",
-    "title": "产品方法论整理",
-    "category": "认知",
-    "tags": [
-      "AI安全",
-      "PPO",
-      "产品方法论",
-      "优化",
-      "激活函数"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "产品方法论整理"
-  },
-  {
-    "path": "3. 认知/关于 AI 学习提效思考.md",
-    "title": "关于 AI 学习提效思考",
-    "category": "认知",
-    "tags": [
-      "产品方法论",
-      "优化",
-      "矩阵"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "关于 AI 学习提效思考"
-  },
-  {
-    "path": "3. 认知/分析 Agent 演进的一些思考.md",
-    "title": "分析 Agent 演进的一些思考",
-    "category": "认知",
-    "tags": [
-      "AI安全",
-      "Agent",
-      "LLM",
-      "Planner",
-      "SQL"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "分析 Agent 演进的一些思考"
-  },
-  {
-    "path": "3. 认知/如何给人深度科普 MCP.md",
-    "title": "如何给人深度科普 MCP",
-    "category": "认知",
-    "tags": [
-      "CDC",
-      "Function Calling",
-      "LLM",
-      "MCP",
-      "状态管理"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "如何给人深度科普 MCP"
-  },
-  {
-    "path": "3. 认知/岔路口，一步步思考.md",
-    "title": "岔路口，一步步思考",
-    "category": "认知",
-    "tags": [
-      "上下文",
-      "认知"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "岔路口，一步步思考"
-  },
-  {
-    "path": "3. 认知/晋升注意点.md",
-    "title": "晋升注意点",
-    "category": "认知",
-    "tags": [
-      "Shuffle",
-      "Spark",
-      "分布式训练",
-      "晋升",
-      "量化"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "晋升注意点"
-  },
-  {
-    "path": "3. 认知/战役保障 自动化_智能化 思考/依赖项——压测流程.md",
-    "title": "依赖项——压测流程",
-    "category": "认知",
-    "tags": [
-      "Doris",
-      "SQL",
-      "产品方法论"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "依赖项——压测流程"
-  },
-  {
-    "path": "3. 认知/战役保障 自动化_智能化 思考/战役保障 自动化_智能化 思考.md",
-    "title": "战役保障 自动化/智能化 思考",
-    "category": "认知",
-    "tags": [
-      "Doris",
-      "Flink",
-      "Hive",
-      "LLM",
-      "SQL"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "战役保障 自动化_智能化 思考"
-  },
-  {
-    "path": "3. 认知/LLM 如何落地推荐系统？/LLM 如何落地推荐系统？.md",
-    "title": "LLM 如何落地推荐系统？",
-    "category": "认知",
-    "tags": [
-      "LLM",
-      "推荐系统"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "LLM 如何落地推荐系统？"
-  },
-  {
-    "path": "3. 认知/LLM 如何落地推荐系统？/推荐系统.md",
-    "title": "推荐系统",
-    "category": "认知",
-    "tags": [
-      "LLM",
-      "推荐系统"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "推荐系统"
-  },
-  {
-    "path": "3. 认知/pmo 模版/01-项目概览.md",
-    "title": "01-项目概览",
-    "category": "认知",
-    "tags": [
-      "PMO",
-      "认知"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "01-项目概览"
-  },
-  {
-    "path": "3. 认知/pmo 模版/02-范围&需求.md",
-    "title": "02-范围&需求",
-    "category": "认知",
-    "tags": [
-      "PMO",
-      "认知"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "02-范围&需求"
-  },
-  {
-    "path": "3. 认知/pmo 模版/05-执行&交付.md",
-    "title": "05-执行&交付",
-    "category": "认知",
-    "tags": [
-      "PMO",
-      "认知"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "05-执行&交付"
-  },
-  {
-    "path": "3. 认知/pmo 模版/09-度量&监控.md",
-    "title": "09-度量&监控",
-    "category": "认知",
-    "tags": [
-      "PMO",
-      "认知"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "09-度量&监控"
-  },
-  {
-    "path": "3. 认知/pmo 模版/10-知识沉淀.md",
-    "title": "10-知识沉淀",
-    "category": "认知",
-    "tags": [
-      "PMO",
-      "认知"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "10-知识沉淀"
-  },
-  {
-    "path": "3. 认知/pmo 模版/pmo 模版.md",
-    "title": "pmo 模版",
-    "category": "认知",
-    "tags": [
-      "PMO",
-      "认知"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "pmo 模版"
-  },
-  {
-    "path": "3. 认知/pmo 模版/04-方案&设计/04-方案&设计.md",
-    "title": "04-方案&设计",
-    "category": "认知",
-    "tags": [
-      "PMO",
-      "认知"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "04-方案&设计"
-  },
-  {
-    "path": "3. 认知/pmo 模版/04-方案&设计/PRD.md",
-    "title": "PRD",
-    "category": "认知",
-    "tags": [
-      "PMO",
-      "认知"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "PRD"
-  },
-  {
-    "path": "3. 认知/pmo 模版/04-方案&设计/技术方案.md",
-    "title": "技术方案",
-    "category": "认知",
-    "tags": [
-      "PMO",
-      "认知"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "技术方案"
-  },
-  {
-    "path": "3. 认知/pmo 模版/04-方案&设计/设计稿.md",
-    "title": "设计稿",
-    "category": "认知",
-    "tags": [
-      "PMO",
-      "认知"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "设计稿"
-  },
-  {
-    "path": "3. 认知/pmo 模版/08-流程&规范/08-流程&规范.md",
-    "title": "08-流程&规范",
-    "category": "认知",
-    "tags": [
-      "PMO",
-      "认知"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "08-流程&规范"
-  },
-  {
-    "path": "3. 认知/pmo 模版/08-流程&规范/项目加班登记.md",
-    "title": "项目加班登记",
-    "category": "认知",
-    "tags": [
-      "PMO",
-      "认知"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "项目加班登记"
-  },
-  {
-    "path": "3. 认知/pmo 模版/07-风险&问题/01-风险登记册.md",
-    "title": "01-风险登记册",
-    "category": "认知",
-    "tags": [
-      "PMO",
-      "概率论",
-      "矩阵"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "01-风险登记册"
-  },
-  {
-    "path": "3. 认知/pmo 模版/07-风险&问题/02-问题登记册.md",
-    "title": "02-问题登记册",
-    "category": "认知",
-    "tags": [
-      "PMO",
-      "认知"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "02-问题登记册"
-  },
-  {
-    "path": "3. 认知/pmo 模版/07-风险&问题/07-风险&问题.md",
-    "title": "07-风险&问题",
-    "category": "认知",
-    "tags": [
-      "PMO",
-      "认知"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "07-风险&问题"
-  },
-  {
-    "path": "3. 认知/pmo 模版/06-沟通&协作/06-沟通&协作.md",
-    "title": "06-沟通&协作",
-    "category": "认知",
-    "tags": [
-      "PMO",
-      "认知"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "06-沟通&协作"
-  },
-  {
-    "path": "3. 认知/pmo 模版/06-沟通&协作/日会.md",
-    "title": "日会",
-    "category": "认知",
-    "tags": [
-      "PMO",
-      "认知"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "日会"
-  },
-  {
-    "path": "3. 认知/pmo 模版/03-计划&进度/03-计划&进度.md",
-    "title": "03-计划&进度",
-    "category": "认知",
-    "tags": [
-      "PMO",
-      "认知"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "03-计划&进度"
-  },
-  {
-    "path": "3. 认知/pmo 模版/03-计划&进度/项目节奏.md",
-    "title": "项目节奏",
-    "category": "认知",
-    "tags": [
-      "PMO",
-      "认知"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "项目节奏"
-  },
-  {
-    "path": "3. 认知/述职_晋升/2023 述职自评.md",
-    "title": "2023 述职自评",
-    "category": "认知",
-    "tags": [
-      "LLM",
-      "产品方法论",
-      "晋升",
-      "自评",
-      "述职"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "2023 述职自评"
-  },
-  {
-    "path": "3. 认知/述职_晋升/2024 述职自评.md",
-    "title": "2024 述职自评",
-    "category": "认知",
-    "tags": [
-      "Doris",
-      "SQL",
-      "产品方法论",
-      "晋升",
-      "窗口机制"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "2024 述职自评"
-  },
-  {
-    "path": "3. 认知/述职_晋升/2025 H1 自评.md",
-    "title": "2025 H1 自评",
-    "category": "认知",
-    "tags": [
-      "Agent",
-      "晋升",
-      "自评",
-      "述职"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "2025 H1 自评"
-  },
-  {
-    "path": "3. 认知/述职_晋升/2025 年终自评.md",
-    "title": "2025 年终自评",
-    "category": "认知",
-    "tags": [
-      "Agent",
-      "LLM",
-      "Multi-Agent",
-      "SQL",
-      "产品方法论"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "2025 年终自评"
-  },
-  {
-    "path": "3. 认知/述职_晋升/述职_晋升.md",
-    "title": "述职/晋升",
-    "category": "认知",
-    "tags": [
-      "晋升",
-      "述职"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "述职_晋升"
-  },
-  {
-    "path": "1. AI/1. AI.md",
-    "title": "1. AI",
-    "category": "AI",
-    "tags": [
-      "Agent",
-      "Function Calling",
-      "GPT",
-      "LLM",
-      "RAG"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "1. AI"
-  },
-  {
-    "path": "1. AI/2、基础知识/2、基础知识.md",
-    "title": "2、基础知识",
-    "category": "AI",
-    "tags": [
-      "Hugging Face",
-      "LLM"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "2、基础知识"
-  },
-  {
-    "path": "1. AI/2、基础知识/Attention 详解.md",
-    "title": "Attention 详解",
-    "category": "AI",
-    "tags": [
-      "Attention",
-      "CV",
-      "LLM",
-      "LSTM",
-      "NLP"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Attention 详解"
-  },
-  {
-    "path": "1. AI/2、基础知识/GELU.md",
-    "title": "GELU",
-    "category": "AI",
-    "tags": [
-      "GELU",
-      "ReLU",
-      "概率论",
-      "激活函数"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "GELU"
-  },
-  {
-    "path": "1. AI/2、基础知识/MOE 基础（一）.md",
-    "title": "MOE 基础（一）",
-    "category": "AI",
-    "tags": [
-      "Attention",
-      "LLM",
-      "LSTM",
-      "MoE",
-      "Self-Attention"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "MOE 基础（一）"
-  },
-  {
-    "path": "1. AI/2、基础知识/PPL 困惑度.md",
-    "title": "PPL 困惑度",
-    "category": "AI",
-    "tags": [
-      "困惑度",
-      "概率论"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "PPL 困惑度"
-  },
-  {
-    "path": "1. AI/2、基础知识/PPO.md",
-    "title": "PPO",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "PPO",
-      "RLHF",
-      "学习率",
-      "强化学习"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "PPO"
-  },
-  {
-    "path": "1. AI/2、基础知识/学习率.md",
-    "title": "学习率",
-    "category": "AI",
-    "tags": [
-      "CV",
-      "NLP",
-      "TRL",
-      "学习率",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "学习率"
-  },
-  {
-    "path": "1. AI/2、基础知识/机器学习.md",
-    "title": "机器学习",
-    "category": "AI",
-    "tags": [
-      "AI",
-      "ML基础"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "机器学习"
-  },
-  {
-    "path": "1. AI/2、基础知识/深度学习.md",
-    "title": "深度学习",
-    "category": "AI",
-    "tags": [
-      "AI",
-      "ML基础"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "深度学习"
-  },
-  {
-    "path": "1. AI/2、基础知识/Transformer/Transformer 位置编码详解.md",
-    "title": "Transformer 位置编码详解",
-    "category": "AI",
-    "tags": [
-      "Attention",
-      "BERT",
-      "Embedding",
-      "Self-Attention",
-      "Transformer"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Transformer 位置编码详解"
-  },
-  {
-    "path": "1. AI/2、基础知识/Transformer/Transformer 通识.md",
-    "title": "Transformer 通识",
-    "category": "AI",
-    "tags": [
-      "BERT",
-      "GPT",
-      "Hugging Face",
-      "T5",
-      "TRL"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Transformer 通识"
-  },
-  {
-    "path": "1. AI/2、基础知识/Transformer/Transformer.md",
-    "title": "Transformer",
-    "category": "AI",
-    "tags": [
-      "Hugging Face",
-      "LLM",
-      "Transformer"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Transformer"
-  },
-  {
-    "path": "1. AI/2、基础知识/Prompt Engineering/Prompt Engineering.md",
-    "title": "Prompt Engineering",
-    "category": "AI",
-    "tags": [
-      "GPT",
-      "LLM",
-      "Prompt Engineering",
-      "RAG",
-      "RLHF"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Prompt Engineering"
-  },
-  {
-    "path": "1. AI/2、基础知识/Prompt Engineering/Tools.md",
-    "title": "Tools",
-    "category": "AI",
-    "tags": [
-      "Prompt",
-      "Prompt Engineering"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Tools"
-  },
-  {
-    "path": "1. AI/2、基础知识/Prompt Engineering/prompt 攻击.md",
-    "title": "prompt 攻击",
-    "category": "AI",
-    "tags": [
-      "GPT",
-      "Prompt",
-      "Prompt Engineering"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "prompt 攻击"
-  },
-  {
-    "path": "1. AI/2、基础知识/Prompt Engineering/数据合成.md",
-    "title": "数据合成",
-    "category": "AI",
-    "tags": [
-      "Prompt",
-      "Prompt Engineering",
-      "数据合成"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "数据合成"
-  },
-  {
-    "path": "1. AI/2、基础知识/知识点/损失函数.md",
-    "title": "损失函数",
-    "category": "AI",
-    "tags": [
-      "交叉熵",
-      "优化",
-      "损失函数"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "损失函数"
-  },
-  {
-    "path": "1. AI/2、基础知识/知识点/数据预处理.md",
-    "title": "数据预处理",
-    "category": "AI",
-    "tags": [
-      "矩阵",
-      "训练",
-      "降维"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "数据预处理"
-  },
-  {
-    "path": "1. AI/2、基础知识/知识点/机器学习.md",
-    "title": "机器学习",
-    "category": "AI",
-    "tags": [
-      "PPO",
-      "分布式训练",
-      "概率论",
-      "特征工程",
-      "监督学习"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "机器学习"
-  },
-  {
-    "path": "1. AI/2、基础知识/知识点/概率统计.md",
-    "title": "概率统计",
-    "category": "AI",
-    "tags": [
-      "AI",
-      "ML基础",
-      "概率论"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "概率统计"
-  },
-  {
-    "path": "1. AI/2、基础知识/知识点/模型评估.md",
-    "title": "模型评估",
-    "category": "AI",
-    "tags": [
-      "MAE",
-      "PPO",
-      "RAG",
-      "ViT",
-      "矩阵"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "模型评估"
-  },
-  {
-    "path": "1. AI/2、基础知识/知识点/激活函数.md",
-    "title": "激活函数",
-    "category": "AI",
-    "tags": [
-      "CNN",
-      "RNN",
-      "ReLU",
-      "损失函数",
-      "概率论"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "激活函数"
-  },
-  {
-    "path": "1. AI/2、基础知识/知识点/特征工程.md",
-    "title": "特征工程",
-    "category": "AI",
-    "tags": [
-      "AI",
-      "ML基础",
-      "特征工程"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "特征工程"
-  },
-  {
-    "path": "1. AI/2、基础知识/知识点/知识点.md",
-    "title": "知识点",
-    "category": "AI",
-    "tags": [
-      "AI",
-      "ML基础"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "知识点"
-  },
-  {
-    "path": "1. AI/2、基础知识/知识点/经典模型.md",
-    "title": "经典模型",
-    "category": "AI",
-    "tags": [
-      "GAN",
-      "LSTM",
-      "RNN",
-      "强化学习",
-      "概率论"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "经典模型"
-  },
-  {
-    "path": "1. AI/2、基础知识/知识点/过拟合欠拟合.md",
-    "title": "过拟合欠拟合",
-    "category": "AI",
-    "tags": [
-      "学习率",
-      "概率论",
-      "欠拟合",
-      "激活函数",
-      "过拟合"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "过拟合欠拟合"
-  },
-  {
-    "path": "1. AI/2、基础知识/知识点/降维.md",
-    "title": "降维",
-    "category": "AI",
-    "tags": [
-      "RAG",
-      "记忆模块",
-      "降维"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "降维"
-  },
-  {
-    "path": "1. AI/1、数学/1、数学.md",
-    "title": "1、数学",
-    "category": "AI",
-    "tags": [
-      "AI",
-      "LLM",
-      "数学基础"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "1、数学"
-  },
-  {
-    "path": "1. AI/1、数学/三角函数速查.md",
-    "title": "三角函数速查",
-    "category": "AI",
-    "tags": [
-      "CV",
-      "三角函数"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "三角函数速查"
-  },
-  {
-    "path": "1. AI/1、数学/信息论.md",
-    "title": "信息论",
-    "category": "AI",
-    "tags": [
-      "AI",
-      "信息论",
-      "数学基础"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "信息论"
-  },
-  {
-    "path": "1. AI/1、数学/向量微积分.md",
-    "title": "向量微积分",
-    "category": "AI",
-    "tags": [
-      "CV",
-      "GAN",
-      "微积分",
-      "矩阵"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "向量微积分"
-  },
-  {
-    "path": "1. AI/1、数学/概率与分布.md",
-    "title": "概率与分布",
-    "category": "AI",
-    "tags": [
-      "AI",
-      "数学基础",
-      "概率论"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "概率与分布"
-  },
-  {
-    "path": "1. AI/1、数学/矩阵分解.md",
-    "title": "矩阵分解",
-    "category": "AI",
-    "tags": [
-      "AI",
-      "数学基础",
-      "矩阵"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "矩阵分解"
-  },
-  {
-    "path": "1. AI/1、数学/线性代数.md",
-    "title": "线性代数",
-    "category": "AI",
-    "tags": [
-      "Join",
-      "T5",
-      "矩阵",
-      "线性代数"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "线性代数"
-  },
-  {
-    "path": "1. AI/1、数学/解析几何.md",
-    "title": "解析几何",
-    "category": "AI",
-    "tags": [
-      "PMO",
-      "矩阵",
-      "解析几何"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "解析几何"
-  },
-  {
-    "path": "1. AI/1、数学/连续优化.md",
-    "title": "连续优化",
-    "category": "AI",
-    "tags": [
-      "AI",
-      "优化",
-      "数学基础"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "连续优化"
-  },
-  {
-    "path": "1. AI/3、LLM/3、LLM.md",
-    "title": "3、LLM",
-    "category": "AI",
-    "tags": [
-      "AI安全",
-      "Agent",
-      "AutoGen",
-      "BERT",
-      "DPO"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "3、LLM"
-  },
-  {
-    "path": "1. AI/3、LLM/Prompt engineering.md",
-    "title": "Prompt engineering",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "Prompt",
-      "Prompt Engineering"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Prompt engineering"
-  },
-  {
-    "path": "1. AI/3、LLM/SFT.md",
-    "title": "SFT",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "LoRA",
-      "QLoRA",
-      "SFT",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "SFT"
-  },
-  {
-    "path": "1. AI/3、LLM/推理框架/Ollama.md",
-    "title": "Ollama",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "LLaMA",
-      "Ollama"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Ollama"
-  },
-  {
-    "path": "1. AI/3、LLM/推理框架/vLLM.md",
-    "title": "vLLM",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "vLLM"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "vLLM"
-  },
-  {
-    "path": "1. AI/3、LLM/推理框架/推理框架.md",
-    "title": "推理框架",
-    "category": "AI",
-    "tags": [
-      "AI",
-      "LLM"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "推理框架"
-  },
-  {
-    "path": "1. AI/3、LLM/应用层框架/应用层框架.md",
-    "title": "应用层框架",
-    "category": "AI",
-    "tags": [
-      "AI",
-      "LLM"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "应用层框架"
-  },
-  {
-    "path": "1. AI/3、LLM/应用层框架/Embedding/Embedding 选型.md",
-    "title": "Embedding 选型",
-    "category": "AI",
-    "tags": [
-      "BERT",
-      "Embedding",
-      "Hugging Face",
-      "LLM",
-      "NLP"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Embedding 选型"
-  },
-  {
-    "path": "1. AI/3、LLM/应用层框架/Embedding/Embedding.md",
-    "title": "Embedding",
-    "category": "AI",
-    "tags": [
-      "Checkpoint",
-      "Embedding",
-      "Hugging Face",
-      "LLM",
-      "RAG"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Embedding"
-  },
-  {
-    "path": "1. AI/3、LLM/应用层框架/Embedding/大模型线上排查 SOP.md",
-    "title": "大模型线上排查 SOP",
-    "category": "AI",
-    "tags": [
-      "Embedding",
-      "LLM",
-      "上下文",
-      "产品方法论"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "大模型线上排查 SOP"
-  },
-  {
-    "path": "1. AI/3、LLM/应用层框架/Synthetic Data/DataFlow.md",
-    "title": "DataFlow",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "数据合成"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "DataFlow"
-  },
-  {
-    "path": "1. AI/3、LLM/应用层框架/Synthetic Data/Synthetic Data.md",
-    "title": "Synthetic Data",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "数据合成"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Synthetic Data"
-  },
-  {
-    "path": "1. AI/3、LLM/MLLM/DeepSeek-OCR.md",
-    "title": "DeepSeek-OCR",
-    "category": "AI",
-    "tags": [
-      "DeepSeek",
-      "LLM",
-      "MLLM",
-      "OCR"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "DeepSeek-OCR"
-  },
-  {
-    "path": "1. AI/3、LLM/MLLM/MLLM.md",
-    "title": "MLLM",
-    "category": "AI",
-    "tags": [
-      "Attention",
-      "BERT",
-      "CLIP",
-      "Diffusion",
-      "LLM"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "MLLM"
-  },
-  {
-    "path": "1. AI/3、LLM/MLLM/Seed1.5-VL.md",
-    "title": "Seed1.5-VL",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "MLLM"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Seed1.5-VL"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/OpenRLHF.md",
-    "title": "OpenRLHF",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "OpenRLHF",
-      "RLHF",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "OpenRLHF"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/强化微调框架.md",
-    "title": "强化微调框架",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "OpenRLHF",
-      "RLHF",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "强化微调框架"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/verl/Agentic RL Training.md",
+    "path": "AI/Agent/Agentic-RL/Agentic RL Training.md",
     "title": "Agentic RL Training",
-    "category": "AI",
+    "domain": "ai/agent/agentic-rl",
+    "type": "concept",
     "tags": [
-      "Agent",
-      "LLM",
-      "verl",
-      "微调"
+      "ai/agent/agentic-rl",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "Agentic RL Training"
   },
   {
-    "path": "1. AI/3、LLM/强化微调框架/verl/HybridFlow.md",
-    "title": "HybridFlow",
-    "category": "AI",
+    "path": "AI/Agent/Agentic-RL/PVPO 论文.md",
+    "title": "PVPO: Pre-Estimated Value-Based Policy Optimization for Agentic   Reasoning",
+    "domain": "ai/agent/agentic-rl",
+    "type": "paper",
     "tags": [
-      "LLM",
-      "verl",
-      "微调"
+      "ai/agent/agentic-rl",
+      "type/paper"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "HybridFlow"
+    "filename": "PVPO 论文"
   },
   {
-    "path": "1. AI/3、LLM/强化微调框架/verl/Off Policy 异步训练器.md",
-    "title": "Off Policy 异步训练器",
-    "category": "AI",
+    "path": "AI/Agent/Agentic-RL/R-4B 论文.md",
+    "title": "R-4B: Incentivizing General-Purpose Auto-Thinking Capability in MLLMs   via Bi-Mode Annealing and Reinforce Learning",
+    "domain": "ai/agent/agentic-rl",
+    "type": "paper",
     "tags": [
-      "LLM",
-      "verl",
-      "微调",
-      "训练"
+      "ai/agent/agentic-rl",
+      "type/paper"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Off Policy 异步训练器"
+    "filename": "R-4B 论文"
   },
   {
-    "path": "1. AI/3、LLM/强化微调框架/verl/Post-Training 数据准备.md",
-    "title": "Post-Training 数据准备",
-    "category": "AI",
+    "path": "AI/Agent/Agentic-RL/UI-TARS-2 论文.md",
+    "title": "UI-TARS-2 Technical Report: Advancing GUI Agent with Multi-Turn   Reinforcement Learning",
+    "domain": "ai/agent/agentic-rl",
+    "type": "paper",
     "tags": [
-      "LLM",
-      "verl",
-      "微调"
+      "ai/agent/agentic-rl",
+      "type/paper"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Post-Training 数据准备"
+    "filename": "UI-TARS-2 论文"
   },
   {
-    "path": "1. AI/3、LLM/强化微调框架/verl/RL with Lora.md",
-    "title": "RL with Lora",
-    "category": "AI",
+    "path": "AI/Agent/Agentic-RL/VerlTool 论文.md",
+    "title": "VerlTool: Towards Holistic Agentic Reinforcement Learning with Tool Use",
+    "domain": "ai/agent/agentic-rl",
+    "type": "paper",
     "tags": [
-      "LLM",
-      "LoRA",
-      "PPO",
-      "verl",
-      "微调"
+      "ai/agent/agentic-rl",
+      "type/paper"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "RL with Lora"
+    "filename": "VerlTool 论文"
   },
   {
-    "path": "1. AI/3、LLM/强化微调框架/verl/Reward Function.md",
-    "title": "Reward Function",
-    "category": "AI",
+    "path": "AI/Agent/Agentic-RL/WebPilot 论文.md",
+    "title": "WebPilot: A Versatile and Autonomous Multi-Agent System for Web Task Execution with Strategic Exploration",
+    "domain": "ai/agent/agentic-rl",
+    "type": "paper",
     "tags": [
-      "LLM",
-      "verl",
-      "微调"
+      "ai/agent/agentic-rl",
+      "type/paper"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Reward Function"
+    "filename": "WebPilot 论文"
   },
   {
-    "path": "1. AI/3、LLM/强化微调框架/verl/Sandbox Fusion 沙箱.md",
-    "title": "Sandbox Fusion 沙箱",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "verl",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Sandbox Fusion 沙箱"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/verl/grafana 看板.md",
-    "title": "grafana 看板",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "verl",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "grafana 看板"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/verl/verl 训练参数.md",
-    "title": "verl 训练参数",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "verl",
-      "微调",
-      "训练"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "verl 训练参数"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/verl/verl.md",
-    "title": "verl",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "verl",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "verl"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/verl/多轮 RL 训练交互.md",
-    "title": "多轮 RL 训练交互",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "verl",
-      "微调",
-      "训练"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "多轮 RL 训练交互"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/verl/性能调优.md",
-    "title": "性能调优",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "verl",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "性能调优"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/verl/硬件资源预估.md",
-    "title": "硬件资源预估",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "verl",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "硬件资源预估"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/verl/训练后端.md",
-    "title": "训练后端",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "Megatron-LM",
-      "verl",
-      "微调",
-      "训练"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "训练后端"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/verl/配置文件.md",
-    "title": "配置文件",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "verl",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "配置文件"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/verl/算法/CollabLLM.md",
-    "title": "CollabLLM",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "verl",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "CollabLLM"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/verl/算法/DAPO.md",
-    "title": "DAPO",
-    "category": "AI",
-    "tags": [
-      "DAPO",
-      "LLM",
-      "verl",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "DAPO"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/verl/算法/GPG.md",
-    "title": "GPG",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "verl",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "GPG"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/verl/算法/GRPO.md",
-    "title": "GRPO",
-    "category": "AI",
-    "tags": [
-      "GRPO",
-      "LLM",
-      "verl",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "GRPO"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/verl/算法/OPO.md",
-    "title": "OPO",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "verl",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "OPO"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/verl/算法/PPO.md",
-    "title": "PPO",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "PPO",
-      "Qwen",
-      "SFT",
-      "verl"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "PPO"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/verl/算法/SPIN.md",
-    "title": "SPIN",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "SPIN",
-      "verl",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "SPIN"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/verl/算法/SPPO.md",
-    "title": "SPPO",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "PPO",
-      "SPPO",
-      "verl",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "SPPO"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/verl/算法/实现其他 RL 方法.md",
-    "title": "实现其他 RL 方法",
-    "category": "AI",
-    "tags": [
-      "DPO",
-      "LLM",
-      "verl",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "实现其他 RL 方法"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/verl/算法/算法.md",
-    "title": "算法",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "verl",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "算法"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/trl/DPO.md",
-    "title": "DPO",
-    "category": "AI",
-    "tags": [
-      "DPO",
-      "Hugging Face",
-      "LLM",
-      "LoRA",
-      "MoE"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "DPO"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/trl/GRPO.md",
-    "title": "GRPO",
-    "category": "AI",
-    "tags": [
-      "CEP",
-      "CLIP",
-      "DAPO",
-      "DeepSeek",
-      "DeepSpeed"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "GRPO"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/trl/KTO.md",
-    "title": "KTO",
-    "category": "AI",
-    "tags": [
-      "Hugging Face",
-      "KTO",
-      "LLM",
-      "TRL",
-      "学习率"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "KTO"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/trl/PPO.md",
-    "title": "PPO",
-    "category": "AI",
-    "tags": [
-      "CLIP",
-      "DeepSpeed",
-      "KL散度",
-      "LLM",
-      "PPO"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "PPO"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/trl/RLOO.md",
-    "title": "RLOO",
-    "category": "AI",
-    "tags": [
-      "Hugging Face",
-      "LLM",
-      "PPO",
-      "RLOO",
-      "TRL"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "RLOO"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/trl/SFT.md",
-    "title": "SFT",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "SFT",
-      "TRL",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "SFT"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/trl/trl.md",
-    "title": "trl",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "TRL",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "trl"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/unsloth/CPT（continual pretraining）.md",
-    "title": "CPT（continual pretraining）",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "Unsloth",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "CPT（continual pretraining）"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/unsloth/Chat Templates.md",
-    "title": "Chat Templates",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "Unsloth",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Chat Templates"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/unsloth/Checkpoint.md",
-    "title": "Checkpoint",
-    "category": "AI",
-    "tags": [
-      "Checkpoint",
-      "LLM",
-      "Unsloth",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Checkpoint"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/unsloth/notebook 合集.md",
-    "title": "notebook 合集",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "Unsloth",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "notebook 合集"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/unsloth/unsloth.md",
-    "title": "unsloth",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "Unsloth",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "unsloth"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/unsloth/多卡并行.md",
-    "title": "多卡并行",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "Unsloth",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "多卡并行"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/unsloth/数据合成.md",
-    "title": "数据合成",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "Unsloth",
-      "微调",
-      "数据合成"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "数据合成"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/unsloth/运行 & 保存模型.md",
-    "title": "运行 & 保存模型",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "Unsloth",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "运行 & 保存模型"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/unsloth/量化 & 显存预估.md",
-    "title": "量化 & 显存预估",
-    "category": "AI",
-    "tags": [
-      "DPO",
-      "GRPO",
-      "Hugging Face",
-      "LLM",
-      "LoRA"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "量化 & 显存预估"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/unsloth/量化.md",
-    "title": "量化",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "Unsloth",
-      "微调",
-      "量化"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "量化"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/unsloth/训练示例/DPO.md",
-    "title": "DPO",
-    "category": "AI",
-    "tags": [
-      "DPO",
-      "KTO",
-      "LLM",
-      "Unsloth",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "DPO"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/unsloth/训练示例/DeepSeek-OCR.md",
-    "title": "DeepSeek-OCR",
-    "category": "AI",
-    "tags": [
-      "DeepSeek",
-      "LLM",
-      "OCR",
-      "Unsloth",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "DeepSeek-OCR"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/unsloth/训练示例/GRPO.md",
-    "title": "GRPO",
-    "category": "AI",
-    "tags": [
-      "GRPO",
-      "LLM",
-      "Unsloth",
-      "微调",
-      "记忆模块"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "GRPO"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/unsloth/训练示例/GSPO.md",
-    "title": "GSPO",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "Unsloth",
-      "微调",
-      "训练"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "GSPO"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/unsloth/训练示例/Gemma 3.md",
-    "title": "Gemma 3",
-    "category": "AI",
-    "tags": [
-      "Gemma",
-      "LLM",
-      "Unsloth",
-      "微调",
-      "训练"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Gemma 3"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/unsloth/训练示例/Qwen 2.5 VL.md",
-    "title": "Qwen 2.5 VL",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "Qwen",
-      "Unsloth",
-      "微调",
-      "视觉"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Qwen 2.5 VL"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/unsloth/训练示例/Qwen3-VL.md",
-    "title": "Qwen3-VL",
-    "category": "AI",
-    "tags": [
-      "GPT",
-      "LLM",
-      "Qwen",
-      "Unsloth",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Qwen3-VL"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/unsloth/训练示例/Qwen3.md",
-    "title": "Qwen3",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "Qwen",
-      "Unsloth",
-      "微调",
-      "训练"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Qwen3"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/unsloth/训练示例/TTS.md",
-    "title": "TTS",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "TTS",
-      "Unsloth",
-      "微调",
-      "训练"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "TTS"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/unsloth/训练示例/gpt-oss.md",
-    "title": "gpt-oss",
-    "category": "AI",
-    "tags": [
-      "GPT",
-      "LLM",
-      "Unsloth",
-      "微调",
-      "训练"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "gpt-oss"
-  },
-  {
-    "path": "1. AI/3、LLM/强化微调框架/unsloth/训练示例/训练示例.md",
-    "title": "训练示例",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "LLaMA",
-      "Ollama",
-      "Unsloth",
-      "微调"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "训练示例"
-  },
-  {
-    "path": "1. AI/3、LLM/Infra 框架/DeepSpeed.md",
-    "title": "DeepSpeed",
-    "category": "AI",
-    "tags": [
-      "DeepSpeed",
-      "LLM"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "DeepSpeed"
-  },
-  {
-    "path": "1. AI/3、LLM/Infra 框架/FSDP.md",
-    "title": "FSDP",
-    "category": "AI",
-    "tags": [
-      "FSDP",
-      "LLM"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "FSDP"
-  },
-  {
-    "path": "1. AI/3、LLM/Infra 框架/Infra 框架.md",
-    "title": "Infra 框架",
-    "category": "AI",
-    "tags": [
-      "AI",
-      "LLM"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Infra 框架"
-  },
-  {
-    "path": "1. AI/3、LLM/Infra 框架/Megatron-LM.md",
-    "title": "Megatron-LM",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "Megatron-LM"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Megatron-LM"
-  },
-  {
-    "path": "1. AI/3、LLM/Infra 框架/分布式/Ray.md",
-    "title": "Ray",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "Ray",
-      "分布式训练"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Ray"
-  },
-  {
-    "path": "1. AI/3、LLM/Infra 框架/分布式/分布式.md",
-    "title": "分布式",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "verl",
-      "分布式训练",
-      "训练"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "分布式"
-  },
-  {
-    "path": "1. AI/3、LLM/RL/001.md",
-    "title": "001",
-    "category": "AI",
-    "tags": [
-      "DeepSeek",
-      "GRPO",
-      "Hugging Face",
-      "LLM",
-      "LLaMA"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "001"
-  },
-  {
-    "path": "1. AI/3、LLM/RL/K1-K3 & Forward vs. Reverse KL散度.md",
-    "title": "K1-K3 & Forward vs. Reverse KL散度",
-    "category": "AI",
-    "tags": [
-      "GAN",
-      "GRPO",
-      "KL散度",
-      "LLM",
-      "VAE"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "K1-K3 & Forward vs. Reverse KL散度"
-  },
-  {
-    "path": "1. AI/3、LLM/RL/On-Policy vs. Off-Policy.md",
-    "title": "On-Policy vs. Off-Policy",
-    "category": "AI",
-    "tags": [
-      "GRPO",
-      "LLM",
-      "Off-Policy",
-      "On-Policy",
-      "PPO"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "On-Policy vs. Off-Policy"
-  },
-  {
-    "path": "1. AI/3、LLM/RL/PPL 计算 交叉熵损失与 ignore_index.md",
-    "title": "PPL 计算 交叉熵损失与 ignore_index",
-    "category": "AI",
-    "tags": [
-      "BERT",
-      "GPT",
-      "LLM",
-      "T5",
-      "交叉熵"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "PPL 计算 交叉熵损失与 ignore_index"
-  },
-  {
-    "path": "1. AI/3、LLM/RL/RL.md",
-    "title": "RL",
-    "category": "AI",
-    "tags": [
-      "AI",
-      "LLM"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "RL"
-  },
-  {
-    "path": "1. AI/3、LLM/RL/为什么 PPO 优于 PG(Policy Gradient).md",
-    "title": "为什么 PPO 优于 PG(Policy Gradient)",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "PPO",
-      "策略梯度"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "为什么 PPO 优于 PG(Policy Gradient)"
-  },
-  {
-    "path": "1. AI/3、LLM/RL/策略梯度方法.md",
-    "title": "策略梯度方法",
-    "category": "AI",
-    "tags": [
-      "Agent",
-      "CV",
-      "LLM",
-      "概率论",
-      "策略梯度"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "策略梯度方法"
-  },
-  {
-    "path": "1. AI/3、LLM/RL/蒙特卡洛树搜索 MCTS.md",
-    "title": "蒙特卡洛树搜索 MCTS",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "LoRA",
-      "MCTS",
-      "概率论",
-      "蒙特卡洛"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "蒙特卡洛树搜索 MCTS"
-  },
-  {
-    "path": "1. AI/3、LLM/RL/贝尔曼方程.md",
-    "title": "贝尔曼方程",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "贝尔曼方程"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "贝尔曼方程"
-  },
-  {
-    "path": "1. AI/3、LLM/RL/马尔科夫.md",
-    "title": "马尔科夫",
-    "category": "AI",
-    "tags": [
-      "LLM",
-      "Ray",
-      "强化学习",
-      "概率论",
-      "矩阵"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "马尔科夫"
-  },
-  {
-    "path": "1. AI/4、Agent/4、Agent.md",
-    "title": "4、Agent",
-    "category": "AI",
-    "tags": [
-      "Agent",
-      "LLM",
-      "MCTS"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "4、Agent"
-  },
-  {
-    "path": "1. AI/4、Agent/Multi-Agent/Multi-Agent.md",
-    "title": "Multi-Agent",
-    "category": "AI",
-    "tags": [
-      "Agent",
-      "Multi-Agent"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Multi-Agent"
-  },
-  {
-    "path": "1. AI/4、Agent/Multi-Agent/Tools.md",
-    "title": "Tools",
-    "category": "AI",
-    "tags": [
-      "Agent",
-      "LLM",
-      "Multi-Agent",
-      "Planning",
-      "训练"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Tools"
-  },
-  {
-    "path": "1. AI/4、Agent/Multi-Agent/planner.md",
-    "title": "planner",
-    "category": "AI",
-    "tags": [
-      "Agent",
-      "Multi-Agent",
-      "Planner"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "planner"
-  },
-  {
-    "path": "1. AI/4、Agent/Multi-Agent/untitled_SB2HwKNC.md",
-    "title": "untitled_SB2HwKNC",
-    "category": "AI",
-    "tags": [
-      "Agent",
-      "Multi-Agent"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "untitled_SB2HwKNC"
-  },
-  {
-    "path": "1. AI/4、Agent/Multi-Agent/记忆模块.md",
-    "title": "记忆模块",
-    "category": "AI",
-    "tags": [
-      "Agent",
-      "Multi-Agent",
-      "记忆模块"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "记忆模块"
-  },
-  {
-    "path": "1. AI/4、Agent/Multi-Agent/零碎的点.md",
-    "title": "零碎的点",
-    "category": "AI",
-    "tags": [
-      "Agent",
-      "Multi-Agent"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "零碎的点"
-  },
-  {
-    "path": "1. AI/4、Agent/开源框架/AutoGen.md",
+    "path": "AI/Agent/Frameworks/AutoGen.md",
     "title": "AutoGen",
-    "category": "AI",
+    "domain": "ai/agent/frameworks",
+    "type": "concept",
     "tags": [
-      "Agent",
-      "AutoGen"
+      "ai/agent/frameworks",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "AutoGen"
   },
   {
-    "path": "1. AI/4、Agent/开源框架/开源框架.md",
-    "title": "开源框架",
-    "category": "AI",
-    "tags": [
-      "AI",
-      "Agent"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "开源框架"
-  },
-  {
-    "path": "4. 学习实践/4. 学习实践.md",
-    "title": "4. 学习实践",
-    "category": "学习实践",
-    "tags": [
-      "Agent",
-      "LLM",
-      "NLP",
-      "Prompt",
-      "论文"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "4. 学习实践"
-  },
-  {
-    "path": "4. 学习实践/KP 大神亲授课.md",
-    "title": "KP 大神亲授课",
-    "category": "学习实践",
-    "tags": [
-      "学习实践"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "KP 大神亲授课"
-  },
-  {
-    "path": "4. 学习实践/OpenR1.md",
-    "title": "OpenR1",
-    "category": "学习实践",
-    "tags": [
-      "学习实践"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "OpenR1"
-  },
-  {
-    "path": "4. 学习实践/关于 AI 好玩的.md",
-    "title": "关于 AI 好玩的",
-    "category": "学习实践",
-    "tags": [
-      "学习实践"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "关于 AI 好玩的"
-  },
-  {
-    "path": "4. 学习实践/小冬瓜 AIGC 学习笔记.md",
-    "title": "小冬瓜 AIGC 学习笔记",
-    "category": "学习实践",
-    "tags": [
-      "多模态",
-      "概率论",
-      "训练",
-      "论文",
-      "预训练"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "小冬瓜 AIGC 学习笔记"
-  },
-  {
-    "path": "4. 学习实践/小规模训练手册：构建世界级LLM的秘密.md",
-    "title": "小规模训练手册：构建世界级LLM的秘密",
-    "category": "学习实践",
-    "tags": [
-      "GPT",
-      "Hugging Face",
-      "LLM",
-      "LLaMA",
-      "LoRA"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "小规模训练手册：构建世界级LLM的秘密"
-  },
-  {
-    "path": "4. 学习实践/强化学习的数学原理.md",
-    "title": "强化学习的数学原理",
-    "category": "学习实践",
-    "tags": [
-      "T5",
-      "强化学习"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "强化学习的数学原理"
-  },
-  {
-    "path": "4. 学习实践/项目强相关的训练实验.md",
-    "title": "项目强相关的训练实验",
-    "category": "学习实践",
-    "tags": [
-      "Agent",
-      "上下文",
-      "训练",
-      "量化"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "项目强相关的训练实验"
-  },
-  {
-    "path": "4. 学习实践/Hugging Face 学习/Agent Course.md",
-    "title": "Agent Course",
-    "category": "学习实践",
-    "tags": [
-      "Agent",
-      "Hugging Face"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Agent Course"
-  },
-  {
-    "path": "4. 学习实践/Hugging Face 学习/Deep RL Course.md",
-    "title": "Deep RL Course",
-    "category": "学习实践",
-    "tags": [
-      "Hugging Face",
-      "学习实践"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Deep RL Course"
-  },
-  {
-    "path": "4. 学习实践/Hugging Face 学习/Hugging Face 学习.md",
-    "title": "Hugging Face 学习",
-    "category": "学习实践",
-    "tags": [
-      "Hugging Face",
-      "学习实践"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Hugging Face 学习"
-  },
-  {
-    "path": "4. 学习实践/Hugging Face 学习/LLM + Agent.md",
-    "title": "LLM + Agent",
-    "category": "学习实践",
-    "tags": [
-      "Agent",
-      "Attention",
-      "BERT",
-      "GPT",
-      "Hugging Face"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "LLM + Agent"
-  },
-  {
-    "path": "4. 学习实践/Hugging Face 学习/MCP Course.md",
-    "title": "MCP Course",
-    "category": "学习实践",
-    "tags": [
-      "Agent",
-      "GPT",
-      "Hugging Face",
-      "LLM",
-      "MCP"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "MCP Course"
-  },
-  {
-    "path": "4. 学习实践/Hugging Face 学习/Open-Source AI Cookbook.md",
-    "title": "Open-Source AI Cookbook",
-    "category": "学习实践",
-    "tags": [
-      "Hugging Face",
-      "学习实践"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Open-Source AI Cookbook"
-  },
-  {
-    "path": "4. 学习实践/Hugging Face 学习/RL + LLM 学习/1. RL & LLMs.md",
-    "title": "1. RL & LLMs",
-    "category": "学习实践",
-    "tags": [
-      "Agent",
-      "GRPO",
-      "Hugging Face",
-      "LLM",
-      "RLHF"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "1. RL & LLMs"
-  },
-  {
-    "path": "4. 学习实践/Hugging Face 学习/RL + LLM 学习/2. DeepSeek R1 Paper.md",
-    "title": "2. DeepSeek R1 Paper",
-    "category": "学习实践",
-    "tags": [
-      "DeepSeek",
-      "GRPO",
-      "Hugging Face",
-      "LLM",
-      "PPO"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "2. DeepSeek R1 Paper"
-  },
-  {
-    "path": "4. 学习实践/Hugging Face 学习/RL + LLM 学习/3. GRPO 深度理解.md",
-    "title": "3. GRPO 深度理解",
-    "category": "学习实践",
-    "tags": [
-      "DeepSeek",
-      "GRPO",
-      "Hugging Face",
-      "LLM",
-      "RAG"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "3. GRPO 深度理解"
-  },
-  {
-    "path": "4. 学习实践/Hugging Face 学习/RL + LLM 学习/4. TRL 中实现 GRPO.md",
-    "title": "4. TRL 中实现 GRPO",
-    "category": "学习实践",
-    "tags": [
-      "CEP",
-      "DeepSeek",
-      "GRPO",
-      "Hugging Face",
-      "LLM"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "4. TRL 中实现 GRPO"
-  },
-  {
-    "path": "4. 学习实践/Hugging Face 学习/RL + LLM 学习/RL + LLM 学习.md",
-    "title": "RL + LLM 学习",
-    "category": "学习实践",
-    "tags": [
-      "Hugging Face",
-      "LLM"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "RL + LLM 学习"
-  },
-  {
-    "path": "4. 学习实践/科研/科研.md",
-    "title": "科研",
-    "category": "学习实践",
-    "tags": [
-      "学习实践",
-      "科研"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "科研"
-  },
-  {
-    "path": "4. 学习实践/科研/非文本的模态对齐.md",
-    "title": "非文本的模态对齐",
-    "category": "学习实践",
-    "tags": [
-      "Attention",
-      "GAN",
-      "GPT",
-      "Qwen",
-      "Tokenizer"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "非文本的模态对齐"
-  },
-  {
-    "path": "4. 学习实践/训练微调项目/GRPO-demo.md",
-    "title": "GRPO-demo",
-    "category": "学习实践",
-    "tags": [
-      "GRPO",
-      "Prompt",
-      "微调",
-      "训练",
-      "论文"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "GRPO-demo"
-  },
-  {
-    "path": "4. 学习实践/训练微调项目/一些竞赛思路.md",
-    "title": "一些竞赛思路",
-    "category": "学习实践",
-    "tags": [
-      "微调",
-      "训练"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "一些竞赛思路"
-  },
-  {
-    "path": "4. 学习实践/训练微调项目/实现一个 LLM.md",
-    "title": "实现一个 LLM",
-    "category": "学习实践",
-    "tags": [
-      "LLM",
-      "微调",
-      "训练"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "实现一个 LLM"
-  },
-  {
-    "path": "4. 学习实践/训练微调项目/玩玩多模态大模型.md",
-    "title": "玩玩多模态大模型",
-    "category": "学习实践",
-    "tags": [
-      "LLM",
-      "多模态",
-      "微调",
-      "训练"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "玩玩多模态大模型"
-  },
-  {
-    "path": "4. 学习实践/训练微调项目/训练微调项目.md",
-    "title": "训练微调项目",
-    "category": "学习实践",
-    "tags": [
-      "LLM",
-      "微调",
-      "训练"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "训练微调项目"
-  },
-  {
-    "path": "4. 学习实践/提效 Agent/AI 分身.md",
-    "title": "AI 分身",
-    "category": "学习实践",
-    "tags": [
-      "Agent",
-      "学习实践"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "AI 分身"
-  },
-  {
-    "path": "4. 学习实践/提效 Agent/提效 Agent.md",
-    "title": "提效 Agent",
-    "category": "学习实践",
-    "tags": [
-      "Agent",
-      "学习实践"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "提效 Agent"
-  },
-  {
-    "path": "4. 学习实践/企业级项目/dbgpt 文档.md",
+    "path": "AI/Agent/Frameworks/dbgpt 文档.md",
     "title": "dbgpt 文档",
-    "category": "学习实践",
+    "domain": "ai/agent/frameworks",
+    "type": "concept",
     "tags": [
-      "Agent",
-      "GPT",
-      "Hive",
-      "LLM",
-      "Multi-Agent"
+      "ai/agent/frameworks",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "dbgpt 文档"
   },
   {
-    "path": "4. 学习实践/企业级项目/企业级项目.md",
-    "title": "企业级项目",
-    "category": "学习实践",
+    "path": "AI/Agent/Fundamentals/Agent or Workflow？.md",
+    "title": "Agent or Workflow？",
+    "domain": "ai/agent/fundamentals",
+    "type": "thought",
     "tags": [
-      "学习实践"
+      "ai/agent/fundamentals",
+      "type/thought"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "企业级项目"
+    "filename": "Agent or Workflow？"
   },
   {
-    "path": "4. 学习实践/企业级项目/取数 Agent.md",
-    "title": "取数 Agent",
-    "category": "学习实践",
+    "path": "AI/Agent/Fundamentals/Context-Folding 论文.md",
+    "title": "Scaling Long-Horizon LLM Agent via Context-Folding",
+    "domain": "ai/agent/fundamentals",
+    "type": "paper",
     "tags": [
-      "Agent",
-      "学习实践"
+      "ai/agent/fundamentals",
+      "type/paper"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "取数 Agent"
+    "filename": "Context-Folding 论文"
   },
   {
-    "path": "4. 学习实践/企业级项目/商家端经营诊断.md",
-    "title": "商家端经营诊断",
-    "category": "学习实践",
+    "path": "AI/Agent/Fundamentals/HF Agent Course.md",
+    "title": "Agent Course",
+    "domain": "ai/agent/fundamentals",
+    "type": "tutorial",
     "tags": [
-      "Prompt",
-      "上下文",
-      "优化"
+      "ai/agent/fundamentals",
+      "type/tutorial"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "商家端经营诊断"
+    "filename": "HF Agent Course"
   },
   {
-    "path": "4. 学习实践/企业级项目/分析 Agent/Aime 框架调研.md",
-    "title": "Aime 框架调研",
-    "category": "学习实践",
+    "path": "AI/Agent/Fundamentals/HF LLM + Agent.md",
+    "title": "LLM + Agent",
+    "domain": "ai/agent/fundamentals",
+    "type": "concept",
     "tags": [
-      "Agent",
-      "AutoGen",
-      "LLM",
-      "Multi-Agent",
-      "Planner"
+      "ai/agent/fundamentals",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Aime 框架调研"
+    "filename": "HF LLM + Agent"
   },
   {
-    "path": "4. 学习实践/企业级项目/分析 Agent/分析 Agent.md",
-    "title": "分析 Agent",
-    "category": "学习实践",
+    "path": "AI/Agent/Fundamentals/Tool Use.md",
+    "title": "Tools",
+    "domain": "ai/agent/fundamentals",
+    "type": "concept",
     "tags": [
-      "Agent",
-      "学习实践"
+      "ai/agent/fundamentals",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "分析 Agent"
+    "filename": "Tool Use"
   },
   {
-    "path": "4. 学习实践/企业级项目/分析 Agent/阿里 data agent 调研.md",
-    "title": "阿里 data agent 调研",
-    "category": "学习实践",
+    "path": "AI/Agent/Fundamentals/分析 Agent 演进的一些思考.md",
+    "title": "分析 Agent 演进的一些思考",
+    "domain": "ai/agent/fundamentals",
+    "type": "thought",
     "tags": [
-      "Agent",
-      "CV",
-      "DeepSeek",
-      "LLM",
-      "RAG"
+      "ai/agent/fundamentals",
+      "type/thought"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "阿里 data agent 调研"
+    "filename": "分析 Agent 演进的一些思考"
   },
   {
-    "path": "4. 学习实践/企业级项目/Multi-Agent 节假日/Multi-Agent 节假日.md",
-    "title": "Multi-Agent 节假日",
-    "category": "学习实践",
+    "path": "AI/Agent/Fundamentals/记忆模块.md",
+    "title": "记忆模块",
+    "domain": "ai/agent/fundamentals",
+    "type": "concept",
     "tags": [
-      "Agent",
-      "AutoGen",
-      "DeepSeek",
-      "GPT",
-      "LLM"
+      "ai/agent/fundamentals",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Multi-Agent 节假日"
+    "filename": "记忆模块"
   },
   {
-    "path": "4. 学习实践/企业级项目/Multi-Agent 节假日/RL 思路探索.md",
-    "title": "RL 思路探索",
-    "category": "学习实践",
+    "path": "AI/Agent/MCP/HF MCP Course.md",
+    "title": "MCP Course",
+    "domain": "ai/agent/mcp",
+    "type": "tutorial",
     "tags": [
-      "Agent",
-      "GRPO",
-      "LLM",
-      "Multi-Agent",
-      "SQL"
+      "ai/agent/mcp",
+      "type/tutorial"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "RL 思路探索"
+    "filename": "HF MCP Course"
   },
   {
-    "path": "4. 学习实践/企业级项目/Multi-Agent 节假日/【难点】事实性保证.md",
-    "title": "【难点】事实性保证",
-    "category": "学习实践",
+    "path": "AI/Agent/MCP/如何给人深度科普 MCP.md",
+    "title": "如何给人深度科普 MCP",
+    "domain": "ai/agent/mcp",
+    "type": "concept",
     "tags": [
-      "Agent",
-      "Multi-Agent",
-      "Prompt"
+      "ai/agent/mcp",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "【难点】事实性保证"
+    "filename": "如何给人深度科普 MCP"
   },
   {
-    "path": "4. 学习实践/企业级项目/Multi-Agent 节假日/业务.md",
-    "title": "业务",
-    "category": "学习实践",
+    "path": "AI/Agent/Multi-Agent/Agent vs MAS.md",
+    "title": "Agent vs MAS",
+    "domain": "ai/agent/multi-agent",
+    "type": "concept",
     "tags": [
-      "Agent",
-      "Multi-Agent"
+      "ai/agent/multi-agent",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "业务"
+    "filename": "Agent vs MAS"
   },
   {
-    "path": "4. 学习实践/企业级项目/Multi-Agent 节假日/行业认知.md",
-    "title": "行业认知",
-    "category": "学习实践",
+    "path": "AI/Agent/Multi-Agent/Multi-Agent 概述.md",
+    "title": "Multi-Agent",
+    "domain": "ai/agent/multi-agent",
+    "type": "reference",
     "tags": [
-      "Agent",
-      "Multi-Agent",
-      "Planning",
-      "Qwen",
-      "SQL"
+      "ai/agent/multi-agent",
+      "type/reference"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "行业认知"
+    "filename": "Multi-Agent 概述"
   },
   {
-    "path": "4. 学习实践/企业级项目/Multi-Agent 节假日/prompt/DA.md",
-    "title": "DA",
-    "category": "学习实践",
+    "path": "AI/Agent/Multi-Agent/Planner.md",
+    "title": "planner",
+    "domain": "ai/agent/multi-agent",
+    "type": "concept",
     "tags": [
-      "Agent",
-      "Multi-Agent",
-      "Prompt"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "DA"
-  },
-  {
-    "path": "4. 学习实践/企业级项目/Multi-Agent 节假日/prompt/Planner.md",
-    "title": "Planner",
-    "category": "学习实践",
-    "tags": [
-      "Agent",
-      "Multi-Agent",
-      "Planner",
-      "Prompt"
+      "ai/agent/multi-agent",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "Planner"
   },
   {
-    "path": "4. 学习实践/企业级项目/Multi-Agent 节假日/prompt/Readfile.md",
-    "title": "Readfile",
-    "category": "学习实践",
+    "path": "AI/Agent/Multi-Agent/untitled_SB2HwKNC.md",
+    "title": "untitled_SB2HwKNC",
+    "domain": "ai/agent/multi-agent",
+    "type": "concept",
     "tags": [
-      "Agent",
-      "Multi-Agent",
-      "Prompt"
+      "ai/agent/multi-agent",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Readfile"
+    "filename": "untitled_SB2HwKNC"
   },
   {
-    "path": "4. 学习实践/企业级项目/Multi-Agent 节假日/prompt/Summary.md",
-    "title": "Summary",
-    "category": "学习实践",
+    "path": "AI/Agent/Multi-Agent/零碎的点.md",
+    "title": "零碎的点",
+    "domain": "ai/agent/multi-agent",
+    "type": "concept",
     "tags": [
-      "Agent",
-      "Multi-Agent",
-      "Prompt"
+      "ai/agent/multi-agent",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Summary"
+    "filename": "零碎的点"
   },
   {
-    "path": "4. 学习实践/企业级项目/Multi-Agent 节假日/prompt/prompt.md",
-    "title": "prompt",
-    "category": "学习实践",
+    "path": "AI/Agent/_MOC.md",
+    "title": "Agent 智能体",
+    "domain": "ai/agent",
+    "type": "moc",
     "tags": [
-      "Agent",
-      "Multi-Agent",
-      "Prompt",
-      "矩阵"
+      "ai/agent",
+      "type/reference"
     ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "prompt"
+    "created": "",
+    "updated": "",
+    "filename": "_MOC"
   },
   {
-    "path": "4. 学习实践/企业级项目/企业 RAG 系统/企业 RAG 系统.md",
-    "title": "企业 RAG 系统",
-    "category": "学习实践",
-    "tags": [
-      "RAG",
-      "学习实践"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "企业 RAG 系统"
-  },
-  {
-    "path": "4. 学习实践/企业级项目/企业 RAG 系统/如何从 0 到 1 搭建数据库知识助手.md",
-    "title": "如何从 0 到 1 搭建数据库知识助手",
-    "category": "学习实践",
-    "tags": [
-      "AI安全",
-      "Agent",
-      "Embedding",
-      "GPT",
-      "LLM"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "如何从 0 到 1 搭建数据库知识助手"
-  },
-  {
-    "path": "7. 论文精读/7. 论文精读.md",
-    "title": "7. 论文精读",
-    "category": "论文精读",
-    "tags": [
-      "LLM",
-      "Prompt",
-      "论文"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "7. 论文精读"
-  },
-  {
-    "path": "7. 论文精读/论文待学习列表.md",
-    "title": "论文待学习列表",
-    "category": "论文精读",
-    "tags": [
-      "DeepSeek",
-      "GRPO",
-      "LLM",
-      "RLHF"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "论文待学习列表"
-  },
-  {
-    "path": "7. 论文精读/LLM/AI Models Collapse when Trained on Recursively Generated Data.md",
-    "title": "AI Models Collapse when Trained on Recursively Generated Data",
-    "category": "论文精读",
-    "tags": [
-      "GPT",
-      "LLM",
-      "VAE",
-      "概率论"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "AI Models Collapse when Trained on Recursively Generated Data"
-  },
-  {
-    "path": "7. 论文精读/LLM/Beyond Correctness_ Harmonizing Process and Outcome Rewards through RL   Training.md",
-    "title": "Beyond Correctness: Harmonizing Process and Outcome Rewards through RL   Training",
-    "category": "论文精读",
-    "tags": [
-      "GRPO",
-      "LLM",
-      "LLaMA",
-      "Qwen",
-      "强化学习"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Beyond Correctness_ Harmonizing Process and Outcome Rewards through RL   Training"
-  },
-  {
-    "path": "7. 论文精读/LLM/DCPO_ Dynamic Clipping Policy Optimization.md",
-    "title": "DCPO: Dynamic Clipping Policy Optimization",
-    "category": "论文精读",
-    "tags": [
-      "CLIP",
-      "DAPO",
-      "GRPO",
-      "LLM",
-      "Qwen"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "DCPO_ Dynamic Clipping Policy Optimization"
-  },
-  {
-    "path": "7. 论文精读/LLM/Deepseek-Math.md",
-    "title": "Deepseek-Math",
-    "category": "论文精读",
-    "tags": [
-      "DeepSeek",
-      "LLM",
-      "论文"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Deepseek-Math"
-  },
-  {
-    "path": "7. 论文精读/LLM/Deepseek-R1.md",
-    "title": "Deepseek-R1",
-    "category": "论文精读",
-    "tags": [
-      "DeepSeek",
-      "LLM",
-      "论文"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Deepseek-R1"
-  },
-  {
-    "path": "7. 论文精读/LLM/LLM.md",
-    "title": "LLM",
-    "category": "论文精读",
-    "tags": [
-      "LLM",
-      "论文"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "LLM"
-  },
-  {
-    "path": "7. 论文精读/LLM/Lora.md",
-    "title": "Lora",
-    "category": "论文精读",
-    "tags": [
-      "LLM",
-      "LoRA",
-      "论文"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Lora"
-  },
-  {
-    "path": "7. 论文精读/LLM/PVPO_ Pre-Estimated Value-Based Policy Optimization for Agentic   Reasoning.md",
-    "title": "PVPO: Pre-Estimated Value-Based Policy Optimization for Agentic   Reasoning",
-    "category": "论文精读",
-    "tags": [
-      "Agent",
-      "CEP",
-      "LLM",
-      "强化学习",
-      "预训练"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "PVPO_ Pre-Estimated Value-Based Policy Optimization for Agentic   Reasoning"
-  },
-  {
-    "path": "7. 论文精读/LLM/Towards a Unified View of Large Language Model Post-Training.md",
-    "title": "Towards a Unified View of Large Language Model Post-Training",
-    "category": "论文精读",
-    "tags": [
-      "GRPO",
-      "LLM",
-      "Qwen",
-      "SFT",
-      "强化学习"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Towards a Unified View of Large Language Model Post-Training"
-  },
-  {
-    "path": "7. 论文精读/Agent/Agent.md",
-    "title": "Agent",
-    "category": "论文精读",
-    "tags": [
-      "Agent",
-      "论文"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Agent"
-  },
-  {
-    "path": "7. 论文精读/Agent/R-4B_ Incentivizing General-Purpose Auto-Thinking Capability in MLLMs   via Bi-Mode Annealing and Reinforce Learning.md",
-    "title": "R-4B: Incentivizing General-Purpose Auto-Thinking Capability in MLLMs   via Bi-Mode Annealing and Reinforce Learning",
-    "category": "论文精读",
-    "tags": [
-      "Agent",
-      "LLM",
-      "MLLM",
-      "OCR",
-      "Qwen"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "R-4B_ Incentivizing General-Purpose Auto-Thinking Capability in MLLMs   via Bi-Mode Annealing and Reinforce Learning"
-  },
-  {
-    "path": "7. 论文精读/Agent/Scaling Long-Horizon LLM Agent via Context-Folding.md",
-    "title": "Scaling Long-Horizon LLM Agent via Context-Folding",
-    "category": "论文精读",
-    "tags": [
-      "Agent",
-      "GRPO",
-      "LLM",
-      "Multi-Agent",
-      "RAG"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Scaling Long-Horizon LLM Agent via Context-Folding"
-  },
-  {
-    "path": "7. 论文精读/Agent/The Landscape of Agentic Reinforcement Learning for LLMs_ A Survey.md",
-    "title": "The Landscape of Agentic Reinforcement Learning for LLMs: A Survey",
-    "category": "论文精读",
-    "tags": [
-      "Agent",
-      "DPO",
-      "GRPO",
-      "LLM",
-      "强化学习"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "The Landscape of Agentic Reinforcement Learning for LLMs_ A Survey"
-  },
-  {
-    "path": "7. 论文精读/Agent/UI-TARS-2 Technical Report_ Advancing GUI Agent with Multi-Turn   Reinforcement Learning.md",
-    "title": "UI-TARS-2 Technical Report: Advancing GUI Agent with Multi-Turn   Reinforcement Learning",
-    "category": "论文精读",
-    "tags": [
-      "Agent",
-      "强化学习",
-      "微调",
-      "预训练"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "UI-TARS-2 Technical Report_ Advancing GUI Agent with Multi-Turn   Reinforcement Learning"
-  },
-  {
-    "path": "7. 论文精读/Agent/VerlTool_ Towards Holistic Agentic Reinforcement Learning with Tool Use.md",
-    "title": "VerlTool: Towards Holistic Agentic Reinforcement Learning with Tool Use",
-    "category": "论文精读",
-    "tags": [
-      "Agent",
-      "LLM",
-      "Tool Use",
-      "verl",
-      "多模态"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "VerlTool_ Towards Holistic Agentic Reinforcement Learning with Tool Use"
-  },
-  {
-    "path": "7. 论文精读/Agent/WebPilot_ A Versatile and Autonomous Multi-Agent System for Web Task Execution with Strategic Exploration.md",
-    "title": "WebPilot: A Versatile and Autonomous Multi-Agent System for Web Task Execution with Strategic Exploration",
-    "category": "论文精读",
-    "tags": [
-      "Agent",
-      "DPO",
-      "LLM",
-      "LoRA",
-      "MCTS"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "WebPilot_ A Versatile and Autonomous Multi-Agent System for Web Task Execution with Strategic Exploration"
-  },
-  {
-    "path": "7. 论文精读/MLLM/BLIP-2.md",
-    "title": "BLIP-2",
-    "category": "论文精读",
-    "tags": [
-      "BLIP",
-      "LLM",
-      "MLLM",
-      "论文"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "BLIP-2"
-  },
-  {
-    "path": "7. 论文精读/MLLM/DeepSeek-VL.md",
-    "title": "DeepSeek-VL",
-    "category": "论文精读",
-    "tags": [
-      "DeepSeek",
-      "LLM",
-      "MLLM",
-      "论文"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "DeepSeek-VL"
-  },
-  {
-    "path": "7. 论文精读/MLLM/InternVL3.md",
-    "title": "InternVL3",
-    "category": "论文精读",
-    "tags": [
-      "Hugging Face",
-      "InternVL",
-      "LLM",
-      "MLLM",
-      "论文"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "InternVL3"
-  },
-  {
-    "path": "7. 论文精读/MLLM/LLaVA-Critic-R1_ Your Critic Model is Secretly a Strong Policy Model.md",
-    "title": "LLaVA-Critic-R1: Your Critic Model is Secretly a Strong Policy Model",
-    "category": "论文精读",
-    "tags": [
-      "ETL",
-      "GPT",
-      "GRPO",
-      "LLM",
-      "LLaVA"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "LLaVA-Critic-R1_ Your Critic Model is Secretly a Strong Policy Model"
-  },
-  {
-    "path": "7. 论文精读/MLLM/MLLM.md",
-    "title": "MLLM",
-    "category": "论文精读",
-    "tags": [
-      "LLM",
-      "MLLM",
-      "多模态",
-      "论文"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "MLLM"
-  },
-  {
-    "path": "7. 论文精读/MLLM/Qwen-VL.md",
-    "title": "Qwen-VL",
-    "category": "论文精读",
-    "tags": [
-      "LLM",
-      "MLLM",
-      "Qwen",
-      "论文"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Qwen-VL"
-  },
-  {
-    "path": "7. 论文精读/MLLM/Universal Multimodal Retrieval.md",
-    "title": "Universal Multimodal Retrieval",
-    "category": "论文精读",
-    "tags": [
-      "LLM",
-      "MLLM",
-      "多模态",
-      "检索",
-      "论文"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "Universal Multimodal Retrieval"
-  },
-  {
-    "path": "7. 论文精读/NLP/BERT.md",
-    "title": "BERT",
-    "category": "论文精读",
-    "tags": [
-      "BERT",
-      "NLP",
-      "论文"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "BERT"
-  },
-  {
-    "path": "7. 论文精读/NLP/GPT.md",
-    "title": "GPT",
-    "category": "论文精读",
-    "tags": [
-      "GPT",
-      "NLP",
-      "论文"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "GPT"
-  },
-  {
-    "path": "7. 论文精读/NLP/LLaMA.md",
-    "title": "LLaMA",
-    "category": "论文精读",
-    "tags": [
-      "LLaMA",
-      "NLP",
-      "论文"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "LLaMA"
-  },
-  {
-    "path": "7. 论文精读/NLP/NLP.md",
-    "title": "NLP",
-    "category": "论文精读",
-    "tags": [
-      "NLP",
-      "论文"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "NLP"
-  },
-  {
-    "path": "7. 论文精读/NLP/T5.md",
-    "title": "T5",
-    "category": "论文精读",
-    "tags": [
-      "NLP",
-      "T5",
-      "论文"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "T5"
-  },
-  {
-    "path": "7. 论文精读/CV/CLIP.md",
-    "title": "CLIP",
-    "category": "论文精读",
-    "tags": [
-      "CLIP",
-      "CV",
-      "论文"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "CLIP"
-  },
-  {
-    "path": "7. 论文精读/CV/CV.md",
-    "title": "CV",
-    "category": "论文精读",
-    "tags": [
-      "CV",
-      "论文"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "CV"
-  },
-  {
-    "path": "7. 论文精读/CV/ControlNet.md",
+    "path": "AI/CV/ControlNet.md",
     "title": "ControlNet",
-    "category": "论文精读",
+    "domain": "ai/cv",
+    "type": "paper",
     "tags": [
-      "CV",
-      "ControlNet",
-      "论文"
+      "ai/cv",
+      "type/paper"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "ControlNet"
   },
   {
-    "path": "7. 论文精读/CV/MAE.md",
+    "path": "AI/CV/MAE.md",
     "title": "MAE",
-    "category": "论文精读",
+    "domain": "ai/cv",
+    "type": "paper",
     "tags": [
-      "CV",
-      "MAE",
-      "论文"
+      "ai/cv",
+      "type/paper"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "MAE"
   },
   {
-    "path": "7. 论文精读/CV/Vit.md",
+    "path": "AI/CV/ViT.md",
     "title": "Vit",
-    "category": "论文精读",
+    "domain": "ai/cv",
+    "type": "paper",
     "tags": [
-      "CV",
-      "ViT",
-      "论文"
+      "ai/cv",
+      "type/paper"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Vit"
+    "filename": "ViT"
   },
   {
-    "path": "2. 工程/2. 工程.md",
-    "title": "2. 工程",
-    "category": "工程",
+    "path": "AI/CV/_MOC.md",
+    "title": "计算机视觉",
+    "domain": "ai/cv",
+    "type": "moc",
     "tags": [
-      "数据工程"
+      "ai/cv",
+      "type/reference"
+    ],
+    "created": "",
+    "updated": "",
+    "filename": "_MOC"
+  },
+  {
+    "path": "AI/Foundations/DL-Basics/Attention 详解.md",
+    "title": "Attention 详解",
+    "domain": "ai/foundations/dl-basics",
+    "type": "concept",
+    "tags": [
+      "ai/foundations/dl-basics",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "2. 工程"
+    "filename": "Attention 详解"
   },
   {
-    "path": "2. 工程/Data Engineering/Data Engineering.md",
-    "title": "Data Engineering",
-    "category": "工程",
+    "path": "AI/Foundations/DL-Basics/MoE 基础.md",
+    "title": "MOE 基础（一）",
+    "domain": "ai/foundations/dl-basics",
+    "type": "concept",
     "tags": [
-      "Doris",
-      "ETL",
-      "产品方法论"
+      "ai/foundations/dl-basics",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Data Engineering"
+    "filename": "MoE 基础"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/框架.md",
-    "title": "框架",
-    "category": "工程",
+    "path": "AI/Foundations/DL-Basics/Transformer 位置编码详解.md",
+    "title": "Transformer 位置编码详解",
+    "domain": "ai/foundations/dl-basics",
+    "type": "concept",
     "tags": [
-      "数据工程"
+      "ai/foundations/dl-basics",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "框架"
+    "filename": "Transformer 位置编码详解"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/实时.md",
-    "title": "实时",
-    "category": "工程",
+    "path": "AI/Foundations/DL-Basics/Transformer 通识.md",
+    "title": "Transformer 通识",
+    "domain": "ai/foundations/dl-basics",
+    "type": "concept",
     "tags": [
-      "数据工程"
+      "ai/foundations/dl-basics",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "实时"
+    "filename": "Transformer 通识"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/2. Flink 内存机制.md",
-    "title": "2. Flink 内存机制",
-    "category": "工程",
+    "path": "AI/Foundations/DL-Basics/Transformer.md",
+    "title": "Transformer",
+    "domain": "ai/foundations/dl-basics",
+    "type": "concept",
     "tags": [
-      "Flink",
-      "RocksDB",
-      "YARN",
-      "记忆模块"
+      "ai/foundations/dl-basics",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "2. Flink 内存机制"
+    "filename": "Transformer"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/4. Flink 窗口 _ 时间机制.md",
-    "title": "4. Flink 窗口 / 时间机制",
-    "category": "工程",
+    "path": "AI/Foundations/DL-Basics/深度学习.md",
+    "title": "深度学习",
+    "domain": "ai/foundations/dl-basics",
+    "type": "tutorial",
     "tags": [
-      "Flink",
-      "SQL",
-      "Watermark",
-      "流处理",
-      "窗口机制"
+      "ai/foundations/dl-basics",
+      "type/tutorial"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "4. Flink 窗口 _ 时间机制"
+    "filename": "深度学习"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/7. Flink CEP _ CDC.md",
-    "title": "7. Flink CEP / CDC",
-    "category": "工程",
+    "path": "AI/Foundations/ML-Basics/GELU.md",
+    "title": "GELU",
+    "domain": "ai/foundations/ml-basics",
+    "type": "concept",
     "tags": [
-      "CDC",
-      "CEP",
-      "Flink",
-      "Watermark"
+      "ai/foundations/ml-basics",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "7. Flink CEP _ CDC"
+    "filename": "GELU"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/Flink.md",
-    "title": "Flink",
-    "category": "工程",
+    "path": "AI/Foundations/ML-Basics/PPL 困惑度.md",
+    "title": "PPL 困惑度",
+    "domain": "ai/foundations/ml-basics",
+    "type": "concept",
     "tags": [
-      "Checkpoint",
-      "Flink",
-      "SQL",
-      "Spark",
-      "YARN"
+      "ai/foundations/ml-basics",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Flink"
+    "filename": "PPL 困惑度"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/3. Flink CheckPoint/3. Flink CheckPoint.md",
-    "title": "3. Flink CheckPoint",
-    "category": "工程",
+    "path": "AI/Foundations/ML-Basics/学习率.md",
+    "title": "学习率",
+    "domain": "ai/foundations/ml-basics",
+    "type": "tutorial",
     "tags": [
-      "Checkpoint",
-      "Flink",
-      "RAG",
-      "反压",
-      "流处理"
+      "ai/foundations/ml-basics",
+      "type/tutorial"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "3. Flink CheckPoint"
+    "filename": "学习率"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/3. Flink CheckPoint/Chandy-Lamport 算法.md",
-    "title": "Chandy-Lamport 算法",
-    "category": "工程",
+    "path": "AI/Foundations/ML-Basics/损失函数.md",
+    "title": "损失函数",
+    "domain": "ai/foundations/ml-basics",
+    "type": "concept",
     "tags": [
-      "Checkpoint",
-      "Flink",
-      "Spark",
-      "分布式训练",
-      "流处理"
+      "ai/foundations/ml-basics",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Chandy-Lamport 算法"
+    "filename": "损失函数"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/3. Flink CheckPoint/Exactly Once 语义.md",
-    "title": "Exactly Once 语义",
-    "category": "工程",
+    "path": "AI/Foundations/ML-Basics/数据预处理.md",
+    "title": "数据预处理",
+    "domain": "ai/foundations/ml-basics",
+    "type": "concept",
     "tags": [
-      "Checkpoint",
-      "Flink",
-      "Kafka",
-      "分布式训练"
+      "ai/foundations/ml-basics",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Exactly Once 语义"
+    "filename": "数据预处理"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/3. Flink CheckPoint/RocksDB 原理.md",
-    "title": "RocksDB 原理",
-    "category": "工程",
+    "path": "AI/Foundations/ML-Basics/机器学习-知识点.md",
+    "title": "机器学习",
+    "domain": "ai/foundations/ml-basics",
+    "type": "tutorial",
     "tags": [
-      "Checkpoint",
-      "Flink",
-      "RocksDB"
+      "ai/foundations/ml-basics",
+      "type/tutorial"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "RocksDB 原理"
+    "filename": "机器学习-知识点"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/6. Flink 运行/6. Flink 运行.md",
-    "title": "6. Flink 运行",
-    "category": "工程",
+    "path": "AI/Foundations/ML-Basics/机器学习.md",
+    "title": "机器学习",
+    "domain": "ai/foundations/ml-basics",
+    "type": "tutorial",
     "tags": [
-      "Flink",
-      "YARN",
-      "流处理",
-      "记忆模块"
+      "ai/foundations/ml-basics",
+      "type/tutorial"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "6. Flink 运行"
+    "filename": "机器学习"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/6. Flink 运行/Flink 提交流程.md",
-    "title": "Flink 提交流程",
-    "category": "工程",
+    "path": "AI/Foundations/ML-Basics/概率统计.md",
+    "title": "概率统计",
+    "domain": "ai/foundations/ml-basics",
+    "type": "concept",
     "tags": [
-      "Flink",
-      "YARN",
-      "流处理"
+      "ai/foundations/ml-basics",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Flink 提交流程"
+    "filename": "概率统计"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/6. Flink 运行/Flink 重启策略.md",
-    "title": "Flink 重启策略",
-    "category": "工程",
+    "path": "AI/Foundations/ML-Basics/模型评估.md",
+    "title": "模型评估",
+    "domain": "ai/foundations/ml-basics",
+    "type": "concept",
     "tags": [
-      "Checkpoint",
-      "Flink"
+      "ai/foundations/ml-basics",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Flink 重启策略"
+    "filename": "模型评估"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/5. Flink 开发/5. Flink 开发.md",
-    "title": "5. Flink 开发",
-    "category": "工程",
+    "path": "AI/Foundations/ML-Basics/激活函数.md",
+    "title": "激活函数",
+    "domain": "ai/foundations/ml-basics",
+    "type": "concept",
     "tags": [
-      "Flink",
-      "数据工程"
+      "ai/foundations/ml-basics",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "5. Flink 开发"
+    "filename": "激活函数"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/5. Flink 开发/Flink API（Java）.md",
-    "title": "Flink API（Java）",
-    "category": "工程",
+    "path": "AI/Foundations/ML-Basics/特征工程.md",
+    "title": "特征工程",
+    "domain": "ai/foundations/ml-basics",
+    "type": "concept",
     "tags": [
-      "Flink",
-      "Hive",
-      "SQL",
-      "分布式训练",
-      "反压"
+      "ai/foundations/ml-basics",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Flink API（Java）"
+    "filename": "特征工程"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/5. Flink 开发/Flink Partitioner.md",
-    "title": "Flink Partitioner",
-    "category": "工程",
+    "path": "AI/Foundations/ML-Basics/经典模型.md",
+    "title": "经典模型",
+    "domain": "ai/foundations/ml-basics",
+    "type": "concept",
     "tags": [
-      "CEP",
-      "Flink",
-      "Shuffle",
-      "流处理"
+      "ai/foundations/ml-basics",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Flink Partitioner"
+    "filename": "经典模型"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/5. Flink 开发/Flink SQL _ UDF.md",
-    "title": "Flink SQL / UDF",
-    "category": "工程",
+    "path": "AI/Foundations/ML-Basics/过拟合欠拟合.md",
+    "title": "过拟合欠拟合",
+    "domain": "ai/foundations/ml-basics",
+    "type": "concept",
     "tags": [
-      "Flink",
-      "Hive",
-      "Join",
-      "Planner",
-      "SQL"
+      "ai/foundations/ml-basics",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Flink SQL _ UDF"
+    "filename": "过拟合欠拟合"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/5. Flink 开发/Flink 动态表.md",
-    "title": "Flink 动态表",
-    "category": "工程",
+    "path": "AI/Foundations/ML-Basics/降维.md",
+    "title": "降维",
+    "domain": "ai/foundations/ml-basics",
+    "type": "concept",
     "tags": [
-      "Flink",
-      "SQL"
+      "ai/foundations/ml-basics",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Flink 动态表"
+    "filename": "降维"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/1. Flink 生产/1. Flink 生产.md",
-    "title": "1. Flink 生产",
-    "category": "工程",
+    "path": "AI/Foundations/Math/三角函数速查.md",
+    "title": "三角函数速查",
+    "domain": "ai/foundations/math",
+    "type": "concept",
     "tags": [
-      "Flink",
-      "数据工程"
+      "ai/foundations/math",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "1. Flink 生产"
+    "filename": "三角函数速查"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/1. Flink 生产/Flink SideOutput.md",
-    "title": "Flink SideOutput",
-    "category": "工程",
+    "path": "AI/Foundations/Math/信息论.md",
+    "title": "信息论",
+    "domain": "ai/foundations/math",
+    "type": "concept",
     "tags": [
-      "Flink",
-      "数据工程"
+      "ai/foundations/math",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Flink SideOutput"
+    "filename": "信息论"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/1. Flink 生产/Regular Join Retract_数据放大问题.md",
-    "title": "Regular Join Retract/数据放大问题",
-    "category": "工程",
+    "path": "AI/Foundations/Math/向量微积分.md",
+    "title": "向量微积分",
+    "domain": "ai/foundations/math",
+    "type": "concept",
     "tags": [
-      "Flink",
-      "Join",
-      "SQL"
+      "ai/foundations/math",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Regular Join Retract_数据放大问题"
+    "filename": "向量微积分"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/1. Flink 生产/实时数据准确性.md",
-    "title": "实时数据准确性",
-    "category": "工程",
+    "path": "AI/Foundations/Math/概率与分布.md",
+    "title": "概率与分布",
+    "domain": "ai/foundations/math",
+    "type": "concept",
     "tags": [
-      "AI安全",
-      "Doris",
-      "Flink",
-      "Hive",
-      "Kafka"
+      "ai/foundations/math",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "实时数据准确性"
+    "filename": "概率与分布"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/1. Flink 生产/实时脏数据修复.md",
-    "title": "实时脏数据修复",
-    "category": "工程",
+    "path": "AI/Foundations/Math/矩阵分解.md",
+    "title": "矩阵分解",
+    "domain": "ai/foundations/math",
+    "type": "concept",
     "tags": [
-      "Doris",
-      "Flink",
-      "Hive",
-      "Kafka",
-      "SQL"
+      "ai/foundations/math",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "实时脏数据修复"
+    "filename": "矩阵分解"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/1. Flink 生产/海量数据去重.md",
-    "title": "海量数据去重",
-    "category": "工程",
+    "path": "AI/Foundations/Math/线性代数.md",
+    "title": "线性代数",
+    "domain": "ai/foundations/math",
+    "type": "concept",
     "tags": [
-      "Flink",
-      "RocksDB"
+      "ai/foundations/math",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "海量数据去重"
+    "filename": "线性代数"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/1. Flink 生产/监控指标.md",
-    "title": "监控指标",
-    "category": "工程",
+    "path": "AI/Foundations/Math/解析几何.md",
+    "title": "解析几何",
+    "domain": "ai/foundations/math",
+    "type": "concept",
     "tags": [
-      "CV",
-      "Flink",
-      "记忆模块"
+      "ai/foundations/math",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "监控指标"
+    "filename": "解析几何"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/1. Flink 生产/Flink 调优/Flink 调优.md",
-    "title": "Flink 调优",
-    "category": "工程",
+    "path": "AI/Foundations/Math/连续优化.md",
+    "title": "连续优化",
+    "domain": "ai/foundations/math",
+    "type": "concept",
     "tags": [
-      "CV",
-      "Checkpoint",
-      "Flink",
-      "Join",
-      "Kafka"
+      "ai/foundations/math",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Flink 调优"
+    "filename": "连续优化"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/1. Flink 生产/Flink 调优/反压.md",
-    "title": "反压",
-    "category": "工程",
+    "path": "AI/Foundations/_MOC.md",
+    "title": "AI 基础知识",
+    "domain": "ai/foundations",
+    "type": "moc",
     "tags": [
-      "Checkpoint",
-      "Flink",
-      "Kafka",
-      "SQL",
-      "Spark"
+      "ai/foundations",
+      "type/reference"
+    ],
+    "created": "",
+    "updated": "",
+    "filename": "_MOC"
+  },
+  {
+    "path": "AI/LLM/Application/Embedding/Embedding 选型.md",
+    "title": "Embedding 选型",
+    "domain": "ai/llm/application/embedding",
+    "type": "concept",
+    "tags": [
+      "ai/llm/application/embedding",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "反压"
+    "filename": "Embedding 选型"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/1. Flink 生产/Flink 调优/并行度为什么是 2 的幂次方.md",
-    "title": "并行度为什么是 2 的幂次方",
-    "category": "工程",
+    "path": "AI/LLM/Application/Embedding/Embedding.md",
+    "title": "Embedding",
+    "domain": "ai/llm/application/embedding",
+    "type": "concept",
     "tags": [
-      "Flink",
-      "数据工程"
+      "ai/llm/application/embedding",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "并行度为什么是 2 的幂次方"
+    "filename": "Embedding"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Flink/1. Flink 生产/Flink 调优/状态对齐时间.md",
-    "title": "状态对齐时间",
-    "category": "工程",
+    "path": "AI/LLM/Application/Embedding/大模型线上排查 SOP.md",
+    "title": "大模型线上排查 SOP",
+    "domain": "ai/llm/application/embedding",
+    "type": "concept",
     "tags": [
-      "Checkpoint",
-      "Flink",
-      "Join"
+      "ai/llm/application/embedding",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "状态对齐时间"
+    "filename": "大模型线上排查 SOP"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Doris/1. Doris 架构.md",
+    "path": "AI/LLM/Application/Synthetic-Data/DataFlow.md",
+    "title": "DataFlow",
+    "domain": "ai/llm/application/synthetic-data",
+    "type": "concept",
+    "tags": [
+      "ai/llm/application/synthetic-data",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "DataFlow"
+  },
+  {
+    "path": "AI/LLM/Application/Synthetic-Data/Synthetic Data.md",
+    "title": "Synthetic Data",
+    "domain": "ai/llm/application/synthetic-data",
+    "type": "concept",
+    "tags": [
+      "ai/llm/application/synthetic-data",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Synthetic Data"
+  },
+  {
+    "path": "AI/LLM/Architecture/AI Models Collapse 论文.md",
+    "title": "AI Models Collapse when Trained on Recursively Generated Data",
+    "domain": "ai/llm/architecture",
+    "type": "paper",
+    "tags": [
+      "ai/llm/architecture",
+      "type/paper"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "AI Models Collapse 论文"
+  },
+  {
+    "path": "AI/LLM/Architecture/BERT.md",
+    "title": "BERT",
+    "domain": "ai/llm/architecture",
+    "type": "paper",
+    "tags": [
+      "ai/llm/architecture",
+      "type/paper"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "BERT"
+  },
+  {
+    "path": "AI/LLM/Architecture/DeepSeek-R1.md",
+    "title": "Deepseek-R1",
+    "domain": "ai/llm/architecture",
+    "type": "paper",
+    "tags": [
+      "ai/llm/architecture",
+      "type/paper"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "DeepSeek-R1"
+  },
+  {
+    "path": "AI/LLM/Architecture/GPT.md",
+    "title": "GPT",
+    "domain": "ai/llm/architecture",
+    "type": "paper",
+    "tags": [
+      "ai/llm/architecture",
+      "type/paper"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "GPT"
+  },
+  {
+    "path": "AI/LLM/Architecture/LLaMA.md",
+    "title": "LLaMA",
+    "domain": "ai/llm/architecture",
+    "type": "paper",
+    "tags": [
+      "ai/llm/architecture",
+      "type/paper"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "LLaMA"
+  },
+  {
+    "path": "AI/LLM/Architecture/T5.md",
+    "title": "T5",
+    "domain": "ai/llm/architecture",
+    "type": "paper",
+    "tags": [
+      "ai/llm/architecture",
+      "type/paper"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "T5"
+  },
+  {
+    "path": "AI/LLM/Frameworks/OpenRLHF/OpenRLHF.md",
+    "title": "OpenRLHF",
+    "domain": "ai/llm/frameworks/openrlhf",
+    "type": "concept",
+    "tags": [
+      "ai/llm/frameworks/openrlhf",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "OpenRLHF"
+  },
+  {
+    "path": "AI/LLM/Frameworks/TRL/TRL 概述.md",
+    "title": "trl",
+    "domain": "ai/llm/frameworks/trl",
+    "type": "reference",
+    "tags": [
+      "ai/llm/frameworks/trl",
+      "type/reference"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "TRL 概述"
+  },
+  {
+    "path": "AI/LLM/Frameworks/Unsloth/CPT.md",
+    "title": "CPT（continual pretraining）",
+    "domain": "ai/llm/frameworks/unsloth",
+    "type": "concept",
+    "tags": [
+      "ai/llm/frameworks/unsloth",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "CPT"
+  },
+  {
+    "path": "AI/LLM/Frameworks/Unsloth/Chat Templates.md",
+    "title": "Chat Templates",
+    "domain": "ai/llm/frameworks/unsloth",
+    "type": "concept",
+    "tags": [
+      "ai/llm/frameworks/unsloth",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Chat Templates"
+  },
+  {
+    "path": "AI/LLM/Frameworks/Unsloth/Checkpoint.md",
+    "title": "Checkpoint",
+    "domain": "ai/llm/frameworks/unsloth",
+    "type": "concept",
+    "tags": [
+      "ai/llm/frameworks/unsloth",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Checkpoint"
+  },
+  {
+    "path": "AI/LLM/Frameworks/Unsloth/Gemma 3 训练.md",
+    "title": "Gemma 3",
+    "domain": "ai/llm/frameworks/unsloth",
+    "type": "project",
+    "tags": [
+      "ai/llm/frameworks/unsloth",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Gemma 3 训练"
+  },
+  {
+    "path": "AI/LLM/Frameworks/Unsloth/Qwen3 训练.md",
+    "title": "Qwen3",
+    "domain": "ai/llm/frameworks/unsloth",
+    "type": "project",
+    "tags": [
+      "ai/llm/frameworks/unsloth",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Qwen3 训练"
+  },
+  {
+    "path": "AI/LLM/Frameworks/Unsloth/TTS 训练.md",
+    "title": "TTS",
+    "domain": "ai/llm/frameworks/unsloth",
+    "type": "project",
+    "tags": [
+      "ai/llm/frameworks/unsloth",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "TTS 训练"
+  },
+  {
+    "path": "AI/LLM/Frameworks/Unsloth/Unsloth 概述.md",
+    "title": "unsloth",
+    "domain": "ai/llm/frameworks/unsloth",
+    "type": "reference",
+    "tags": [
+      "ai/llm/frameworks/unsloth",
+      "type/reference"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Unsloth 概述"
+  },
+  {
+    "path": "AI/LLM/Frameworks/Unsloth/gpt-oss 训练.md",
+    "title": "gpt-oss",
+    "domain": "ai/llm/frameworks/unsloth",
+    "type": "project",
+    "tags": [
+      "ai/llm/frameworks/unsloth",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "gpt-oss 训练"
+  },
+  {
+    "path": "AI/LLM/Frameworks/Unsloth/notebook 合集.md",
+    "title": "notebook 合集",
+    "domain": "ai/llm/frameworks/unsloth",
+    "type": "concept",
+    "tags": [
+      "ai/llm/frameworks/unsloth",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "notebook 合集"
+  },
+  {
+    "path": "AI/LLM/Frameworks/Unsloth/多卡并行.md",
+    "title": "多卡并行",
+    "domain": "ai/llm/frameworks/unsloth",
+    "type": "concept",
+    "tags": [
+      "ai/llm/frameworks/unsloth",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "多卡并行"
+  },
+  {
+    "path": "AI/LLM/Frameworks/Unsloth/数据合成.md",
+    "title": "数据合成",
+    "domain": "ai/llm/frameworks/unsloth",
+    "type": "concept",
+    "tags": [
+      "ai/llm/frameworks/unsloth",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "数据合成"
+  },
+  {
+    "path": "AI/LLM/Frameworks/Unsloth/训练示例概述.md",
+    "title": "训练示例",
+    "domain": "ai/llm/frameworks/unsloth",
+    "type": "project",
+    "tags": [
+      "ai/llm/frameworks/unsloth",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "训练示例概述"
+  },
+  {
+    "path": "AI/LLM/Frameworks/Unsloth/运行 & 保存模型.md",
+    "title": "运行 & 保存模型",
+    "domain": "ai/llm/frameworks/unsloth",
+    "type": "concept",
+    "tags": [
+      "ai/llm/frameworks/unsloth",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "运行 & 保存模型"
+  },
+  {
+    "path": "AI/LLM/Frameworks/Unsloth/量化 & 显存预估.md",
+    "title": "量化 & 显存预估",
+    "domain": "ai/llm/frameworks/unsloth",
+    "type": "concept",
+    "tags": [
+      "ai/llm/frameworks/unsloth",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "量化 & 显存预估"
+  },
+  {
+    "path": "AI/LLM/Frameworks/Unsloth/量化.md",
+    "title": "量化",
+    "domain": "ai/llm/frameworks/unsloth",
+    "type": "concept",
+    "tags": [
+      "ai/llm/frameworks/unsloth",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "量化"
+  },
+  {
+    "path": "AI/LLM/Frameworks/verl/HybridFlow.md",
+    "title": "HybridFlow",
+    "domain": "ai/llm/frameworks/verl",
+    "type": "concept",
+    "tags": [
+      "ai/llm/frameworks/verl",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "HybridFlow"
+  },
+  {
+    "path": "AI/LLM/Frameworks/verl/Off Policy 异步训练器.md",
+    "title": "Off Policy 异步训练器",
+    "domain": "ai/llm/frameworks/verl",
+    "type": "project",
+    "tags": [
+      "ai/llm/frameworks/verl",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Off Policy 异步训练器"
+  },
+  {
+    "path": "AI/LLM/Frameworks/verl/Post-Training 数据准备.md",
+    "title": "Post-Training 数据准备",
+    "domain": "ai/llm/frameworks/verl",
+    "type": "concept",
+    "tags": [
+      "ai/llm/frameworks/verl",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Post-Training 数据准备"
+  },
+  {
+    "path": "AI/LLM/Frameworks/verl/RL with Lora.md",
+    "title": "RL with Lora",
+    "domain": "ai/llm/frameworks/verl",
+    "type": "concept",
+    "tags": [
+      "ai/llm/frameworks/verl",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "RL with Lora"
+  },
+  {
+    "path": "AI/LLM/Frameworks/verl/Reward Function.md",
+    "title": "Reward Function",
+    "domain": "ai/llm/frameworks/verl",
+    "type": "concept",
+    "tags": [
+      "ai/llm/frameworks/verl",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Reward Function"
+  },
+  {
+    "path": "AI/LLM/Frameworks/verl/Sandbox Fusion 沙箱.md",
+    "title": "Sandbox Fusion 沙箱",
+    "domain": "ai/llm/frameworks/verl",
+    "type": "concept",
+    "tags": [
+      "ai/llm/frameworks/verl",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Sandbox Fusion 沙箱"
+  },
+  {
+    "path": "AI/LLM/Frameworks/verl/grafana 看板.md",
+    "title": "grafana 看板",
+    "domain": "ai/llm/frameworks/verl",
+    "type": "concept",
+    "tags": [
+      "ai/llm/frameworks/verl",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "grafana 看板"
+  },
+  {
+    "path": "AI/LLM/Frameworks/verl/verl 概述.md",
+    "title": "verl",
+    "domain": "ai/llm/frameworks/verl",
+    "type": "reference",
+    "tags": [
+      "ai/llm/frameworks/verl",
+      "type/reference"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "verl 概述"
+  },
+  {
+    "path": "AI/LLM/Frameworks/verl/verl 训练参数.md",
+    "title": "verl 训练参数",
+    "domain": "ai/llm/frameworks/verl",
+    "type": "project",
+    "tags": [
+      "ai/llm/frameworks/verl",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "verl 训练参数"
+  },
+  {
+    "path": "AI/LLM/Frameworks/verl/多轮 RL 训练交互.md",
+    "title": "多轮 RL 训练交互",
+    "domain": "ai/llm/frameworks/verl",
+    "type": "project",
+    "tags": [
+      "ai/llm/frameworks/verl",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "多轮 RL 训练交互"
+  },
+  {
+    "path": "AI/LLM/Frameworks/verl/实现其他 RL 方法.md",
+    "title": "实现其他 RL 方法",
+    "domain": "ai/llm/frameworks/verl",
+    "type": "concept",
+    "tags": [
+      "ai/llm/frameworks/verl",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "实现其他 RL 方法"
+  },
+  {
+    "path": "AI/LLM/Frameworks/verl/性能调优.md",
+    "title": "性能调优",
+    "domain": "ai/llm/frameworks/verl",
+    "type": "concept",
+    "tags": [
+      "ai/llm/frameworks/verl",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "性能调优"
+  },
+  {
+    "path": "AI/LLM/Frameworks/verl/硬件资源预估.md",
+    "title": "硬件资源预估",
+    "domain": "ai/llm/frameworks/verl",
+    "type": "concept",
+    "tags": [
+      "ai/llm/frameworks/verl",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "硬件资源预估"
+  },
+  {
+    "path": "AI/LLM/Frameworks/verl/算法概述.md",
+    "title": "算法",
+    "domain": "ai/llm/frameworks/verl",
+    "type": "reference",
+    "tags": [
+      "ai/llm/frameworks/verl",
+      "type/reference"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "算法概述"
+  },
+  {
+    "path": "AI/LLM/Frameworks/verl/训练后端.md",
+    "title": "训练后端",
+    "domain": "ai/llm/frameworks/verl",
+    "type": "project",
+    "tags": [
+      "ai/llm/frameworks/verl",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "训练后端"
+  },
+  {
+    "path": "AI/LLM/Frameworks/verl/配置文件.md",
+    "title": "配置文件",
+    "domain": "ai/llm/frameworks/verl",
+    "type": "concept",
+    "tags": [
+      "ai/llm/frameworks/verl",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "配置文件"
+  },
+  {
+    "path": "AI/LLM/Inference/Ollama.md",
+    "title": "Ollama",
+    "domain": "ai/llm/inference",
+    "type": "concept",
+    "tags": [
+      "ai/llm/inference",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Ollama"
+  },
+  {
+    "path": "AI/LLM/Inference/vLLM.md",
+    "title": "vLLM",
+    "domain": "ai/llm/inference",
+    "type": "concept",
+    "tags": [
+      "ai/llm/inference",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "vLLM"
+  },
+  {
+    "path": "AI/LLM/Infra/DeepSpeed.md",
+    "title": "DeepSpeed",
+    "domain": "ai/llm/infra",
+    "type": "concept",
+    "tags": [
+      "ai/llm/infra",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "DeepSpeed"
+  },
+  {
+    "path": "AI/LLM/Infra/FSDP.md",
+    "title": "FSDP",
+    "domain": "ai/llm/infra",
+    "type": "concept",
+    "tags": [
+      "ai/llm/infra",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "FSDP"
+  },
+  {
+    "path": "AI/LLM/Infra/Megatron-LM.md",
+    "title": "Megatron-LM",
+    "domain": "ai/llm/infra",
+    "type": "concept",
+    "tags": [
+      "ai/llm/infra",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Megatron-LM"
+  },
+  {
+    "path": "AI/LLM/Infra/Ray.md",
+    "title": "Ray",
+    "domain": "ai/llm/infra",
+    "type": "concept",
+    "tags": [
+      "ai/llm/infra",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Ray"
+  },
+  {
+    "path": "AI/LLM/Infra/分布式训练.md",
+    "title": "分布式",
+    "domain": "ai/llm/infra",
+    "type": "project",
+    "tags": [
+      "ai/llm/infra",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "分布式训练"
+  },
+  {
+    "path": "AI/LLM/Prompt-Engineering/Prompt Engineering.md",
+    "title": "Prompt Engineering",
+    "domain": "ai/llm/prompt-engineering",
+    "type": "concept",
+    "tags": [
+      "ai/llm/prompt-engineering",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Prompt Engineering"
+  },
+  {
+    "path": "AI/LLM/Prompt-Engineering/Prompt engineering 概述.md",
+    "title": "Prompt engineering",
+    "domain": "ai/llm/prompt-engineering",
+    "type": "reference",
+    "tags": [
+      "ai/llm/prompt-engineering",
+      "type/reference"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Prompt engineering 概述"
+  },
+  {
+    "path": "AI/LLM/Prompt-Engineering/Tools.md",
+    "title": "Tools",
+    "domain": "ai/llm/prompt-engineering",
+    "type": "concept",
+    "tags": [
+      "ai/llm/prompt-engineering",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Tools"
+  },
+  {
+    "path": "AI/LLM/Prompt-Engineering/prompt 攻击.md",
+    "title": "prompt 攻击",
+    "domain": "ai/llm/prompt-engineering",
+    "type": "concept",
+    "tags": [
+      "ai/llm/prompt-engineering",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "prompt 攻击"
+  },
+  {
+    "path": "AI/LLM/Prompt-Engineering/数据合成.md",
+    "title": "数据合成",
+    "domain": "ai/llm/prompt-engineering",
+    "type": "concept",
+    "tags": [
+      "ai/llm/prompt-engineering",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "数据合成"
+  },
+  {
+    "path": "AI/LLM/RL/DAPO/DAPO-verl实践.md",
+    "title": "DAPO",
+    "domain": "ai/llm/rl/dapo",
+    "type": "project",
+    "tags": [
+      "ai/llm/rl/dapo",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "DAPO-verl实践"
+  },
+  {
+    "path": "AI/LLM/RL/DPO/DPO-TRL实践.md",
+    "title": "DPO",
+    "domain": "ai/llm/rl/dpo",
+    "type": "project",
+    "tags": [
+      "ai/llm/rl/dpo",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "DPO-TRL实践"
+  },
+  {
+    "path": "AI/LLM/RL/DPO/DPO-Unsloth实践.md",
+    "title": "DPO",
+    "domain": "ai/llm/rl/dpo",
+    "type": "project",
+    "tags": [
+      "ai/llm/rl/dpo",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "DPO-Unsloth实践"
+  },
+  {
+    "path": "AI/LLM/RL/Fundamentals/HF Deep RL Course.md",
+    "title": "Deep RL Course",
+    "domain": "ai/llm/rl/fundamentals",
+    "type": "tutorial",
+    "tags": [
+      "ai/llm/rl/fundamentals",
+      "type/tutorial"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "HF Deep RL Course"
+  },
+  {
+    "path": "AI/LLM/RL/Fundamentals/KL散度.md",
+    "title": "K1-K3 & Forward vs. Reverse KL散度",
+    "domain": "ai/llm/rl/fundamentals",
+    "type": "concept",
+    "tags": [
+      "ai/llm/rl/fundamentals",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "KL散度"
+  },
+  {
+    "path": "AI/LLM/RL/Fundamentals/MCTS.md",
+    "title": "蒙特卡洛树搜索 MCTS",
+    "domain": "ai/llm/rl/fundamentals",
+    "type": "concept",
+    "tags": [
+      "ai/llm/rl/fundamentals",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "MCTS"
+  },
+  {
+    "path": "AI/LLM/RL/Fundamentals/On-Policy vs Off-Policy.md",
+    "title": "On-Policy vs. Off-Policy",
+    "domain": "ai/llm/rl/fundamentals",
+    "type": "concept",
+    "tags": [
+      "ai/llm/rl/fundamentals",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "On-Policy vs Off-Policy"
+  },
+  {
+    "path": "AI/LLM/RL/Fundamentals/PPL 计算 交叉熵损失与 ignore_index.md",
+    "title": "PPL 计算 交叉熵损失与 ignore_index",
+    "domain": "ai/llm/rl/fundamentals",
+    "type": "concept",
+    "tags": [
+      "ai/llm/rl/fundamentals",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "PPL 计算 交叉熵损失与 ignore_index"
+  },
+  {
+    "path": "AI/LLM/RL/Fundamentals/RL & LLMs 入门.md",
+    "title": "1. RL & LLMs",
+    "domain": "ai/llm/rl/fundamentals",
+    "type": "tutorial",
+    "tags": [
+      "ai/llm/rl/fundamentals",
+      "type/tutorial"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "RL & LLMs 入门"
+  },
+  {
+    "path": "AI/LLM/RL/Fundamentals/RL 概览.md",
+    "title": "001",
+    "domain": "ai/llm/rl/fundamentals",
+    "type": "concept",
+    "tags": [
+      "ai/llm/rl/fundamentals",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "RL 概览"
+  },
+  {
+    "path": "AI/LLM/RL/Fundamentals/为什么 PPO 优于 PG.md",
+    "title": "为什么 PPO 优于 PG(Policy Gradient)",
+    "domain": "ai/llm/rl/fundamentals",
+    "type": "concept",
+    "tags": [
+      "ai/llm/rl/fundamentals",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "为什么 PPO 优于 PG"
+  },
+  {
+    "path": "AI/LLM/RL/Fundamentals/强化学习的数学原理.md",
+    "title": "强化学习的数学原理",
+    "domain": "ai/llm/rl/fundamentals",
+    "type": "tutorial",
+    "tags": [
+      "ai/llm/rl/fundamentals",
+      "type/tutorial"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "强化学习的数学原理"
+  },
+  {
+    "path": "AI/LLM/RL/Fundamentals/策略梯度方法.md",
+    "title": "策略梯度方法",
+    "domain": "ai/llm/rl/fundamentals",
+    "type": "concept",
+    "tags": [
+      "ai/llm/rl/fundamentals",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "策略梯度方法"
+  },
+  {
+    "path": "AI/LLM/RL/Fundamentals/贝尔曼方程.md",
+    "title": "贝尔曼方程",
+    "domain": "ai/llm/rl/fundamentals",
+    "type": "concept",
+    "tags": [
+      "ai/llm/rl/fundamentals",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "贝尔曼方程"
+  },
+  {
+    "path": "AI/LLM/RL/Fundamentals/马尔科夫.md",
+    "title": "马尔科夫",
+    "domain": "ai/llm/rl/fundamentals",
+    "type": "concept",
+    "tags": [
+      "ai/llm/rl/fundamentals",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "马尔科夫"
+  },
+  {
+    "path": "AI/LLM/RL/GRPO/DeepSeek R1 学习笔记.md",
+    "title": "2. DeepSeek R1 Paper",
+    "domain": "ai/llm/rl/grpo",
+    "type": "tutorial",
+    "tags": [
+      "ai/llm/rl/grpo",
+      "type/tutorial"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "DeepSeek R1 学习笔记"
+  },
+  {
+    "path": "AI/LLM/RL/GRPO/DeepSeek-Math.md",
+    "title": "Deepseek-Math",
+    "domain": "ai/llm/rl/grpo",
+    "type": "paper",
+    "tags": [
+      "ai/llm/rl/grpo",
+      "type/paper"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "DeepSeek-Math"
+  },
+  {
+    "path": "AI/LLM/RL/GRPO/GRPO 深度理解.md",
+    "title": "3. GRPO 深度理解",
+    "domain": "ai/llm/rl/grpo",
+    "type": "concept",
+    "tags": [
+      "ai/llm/rl/grpo",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "GRPO 深度理解"
+  },
+  {
+    "path": "AI/LLM/RL/GRPO/GRPO-TRL实践.md",
+    "title": "GRPO",
+    "domain": "ai/llm/rl/grpo",
+    "type": "project",
+    "tags": [
+      "ai/llm/rl/grpo",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "GRPO-TRL实践"
+  },
+  {
+    "path": "AI/LLM/RL/GRPO/GRPO-Unsloth实践.md",
+    "title": "GRPO",
+    "domain": "ai/llm/rl/grpo",
+    "type": "project",
+    "tags": [
+      "ai/llm/rl/grpo",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "GRPO-Unsloth实践"
+  },
+  {
+    "path": "AI/LLM/RL/GRPO/GRPO-demo.md",
+    "title": "GRPO-demo",
+    "domain": "ai/llm/rl/grpo",
+    "type": "project",
+    "tags": [
+      "ai/llm/rl/grpo",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "GRPO-demo"
+  },
+  {
+    "path": "AI/LLM/RL/GRPO/GRPO-verl实践.md",
+    "title": "GRPO",
+    "domain": "ai/llm/rl/grpo",
+    "type": "project",
+    "tags": [
+      "ai/llm/rl/grpo",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "GRPO-verl实践"
+  },
+  {
+    "path": "AI/LLM/RL/GRPO/OpenR1.md",
+    "title": "OpenR1",
+    "domain": "ai/llm/rl/grpo",
+    "type": "concept",
+    "tags": [
+      "ai/llm/rl/grpo",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "OpenR1"
+  },
+  {
+    "path": "AI/LLM/RL/GRPO/TRL 中实现 GRPO.md",
+    "title": "4. TRL 中实现 GRPO",
+    "domain": "ai/llm/rl/grpo",
+    "type": "concept",
+    "tags": [
+      "ai/llm/rl/grpo",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "TRL 中实现 GRPO"
+  },
+  {
+    "path": "AI/LLM/RL/KTO/KTO-TRL实践.md",
+    "title": "KTO",
+    "domain": "ai/llm/rl/kto",
+    "type": "project",
+    "tags": [
+      "ai/llm/rl/kto",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "KTO-TRL实践"
+  },
+  {
+    "path": "AI/LLM/RL/Other-Algorithms/Beyond Correctness 论文.md",
+    "title": "Beyond Correctness: Harmonizing Process and Outcome Rewards through RL   Training",
+    "domain": "ai/llm/rl/other-algorithms",
+    "type": "paper",
+    "tags": [
+      "ai/llm/rl/other-algorithms",
+      "type/paper"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Beyond Correctness 论文"
+  },
+  {
+    "path": "AI/LLM/RL/Other-Algorithms/CollabLLM-verl实践.md",
+    "title": "CollabLLM",
+    "domain": "ai/llm/rl/other-algorithms",
+    "type": "project",
+    "tags": [
+      "ai/llm/rl/other-algorithms",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "CollabLLM-verl实践"
+  },
+  {
+    "path": "AI/LLM/RL/Other-Algorithms/DCPO 论文.md",
+    "title": "DCPO: Dynamic Clipping Policy Optimization",
+    "domain": "ai/llm/rl/other-algorithms",
+    "type": "paper",
+    "tags": [
+      "ai/llm/rl/other-algorithms",
+      "type/paper"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "DCPO 论文"
+  },
+  {
+    "path": "AI/LLM/RL/Other-Algorithms/GPG-verl实践.md",
+    "title": "GPG",
+    "domain": "ai/llm/rl/other-algorithms",
+    "type": "project",
+    "tags": [
+      "ai/llm/rl/other-algorithms",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "GPG-verl实践"
+  },
+  {
+    "path": "AI/LLM/RL/Other-Algorithms/GSPO-Unsloth实践.md",
+    "title": "GSPO",
+    "domain": "ai/llm/rl/other-algorithms",
+    "type": "project",
+    "tags": [
+      "ai/llm/rl/other-algorithms",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "GSPO-Unsloth实践"
+  },
+  {
+    "path": "AI/LLM/RL/Other-Algorithms/OPO-verl实践.md",
+    "title": "OPO",
+    "domain": "ai/llm/rl/other-algorithms",
+    "type": "project",
+    "tags": [
+      "ai/llm/rl/other-algorithms",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "OPO-verl实践"
+  },
+  {
+    "path": "AI/LLM/RL/Other-Algorithms/SPIN-verl实践.md",
+    "title": "SPIN",
+    "domain": "ai/llm/rl/other-algorithms",
+    "type": "project",
+    "tags": [
+      "ai/llm/rl/other-algorithms",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "SPIN-verl实践"
+  },
+  {
+    "path": "AI/LLM/RL/Other-Algorithms/SPPO-verl实践.md",
+    "title": "SPPO",
+    "domain": "ai/llm/rl/other-algorithms",
+    "type": "project",
+    "tags": [
+      "ai/llm/rl/other-algorithms",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "SPPO-verl实践"
+  },
+  {
+    "path": "AI/LLM/RL/PPO/PPO 原理.md",
+    "title": "PPO",
+    "domain": "ai/llm/rl/ppo",
+    "type": "concept",
+    "tags": [
+      "ai/llm/rl/ppo",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "PPO 原理"
+  },
+  {
+    "path": "AI/LLM/RL/PPO/PPO-TRL实践.md",
+    "title": "PPO",
+    "domain": "ai/llm/rl/ppo",
+    "type": "project",
+    "tags": [
+      "ai/llm/rl/ppo",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "PPO-TRL实践"
+  },
+  {
+    "path": "AI/LLM/RL/PPO/PPO-verl实践.md",
+    "title": "PPO",
+    "domain": "ai/llm/rl/ppo",
+    "type": "project",
+    "tags": [
+      "ai/llm/rl/ppo",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "PPO-verl实践"
+  },
+  {
+    "path": "AI/LLM/RL/RLOO/RLOO-TRL实践.md",
+    "title": "RLOO",
+    "domain": "ai/llm/rl/rloo",
+    "type": "project",
+    "tags": [
+      "ai/llm/rl/rloo",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "RLOO-TRL实践"
+  },
+  {
+    "path": "AI/LLM/RL/_MOC.md",
+    "title": "强化学习 for LLM",
+    "domain": "ai/llm/rl",
+    "type": "moc",
+    "tags": [
+      "ai/llm/rl",
+      "type/reference"
+    ],
+    "created": "",
+    "updated": "",
+    "filename": "_MOC"
+  },
+  {
+    "path": "AI/LLM/SFT/LoRA.md",
+    "title": "Lora",
+    "domain": "ai/llm/sft",
+    "type": "paper",
+    "tags": [
+      "ai/llm/sft",
+      "type/paper"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "LoRA"
+  },
+  {
+    "path": "AI/LLM/SFT/Post-Training Unified View 论文.md",
+    "title": "Towards a Unified View of Large Language Model Post-Training",
+    "domain": "ai/llm/sft",
+    "type": "paper",
+    "tags": [
+      "ai/llm/sft",
+      "type/paper"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Post-Training Unified View 论文"
+  },
+  {
+    "path": "AI/LLM/SFT/SFT 原理.md",
+    "title": "SFT",
+    "domain": "ai/llm/sft",
+    "type": "concept",
+    "tags": [
+      "ai/llm/sft",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "SFT 原理"
+  },
+  {
+    "path": "AI/LLM/SFT/SFT-TRL实践.md",
+    "title": "SFT",
+    "domain": "ai/llm/sft",
+    "type": "project",
+    "tags": [
+      "ai/llm/sft",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "SFT-TRL实践"
+  },
+  {
+    "path": "AI/LLM/_MOC.md",
+    "title": "大语言模型 LLM",
+    "domain": "ai/llm",
+    "type": "moc",
+    "tags": [
+      "ai/llm",
+      "type/reference"
+    ],
+    "created": "",
+    "updated": "",
+    "filename": "_MOC"
+  },
+  {
+    "path": "AI/LLM/小规模训练手册.md",
+    "title": "小规模训练手册：构建世界级LLM的秘密",
+    "domain": "ai/llm",
+    "type": "project",
+    "tags": [
+      "ai/llm",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "小规模训练手册"
+  },
+  {
+    "path": "AI/MLLM/BLIP-2.md",
+    "title": "BLIP-2",
+    "domain": "ai/mllm",
+    "type": "paper",
+    "tags": [
+      "ai/mllm",
+      "type/paper"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "BLIP-2"
+  },
+  {
+    "path": "AI/MLLM/CLIP.md",
+    "title": "CLIP",
+    "domain": "ai/mllm",
+    "type": "paper",
+    "tags": [
+      "ai/mllm",
+      "type/paper"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "CLIP"
+  },
+  {
+    "path": "AI/MLLM/DeepSeek-OCR 原理.md",
+    "title": "DeepSeek-OCR",
+    "domain": "ai/mllm",
+    "type": "concept",
+    "tags": [
+      "ai/mllm",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "DeepSeek-OCR 原理"
+  },
+  {
+    "path": "AI/MLLM/DeepSeek-OCR-Unsloth实践.md",
+    "title": "DeepSeek-OCR",
+    "domain": "ai/mllm",
+    "type": "project",
+    "tags": [
+      "ai/mllm",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "DeepSeek-OCR-Unsloth实践"
+  },
+  {
+    "path": "AI/MLLM/DeepSeek-VL.md",
+    "title": "DeepSeek-VL",
+    "domain": "ai/mllm",
+    "type": "paper",
+    "tags": [
+      "ai/mllm",
+      "type/paper"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "DeepSeek-VL"
+  },
+  {
+    "path": "AI/MLLM/InternVL3.md",
+    "title": "InternVL3",
+    "domain": "ai/mllm",
+    "type": "paper",
+    "tags": [
+      "ai/mllm",
+      "type/paper"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "InternVL3"
+  },
+  {
+    "path": "AI/MLLM/LLaVA-Critic-R1.md",
+    "title": "LLaVA-Critic-R1: Your Critic Model is Secretly a Strong Policy Model",
+    "domain": "ai/mllm",
+    "type": "paper",
+    "tags": [
+      "ai/mllm",
+      "type/paper"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "LLaVA-Critic-R1"
+  },
+  {
+    "path": "AI/MLLM/MLLM 概述.md",
+    "title": "MLLM",
+    "domain": "ai/mllm",
+    "type": "reference",
+    "tags": [
+      "ai/mllm",
+      "type/reference"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "MLLM 概述"
+  },
+  {
+    "path": "AI/MLLM/Qwen 2.5 VL-Unsloth训练.md",
+    "title": "Qwen 2.5 VL",
+    "domain": "ai/mllm",
+    "type": "project",
+    "tags": [
+      "ai/mllm",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Qwen 2.5 VL-Unsloth训练"
+  },
+  {
+    "path": "AI/MLLM/Qwen-VL.md",
+    "title": "Qwen-VL",
+    "domain": "ai/mllm",
+    "type": "paper",
+    "tags": [
+      "ai/mllm",
+      "type/paper"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Qwen-VL"
+  },
+  {
+    "path": "AI/MLLM/Qwen3-VL-Unsloth训练.md",
+    "title": "Qwen3-VL",
+    "domain": "ai/mllm",
+    "type": "project",
+    "tags": [
+      "ai/mllm",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Qwen3-VL-Unsloth训练"
+  },
+  {
+    "path": "AI/MLLM/Seed1.5-VL.md",
+    "title": "Seed1.5-VL",
+    "domain": "ai/mllm",
+    "type": "concept",
+    "tags": [
+      "ai/mllm",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Seed1.5-VL"
+  },
+  {
+    "path": "AI/MLLM/Universal Multimodal Retrieval.md",
+    "title": "Universal Multimodal Retrieval",
+    "domain": "ai/mllm",
+    "type": "paper",
+    "tags": [
+      "ai/mllm",
+      "type/paper"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Universal Multimodal Retrieval"
+  },
+  {
+    "path": "AI/MLLM/_MOC.md",
+    "title": "多模态大模型 MLLM",
+    "domain": "ai/mllm",
+    "type": "moc",
+    "tags": [
+      "ai/mllm",
+      "type/reference"
+    ],
+    "created": "",
+    "updated": "",
+    "filename": "_MOC"
+  },
+  {
+    "path": "AI/MLLM/玩玩多模态大模型.md",
+    "title": "玩玩多模态大模型",
+    "domain": "ai/mllm",
+    "type": "concept",
+    "tags": [
+      "ai/mllm",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "玩玩多模态大模型"
+  },
+  {
+    "path": "AI/MLLM/非文本的模态对齐.md",
+    "title": "非文本的模态对齐",
+    "domain": "ai/mllm",
+    "type": "concept",
+    "tags": [
+      "ai/mllm",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "非文本的模态对齐"
+  },
+  {
+    "path": "AI/Safety/AI 伦理和治理.md",
+    "title": "AI 伦理和治理",
+    "domain": "ai/safety",
+    "type": "concept",
+    "tags": [
+      "ai/safety",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "AI 伦理和治理"
+  },
+  {
+    "path": "AI/Safety/AI 安全及隐私保护.md",
+    "title": "AI 安全及隐私保护",
+    "domain": "ai/safety",
+    "type": "concept",
+    "tags": [
+      "ai/safety",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "AI 安全及隐私保护"
+  },
+  {
+    "path": "AI/_MOC.md",
+    "title": "AI 总览",
+    "domain": "ai",
+    "type": "moc",
+    "tags": [
+      "ai",
+      "type/reference"
+    ],
+    "created": "",
+    "updated": "",
+    "filename": "_MOC"
+  },
+  {
+    "path": "AI/关于 AI 学习提效思考.md",
+    "title": "关于 AI 学习提效思考",
+    "domain": "ai",
+    "type": "tutorial",
+    "tags": [
+      "ai",
+      "type/tutorial"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "关于 AI 学习提效思考"
+  },
+  {
+    "path": "Career/AI 应用工程师职业路径.md",
+    "title": "AI 应用工程师职业路径",
+    "domain": "career",
+    "type": "thought",
+    "tags": [
+      "career",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "AI 应用工程师职业路径"
+  },
+  {
+    "path": "Career/Agent 简历描述重点.md",
+    "title": "Agent 简历描述重点",
+    "domain": "career",
+    "type": "thought",
+    "tags": [
+      "career",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Agent 简历描述重点"
+  },
+  {
+    "path": "Career/PMO/01-项目概览.md",
+    "title": "01-项目概览",
+    "domain": "career/pmo",
+    "type": "thought",
+    "tags": [
+      "career/pmo",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "01-项目概览"
+  },
+  {
+    "path": "Career/PMO/02-范围&需求.md",
+    "title": "02-范围&需求",
+    "domain": "career/pmo",
+    "type": "thought",
+    "tags": [
+      "career/pmo",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "02-范围&需求"
+  },
+  {
+    "path": "Career/PMO/03-计划&进度/03-计划&进度.md",
+    "title": "03-计划&进度",
+    "domain": "career/pmo/03-计划&进度",
+    "type": "thought",
+    "tags": [
+      "career/pmo/03-计划&进度",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "03-计划&进度"
+  },
+  {
+    "path": "Career/PMO/03-计划&进度/项目节奏.md",
+    "title": "项目节奏",
+    "domain": "career/pmo/03-计划&进度",
+    "type": "thought",
+    "tags": [
+      "career/pmo/03-计划&进度",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "项目节奏"
+  },
+  {
+    "path": "Career/PMO/04-方案&设计/04-方案&设计.md",
+    "title": "04-方案&设计",
+    "domain": "career/pmo/04-方案&设计",
+    "type": "thought",
+    "tags": [
+      "career/pmo/04-方案&设计",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "04-方案&设计"
+  },
+  {
+    "path": "Career/PMO/04-方案&设计/PRD.md",
+    "title": "PRD",
+    "domain": "career/pmo/04-方案&设计",
+    "type": "thought",
+    "tags": [
+      "career/pmo/04-方案&设计",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "PRD"
+  },
+  {
+    "path": "Career/PMO/04-方案&设计/技术方案.md",
+    "title": "技术方案",
+    "domain": "career/pmo/04-方案&设计",
+    "type": "thought",
+    "tags": [
+      "career/pmo/04-方案&设计",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "技术方案"
+  },
+  {
+    "path": "Career/PMO/04-方案&设计/设计稿.md",
+    "title": "设计稿",
+    "domain": "career/pmo/04-方案&设计",
+    "type": "thought",
+    "tags": [
+      "career/pmo/04-方案&设计",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "设计稿"
+  },
+  {
+    "path": "Career/PMO/05-执行&交付.md",
+    "title": "05-执行&交付",
+    "domain": "career/pmo",
+    "type": "thought",
+    "tags": [
+      "career/pmo",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "05-执行&交付"
+  },
+  {
+    "path": "Career/PMO/06-沟通&协作/06-沟通&协作.md",
+    "title": "06-沟通&协作",
+    "domain": "career/pmo/06-沟通&协作",
+    "type": "thought",
+    "tags": [
+      "career/pmo/06-沟通&协作",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "06-沟通&协作"
+  },
+  {
+    "path": "Career/PMO/06-沟通&协作/日会.md",
+    "title": "日会",
+    "domain": "career/pmo/06-沟通&协作",
+    "type": "thought",
+    "tags": [
+      "career/pmo/06-沟通&协作",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "日会"
+  },
+  {
+    "path": "Career/PMO/07-风险&问题/01-风险登记册.md",
+    "title": "01-风险登记册",
+    "domain": "career/pmo/07-风险&问题",
+    "type": "thought",
+    "tags": [
+      "career/pmo/07-风险&问题",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "01-风险登记册"
+  },
+  {
+    "path": "Career/PMO/07-风险&问题/02-问题登记册.md",
+    "title": "02-问题登记册",
+    "domain": "career/pmo/07-风险&问题",
+    "type": "thought",
+    "tags": [
+      "career/pmo/07-风险&问题",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "02-问题登记册"
+  },
+  {
+    "path": "Career/PMO/07-风险&问题/07-风险&问题.md",
+    "title": "07-风险&问题",
+    "domain": "career/pmo/07-风险&问题",
+    "type": "thought",
+    "tags": [
+      "career/pmo/07-风险&问题",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "07-风险&问题"
+  },
+  {
+    "path": "Career/PMO/08-流程&规范/08-流程&规范.md",
+    "title": "08-流程&规范",
+    "domain": "career/pmo/08-流程&规范",
+    "type": "thought",
+    "tags": [
+      "career/pmo/08-流程&规范",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "08-流程&规范"
+  },
+  {
+    "path": "Career/PMO/08-流程&规范/项目加班登记.md",
+    "title": "项目加班登记",
+    "domain": "career/pmo/08-流程&规范",
+    "type": "thought",
+    "tags": [
+      "career/pmo/08-流程&规范",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "项目加班登记"
+  },
+  {
+    "path": "Career/PMO/09-度量&监控.md",
+    "title": "09-度量&监控",
+    "domain": "career/pmo",
+    "type": "thought",
+    "tags": [
+      "career/pmo",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "09-度量&监控"
+  },
+  {
+    "path": "Career/PMO/10-知识沉淀.md",
+    "title": "10-知识沉淀",
+    "domain": "career/pmo",
+    "type": "thought",
+    "tags": [
+      "career/pmo",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "10-知识沉淀"
+  },
+  {
+    "path": "Career/PMO/PMO 模版概述.md",
+    "title": "pmo 模版",
+    "domain": "career/pmo",
+    "type": "reference",
+    "tags": [
+      "career/pmo",
+      "type/reference"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "PMO 模版概述"
+  },
+  {
+    "path": "Career/_MOC.md",
+    "title": "职业发展",
+    "domain": "career",
+    "type": "moc",
+    "tags": [
+      "career",
+      "type/reference"
+    ],
+    "created": "",
+    "updated": "",
+    "filename": "_MOC"
+  },
+  {
+    "path": "Career/产品方法论/产品方法论整理.md",
+    "title": "产品方法论整理",
+    "domain": "career/产品方法论",
+    "type": "thought",
+    "tags": [
+      "career/产品方法论",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "产品方法论整理"
+  },
+  {
+    "path": "Career/岔路口，一步步思考.md",
+    "title": "岔路口，一步步思考",
+    "domain": "career",
+    "type": "thought",
+    "tags": [
+      "career",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "岔路口，一步步思考"
+  },
+  {
+    "path": "Career/述职-晋升/2023 述职自评.md",
+    "title": "2023 述职自评",
+    "domain": "career/述职-晋升",
+    "type": "thought",
+    "tags": [
+      "career/述职-晋升",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "2023 述职自评"
+  },
+  {
+    "path": "Career/述职-晋升/2024 述职自评.md",
+    "title": "2024 述职自评",
+    "domain": "career/述职-晋升",
+    "type": "thought",
+    "tags": [
+      "career/述职-晋升",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "2024 述职自评"
+  },
+  {
+    "path": "Career/述职-晋升/2025 H1 自评.md",
+    "title": "2025 H1 自评",
+    "domain": "career/述职-晋升",
+    "type": "thought",
+    "tags": [
+      "career/述职-晋升",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "2025 H1 自评"
+  },
+  {
+    "path": "Career/述职-晋升/2025 年终自评.md",
+    "title": "2025 年终自评",
+    "domain": "career/述职-晋升",
+    "type": "thought",
+    "tags": [
+      "career/述职-晋升",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "2025 年终自评"
+  },
+  {
+    "path": "Career/述职-晋升/晋升注意点.md",
+    "title": "晋升注意点",
+    "domain": "career/述职-晋升",
+    "type": "thought",
+    "tags": [
+      "career/述职-晋升",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "晋升注意点"
+  },
+  {
+    "path": "Engineering/Doris/Doris 架构.md",
     "title": "1. Doris 架构",
-    "category": "工程",
+    "domain": "engineering/doris",
+    "type": "concept",
     "tags": [
-      "Doris",
-      "Hadoop",
-      "Planner",
-      "Rollup",
-      "SQL"
+      "engineering/doris",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "1. Doris 架构"
+    "filename": "Doris 架构"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Doris/Doris.md",
+    "path": "Engineering/Doris/Doris 概述.md",
     "title": "Doris",
-    "category": "工程",
+    "domain": "engineering/doris",
+    "type": "reference",
     "tags": [
-      "Doris",
-      "Hive",
-      "Kafka",
-      "Rollup",
-      "SQL"
+      "engineering/doris",
+      "type/reference"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Doris"
+    "filename": "Doris 概述"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Doris/2. Doris 底层存储/2. Doris 底层存储.md",
+    "path": "Engineering/Doris/底层存储/Doris 底层存储.md",
     "title": "2. Doris 底层存储",
-    "category": "工程",
+    "domain": "engineering/doris/底层存储",
+    "type": "concept",
     "tags": [
-      "Doris",
-      "数据工程"
+      "engineering/doris/底层存储",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "2. Doris 底层存储"
+    "filename": "Doris 底层存储"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Doris/2. Doris 底层存储/删除流程.md",
-    "title": "删除流程",
-    "category": "工程",
-    "tags": [
-      "Doris",
-      "数据工程"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "删除流程"
-  },
-  {
-    "path": "2. 工程/Data Engineering/框架/实时/Doris/2. Doris 底层存储/存储结构.md",
-    "title": "存储结构",
-    "category": "工程",
-    "tags": [
-      "Doris",
-      "LLM",
-      "RAG",
-      "SQL",
-      "Shuffle"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "存储结构"
-  },
-  {
-    "path": "2. 工程/Data Engineering/框架/实时/Doris/2. Doris 底层存储/读写原理待归档.md",
-    "title": "读写原理待归档",
-    "category": "工程",
-    "tags": [
-      "Doris",
-      "RocksDB",
-      "Rollup",
-      "T5",
-      "流处理"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "读写原理待归档"
-  },
-  {
-    "path": "2. 工程/Data Engineering/框架/实时/Doris/2. Doris 底层存储/读取流程.md",
-    "title": "读取流程",
-    "category": "工程",
-    "tags": [
-      "Doris",
-      "SQL",
-      "优化",
-      "数据仓库",
-      "索引"
-    ],
-    "created": "2026-02-13",
-    "updated": "2026-02-13",
-    "filename": "读取流程"
-  },
-  {
-    "path": "2. 工程/Data Engineering/框架/实时/Doris/2. Doris 底层存储/写入流程/写入流程.md",
+    "path": "Engineering/Doris/底层存储/写入流程/写入流程.md",
     "title": "写入流程",
-    "category": "工程",
+    "domain": "engineering/doris/底层存储/写入流程",
+    "type": "concept",
     "tags": [
-      "Doris",
-      "ETL",
-      "流处理",
-      "索引"
+      "engineering/doris/底层存储/写入流程",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "写入流程"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Doris/2. Doris 底层存储/写入流程/Doris 数据导入/Doris 数据导入.md",
+    "path": "Engineering/Doris/底层存储/写入流程/数据导入/Doris 数据导入.md",
     "title": "Doris 数据导入",
-    "category": "工程",
+    "domain": "engineering/doris/底层存储/写入流程/数据导入",
+    "type": "concept",
     "tags": [
-      "Doris",
-      "ETL",
-      "Flink",
-      "Hive",
-      "Kafka"
+      "engineering/doris/底层存储/写入流程/数据导入",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "Doris 数据导入"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Doris/2. Doris 底层存储/写入流程/Doris 数据导入/Stream Load _ Spark Load.md",
+    "path": "Engineering/Doris/底层存储/写入流程/数据导入/Stream Load Spark Load.md",
     "title": "Stream Load / Spark Load",
-    "category": "工程",
+    "domain": "engineering/doris/底层存储/写入流程/数据导入",
+    "type": "concept",
     "tags": [
-      "Doris",
-      "ETL",
-      "Hive",
-      "Join",
-      "Rollup"
+      "engineering/doris/底层存储/写入流程/数据导入",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Stream Load _ Spark Load"
+    "filename": "Stream Load Spark Load"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Doris/2. Doris 底层存储/写入流程/Doris 数据导入/Stream Load.md",
+    "path": "Engineering/Doris/底层存储/写入流程/数据导入/Stream Load.md",
     "title": "Stream Load",
-    "category": "工程",
+    "domain": "engineering/doris/底层存储/写入流程/数据导入",
+    "type": "concept",
     "tags": [
-      "Doris",
-      "流处理"
+      "engineering/doris/底层存储/写入流程/数据导入",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "Stream Load"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Doris/3. Doris 治理/3. Doris 治理.md",
-    "title": "3. Doris 治理",
-    "category": "工程",
+    "path": "Engineering/Doris/底层存储/删除流程.md",
+    "title": "删除流程",
+    "domain": "engineering/doris/底层存储",
+    "type": "concept",
     "tags": [
-      "Doris",
-      "Join",
-      "RAG",
-      "Rollup",
-      "SQL"
+      "engineering/doris/底层存储",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "3. Doris 治理"
+    "filename": "删除流程"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Doris/3. Doris 治理/Doris 查询计划.md",
-    "title": "Doris 查询计划",
-    "category": "工程",
+    "path": "Engineering/Doris/底层存储/存储结构.md",
+    "title": "存储结构",
+    "domain": "engineering/doris/底层存储",
+    "type": "concept",
     "tags": [
-      "Doris",
-      "Hive",
-      "Join",
-      "LLM",
-      "RAG"
+      "engineering/doris/底层存储",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "存储结构"
+  },
+  {
+    "path": "Engineering/Doris/底层存储/读写原理待归档.md",
+    "title": "读写原理待归档",
+    "domain": "engineering/doris/底层存储",
+    "type": "concept",
+    "tags": [
+      "engineering/doris/底层存储",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "读写原理待归档"
+  },
+  {
+    "path": "Engineering/Doris/底层存储/读取流程.md",
+    "title": "读取流程",
+    "domain": "engineering/doris/底层存储",
+    "type": "concept",
+    "tags": [
+      "engineering/doris/底层存储",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "读取流程"
+  },
+  {
+    "path": "Engineering/Doris/治理/Doris 查询计划.md",
+    "title": "Doris 查询计划",
+    "domain": "engineering/doris/治理",
+    "type": "concept",
+    "tags": [
+      "engineering/doris/治理",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "Doris 查询计划"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Doris/3. Doris 治理/Doris 看板指标分析.md",
-    "title": "Doris 看板指标分析",
-    "category": "工程",
+    "path": "Engineering/Doris/治理/Doris 治理.md",
+    "title": "3. Doris 治理",
+    "domain": "engineering/doris/治理",
+    "type": "concept",
     "tags": [
-      "Doris",
-      "数据工程"
+      "engineering/doris/治理",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Doris 治理"
+  },
+  {
+    "path": "Engineering/Doris/治理/Doris 看板指标分析.md",
+    "title": "Doris 看板指标分析",
+    "domain": "engineering/doris/治理",
+    "type": "concept",
+    "tags": [
+      "engineering/doris/治理",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "Doris 看板指标分析"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Doris/4. Doris 生产/4. Doris 生产.md",
+    "path": "Engineering/Doris/生产/Doris 生产.md",
     "title": "4. Doris 生产",
-    "category": "工程",
+    "domain": "engineering/doris/生产",
+    "type": "concept",
     "tags": [
-      "Checkpoint",
-      "Doris",
-      "RAG",
-      "SQL",
-      "Spark"
+      "engineering/doris/生产",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "4. Doris 生产"
+    "filename": "Doris 生产"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Doris/4. Doris 生产/Join/Colocate Join.md",
+    "path": "Engineering/Doris/生产/Join/Colocate Join.md",
     "title": "Colocate Join",
-    "category": "工程",
+    "domain": "engineering/doris/生产/join",
+    "type": "concept",
     "tags": [
-      "Doris",
-      "Join",
-      "分布式训练"
+      "engineering/doris/生产/join",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "Colocate Join"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Doris/4. Doris 生产/Join/Join.md",
+    "path": "Engineering/Doris/生产/Join/Join.md",
     "title": "Join",
-    "category": "工程",
+    "domain": "engineering/doris/生产/join",
+    "type": "concept",
     "tags": [
-      "CV",
-      "Doris",
-      "Join",
-      "RAG",
-      "Shuffle"
+      "engineering/doris/生产/join",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "Join"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Doris/4. Doris 生产/索引/Rollup.md",
+    "path": "Engineering/Doris/生产/索引/Rollup.md",
     "title": "Rollup",
-    "category": "工程",
+    "domain": "engineering/doris/生产/索引",
+    "type": "concept",
     "tags": [
-      "Doris",
-      "Join",
-      "Rollup",
-      "索引"
+      "engineering/doris/生产/索引",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "Rollup"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Doris/4. Doris 生产/索引/RuntimeFilter.md",
+    "path": "Engineering/Doris/生产/索引/RuntimeFilter.md",
     "title": "RuntimeFilter",
-    "category": "工程",
+    "domain": "engineering/doris/生产/索引",
+    "type": "concept",
     "tags": [
-      "Doris",
-      "Join",
-      "SQL",
-      "优化",
-      "索引"
+      "engineering/doris/生产/索引",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "RuntimeFilter"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Doris/4. Doris 生产/索引/索引.md",
+    "path": "Engineering/Doris/生产/索引/索引.md",
     "title": "索引",
-    "category": "工程",
+    "domain": "engineering/doris/生产/索引",
+    "type": "concept",
     "tags": [
-      "Doris",
-      "Rollup",
-      "索引"
+      "engineering/doris/生产/索引",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "索引"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/Spark 算子.md",
-    "title": "Spark 算子",
-    "category": "工程",
+    "path": "Engineering/Flink/CheckPoint/Chandy-Lamport 算法.md",
+    "title": "Chandy-Lamport 算法",
+    "domain": "engineering/flink/checkpoint",
+    "type": "concept",
     "tags": [
-      "Hive",
-      "Join",
-      "RDD",
-      "Shuffle",
-      "Spark"
+      "engineering/flink/checkpoint",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Spark 算子"
+    "filename": "Chandy-Lamport 算法"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/Spark.md",
-    "title": "Spark",
-    "category": "工程",
+    "path": "Engineering/Flink/CheckPoint/Exactly Once 语义.md",
+    "title": "Exactly Once 语义",
+    "domain": "engineering/flink/checkpoint",
+    "type": "concept",
     "tags": [
-      "Hadoop",
-      "Hive",
-      "Join",
-      "RDD",
-      "SQL"
+      "engineering/flink/checkpoint",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Spark"
+    "filename": "Exactly Once 语义"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/1. Spark 存储/1. Spark 存储.md",
-    "title": "1. Spark 存储",
-    "category": "工程",
+    "path": "Engineering/Flink/CheckPoint/Flink CheckPoint.md",
+    "title": "3. Flink CheckPoint",
+    "domain": "engineering/flink/checkpoint",
+    "type": "concept",
     "tags": [
-      "Spark",
-      "数据工程"
+      "engineering/flink/checkpoint",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "1. Spark 存储"
+    "filename": "Flink CheckPoint"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/1. Spark 存储/RDD _ DataFrame _ DataSet.md",
-    "title": "RDD / DataFrame / DataSet",
-    "category": "工程",
+    "path": "Engineering/Flink/CheckPoint/RocksDB 原理.md",
+    "title": "RocksDB 原理",
+    "domain": "engineering/flink/checkpoint",
+    "type": "concept",
     "tags": [
-      "AI安全",
-      "CV",
-      "DataFrame",
-      "RDD",
-      "SQL"
+      "engineering/flink/checkpoint",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "RDD _ DataFrame _ DataSet"
+    "filename": "RocksDB 原理"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/1. Spark 存储/Spark 内存模型.md",
-    "title": "Spark 内存模型",
-    "category": "工程",
+    "path": "Engineering/Flink/Flink CEP CDC.md",
+    "title": "7. Flink CEP / CDC",
+    "domain": "engineering/flink",
+    "type": "concept",
     "tags": [
-      "Join",
-      "RAG",
-      "RDD",
-      "Shuffle",
-      "Spark"
+      "engineering/flink",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Spark 内存模型"
+    "filename": "Flink CEP CDC"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/1. Spark 存储/知识点.md",
-    "title": "知识点",
-    "category": "工程",
+    "path": "Engineering/Flink/Flink 内存机制.md",
+    "title": "2. Flink 内存机制",
+    "domain": "engineering/flink",
+    "type": "concept",
     "tags": [
-      "RDD",
-      "Spark",
-      "流处理"
+      "engineering/flink",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "知识点"
+    "filename": "Flink 内存机制"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/1. Spark 存储/Spark RDD/Spark CheckPoint.md",
-    "title": "Spark CheckPoint",
-    "category": "工程",
+    "path": "Engineering/Flink/Flink 概述.md",
+    "title": "Flink",
+    "domain": "engineering/flink",
+    "type": "reference",
     "tags": [
-      "Checkpoint",
-      "OCR",
-      "RDD",
-      "Spark",
-      "YARN"
+      "engineering/flink",
+      "type/reference"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Spark CheckPoint"
+    "filename": "Flink 概述"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/1. Spark 存储/Spark RDD/Spark Lineage.md",
-    "title": "Spark Lineage",
-    "category": "工程",
+    "path": "Engineering/Flink/Flink 窗口和时间机制.md",
+    "title": "4. Flink 窗口 / 时间机制",
+    "domain": "engineering/flink",
+    "type": "concept",
     "tags": [
-      "Checkpoint",
-      "Join",
-      "RDD",
-      "Shuffle",
-      "Spark"
+      "engineering/flink",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Spark Lineage"
+    "filename": "Flink 窗口和时间机制"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/1. Spark 存储/Spark RDD/Spark Partitioner.md",
-    "title": "Spark Partitioner",
-    "category": "工程",
+    "path": "Engineering/Flink/开发/Flink API（Java）.md",
+    "title": "Flink API（Java）",
+    "domain": "engineering/flink/开发",
+    "type": "concept",
     "tags": [
-      "RDD",
-      "Shuffle",
-      "Spark",
-      "数据倾斜"
+      "engineering/flink/开发",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Spark Partitioner"
+    "filename": "Flink API（Java）"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/1. Spark 存储/Spark RDD/Spark RDD.md",
-    "title": "Spark RDD",
-    "category": "工程",
+    "path": "Engineering/Flink/开发/Flink Partitioner.md",
+    "title": "Flink Partitioner",
+    "domain": "engineering/flink/开发",
+    "type": "concept",
     "tags": [
-      "AI安全",
-      "Checkpoint",
-      "RDD",
-      "Shuffle",
-      "Spark"
+      "engineering/flink/开发",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Spark RDD"
+    "filename": "Flink Partitioner"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/1. Spark 存储/Spark RDD/Spark 延迟计算.md",
-    "title": "Spark 延迟计算",
-    "category": "工程",
+    "path": "Engineering/Flink/开发/Flink SQL UDF.md",
+    "title": "Flink SQL / UDF",
+    "domain": "engineering/flink/开发",
+    "type": "concept",
     "tags": [
-      "RDD",
-      "Spark"
+      "engineering/flink/开发",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Spark 延迟计算"
+    "filename": "Flink SQL UDF"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/3. Spark 生产运维/3. Spark 生产运维.md",
-    "title": "3. Spark 生产运维",
-    "category": "工程",
+    "path": "Engineering/Flink/开发/Flink 动态表.md",
+    "title": "Flink 动态表",
+    "domain": "engineering/flink/开发",
+    "type": "concept",
     "tags": [
-      "Join",
-      "SQL",
-      "Spark",
-      "YARN",
-      "流处理"
+      "engineering/flink/开发",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "3. Spark 生产运维"
+    "filename": "Flink 动态表"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/3. Spark 生产运维/ETL 性能优化.md",
-    "title": "ETL 性能优化",
-    "category": "工程",
+    "path": "Engineering/Flink/开发/Flink 开发.md",
+    "title": "5. Flink 开发",
+    "domain": "engineering/flink/开发",
+    "type": "concept",
     "tags": [
-      "ETL",
-      "Spark",
-      "优化"
+      "engineering/flink/开发",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "ETL 性能优化"
+    "filename": "Flink 开发"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/3. Spark 生产运维/Spark_Hive 不一致的坑.md",
-    "title": "Spark/Hive 不一致的坑",
-    "category": "工程",
+    "path": "Engineering/Flink/生产/Flink SideOutput.md",
+    "title": "Flink SideOutput",
+    "domain": "engineering/flink/生产",
+    "type": "concept",
     "tags": [
-      "CEP",
-      "Flink",
-      "Hive",
-      "SQL",
-      "Spark"
+      "engineering/flink/生产",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Spark_Hive 不一致的坑"
+    "filename": "Flink SideOutput"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/3. Spark 生产运维/小文件问题/Spark 海量数据多分区落表小文件治理.md",
-    "title": "Spark 海量数据多分区落表小文件治理",
-    "category": "工程",
+    "path": "Engineering/Flink/生产/Flink 生产.md",
+    "title": "1. Flink 生产",
+    "domain": "engineering/flink/生产",
+    "type": "concept",
     "tags": [
-      "Hive",
-      "SQL",
-      "Shuffle",
-      "Spark",
-      "小文件治理"
+      "engineering/flink/生产",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Spark 海量数据多分区落表小文件治理"
+    "filename": "Flink 生产"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/3. Spark 生产运维/小文件问题/小文件问题.md",
-    "title": "小文件问题",
-    "category": "工程",
+    "path": "Engineering/Flink/生产/Regular Join Retract 数据放大问题.md",
+    "title": "Regular Join Retract/数据放大问题",
+    "domain": "engineering/flink/生产",
+    "type": "concept",
     "tags": [
-      "ETL",
-      "Hadoop",
-      "Hive",
-      "Join",
-      "RDD"
+      "engineering/flink/生产",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "小文件问题"
+    "filename": "Regular Join Retract 数据放大问题"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/3. Spark 生产运维/数据倾斜优化/一次特殊的数据倾斜优化.md",
-    "title": "一次特殊的数据倾斜优化",
-    "category": "工程",
+    "path": "Engineering/Flink/生产/实时数据准确性.md",
+    "title": "实时数据准确性",
+    "domain": "engineering/flink/生产",
+    "type": "concept",
     "tags": [
-      "Spark",
-      "优化",
-      "数据倾斜"
+      "engineering/flink/生产",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "一次特殊的数据倾斜优化"
+    "filename": "实时数据准确性"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/3. Spark 生产运维/数据倾斜优化/数据倾斜优化.md",
-    "title": "数据倾斜优化",
-    "category": "工程",
+    "path": "Engineering/Flink/生产/实时脏数据修复.md",
+    "title": "实时脏数据修复",
+    "domain": "engineering/flink/生产",
+    "type": "concept",
     "tags": [
-      "Doris",
-      "ETL",
-      "Hadoop",
-      "Hive",
-      "Join"
+      "engineering/flink/生产",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "数据倾斜优化"
+    "filename": "实时脏数据修复"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/3. Spark 生产运维/Spark 运行/Spark on Yarn.md",
-    "title": "Spark on Yarn",
-    "category": "工程",
+    "path": "Engineering/Flink/生产/海量数据去重.md",
+    "title": "海量数据去重",
+    "domain": "engineering/flink/生产",
+    "type": "concept",
     "tags": [
-      "Spark",
-      "YARN"
+      "engineering/flink/生产",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Spark on Yarn"
+    "filename": "海量数据去重"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/3. Spark 生产运维/Spark 运行/Spark 提交流程.md",
-    "title": "Spark 提交流程",
-    "category": "工程",
+    "path": "Engineering/Flink/生产/监控指标.md",
+    "title": "监控指标",
+    "domain": "engineering/flink/生产",
+    "type": "concept",
     "tags": [
-      "Spark",
-      "优化"
+      "engineering/flink/生产",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Spark 提交流程"
+    "filename": "监控指标"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/3. Spark 生产运维/Spark 运行/Spark 运行.md",
-    "title": "Spark 运行",
-    "category": "工程",
+    "path": "Engineering/Flink/生产/调优/Flink 调优.md",
+    "title": "Flink 调优",
+    "domain": "engineering/flink/生产/调优",
+    "type": "concept",
     "tags": [
-      "Spark",
-      "数据工程"
+      "engineering/flink/生产/调优",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Spark 运行"
+    "filename": "Flink 调优"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/3. Spark 生产运维/Spark 运行/运行管理器.md",
-    "title": "运行管理器",
-    "category": "工程",
+    "path": "Engineering/Flink/生产/调优/反压.md",
+    "title": "反压",
+    "domain": "engineering/flink/生产/调优",
+    "type": "concept",
     "tags": [
-      "Hadoop",
-      "Spark",
-      "YARN",
-      "分布式训练"
+      "engineering/flink/生产/调优",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "运行管理器"
+    "filename": "反压"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/3. Spark 生产运维/Spark 调优/Hive 案例.md",
-    "title": "Hive 案例",
-    "category": "工程",
+    "path": "Engineering/Flink/生产/调优/并行度为什么是 2 的幂次方.md",
+    "title": "并行度为什么是 2 的幂次方",
+    "domain": "engineering/flink/生产/调优",
+    "type": "concept",
     "tags": [
-      "Hive",
-      "Join",
-      "SQL",
-      "Shuffle",
-      "Spark"
+      "engineering/flink/生产/调优",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Hive 案例"
+    "filename": "并行度为什么是 2 的幂次方"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/3. Spark 生产运维/Spark 调优/Spark 案例.md",
-    "title": "Spark 案例",
-    "category": "工程",
+    "path": "Engineering/Flink/生产/调优/状态对齐时间.md",
+    "title": "状态对齐时间",
+    "domain": "engineering/flink/生产/调优",
+    "type": "concept",
     "tags": [
-      "Hive",
-      "SQL",
-      "Shuffle",
-      "Spark",
-      "产品方法论"
+      "engineering/flink/生产/调优",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Spark 案例"
+    "filename": "状态对齐时间"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/3. Spark 生产运维/Spark 调优/Spark 调优.md",
-    "title": "Spark 调优",
-    "category": "工程",
+    "path": "Engineering/Flink/运行/Flink 提交流程.md",
+    "title": "Flink 提交流程",
+    "domain": "engineering/flink/运行",
+    "type": "concept",
     "tags": [
-      "Join",
-      "SQL",
-      "Spark",
-      "YARN",
-      "记忆模块"
+      "engineering/flink/运行",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Spark 调优"
+    "filename": "Flink 提交流程"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/3. Spark 生产运维/Spark 调优/Spark_Hive常用参数.md",
-    "title": "Spark/Hive常用参数",
-    "category": "工程",
+    "path": "Engineering/Flink/运行/Flink 运行.md",
+    "title": "6. Flink 运行",
+    "domain": "engineering/flink/运行",
+    "type": "concept",
     "tags": [
-      "AI安全",
-      "ETL",
-      "Hadoop",
-      "Hive",
-      "RDD"
+      "engineering/flink/运行",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "Spark_Hive常用参数"
+    "filename": "Flink 运行"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/2. Spark SQL/2. Spark SQL.md",
-    "title": "2. Spark SQL",
-    "category": "工程",
+    "path": "Engineering/Flink/运行/Flink 重启策略.md",
+    "title": "Flink 重启策略",
+    "domain": "engineering/flink/运行",
+    "type": "concept",
     "tags": [
-      "SQL",
-      "Spark"
+      "engineering/flink/运行",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "2. Spark SQL"
+    "filename": "Flink 重启策略"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/2. Spark SQL/4. Spark AQE + DDP.md",
+    "path": "Engineering/Spark/SQL/Spark AQE + DDP.md",
     "title": "4. Spark AQE + DDP",
-    "category": "工程",
+    "domain": "engineering/spark/sql",
+    "type": "concept",
     "tags": [
-      "AQE",
-      "Hive",
-      "Join",
-      "SQL",
-      "Shuffle"
+      "engineering/spark/sql",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
-    "filename": "4. Spark AQE + DDP"
+    "filename": "Spark AQE + DDP"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/2. Spark SQL/Spark Join.md",
+    "path": "Engineering/Spark/SQL/Spark Join.md",
     "title": "Spark Join",
-    "category": "工程",
+    "domain": "engineering/spark/sql",
+    "type": "concept",
     "tags": [
-      "Join",
-      "SQL",
-      "Shuffle",
-      "Spark",
-      "小文件治理"
+      "engineering/spark/sql",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "Spark Join"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/2. Spark SQL/Spark SQL 执行过程.md",
+    "path": "Engineering/Spark/SQL/Spark SQL 执行过程.md",
     "title": "Spark SQL 执行过程",
-    "category": "工程",
+    "domain": "engineering/spark/sql",
+    "type": "concept",
     "tags": [
-      "DataFrame",
-      "Hive",
-      "Join",
-      "Planner",
-      "RDD"
+      "engineering/spark/sql",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "Spark SQL 执行过程"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/2. Spark SQL/Spark Shuffle.md",
-    "title": "Spark Shuffle",
-    "category": "工程",
+    "path": "Engineering/Spark/SQL/Spark SQL.md",
+    "title": "2. Spark SQL",
+    "domain": "engineering/spark/sql",
+    "type": "concept",
     "tags": [
-      "SQL",
-      "Shuffle",
-      "Spark"
+      "engineering/spark/sql",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Spark SQL"
+  },
+  {
+    "path": "Engineering/Spark/SQL/Spark Shuffle.md",
+    "title": "Spark Shuffle",
+    "domain": "engineering/spark/sql",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/sql",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "Spark Shuffle"
   },
   {
-    "path": "2. 工程/Data Engineering/框架/实时/Spark/2. Spark SQL/谓词下推.md",
+    "path": "Engineering/Spark/SQL/谓词下推.md",
     "title": "谓词下推",
-    "category": "工程",
+    "domain": "engineering/spark/sql",
+    "type": "concept",
     "tags": [
-      "Hive",
-      "Join",
-      "SQL",
-      "Spark",
-      "谓词下推"
+      "engineering/spark/sql",
+      "type/concept"
     ],
     "created": "2026-02-13",
     "updated": "2026-02-13",
     "filename": "谓词下推"
+  },
+  {
+    "path": "Engineering/Spark/Spark 概述.md",
+    "title": "Spark",
+    "domain": "engineering/spark",
+    "type": "reference",
+    "tags": [
+      "engineering/spark",
+      "type/reference"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Spark 概述"
+  },
+  {
+    "path": "Engineering/Spark/Spark 算子.md",
+    "title": "Spark 算子",
+    "domain": "engineering/spark",
+    "type": "concept",
+    "tags": [
+      "engineering/spark",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Spark 算子"
+  },
+  {
+    "path": "Engineering/Spark/存储/RDD/Spark CheckPoint.md",
+    "title": "Spark CheckPoint",
+    "domain": "engineering/spark/存储/rdd",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/存储/rdd",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Spark CheckPoint"
+  },
+  {
+    "path": "Engineering/Spark/存储/RDD/Spark Lineage.md",
+    "title": "Spark Lineage",
+    "domain": "engineering/spark/存储/rdd",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/存储/rdd",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Spark Lineage"
+  },
+  {
+    "path": "Engineering/Spark/存储/RDD/Spark Partitioner.md",
+    "title": "Spark Partitioner",
+    "domain": "engineering/spark/存储/rdd",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/存储/rdd",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Spark Partitioner"
+  },
+  {
+    "path": "Engineering/Spark/存储/RDD/Spark RDD.md",
+    "title": "Spark RDD",
+    "domain": "engineering/spark/存储/rdd",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/存储/rdd",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Spark RDD"
+  },
+  {
+    "path": "Engineering/Spark/存储/RDD/Spark 延迟计算.md",
+    "title": "Spark 延迟计算",
+    "domain": "engineering/spark/存储/rdd",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/存储/rdd",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Spark 延迟计算"
+  },
+  {
+    "path": "Engineering/Spark/存储/RDD DataFrame DataSet.md",
+    "title": "RDD / DataFrame / DataSet",
+    "domain": "engineering/spark/存储",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/存储",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "RDD DataFrame DataSet"
+  },
+  {
+    "path": "Engineering/Spark/存储/Spark 内存模型.md",
+    "title": "Spark 内存模型",
+    "domain": "engineering/spark/存储",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/存储",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Spark 内存模型"
+  },
+  {
+    "path": "Engineering/Spark/存储/Spark 存储.md",
+    "title": "1. Spark 存储",
+    "domain": "engineering/spark/存储",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/存储",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Spark 存储"
+  },
+  {
+    "path": "Engineering/Spark/存储/知识点.md",
+    "title": "知识点",
+    "domain": "engineering/spark/存储",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/存储",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "知识点"
+  },
+  {
+    "path": "Engineering/Spark/生产运维/ETL 性能优化.md",
+    "title": "ETL 性能优化",
+    "domain": "engineering/spark/生产运维",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/生产运维",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "ETL 性能优化"
+  },
+  {
+    "path": "Engineering/Spark/生产运维/Spark Hive 不一致的坑.md",
+    "title": "Spark/Hive 不一致的坑",
+    "domain": "engineering/spark/生产运维",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/生产运维",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Spark Hive 不一致的坑"
+  },
+  {
+    "path": "Engineering/Spark/生产运维/Spark 生产运维.md",
+    "title": "3. Spark 生产运维",
+    "domain": "engineering/spark/生产运维",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/生产运维",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Spark 生产运维"
+  },
+  {
+    "path": "Engineering/Spark/生产运维/小文件问题/Spark 海量数据多分区落表小文件治理.md",
+    "title": "Spark 海量数据多分区落表小文件治理",
+    "domain": "engineering/spark/生产运维/小文件问题",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/生产运维/小文件问题",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Spark 海量数据多分区落表小文件治理"
+  },
+  {
+    "path": "Engineering/Spark/生产运维/小文件问题/小文件问题.md",
+    "title": "小文件问题",
+    "domain": "engineering/spark/生产运维/小文件问题",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/生产运维/小文件问题",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "小文件问题"
+  },
+  {
+    "path": "Engineering/Spark/生产运维/数据倾斜优化/一次特殊的数据倾斜优化.md",
+    "title": "一次特殊的数据倾斜优化",
+    "domain": "engineering/spark/生产运维/数据倾斜优化",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/生产运维/数据倾斜优化",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "一次特殊的数据倾斜优化"
+  },
+  {
+    "path": "Engineering/Spark/生产运维/数据倾斜优化/数据倾斜优化.md",
+    "title": "数据倾斜优化",
+    "domain": "engineering/spark/生产运维/数据倾斜优化",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/生产运维/数据倾斜优化",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "数据倾斜优化"
+  },
+  {
+    "path": "Engineering/Spark/生产运维/调优/Hive 案例.md",
+    "title": "Hive 案例",
+    "domain": "engineering/spark/生产运维/调优",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/生产运维/调优",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Hive 案例"
+  },
+  {
+    "path": "Engineering/Spark/生产运维/调优/Spark Hive常用参数.md",
+    "title": "Spark/Hive常用参数",
+    "domain": "engineering/spark/生产运维/调优",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/生产运维/调优",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Spark Hive常用参数"
+  },
+  {
+    "path": "Engineering/Spark/生产运维/调优/Spark 案例.md",
+    "title": "Spark 案例",
+    "domain": "engineering/spark/生产运维/调优",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/生产运维/调优",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Spark 案例"
+  },
+  {
+    "path": "Engineering/Spark/生产运维/调优/Spark 调优.md",
+    "title": "Spark 调优",
+    "domain": "engineering/spark/生产运维/调优",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/生产运维/调优",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Spark 调优"
+  },
+  {
+    "path": "Engineering/Spark/生产运维/运行/Spark on Yarn.md",
+    "title": "Spark on Yarn",
+    "domain": "engineering/spark/生产运维/运行",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/生产运维/运行",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Spark on Yarn"
+  },
+  {
+    "path": "Engineering/Spark/生产运维/运行/Spark 提交流程.md",
+    "title": "Spark 提交流程",
+    "domain": "engineering/spark/生产运维/运行",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/生产运维/运行",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Spark 提交流程"
+  },
+  {
+    "path": "Engineering/Spark/生产运维/运行/Spark 运行.md",
+    "title": "Spark 运行",
+    "domain": "engineering/spark/生产运维/运行",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/生产运维/运行",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Spark 运行"
+  },
+  {
+    "path": "Engineering/Spark/生产运维/运行/运行管理器.md",
+    "title": "运行管理器",
+    "domain": "engineering/spark/生产运维/运行",
+    "type": "concept",
+    "tags": [
+      "engineering/spark/生产运维/运行",
+      "type/concept"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "运行管理器"
+  },
+  {
+    "path": "Engineering/_MOC.md",
+    "title": "数据工程",
+    "domain": "engineering",
+    "type": "moc",
+    "tags": [
+      "engineering",
+      "type/reference"
+    ],
+    "created": "",
+    "updated": "",
+    "filename": "_MOC"
+  },
+  {
+    "path": "Projects/Data-Agent/分析-Agent/Aime 框架调研.md",
+    "title": "Aime 框架调研",
+    "domain": "projects/data-agent/分析-agent",
+    "type": "project",
+    "tags": [
+      "projects/data-agent/分析-agent",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Aime 框架调研"
+  },
+  {
+    "path": "Projects/Data-Agent/分析-Agent/分析 Agent.md",
+    "title": "分析 Agent",
+    "domain": "projects/data-agent/分析-agent",
+    "type": "project",
+    "tags": [
+      "projects/data-agent/分析-agent",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "分析 Agent"
+  },
+  {
+    "path": "Projects/Data-Agent/分析-Agent/阿里 data agent 调研.md",
+    "title": "阿里 data agent 调研",
+    "domain": "projects/data-agent/分析-agent",
+    "type": "project",
+    "tags": [
+      "projects/data-agent/分析-agent",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "阿里 data agent 调研"
+  },
+  {
+    "path": "Projects/Data-Agent/取数 Agent.md",
+    "title": "取数 Agent",
+    "domain": "projects/data-agent",
+    "type": "project",
+    "tags": [
+      "projects/data-agent",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "取数 Agent"
+  },
+  {
+    "path": "Projects/LLM-Recommendation/LLM 如何落地推荐系统？.md",
+    "title": "LLM 如何落地推荐系统？",
+    "domain": "projects/llm-recommendation",
+    "type": "project",
+    "tags": [
+      "projects/llm-recommendation",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "LLM 如何落地推荐系统？"
+  },
+  {
+    "path": "Projects/LLM-Recommendation/推荐系统.md",
+    "title": "推荐系统",
+    "domain": "projects/llm-recommendation",
+    "type": "project",
+    "tags": [
+      "projects/llm-recommendation",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "推荐系统"
+  },
+  {
+    "path": "Projects/Multi-Agent-Holiday/Multi-Agent 节假日.md",
+    "title": "Multi-Agent 节假日",
+    "domain": "projects/multi-agent-holiday",
+    "type": "project",
+    "tags": [
+      "projects/multi-agent-holiday",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Multi-Agent 节假日"
+  },
+  {
+    "path": "Projects/Multi-Agent-Holiday/RL 思路探索.md",
+    "title": "RL 思路探索",
+    "domain": "projects/multi-agent-holiday",
+    "type": "project",
+    "tags": [
+      "projects/multi-agent-holiday",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "RL 思路探索"
+  },
+  {
+    "path": "Projects/Multi-Agent-Holiday/prompt/DA.md",
+    "title": "DA",
+    "domain": "projects/multi-agent-holiday/prompt",
+    "type": "project",
+    "tags": [
+      "projects/multi-agent-holiday/prompt",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "DA"
+  },
+  {
+    "path": "Projects/Multi-Agent-Holiday/prompt/Planner.md",
+    "title": "Planner",
+    "domain": "projects/multi-agent-holiday/prompt",
+    "type": "project",
+    "tags": [
+      "projects/multi-agent-holiday/prompt",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Planner"
+  },
+  {
+    "path": "Projects/Multi-Agent-Holiday/prompt/Readfile.md",
+    "title": "Readfile",
+    "domain": "projects/multi-agent-holiday/prompt",
+    "type": "project",
+    "tags": [
+      "projects/multi-agent-holiday/prompt",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Readfile"
+  },
+  {
+    "path": "Projects/Multi-Agent-Holiday/prompt/Summary.md",
+    "title": "Summary",
+    "domain": "projects/multi-agent-holiday/prompt",
+    "type": "project",
+    "tags": [
+      "projects/multi-agent-holiday/prompt",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Summary"
+  },
+  {
+    "path": "Projects/Multi-Agent-Holiday/prompt/prompt.md",
+    "title": "prompt",
+    "domain": "projects/multi-agent-holiday/prompt",
+    "type": "project",
+    "tags": [
+      "projects/multi-agent-holiday/prompt",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "prompt"
+  },
+  {
+    "path": "Projects/Multi-Agent-Holiday/【难点】事实性保证.md",
+    "title": "【难点】事实性保证",
+    "domain": "projects/multi-agent-holiday",
+    "type": "project",
+    "tags": [
+      "projects/multi-agent-holiday",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "【难点】事实性保证"
+  },
+  {
+    "path": "Projects/Multi-Agent-Holiday/业务.md",
+    "title": "业务",
+    "domain": "projects/multi-agent-holiday",
+    "type": "project",
+    "tags": [
+      "projects/multi-agent-holiday",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "业务"
+  },
+  {
+    "path": "Projects/Multi-Agent-Holiday/行业认知.md",
+    "title": "行业认知",
+    "domain": "projects/multi-agent-holiday",
+    "type": "thought",
+    "tags": [
+      "projects/multi-agent-holiday",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "行业认知"
+  },
+  {
+    "path": "Projects/RAG-System/企业 RAG 系统.md",
+    "title": "企业 RAG 系统",
+    "domain": "projects/rag-system",
+    "type": "project",
+    "tags": [
+      "projects/rag-system",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "企业 RAG 系统"
+  },
+  {
+    "path": "Projects/RAG-System/如何从 0 到 1 搭建数据库知识助手.md",
+    "title": "如何从 0 到 1 搭建数据库知识助手",
+    "domain": "projects/rag-system",
+    "type": "project",
+    "tags": [
+      "projects/rag-system",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "如何从 0 到 1 搭建数据库知识助手"
+  },
+  {
+    "path": "Projects/Store-Diagnosis/商家端经营诊断.md",
+    "title": "商家端经营诊断",
+    "domain": "projects/store-diagnosis",
+    "type": "project",
+    "tags": [
+      "projects/store-diagnosis",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "商家端经营诊断"
+  },
+  {
+    "path": "Projects/Training-Experiments/一些竞赛思路.md",
+    "title": "一些竞赛思路",
+    "domain": "projects/training-experiments",
+    "type": "project",
+    "tags": [
+      "projects/training-experiments",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "一些竞赛思路"
+  },
+  {
+    "path": "Projects/Training-Experiments/实现一个 LLM.md",
+    "title": "实现一个 LLM",
+    "domain": "projects/training-experiments",
+    "type": "project",
+    "tags": [
+      "projects/training-experiments",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "实现一个 LLM"
+  },
+  {
+    "path": "Projects/Training-Experiments/项目强相关的训练实验.md",
+    "title": "项目强相关的训练实验",
+    "domain": "projects/training-experiments",
+    "type": "project",
+    "tags": [
+      "projects/training-experiments",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "项目强相关的训练实验"
+  },
+  {
+    "path": "Projects/_MOC.md",
+    "title": "项目实战",
+    "domain": "projects",
+    "type": "moc",
+    "tags": [
+      "projects",
+      "type/reference"
+    ],
+    "created": "",
+    "updated": "",
+    "filename": "_MOC"
+  },
+  {
+    "path": "Projects/战役保障/依赖项——压测流程.md",
+    "title": "依赖项——压测流程",
+    "domain": "projects/战役保障",
+    "type": "project",
+    "tags": [
+      "projects/战役保障",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "依赖项——压测流程"
+  },
+  {
+    "path": "Projects/战役保障/战役保障 自动化_智能化 思考.md",
+    "title": "战役保障 自动化/智能化 思考",
+    "domain": "projects/战役保障",
+    "type": "thought",
+    "tags": [
+      "projects/战役保障",
+      "type/thought"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "战役保障 自动化_智能化 思考"
+  },
+  {
+    "path": "Projects/提效-Agent/AI 分身.md",
+    "title": "AI 分身",
+    "domain": "projects/提效-agent",
+    "type": "project",
+    "tags": [
+      "projects/提效-agent",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "AI 分身"
+  },
+  {
+    "path": "Projects/提效-Agent/提效 Agent.md",
+    "title": "提效 Agent",
+    "domain": "projects/提效-agent",
+    "type": "project",
+    "tags": [
+      "projects/提效-agent",
+      "type/project"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "提效 Agent"
+  },
+  {
+    "path": "Resources/KP 大神亲授课.md",
+    "title": "KP 大神亲授课",
+    "domain": "resources",
+    "type": "reference",
+    "tags": [
+      "resources",
+      "type/reference"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "KP 大神亲授课"
+  },
+  {
+    "path": "Resources/Open-Source AI Cookbook.md",
+    "title": "Open-Source AI Cookbook",
+    "domain": "resources",
+    "type": "reference",
+    "tags": [
+      "resources",
+      "type/reference"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "Open-Source AI Cookbook"
+  },
+  {
+    "path": "Resources/_MOC.md",
+    "title": "学习资源",
+    "domain": "resources",
+    "type": "moc",
+    "tags": [
+      "resources",
+      "type/reference"
+    ],
+    "created": "",
+    "updated": "",
+    "filename": "_MOC"
+  },
+  {
+    "path": "Resources/关于 AI 好玩的.md",
+    "title": "关于 AI 好玩的",
+    "domain": "resources",
+    "type": "reference",
+    "tags": [
+      "resources",
+      "type/reference"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "关于 AI 好玩的"
+  },
+  {
+    "path": "Resources/小冬瓜 AIGC 学习笔记.md",
+    "title": "小冬瓜 AIGC 学习笔记",
+    "domain": "resources",
+    "type": "tutorial",
+    "tags": [
+      "resources",
+      "type/tutorial"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "小冬瓜 AIGC 学习笔记"
+  },
+  {
+    "path": "Resources/论文待学习列表.md",
+    "title": "论文待学习列表",
+    "domain": "resources",
+    "type": "paper",
+    "tags": [
+      "resources",
+      "type/paper"
+    ],
+    "created": "2026-02-13",
+    "updated": "2026-02-13",
+    "filename": "论文待学习列表"
   }
 ]

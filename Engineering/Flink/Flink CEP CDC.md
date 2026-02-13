@@ -1,0 +1,19 @@
+---
+title: "7. Flink CEP / CDC"
+type: concept
+domain: engineering/flink
+created: "2026-02-13"
+updated: "2026-02-13"
+tags:
+  - engineering/flink
+  - type/concept
+---
+# 7. Flink CEP / CDC
+
+1. Flink CEP 编程中当状态没有到达的时候会将数据保存在哪里？
+1. 内存中，这实际上时对迟到数据的处理策略，那 CEP 也是支持 EventTime 的， 对应的 watermark 处理逻辑也是相同的，CEP 对匹配未成功的事件序列的处理和处理迟到数据是类似的，都会存储在一个 Map 数据结构然后放在内存中，那么如果真的有这么多的数据都是迟到状态的话，那实际也是对内存的极大损伤。
+1.11版本引入CDC（Change Data Capture）机制，捕获数据库表的增删改操作，同步数据库变更。
+
+CDC工具Debezium和Canal核心原理是抽取数据库日志获取变更，将changelog转为RowData数据。
+
+- 采集的数据包含了旧数据before、新数据after、原始数据source以及操作标识符，标识是否是更新、插入或者删除操作。
