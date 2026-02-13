@@ -1,3 +1,11 @@
+---
+title: "PPO"
+category: "AI"
+tags: [CLIP, DeepSpeed, KL散度, LLM, PPO]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # PPO
 
 # 指南

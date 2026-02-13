@@ -1,3 +1,11 @@
+---
+title: "Flink 重启策略"
+category: "工程"
+tags: [Checkpoint, Flink]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Flink 重启策略
 
 ### **重启策略**

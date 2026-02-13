@@ -1,3 +1,11 @@
+---
+title: "SFT"
+category: "AI"
+tags: [LLM, LoRA, QLoRA, SFT, 微调]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # SFT
 
 - [大模型参数高效微调技术原理综述（一）-背景、参数高效微调简介](https%3A%2F%2Fzhuanlan.zhihu.com%2Fp%2F635152813)

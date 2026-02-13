@@ -1,3 +1,11 @@
+---
+title: "Spark 延迟计算"
+category: "工程"
+tags: [RDD, Spark]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Spark 延迟计算
 
 在 RDD 的编程模型中，一共有两种算子，Transformations 类算子和 Actions 类算子。开发者需要使用 Transformations 类算子，定义并描述数据形态的转换过程，然后调用 Actions 类算子，将计算结果收集起来、或是物化到磁盘。

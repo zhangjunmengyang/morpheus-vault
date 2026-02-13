@@ -1,3 +1,11 @@
+---
+title: "On-Policy vs. Off-Policy"
+category: "AI"
+tags: [GRPO, LLM, Off-Policy, On-Policy, PPO]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # On-Policy vs. Off-Policy
 
 # On-policy vs. Off-policy

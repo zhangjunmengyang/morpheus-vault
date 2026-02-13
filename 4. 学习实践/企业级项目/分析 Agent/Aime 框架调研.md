@@ -1,3 +1,11 @@
+---
+title: "Aime 框架调研"
+category: "学习实践"
+tags: [Agent, AutoGen, LLM, Multi-Agent, Planner]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Aime 框架调研
 
 # 引言

@@ -1,3 +1,11 @@
+---
+title: "Hive 案例"
+category: "工程"
+tags: [Hive, Join, SQL, Shuffle, Spark]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Hive 案例
 
 ## 一、必要知识

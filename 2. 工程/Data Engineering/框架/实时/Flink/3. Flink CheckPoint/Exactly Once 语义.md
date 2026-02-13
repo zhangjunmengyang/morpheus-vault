@@ -1,3 +1,11 @@
+---
+title: "Exactly Once 语义"
+category: "工程"
+tags: [Checkpoint, Flink, Kafka, 分布式训练]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Exactly Once 语义
 
 ## 7、Exactly-Once

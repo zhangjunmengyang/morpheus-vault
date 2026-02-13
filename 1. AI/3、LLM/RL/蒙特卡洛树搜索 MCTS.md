@@ -1,3 +1,11 @@
+---
+title: "蒙特卡洛树搜索 MCTS"
+category: "AI"
+tags: [LLM, LoRA, MCTS, 概率论, 蒙特卡洛]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # 蒙特卡洛树搜索 MCTS
 
 https://zhuanlan.zhihu.com/p/9644482549

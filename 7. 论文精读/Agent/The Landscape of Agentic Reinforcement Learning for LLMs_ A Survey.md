@@ -1,3 +1,11 @@
+---
+title: "The Landscape of Agentic Reinforcement Learning for LLMs: A Survey"
+category: "论文精读"
+tags: [Agent, DPO, GRPO, LLM, 强化学习]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # The Landscape of Agentic Reinforcement Learning for LLMs: A Survey
 
 by：牛津大学、上海人工智能实验室、新加坡国立大学等

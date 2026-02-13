@@ -1,3 +1,11 @@
+---
+title: "阿里 data agent 调研"
+category: "学习实践"
+tags: [Agent, CV, DeepSeek, LLM, RAG]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # 阿里 data agent 调研
 
 智能小Q是Quick BI集成多种大模型和Agent能力的增值服务模块，通过一系列AI功能如**小Q问数Agent**、**小Q解读Agent**、**小Q报告Agent**、**小Q搭建Agent**革新了整个BI的数据分析链路，帮助用户实现数据分析的智能化与个性化。用户能够通过自然语言交互进行数据提问和数据解读，一键快速生成数据报表和数据报告。同时智能小Q支持自动化数据洞察、AI助手编辑调整报告、多轮对话深入分析、深度数据分析解读与自定义AI服务管理。

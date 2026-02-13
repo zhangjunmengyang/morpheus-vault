@@ -1,3 +1,11 @@
+---
+title: "Spark Lineage"
+category: "工程"
+tags: [Checkpoint, Join, RDD, Shuffle, Spark]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Spark Lineage
 
 相比其他系统的细颗粒度的内存数据更新级别的备份或者LOG机制，RDD的Lineage记录的是粗颗粒度的特定数据Transformation操作（如filter、map、join等）行为。当这个RDD的部分分区数据丢失时，它可以通过Lineage获取足够的信息来重新运算和恢复丢失的数据分区。因为这种粗颗粒的数据模型，限制了Spark的运用场合，所以Spark并不适用于所有高性能要求的场景，但同时相比细颗粒度的数据模型，也带来了性能的提升。

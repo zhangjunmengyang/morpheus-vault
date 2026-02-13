@@ -1,3 +1,11 @@
+---
+title: "PPO"
+category: "AI"
+tags: [LLM, PPO, Qwen, SFT, verl]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # PPO
 
 # 理论

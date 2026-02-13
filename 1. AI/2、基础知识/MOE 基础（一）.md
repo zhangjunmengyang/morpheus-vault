@@ -1,3 +1,11 @@
+---
+title: "MOE 基础（一）"
+category: "AI"
+tags: [Attention, LLM, LSTM, MoE, Self-Attention]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # MOE 基础（一）
 
 # 一、介绍

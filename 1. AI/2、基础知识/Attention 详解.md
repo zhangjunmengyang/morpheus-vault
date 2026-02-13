@@ -1,3 +1,11 @@
+---
+title: "Attention 详解"
+category: "AI"
+tags: [Attention, CV, LLM, LSTM, NLP]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Attention 详解
 
 ### 你能解释一下自注意力机制的工作原理吗？

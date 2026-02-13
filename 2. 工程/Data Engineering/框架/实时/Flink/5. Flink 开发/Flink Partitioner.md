@@ -1,3 +1,11 @@
+---
+title: "Flink Partitioner"
+category: "工程"
+tags: [CEP, Flink, Shuffle, 流处理]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Flink Partitioner
 
 ### 分区策略

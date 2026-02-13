@@ -1,3 +1,11 @@
+---
+title: "Towards a Unified View of Large Language Model Post-Training"
+category: "论文精读"
+tags: [GRPO, LLM, Qwen, SFT, 强化学习]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Towards a Unified View of Large Language Model Post-Training
 
 by：清华大学、上海人工智能实验室和微信AI

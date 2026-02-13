@@ -1,3 +1,11 @@
+---
+title: "Flink 动态表"
+category: "工程"
+tags: [Flink, SQL]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Flink 动态表
 
 ## 1、简介

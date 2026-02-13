@@ -1,3 +1,11 @@
+---
+title: "Spark 算子"
+category: "工程"
+tags: [Hive, Join, RDD, Shuffle, Spark]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Spark 算子
 
 RDD内部的数据转换算子

@@ -1,3 +1,11 @@
+---
+title: "DPO"
+category: "AI"
+tags: [DPO, "Hugging Face", LLM, LoRA, MoE]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # DPO
 
 # 一、文档

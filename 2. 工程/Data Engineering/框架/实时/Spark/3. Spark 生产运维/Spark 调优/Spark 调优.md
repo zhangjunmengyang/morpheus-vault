@@ -1,3 +1,11 @@
+---
+title: "Spark 调优"
+category: "工程"
+tags: [Join, SQL, Spark, YARN, 记忆模块]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Spark 调优
 
 ### 内存调优

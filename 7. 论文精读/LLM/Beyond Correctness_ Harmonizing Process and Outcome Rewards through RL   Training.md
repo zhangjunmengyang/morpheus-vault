@@ -1,3 +1,11 @@
+---
+title: "Beyond Correctness: Harmonizing Process and Outcome Rewards through RL   Training"
+category: "论文精读"
+tags: [GRPO, LLM, LLaMA, Qwen, 强化学习]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Beyond Correctness: Harmonizing Process and Outcome Rewards through RL   Training
 
 by：亚马逊

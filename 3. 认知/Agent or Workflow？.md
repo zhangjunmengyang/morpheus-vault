@@ -1,3 +1,11 @@
+---
+title: "Agent or Workflow？"
+category: "认知"
+tags: [Agent, Workflow]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Agent or Workflow？
 
 似乎两者已经成为了对立的，尤其是 mt 内对后者非常排斥，仿佛成为了“落后”的代名词。

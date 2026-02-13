@@ -1,3 +1,11 @@
+---
+title: "Chandy-Lamport 算法"
+category: "工程"
+tags: [Checkpoint, Flink, Spark, 分布式训练, 流处理]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Chandy-Lamport 算法
 
 上一篇文章最后说到 Spark 的 Structured Streaming 的 Continuous Processing Mode 的容错处理使用了分布式快照（Distributed Snapshot）算法 Chandy-Lamport 算法，那么分布式快照算法可以用来解决什么问题呢？

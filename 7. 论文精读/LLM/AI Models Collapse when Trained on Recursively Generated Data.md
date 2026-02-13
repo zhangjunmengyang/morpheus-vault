@@ -1,3 +1,11 @@
+---
+title: "AI Models Collapse when Trained on Recursively Generated Data"
+category: "论文精读"
+tags: [GPT, LLM, VAE, 概率论]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # AI Models Collapse when Trained on Recursively Generated Data
 
 - https://www.nature.com/articles/s41586-024-07566-y

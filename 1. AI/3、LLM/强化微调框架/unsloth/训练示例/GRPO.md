@@ -1,3 +1,11 @@
+---
+title: "GRPO"
+category: "AI"
+tags: [GRPO, LLM, Unsloth, 微调, 记忆模块]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # GRPO
 
 https://docs.unsloth.ai/get-started/reinforcement-learning-rl-guide/tutorial-train-your-own-reasoning-model-with-grpo

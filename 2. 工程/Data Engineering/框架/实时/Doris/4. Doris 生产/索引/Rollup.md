@@ -1,3 +1,11 @@
+---
+title: "Rollup"
+category: "工程"
+tags: [Doris, Join, Rollup, 索引]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Rollup
 
 ### Rollup索引

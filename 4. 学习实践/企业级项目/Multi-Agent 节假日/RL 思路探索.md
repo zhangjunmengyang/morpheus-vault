@@ -1,3 +1,11 @@
+---
+title: "RL 思路探索"
+category: "学习实践"
+tags: [Agent, GRPO, LLM, Multi-Agent, SQL]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # RL 思路探索
 
 与 gemini 聊天

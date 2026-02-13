@@ -1,3 +1,11 @@
+---
+title: "如何给人深度科普 MCP"
+category: "认知"
+tags: [CDC, "Function Calling", LLM, MCP, 状态管理]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # 如何给人深度科普 MCP
 
 原文：别再误会MCP了！一篇写给AI工程师的硬核“辟谣”指南

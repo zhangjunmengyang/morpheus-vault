@@ -1,3 +1,11 @@
+---
+title: "LLM + Agent"
+category: "学习实践"
+tags: [Agent, Attention, BERT, GPT, "Hugging Face"]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # LLM + Agent
 
 课程：

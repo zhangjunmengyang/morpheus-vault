@@ -1,3 +1,11 @@
+---
+title: "PPO"
+category: "AI"
+tags: [LLM, PPO, RLHF, 学习率, 强化学习]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # PPO
 
 ### PPO算法基础

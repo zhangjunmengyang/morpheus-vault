@@ -1,3 +1,11 @@
+---
+title: "Agent 简历描述重点"
+category: "认知"
+tags: [Agent, LLM, Workflow, 产品方法论, 多模态]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Agent 简历描述重点
 
 摘抄自：https://mp.weixin.qq.com/s/vQmS_CxsQwDexQXVysED_Q

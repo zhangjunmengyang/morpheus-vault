@@ -1,3 +1,11 @@
+---
+title: "Spark 海量数据多分区落表小文件治理"
+category: "工程"
+tags: [Hive, SQL, Shuffle, Spark, 小文件治理]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Spark 海量数据多分区落表小文件治理
 
 场景：知识图谱场景，百亿级，一级分区日期，二级分区tuple类型

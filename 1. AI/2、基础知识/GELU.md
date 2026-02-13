@@ -1,3 +1,11 @@
+---
+title: "GELU"
+category: "AI"
+tags: [GELU, ReLU, 概率论, 激活函数]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # GELU
 
 # 一、原理

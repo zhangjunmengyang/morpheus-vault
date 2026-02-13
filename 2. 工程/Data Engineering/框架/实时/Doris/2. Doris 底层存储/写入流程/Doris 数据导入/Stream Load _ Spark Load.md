@@ -1,3 +1,11 @@
+---
+title: "Stream Load / Spark Load"
+category: "工程"
+tags: [Doris, ETL, Hive, Join, Rollup]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Stream Load / Spark Load
 
 # **一、**Doris Spark Load

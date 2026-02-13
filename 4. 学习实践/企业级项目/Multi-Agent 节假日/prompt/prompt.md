@@ -1,3 +1,11 @@
+---
+title: "prompt"
+category: "学习实践"
+tags: [Agent, Multi-Agent, Prompt, 矩阵]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # prompt
 
 # 一、DA 模板

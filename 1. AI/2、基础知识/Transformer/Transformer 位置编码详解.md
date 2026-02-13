@@ -1,3 +1,11 @@
+---
+title: "Transformer 位置编码详解"
+category: "AI"
+tags: [Attention, BERT, Embedding, Self-Attention, Transformer]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Transformer 位置编码详解
 
 # 一、概念

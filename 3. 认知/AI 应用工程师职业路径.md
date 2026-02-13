@@ -1,3 +1,11 @@
+---
+title: "AI 应用工程师职业路径"
+category: "认知"
+tags: [AI伦理, AI安全, Agent, AutoGen, Embedding]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # AI 应用工程师职业路径
 
 核心观点：

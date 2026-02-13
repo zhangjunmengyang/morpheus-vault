@@ -1,3 +1,11 @@
+---
+title: "dbgpt 文档"
+category: "学习实践"
+tags: [Agent, GPT, Hive, LLM, Multi-Agent]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # dbgpt 文档
 
 https://km.sankuai.com/collabpage/2554271335

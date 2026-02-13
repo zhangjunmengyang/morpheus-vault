@@ -1,3 +1,11 @@
+---
+title: "MCP Course"
+category: "学习实践"
+tags: [Agent, GPT, "Hugging Face", LLM, MCP]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # MCP Course
 
 https://huggingface.co/learn/mcp-course/unit0/introduction

@@ -1,3 +1,11 @@
+---
+title: "Spark 内存模型"
+category: "工程"
+tags: [Join, RAG, RDD, Shuffle, Spark]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Spark 内存模型
 
 ## 一、**内存介绍**

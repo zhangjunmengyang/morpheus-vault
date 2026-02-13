@@ -1,3 +1,11 @@
+---
+title: "Data Engineering"
+category: "工程"
+tags: [Doris, ETL, 产品方法论]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Data Engineering
 
 数仓工具箱：https://github.com/lzxyzq/ML_BOOK/tree/master/Mathematical%20Basis

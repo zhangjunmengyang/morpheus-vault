@@ -1,3 +1,11 @@
+---
+title: "Multi-Agent 节假日"
+category: "学习实践"
+tags: [Agent, AutoGen, DeepSeek, GPT, LLM]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 #  Multi-Agent 节假日
 
 更多指的讨论的点：长期应该由 report agent 来调用取数，写着写着发现数据不够，也回不去了，随着写报告的过程也是深入思考的过程，中间是需要取数的

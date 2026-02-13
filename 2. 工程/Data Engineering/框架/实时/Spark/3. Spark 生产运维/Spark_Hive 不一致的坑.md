@@ -1,3 +1,11 @@
+---
+title: "Spark/Hive 不一致的坑"
+category: "工程"
+tags: [CEP, Flink, Hive, SQL, Spark]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Spark/Hive 不一致的坑
 
 ## 一、可接受的不一致

@@ -1,3 +1,11 @@
+---
+title: "Join"
+category: "工程"
+tags: [CV, Doris, Join, RAG, Shuffle]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Join
 
 ## 一、常见 Join 类型和 Join 算法

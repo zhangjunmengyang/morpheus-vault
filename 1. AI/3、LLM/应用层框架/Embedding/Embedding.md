@@ -1,3 +1,11 @@
+---
+title: "Embedding"
+category: "AI"
+tags: [Checkpoint, Embedding, "Hugging Face", LLM, RAG]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Embedding
 
 [Embedding Model Fine-Tuning 案例](https%3A%2F%2Fninehills.tech%2Farticles%2F118.html)

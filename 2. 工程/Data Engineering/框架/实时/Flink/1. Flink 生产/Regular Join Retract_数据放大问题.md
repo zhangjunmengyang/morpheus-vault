@@ -1,3 +1,11 @@
+---
+title: "Regular Join Retract/数据放大问题"
+category: "工程"
+tags: [Flink, Join, SQL]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Regular Join Retract/数据放大问题
 
 这种情况不太常见，平台似乎已经修复，可以作为了解原理学习使用

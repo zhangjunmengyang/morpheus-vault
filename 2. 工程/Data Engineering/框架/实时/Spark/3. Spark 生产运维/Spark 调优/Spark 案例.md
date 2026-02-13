@@ -1,3 +1,11 @@
+---
+title: "Spark 案例"
+category: "工程"
+tags: [Hive, SQL, Shuffle, Spark, 产品方法论]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Spark 案例
 
 ## 一、必要知识

@@ -1,3 +1,11 @@
+---
+title: "小规模训练手册：构建世界级LLM的秘密"
+category: "学习实践"
+tags: [GPT, "Hugging Face", LLM, LLaMA, LoRA]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # 小规模训练手册：构建世界级LLM的秘密
 
 - 《The Smol Training Playbook: The Secrets to Building World-Class LLMs》

@@ -1,3 +1,11 @@
+---
+title: "MLLM"
+category: "AI"
+tags: [Attention, BERT, CLIP, Diffusion, LLM]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # MLLM
 
 # 信息源

@@ -1,3 +1,11 @@
+---
+title: "Doris 查询计划"
+category: "工程"
+tags: [Doris, Hive, Join, LLM, RAG]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Doris 查询计划
 
 ## 一、基本概念

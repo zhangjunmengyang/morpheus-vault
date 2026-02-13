@@ -1,3 +1,11 @@
+---
+title: "Flink 提交流程"
+category: "工程"
+tags: [Flink, YARN, 流处理]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Flink 提交流程
 
 ## **提交流程**

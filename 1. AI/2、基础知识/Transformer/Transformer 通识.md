@@ -1,3 +1,11 @@
+---
+title: "Transformer 通识"
+category: "AI"
+tags: [BERT, GPT, "Hugging Face", T5, TRL]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Transformer 通识
 
 ![image](assets/Naj3degxIoDQ6JxABHwcf7REnqb.png)

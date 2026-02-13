@@ -1,3 +1,11 @@
+---
+title: "Stream Load"
+category: "工程"
+tags: [Doris, 流处理]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Stream Load
 
 1 引言

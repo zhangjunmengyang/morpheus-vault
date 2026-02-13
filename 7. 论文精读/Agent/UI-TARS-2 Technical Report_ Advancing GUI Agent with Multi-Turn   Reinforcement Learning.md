@@ -1,3 +1,11 @@
+---
+title: "UI-TARS-2 Technical Report: Advancing GUI Agent with Multi-Turn   Reinforcement Learning"
+category: "论文精读"
+tags: [Agent, 强化学习, 微调, 预训练]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # UI-TARS-2 Technical Report: Advancing GUI Agent with Multi-Turn   Reinforcement Learning
 
 by：字节跳动

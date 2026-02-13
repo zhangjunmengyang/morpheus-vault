@@ -1,3 +1,11 @@
+---
+title: "WebPilot: A Versatile and Autonomous Multi-Agent System for Web Task Execution with Strategic Exploration"
+category: "论文精读"
+tags: [Agent, DPO, LLM, LoRA, MCTS]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # WebPilot: A Versatile and Autonomous Multi-Agent System for Web Task Execution with Strategic Exploration
 
 前置：蒙特卡洛树搜索

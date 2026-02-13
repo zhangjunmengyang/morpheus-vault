@@ -1,3 +1,11 @@
+---
+title: "GRPO-demo"
+category: "学习实践"
+tags: [GRPO, Prompt, 微调, 训练, 论文]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # GRPO-demo
 
 github：https://gist.github.com/willccbb/4676755236bb08cab5f4e54a0475d6fb

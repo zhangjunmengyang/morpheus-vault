@@ -1,3 +1,11 @@
+---
+title: "R-4B: Incentivizing General-Purpose Auto-Thinking Capability in MLLMs   via Bi-Mode Annealing and Reinforce Learning"
+category: "论文精读"
+tags: [Agent, LLM, MLLM, OCR, Qwen]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # R-4B: Incentivizing General-Purpose Auto-Thinking Capability in MLLMs   via Bi-Mode Annealing and Reinforce Learning
 
 by：腾讯混元团队和中科院自动化

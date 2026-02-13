@@ -1,3 +1,11 @@
+---
+title: "Spark CheckPoint"
+category: "工程"
+tags: [Checkpoint, OCR, RDD, Spark, YARN]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Spark CheckPoint
 
 Checkpoint机制

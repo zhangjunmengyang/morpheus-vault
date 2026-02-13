@@ -1,3 +1,11 @@
+---
+title: "分析 Agent 演进的一些思考"
+category: "认知"
+tags: [AI安全, Agent, LLM, Planner, SQL]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # 分析 Agent 演进的一些思考
 
 应当核心借鉴的产品：

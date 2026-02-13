@@ -1,3 +1,11 @@
+---
+title: "Spark RDD"
+category: "工程"
+tags: [AI安全, Checkpoint, RDD, Shuffle, Spark]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Spark RDD
 
 ## 一、RDD 定义

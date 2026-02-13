@@ -1,3 +1,11 @@
+---
+title: "Flink SideOutput"
+category: "工程"
+tags: [Flink, 数据工程]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Flink SideOutput
 
 **旁路分流器**：按照频道分流

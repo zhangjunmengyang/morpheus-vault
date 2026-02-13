@@ -1,3 +1,11 @@
+---
+title: "Embedding 选型"
+category: "AI"
+tags: [BERT, Embedding, "Hugging Face", LLM, NLP]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Embedding 选型
 
 [中文 Emebedding & Reranker 模型选型](https%3A%2F%2Fninehills.tech%2Farticles%2F111.html)

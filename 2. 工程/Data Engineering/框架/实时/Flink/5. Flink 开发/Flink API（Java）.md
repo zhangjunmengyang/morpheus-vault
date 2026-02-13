@@ -1,3 +1,11 @@
+---
+title: "Flink API（Java）"
+category: "工程"
+tags: [Flink, Hive, SQL, 分布式训练, 反压]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Flink API（Java）
 
 ### **Flink API（DataSet/DataStream）**

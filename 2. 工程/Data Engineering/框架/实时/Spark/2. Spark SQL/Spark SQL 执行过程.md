@@ -1,3 +1,11 @@
+---
+title: "Spark SQL 执行过程"
+category: "工程"
+tags: [DataFrame, Hive, Join, Planner, RDD]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Spark SQL 执行过程
 
 **Spark SQL **是Spark中用于处理结构化数据的一个模块，可以将计算任务通过SQL形式转化为RDD再提交到集群执行计算，类似于Hive通过SQL形式将数据计算任务转化为MapReduce，简化了编写Spark数据计算程序的复杂性，且执行效率比MapReduce高。

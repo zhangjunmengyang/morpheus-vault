@@ -1,3 +1,11 @@
+---
+title: "Spark Partitioner"
+category: "工程"
+tags: [RDD, Shuffle, Spark, 数据倾斜]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Spark Partitioner
 
 ## 一、基本概念

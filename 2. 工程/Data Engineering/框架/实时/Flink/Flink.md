@@ -1,3 +1,11 @@
+---
+title: "Flink"
+category: "工程"
+tags: [Checkpoint, Flink, SQL, Spark, YARN]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Flink
 
 ## 一、架构

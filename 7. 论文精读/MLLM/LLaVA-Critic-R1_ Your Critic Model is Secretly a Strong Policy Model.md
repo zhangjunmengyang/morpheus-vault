@@ -1,3 +1,11 @@
+---
+title: "LLaVA-Critic-R1: Your Critic Model is Secretly a Strong Policy Model"
+category: "论文精读"
+tags: [ETL, GPT, GRPO, LLM, LLaVA]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # LLaVA-Critic-R1: Your Critic Model is Secretly a Strong Policy Model
 
 直观理解是在视觉模型上仿照 R1 GRPO 的方式，同时保留模型的 critic 和 生成能力

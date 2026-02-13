@@ -1,3 +1,11 @@
+---
+title: "Prompt Engineering"
+category: "AI"
+tags: [GPT, LLM, "Prompt Engineering", RAG, RLHF]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Prompt Engineering
 
 goodcase：[提示工程指南 | Prompt Engineering Guide](https%3A%2F%2Fwww.promptingguide.ai%2Fzh)

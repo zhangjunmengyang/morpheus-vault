@@ -1,3 +1,11 @@
+---
+title: "VerlTool: Towards Holistic Agentic Reinforcement Learning with Tool Use"
+category: "论文精读"
+tags: [Agent, LLM, "Tool Use", verl, 多模态]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # VerlTool: Towards Holistic Agentic Reinforcement Learning with Tool Use
 
 by：Sea AI

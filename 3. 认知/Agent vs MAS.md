@@ -1,3 +1,11 @@
+---
+title: "Agent vs MAS"
+category: "认知"
+tags: [Agent, MCP, Multi-Agent, 上下文, 产品方法论]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Agent vs MAS
 
 摘抄：

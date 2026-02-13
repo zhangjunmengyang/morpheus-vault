@@ -1,3 +1,11 @@
+---
+title: "大模型线上排查 SOP"
+category: "AI"
+tags: [Embedding, LLM, 上下文, 产品方法论]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # 大模型线上排查 SOP
 
 **排查SOP**

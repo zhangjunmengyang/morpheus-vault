@@ -1,3 +1,11 @@
+---
+title: "K1-K3 & Forward vs. Reverse KL散度"
+category: "AI"
+tags: [GAN, GRPO, KL散度, LLM, VAE]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 #  K1-K3 & Forward vs. Reverse KL散度
 
 # 一、KL 散度

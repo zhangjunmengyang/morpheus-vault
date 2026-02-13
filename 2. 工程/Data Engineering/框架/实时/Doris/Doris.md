@@ -1,3 +1,11 @@
+---
+title: "Doris"
+category: "工程"
+tags: [Doris, Hive, Kafka, Rollup, SQL]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Doris
 
 多看文档：[快速开始 - Apache Doris](https%3A%2F%2Fdoris.apache.org%2Fzh-CN%2Fdocs%2Fget-starting%2Fquick-start%2F)

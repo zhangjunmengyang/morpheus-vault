@@ -1,3 +1,11 @@
+---
+title: "Flink SQL / UDF"
+category: "工程"
+tags: [Flink, Hive, Join, Planner, SQL]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Flink SQL / UDF
 
 ## 11、Flink SQL

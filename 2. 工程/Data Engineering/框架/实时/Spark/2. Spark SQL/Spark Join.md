@@ -1,3 +1,11 @@
+---
+title: "Spark Join"
+category: "工程"
+tags: [Join, SQL, Shuffle, Spark, 小文件治理]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Spark Join
 
 ## 一、Join 类型

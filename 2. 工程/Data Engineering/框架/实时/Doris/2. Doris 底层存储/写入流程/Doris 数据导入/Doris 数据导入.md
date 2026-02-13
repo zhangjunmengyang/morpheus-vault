@@ -1,3 +1,11 @@
+---
+title: "Doris 数据导入"
+category: "工程"
+tags: [Doris, ETL, Flink, Hive, Kafka]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Doris 数据导入
 
 [Spark Load - Apache Doris](https%3A%2F%2Fdoris.apache.org%2Fzh-CN%2Fdocs%2F1.2%2Fdata-operate%2Fimport%2Fimport-way%2Fspark-load-manual)

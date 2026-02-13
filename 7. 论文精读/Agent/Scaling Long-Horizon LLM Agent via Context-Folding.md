@@ -1,3 +1,11 @@
+---
+title: "Scaling Long-Horizon LLM Agent via Context-Folding"
+category: "论文精读"
+tags: [Agent, GRPO, LLM, Multi-Agent, RAG]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Scaling Long-Horizon LLM Agent via Context-Folding
 
 Context-Folding 记忆折叠方案 by Seed

@@ -1,3 +1,11 @@
+---
+title: "为什么 PPO 优于 PG(Policy Gradient)"
+category: "AI"
+tags: [LLM, PPO, 策略梯度]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # 为什么 PPO 优于 PG(Policy Gradient)
 
 https://zhuanlan.zhihu.com/p/342150033

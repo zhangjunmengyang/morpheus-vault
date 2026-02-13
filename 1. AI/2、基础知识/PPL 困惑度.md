@@ -1,3 +1,11 @@
+---
+title: "PPL 困惑度"
+category: "AI"
+tags: [困惑度, 概率论]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # PPL 困惑度
 
 # 定义

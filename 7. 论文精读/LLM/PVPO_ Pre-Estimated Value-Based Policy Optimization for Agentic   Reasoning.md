@@ -1,3 +1,11 @@
+---
+title: "PVPO: Pre-Estimated Value-Based Policy Optimization for Agentic   Reasoning"
+category: "论文精读"
+tags: [Agent, CEP, LLM, 强化学习, 预训练]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # PVPO: Pre-Estimated Value-Based Policy Optimization for Agentic   Reasoning
 
 by：阿里云

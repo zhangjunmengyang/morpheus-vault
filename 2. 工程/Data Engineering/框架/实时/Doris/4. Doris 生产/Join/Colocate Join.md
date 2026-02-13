@@ -1,3 +1,11 @@
+---
+title: "Colocate Join"
+category: "工程"
+tags: [Doris, Join, 分布式训练]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Colocate Join
 
 https://km.sankuai.com/collabpage/71030685

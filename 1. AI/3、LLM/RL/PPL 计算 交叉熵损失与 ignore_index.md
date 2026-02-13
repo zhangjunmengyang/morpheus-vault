@@ -1,3 +1,11 @@
+---
+title: "PPL 计算 交叉熵损失与 ignore_index"
+category: "AI"
+tags: [BERT, GPT, LLM, T5, 交叉熵]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # PPL 计算 交叉熵损失与 ignore_index
 
 本期 code：https://github.com/chunhuizhang/bert_t5_gpt/blob/main/tutorials/gpt2_training_inference_ppl.ipynb

@@ -1,3 +1,11 @@
+---
+title: "Transformer"
+category: "AI"
+tags: ["Hugging Face", LLM, Transformer]
+created: "2026-02-13"
+updated: "2026-02-13"
+---
+
 # Transformer
 
 https://www.mianshiya.com/bank/1821834692534505473?current=1&pageSize=20
