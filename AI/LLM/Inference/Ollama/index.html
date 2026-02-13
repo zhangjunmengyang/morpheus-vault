@@ -4986,6 +4986,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ollama
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -5002,6 +5020,197 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心设计
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="核心设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modelfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelfile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模型管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API 服务
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        量化与硬件适配
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="量化与硬件适配">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apple-silicon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apple Silicon 的优势
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实际使用场景
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="实际使用场景">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 本地开发与测试
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-agent-llm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 作为 Agent 的本地 LLM 后端
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. RAG 应用
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ollama-vs-vllm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ollama vs vLLM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        局限性
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        相关
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -13334,6 +13543,186 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心设计
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="核心设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modelfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelfile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模型管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API 服务
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        量化与硬件适配
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="量化与硬件适配">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apple-silicon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apple Silicon 的优势
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实际使用场景
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="实际使用场景">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 本地开发与测试
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-agent-llm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 作为 Agent 的本地 LLM 后端
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. RAG 应用
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ollama-vs-vllm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ollama vs vLLM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        局限性
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        相关
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -13353,6 +13742,206 @@
 
 
 <h1 id="ollama">Ollama<a class="headerlink" href="#ollama" title="Permanent link">&para;</a></h1>
+<h2 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Ollama 是一个本地 LLM 推理工具，目标是让运行大模型像用 Docker 一样简单。一行命令拉取模型、一行命令启动推理，面向的是个人开发者和本地部署场景。</p>
+<p>底层推理引擎基于 <strong>llama.cpp</strong>（C/C++ 实现的 LLM 推理库），Ollama 在其上封装了模型管理、API 服务、量化模型分发等功能。</p>
+<h2 id="_2">核心设计<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="modelfile">Modelfile<a class="headerlink" href="#modelfile" title="Permanent link">&para;</a></h3>
+<p>类比 Dockerfile，Ollama 用 Modelfile 定义模型配置：</p>
+<div class="language-dockerfile highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">llama3.1:8b</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c"># 系统提示</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>SYSTEM<span class="w"> </span><span class="s2">&quot;&quot;&quot;You are a helpful coding assistant.&quot;&quot;&quot;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c"># 推理参数</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>PARAMETER<span class="w"> </span>temperature<span class="w"> </span><span class="m">0</span>.7
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>PARAMETER<span class="w"> </span>top_p<span class="w"> </span><span class="m">0</span>.9
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>PARAMETER<span class="w"> </span>num_ctx<span class="w"> </span><span class="m">8192</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c"># 模板（chat template）</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>TEMPLATE<span class="w"> </span><span class="s2">&quot;&quot;&quot;{{ if .System }}&lt;|system|&gt;{{ .System }}&lt;|end|&gt;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="o">{{</span><span class="w"> </span>end<span class="w"> </span><span class="o">}}{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span>.Prompt<span class="w"> </span><span class="o">}}</span>&lt;<span class="p">|</span>user<span class="p">|</span>&gt;<span class="o">{{</span><span class="w"> </span>.Prompt<span class="w"> </span><span class="o">}}</span>&lt;<span class="p">|</span>end<span class="p">|</span>&gt;
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>&lt;<span class="p">|</span>assistant<span class="p">|</span>&gt;<span class="o">{{</span><span class="w"> </span>end<span class="w"> </span><span class="o">}}{{</span><span class="w"> </span>.Response<span class="w"> </span><span class="o">}}</span><span class="s2">&quot;&quot;&quot;</span>
+</span></code></pre></div>
+<h3 id="_3">模型管理<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 拉取模型（自动选择适合硬件的量化版本）</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ollama<span class="w"> </span>pull<span class="w"> </span>qwen2.5:7b
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># 查看本地模型</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>ollama<span class="w"> </span>list
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># 运行（交互式）</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>ollama<span class="w"> </span>run<span class="w"> </span>qwen2.5:7b
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># 从 Modelfile 创建自定义模型</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>ollama<span class="w"> </span>create<span class="w"> </span>my-model<span class="w"> </span>-f<span class="w"> </span>Modelfile
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c1"># 删除</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>ollama<span class="w"> </span>rm<span class="w"> </span>qwen2.5:7b
+</span></code></pre></div>
+<h3 id="api">API 服务<a class="headerlink" href="#api" title="Permanent link">&para;</a></h3>
+<p>Ollama 启动后自动监听 <code>localhost:11434</code>，提供 REST API：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Generate（非 chat 模式）</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>curl<span class="w"> </span>http://localhost:11434/api/generate<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="s1">  &quot;model&quot;: &quot;qwen2.5:7b&quot;,</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="s1">  &quot;prompt&quot;: &quot;Why is the sky blue?&quot;,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="s1">  &quot;stream&quot;: false</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="s1">}&#39;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1"># Chat（对话模式）</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>curl<span class="w"> </span>http://localhost:11434/api/chat<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="s1">  &quot;model&quot;: &quot;qwen2.5:7b&quot;,</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="s1">  &quot;messages&quot;: [</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="s1">    {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;Hello!&quot;}</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="s1">  ]</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="s1">}&#39;</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="c1"># Embeddings</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>curl<span class="w"> </span>http://localhost:11434/api/embeddings<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="s1">  &quot;model&quot;: &quot;nomic-embed-text&quot;,</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="s1">  &quot;prompt&quot;: &quot;The quick brown fox&quot;</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="s1">}&#39;</span>
+</span></code></pre></div>
+<p>也可以通过 OpenAI-compatible endpoint 调用（<code>/v1/chat/completions</code>），方便对接现有代码。</p>
+<h2 id="_4">量化与硬件适配<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>Ollama 默认分发 <strong>GGUF 格式</strong>的量化模型（llama.cpp 原生格式）：</p>
+<table>
+<thead>
+<tr>
+<th>量化级别</th>
+<th>模型大小 (7B)</th>
+<th>质量</th>
+<th>推荐场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q2_K</td>
+<td>~2.7 GB</td>
+<td>较低</td>
+<td>极度显存受限</td>
+</tr>
+<tr>
+<td>Q4_K_M</td>
+<td>~4.1 GB</td>
+<td>不错</td>
+<td><strong>日常推荐</strong></td>
+</tr>
+<tr>
+<td>Q5_K_M</td>
+<td>~4.8 GB</td>
+<td>好</td>
+<td>质量优先</td>
+</tr>
+<tr>
+<td>Q8_0</td>
+<td>~7.2 GB</td>
+<td>接近 FP16</td>
+<td>有充裕显存</td>
+</tr>
+<tr>
+<td>FP16</td>
+<td>~14 GB</td>
+<td>无损</td>
+<td>评测/对比用</td>
+</tr>
+</tbody>
+</table>
+<p>硬件支持：
+- <strong>Apple Silicon</strong>：原生 Metal 加速，M1/M2/M3 都支持，统一内存对大模型友好
+- <strong>NVIDIA GPU</strong>：CUDA 加速
+- <strong>AMD GPU</strong>：ROCm 支持（相对没那么成熟）
+- <strong>纯 CPU</strong>：可以跑，但很慢</p>
+<h3 id="apple-silicon">Apple Silicon 的优势<a class="headerlink" href="#apple-silicon" title="Permanent link">&para;</a></h3>
+<p>在 Mac 上跑 LLM，Ollama 可能是最佳选择：
+- 统一内存架构意味着 CPU 和 GPU 共享内存池
+- M4 Pro 36GB 可以流畅跑 Q4 量化的 32B 模型
+- Metal Performance Shaders 提供 GPU 加速</p>
+<h2 id="_5">实际使用场景<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="1">1. 本地开发与测试<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Python SDK</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">ollama</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">response</span> <span class="o">=</span> <span class="n">ollama</span><span class="o">.</span><span class="n">chat</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s1">&#39;qwen2.5:7b&#39;</span><span class="p">,</span> <span class="n">messages</span><span class="o">=</span><span class="p">[</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="p">{</span><span class="s1">&#39;role&#39;</span><span class="p">:</span> <span class="s1">&#39;user&#39;</span><span class="p">,</span> <span class="s1">&#39;content&#39;</span><span class="p">:</span> <span class="s1">&#39;Write a Python quicksort&#39;</span><span class="p">}</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">])</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s1">&#39;message&#39;</span><span class="p">][</span><span class="s1">&#39;content&#39;</span><span class="p">])</span>
+</span></code></pre></div>
+<h3 id="2-agent-llm">2. 作为 Agent 的本地 LLM 后端<a class="headerlink" href="#2-agent-llm" title="Permanent link">&para;</a></h3>
+<p>很多 Agent 框架支持 Ollama 作为 backend：
+- LangChain / LlamaIndex 原生支持
+- 配合 Open WebUI 提供 ChatGPT 式界面
+- 适合隐私敏感场景（数据不出本地）</p>
+<h3 id="3-rag">3. RAG 应用<a class="headerlink" href="#3-rag" title="Permanent link">&para;</a></h3>
+<p>Ollama 同时提供 chat 和 embedding API，可以搭建完整的本地 RAG pipeline：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Embedding</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">embedding</span> <span class="o">=</span> <span class="n">ollama</span><span class="o">.</span><span class="n">embeddings</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s1">&#39;nomic-embed-text&#39;</span><span class="p">,</span> <span class="n">prompt</span><span class="o">=</span><span class="s1">&#39;your text&#39;</span><span class="p">)</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># 结合向量数据库（如 ChromaDB）做检索</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1"># 然后用 chat API 做生成</span>
+</span></code></pre></div>
+<h2 id="ollama-vs-vllm">Ollama vs vLLM<a class="headerlink" href="#ollama-vs-vllm" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>Ollama</th>
+<th>vLLM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定位</td>
+<td>个人/本地</td>
+<td>生产/服务端</td>
+</tr>
+<tr>
+<td>吞吐量</td>
+<td>中等</td>
+<td>高（continuous batching）</td>
+</tr>
+<tr>
+<td>并发</td>
+<td>有限</td>
+<td>强</td>
+</tr>
+<tr>
+<td>量化</td>
+<td>GGUF (llama.cpp)</td>
+<td>AWQ/GPTQ/FP8</td>
+</tr>
+<tr>
+<td>硬件</td>
+<td>Apple Silicon 友好</td>
+<td>NVIDIA GPU 为主</td>
+</tr>
+<tr>
+<td>模型管理</td>
+<td>内置（类 Docker）</td>
+<td>依赖 HuggingFace</td>
+</tr>
+<tr>
+<td>学习成本</td>
+<td>极低</td>
+<td>中等</td>
+</tr>
+</tbody>
+</table>
+<p>简单说：<strong>本地玩 → Ollama，线上部署 → vLLM</strong>。</p>
+<h2 id="_6">局限性<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>不适合高并发</strong>：底层 llama.cpp 的 batching 能力远不如 vLLM</li>
+<li><strong>模型格式受限</strong>：主要支持 GGUF，不是所有模型都有现成的 GGUF 版本</li>
+<li><strong>功能较简单</strong>：没有 speculative decoding、prefix caching 等高级优化</li>
+<li><strong>自定义模型繁琐</strong>：需要先转成 GGUF 格式</li>
+</ol>
+<h2 id="_7">相关<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[[vLLM]] — 生产级推理引擎对比</li>
+<li>[[量化]] — 量化技术详解</li>
+<li>[[Embedding]] — Ollama 的 embedding 功能</li>
+<li>[[Embedding 选型]] — 本地 embedding 模型选择</li>
+</ul>
 
 
 
