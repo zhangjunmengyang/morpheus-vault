@@ -2,7 +2,7 @@ name: Deploy MkDocs to GitHub Pages
 
 on:
   push:
-    branches: [main, master]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -22,15 +22,20 @@ jobs:
         run: |
           pip install mkdocs-material mkdocs-roamlinks-plugin mkdocs-exclude mkdocs-mermaid2-plugin
 
-      - name: Setup docs symlinks
+      - name: Prepare docs directory
         run: |
+          rm -rf docs
           mkdir -p docs
-          ln -sf ../00-Home docs/00-Home
-          ln -sf ../AI docs/AI
-          ln -sf ../Engineering docs/Engineering
-          ln -sf ../Projects docs/Projects
-          ln -sf ../Resources docs/Resources
-          ln -sf ../00-Home/HOME.md docs/index.md
+          # Copy content directories (exclude Career for privacy)
+          for dir in 00-Home AI Engineering Projects Resources Templates; do
+            if [ -d "$dir" ]; then
+              cp -r "$dir" docs/
+            fi
+          done
+          # Copy index
+          if [ -f "00-Home/HOME.md" ]; then
+            cp "00-Home/HOME.md" docs/index.md
+          fi
 
       - name: Build and Deploy
         run: mkdocs gh-deploy --force
