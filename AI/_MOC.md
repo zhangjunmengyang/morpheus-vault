@@ -37,9 +37,11 @@ tags:
 ### [[AI/CV/_MOC|计算机视觉]]
 - ViT / MAE / ControlNet
 
-### [[AI/Safety/AI 安全及隐私保护|AI 安全]]
-- [[AI/Safety/AI 伦理和治理]]
+### [[AI/Safety/_MOC|AI 安全]] 🛡️
 - [[AI/Safety/AI 安全及隐私保护]]
+- [[AI/Safety/AI 伦理和治理]]
+- [[AI/Safety/Anthropic Claude Opus 4.6 蓄意破坏风险报告]]
+- [[AI/Safety/Agent 安全威胁全景 2026-02]] ← NEW
 
 ## 思考与洞察
 - [[AI/AI 思考]] — 对 AI 领域的综合思考
@@ -56,4 +58,5 @@ tags:
 | [[AI/MLLM/_MOC]] | 多模态 |
 | [[AI/Agent/_MOC]] | Agent 智能体 |
 | [[AI/Agent/Agent-Economy/_MOC]] | Agent 经济（身份/支付/商业网络） |
+| [[AI/Safety/_MOC]] | AI 安全（威胁分析 + 防御 + 伦理） |
 | [[AI/CV/_MOC]] | 计算机视觉 |
