@@ -67,7 +67,7 @@ status: active
 
 ai16z 证明了自主 AI 交易基金**技术上可行、商业上有吸引力**。但它走的是"社交情绪驱动"路线，我们走"纯量化"路线——不矛盾，可以互补。
 
-**下一步**：研究 elizaOS 的 Trust Scoring 源码，看能否移植到我们的策略框架中。
+**下一步**：研究 elizaOS 的 Trust Scoring 源码，看能否移植到我们的策略框架中。→ ✅ 已完成：[[elizaOS Trust Scoring 源码研究]]
 
 ## 相关
 - [[Agent 经济基础设施]] — 全景综述

@@ -31,6 +31,7 @@ tags:
 
 ### 身份与信任
 - [[ERC-8004 Trustless Agents]] — Agent 链上身份标准（Identity + Reputation + Validation 三注册表）
+- [[elizaOS Trust Scoring 源码研究]] — elizaOS 去中心化信誉评分系统，两层信任模型（推荐人级 + Token 级）
 
 ### 支付与钱包
 - [[Coinbase AgentKit 技术评估]] — AgentKit SDK 评估，含 x402 支付协议、安全模型、DeFi 策略可行性分析
@@ -41,6 +42,7 @@ tags:
 ## 竞品与案例
 
 - [[ai16z 竞品分析]] — 全球首个 AI agent 管理的去中心化风投基金，elizaOS 框架，社交情绪驱动交易
+- [[elizaOS Trust Scoring 源码研究]] — elizaOS 信誉评分系统源码深度分析，含算法实现 vs 文档差异、移植评估
 
 ## 趋势与判断
 
