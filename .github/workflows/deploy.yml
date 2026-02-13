@@ -1,0 +1,36 @@
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install mkdocs-material mkdocs-roamlinks-plugin mkdocs-exclude mkdocs-mermaid2-plugin
+
+      - name: Setup docs symlinks
+        run: |
+          mkdir -p docs
+          ln -sf ../00-Home docs/00-Home
+          ln -sf ../AI docs/AI
+          ln -sf ../Engineering docs/Engineering
+          ln -sf ../Projects docs/Projects
+          ln -sf ../Resources docs/Resources
+          ln -sf ../00-Home/HOME.md docs/index.md
+
+      - name: Build and Deploy
+        run: mkdocs gh-deploy --force
