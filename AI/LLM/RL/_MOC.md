@@ -66,6 +66,10 @@ tags:
 - [[AI/LLM/RL/Other-Algorithms/CollabLLM-verl实践|CollabLLM]]
 - [[AI/LLM/RL/Other-Algorithms/GSPO-Unsloth实践|GSPO]]
 
+## 面试深度笔记
+- [[AI/LLM/RL/RLHF 全链路|RLHF 全链路]] — 完整 RLHF 三阶段
+- [[AI/LLM/RL/对齐技术综述|对齐技术综述]] — RLHF → DPO → ORPO → KTO → SteerLM → Constitutional AI
+
 ## 相关 MOC
 - ↑ 上级：[[AI/LLM/_MOC]]
 - → 交叉：[[AI/Agent/_MOC]]（Agentic RL）

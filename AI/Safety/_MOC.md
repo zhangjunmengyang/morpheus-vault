@@ -21,6 +21,10 @@ tags:
 - [[AI 安全及隐私保护]] — 安全威胁分类、防御实践、隐私保护技术
 - [[AI 伦理和治理]] — 偏见与公平、透明性、治理框架
 
+## 面试深度笔记
+
+- [[AI/Safety/安全对齐与红队|安全对齐与红队]] — Jailbreak 分类、红队流程、防御策略、Anthropic/OpenAI 安全报告
+
 ## 关联
 
 - [[AI/Agent/Agent-Economy/_MOC|Agent 经济]] — Agent 经济安全风险（资金转移 / 身份冒用）

@@ -45,6 +45,10 @@ tags:
 - [[AI/Foundations/DL-Basics/Transformer 位置编码详解|位置编码详解]] — RoPE / ALiBi
 - [[AI/Foundations/DL-Basics/MoE 基础|MoE 基础]] — 混合专家模型
 
+## 面试深度笔记
+- [[AI/Foundations/Scaling Laws|Scaling Laws]] — Chinchilla、Over-training、Inference-time Compute Scaling
+- [[AI/Foundations/损失函数与优化器|损失函数与优化器]] — CrossEntropy/InfoNCE/DPO Loss + AdamW/LION/Sophia + LR 调度
+
 ## 相关 MOC
 - ↑ 上级：[[AI/_MOC]]
 - → 下一步：[[AI/LLM/_MOC]]

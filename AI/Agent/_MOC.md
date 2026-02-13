@@ -47,6 +47,11 @@ tags:
 - [[AI/Agent/Agent-Economy/Virtuals Protocol|Virtuals Protocol]] — Agent-to-Agent 商业协议
 - [[AI/Agent/Agent-Economy/Agentic Spring|Agentic Spring]] — 预测市场信号 + 模型能力加速
 
+## 面试深度笔记
+- [[AI/Agent/Agent Memory 机制|Agent Memory 机制]] — 短期/长期/工作记忆、RAG-based memory、MemGPT/Letta
+- [[AI/Agent/Agent Tool Use|Agent Tool Use]] — Function Calling、ReAct、工具选择策略、API 对比
+- [[AI/Agent/Agent 框架对比|Agent 框架对比]] — 六大框架选型指南
+
 ## 框架 (Frameworks)
 - [[AI/Agent/Frameworks/AutoGen|AutoGen]]
 - [[AI/Agent/Frameworks/dbgpt 文档|DB-GPT]]
