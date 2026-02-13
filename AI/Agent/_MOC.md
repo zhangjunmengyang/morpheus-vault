@@ -39,6 +39,14 @@ tags:
 - [[AI/Agent/Agentic-RL/WebPilot 论文|WebPilot]] — Web 自动化
 - [[AI/Agent/Agentic-RL/R-4B 论文|R-4B]] — MLLM Auto-Thinking
 
+## Agent 经济 (Agent Economy) 💰
+- [[AI/Agent/Agent-Economy/_MOC|Agent 经济总览]] — 身份、支付、信誉、商业网络
+- [[AI/Agent/Agent-Economy/Agent 经济基础设施|Agent 经济基础设施]] — Consensus HK 2026 全景
+- [[AI/Agent/Agent-Economy/Coinbase AgentKit 技术评估|Coinbase AgentKit]] — SDK 评估 + DeFi 策略可行性
+- [[AI/Agent/Agent-Economy/ERC-8004 Trustless Agents|ERC-8004]] — Agent 链上身份标准
+- [[AI/Agent/Agent-Economy/Virtuals Protocol|Virtuals Protocol]] — Agent-to-Agent 商业协议
+- [[AI/Agent/Agent-Economy/Agentic Spring|Agentic Spring]] — 预测市场信号 + 模型能力加速
+
 ## 框架 (Frameworks)
 - [[AI/Agent/Frameworks/AutoGen|AutoGen]]
 - [[AI/Agent/Frameworks/dbgpt 文档|DB-GPT]]

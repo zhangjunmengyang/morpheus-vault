@@ -30,6 +30,7 @@ tags:
 
 ### [[AI/Agent/_MOC|Agent 智能体]]
 - Agent 架构 / Multi-Agent / MCP / Agentic RL
+- **[[AI/Agent/Agent-Economy/_MOC|Agent 经济]]** — 身份(ERC-8004) / 支付(AgentKit+x402) / 商业网络(Virtuals)
 
 ## 专项
 
@@ -54,4 +55,5 @@ tags:
 | [[AI/LLM/RL/_MOC]] | RL for LLM（重点） |
 | [[AI/MLLM/_MOC]] | 多模态 |
 | [[AI/Agent/_MOC]] | Agent 智能体 |
+| [[AI/Agent/Agent-Economy/_MOC]] | Agent 经济（身份/支付/商业网络） |
 | [[AI/CV/_MOC]] | 计算机视觉 |
