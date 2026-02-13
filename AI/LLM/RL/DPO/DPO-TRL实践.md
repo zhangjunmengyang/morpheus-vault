@@ -124,3 +124,11 @@ dpo_trainer = DPOTrainer(
     ...
 )
 ```
+
+## 相关
+
+- [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]]
+- [[AI/LLM/SFT/SFT 原理|SFT 原理]]
+- [[AI/LLM/SFT/LoRA|LoRA]]

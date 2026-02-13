@@ -216,3 +216,7 @@ reward = sandbox_execute(generated_code, test_cases)
 - [[verl 训练参数]] — 详细参数配置
 - [[性能调优]] — 性能优化技巧
 - [[硬件资源预估]] — 资源规划
+- [[AI/LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]
+- [[AI/LLM/Infra/DeepSpeed|DeepSpeed]]
+- [[AI/LLM/Infra/Megatron-LM|Megatron-LM]]
+- [[AI/LLM/Infra/分布式训练|分布式训练]]

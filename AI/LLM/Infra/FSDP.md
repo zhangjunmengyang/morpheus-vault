@@ -193,3 +193,5 @@ accelerate launch --config_file fsdp_config.yaml train.py
 - [[Megatron-LM]] — 另一种并行策略（Tensor/Pipeline Parallel）
 - [[Ray]] — 分布式计算框架
 - [[AI/LLM/Frameworks/verl/verl 概述|verl 概述]] — verl 对 FSDP 的集成
+- [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]]
+- [[AI/LLM/Frameworks/OpenRLHF/OpenRLHF|OpenRLHF]]

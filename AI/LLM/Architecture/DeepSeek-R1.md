@@ -120,3 +120,8 @@ R1-Zero 是论文中最令人兴奋的实验——直接在 base model 上做 RL
 - [[AI/LLM/RL/Fundamentals/RL 概览|RL 概览]] — 强化学习基础
 - [[AI/LLM/Infra/分布式训练|分布式训练]] — R1 训练所需的基础设施
 - [[AI/LLM/RL/GRPO/OpenR1|OpenR1]] — 社区复现项目
+- [[AI/LLM/Architecture/LLaMA|LLaMA]]
+- [[AI/LLM/Architecture/GPT|GPT]]
+- [[AI/Foundations/DL-Basics/MoE 基础|MoE 基础]]
+- [[AI/LLM/Frameworks/verl/verl 概述|verl 概述]]
+- [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]]

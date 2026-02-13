@@ -133,3 +133,5 @@ Ray:       异构编排, 不同 actor 跑不同代码, MPMD 模式
 - [[AI/LLM/Infra/分布式训练|分布式训练]] — 分布式训练全景
 - [[AI/LLM/Frameworks/verl/HybridFlow|HybridFlow]] — 基于 Ray 的混合编排
 - [[AI/LLM/Frameworks/verl/训练后端|verl 训练后端]] — Ray 在 verl 中的应用
+- [[AI/LLM/Frameworks/verl/verl 概述|verl 概述]]
+- [[AI/LLM/Frameworks/OpenRLHF/OpenRLHF|OpenRLHF]]

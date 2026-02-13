@@ -17,3 +17,11 @@ tags:
 - [大模型参数高效微调技术原理综述（五）-LoRA、AdaLoRA、QLoRA](https%3A%2F%2Fzhuanlan.zhihu.com%2Fp%2F636215898)
 - [大模型参数高效微调技术原理综述（六）-MAM Adapter、UniPELT](https%3A%2F%2Fzhuanlan.zhihu.com%2Fp%2F636362246)
 - [大模型参数高效微调技术原理综述（七）-最佳实践、总结](https%3A%2F%2Fzhuanlan.zhihu.com%2Fp%2F649755252)
+
+## 相关
+
+- [[AI/LLM/RL/DPO/DPO-TRL实践|DPO]]
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO]]
+- [[AI/LLM/RL/PPO/PPO 原理|PPO]]
+- [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]]
+- [[AI/LLM/SFT/LoRA|LoRA]]

@@ -34,3 +34,9 @@ https://huggingface.co/docs/trl/v0.21.0/en/kto_trainer
 - `logits/rejected_sum`: 被拒绝的补全的 logits 之和
 - `count/chosen`: 批次中选择的样本数量
 - `count/rejected`: 批次中被拒绝的样本数量
+
+## 相关
+
+- [[AI/LLM/RL/DPO/DPO-TRL实践|DPO-TRL实践]]
+- [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]]
+- [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]]

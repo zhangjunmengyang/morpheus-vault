@@ -114,3 +114,8 @@ InternVL 系列的成功可以归结为几点：
 - [[AI/MLLM/Qwen 2.5 VL-Unsloth训练|Qwen 2.5 VL 训练]] — Qwen VLM 微调
 - [[AI/CV/ViT|ViT]] — Vision Transformer 基础
 - [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO]] — InternVL3 使用的 RL 算法
+- [[AI/MLLM/CLIP|CLIP]]
+- [[AI/MLLM/BLIP-2|BLIP-2]]
+- [[AI/MLLM/Qwen-VL|Qwen-VL]]
+- [[AI/MLLM/MLLM 概述|MLLM 概述]]
+- [[AI/LLM/Architecture/LLaMA|LLaMA]]

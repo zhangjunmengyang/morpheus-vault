@@ -96,3 +96,6 @@ SPIN 是一个很巧妙的「穷人版 RLHF」—— 用自我对弈代替了昂
 - [[AI/LLM/RL/Other-Algorithms/SPPO-verl实践|SPPO verl 实践]] — 类似的自我对弈思路
 - [[AI/LLM/RL/GRPO/GRPO-verl实践|GRPO verl 实践]] — on-policy RL 方案
 - [[AI/LLM/Frameworks/verl/实现其他 RL 方法|verl 实现其他 RL 方法]]
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/LLM/Frameworks/verl/verl 概述|verl 概述]]

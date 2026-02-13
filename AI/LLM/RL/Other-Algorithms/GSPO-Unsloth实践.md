@@ -180,3 +180,5 @@ GSPO (group_size=8, beta=0.1):
 - [[AI/LLM/Frameworks/Unsloth/Unsloth 概述|Unsloth 概述]]
 - [[AI/LLM/Frameworks/Unsloth/训练示例概述|Unsloth 训练示例]]
 - [[AI/LLM/RL/_MOC|RL 算法总览]]
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]]

@@ -94,3 +94,5 @@ ViT 的影响远超图像分类本身：
 - [[AI/MLLM/CLIP|CLIP]]
 - [[AI/Foundations/DL-Basics/深度学习|深度学习]]
 - [[ControlNet]]
+- [[AI/Foundations/DL-Basics/Transformer 通识|Transformer 通识]]
+- [[AI/Foundations/DL-Basics/Attention 详解|Attention 详解]]

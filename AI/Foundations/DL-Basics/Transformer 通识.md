@@ -118,3 +118,11 @@ Transformers 大致时间线
 1. **计算当前上下文向量Context**。使用注意力权重w作为权重，对编码器所有的向量<C1,C2,C3,C4>进行加权求和，得到解码器当前时刻的上下文语义向量Context。注意力权重表示每个输入单词对于当前输出单词的重要程度。上下文向量表示当前输出单词所需的源语言信息。
 1. **更新解码器隐状态Hi。**
 1. **Decoder 计算输出预测词：**把解码器前一次的输出、解码器当前状态和解码器当前时刻的上下文语义向量Context这三者作为输入得到解码器本次的输出。这个输出是一个概率分布，表示每个可能的目标语言单词作为当前输出单词的概率。然后做一个概率值到目标词表的映射（如果注意力机制时用于分类模型，那就是做一个到各个分类的映射），便可以得到下一个输出单词。
+
+## 相关
+
+- [[AI/LLM/Architecture/BERT|BERT]]
+- [[AI/LLM/Architecture/GPT|GPT]]
+- [[AI/LLM/Architecture/T5|T5]]
+- [[AI/LLM/Architecture/LLaMA|LLaMA]]
+- [[AI/Foundations/DL-Basics/Attention 详解|Attention 详解]]

@@ -97,3 +97,12 @@ t,S_X = LLM(P_X,F_T)
 # 数据集
 
 ![image](assets/XXCadgmIEolKBRx3t0Zcd5IFn3b.png)
+
+## 相关
+
+- [[AI/MLLM/CLIP|CLIP]]
+- [[AI/MLLM/BLIP-2|BLIP-2]]
+- [[AI/MLLM/Qwen-VL|Qwen-VL]]
+- [[AI/MLLM/InternVL3|InternVL3]]
+- [[AI/MLLM/DeepSeek-VL|DeepSeek-VL]]
+- [[AI/CV/ViT|ViT]]

@@ -27,3 +27,10 @@ RNN 及 LSTM 虽然具有捕捉时序信息、适合序列生成的优点，却�
 注意力机制有三个核心变量：Query（查询值）、Key（键值）和 Value（真值）。
 
 包含手写 attention 的代码：https://github.com/datawhalechina/llms-from-scratch-cn
+
+## 相关
+
+- [[AI/Foundations/DL-Basics/Transformer 通识|Transformer 通识]]
+- [[AI/LLM/Architecture/BERT|BERT]]
+- [[AI/LLM/Architecture/GPT|GPT]]
+- [[AI/LLM/Architecture/LLaMA|LLaMA]]

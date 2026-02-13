@@ -81,3 +81,6 @@ GPG 在 verl 的算法矩阵中属于「可用但不是首选」的位置。大�
 - [[AI/LLM/RL/Other-Algorithms/OPO-verl实践|OPO verl 实践]]
 - [[AI/LLM/RL/Other-Algorithms/SPPO-verl实践|SPPO verl 实践]]
 - [[AI/LLM/Frameworks/verl/实现其他 RL 方法|verl 实现其他 RL 方法]]
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/LLM/Frameworks/verl/verl 概述|verl 概述]]

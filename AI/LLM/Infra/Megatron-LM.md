@@ -105,3 +105,8 @@ DeepSpeed:    ZeRO 系列省显存, API 友好, 但 TP 要额外配置
 - [[AI/LLM/Infra/Ray|Ray]] — 另一个分布式计算框架
 - [[AI/LLM/Frameworks/verl/训练后端|verl 训练后端]] — verl 中使用 Megatron 后端
 - [[AI/LLM/Frameworks/verl/HybridFlow|HybridFlow]] — verl 的混合并行编排
+- [[AI/LLM/Infra/FSDP|FSDP]]
+- [[AI/LLM/Infra/DeepSpeed|DeepSpeed]]
+- [[AI/LLM/Frameworks/verl/verl 概述|verl 概述]]
+- [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]]
+- [[AI/LLM/Frameworks/OpenRLHF/OpenRLHF|OpenRLHF]]

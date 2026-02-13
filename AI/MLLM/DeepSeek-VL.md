@@ -123,3 +123,9 @@ DeepSeek-VL 系列的核心竞争力在于：
 - [[AI/MLLM/DeepSeek-OCR-Unsloth实践|DeepSeek-OCR Unsloth 实践]] — 微调实战
 - [[AI/MLLM/InternVL3|InternVL3]] — 同期竞品对比
 - [[AI/MLLM/Seed1.5-VL|Seed1.5-VL]] — 字节的多模态方案
+- [[AI/MLLM/CLIP|CLIP]]
+- [[AI/MLLM/BLIP-2|BLIP-2]]
+- [[AI/MLLM/Qwen-VL|Qwen-VL]]
+- [[AI/MLLM/MLLM 概述|MLLM 概述]]
+- [[AI/CV/ViT|ViT]]
+- [[AI/LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]

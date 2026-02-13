@@ -141,3 +141,5 @@ DAPO 是 GRPO 的工程改进版——原理上没有本质突破，但在实践
 - [[AI/LLM/Frameworks/verl/verl 训练参数|verl 训练参数]]
 - [[AI/LLM/Frameworks/verl/实现其他 RL 方法|verl 实现其他 RL 方法]]
 - [[AI/LLM/Frameworks/verl/硬件资源预估|硬件资源预估]]
+- [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/LLM/Frameworks/verl/verl 概述|verl 概述]]

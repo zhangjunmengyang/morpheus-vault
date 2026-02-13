@@ -119,3 +119,6 @@ DoRA 将权重分解为**幅度（magnitude）和方向（direction）** 两个�
 - [[SFT-TRL实践]]
 - [[AI/LLM/Infra/分布式训练|分布式训练]]
 - [[AI/LLM/Frameworks/Unsloth/量化|量化]]
+- [[AI/LLM/SFT/SFT 原理|SFT 原理]]
+- [[AI/Foundations/Math/矩阵分解|矩阵分解]]
+- [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]]

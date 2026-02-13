@@ -130,3 +130,10 @@ Switch Transformers 的作者观察到：
 ### 稀疏 vs 稠密
 
 稀疏混合专家模型 (MoE) 适用于拥有多台机器且要求高吞吐量的场景。在固定的预训练计算资源下，稀疏模型往往能够实现更优的效果。相反，在显存较少且吞吐量要求不高的场景，稠密模型则是更合适的选择。
+
+## 相关
+
+- [[AI/LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]
+- [[AI/LLM/Architecture/LLaMA|LLaMA]]
+- [[AI/LLM/Infra/DeepSpeed|DeepSpeed]]
+- [[AI/LLM/Infra/分布式训练|分布式训练]]

@@ -85,3 +85,5 @@ CollabLLM 是一个有趣的研究方向，但实际落地的门槛较高——�
 - [[AI/LLM/RL/Other-Algorithms/SPIN-verl实践|SPIN verl 实践]] — 单模型自我对弈
 - [[AI/LLM/Frameworks/verl/实现其他 RL 方法|verl 实现其他 RL 方法]]
 - [[AI/Agent/Multi-Agent/零碎的点|Multi-Agent 笔记]]
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/LLM/Frameworks/verl/verl 概述|verl 概述]]

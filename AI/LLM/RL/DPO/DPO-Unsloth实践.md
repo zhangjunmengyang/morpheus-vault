@@ -192,3 +192,6 @@ DPO 的价值在于简洁——不需要训 reward model、不需要复杂的 PP
 - [[AI/LLM/Frameworks/Unsloth/训练示例概述|Unsloth 训练示例]]
 - [[AI/LLM/Application/Synthetic-Data/Synthetic Data|Synthetic Data]] — 数据合成
 - [[AI/LLM/RL/RLOO/RLOO-TRL实践|RLOO 实践]] — 另一种 off-policy 方法
+- [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/LLM/RL/DPO/DPO-TRL实践|DPO-TRL实践]]
+- [[AI/LLM/Frameworks/Unsloth/Unsloth 概述|Unsloth 概述]]

@@ -179,3 +179,7 @@ def agent_reward(trajectory):
 - [[AI/LLM/Frameworks/verl/Sandbox Fusion 沙箱|Sandbox Fusion 沙箱]] — 代码执行沙箱
 - [[AI/LLM/Frameworks/verl/Off Policy 异步训练器|Off Policy 异步训练器]] — 异步训练
 - [[AI/LLM/RL/Fundamentals/On-Policy vs Off-Policy|On-Policy vs Off-Policy]] — 策略分类基础
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/LLM/Frameworks/verl/verl 概述|verl 概述]]
+- [[AI/LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]

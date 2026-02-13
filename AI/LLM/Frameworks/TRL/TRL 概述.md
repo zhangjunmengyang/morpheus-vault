@@ -234,3 +234,7 @@ accelerate launch --multi_gpu --num_processes 16 train.py
 - [[AI/LLM/Frameworks/OpenRLHF/OpenRLHF|OpenRLHF]] — 对比框架
 - [[AI/LLM/Inference/vLLM|vLLM]] — TRL 集成的推理引擎
 - [[AI/LLM/SFT/LoRA|LoRA]] — 参数高效训练
+- [[AI/LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]
+- [[AI/LLM/Frameworks/Unsloth/Unsloth 概述|Unsloth 概述]]
+- [[AI/LLM/Infra/FSDP|FSDP]]
+- [[AI/LLM/Infra/DeepSpeed|DeepSpeed]]

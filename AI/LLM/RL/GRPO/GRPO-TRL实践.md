@@ -223,3 +223,10 @@ accelerate launch \
 ```
 
 如果图像标记被截断，VLM 训练可能会失败。我们强烈建议通过将`max_prompt_length`设置为`None`来禁用截断。
+
+## 相关
+
+- [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/LLM/RL/DPO/DPO-TRL实践|DPO]]
+- [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]]
+- [[AI/LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]

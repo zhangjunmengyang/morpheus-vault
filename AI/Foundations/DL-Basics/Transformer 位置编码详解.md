@@ -202,3 +202,10 @@ tags:
 # 六、后续
 
 阅读 [探秘Transformer系列](https%3A%2F%2Fwww.zhihu.com%2Fcolumn%2Fc_1889336819960743598) 系列，加深理解
+
+## 相关
+
+- [[AI/LLM/Architecture/LLaMA|LLaMA]]
+- [[AI/LLM/Architecture/T5|T5]]
+- [[AI/MLLM/Qwen-VL|Qwen-VL]]
+- [[AI/Foundations/DL-Basics/Transformer 通识|Transformer 通识]]

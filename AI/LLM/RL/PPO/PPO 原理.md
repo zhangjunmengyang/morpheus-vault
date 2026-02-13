@@ -35,3 +35,14 @@ ppo算法：https://zhuanlan.zhihu.com/p/512327050
 1. **构建模型**：构建基础的语言模型和奖励模型。
 1. **训练模型**：按照RLHF框架的步骤，依次进行预训练、有监督微调、奖励建模和强化学习训练。
 1. **评估与优化**：对训练好的模型进行评估，并根据评估结果进行进一步的优化。
+
+## 相关
+
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/LLM/RL/DPO/DPO-TRL实践|DPO]]
+- [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]]
+- [[AI/LLM/Frameworks/verl/verl 概述|verl 概述]]
+- [[AI/LLM/Frameworks/OpenRLHF/OpenRLHF|OpenRLHF]]
+- [[AI/LLM/RL/Fundamentals/策略梯度方法|策略梯度方法]]
+- [[AI/LLM/RL/Fundamentals/KL散度|KL散度]]
+- [[AI/LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]

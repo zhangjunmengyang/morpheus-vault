@@ -171,3 +171,11 @@ plt.plot(np.log(xs), *label*=r'$\log x$')
 plt.plot(xs-1, *label*='$x-1$')
 plt.legend()
 ```
+
+## 相关
+
+- [[AI/Foundations/Math/信息论|信息论]]
+- [[AI/Foundations/Math/概率与分布|概率与分布]]
+- [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/LLM/RL/DPO/DPO-TRL实践|DPO]]

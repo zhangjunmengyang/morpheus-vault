@@ -209,3 +209,11 @@ Perhaps most importantly, DeepSeek R1 has shown that it’s possible to balance 
 DeepSeek R1 论文代表了语言模型开发中的一个重要里程碑。组相对策略优化（GRPO）算法表明，纯粹的强化学习确实可以发展出强大的推理能力，这挑战了之前关于监督微调必要性的假设。
 
 或许最重要的是，DeepSeek R1已经表明，在高性能与成本效益和可及性等实际考量之间实现平衡是可行的。该模型能力在不同参数规模（从 15亿 1.5B 到 700亿 70B参数）下的成功蒸馏，为更广泛地提供先进的人工智能能力指明了方向。
+
+## 相关
+
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]
+- [[AI/LLM/Frameworks/verl/verl 概述|verl 概述]]
+- [[AI/LLM/RL/GRPO/DeepSeek-Math|DeepSeek-Math]]

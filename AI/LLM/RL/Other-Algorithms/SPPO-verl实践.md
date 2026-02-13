@@ -94,3 +94,6 @@ SPPO 的连续胜率信号确实比二元偏好更细腻，但代价是需要 re
 - [[AI/LLM/RL/Other-Algorithms/OPO-verl实践|OPO verl 实践]] — 类似在线偏好方案
 - [[AI/LLM/RL/DPO/DPO-Unsloth实践|DPO 实践]] — 离线方案
 - [[AI/LLM/Frameworks/verl/实现其他 RL 方法|verl 实现其他 RL 方法]]
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/LLM/Frameworks/verl/verl 概述|verl 概述]]

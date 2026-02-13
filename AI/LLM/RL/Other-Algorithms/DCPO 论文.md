@@ -21,3 +21,9 @@ PaperScope.ai 解读：https://paperscope.ai/hf/2509.02333
 】实验显示，DCPO在四个数学推理基准测试中均取得最优表现，在Qwen2.5-Math-7B模型上AIME24基准的Avg@32指标达到38.8，显著优于GRPO(32.1)和DAPO(31.6)。在Qwen2.5-14B模型上AIME25基准的Avg@32达到19.0，较GRPO(10.5)和DAPO(15.3)有大幅提升。
 
 DCPO将非零优势比例平均提升28%，训练效率较DAPO提高一倍，token剪辑比例降低一个数量级。该方法通过动态适应token概率分布特性，在保持高置信度token更新稳定性的同时，显著增强低概率token的探索能力，同时通过累积优势标准化**有效缓解高熵采样导致的训练波动问题**，为大语言模型的强化学习提供了更高效的数据利用和更稳定的优化路径。
+
+## 相关
+
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/LLM/Frameworks/verl/verl 概述|verl 概述]]

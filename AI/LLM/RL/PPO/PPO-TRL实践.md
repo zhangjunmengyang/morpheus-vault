@@ -65,3 +65,10 @@ tags:
 1. `**train/val/ratio_var**` (价值比率方差): 价值比率的方差。它迅速下降到接近零，说明价值更新的一致性很高，没有剧烈波动。
 1. `**train/val/num_eos_tokens**` (EOS符数量): 生成的序列中止符（End-of-Sequence）的数量。它在400到700之间波动，这与具体任务（如摘要长度）有关，没有出现极端情况（如从不停止或立即停止），属于正常范围。
 1. `**train/lr**` (学习率): 训练中使用的学习率。它从3.0e-6线性衰减至接近0，这是一种标准的训练策略，有助于模型在训练后期更好地收敛。
+
+## 相关
+
+- [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/LLM/RL/GRPO/GRPO-TRL实践|GRPO-TRL实践]]
+- [[AI/LLM/RL/DPO/DPO-TRL实践|DPO-TRL实践]]
+- [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]]

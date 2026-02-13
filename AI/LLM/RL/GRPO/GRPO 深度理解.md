@@ -202,3 +202,14 @@ Output 6: 2.0
 Output 7: 5.0
 
 Output 8: 5.0
+
+## 相关
+
+- [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/LLM/RL/DPO/DPO-TRL实践|DPO]]
+- [[AI/LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]
+- [[AI/LLM/RL/GRPO/DeepSeek-Math|DeepSeek-Math]]
+- [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]]
+- [[AI/LLM/Frameworks/verl/verl 概述|verl 概述]]
+- [[AI/LLM/RL/Fundamentals/KL散度|KL散度]]
+- [[AI/LLM/RL/Fundamentals/策略梯度方法|策略梯度方法]]

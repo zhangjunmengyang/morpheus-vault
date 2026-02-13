@@ -23,3 +23,9 @@ https://verl.readthedocs.io/en/latest/algo/rollout_corr_math.html
 前置 sft 示例：https://verl.readthedocs.io/en/latest/examples/gsm8k_example.html
 
 示例架构：https://verl.readthedocs.io/en/latest/examples/ppo_code_architecture.html
+
+## 相关
+
+- [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/LLM/RL/GRPO/GRPO-verl实践|GRPO-verl实践]]
+- [[AI/LLM/Frameworks/verl/verl 概述|verl 概述]]
