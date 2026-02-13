@@ -167,6 +167,6 @@ torchaudio.save("output.wav", audio, 24000)
 
 - [[Unsloth 概述]] — Unsloth 框架总览
 - [[量化]] — QLoRA 量化技术
-- [[LoRA]] — LoRA 技术详解
-- [[SFT-TRL实践]] — SFT 训练实践
-- [[非文本的模态对齐]] — 多模态对齐
+- [[AI/LLM/SFT/LoRA|LoRA]] — LoRA 技术详解
+- [[AI/LLM/SFT/SFT-TRL实践|SFT-TRL实践]] — SFT 训练实践
+- [[AI/MLLM/非文本的模态对齐|非文本的模态对齐]] — 多模态对齐

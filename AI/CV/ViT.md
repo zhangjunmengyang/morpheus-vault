@@ -89,8 +89,8 @@ ViT 的影响远超图像分类本身：
 
 ## 相关
 
-- [[BERT]]
+- [[AI/LLM/Architecture/BERT|BERT]]
 - [[MAE]]
-- [[CLIP]]
-- [[深度学习]]
+- [[AI/MLLM/CLIP|CLIP]]
+- [[AI/Foundations/DL-Basics/深度学习|深度学习]]
 - [[ControlNet]]

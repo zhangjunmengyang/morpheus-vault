@@ -101,6 +101,6 @@ BLIP-2 的 Q-Former 虽然在后续工作中被更简单的投影层替代，但
 
 - [[CLIP]]
 - [[Qwen-VL]]
-- [[ViT]]
-- [[GPT]]
-- [[深度学习]]
+- [[AI/CV/ViT|ViT]]
+- [[AI/LLM/Architecture/GPT|GPT]]
+- [[AI/Foundations/DL-Basics/深度学习|深度学习]]

@@ -158,10 +158,10 @@ for batch in training_data:
 ## 相关
 
 - [[GRPO 深度理解]] — GRPO 算法的深入分析
-- [[DeepSeek-R1]] — GRPO 的大规模应用
-- [[PPO 原理]] — GRPO 的对比基线
-- [[策略梯度方法]] — RL 基础
-- [[KL散度]] — GRPO 中的 KL 正则化
-- [[为什么 PPO 优于 PG]] — 从 PG 到 PPO 到 GRPO 的演进
+- [[AI/LLM/Architecture/DeepSeek-R1|DeepSeek-R1]] — GRPO 的大规模应用
+- [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]] — GRPO 的对比基线
+- [[AI/LLM/RL/Fundamentals/策略梯度方法|策略梯度方法]] — RL 基础
+- [[AI/LLM/RL/Fundamentals/KL散度|KL散度]] — GRPO 中的 KL 正则化
+- [[AI/LLM/RL/Fundamentals/为什么 PPO 优于 PG|为什么 PPO 优于 PG]] — 从 PG 到 PPO 到 GRPO 的演进
 - [[GRPO-TRL实践]] — TRL 中的 GRPO 实现
 - [[GRPO-verl实践]] — verl 中的 GRPO 实现

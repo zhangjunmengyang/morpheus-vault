@@ -105,8 +105,8 @@ LLaMA 的成功给我最大的启发是：**架构创新远不如数据和工程
 
 - [[GPT]]
 - [[BERT]]
-- [[LoRA]]
-- [[vLLM]]
-- [[Ollama]]
-- [[分布式训练]]
-- [[FSDP]]
+- [[AI/LLM/SFT/LoRA|LoRA]]
+- [[AI/LLM/Inference/vLLM|vLLM]]
+- [[AI/LLM/Inference/Ollama|Ollama]]
+- [[AI/LLM/Infra/分布式训练|分布式训练]]
+- [[AI/LLM/Infra/FSDP|FSDP]]

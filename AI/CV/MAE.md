@@ -97,6 +97,6 @@ DINOv2 后来被证明是更通用的视觉基础模型，但 MAE 的设计简�
 ## 相关
 
 - [[ViT]]
-- [[BERT]]
-- [[CLIP]]
-- [[深度学习]]
+- [[AI/LLM/Architecture/BERT|BERT]]
+- [[AI/MLLM/CLIP|CLIP]]
+- [[AI/Foundations/DL-Basics/深度学习|深度学习]]

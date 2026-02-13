@@ -202,8 +202,8 @@ alerts:
 ## 相关
 
 - [[Doris 治理]]
-- [[Doris 架构]]
-- [[Doris 底层存储]]
-- [[Doris 生产]]
-- [[grafana 看板]]
-- [[监控指标]]
+- [[Engineering/Doris/Doris 架构|Doris 架构]]
+- [[Engineering/Doris/底层存储/Doris 底层存储|Doris 底层存储]]
+- [[Engineering/Doris/生产/Doris 生产|Doris 生产]]
+- [[AI/LLM/Frameworks/verl/grafana 看板|grafana 看板]]
+- [[Engineering/Flink/生产/监控指标|监控指标]]

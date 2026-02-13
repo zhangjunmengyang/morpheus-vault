@@ -196,12 +196,12 @@ Tablet 的副本分布在不同 BE 上，FE 通过 **心跳检测 + 版本一致
 
 ## 相关
 
-- [[Doris 架构]]
-- [[Doris 数据导入]]
+- [[Engineering/Doris/Doris 架构|Doris 架构]]
+- [[Engineering/Doris/底层存储/写入流程/数据导入/Doris 数据导入|Doris 数据导入]]
 - [[存储结构]]
 - [[读写原理待归档]]
-- [[写入流程]]
+- [[Engineering/Doris/底层存储/写入流程/写入流程|写入流程]]
 - [[读取流程]]
-- [[Doris 查询计划]]
-- [[Doris 概述]]
-- [[Doris 治理]]
+- [[Engineering/Doris/治理/Doris 查询计划|Doris 查询计划]]
+- [[Engineering/Doris/Doris 概述|Doris 概述]]
+- [[Engineering/Doris/治理/Doris 治理|Doris 治理]]

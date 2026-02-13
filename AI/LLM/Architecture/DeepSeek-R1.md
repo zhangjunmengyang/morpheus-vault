@@ -113,10 +113,10 @@ R1-Zero 是论文中最令人兴奋的实验——直接在 base model 上做 RL
 
 ## 相关
 
-- [[GRPO 深度理解]] — R1 使用的核心 RL 算法
-- [[DeepSeek R1 学习笔记]] — 更详细的学习记录
-- [[DeepSeek-Math]] — GRPO 最初提出的论文
-- [[PPO 原理]] — GRPO 的前身对比
-- [[RL 概览]] — 强化学习基础
-- [[分布式训练]] — R1 训练所需的基础设施
-- [[OpenR1]] — 社区复现项目
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — R1 使用的核心 RL 算法
+- [[AI/LLM/RL/GRPO/DeepSeek R1 学习笔记|DeepSeek R1 学习笔记]] — 更详细的学习记录
+- [[AI/LLM/RL/GRPO/DeepSeek-Math|DeepSeek-Math]] — GRPO 最初提出的论文
+- [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]] — GRPO 的前身对比
+- [[AI/LLM/RL/Fundamentals/RL 概览|RL 概览]] — 强化学习基础
+- [[AI/LLM/Infra/分布式训练|分布式训练]] — R1 训练所需的基础设施
+- [[AI/LLM/RL/GRPO/OpenR1|OpenR1]] — 社区复现项目

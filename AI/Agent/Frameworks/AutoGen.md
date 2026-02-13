@@ -96,7 +96,7 @@ AutoGen 的对话驱动模式在**探索性任务**（写代码、做研究）�
 
 ## 相关
 
-- [[Multi-Agent 概述]]
-- [[Planner]]
-- [[Tool Use]]
-- [[HF Agent Course]]
+- [[AI/Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]]
+- [[AI/Agent/Multi-Agent/Planner|Planner]]
+- [[AI/Agent/Fundamentals/Tool Use|Tool Use]]
+- [[AI/Agent/Fundamentals/HF Agent Course|HF Agent Course]]

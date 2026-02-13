@@ -169,6 +169,6 @@ embedding = ollama.embeddings(model='nomic-embed-text', prompt='your text')
 ## 相关
 
 - [[vLLM]] — 生产级推理引擎对比
-- [[量化]] — 量化技术详解
-- [[Embedding]] — Ollama 的 embedding 功能
-- [[Embedding 选型]] — 本地 embedding 模型选择
+- [[AI/LLM/Frameworks/Unsloth/量化|量化]] — 量化技术详解
+- [[AI/LLM/Application/Embedding/Embedding|Embedding]] — Ollama 的 embedding 功能
+- [[AI/LLM/Application/Embedding/Embedding 选型|Embedding 选型]] — 本地 embedding 模型选择

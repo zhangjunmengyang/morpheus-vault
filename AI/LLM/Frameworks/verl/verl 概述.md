@@ -204,14 +204,14 @@ reward = sandbox_execute(generated_code, test_cases)
 
 - [[算法概述]] — verl 支持的算法详解
 - [[HybridFlow]] — verl 的核心架构
-- [[TRL 概述]] — 对比框架
-- [[OpenRLHF]] — 另一个大规模 RL 框架
-- [[GRPO-verl实践]] — verl 中 GRPO 实践
-- [[PPO-verl实践]] — verl 中 PPO 实践
-- [[DAPO-verl实践]] — verl 中 DAPO 实践
-- [[FSDP]] — verl 的训练后端
-- [[vLLM]] — verl 的推理后端
-- [[Ray]] — verl 的资源编排
+- [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]] — 对比框架
+- [[AI/LLM/Frameworks/OpenRLHF/OpenRLHF|OpenRLHF]] — 另一个大规模 RL 框架
+- [[AI/LLM/RL/GRPO/GRPO-verl实践|GRPO-verl实践]] — verl 中 GRPO 实践
+- [[AI/LLM/RL/PPO/PPO-verl实践|PPO-verl实践]] — verl 中 PPO 实践
+- [[AI/LLM/RL/DAPO/DAPO-verl实践|DAPO-verl实践]] — verl 中 DAPO 实践
+- [[AI/LLM/Infra/FSDP|FSDP]] — verl 的训练后端
+- [[AI/LLM/Inference/vLLM|vLLM]] — verl 的推理后端
+- [[AI/LLM/Infra/Ray|Ray]] — verl 的资源编排
 - [[Reward Function]] — 自定义 reward 设计
 - [[verl 训练参数]] — 详细参数配置
 - [[性能调优]] — 性能优化技巧

@@ -185,5 +185,5 @@ accelerate launch --config_file accelerate_ds.yaml train.py
 - [[分布式训练]] — 分布式训练概览
 - [[Megatron-LM]] — Tensor/Pipeline Parallel
 - [[Ray]] — 分布式计算框架
-- [[TRL 概述]] — 集成 DeepSpeed 的训练框架
-- [[verl 概述]] — verl 对分布式训练的支持
+- [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]] — 集成 DeepSpeed 的训练框架
+- [[AI/LLM/Frameworks/verl/verl 概述|verl 概述]] — verl 对分布式训练的支持

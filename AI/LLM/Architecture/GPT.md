@@ -101,5 +101,5 @@ GPT 的成功不在于某个单一的技术突破，而在于持续押注几个�
 - [[BERT]]
 - [[LLaMA]]
 - [[T5]]
-- [[Prompt engineering 概述]]
-- [[分布式训练]]
+- [[AI/LLM/Prompt-Engineering/Prompt engineering 概述|Prompt engineering 概述]]
+- [[AI/LLM/Infra/分布式训练|分布式训练]]

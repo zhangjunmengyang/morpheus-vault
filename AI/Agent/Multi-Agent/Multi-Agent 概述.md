@@ -112,7 +112,7 @@ Multi-Agent 目前更偏「研究/探索」阶段，真正生产级的应用还�
 ## 相关
 
 - [[Planner]]
-- [[AutoGen]]
-- [[Tool Use]]
-- [[记忆模块]]
+- [[AI/Agent/Frameworks/AutoGen|AutoGen]]
+- [[AI/Agent/Fundamentals/Tool Use|Tool Use]]
+- [[AI/Agent/Fundamentals/记忆模块|记忆模块]]
 - [[零碎的点]]

@@ -114,8 +114,8 @@ DoRA 将权重分解为**幅度（magnitude）和方向（direction）** 两个�
 
 ## 相关
 
-- [[Unsloth 概述]]
-- [[LLaMA]]
+- [[AI/LLM/Frameworks/Unsloth/Unsloth 概述|Unsloth 概述]]
+- [[AI/LLM/Architecture/LLaMA|LLaMA]]
 - [[SFT-TRL实践]]
-- [[分布式训练]]
-- [[量化]]
+- [[AI/LLM/Infra/分布式训练|分布式训练]]
+- [[AI/LLM/Frameworks/Unsloth/量化|量化]]

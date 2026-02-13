@@ -98,8 +98,8 @@ CLIP 在各种分布偏移测试（ImageNet-V2、ImageNet-Sketch、ImageNet-A �
 
 ## 相关
 
-- [[ViT]]
+- [[AI/CV/ViT|ViT]]
 - [[BLIP-2]]
 - [[Qwen-VL]]
-- [[BERT]]
-- [[深度学习]]
+- [[AI/LLM/Architecture/BERT|BERT]]
+- [[AI/Foundations/DL-Basics/深度学习|深度学习]]

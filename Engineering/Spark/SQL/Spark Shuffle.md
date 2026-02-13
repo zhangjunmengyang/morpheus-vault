@@ -177,8 +177,8 @@ Spark UI 的 Stage 详情页：
 
 - [[Spark SQL]]
 - [[Spark SQL 执行过程]]
-- [[数据倾斜优化]]
-- [[一次特殊的数据倾斜优化]]
+- [[Engineering/Spark/生产运维/数据倾斜优化/数据倾斜优化|数据倾斜优化]]
+- [[Engineering/Spark/生产运维/数据倾斜优化/一次特殊的数据倾斜优化|一次特殊的数据倾斜优化]]
 - [[Spark AQE + DDP]]
-- [[Spark Partitioner]]
-- [[Spark 调优]]
+- [[Engineering/Spark/存储/RDD/Spark Partitioner|Spark Partitioner]]
+- [[Engineering/Spark/生产运维/调优/Spark 调优|Spark 调优]]

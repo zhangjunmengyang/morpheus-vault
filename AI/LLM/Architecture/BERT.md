@@ -106,7 +106,7 @@ BERT 和 GPT 代表了两种根本不同的预训练哲学：
 ## 相关
 
 - [[GPT]]
-- [[ViT]]
-- [[CLIP]]
-- [[深度学习]]
-- [[LoRA]]
+- [[AI/CV/ViT|ViT]]
+- [[AI/MLLM/CLIP|CLIP]]
+- [[AI/Foundations/DL-Basics/深度学习|深度学习]]
+- [[AI/LLM/SFT/LoRA|LoRA]]

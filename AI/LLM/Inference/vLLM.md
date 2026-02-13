@@ -195,8 +195,8 @@ LLM(
 ## 相关
 
 - [[Ollama]] — 本地推理的另一个选择（面向个人用户）
-- [[DeepSeek-R1]] — vLLM 用于 R1 的推理部署
-- [[GRPO 深度理解]] — vLLM 在 RL 训练中的角色
-- [[TRL 概述]] — 集成 vLLM 的训练框架
-- [[verl 概述]] — 另一个集成 vLLM 的框架
-- [[分布式训练]] — Tensor Parallel 基础
+- [[AI/LLM/Architecture/DeepSeek-R1|DeepSeek-R1]] — vLLM 用于 R1 的推理部署
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — vLLM 在 RL 训练中的角色
+- [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]] — 集成 vLLM 的训练框架
+- [[AI/LLM/Frameworks/verl/verl 概述|verl 概述]] — 另一个集成 vLLM 的框架
+- [[AI/LLM/Infra/分布式训练|分布式训练]] — Tensor Parallel 基础
