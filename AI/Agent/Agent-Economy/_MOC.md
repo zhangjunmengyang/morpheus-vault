@@ -38,6 +38,10 @@ tags:
 ### 商业网络
 - [[Virtuals Protocol]] — Agent-to-Agent 商业协议（ACP）与 Revenue Network
 
+## 竞品与案例
+
+- [[ai16z 竞品分析]] — 全球首个 AI agent 管理的去中心化风投基金，elizaOS 框架，社交情绪驱动交易
+
 ## 趋势与判断
 
 ### 市场信号
