@@ -8,6 +8,9 @@ status: complete
 
 # Aletheia — DeepMind 数学研究 Agent
 
+> [!note] 深度版本
+> 本文件为早期概览版（2026-02-15）。完整深度分析见 [[AI/Agent/Aletheia-Math-Research-Agent]]（2026-02-19，163行，含架构细节、科研成果分类、设计启示）。
+
 ## 一句话
 
 Google DeepMind 推出的数学研究 Agent，从竞赛解题跨越到**全自主科研论文生成**，在 Erdős 猜想数据库中自主解决了 4 个开放问题。

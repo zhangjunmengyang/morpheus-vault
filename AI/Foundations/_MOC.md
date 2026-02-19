@@ -44,6 +44,36 @@ tags:
 - [[AI/Foundations/DL-Basics/Attention 详解|Attention 详解]] — 注意力机制
 - [[AI/Foundations/DL-Basics/Transformer 位置编码详解|位置编码详解]] — RoPE / ALiBi
 - [[AI/Foundations/DL-Basics/MoE 基础|MoE 基础]] — 混合专家模型
+- [[AI/Foundations/DL-Basics/Layer Normalization|Layer Normalization]]
+- [[AI/Foundations/DL-Basics/MoE 进阶|MoE 进阶]]
+
+## 架构 (Architecture)
+- [[AI/Foundations/Architecture/Transformer-架构演进-2026|Transformer 架构演进 2026]] — 面试武器版，791行，从 vanilla → MoE → Linear Attention → SSM 全谱系
+- [[AI/Foundations/Architecture/Decoder-Only vs Encoder-Decoder|Decoder-Only vs Encoder-Decoder]]
+- [[AI/Foundations/Architecture/SSM 与 Mamba|SSM 与 Mamba]]
+- [[AI/Foundations/Architecture/长上下文处理|长上下文处理]]
+
+## NLP 基础 (NLP-Basics)
+- [[AI/Foundations/NLP-Basics/Tokenizer 分词|Tokenizer 分词]]
+
+## 训练 (Training)
+- [[AI/Foundations/Training/PEFT 参数高效微调|PEFT 参数高效微调]] — LoRA / QLoRA / Adapter
+- [[AI/Foundations/Training/Scaling Laws|Scaling Laws]] — Chinchilla、Over-training
+- [[AI/Foundations/Training/Training Loss 分析|Training Loss 分析]]
+- [[AI/Foundations/Training/混合精度训练|混合精度训练]] — FP16 / BF16 / AMP
+- [[AI/Foundations/Training/训练数据构建|训练数据构建]]
+- [[AI/Foundations/Training/预训练流程|预训练流程]]
+
+## 推理 (Inference)
+- [[AI/Foundations/Inference/KV Cache|KV Cache]]
+- [[AI/Foundations/Inference/Speculative Decoding|Speculative Decoding]]
+- [[AI/Foundations/Inference/推理服务架构|推理服务架构]]
+- [[AI/Foundations/Inference/模型剪枝与知识蒸馏|模型剪枝与知识蒸馏]]
+- [[AI/Foundations/Inference/模型量化综述|模型量化综述]]
+- [[AI/Foundations/Inference/采样策略|采样策略]]
+
+## 补充组件
+- [[AI/Foundations/ML-Basics/SwiGLU|SwiGLU]] — 激活函数变体
 
 ## 面试深度笔记
 - [[AI/Foundations/Scaling Laws|Scaling Laws]] — Chinchilla、Over-training、Inference-time Compute Scaling

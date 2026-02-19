@@ -5,6 +5,9 @@ tags: [inference, kv-cache, optimization, interview]
 type: note
 ---
 
+> [!info] 另有面试版
+> Foundations 精简版：[[AI/Foundations/Inference/KV Cache]]
+
 # KV Cache 原理与优化：深度面试笔记
 
 ## 1. KV Cache 基本原理

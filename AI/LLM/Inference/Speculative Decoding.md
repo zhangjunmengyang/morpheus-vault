@@ -4,6 +4,9 @@ created: 2026-02-14
 status: draft
 ---
 
+> [!info] 另有面试版
+> Foundations 精简版：[[AI/Foundations/Inference/Speculative Decoding]]
+
 # Speculative Decoding（投机采样）
 
 ## 核心思想

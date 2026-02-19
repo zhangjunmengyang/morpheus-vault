@@ -16,6 +16,8 @@ type: note
 | **Qwen2** | 2024-06 | 架构迭代：GQA 全面启用、支持 128k 上下文（YaRN）、多语言 27→29 种、新增 57B-A14B MoE |
 | **Qwen2.5** | 2024-09 | 全系列开源旗舰：0.5B–72B Dense + 3B-A3B MoE，预训练 18T tokens，代码/数学专项模型 |
 | **Qwen3** | 2025-04 | 混合思维模式（thinking/non-thinking 动态切换）、MoE 旗舰 235B-A22B、支持 119 种语言和方言 |
+| **Qwen3-Next** | 2025-09 | 架构验证版（80B-A3B），首次引入 Gated DeltaNet 混合线性注意力 |
+| **Qwen3.5** | 2026-02 | [[Qwen3.5-Plus\|详细笔记]]。Qwen3-Next 架构放大版：397B-A17B MoE（512 专家），Gated DeltaNet + Gated Attention 3:1 混合，原生多模态 Early Fusion，201 种语言，256K/1M 上下文，吞吐 19× 提升 |
 
 ### 核心趋势
 
@@ -94,6 +96,8 @@ Qwen 系列基于 **Transformer decoder-only** 架构，核心组件：
 | Qwen2.5-3B-A3B (推测) | ~16B | 3B | 64 | 8 | 1 |
 | **Qwen3-235B-A22B** | 235B | 22B | 128 | 8 | 1 |
 | Qwen3-30B-A3B | 30B | 3B | 128 | 8 | 1 |
+| Qwen3-Next-80B-A3B | 80B | 3B | — | — | — |
+| **Qwen3.5-397B-A17B** | 397B | 17B | 512 | 10 | 1 |
 
 **MoE 关键设计**：
 - **Router**：top-k 路由（通常 k=8），每 token 选择 8 个专家

@@ -14,6 +14,9 @@ updated: 2026-02-15
 ### 运维 & 稳定性
 - [[macOS-稳定运行实战指南]] — LaunchAgent 服务化、Network Watchdog、日志轮转、配置快照、记忆体系
 
+### 工具集成
+- [[Tools/Chrome DevTools MCP|Chrome DevTools MCP]] — 浏览器调试 MCP 集成
+
 ### 待写
 - [ ] 结构化记忆体系设计（contextPruning / compaction / distiller 深度解析）
 - [ ] Workspace 管理哲学（AI Agent 的文件即记忆）
@@ -21,3 +24,6 @@ updated: 2026-02-15
 - [ ] OpenClaw Skill 开发指南
 - [ ] 从 VPS 搬家到 Mac 的完整迁移手册
 - [ ] 多渠道（Discord/Telegram/WebChat）配置与踩坑
+
+## 相关 MOC
+- ↑ 上级：[[00-Home/HOME]]

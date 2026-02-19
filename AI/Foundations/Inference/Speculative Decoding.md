@@ -9,6 +9,10 @@ tags:
 type: note
 ---
 
+> [!warning] 重复笔记
+> 同名深入版：[[AI/LLM/Inference/Speculative Decoding]]
+> 本篇为 Foundations 面试准备版，建议以 LLM 版为主
+
 # Speculative Decoding 投机采样
 
 ## 1 动机：自回归解码的串行瓶颈

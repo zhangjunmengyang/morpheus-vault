@@ -9,6 +9,10 @@ tags:
 type: note
 ---
 
+> [!warning] 重复笔记
+> 同名深入版：[[AI/LLM/Inference/KV Cache]]
+> 本篇为 Foundations 面试准备版，建议以 LLM 版为主
+
 # KV Cache 原理与优化
 
 ## 1. 什么是 KV Cache？为什么需要它？

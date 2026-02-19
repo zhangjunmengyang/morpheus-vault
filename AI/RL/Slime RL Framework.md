@@ -5,6 +5,8 @@ tags: [rl, post-training, framework, glm, open-source, agentic-rl]
 type: note
 ---
 
+> ⚠️ 早期笔记 (2026-02-14)。深度版本见 [[AI/LLM/Frameworks/Slime-RL-Framework]]
+
 # Slime: LLM Post-Training RL Scaling Framework
 
 > GitHub: [THUDM/slime](https://github.com/THUDM/slime)
