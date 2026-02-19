@@ -542,3 +542,95 @@ tags: [面试, 速查, AI]
 | 8 | GRPO | RL对齐 | 去 Critic 用组内相对 reward；DeepSeek-R1 涌现推理能力 |
 | 9 | 分布式并行策略 | 预训练 | TP 机内高频通信；PP 跨机低通信量；DP 机间大梯度同步 |
 | 10 | Speculative Decoding | 推理 | Rejection sampling 保证分布等价；验证比生成便宜 |
+
+---
+
+## 八、评估与 Benchmark 方向
+
+**本方向核心关键词**：MMLU-Pro、GPQA、SWE-Bench、Chatbot Arena、LLM-as-Judge、数据污染、动态评估、Agent 评估
+
+### Q1: MMLU-Pro vs MMLU？
+- 选项 4→10，猜对概率 25%→10%
+- 剔除模式匹配简单题，侧重推理
+- 区分度拉大 16-33pp
+- MMLU 饱和（顶级模型差 <2%），Pro 是替代方案
+
+### Q2: LLM-as-Judge 的偏见？
+- 位置偏见：倾向选第一个/最后一个
+- 长度偏见：倾向选更长回答
+- 自我偏好：倾向自己风格
+- 缓解：随机化顺序 + 多 Judge + CoT 评分
+
+### Q3: Chatbot Arena 为什么最可信？
+- 真实用户盲测 + ELO/Bradley-Terry 排名
+- 抗数据污染、持续更新
+- 局限：偏好≠正确性、受用户分布影响
+
+### Q4: 数据污染怎么检测？
+- n-gram overlap 分析
+- canary string 注入
+- 给前缀检查 memorization
+- 动态评估集 + 多 benchmark 交叉验证
+
+### Q5: HumanEval vs SWE-Bench？
+- HumanEval：函数级代码生成，164 题，pass@k
+- SWE-Bench：真实 GitHub issue 修复，需理解大型代码库
+- 前者测"能写函数"，后者测"能改真实项目"
+
+### Q6: 从零搭建评估体系？
+- 确定核心场景 → 选 3-5 个 benchmark → 自动化 pipeline
+- 加 LLM-as-Judge → 接入 CI → 定期人类评估校准
+- 上线后 AB Testing + 线上监控
+
+### Q7: Agent 评估 vs LLM 评估？
+- Agent 有状态，需评估多步决策链
+- 需要模拟环境，成本高复现难
+- 端到端完成率 vs 过程质量
+- 安全评估更复杂：工具误用、权限升级
+
+### Q8: ARC-AGI 的意义？
+- 测试抽象推理和归纳：给例子推断规则
+- 每题全新模式，无法靠记忆
+- 人类 85%，最好 AI ~68.8%（Claude Opus 4.6）
+- 衡量"学习新规则"能力
+
+### Q9: 2026 评估趋势？
+- "做对题"→"完成真实任务"
+- "终态评估"→"过程评估"
+- "静态排行榜"→"动态竞技场"
+- "单模型"→"系统评估"（Agent+Tool+Memory）
+
+## 九、预训练与分布式训练方向
+
+**本方向核心关键词**：3D 并行、DeepSpeed Zero、FSDP、MoE 训练、Loss Spike、数据工程、Scaling Laws、BF16
+
+### Q1: DP/TP/PP 各解决什么问题？
+- DP：数据并行，扩 batch size，通信梯度同步
+- TP：张量并行，切单层参数到多卡，机内高带宽
+- PP：流水线并行，切层到多机，通信量小但有 bubble
+
+### Q2: DeepSpeed Zero 1/2/3？
+- Zero-1：切 optimizer states
+- Zero-2：切 optimizer states + gradients
+- Zero-3：切 optimizer states + gradients + parameters
+- 越高级显存越省但通信越多
+
+### Q3: Loss Spike 排查？
+- 查 gradient norm → 查数据（回溯 batch）→ 查硬件
+- 恢复：回滚 checkpoint + 降 LR + 跳问题数据
+- 预防：BF16（不易溢出）+ gradient clipping + 定期存 ckpt
+
+### Q4: MoE 训练特殊挑战？
+- 负载不均衡：auxiliary loss / bias-based routing
+- Expert collapse：强制最低使用率
+- 通信量大：expert 分布在不同卡，all-to-all 通信
+
+### Q5: 数据配比经验？
+- Web 60% + 百科 8% + 书籍 8% + 代码 12% + 学术 5%
+- 代码占比高提升推理能力
+- 去重在清洗之前（减后续计算量）
+
+### Q6: Scaling Laws 核心结论？
+- Loss ∝ N^(-α) · D^(-β)（N=参数，D=数据）
+- Chinchilla：最优 D ≈ 20×N
+- 2026 修正：小模型+更多数据可能更优（Llama 思路）
