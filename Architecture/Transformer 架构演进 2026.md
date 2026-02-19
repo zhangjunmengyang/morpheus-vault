@@ -682,6 +682,28 @@ DeepSeek V3 是 2024-2025 年最具影响力的开源大模型之一，架构上
 - 动态计算分配（early exit, adaptive compute）
 - Sub-quadratic attention 的实用化
 
+### 8.5 2026 前沿：混合 Attention 架构（Sparse + Linear）
+
+**核心洞察**：不是所有 attention 计算都同等重要。Attention map 可分解为高稀疏分量（需精确计算）+ 低秩分量（可用廉价近似）。
+
+**两种主流方案**：
+
+| | MiniCPM-SALA (arXiv:2602.11761) | SLA2 (arXiv:2602.12675) |
+|--|--------------------------------|------------------------|
+| 粒度 | **层级**静态分配 | **Token 级**动态路由 |
+| 比例 | 1:3 (sparse:linear)，算法选关键层 | Learnable router 逐次决定 |
+| 机制 | InfLLM-V2 (sparse) + Lightning Attention (linear) | Sparse attention + linear attention + QAT |
+| 位置编码 | HyPE 混合位置编码 | — |
+| 场景 | LLM 长上下文（9B，1M tokens） | Diffusion 视频生成 |
+| 加速 | 256K 长度 3.5× | 18.6× attention speedup |
+| 稀疏度 | ~75% linear layers | 97% sparse |
+| 训练 | 迁移训练，成本降 75% | QAT，需完整训练 |
+
+**面试加分话术**：
+> "2026 年 attention 优化的趋势不再是'用什么替代 full attention'，而是'怎么智能混合'。MiniCPM-SALA 证明了只有 25% 的层需要精确的 sparse attention，其余用 O(n) 的 linear attention 就够了。SLA2 更进一步，用 learnable router 在 token 粒度动态决定。这和 MoE 的核心思想一脉相承——不是所有计算都需要同等资源。"
+
+**与 DeepSeek V4 Engram 的关系**：Engram 把"静态知识检索"从 GPU 推理中分离出来用 O(1) 查表，本质也是"异构计算分配"——把不同类型的计算交给最适合的机制。
+
 ---
 
 ## 9. 面试高频题 12 道 + 参考答案
