@@ -6,6 +6,9 @@ tags: [rlhf, dpo, alignment, llm-training, interview-prep]
 
 # RLHF / RLAIF / DPO 2026 技术全景（面试武器版）
 
+> [!warning] 路径偏差 · 重复文件
+> 本文位于根目录 `RL/`（临时路径）。正式版见 [[AI/LLM/RL/RLHF-DPO-2026-技术全景]]（已链入 RL/_MOC），以正式版为准。
+
 > 本笔记覆盖 LLM 对齐训练的完整技术栈：从经典 RLHF 到 DPO 家族、RLAIF、Reward Model 设计、2026 前沿算法（GRPO/DAPO/REINFORCE++）、工程框架、常见失败模式，以及 15 道深度面试题。目标：在 RL for LLM 方向的面试中碾压对手。
 
 ---

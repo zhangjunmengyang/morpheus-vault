@@ -8,6 +8,9 @@ date: 2026-02-19
 paper_url: https://arxiv.org/abs/2602.10090
 ---
 
+> [!warning] 路径偏差 · 重复文件
+> 本文位于根目录 `Agent/`（历史遗留）。正式版见 [[AI/Agent/Agent World Model]]（已链入 Agent/_MOC）。
+
 # Agent World Model: Infinity Synthetic Environments for Agentic Reinforcement Learning
 
 > **论文信息**

@@ -21,6 +21,9 @@ tags:
 - [[AI/MLLM/BLIP-2|BLIP-2]] — 冻结 LLM 的多模态方案
 - [[AI/MLLM/非文本的模态对齐|非文本的模态对齐]]
 
+## Omni 全模态模型
+- [[AI/Models/Ming-Flash-Omni 2.0|Ming-Flash-Omni 2.0]] — 蚂蚁集团 Inclusion AI：100B MoE（仅激活 6.1B），语音/图像/视频/文本全模态，开源（arXiv:2602.06688）★★★★
+
 ## VL 模型系列
 - [[AI/MLLM/Qwen-VL|Qwen-VL]]
 - [[AI/MLLM/DeepSeek-VL|DeepSeek-VL]]

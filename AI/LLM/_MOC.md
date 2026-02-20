@@ -32,7 +32,8 @@ tags:
 - [[AI/LLM/Architecture/FlashAttention|FlashAttention]] — 高效注意力
 - [[AI/LLM/Architecture/GQA-MQA|GQA-MQA]] — Grouped/Multi-Query Attention
 - [[AI/LLM/Architecture/Multi-Head Latent Attention|Multi-Head Latent Attention]]
-- [[AI/LLM/Architecture/Manifold-Constrained Hyper-Connections|Manifold-Constrained Hyper-Connections]]
+- [[AI/LLM/Architecture/Manifold-Constrained Hyper-Connections|Manifold-Constrained Hyper-Connections]] — 早期面试版（305行，2026-02-14）
+- [[AI/LLM/Architecture/mHC-Manifold-Constrained-Hyper-Connections-DeepSeek|mHC（DeepSeek V4 架构）]] — 流形约束超连接深度版：多流残差拓扑替代单路残差，训练稳定性++，DeepSeek-AI（arXiv:2512.24880，★★★★☆）
 - [[AI/LLM/Architecture/Transformer 位置编码|Transformer 位置编码]] — RoPE 等
 - [[AI/LLM/Architecture/Tokenizer|Tokenizer]]
 - [[AI/LLM/Architecture/Tokenizer 深度理解|Tokenizer 深度理解]]
@@ -43,6 +44,7 @@ tags:
 - [[AI/LLM/Architecture/LaViDa-R1-Diffusion-LLM-Reasoning|LaViDa-R1]] — 扩散语言模型推理：Answer-Forcing + Tree Search + GRPO，Adobe/UCLA/GaTech（★★★★☆）
 
 ## Prompt Engineering
+- [[AI/LLM/Prompt-Engineering-2026实战全景|Prompt Engineering 2026 实战全景]] ⭐ — 2784行深度全景：CoT·Few-shot·System Prompt设计·自动优化·对抗防护，含大量代码示例（2026-02-20）★★★★★
 - [[AI/LLM/Prompt-Engineering/Prompt Engineering|Prompt Engineering]] — 提示工程
 - [[AI/LLM/Prompt-Engineering/Prompt engineering 概述|Prompt 概述]]
 - [[AI/LLM/Prompt-Engineering/高级 Prompt 技巧|高级 Prompt 技巧]]
@@ -70,6 +72,7 @@ tags:
 - [[AI/LLM/Inference/Test-Time-Compute|Test-Time Compute (TTC)]] — 推理时扩展综述：CoT/PRM/Best-of-N/Budget Forcing
 - [[AI/LLM/Inference/Gemini-3-Deep-Think|Gemini 3 Deep Think]] — ARC-AGI-2 84.6%, TTC scaling
 - [[AI/LLM/Inference/Deep-Thinking-Ratio-DTR|Deep-Thinking Ratio (DTR)]] — 质量 > 数量：深层 token 占比 r=0.828 准确率，推翻"CoT 越长越好"，UVA+Google（★★★★☆）
+- [[AI/LLM/Inference/Deep-Thinking-Ratio-DTR-v2-Think-At-N|DTR v2 + Think@N]] ⭐ — 精读完整版：50-token prefix DTR 比全序列更准；Think@N 在 AIME25 准确率+2%同时成本减半；"推理深度在开头50 token已决定"（★★★★★）
 - [[AI/LLM/Inference/KV Cache|KV Cache]] — 推理核心机制
 - [[AI/LLM/Inference/KV Cache 优化|KV Cache 优化]]
 - [[AI/LLM/Inference/DMS KV Cache压缩|DMS KV Cache 压缩]]
@@ -77,7 +80,11 @@ tags:
 - [[AI/LLM/Inference/Speculative Decoding|Speculative Decoding]] — 推测解码
 - [[AI/LLM/Inference/Sparrow-Video-LLM-Speculative-Decoding|Sparrow]] — Video LLM 推测解码：Visual Semantic Internalization，25k visual tokens 下 2.82x 加速，NUDT（★★★★☆）
 - [[AI/LLM/Inference/MAGE-Block-Diffusion-LLM-Sparse-Attention|MAGE]] — Block Diffusion LLM 稀疏注意力：All-[MASK]第一步预测全局重要KV，128K下后续步6.3x加速，near-lossless（★★★★☆）
+- [[AI/LLM/Inference/Sink-Aware-Pruning-Diffusion-LLM|Sink-Aware Pruning]] — Diffusion LLM 注意力 sink 感知剪枝：LLaDA 上 40% 冗余层可裁剪，MMLU/GSM8K 仅降 <0.5%，MBZUAI（arXiv:2602.17664，★★★★☆）
+- [[AI/LLM/Inference/Progressive-Thought-Encoding-Cache-Efficient-RL|PTE（Progressive Thought Encoding）]] ⭐ — KV cache 满时先学习再 evict：cross-attention 压缩 evicted token 到 LoRA ΔW，online self-distillation；AIME +33%，内存 -40%；ICLR 2026，微软研究院（arXiv:2602.16839）★★★★★
+- [[AI/LLM/Inference/Accordion-Thinking-Self-Regulated-Step-Summaries|Accordion-Thinking]] — 让模型用 RL 学会主动压缩：每步生成 summary 后 fold（丢弃原始 CoT），RL 强制 summary 无损；Gap-Vanishing 现象证明压缩=等价；4× throughput 零精度损失；ICML 2026（arXiv:2602.03249）★★★★☆
 - [[AI/LLM/Inference/推理优化|推理优化]] — 综述
+- [[AI/LLM/Inference/端侧推理量化精度陷阱-跨骁龙芯片精度失真|端侧量化精度陷阱]] — 同一 INT8 模型跨 5 款骁龙 SoC 精度差 20%；云端 benchmark 完全失真；NPU INT8 算子实现差异根因；PTQ vs QAT 端侧选型建议（馆长工程笔记，2026-02-20）★★★★☆
 - [[AI/LLM/Inference/推理服务架构|推理服务架构]]
 - [[AI/LLM/Inference/模型部署实践|模型部署实践]]
 - [[AI/LLM/Inference/采样策略|采样策略]]
@@ -170,6 +177,7 @@ tags:
 ## 预训练 (Pretraining)
 - [[AI/LLM/Pretraining/预训练原理|预训练原理]]
 - [[AI/LLM/Pretraining/LLM-预训练与分布式训练-2026-全景|LLM 预训练与分布式训练 2026 全景]] — 2183行，覆盖数据工程→分布式训练→MoE→长上下文→面试考点（面试武器版）
+- [[AI/LLM/Training/LLM数据工程2026技术全景|LLM 数据工程 2026 技术全景]] — 3778行深度专项：预训练管线·合成数据·SFT构建·质量评估·合规安全，含代码示例 + 12道面试题（互补上方全景版）
 
 ## 训练技术 (Training)
 - [[AI/LLM/Training/SFT 实战指南|SFT 实战指南]]
@@ -180,6 +188,7 @@ tags:
 - [[AI/LLM/Training/Karpathy nanochat|Karpathy nanochat]] — $72 训练 GPT-2
 
 ## 评估与趋势 (Evaluation)
+- [[AI/LLM/LLM评估与Benchmark-2026技术全景|LLM 评估与 Benchmark 2026 技术全景]] ⭐ — 1854行全景：Benchmark 设计·主流评测集·自动化评估·前沿趋势（2026-02-20）★★★★★
 - [[AI/LLM/Evaluation/LLM 评测体系|LLM 评测体系]]
 - [[AI/LLM/Evaluation/ICLR-2026-趋势分析|ICLR 2026 趋势分析]] — 5357 篇 accepted papers 趋势
 

@@ -10,6 +10,9 @@ created: 2026-02-14
 status: complete
 ---
 
+> [!note] 版本说明
+> 本文为 2026-02-14 面试速查版（305行）。DeepSeek V4 专项深度分析见：[[AI/LLM/Architecture/mHC-Manifold-Constrained-Hyper-Connections-DeepSeek|mHC-Manifold-Constrained-Hyper-Connections-DeepSeek]]（217行，arXiv:2512.24880，★★★★☆）
+
 # Manifold-Constrained Hyper-Connections (mHC)：训练稳定性革命
 
 ## 核心概念

@@ -15,8 +15,12 @@ tags:
 
 - [[Agent 安全威胁全景 2026-02]] — 2026-02 Agent 安全 threat landscape 全景（prompt injection / 记忆投毒 / Agent 武器化 / OpenClaw 安全）
 - [[Anthropic Claude Opus 4.6 蓄意破坏风险报告]] — Opus 4.6 蓄意破坏风险评估，ASL-3→4 灰区
-
 - [[AI/Safety/AI Agent 集体行为与安全漂移|AI Agent 集体行为与安全漂移]] — 多 Agent 系统安全漂移
+
+## 真实攻击案例 & 能力基准
+
+- [[AI/Safety/Clinejection-AI-Coding-Agent-Supply-Chain-Attack|Clinejection]] ⭐ — 2026-02-17 真实事件：Cline AI triage bot 被 prompt injection 劫持，恶意代码推送给 5M+ 开发者；完整攻击链分析 + 防御建议（★★★★★）
+- [[AI/Safety/EVMbench-AI-Agent-Smart-Contract-Exploit|EVMbench]] ⭐ — OpenAI+Paradigm：AI agent 自主利用智能合约漏洞基准；GPT-5.3-Codex 利用率 <20%→>70%；守护 $100B+ 资产的 EVM 合约正暴露于 AI 自主攻击（★★★★★）
 
 ## 基础知识
 

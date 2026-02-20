@@ -8,6 +8,9 @@ date: 2026-02-19
 paper_url: https://arxiv.org/abs/2602.12430
 ---
 
+> [!warning] 路径偏差 · 重复文件
+> 本文位于根目录 `Agent/`（历史遗留）。正式版见 [[AI/Agent/Agent-Skills-Security]]（已链入 Agent/_MOC）。
+
 # Agent Skills for LLMs: 架构、获取、安全与前路
 
 > 论文: *"Agent Skills for Large Language Models: Architecture, Acquisition, Security, and the Path Forward"*

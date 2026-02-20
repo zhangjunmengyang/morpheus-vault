@@ -34,6 +34,7 @@ tags:
 ## 研究论文 (Recent Papers)
 - [[AI/Agent/AgentAuditor — Reasoning Tree审计多Agent系统|AgentAuditor]] — Reasoning Tree 审计多 Agent 系统
 - [[AI/Agent/Aletheia-Math-Research-Agent|Aletheia]] — Gemini Deep Think 数学科研 Agent，从 benchmark 到真实科研产出的跨越（arXiv:2602.10177）
+- [[AI/Agent/Aletheia (DeepMind 数学研究Agent)|Aletheia 早期概览]] — 2026-02-15 早期版（96行），深度版见上方 Aletheia-Math-Research-Agent
 - [[AI/Agent/IMAGINE — 多Agent蒸馏到单模型|IMAGINE]] — 多 Agent 蒸馏到单模型
 - [[AI/Agent/PABU — Progress-Aware Belief State高效Agent|PABU]] — 进度感知信念更新，高效 Agent
 - [[AI/Agent/Agent-Skills-Security|Agent Skills Security]] — arXiv:2602.12430，Skill 架构·获取·安全治理，26.1% 社区 skill 含漏洞
@@ -55,6 +56,7 @@ tags:
 - [[AI/Agent/Agentic-RL/UI-TARS-2 论文|UI-TARS-2]] — GUI Agent RL
 - [[AI/Agent/Agentic-RL/WebPilot 论文|WebPilot]] — Web 自动化
 - [[AI/Agent/Agentic-RL/R-4B 论文|R-4B]] — MLLM Auto-Thinking
+- [[AI/Agent/EnterpriseGym-Corecraft|EnterpriseGym Corecraft]] — Surge AI：高保真企业 RL 环境训练可泛化 Agent，OOD 泛化突破，GRPO 框架（arXiv:2602.16179）★★★★
 
 ## Agent 经济 (Agent Economy) 💰
 - [[AI/Agent/Agent-Economy/_MOC|Agent 经济总览]] — 身份、支付、信誉、商业网络
@@ -75,6 +77,7 @@ tags:
 - [[AI/Agent/Agent 框架对比|Agent 框架对比]] — 六大框架选型指南
 - [[AI/Agent/Agent 生产落地|Agent 生产落地]] — 生产部署实践
 - [[AI/Agent/Agent 评测与 Benchmark|Agent 评测与 Benchmark]]
+- [[AI/Agent/Gaia2-Dynamic-Async-Agent-Benchmark|Gaia2]] ⭐ — 动态异步环境 Agent benchmark：GPT-5(42%) + Claude-4 Sonnet（均未公开发布），Kimi-K2 开源最强(21%)；write-action verifier 可直接用于 Agentic RL 训练；Meta FAIR（arXiv:2602.11964）★★★★★
 - [[AI/Agent/Code Agent|Code Agent]] — 代码 Agent 深度笔记
 - [[AI/Agent/ReAct 推理模式|ReAct 推理模式]]
 - [[AI/Agent/GitHub-Agentic-Workflows|GitHub Agentic Workflows]]

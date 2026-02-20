@@ -11,6 +11,9 @@ authors: "Thibaud Gloaguen et al. (ETH Zurich)"
 venue: ICML 2026 (submitted)
 ---
 
+> [!warning] 路径偏差 · 重复文件
+> 本文位于根目录 `Agent/`（历史遗留）。正式版见 [[AI/Agent/Evaluating-AGENTS-Context]]（已链入 Agent/_MOC）。
+
 # Evaluating AGENTS.md: Context Files 对 Coding Agent 真的有用吗？
 
 > **一句话总结**：在对 4 个主流 coding agent 和 2 个 benchmark 的大规模实验中，LLM 自动生成的 context files（如 AGENTS.md）**平均降低任务成功率 0.5%-2%，同时增加推理成本 20%+**；即使是开发者手写的 context files 也只带来约 4% 的微弱提升。论文的核心建议是：**只写最小必需内容，不写比写好。**

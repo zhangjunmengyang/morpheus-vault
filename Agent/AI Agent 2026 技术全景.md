@@ -8,6 +8,7 @@ tags:
   - survey
 related:
   - "[[Agent World Model]]"
+warning: "路径偏差·重复文件，正式版见 AI/Agent/AI-Agent-2026-技术全景"
   - "[[Agent Skills Security]]"
   - "[[Evaluating AGENTS.md]]"
 ---

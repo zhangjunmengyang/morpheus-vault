@@ -77,8 +77,18 @@ tags:
 - [[AI/LLM/RL/Other-Algorithms/LACONIC-Length-Constrained-RL|LACONIC]] — Primal-Dual RL 控制 CoT 输出长度，推理效率（arXiv:2602.14468）★★★
 - [[AI/LLM/RL/Other-Algorithms/E-SPL-Evolutionary-System-Prompt-Learning|E-SPL]] — RL 权重更新（程序性知识）+ 进化算法 system prompt 优化（声明性知识）联合训练；AIME25 56.3→60.6%（arXiv:2602.14697）★★★★
 - [[AI/LLM/RL/Other-Algorithms/GEPA-Reflective-Prompt-Evolution|GEPA]] ⭐ — 纯 prompt 进化超越 GRPO（5/6任务），rollout 减少 35x；E-SPL=GEPA+RL；ICLR 2026 Oral，UCB+Stanford+MIT（arXiv:2507.19457）★★★★★
+- [[AI/LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] — Teacher 模型在线预测题目难度，选 p≈0.5 的样本训练，逃离 sparse reward 低效陷阱；Apple+EPFL（arXiv:2602.14868）★★★★
+- [[AI/LLM/RL/Other-Algorithms/STAPO-Spurious-Token-Aware-Policy-Optimization|STAPO]] — 0.01% spurious tokens 携带虚假梯度是 RL 训练崩溃根源；mask 掉即可稳定训练；清华+滴滴（arXiv:2602.15620）★★★★
+- [[AI/LLM/RL/Other-Algorithms/Stable-Asynchrony-VCPO-Off-Policy-RL|Stable Asynchrony (VCPO)]] — 异步 off-policy RL 的方差爆炸根因与修复：Variance-Controlled Policy Optimization，解决 generation/training 解耦后的 staleness 问题；MIT HAN Lab（Song Han）★★★★
+- [[AI/LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 统一梯度利用+概率质量+信号可靠性的 GRPO 三维改进：软裁剪替代硬裁剪 + 概率质量校正 + reward 信号可靠性加权；微软亚研（arXiv:2602.17xxx）★★★★
+- [[AI/LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]] — Root Saturation 问题根治：Pivot-Driven Resampling 专攻深层 error-prone states；对比 TreeRL/AttnRL 探索启发式的缺陷；ICML 投稿，2602.14169（★★★★☆）
+
+## 训练框架 (Frameworks)
+- [[AI/LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — NVIDIA+MIT HAN Lab：统一 FP8 on-policy RL 训练精度流，解决 BF16-train/FP8-rollout 在长 rollout(>8K) 时精度崩溃和训练发散问题（arXiv:2601.14243）★★★★
+- [[AI/RL/Slime RL Framework|Slime RL Framework]] — GLM-5 的异步 RL 基础设施：解决 generation bottleneck >90%，APRIL 框架（see-also 指向深度版）
 
 ## 综述与深度笔记
+- [[AI/LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL 训练稳定性 2026 统一分析]] ⭐ — Scholar 综合笔记 v3：STAPO/Goldilocks/VCPO/DEEP-GRPO/MASPO/DAPO/LACONIC 四维拓扑（Token/样本/探索/系统），持续更新中（2026-02-20）★★★★★
 - [[AI/LLM/RL/RLHF 全链路|RLHF 全链路]] — 完整 RLHF 三阶段
 - [[AI/LLM/RL/RLHF-DPO-2026-技术全景|RLHF/DPO 2026 技术全景]] — 面试武器版，1147行，RLHF→RLAIF→DPO 全链路（2026-02-20）
 - [[AI/LLM/RL/对齐技术综述|对齐技术综述]] — RLHF → DPO → ORPO → KTO → SteerLM → Constitutional AI
