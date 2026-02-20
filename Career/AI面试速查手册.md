@@ -671,3 +671,46 @@ tags: [面试, 速查, AI]
 - 身份→能力边界→输出格式→安全约束→示例
 - 越具体越好，避免模糊指令
 - 2026 趋势：System Prompt 成为"应用灵魂"，产品差异化靠它
+
+## 十一、数据工程方向
+
+### Q1: 预训练数据管线核心步骤？
+- 采集→格式提取→语言检测→启发式清洗→质量过滤→去重→PII脱敏→有毒过滤→数据配比→Tokenization→打包
+- 质量过滤影响最大（FineWeb-Edu 证明），去重防过拟合至关重要
+
+### Q2: MinHash LSH 去重原理？
+- 文档→N-gram集合→K个哈希函数算MinHash签名→LSH分桶（b bands × r rows）
+- P(sig_k(A)=sig_k(B)) = Jaccard(A,B)，Jaccard>0.8判重
+- vs 精确去重（只能完全匹配）vs Suffix Array（子串级精确，内存大）
+
+### Q3: FineWeb-Edu 为什么有效？
+- LLM(70B)对500K样本打教育质量分→蒸馏到小分类器→大规模过滤
+- 1.3T tokens（从15T过滤）超越10x大的原始FineWeb
+- 核心：数据质量>>数据数量，"教育价值"是好的质量代理指标
+
+### Q4: 合成数据主要方法对比？
+- Self-Instruct：简单低成本，多样性受限
+- Evol-Instruct/WizardLM：系统化难度升级，多样性好
+- Magpie：利用对齐特性无需种子，效率高
+- 蒸馏：质量最高但受ToS限制
+- 带验证合成（代码/数学）：质量保证最强
+
+### Q5: Model Collapse 是什么？怎么避免？
+- 模型在自己生成的数据上迭代训练→分布尾部丢失→输出单调化
+- 避免：真实数据≥40-50%、多源teacher、质量过滤非盲目扩增、引入外部验证信号、监控多样性指标
+
+### Q6: DPO vs RLHF 数据需求？
+- RLHF需3类数据（SFT+比较排序+PPO prompts），DPO只需偏好对{prompt,chosen,rejected}
+- DPO对噪声更敏感，RLHF可通过RM容忍噪声
+- 2026趋势：DPO主流化，KTO只需thumbs up/down
+
+### Q7: Tokenization/BPE 影响性能的原因？
+- 压缩率决定上下文利用效率，词表覆盖影响罕见词学习
+- 数字tokenization影响算术能力，代码空格策略影响代码理解
+- 词表大小权衡：大→压缩好但embedding重，小→序列长但参数少
+
+### Q8: 数据污染检测方法？
+- N-gram匹配（13-gram，>70%重叠判污染）
+- 成员推断（Min-K% Prob检查异常低perplexity）
+- Benchmark Canary（嵌入特殊标记）
+- 预防：时间切割、URL黑名单、动态benchmark（LiveCodeBench）
