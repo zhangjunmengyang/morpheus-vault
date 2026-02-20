@@ -190,6 +190,9 @@ tags:
 - [[AI/LLM/Training/模型蒸馏|模型蒸馏]]
 - [[AI/LLM/Training/Karpathy nanochat|Karpathy nanochat]] — $72 训练 GPT-2
 
+## 效率与压缩 (Efficiency & Compression)
+- [[AI/LLM/Efficiency/知识蒸馏与模型压缩-2026技术全景|知识蒸馏与模型压缩 2026 全景]] ⭐ — 面试武器库 #18，2061行：KD/量化/剪枝/低秩分解/架构效率/端侧部署全覆盖（2026-02-21）★★★★★
+
 ## 评估与趋势 (Evaluation)
 - [[AI/LLM/LLM评估与Benchmark-2026技术全景|LLM 评估与 Benchmark 2026 技术全景]] ⭐ — 1854行全景：Benchmark 设计·主流评测集·自动化评估·前沿趋势（2026-02-20）★★★★★
 - [[AI/LLM/Evaluation/LLM 评测体系|LLM 评测体系]]

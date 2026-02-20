@@ -1,3 +1,13 @@
+---
+title: "DTR v2: Think Deep, Not Just Long — Think@N"
+date: 2026-02-13
+tags: [推理效率, 推理质量, DTR, Best-of-N, 推理选择]
+domain: AI/LLM/Inference
+arxiv: "2602.13517"
+rating: 4
+status: permanent
+---
+
 # Think Deep, Not Just Long: DTR + Think@N（精读版）
 
 > arXiv: 2602.13517 | UVA + Google | 2026-02-13

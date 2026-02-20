@@ -1,3 +1,14 @@
+---
+title: "Jet-RL: FP8 On-Policy RL Training"
+date: 2026-01-20
+tags: [FP8训练, RL推理优化, 量化, 系统优化, 分布式训练]
+domain: AI/LLM/RL/Frameworks
+arxiv: "2601.14243"
+rating: 4
+status: permanent
+see-also: ["[[QeRL-Quantization-Efficient-RL]]"]
+---
+
 # Jet-RL: FP8 On-Policy RL Training
 
 > Enabling On-Policy FP8 Reinforcement Learning with Unified Training and Rollout Precision Flow

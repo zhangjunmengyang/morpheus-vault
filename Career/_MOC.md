@@ -17,6 +17,7 @@ tags:
 - [[Career/Agent 简历描述重点|Agent 简历描述重点]]
 
 ## 求职与面试
+- [[Career/Job-Board/_求职看板|🎯 求职看板]] — AI Agent / LLM 工程岗位追踪看板（主力工具，持续更新）
 - [[Career/AI 岗位机会追踪|AI 岗位机会追踪]] — 字节/阿里/DeepSeek/月之暗面等重点 HC，持续更新
 - [[Career/AI面试速查手册|AI面试速查手册]]
 

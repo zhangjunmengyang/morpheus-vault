@@ -1,3 +1,18 @@
+---
+title: "DEEP-GRPO: Deep Dense Exploration via Pivot-Driven Resampling"
+type: paper
+domain: ai/llm/rl
+tags:
+  - rl
+  - GRPO
+  - exploration
+  - pivot-resampling
+  - root-saturation
+  - RLVR
+created: 2026-02-14
+status: v1
+---
+
 # DEEP-GRPO: Deep Dense Exploration via Pivot-Driven Resampling
 
 > Deep Dense Exploration for LLM Reinforcement Learning via Pivot-Driven Resampling

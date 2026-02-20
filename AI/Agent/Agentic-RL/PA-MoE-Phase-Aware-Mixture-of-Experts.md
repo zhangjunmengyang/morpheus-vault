@@ -1,3 +1,18 @@
+---
+title: "PA-MoE: Phase-Aware Mixture of Experts for Agentic RL"
+type: paper
+domain: ai/agent/agentic-rl
+tags:
+  - Agentic-RL
+  - MoE
+  - LoRA
+  - credit-assignment
+  - routing-granularity
+  - simplicity-bias
+created: 2026-02-20
+status: v1
+---
+
 # PA-MoE: Phase-Aware Mixture of Experts for Agentic RL
 
 **论文**: Phase-Aware Mixture of Experts for Agentic Reinforcement Learning  

@@ -1,3 +1,13 @@
+---
+title: "Accordion-Thinking: Self-Regulated Step Summaries"
+date: 2026-02-04
+tags: [推理效率, CoT压缩, RL训练, ICML2026, 长推理]
+domain: AI/LLM/Inference
+arxiv: "2602.03249"
+rating: 4
+status: permanent
+---
+
 # Accordion-Thinking: Self-Regulated Step Summaries for Efficient and Readable LLM Reasoning
 
 **arXiv**: 2602.03249  

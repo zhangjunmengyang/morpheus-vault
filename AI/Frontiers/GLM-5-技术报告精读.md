@@ -1,3 +1,13 @@
+---
+title: "GLM-5 技术报告精读"
+date: 2026-02-17
+tags: [GLM, 智谱AI, MoE, 异步RL, OpenWeights, SOTA, DSA]
+domain: AI/Frontiers
+arxiv: "2602.15763"
+rating: 4
+status: permanent
+---
+
 # GLM-5: from Vibe Coding to Agentic Engineering
 
 > arXiv: 2602.15763 | 智谱 AI + 清华大学 | 发布: 2026-02-17

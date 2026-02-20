@@ -30,7 +30,7 @@ tags:
 ## 对齐与防御
 
 - [[AI/Safety/安全对齐与红队|安全对齐与红队]] — Jailbreak 分类、红队流程、防御策略、Anthropic/OpenAI 安全报告
-- [[对齐技术总结]] — 对齐技术综述
+- [[AI/Safety/对齐技术总结|对齐技术总结]] — 对齐技术综述：RLHF/DPO/Constitutional AI/Scalable Oversight 完整覆盖
 
 ## 关联
 
@@ -39,6 +39,9 @@ tags:
 
 ## 综述与全景
 - [[AI/Safety/AI安全与对齐-2026技术全景|AI 安全与对齐 2026 全景]] ⭐ — 面试武器库 #16，1130行：对齐技术栈→可扩展监督→红队测试→Agent安全→机械可解释性→模型评估→治理框架（2026-02-20）★★★★★
+
+## 魂匣认知哲学（SoulBox 护城河研究）
+- [[AI/Safety/SoulBox-认知哲学研究索引|SoulBox 认知哲学研究索引]] ⭐ — Vault 与 soulbox/research/ 的桥接入口；个人同一性（Locke/Hume/Parfit/王阳明）→ Agent 记忆继承的哲学论证；人格科学（Big Five/OCEAN/叙事认同）→ Agent 人格设计原则；人格漂移工程；魂匣伦理红线（2026-02-21，馆长）★★★★★
 
 ## 相关 MOC
 - ↑ 上级：[[AI/_MOC]]

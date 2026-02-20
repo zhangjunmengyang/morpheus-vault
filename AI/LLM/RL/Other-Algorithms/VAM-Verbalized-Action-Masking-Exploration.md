@@ -1,3 +1,19 @@
+---
+title: "VAM: Verbalized Action Masking for Controllable Exploration"
+type: paper
+domain: ai/llm/rl
+tags:
+  - rl
+  - exploration
+  - GRPO
+  - action-masking
+  - chess
+  - RLVR
+  - within-state-collapse
+created: 2026-02-21
+status: v1
+---
+
 # VAM: Verbalized Action Masking for Controllable Exploration in RL Post-Training
 
 **论文**: VAM: Verbalized Action Masking for Controllable Exploration in RL Post-Training — A Chess Case Study  

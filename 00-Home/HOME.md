@@ -45,6 +45,10 @@ tags:
 ### 📰 Newsloom — 每日情报
 - Newsloom/ — Sentinel 每日 AI 情报归档（无 MOC，按日期检索）
 
+## 工作区入口
+
+- [[00-Home/Inbox|📥 Inbox]] — 新内容临时收集箱，整理后归入知识域
+
 ## 快速查询
 
 ```dataview

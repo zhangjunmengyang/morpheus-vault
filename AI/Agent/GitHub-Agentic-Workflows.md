@@ -1,3 +1,12 @@
+---
+title: "GitHub Agentic Workflows: Continuous AI in SDLC"
+date: 2026-02-16
+tags: [Agent, CI-CD, GitHub, Automation, Coding-Agent, DevOps]
+domain: AI/Agent
+source: "https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/"
+status: permanent
+---
+
 # GitHub Agentic Workflows
 
 > 🏷️ Tags: #Agent #CI-CD #GitHub #Automation #Coding-Agent

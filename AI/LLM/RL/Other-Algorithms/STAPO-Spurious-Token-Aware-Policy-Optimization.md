@@ -1,3 +1,18 @@
+---
+title: "STAPO: Spurious-Token-Aware Policy Optimization"
+type: paper
+domain: ai/llm/rl
+tags:
+  - rl
+  - GRPO
+  - entropy-collapse
+  - spurious-tokens
+  - training-stability
+  - gradient-masking
+created: 2026-02-17
+status: v1
+---
+
 # STAPO: Spurious-Token-Aware Policy Optimization
 
 > arXiv: 2602.15620 | 清华大学 + 滴滴自动驾驶 | 2026-02-17 (v2: 02-18)

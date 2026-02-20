@@ -1,3 +1,13 @@
+---
+title: "MASPO: Mass-Adaptive Soft Policy Optimization"
+date: 2026-02-19
+tags: [RLVR, GRPO改进, 策略优化, 梯度利用, 信号可靠性]
+domain: AI/LLM/RL/Other-Algorithms
+arxiv: "2602.17xxx"
+rating: 4
+status: permanent
+---
+
 # MASPO: Mass-Adaptive Soft Policy Optimization
 
 > Unifying Gradient Utilization, Probability Mass, and Signal Reliability for Robust and Sample-Efficient LLM Reasoning

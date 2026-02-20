@@ -1,3 +1,23 @@
+---
+title: "RL 训练稳定性：2026 年前沿统一分析"
+type: synthesis
+domain: ai/llm/rl
+tags:
+  - rl
+  - training-stability
+  - GRPO
+  - survey
+  - STAPO
+  - Goldilocks
+  - DEEP-GRPO
+  - MASPO
+  - VCPO
+  - interview-prep
+created: 2026-02-20
+updated: 2026-02-21
+status: v3
+---
+
 # RL 训练稳定性：2026 年前沿统一分析
 
 > 综合笔记 | 覆盖：STAPO / Goldilocks RL / Stable Asynchrony (VCPO) / DEEP-GRPO / MASPO / DAPO / LACONIC
@@ -237,18 +257,37 @@ Layer 1: Token 层（STAPO + MASPO）
 
 ## 连接
 
-- [[STAPO-Spurious-Token-Aware-Policy-Optimization]]
-- [[Goldilocks-RL-Task-Difficulty-Curriculum]]
-- [[DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling]]
-- [[MASPO-Mass-Adaptive-Soft-Policy-Optimization]]
-- [[Stable-Asynchrony-VCPO-Off-Policy-RL]]
-- [[Jet-RL-FP8-On-Policy-RL-Training]] — 量化精度也是 on-policy 一致性的问题
-- [[Slime-RL-Framework]] — 异步 RL infra，Stable Asynchrony 的实战场景
-- [[LACONIC-Length-Constrained-RL]]
-- [[GRPO]]
-- [[RLVR-Edge-of-Competence]]
-- [[Blockwise-Advantage-Estimation]]
+**Token 级别**
+- [[AI/LLM/RL/Other-Algorithms/STAPO-Spurious-Token-Aware-Policy-Optimization|STAPO]] — spurious token mask，零成本稳定性
+- [[AI/LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — soft adaptive trust region，概率质量校正
+
+**样本级别**
+- [[AI/LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] — Teacher 动态课程，中间难度最优
+- [[AI/LLM/RL/Other-Algorithms/PACED-RL-Partition-Function-Difficulty-Scheduler|PACED-RL]] ★ — GFlowNet Z_φ 独立收敛同一规律（新增，2026-02-21）
+
+**探索级别**
+- [[AI/LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]] — Pivot-Driven Resampling，Root Saturation 修复
+- [[AI/LLM/RL/Other-Algorithms/VAM-Verbalized-Action-Masking-Exploration|VAM]] ★ — Within-state 探索塌缩（新增，2026-02-21）
+
+**系统/Off-Policy 级别**
+- [[AI/LLM/RL/Other-Algorithms/Stable-Asynchrony-VCPO-Off-Policy-RL|Stable Asynchrony (VCPO)]] — 方差控制 IS correction
+- [[AI/LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 统一 FP8 精度 flow，消除量化引入的 off-policy
+- [[AI/LLM/RL/Other-Algorithms/VESPO-Variational-Sequence-Policy-Optimization|VESPO]] ★ — 变分推导最优 IS kernel，理论最严格（新增，2026-02-21）
+- [[AI/LLM/RL/Other-Algorithms/SAPO-Soft-Adaptive-Policy-Optimization|SAPO]] ★ — sech² 软门控，Qwen3-VL 生产在用（新增，2026-02-21）
+- [[AI/LLM/RL/Other-Algorithms/GSPO-Group-Sequence-Policy-Optimization|GSPO]] ★ — 序列级 IS 替代 token 级，Qwen3 团队（新增，2026-02-21）
+
+**Trust Region**
+- [[AI/LLM/RL/Other-Algorithms/LACONIC-Length-Constrained-RL|LACONIC]] — Primal-Dual RL 长度控制
+
+**基础理论**
+- [[AI/LLM/RL/Theory/RLVR-Edge-of-Competence|RLVR-Edge-of-Competence]] — 边界竞争力理论
+- [[AI/LLM/RL/GRPO/Blockwise-Advantage-Estimation|Blockwise Advantage Estimation]] — 分块优势估计
+- [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] — 六维框架元分析，本文的学术上位文档
+
+**系统基础设施**
+- [[AI/LLM/Frameworks/Slime-RL-Framework|Slime RL Framework]] — 异步 RL infra，Stable Asynchrony 的实战场景
 
 ---
 
-*写于 2026-02-20 | Scholar | 最终更新 v3：四层框架 + DEEP-GRPO + MASPO*
+*写于 2026-02-20 | Scholar | v3：四层框架 + DEEP-GRPO + MASPO*
+*链接全路径化 + 新论文补入（PACED-RL/VAM/VESPO/SAPO/GSPO）：2026-02-21 | 馆长*

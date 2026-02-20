@@ -1,3 +1,13 @@
+---
+title: "Slime: 异步 RL Post-Training 框架"
+date: 2026-02-16
+tags: [RL框架, 异步RL, PostTraining, THUDM, 智谱, GLM]
+domain: AI/LLM/Frameworks
+source: "https://github.com/THUDM/slime"
+status: permanent
+see-also: ["[[GLM-5-技术报告精读]]"]
+---
+
 # Slime: 异步 RL Post-Training 框架
 
 > THUDM (智谱 Seed 团队) | GitHub: https://github.com/THUDM/slime

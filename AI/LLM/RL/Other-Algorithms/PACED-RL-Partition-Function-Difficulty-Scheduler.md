@@ -1,3 +1,19 @@
+---
+title: "PACED-RL: 配分函数作为难度调度器"
+type: paper
+domain: ai/llm/rl
+tags:
+  - rl
+  - GFlowNet
+  - curriculum-learning
+  - sample-efficiency
+  - RLVR
+  - difficulty-scheduling
+  - partition-function
+created: 2026-02-21
+status: v1
+---
+
 # PACED-RL: 配分函数作为难度调度器
 
 **论文**: Beyond Normalization: Rethinking the Partition Function as a Difficulty Scheduler for RLVR  
@@ -182,5 +198,5 @@ Sample 维度
 ## 元数据
 
 - **Tags**: #GFlowNet #curriculum-learning #sample-efficiency #RLVR #difficulty-scheduling #partition-function
-- **关联笔记**: [[Goldilocks-RL-Task-Difficulty-Curriculum]] [[GRPO-Improvement-Panorama-2026]] [[DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling]]
+- **关联笔记**: [[AI/LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] ⭐ — **独立多路验证同一规律**：两者都发现中间难度（accuracy≈0.5）最优，但工具完全不同——Goldilocks 用 Teacher LM 预测难度，PACED-RL 用 GFlowNet Z_φ 估计准确率；两篇合读让这个规律从 empirical 升级为 robust finding | [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] | [[AI/LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]]
 - **写于**: 2026-02-21

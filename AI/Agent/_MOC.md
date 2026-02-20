@@ -48,6 +48,10 @@ tags:
 
 ## Agentic RL ⭐（前沿方向）
 - [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — 三大难题（credit assignment/reward/环境）与对应解法，185行合成笔记（2026-02-20）⭐
+- [[AI/Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer (CWRPO)]] — Workflow 结构自动化 via End-to-End RL：policy model 学习构建/调试 DAG workflow，CWRPO 用 conditional release reward 门控消除 shortcut；CUHK+NTU+NUS（arXiv:2602.01664）★★★☆
+- [[AI/Agent/Agentic-RL/Agent-RL-训练实战指南|Agent RL 训练实战指南]] ⭐ — 现象·坑·解法系统整理：算法层/奖励层/信用分配层三层框架，1001行，面试可用；★★★★★
+- [[AI/Agent/Agentic-RL/PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]] — Phase-Aware MoE 解决 Simplicity Bias：复杂任务仅获5%参数容量 → LoRA expert 按行为阶段分配，1.5B 打 7B；★★★★（arXiv:2602.17038）
+- [[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]] ⭐ — NUS+MIT：极长任务（12h/700+轮）训练方案：轨迹切割 SFT（cold start）+ 渐进式 RL（2h→4h→6h 课程）；106B 在 PaperBench 以 62.59% 超越 Kimi K2 Thinking 1T（51.31%）；专门化训练 > 通用规模（arXiv:2602.17547）★★★★★
 - [[AI/Agent/Calibrate-Then-Act-Cost-Aware-Exploration|Calibrate-Then-Act]] — 显式先验注入的 cost-aware 探索策略：94% optimal match（基线 23%），RL 无法自然习得 meta 探索
 - [[AI/Agent/Agentic-RL/Agentic RL Training|Agentic RL Training]] — Agent + RL 融合
 - [[AI/Agent/Agentic-RL/Agentic RL Survey|Agentic RL Survey]] — 综述论文

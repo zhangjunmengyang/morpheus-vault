@@ -1,3 +1,13 @@
+---
+title: "Progressive Thought Encoding (PTE): Cache-Efficient RL"
+date: 2026-02-18
+tags: [推理效率, KV缓存, RL训练, 内存优化, 长推理, ICLR2026]
+domain: AI/LLM/Inference
+arxiv: "2602.16839"
+rating: 4
+status: permanent
+---
+
 # Progressive Thought Encoding: Cache-Efficient RL for Large Reasoning Models
 
 > Training Large Reasoning Models Efficiently via Progressive Thought Encoding

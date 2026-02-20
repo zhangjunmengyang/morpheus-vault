@@ -1,3 +1,14 @@
+---
+title: "Stable Asynchrony: VCPO Off-Policy RL for LLMs"
+date: 2026-02-19
+tags: [异步RL, off-policy, 方差控制, MIT-HAN-Lab, 系统优化]
+domain: AI/LLM/RL/Other-Algorithms
+arxiv: "2602.xxxxx"
+rating: 4
+status: permanent
+see-also: ["[[Jet-RL-FP8-On-Policy-RL-Training]]", "[[QeRL-Quantization-Efficient-RL]]"]
+---
+
 # Stable Asynchrony: Variance-Controlled Off-Policy RL for LLMs (VCPO)
 
 > arXiv: 2602.XXXXX (2026-02-19, ID 待确认) | MIT HAN Lab

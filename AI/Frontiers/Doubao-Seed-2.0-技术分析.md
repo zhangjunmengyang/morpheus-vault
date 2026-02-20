@@ -1,3 +1,11 @@
+---
+title: "Doubao-Seed-2.0 技术分析"
+date: 2026-02-14
+tags: [Doubao, ByteDance, Agent模型, MaaS, 旗舰模型, 技术分析]
+domain: AI/Frontiers
+status: permanent
+---
+
 # Doubao-Seed-2.0 技术分析
 
 > ByteDance Seed 团队 | 2026-02-14 发布
@@ -110,8 +118,10 @@
 - 代码场景继续用 Claude/GPT
 
 ## 相关笔记
-- [[2026年2月模型潮]] — 7 款 frontier model 同月发布的整体分析
-- [[GLM-5]] — 同期发布的另一款国产旗舰，744B MoE
+- [[AI/Frontiers/2026年2月模型潮|2026年2月模型潮]] — 7 款 frontier model 同月发布的整体分析
+- [[AI/Frontiers/GLM-5-技术报告精读|GLM-5]] — 同期发布的另一款国产旗舰，744B MoE + Slime 异步 RL
+- [[AI/LLM/Frameworks/Slime-RL-Framework|Slime RL Framework]] — GLM-5/Doubao 系共用异步 RL 基础设施对比
+- [[AI/Agent/_MOC|Agent MOC]] — Doubao-Seed-2.0 定位 Agent-first，参见 Agent 全图谱
 
 ---
 *Created: 2026-02-16 | Source: ByteDance 官方 Model Card + 多方报道交叉验证*

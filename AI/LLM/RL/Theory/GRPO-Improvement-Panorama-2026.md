@@ -47,7 +47,39 @@ J(θ) = E[1/G Σᵢ 1/|oᵢ| Σₜ min(rᵢ,ₜ · Aᵢ,ₜ, clip(rᵢ,ₜ, 1-ε
 
 ---
 
-## 六维改进框架
+## 七维改进框架（v2：新增 Diversity 维度）
+
+> **v2 更新（2026-02-21）**：补充维度七"Diversity/Entropy"，收录 ProGRPO 和 RePO。
+
+### 维度七：Diversity 层 — 如何保留多条正确路径？
+
+**问题**：GRPO advantage 只看 reward，不看路径的生成概率。高概率的「主流解法」每次被采样都得正 advantage，低频但同样正确的路径概率越来越低。训练后 pass@1 尚可，pass@k 暴跌——多样性死了。
+
+**ProGRPO**（arXiv 2602.05281，Pengyi Li et al.）
+发现：entropy collapse 的根因在 advantage 本身，而非外部熵正则化不足
+解法：ARM（Advantage Re-weighting Mechanism）
+- `c_θ(q)`：prompt 置信度（模型对该问题的熟悉程度）
+- `c_θ(o|q)`：answer 置信度（对该条路径的生成自信度）
+- `Ã_i = A_i + α(c_θ(q) - c_θ(o|q))`
+- 高置信路径（dominant solution）→ advantage 打折扣；低频正确路径 → advantage 加权
+- 只对低概率 token（约 20%）做长度归一化，避免 trivial token 稀释信号
+效果：Pass@1 +5.7%，Pass@32 +13.9%（Qwen2.5-7B），CodeForces rating +180
+
+与 entropy regularization 的区别：entropy bonus 是外部强制多样性，ARM 是内部重塑 advantage 结构，更 principled，不破坏整体 objective。
+
+**RePO**（arXiv 2602.10819，Linxuan Xia et al.）
+视角：从 off-policy 知识利用角度解 hard sample 采不到的 diversity 问题
+发现：LUFFY（off-policy RL）失败的根因是词表不一致导致 importance ratio 失控
+解法：Rephrasing Policy Optimization
+1. 让模型读懂 off-policy 专家解法，然后用自己的话重写 → on-policy 兼容轨迹
+2. 只在 group 失败率 ≥ ρ 时才注入重写轨迹（替换最差 rollout）
+3. 对正常问题保持纯 on-policy，不污染分布
+
+RePO 和 ProGRPO 解决了 diversity 的两个不同来源：
+- ProGRPO → 已采到的正确路径里，扶持低频路径
+- RePO → 采不到的正确路径，通过知识内化引入
+
+---
 
 ### 维度一：Token 层 — 哪些 token 不该学？
 
@@ -132,12 +164,22 @@ PACED-RL（GFlowNet 框架）：Z_φ → 在线准确率估计 → 中间难度
 **MASPO** 已在维度一中讨论，但 Trust Region 视角更清晰：  
 Soft Adaptive Trust Region 的本质是**把 clip 从全局超参数变成 token 级别的动态函数**。
 
+**SAPO**（arXiv 2511.20347，2025-11-25，Qwen 团队 Chang Gao 等）  
+核心洞察：hard clip 的梯度截断是非连续的，导致 clip 内外梯度断崖。  
+解法：sigmoid 软门控——梯度权重 = **sech²(τ/2 · (r−1))**，在 r=1 时满权重，随偏差平滑指数衰减。  
+不对称温度：τ_neg > τ_pos，因为负 advantage 梯度影响 |V| 个 unsampled token，更不稳定。  
+理论分析：在 (A1) 小步长 + (A2) 低序列内方差 条件下，SAPO 退化为 GSPO 的连续版本（sech² 序列门控）。  
+生产验证：Qwen3-VL 全系列用 SAPO 训练。  
+与 GSPO 关系：同一 Qwen 团队，GSPO(2025-07) → SAPO(2025-11)，是对 GSPO 硬裁剪的直接改进。  
+**弱点**：在高 staleness（N=64）下崩溃（18.4%），VESPO 同条件 58.5%——token-level 软化仍缺乏序列级 IS 方差理论。
+
 **与 DAPO/VAPO 的关系**：
 - DAPO（ByteDance）：提高 clip 上界防 entropy collapse + token-level loss
 - VAPO（Bytedance）：Variance-Aware 优势估计，对高方差 token 保守更新
 - MASPO：Probability-Mass Aware trust region
+- **SAPO**：sech² 软衰减，连续信任域
 
-三者都在解决固定 ε 的问题，但切入角度不同（hyper / variance / mass）。
+四者都在解决固定 ε 的问题，但切入角度不同（hyper / variance / mass / **softness**）。
 
 ---
 
@@ -168,10 +210,20 @@ Closed-form minimum-variance baseline 进一步稳定训练
 结果：N=64 staleness 下 avg=58.5%（GRPO 44.7%，SAPO 18.4% collapse）  
 全异步训练下唯一稳定的方法  
 
+**四种方法的 staleness 对比（VESPO 论文数据）**：
+
+| 方法 | N=16 staleness | N=64 staleness |
+|------|--------------|--------------|
+| GRPO | ~57% | ~44.7% |
+| SAPO | ~52% | **~18.4%（崩溃）** |
+| VCPO (est.) | 稳定 | 稳定 |
+| VESPO | ~58% | **~58.5%（稳定）** |
+
 **三种路径正交，可叠加**：
 - Jet-RL（系统层：消除来源）
 - VCPO（优化层：动态适应 LR）
 - VESPO（算法层：软纠正 IS）
+- SAPO（Token-level 软衰减，适合 on-policy/近 on-policy 场景）
 
 **共同洞察**：off-policy 是 RL 实现中最隐蔽的 bug。很多工程团队不知道他们的"on-policy"系统实际上已经悄悄变成了 off-policy。量化、异步、重用 rollout、mini-batch 分割都是来源。GSPO 的长度归一化实际上引入了长度偏差（更长的序列更难被 clip → 正反馈 → collapse）。
 
@@ -196,14 +248,15 @@ Closed-form minimum-variance baseline 进一步稳定训练
 
 ---
 
-## 六维总结表
+## 七维总结表（v2）
 
 | 维度 | 核心问题 | 代表论文 | 解法本质 | 关键数字 |
 |------|---------|---------|---------|---------|
+| **Diversity** | 多条正确路径被压死 | ProGRPO / RePO | 概率置信度重调 advantage / off-policy 知识内化 | Pass@32 +13.9% / hard sample 利用率↑ |
 | **Token** | 哪些 token 有毒 | STAPO / MASPO | 基于 token 属性的梯度 mask / adaptive clip | +7.13% / +5% |
 | **Exploration** | 探索区域如何扩大 | DEEP-GRPO / QeRL | Pivot 分支采样 / 量化噪声增 entropy | avg +2.6% / reward 2.5× 更快 |
 | **Sample** | 哪道题梯度最丰富 | Goldilocks | Teacher LM 预测 utility，选 edge-of-competence | ~15% 数据效率提升 |
-| **Trust Region** | clip 该怎么适应 | MASPO / DAPO / VAPO | Probability-mass adaptive / variance-aware | +5% |
+| **Trust Region** | clip 该怎么适应 | MASPO / DAPO / VAPO / **SAPO** | Probability-mass adaptive / variance-aware / **sech²软衰减** | +5% |
 | **Off-Policy** | 精度/异步引入偏差 | Jet-RL / VCPO | 统一 flow / ESS-based LR scaling | E2E +16% / 稳定性显著提升 |
 | **System** | 计算效率 | QeRL / Jet-RL | FP4+LoRA / 统一 FP8 | 单 H100 训 32B / +16% E2E |
 
@@ -259,11 +312,14 @@ A: 比大多数人意识到的严重。任何 rollout 和 evaluation 精度不�
 2. **Exploration 组合效应**：DEEP-GRPO（pivot resampling）+ QeRL（entropy injection）能否叠加而不相互干扰？
 3. **Goldilocks 的 online 版本**：Teacher LM 预测 utility 是 offline 的，能否做到 online adaptive curriculum？
 4. **系统层和算法层的 co-design**：Jet-RL 和 VCPO 解决了系统层 off-policy，但是否有算法层能够容忍一定程度的 off-policy？（off-policy RL 算法，如 V-trace/IMPALA）
+5. **边界扩展：non-verifiable 任务**：RLRR（arXiv:2602.16802，ICLR 2026）用 reference-guided judge 为对齐任务造了软 verifier，把 RLVR 的能力边界向 non-verifiable 域推进。七维框架目前假设 verifiable reward 存在——non-verifiable 场景下，软 verifier 的误差率（~21%）如何影响这七个维度的改进效果？See: [[AI/LLM/RL/Theory/RLRR-Reference-Guided-Alignment-Non-Verifiable|RLRR]]
 
 ---
 
 ## 引用论文
 
+- ProGRPO: arXiv 2602.05281 (Pengyi Li et al.) — Diversity 维度，ARM 概率置信度重加权
+- RePO: arXiv 2602.10819 (Linxuan Xia et al.) — Diversity 维度，off-policy 知识内化
 - STAPO: arXiv 2602.15620 (Tsinghua + DiDi)
 - MASPO: arXiv 2602.17xxx (MSRA, Xiaoliang Fu/Xunliang Cai)
 - DEEP-GRPO: arXiv 2602.14169 (ICML submission)
@@ -272,6 +328,8 @@ A: 比大多数人意识到的严重。任何 rollout 和 evaluation 精度不�
 - QeRL: arXiv 2510.11696 (Song Han lab, NVIDIA/MIT, ICLR 2026)
 - Stable Asynchrony / VCPO: ~arXiv 2602.1xxxx (Song Han lab, 2/19 提交，ID 待确认)
 - VESPO: arXiv 2602.10693 (变分 IS reshaping，off-policy 理论最严格)
+- SAPO: arXiv 2511.20347 (Qwen 团队，sech² 软门控，Qwen3-VL 生产使用)
+- GSPO: arXiv 2507.18071 (Qwen 团队，sequence-level IS ratio，SAPO 前驱)
 - AT-RL: arXiv 2602.11455 (多模态视觉锚点 credit assignment)
 
 ---
@@ -286,5 +344,9 @@ A: 比大多数人意识到的严重。任何 rollout 和 evaluation 精度不�
 - [[AI/LLM/RL/Frameworks/QeRL-Quantization-Enhanced-RL|QeRL]] — 量化探索维度
 - [[AI/LLM/RL/Other-Algorithms/Stable-Asynchrony-VCPO-Off-Policy-RL|VCPO]] — 系统异步 off-policy 维度
 - [[AI/LLM/RL/Other-Algorithms/VESPO-Variational-Sequence-Policy-Optimization|VESPO]] — 变分 off-policy 修正，理论最严格
+- [[AI/LLM/RL/Other-Algorithms/SAPO-Soft-Adaptive-Policy-Optimization|SAPO]] — sech² 软门控，Qwen3-VL 生产
+- [[AI/LLM/RL/Other-Algorithms/GSPO-Group-Sequence-Policy-Optimization|GSPO]] — 序列级 IS ratio（SAPO 前驱）
 - [[AI/LLM/RL/Other-Algorithms/AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL]] — 多模态维度 credit assignment
 - [[AI/LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL 训练稳定性 2026 统一分析]] — 与本文互补，聚焦稳定性而非分类框架
+- [[AI/LLM/RL/GRPO/ProGRPO-Probabilistic-Advantage-Reweighting|ProGRPO]] — Diversity 维度：ARM 概率信号重调 advantage
+- [[AI/LLM/RL/Other-Algorithms/RePO-Rephrasing-Policy-Optimization|RePO]] — Diversity 维度：off-policy 知识内化到 on-policy 兼容轨迹
