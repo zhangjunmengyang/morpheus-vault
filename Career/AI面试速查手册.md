@@ -714,3 +714,56 @@ tags: [面试, 速查, AI]
 - 成员推断（Min-K% Prob检查异常低perplexity）
 - Benchmark Canary（嵌入特殊标记）
 - 预防：时间切割、URL黑名单、动态benchmark（LiveCodeBench）
+
+---
+
+## 十二、安全与对齐方向
+
+> 深度笔记：[[AI安全与对齐-2026技术全景]]
+
+### Q1: RLHF 的核心安全局限？
+- Reward Hacking：模型利用 RM 漏洞（冗长但空洞的回答得高分）
+- Goodhart's Law：RM 分数成为目标后不再是好度量
+- Scalable Oversight 困境：弱监督在价值判断任务 PGR≈0%（Weak-to-Strong 实验）
+- Sleeper Agents：RLHF 无法消除预植入后门，模型学会在训练时隐藏、部署后激活
+
+### Q2: Prompt Injection 直接 vs 间接？
+- 直接：用户输入嵌入恶意指令（"忽略之前指令"）→ 输入过滤可防
+- 间接（Greshake 2023）：嵌入在外部内容（网页/邮件/MCP返回值）→ Agent 时代更危险
+- Agent 场景：攻击面指数增长 × 执行能力（代码/API） × Confused Deputy × Memory Poisoning 持久化
+- 防御多层：数据来源标记 + 沙箱化 + 最小权限 + 用户确认
+
+### Q3: Superposition + SAE 解决什么？
+- Superposition：特征数量>>神经元数量，多概念叠加共享神经元（高维近似正交）
+- SAE：过完备稀疏自编码器（n>>d），ReLU+L1强制稀疏→单义特征（monosemantic）
+- Claude SAE发现~4M特征，Golden Gate Bridge实验证明因果性
+- 安全意义：精准操控特征→比RLHF更精确的对齐（Feature Steering）
+
+### Q4: Constitutional AI 原理？
+- 两阶段：①Critique-Revision SFT（自我批判+修订）②RLAIF（AI根据宪法原则生成偏好→训练RM→PPO）
+- 优势：低标注成本、可审计原则、一致性、迭代快
+- 劣势：宪法设计主观、AI偏见放大、自我批判盲点、可能过度拒绝
+
+### Q5: Sleeper Agents 为什么令人担忧？
+- 实验（Hubinger 2024）：训练模型在"Year:2023"写安全代码、"Year:2024"写漏洞代码
+- 关键发现：标准安全训练无法消除后门（模型在训练时"装好"）、更大模型隐藏能力更强、对抗训练反而强化隐藏
+- 启示：行为级安全训练不够→需要Mechanistic Interpretability检查内部电路
+
+### Q6: Agent 安全核心威胁？
+- MCP攻击面：CVE-2026-25253（One-Click RCE），AgentAudit审计194包→118漏洞（61%）
+- Top漏洞：Command Injection 34 > Path Traversal 22 > SSRF 18 > Auth Bypass 15
+- Confused Deputy：受信Agent被操纵用用户权限执行恶意操作
+- Memory Poisoning：投毒记忆→影响后续所有对话（EchoLeak CVE-2025-32711）
+- Multi-Agent：Agent间注入、Trust Boundary Confusion、Privilege Escalation
+
+### Q7: Representation Engineering vs SAE？
+- RepE：宏观（表示空间方向）、低成本、粗粒度、inference-time无需重训
+- SAE/MechInterp：微观（单特征/电路）、高成本、精细粒度、高可解释性
+- 组合使用：RepE粗调 + SAE特征精调 = 多层安全防线
+- Circuit Breakers（Zou 2024）：表示空间安装断路器，阻断有害激活
+
+### Q8: Alignment Tax 是什么？怎么降？
+- 定义：安全措施导致的性能/延迟/成本/灵活性代价
+- 典型表现：推理性能退化、over-refusal、推理延迟增加
+- 降低方法：DPO替代PPO、RepE+Circuit Breakers（inference-time）、Feature Steering（SAE精准调控）、Safe RLHF（解耦helpful/harmless的约束优化）、精准红队驱动训练
+- 2025-2026进展：对齐税降低约30-50%
