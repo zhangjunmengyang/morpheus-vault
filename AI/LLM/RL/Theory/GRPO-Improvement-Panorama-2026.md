@@ -1,3 +1,16 @@
+---
+title: "GRPO 改进全景分析：2026 年六维框架"
+type: note
+domain: ai/llm/rl
+tags:
+  - ai/llm/rl
+  - grpo
+  - survey
+  - interview-prep
+  - type/synthesis
+date: 2026-02-20
+---
+
 # GRPO 改进全景分析：2026 年六维框架
 
 **类型**: 综合分析 / 面试级元分析  
@@ -242,3 +255,20 @@ A: 比大多数人意识到的严重。任何 rollout 和 evaluation 精度不�
 - Jet-RL: arXiv 2601.14243 (Song Han lab, NVIDIA/MIT)
 - QeRL: arXiv 2510.11696 (Song Han lab, NVIDIA/MIT, ICLR 2026)
 - Stable Asynchrony / VCPO: ~arXiv 2602.1xxxx (Song Han lab, 2/19 提交，ID 待确认)
+- VESPO: arXiv 2602.10693 (变分 IS reshaping，off-policy 理论最严格)
+- AT-RL: arXiv 2602.11455 (多模态视觉锚点 credit assignment)
+
+---
+
+## see-also
+
+- [[AI/LLM/RL/Other-Algorithms/STAPO-Spurious-Token-Aware-Policy-Optimization|STAPO]] — Token 级别维度
+- [[AI/LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 多维 GRPO 改进
+- [[AI/LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]] — 探索维度
+- [[AI/LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] — 样本维度
+- [[AI/LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 系统精度维度
+- [[AI/LLM/RL/Frameworks/QeRL-Quantization-Enhanced-RL|QeRL]] — 量化探索维度
+- [[AI/LLM/RL/Other-Algorithms/Stable-Asynchrony-VCPO-Off-Policy-RL|VCPO]] — 系统异步 off-policy 维度
+- [[AI/LLM/RL/Other-Algorithms/VESPO-Variational-Sequence-Policy-Optimization|VESPO]] — 变分 off-policy 修正，理论最严格
+- [[AI/LLM/RL/Other-Algorithms/AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL]] — 多模态维度 credit assignment
+- [[AI/LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL 训练稳定性 2026 统一分析]] — 与本文互补，聚焦稳定性而非分类框架

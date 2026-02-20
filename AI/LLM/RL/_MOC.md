@@ -82,12 +82,16 @@ tags:
 - [[AI/LLM/RL/Other-Algorithms/Stable-Asynchrony-VCPO-Off-Policy-RL|Stable Asynchrony (VCPO)]] — 异步 off-policy RL 的方差爆炸根因与修复：Variance-Controlled Policy Optimization，解决 generation/training 解耦后的 staleness 问题；MIT HAN Lab（Song Han）★★★★
 - [[AI/LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 统一梯度利用+概率质量+信号可靠性的 GRPO 三维改进：软裁剪替代硬裁剪 + 概率质量校正 + reward 信号可靠性加权；微软亚研（arXiv:2602.17xxx）★★★★
 - [[AI/LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]] — Root Saturation 问题根治：Pivot-Driven Resampling 专攻深层 error-prone states；对比 TreeRL/AttnRL 探索启发式的缺陷；ICML 投稿，2602.14169（★★★★☆）
+- [[AI/LLM/RL/Other-Algorithms/VESPO-Variational-Sequence-Policy-Optimization|VESPO]] ⭐ — 变分推导闭合形式 soft kernel `ϕ(W)=W^α·exp(-λW)`，理论严格超越所有 heuristic clip（GRPO/GSPO/SAPO），staleness ratio 64× 异步训练稳定；★★★★★（arXiv:2602.10693）
+- [[AI/LLM/RL/Other-Algorithms/AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL]] — 多模态 RLVR：仅 15% token 有强视觉-文本耦合（"视觉锚点"），图聚类识别并选择性强化；32B 模型 MathVista 80.2 超越 72B-Instruct；仅 1.2% 开销（arXiv:2602.11455）★★★★
 
 ## 训练框架 (Frameworks)
 - [[AI/LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — NVIDIA+MIT HAN Lab：统一 FP8 on-policy RL 训练精度流，解决 BF16-train/FP8-rollout 在长 rollout(>8K) 时精度崩溃和训练发散问题（arXiv:2601.14243）★★★★
+- [[AI/LLM/RL/Frameworks/QeRL-Quantization-Enhanced-RL|QeRL]] ⭐ — ICLR 2026（NVIDIA+MIT+HKU+THU+Song Han）：量化噪声是有益的——4-bit 量化+LoRA 的 RL 训练不仅 1.5× 加速，在多项基准上还**超越** 16-bit LoRA；see-also: [[AI/LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]]（arXiv:2510.11696）★★★★
 - [[AI/RL/Slime RL Framework|Slime RL Framework]] — GLM-5 的异步 RL 基础设施：解决 generation bottleneck >90%，APRIL 框架（see-also 指向深度版）
 
 ## 综述与深度笔记
+- [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] ⭐ — 六维框架元分析：2025-10~2026-02 全部 GRPO 改进工作按问题层次分类（算法层/样本层/探索层/系统层/多模态层），面试级（2026-02-20）★★★★★
 - [[AI/LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL 训练稳定性 2026 统一分析]] ⭐ — Scholar 综合笔记 v3：STAPO/Goldilocks/VCPO/DEEP-GRPO/MASPO/DAPO/LACONIC 四维拓扑（Token/样本/探索/系统），持续更新中（2026-02-20）★★★★★
 - [[AI/LLM/RL/RLHF 全链路|RLHF 全链路]] — 完整 RLHF 三阶段
 - [[AI/LLM/RL/RLHF-DPO-2026-技术全景|RLHF/DPO 2026 技术全景]] — 面试武器版，1147行，RLHF→RLAIF→DPO 全链路（2026-02-20）

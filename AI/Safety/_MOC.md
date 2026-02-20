@@ -37,5 +37,8 @@ tags:
 - [[AI/Agent/Agent-Economy/_MOC|Agent 经济]] — Agent 经济安全风险（资金转移 / 身份冒用）
 - [[AI/LLM/Prompt-Engineering/prompt 攻击|prompt 攻击]] — Prompt Injection 技术细节
 
+## 综述与全景
+- [[AI/Safety/AI安全与对齐-2026技术全景|AI 安全与对齐 2026 全景]] ⭐ — 面试武器库 #16，1130行：对齐技术栈→可扩展监督→红队测试→Agent安全→机械可解释性→模型评估→治理框架（2026-02-20）★★★★★
+
 ## 相关 MOC
 - ↑ 上级：[[AI/_MOC]]

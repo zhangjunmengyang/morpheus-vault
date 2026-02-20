@@ -166,6 +166,9 @@ tags:
 - [[AI/LLM/Application/Synthetic-Data/Synthetic Data|合成数据]]
 - [[AI/LLM/Application/Synthetic-Data/DataFlow|DataFlow]]
 
+### 代码生成
+- [[AI/LLM/Application/LLM代码生成-2026技术全景|LLM 代码生成 2026 全景]] ⭐ — 面试武器库 #17，1083行：预训练数据工程→代码模型架构→核心模型对比→代码 RL 训练→安全合规（2026-02-20）★★★★★
+
 ### 其他应用
 - [[AI/LLM/Application/LLMOps|LLMOps]]
 - [[AI/LLM/Application/Prompt Engineering 高级|Prompt Engineering 高级]]

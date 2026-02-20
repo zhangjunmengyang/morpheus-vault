@@ -1,3 +1,16 @@
+---
+title: "VESPO: Variational Sequence-Level Soft Policy Optimization"
+type: note
+domain: ai/llm/rl
+tags:
+  - ai/llm/rl
+  - off-policy
+  - variational-inference
+  - grpo-improvement
+  - type/paper
+date: 2026-02-20
+---
+
 # VESPO: Variational Sequence-Level Soft Policy Optimization for Stable Off-Policy LLM Training
 
 **arXiv**: 2602.10693  
@@ -231,10 +244,10 @@ VESPO 提供了**统一视角**：把 GRPO/GSPO/SAPO/DAPO 所有的 clip/norm �
 
 ## 关键词连接
 
-- [[Jet-RL-FP8-On-Policy-RL-Training]] — 消除 off-policy vs 纠正 off-policy，互补
-- [[Stable-Asynchrony-VCPO-Off-Policy-RL]] — 同类问题（异步/off-policy），不同路径（LR scaling vs IS reshaping）
-- [[GRPO-Improvement-Panorama-2026]] — Off-Policy 维度的新成员
-- [[MASPO-Mass-Adaptive-Soft-Policy-Optimization]] — 都在解决 fixed ε 的局限，token 级 vs sequence 级
+- [[AI/LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 消除 off-policy vs 纠正 off-policy，互补；Jet-RL 从精度角度保证 on-policy，VESPO 从理论角度纠正 off-policy 梯度
+- [[AI/LLM/RL/Other-Algorithms/Stable-Asynchrony-VCPO-Off-Policy-RL|VCPO]] — **同类问题（异步/off-policy），不同路径**：VCPO=LR scaling（系统工程），VESPO=变分 IS reshaping（算法理论）；两篇互读理解 off-policy 全貌
+- [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] — VESPO 归属 Off-Policy 稳定性维度，是该维度理论最强一篇
+- [[AI/LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 都在解决 fixed ε 的局限，token 级 vs sequence 级
 
 ---
 
