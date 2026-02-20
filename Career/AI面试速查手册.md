@@ -634,3 +634,40 @@ tags: [面试, 速查, AI]
 - Loss ∝ N^(-α) · D^(-β)（N=参数，D=数据）
 - Chinchilla：最优 D ≈ 20×N
 - 2026 修正：小模型+更多数据可能更优（Llama 思路）
+
+## 十、Prompt Engineering 方向
+
+**本方向核心关键词**：CoT、ToT、Self-Consistency、DSPy、Prompt Injection、System Prompt、Few-Shot、Thinking Models
+
+### Q1: CoT 为什么有效？
+- 把复杂推理分解为中间步骤，降低单步难度
+- 本质是激活模型的"慢思考"路径
+- 对小模型无效（<10B），大模型涌现能力
+
+### Q2: Few-Shot 示例怎么选？
+- 3-5 个最优，超过 8 个边际递减
+- 最后一个示例影响最大（recency bias）
+- 格式一致性 > 内容正确性
+- 最佳实践：embedding 检索动态选最相似示例
+
+### Q3: Prompt Injection 怎么防？
+- 输入过滤 + 架构隔离（XML 标签包裹用户输入）
+- LLM classifier 检测注入 + 输出过滤
+- 权限最小化：即使注入成功可调用范围受限
+- 没有 100% 防御，多层纵深提高攻击成本
+
+### Q4: DSPy 核心思想？
+- 从"写 prompt 字符串"→"写 prompt 程序"
+- 定义 signature + module，框架自动优化
+- 换模型时自动重编译，可复现可版本管理
+
+### Q5: Thinking Models 怎么改变 prompting？
+- "少即是多"：简洁目标 > 详细步骤
+- 手写 CoT 可能限制模型找更优解
+- 从"教模型怎么想"→"告诉模型想什么"
+- 约束驱动而非步骤驱动
+
+### Q6: System Prompt 设计原则？
+- 身份→能力边界→输出格式→安全约束→示例
+- 越具体越好，避免模糊指令
+- 2026 趋势：System Prompt 成为"应用灵魂"，产品差异化靠它
