@@ -101,7 +101,23 @@ Teacher LM 判断：提前采样少量 responses，估算该题对当前模型�
 
 **隐含的 curriculum**：这不只是难度筛选，是 adaptive curriculum learning 的隐式实现——随着模型能力提升，适合它的题集也在动态变化。
 
-**共同洞察**：数据选择比算法改进的天花板更低但更稳定。对 production 系统来说，Goldilocks 类似的 sample filter 可能比复杂的算法改进更实用。
+**PACED-RL**（arXiv 2602.12642，ICML 投稿，Dohyung Kim 等）— GFlowNet 框架下的 Sample 选择  
+核心发现：GFlowNet 训练时必须学的可学习配分函数 Z_φ(x) 实际上编码了在线准确率：  
+`p_old(x) = β·log Z*(x) - β·D_KL(π_old || π_θ)` → KL 项可近似忽略（实验最大值 < 4×10⁻³）  
+`p_old(x) ≈ β·log Z_φ(x)`  
+这意味着中间难度题的筛选可以**零额外开销**地做（代价已摊入 GFlowNet 训练）。  
+组件 1：用 Z_φ 估计每题准确率，优先选 accuracy≈0.5 的题（与 Goldilocks 殊途同归！）  
+组件 2：accuracy estimation error 优先的 replay（利用 GFlowNet off-policy 容忍度）  
+效果：AIME pass@1 vs GRPO +29.1%，vs FlowRL +40.0%；pass@k（多样性）同样提升
+
+**Sample 维度两条路**：
+```
+Goldilocks（GRPO 框架）：Teacher LM → utility 估计 → 中间难度  
+PACED-RL（GFlowNet 框架）：Z_φ → 在线准确率估计 → 中间难度  
+```
+两者用不同数学工具发现了**同一个 empirical 规律**（中间难度最有效），相互印证。
+
+**共同洞察**：数据选择比算法改进的天花板更低但更稳定。对 production 系统来说，Goldilocks/PACED-RL 类似的 sample filter 可能比复杂的算法改进更实用。GFlowNet 路线额外保持了输出多样性——这对 test-time scaling（pass@k）有直接价值。
 
 ---
 
