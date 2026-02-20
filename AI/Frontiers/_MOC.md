@@ -18,8 +18,9 @@ tags:
 - [[AI/Frontiers/Doubao-Seed-2.0-技术分析|Doubao-Seed-2.0 技术分析]] — 字节 Seed 2.0
 - [[AI/Models/豆包 Doubao 2.0|豆包 Doubao 2.0]] — Doubao-Seed-2.0 模型卡
 - [[AI/Frontiers/Claude-Opus-4.6|Claude Opus 4.6]] — Anthropic 旗舰，ARC-AGI-2 68.8%，Context Compaction，Agent Teams
-- [[AI/Frontiers/Claude-Sonnet-4.6|Claude Sonnet 4.6]] — Anthropic，接近旗舰能力 1/5 价格，SWE-bench 79.6%
+- [[AI/Frontiers/Claude-Sonnet-4.6|Claude Sonnet 4.6]] — Anthropic，接近旗舰能力 1/5 价格，SWE-bench 79.6%（精华分析版 102行）；完整技术规格见 [[LLM/Claude Sonnet 4.6|Claude Sonnet 4.6（完整版）]]（506行，API/pricing/benchmark 全覆盖）
 - [[AI/Frontiers/Kimi-K2.5-技术分析|Kimi K2.5]] — Moonshot AI，1T MoE + Agent Swarm + PARL，开权重
+- [[AI/Frontiers/Gemini-3.1-Pro|Gemini 3.1 Pro 速评]] — Google，ARC-AGI-2 77.1%（超 Opus 4.6 68.8%），Agentic MCP Atlas 69.2%，价格不到 Opus 一半（2026-02-19，HN #1）
 
 ## 新兴方向（待填充）
 - Embodied AI — 具身智能

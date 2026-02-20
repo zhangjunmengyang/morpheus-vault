@@ -1,13 +1,9 @@
 ---
 title: "SLA2: Learnable Router for Sparse-Linear Attention"
-migrated: true
 date: 2026-02-20
 tags: [论文, 架构, 注意力, 效率, diffusion]
 source: "arXiv:2602.12675"
 ---
-
-> [!warning] 已迁移
-> 正式版本位于 [[AI/LLM/Architecture/SLA2-Learnable-Router]]，本文件为历史遗留，不再维护。
 
 # SLA2: Sparse-Linear Attention with Learnable Routing
 

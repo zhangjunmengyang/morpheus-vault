@@ -1,13 +1,9 @@
 ---
 title: "MiniCPM-SALA: Sparse + Linear Attention 混合架构"
-migrated: true
 date: 2026-02-20
 tags: [论文, 架构, 注意力, 长上下文, 效率]
 source: "arXiv:2602.11761"
 ---
-
-> [!warning] 已迁移
-> 正式版本位于 [[AI/LLM/Architecture/MiniCPM-SALA]]，本文件为历史遗留，不再维护。
 
 # MiniCPM-SALA: Sparse + Linear Attention 混合架构
 

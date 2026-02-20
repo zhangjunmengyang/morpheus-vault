@@ -75,6 +75,8 @@ tags:
 - [[AI/LLM/RL/Other-Algorithms/RLTF-RL-from-Text-Feedback|RLTF]] — RL from Text Feedback，文本反馈奖励设计（arXiv:2602.02482）
 - [[AI/LLM/RL/Other-Algorithms/HiPER-Hierarchical-RL-Credit-Assignment|HiPER]] — 分层 RL + 显式 Credit Assignment，多步 Agent 长 horizon（arXiv:2602.16165）★★★★
 - [[AI/LLM/RL/Other-Algorithms/LACONIC-Length-Constrained-RL|LACONIC]] — Primal-Dual RL 控制 CoT 输出长度，推理效率（arXiv:2602.14468）★★★
+- [[AI/LLM/RL/Other-Algorithms/E-SPL-Evolutionary-System-Prompt-Learning|E-SPL]] — RL 权重更新（程序性知识）+ 进化算法 system prompt 优化（声明性知识）联合训练；AIME25 56.3→60.6%（arXiv:2602.14697）★★★★
+- [[AI/LLM/RL/Other-Algorithms/GEPA-Reflective-Prompt-Evolution|GEPA]] ⭐ — 纯 prompt 进化超越 GRPO（5/6任务），rollout 减少 35x；E-SPL=GEPA+RL；ICLR 2026 Oral，UCB+Stanford+MIT（arXiv:2507.19457）★★★★★
 
 ## 综述与深度笔记
 - [[AI/LLM/RL/RLHF 全链路|RLHF 全链路]] — 完整 RLHF 三阶段

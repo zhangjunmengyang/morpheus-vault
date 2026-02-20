@@ -10,6 +10,9 @@ created: 2026-02-14
 status: complete
 ---
 
+> [!note] 版本说明
+> 本文为 2026-02-14 早期版本（含面试速查），深度技术分析见：[[AI/LLM/Architecture/Engram-Conditional-Memory-DeepSeek-V4|Engram-Conditional-Memory-DeepSeek-V4]]（2026-02-20，217行，arXiv:2601.07372，★★★★★）
+
 # DeepSeek Engram：条件记忆架构革命
 
 ## 核心概念

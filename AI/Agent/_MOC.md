@@ -47,6 +47,7 @@ tags:
 
 ## Agentic RL ⭐（前沿方向）
 - [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — 三大难题（credit assignment/reward/环境）与对应解法，185行合成笔记（2026-02-20）⭐
+- [[AI/Agent/Calibrate-Then-Act-Cost-Aware-Exploration|Calibrate-Then-Act]] — 显式先验注入的 cost-aware 探索策略：94% optimal match（基线 23%），RL 无法自然习得 meta 探索
 - [[AI/Agent/Agentic-RL/Agentic RL Training|Agentic RL Training]] — Agent + RL 融合
 - [[AI/Agent/Agentic-RL/Agentic RL Survey|Agentic RL Survey]] — 综述论文
 - [[AI/Agent/Agentic-RL/VerlTool 论文|VerlTool]] — 工具使用 RL

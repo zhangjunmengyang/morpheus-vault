@@ -18,6 +18,7 @@ tags:
 - [[AI/RAG/Advanced RAG|Advanced RAG 进阶技术]] — GraphRAG / Self-RAG / Corrective RAG 等进阶方案
 - [[AI/RAG/RAG 检索策略|RAG 检索策略详解]] — 稠密检索 / 稀疏检索 / 混合检索 / Reranker
 - [[AI/RAG/向量数据库选型|向量数据库选型指南]] — Faiss / Milvus / Chroma / Qdrant 对比
+- [[AI/RAG/RAG-Anything-Multimodal-RAG-Framework|RAG-Anything]] — Dual-graph 多模态 RAG：跨模态图+文本图融合，DocBench 63.4%，HKU HKUDS（★★★★☆）
 
 ## 项目实战
 - [[Projects/RAG-System/企业 RAG 系统|企业 RAG 系统]] — 从 0 到 1 搭建企业级 RAG

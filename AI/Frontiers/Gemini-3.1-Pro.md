@@ -1,7 +1,15 @@
 ---
 title: "Gemini 3.1 Pro 速评"
 date: 2026-02-20
-tags: [模型追踪, Google, Gemini, benchmark]
+type: frontier
+domain: ai/frontiers
+rating: ★★★★★
+tags:
+  - 模型追踪
+  - Google
+  - Gemini
+  - benchmark
+  - frontier
 ---
 
 # Gemini 3.1 Pro 速评（2026-02-19 发布）
@@ -41,3 +49,8 @@ tags: [模型追踪, Google, Gemini, benchmark]
 ---
 
 *Source: The Decoder, 2026-02-19*
+
+## See Also
+- [[AI/Frontiers/Claude-Opus-4.6|Claude Opus 4.6]] — ARC-AGI-2 68.8%，Gemini 3.1 Pro 直接竞品
+- [[AI/Frontiers/Claude-Sonnet-4.6|Claude Sonnet 4.6]] — 性价比对标
+- [[AI/Frontiers/GLM-5-技术报告精读|GLM-5]] — 2026 模型竞争格局的另一重要数据点

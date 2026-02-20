@@ -164,11 +164,33 @@ Gemini 3 Deep Think（2026）的路线：
 
 ---
 
+## 2026-02 新进展：质量 vs 数量的重新定义
+
+### Deep-Thinking Ratio (DTR)（2602.13517）
+
+一个颠覆"长度 = 质量"假设的重要发现：
+
+**关键数字**：
+- Token count 与准确率 Pearson r = **-0.544**（负相关！）
+- DTR 与准确率 Pearson r = **+0.828**（强正相关）
+
+**DTR 定义**：序列中"深层才收敛"的 token 比例。使用 logit lens 技术，计算每层 hidden state 投影的分布与最终层的 JSD 散度，收敛层深的 token = 深度思考 token。
+
+**Think@n**：基于 DTR 的 test-time scaling 策略，用 DTR 早期筛选 + 拒绝低质量生成，在匹配 SC@n 准确率的同时降低约 50% 计算成本。
+
+详见：[[Deep-Thinking-Ratio-DTR]]
+
+**对 TTC 的启示**：TTC 的目标不应该是"更多 token"，而是"更多深层推理 token"。Budget forcing 只约束数量，未来的改进方向可能是约束 DTR，鼓励模型用有限 token 进行更深度的思考。
+
+---
+
 ## 知识缺口
 
 - [ ] Inference-time scaling law 数学推导（Snell et al. 2024 原论文）
 - [ ] PRM 的训练方式（哪些数据，怎么打 step label）
 - [ ] o3 TTC 的具体机制（未公开）
+- [ ] DTR 在 MoE 模型上的适用性
+- [ ] DTR 作为 RL reward 信号的可行性
 
 ---
 
@@ -180,6 +202,7 @@ Gemini 3 Deep Think（2026）的路线：
 - [[ICLR-2026-趋势分析]] — TTC 是 ICLR 2026 最大热点（257篇）
 - [[RLVR-Edge-of-Competence]] — RL 训练如何赋予模型 TTC 能力
 - [[采样策略]] — Best-of-N、Beam Search 实现细节
+- [[Deep-Thinking-Ratio-DTR]] — 推理质量新指标，超越 token 长度
 
 ---
 *Created: 2026-02-19 by Librarian heartbeat — 补全知识缺口 TTC*

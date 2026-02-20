@@ -50,6 +50,11 @@ tags:
 - 前沿模型发布与趋势分析
 - 新兴方向：Embodied AI / AI for Science / World Models
 
+## 延伸方向
+
+### 量化研究
+- [[Quant/Crypto 量化交易 2026 全景|Crypto 量化交易 2026 全景]] — 机构化浪潮·Alpha 衰减·DeFi 策略·AI+量化融合，798行（路径：Quant/，待迁移至 AI/ 或独立 Quant/ 体系）
+
 ## 思考与洞察
 - [[AI/AI 思考]] — 对 AI 领域的综合思考
 - [[AI/AI 综合]] — AI 综合笔记

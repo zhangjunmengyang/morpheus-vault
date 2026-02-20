@@ -19,11 +19,16 @@ tags:
 - [[AI/LLM/Architecture/Qwen|Qwen]] — 阿里通义系列
 - [[AI/Models/Qwen3.5-Plus|Qwen3.5-Plus]] — 397B-A17B MoE + Linear Attention
 - [[AI/LLM/Architecture/DeepSeek-R1|DeepSeek-R1]] — 推理能力突破
-- [[AI/LLM/Architecture/DeepSeek Engram|DeepSeek Engram]]
+- [[AI/LLM/Architecture/Engram-Conditional-Memory-DeepSeek-V4|Engram（DeepSeek V4 架构）]] — 记忆稀疏第二轴：N-gram 嵌入 O(1) 查找 + MoE 计算稀疏互补，100B 参数表卸载 <3% overhead（arXiv:2601.07372，★★★★★）
 - [[AI/LLM/Architecture/MoE 深度解析|MoE 深度解析]] — 混合专家架构
 - [[AI/LLM/Architecture/Mamba-SSM|Mamba-SSM]] — 状态空间模型
+- [[AI/LLM/Architecture/ReFINE-Fast-Weight-RL-Next-Sequence-Prediction|ReFINE]] — Fast Weight + GRPO：NSP 目标解决 NTP 与长程记忆的结构性 mismatch，LaCT-760M RULER +8.5~15%，Princeton ICML（★★★★☆）
+- [[AI/LLM/Architecture/Growing-to-Looping-Iterative-Computation-Unification|Growing to Looping]] — Depth Growing 与 Looping 统一理论：两者都是迭代计算的变体，先 grow 再 loop 可推理时免训练获最高 2x 提升，TU Munich + Google（arXiv:2602.16490，★★★★☆）
+- [[Architecture/Transformer 架构演进 2026|Transformer 架构演进 2026（面试武器版）]] — 从 Vanilla Transformer → MoE → SSM → 2026 前沿，817行，面试场景驱动（路径待迁移至 AI/LLM/Architecture/）
 - [[AI/LLM/Architecture/架构范式对比|架构范式对比]]
 - [[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]]
+- [[AI/LLM/Architecture/MiniCPM-SALA|MiniCPM-SALA]] — Sparse + Linear Attention 混合架构：256K 上下文 3.5× 加速，1M token 支持（arXiv 2602.11761）
+- [[AI/LLM/Architecture/SLA2-Learnable-Router|SLA2]] — 可学习路由器动态选 sparse/linear 分支：视频 diffusion 97% 稀疏度 + 18.6× attention 加速（arXiv 2602.12675）
 - [[AI/LLM/Architecture/FlashAttention|FlashAttention]] — 高效注意力
 - [[AI/LLM/Architecture/GQA-MQA|GQA-MQA]] — Grouped/Multi-Query Attention
 - [[AI/LLM/Architecture/Multi-Head Latent Attention|Multi-Head Latent Attention]]
@@ -35,6 +40,7 @@ tags:
 - [[AI/LLM/Architecture/长上下文技术|长上下文技术]]
 - [[AI/LLM/Architecture/AI Models Collapse 论文|AI Models Collapse]] — 递归训练坍塌
 - [[AI/LLM/Architecture/GLM-5 Agentic Engineering|GLM-5]] — 从 Vibe Coding 到 Agentic Engineering
+- [[AI/LLM/Architecture/LaViDa-R1-Diffusion-LLM-Reasoning|LaViDa-R1]] — 扩散语言模型推理：Answer-Forcing + Tree Search + GRPO，Adobe/UCLA/GaTech（★★★★☆）
 
 ## Prompt Engineering
 - [[AI/LLM/Prompt-Engineering/Prompt Engineering|Prompt Engineering]] — 提示工程
@@ -63,11 +69,14 @@ tags:
 - [[AI/LLM/Inference/Ollama|Ollama]] — 本地部署
 - [[AI/LLM/Inference/Test-Time-Compute|Test-Time Compute (TTC)]] — 推理时扩展综述：CoT/PRM/Best-of-N/Budget Forcing
 - [[AI/LLM/Inference/Gemini-3-Deep-Think|Gemini 3 Deep Think]] — ARC-AGI-2 84.6%, TTC scaling
+- [[AI/LLM/Inference/Deep-Thinking-Ratio-DTR|Deep-Thinking Ratio (DTR)]] — 质量 > 数量：深层 token 占比 r=0.828 准确率，推翻"CoT 越长越好"，UVA+Google（★★★★☆）
 - [[AI/LLM/Inference/KV Cache|KV Cache]] — 推理核心机制
 - [[AI/LLM/Inference/KV Cache 优化|KV Cache 优化]]
 - [[AI/LLM/Inference/DMS KV Cache压缩|DMS KV Cache 压缩]]
 - [[AI/LLM/Inference/Continuous Batching|Continuous Batching]] — 动态批处理
 - [[AI/LLM/Inference/Speculative Decoding|Speculative Decoding]] — 推测解码
+- [[AI/LLM/Inference/Sparrow-Video-LLM-Speculative-Decoding|Sparrow]] — Video LLM 推测解码：Visual Semantic Internalization，25k visual tokens 下 2.82x 加速，NUDT（★★★★☆）
+- [[AI/LLM/Inference/MAGE-Block-Diffusion-LLM-Sparse-Attention|MAGE]] — Block Diffusion LLM 稀疏注意力：All-[MASK]第一步预测全局重要KV，128K下后续步6.3x加速，near-lossless（★★★★☆）
 - [[AI/LLM/Inference/推理优化|推理优化]] — 综述
 - [[AI/LLM/Inference/推理服务架构|推理服务架构]]
 - [[AI/LLM/Inference/模型部署实践|模型部署实践]]
@@ -160,6 +169,7 @@ tags:
 
 ## 预训练 (Pretraining)
 - [[AI/LLM/Pretraining/预训练原理|预训练原理]]
+- [[AI/LLM/Pretraining/LLM-预训练与分布式训练-2026-全景|LLM 预训练与分布式训练 2026 全景]] — 2183行，覆盖数据工程→分布式训练→MoE→长上下文→面试考点（面试武器版）
 
 ## 训练技术 (Training)
 - [[AI/LLM/Training/SFT 实战指南|SFT 实战指南]]

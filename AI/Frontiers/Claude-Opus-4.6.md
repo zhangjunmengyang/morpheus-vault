@@ -85,6 +85,7 @@ git worktrees 并行 + 自动 merge 是软件工程场景的第一个真实可�
 - [[Kimi-K2.5-PARL]] — 同期 Agent Swarm，PARL 学术路线 vs Anthropic Agent Teams 产品路线
 - [[EnterpriseGym-Corecraft]] — Corecraft benchmark 中 Opus 4.6 < 30% pass rate，说明当前 frontier 在真实企业 agent 任务上仍远未饱和
 - [[Gemini-3-Deep-Think]] — Gemini 3 Pro ARC-AGI-2 45.1% vs Opus 4.6 68.8%，差距显著
+- [[AI/Frontiers/Gemini-3.1-Pro|Gemini 3.1 Pro]] — ARC-AGI-2 77.1% 反超 Opus 4.6（68.8%），格局逆转，2026-02-19 发布
 
 ## 备注
 

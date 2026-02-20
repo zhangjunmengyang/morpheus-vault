@@ -1,8 +1,19 @@
 ---
 title: Crypto 量化交易 2026 技术全景
 date: 2026-02-19
-tags: [quant, crypto, defi, trading, market-microstructure]
+type: landscape
+domain: quant/crypto
+rating: ★★★★☆
+tags:
+  - quant
+  - crypto
+  - defi
+  - trading
+  - market-microstructure
 ---
+
+> [!warning] 路径偏差
+> 本文位于根目录 Quant/（临时路径），已链入 [[AI/_MOC|AI 总览]] 延伸方向。待规划 Quant MOC 体系后迁移至正式路径。
 
 # Crypto 量化交易 2026 技术全景
 

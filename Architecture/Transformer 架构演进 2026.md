@@ -4,6 +4,9 @@ tags: [transformer, architecture, attention, ssm, interview-prep]
 date: 2026-02-20
 ---
 
+> [!warning] 路径偏差
+> 本文位于根目录 Architecture/（临时路径），归属于 [[AI/LLM/_MOC|LLM MOC]] 架构章节。正式位置应为 AI/LLM/Architecture/，内容权威有效。
+
 # Transformer 架构演进 2026（面试武器版）
 
 > 本文以面试场景为主线，梳理从 Vanilla Transformer 到 2026 年前沿架构的完整演进脉络。每节以"面试官会问"引入，附带数学推导与工程直觉。
