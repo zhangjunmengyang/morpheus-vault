@@ -822,3 +822,59 @@ tags: [面试, 速查, AI]
 - 代码注释=自带CoT标注的推理数据
 - GitHub Issue→Code = 自然语言→形式化解决方案的映射
 - 实证：Llama2增加代码训练20%→GSM8K+3-5%，ARC+2-3%
+
+---
+
+## 十四、知识蒸馏与模型压缩方向
+
+> 对应深度笔记：[[知识蒸馏与模型压缩-2026技术全景]]
+
+### Q1: 知识蒸馏中 temperature 的作用？
+- Soft label = softmax(logits/T)，T越大分布越平滑，暴露类间关系（"暗知识"）
+- T=1退化为硬标签；T=3-5常用于LLM蒸馏；T过高所有类概率趋同失去信息
+- Loss = α·KL(student_soft, teacher_soft) + (1-α)·CE(student, hard_label)
+- LLM蒸馏特殊：词表巨大（32K-150K），soft label信息量远大于CV场景
+
+### Q2: GPTQ vs AWQ 量化原理差异？
+- GPTQ：基于OBS（Optimal Brain Surgeon），逐列量化+误差补偿到剩余列，O(d²)复杂度
+- AWQ：观察到<1%显著权重贡献>99%性能，对显著通道先乘scale再量化等效降低误差
+- GPTQ需校准数据逐层跑前向，AWQ只需统计激活分布更快
+- 实践：AWQ速度快适合部署，GPTQ压缩更极致适合离线
+
+### Q3: BitNet b1.58（1.58-bit）如何工作？
+- 权重三值化：{-1, 0, +1}，信息量log₂(3)≈1.58 bit
+- 训练时：全精度latent weight → absmean量化 → 三值前向 → 全精度梯度更新
+- 推理：矩阵乘法退化为加减法，无需乘法器，能耗降71.4×（vs FP16）
+- 限制：必须从头训练（QAT），不能PTQ已有模型；小模型性能差距仍明显
+
+### Q4: SparseGPT 剪枝原理？
+- 基于OBS框架：剪掉一个权重后用Hessian逆补偿剩余权重
+- 关键创新：分列处理+局部Hessian更新，复杂度从O(d³)降到可处理
+- 单次前向即可剪枝50-60%（非结构化），无需重训练
+- 配合NVIDIA 2:4稀疏硬件：每4个权重保留2个，硬件自动跳零，理论2×加速
+
+### Q5: DeepSeek R1 推理蒸馏方法？
+- 核心：大模型（R1-671B）生成长思维链CoT → 小模型（1.5B-70B）学习完整推理过程
+- 不只蒸馏答案，蒸馏推理路径——小模型学会"怎么想"而非"答案是什么"
+- 基座选择：Qwen2.5和Llama3系列（不同参数规模）
+- 效果惊人：R1-distill-Qwen-32B在数学/代码benchmark上超越GPT-4o和Claude 3.5 Sonnet
+- 局限：推理蒸馏后输出变长（更多thinking tokens），推理成本上升
+
+### Q6: 投机解码（Speculative Decoding）原理？
+- 小模型（draft）快速生成K个token → 大模型（target）并行验证K个token
+- 接受/拒绝机制保证输出分布与大模型完全一致（无损）
+- 加速比取决于接受率α：理论加速~1/(1-α)，实践2-3×
+- 变体：Self-Speculative（同模型不同层作draft）、Medusa（多头并行猜测）、Eagle（特征级预测）
+
+### Q7: KV-Cache量化的挑战？
+- KV-Cache占内存随序列长度线性增长：1M ctx + 128层 → 数百GB
+- Key比Value更难量化（Key有异常值通道，方差大）
+- KIVI方案：Key用per-channel量化（处理异常值），Value用per-token量化，分别2-bit/2-bit
+- 最近token保留全精度（sliding window），旧token压缩
+- 与PagedAttention正交可叠加
+
+### Q8: 蒸馏 vs 量化 vs 剪枝如何组合？
+- 典型pipeline：先蒸馏（得到好的小模型）→ 再量化（压缩部署）→ 可选剪枝（进一步瘦身）
+- 蒸馏改变模型本身（知识转移），量化改变精度（不改结构），剪枝删权重（改稀疏度）
+- 组合原则：蒸馏在前（需要训练），量化在后（PTQ不需训练），剪枝灵活
+- 注意压缩复合效应：每层压缩都有损失，组合后可能叠加，需在每步评估
