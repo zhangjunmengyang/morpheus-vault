@@ -767,3 +767,58 @@ tags: [面试, 速查, AI]
 - 典型表现：推理性能退化、over-refusal、推理延迟增加
 - 降低方法：DPO替代PPO、RepE+Circuit Breakers（inference-time）、Feature Steering（SAE精准调控）、Safe RLHF（解耦helpful/harmless的约束优化）、精准红队驱动训练
 - 2025-2026进展：对齐税降低约30-50%
+
+---
+
+## 十三、代码生成方向
+
+> 深度笔记：[[LLM代码生成-2026技术全景]]
+
+### Q1: HumanEval vs SWE-bench？
+- HumanEval：164题单函数生成，pass@k评估，已饱和（>95%）
+- SWE-bench：2294真实GitHub Issue，需要浏览仓库→定位文件→修改→跑测试
+- SWE-bench Verified（500题）是2024-2026核心赛场，Gemini 3.1 Pro 80.6%最高
+- 区分度：HumanEval 区分不了前沿模型，SWE-bench 还有20%提升空间
+
+### Q2: FIM 训练目标？
+- Fill-in-the-Middle：将代码分prefix/middle/suffix，训练模型根据prefix+suffix生成middle
+- PSM模式：`<PRE>prefix<SUF>suffix<MID>` → 生成middle
+- StarCoder用50% FIM + 50%标准自回归，不降低标准生成性能
+- IDE补全的核心基础——光标在中间时需要利用上下文双方向信息
+
+### Q3: 代码预训练数据清洗？
+- 流程：语言检测→许可过滤→MinHash去重（Jaccard>0.7）→质量过滤→PII清理→合规检查
+- 比NL更复杂：重复更严重（fork/copy）、质量谱系更广、许可合规、敏感信息（API keys）、多语言异质性
+- 数据配比：代码60-70% + NL 20-30% + 数学10%（DeepSeek-Coder-V2/Qwen2.5-Coder）
+
+### Q4: 代码RL vs NL RLHF？
+- 核心优势：代码有天然ground truth（编译/运行/测试），不需要人工标注reward
+- GRPO（DeepSeek）：生成N个候选→执行→按通过率排序→policy gradient，不需要RM
+- Process Reward Model for Code：评估每一步编码决策（不只最终结果），密集reward
+- 稀疏性问题：100行代码一个off-by-one → reward=0，需要PRM缓解
+
+### Q5: Copilot vs Cursor vs Claude Code？
+- Copilot：IDE插件，行内补全+Chat，最大用户基数180万+，适合日常补全
+- Cursor：AI-native IDE，上下文管理杀手锏（.cursorrules/向量索引/@引用/LSP），适合深度开发
+- Claude Code：CLI Agent，Think-Act-Observe循环，自主浏览项目/编辑/测试，适合复杂任务
+- 本质区别：补全（单轮）vs Agent（多轮自主）
+
+### Q6: 代码幻觉类型？
+- API幻觉：调用不存在的函数（pandas.read_xls→应read_excel）
+- 参数幻觉：使用不存在的参数
+- 版本混淆：混合Python2/3或不同库版本API
+- 库混淆：np.cuda.is_available()（应是torch的）
+- 缓解：RAG检索API文档 + LSP类型检查 + 执行验证 + 版本锁定
+
+### Q7: LLM生成代码的安全漏洞？
+- 高频：SQL注入(CWE-89)、XSS(CWE-79)，因训练数据中不安全模式更常见
+- Copilot安全敏感场景40%含漏洞（Pearce 2022），2024-2026降到15-20%
+- 新威胁：Clinejection—通过规则文件注入让Agent生成含后门代码
+- 缓解：安全DPO训练+SAST输出扫描+Code Review Agent+LSP实时标注
+
+### Q8: 代码预训练为何提升通用推理？
+- 代码=结构化推理训练信号（条件判断/循环/递归≈分步推理）
+- 确定性验证→精确思维迁移
+- 代码注释=自带CoT标注的推理数据
+- GitHub Issue→Code = 自然语言→形式化解决方案的映射
+- 实证：Llama2增加代码训练20%→GSM8K+3-5%，ARC+2-3%
