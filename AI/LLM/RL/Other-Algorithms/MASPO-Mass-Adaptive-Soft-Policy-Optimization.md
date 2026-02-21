@@ -3,7 +3,7 @@ title: "MASPO: Mass-Adaptive Soft Policy Optimization"
 date: 2026-02-19
 tags: [RLVR, GRPO改进, 策略优化, 梯度利用, 信号可靠性]
 domain: AI/LLM/RL/Other-Algorithms
-arxiv: "2602.17xxx"
+arxiv: "2602.17550"
 rating: 4
 status: permanent
 ---
@@ -12,7 +12,7 @@ status: permanent
 
 > Unifying Gradient Utilization, Probability Mass, and Signal Reliability for Robust and Sample-Efficient LLM Reasoning
 
-**arXiv**: 2602.17xxx (2026-02-19; confirmed via arXiv search, exact ID pending indexing)  
+**arXiv**: [2602.17550](https://arxiv.org/abs/2602.17550) ✅ ID confirmed 2026-02-21  
 **作者**: Xiaoliang Fu, Jiaye Lin, Yangyi Fang, Binbin Zheng, Chaowen Hu, Zekai Shao, Cong Qin, Lu Pan, Ke Zeng, **Xunliang Cai**（微软研究院亚洲）  
 **提交日期**: 2026-02-19  
 **标签**: #RLVR #GRPO改进 #策略优化 #梯度利用 #信号可靠性

@@ -201,3 +201,11 @@ Ming-Omni 隶属蚂蚁集团 **Ling（百灵）** 开源模型家族，包含三
 - 📰 中关村在线: https://ai.zol.com.cn/1133/11331508.html
 - 📰 Business Wire 官方新闻稿: https://www.morningstar.com/news/business-wire/20260215551663/ant-group-releases-ling-25-1t-and-ring-25-1t-evolving-its-open-source-ai-model-family
 - 🐦 官方 X/Twitter: https://x.com/AntLingAGI
+
+## See Also
+
+- [[AI/MLLM/_MOC|MLLM MOC]] — 多模态大模型全景索引
+- [[AI/_MOC|AI MOC]] — AI 知识域全索引
+- [[AI/Frontiers/_MOC|Frontiers MOC]] — 前沿模型追踪
+- [[AI/MLLM/Seed1.5-VL|Seed1.5-VL]] — 同类 Omni 方向竞品（字节）
+- [[AI/Frontiers/GLM-5-技术报告精读|GLM-5]] — 同期前沿模型对比参考

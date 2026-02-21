@@ -1614,4 +1614,4 @@ $$
 ---
 
 > **Last Updated**: 2026-02-21
-> **See Also**: [[AI/LLM/Architecture/_MOC|Architecture MOC]] · [[Career/AI面试速查手册|AI 面试速查手册]] · [[AI/LLM/Architecture/MoE 深度解析|MoE 深度解析]] · [[AI/LLM/Architecture/Transformer 位置编码|位置编码详解]] · [[AI/LLM/Architecture/FlashAttention|FlashAttention]]
+> **See Also**: [[AI/LLM/Architecture/_MOC|Architecture MOC]] · [[Career/AI面试速查手册|AI 面试速查手册]] · [[AI/LLM/Architecture/MoE 深度解析|MoE 深度解析]] · [[AI/LLM/Architecture/Transformer 位置编码|位置编码详解]] · [[AI/LLM/Architecture/FlashAttention|FlashAttention]] · [[AI/LLM/Training/LLM微调实战-2026技术全景|LLM 微调实战 2026]] — 配套：先懂架构再学微调，两文合读=面试全覆盖

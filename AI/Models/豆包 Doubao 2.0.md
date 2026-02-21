@@ -222,3 +222,11 @@ Seed 团队明确的核心发展路线：
 - 📰 [爱范儿实测体验](https://www.ifanr.com/1655221)
 - 📰 [TechNode (EN)](https://technode.com/2026/02/14/bytedance-releases-doubao-seed-2-0-positions-pro-model-against-gpt-5-2-and-gemini-3-pro/)
 - 📰 [DigitalApplied Benchmark Guide (EN)](https://www.digitalapplied.com/blog/bytedance-seed-2-doubao-ai-model-benchmarks-guide)
+
+## See Also
+
+- [[AI/Frontiers/_MOC|Frontiers MOC]] — 前沿模型追踪索引
+- [[AI/Frontiers/Doubao-Seed-2.0-技术分析|Doubao Seed 2.0 技术分析]] — 本笔记的深度技术版（馆长炼化版）
+- [[AI/_MOC|AI MOC]] — AI 知识域全索引
+- [[AI/LLM/_MOC|LLM MOC]] — LLM 技术基础
+- [[AI/Frontiers/GLM-5-技术报告精读|GLM-5]] — 同期竞品参考

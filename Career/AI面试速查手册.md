@@ -1294,6 +1294,65 @@ tags: [面试, 速查, AI]
 
 ---
 
+## 二十二、合成数据与数据飞轮方向
+
+**本方向核心关键词**：Self-Instruct、Evol-Instruct、Magpie、模型蒸馏、数据飞轮、Model Collapse、RLAIF、UltraFeedback、Rejection Sampling、去污染
+
+### Q1: 合成数据的核心价值？能创造新知识吗？
+- 三层价值：格式转换（隐式→显式）、分布扩展、成本降低（100-1000×）
+- 不能创造超越 Teacher 的知识，但能"组合创新"和"涌现外化"
+- DeepSeek-R1 蒸馏：7B 从 671B "继承"推理能力子集，非"创造"
+
+### Q2: Self-Instruct / Evol-Instruct / Magpie 核心区别？
+- Self-Instruct：175 种子→LLM 生成新指令+回答→过滤→循环；多样性会退化
+- Evol-Instruct：5 种进化操作（加约束/深化/具体化/增步骤/拓宽）；难度可控
+- Magpie：零种子，空 user turn 自生成；分布最接近真实用户，规模可达百万级
+- 选择：大规模通用→Magpie；复杂指令→Evol-Instruct；快速启动→Self-Instruct
+
+### Q3: Model Collapse 是什么？工程上如何防范？
+- 纯合成数据迭代训练 → 分布尾部截断 → 输出趋同 → 能力退化（Nature 2024）
+- 防范：30-50% 真实数据混合（最重要）+ 当代生成（避免跨代累积）+ 多样性监控
+- 保留所有历史真实数据（accumulate 策略）可显著延缓 collapse
+
+### Q4: On-policy vs Off-policy 数据？
+- On-policy（PPO）：当前策略采样，无分布偏移，梯度准确，但成本高
+- Off-policy（DPO）：固定数据集，可复用，稳定，但有分布偏移
+- Hybrid：70% on-policy + 30% off-policy 平衡效率与成本
+- 缓解 off-policy 偏移：importance sampling / 定期重采样 / Iterative DPO
+
+### Q5: RLAIF 和 RLHF 的核心区别？
+- 偏好标注者：RLHF 用人类，RLAIF 用 AI Judge（成本低 100-1000×）
+- Google 研究：helpfulness 维度 RLAIF ≈ RLHF（48% vs 48% 胜率）
+- RLAIF 更适合：预算有限、标准可明确描述、需要大规模偏好数据
+- RLHF 仍需：文化/社会判断、超越 AI 能力的输出、法规要求人类参与
+
+### Q6: Rejection Sampling 为什么有效？
+- 对每题生成 K=16 个回答，RM 选 top 25% → 隐式 RL（无需梯度计算）
+- 与 Best-of-N 关系：Best-of-N 在推理时选，RS 在训练时选（一次性成本）
+- Llama 2 报告：5 轮 RS 后质量持续提升
+
+### Q7: 合成数据质量如何评估？
+- 五维度：Correctness（正确性）/ Diversity（多样性）/ Difficulty（难度分布）/ Contamination（污染度）/ Downstream（下游表现）
+- 多样性指标：Distinct-N、Self-BLEU（<0.7）、embedding 覆盖率
+- 控制变量法区分数据质量 vs 训练配置问题
+
+### Q8: UltraFeedback 为什么成功？
+- 17 个 LLM 生成回答 + GPT-4 四维度打分 → 64K 高质量偏好对
+- Zephyr-7B-β = Mistral-7B + UltraFeedback + DPO → 超越 Llama 2-70B-Chat
+- 催生 DPO 革命：证明"合成偏好数据 + DPO"路径可行
+
+### Q9: Alignment Tax 是什么？合成数据如何减轻？
+- SFT/RLHF 后部分能力退化：过度拒绝、冗长化、多语言/领域退化
+- 缓解：数据混合（20-30% pretrain replay）+ 领域保持数据 + LIMA 式轻量对齐
+- 量化：SFT 前后跑 MMLU/HumanEval，典型下降 1-5%
+
+### Q10: 什么场景下不应该使用合成数据？
+- 安全关键（医疗/法律决策）、极高事实准确性需求、评估集构建
+- 目标分布已有充足真实数据（边际收益小）
+- 核心原则：合成数据是"扩展器"不是"替代品"
+
+---
+
 ## See Also（深度笔记导航）
 
 > 本手册是速查层（K→W），以下为各方向的完整深度版，面试前根据岗位方向选择精读。
@@ -1333,6 +1392,9 @@ tags: [面试, 速查, AI]
 
 ### LLM 微调方向
 - [[AI/LLM/Training/LLM微调实战-2026技术全景|LLM 微调实战 2026 全景]] — LoRA/QLoRA/DoRA/SFT/DPO/分布式微调全栈，18 道面试题 + 32 篇文献 ⭐
+
+### 合成数据与数据飞轮方向
+- [[AI/LLM/Application/Synthetic-Data/合成数据与数据飞轮-2026技术全景|合成数据与数据飞轮 2026 全景]] — 生成方法论/数据飞轮/质量控制/RLAIF/领域应用全栈，14 道面试题 + 35 篇文献 ⭐
 
 ### 职业方向
 - [[Career/_MOC|Career MOC]] — 求职知识域全索引

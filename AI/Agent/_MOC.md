@@ -55,6 +55,7 @@ tags:
 - [[AI/Agent/Agentic-RL/Agent-RL-训练实战指南|Agent RL 训练实战指南]] ⭐ — 现象·坑·解法系统整理：算法层/奖励层/信用分配层三层框架，1001行，面试可用；★★★★★
 - [[AI/Agent/Agentic-RL/PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]] — Phase-Aware MoE 解决 Simplicity Bias：复杂任务仅获5%参数容量 → LoRA expert 按行为阶段分配，1.5B 打 7B；★★★★（arXiv:2602.17038）
 - [[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]] ⭐ — NUS+MIT：极长任务（12h/700+轮）训练方案：轨迹切割 SFT（cold start）+ 渐进式 RL（2h→4h→6h 课程）；106B 在 PaperBench 以 62.59% 超越 Kimi K2 Thinking 1T（51.31%）；专门化训练 > 通用规模（arXiv:2602.17547）★★★★★
+- [[AI/Agent/Agentic-RL/AWM-Agent-World-Model-Synthetic-Environments|AWM（Agent World Model合成环境）]] ⭐ — Snowflake ICML 2026：1000个code-driven POMDP环境+35K工具，首个大规模开源tool-use环境集；DB-as-state解决reward稀疏，MCP统一接口，OOD泛化唯一在BFCLv3/τ²-bench/MCP-Universe三榜全胜；填补Agentic RL环境稀缺结构性瓶颈（arXiv:2602.10090）★★★★
 - [[AI/Agent/Calibrate-Then-Act-Cost-Aware-Exploration|Calibrate-Then-Act]] — 显式先验注入的 cost-aware 探索策略：94% optimal match（基线 23%），RL 无法自然习得 meta 探索
 - [[AI/Agent/Agentic-RL/Agentic RL Training|Agentic RL Training]] — Agent + RL 融合
 - [[AI/Agent/Agentic-RL/Agentic RL Survey|Agentic RL Survey]] — 综述论文

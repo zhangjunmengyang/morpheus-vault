@@ -12,6 +12,7 @@ tags:
 > 从模型架构到训练部署的 LLM 全栈知识
 
 ## 模型架构 (Architecture)
+- [[AI/LLM/Architecture/Transformer架构深度解析-2026技术全景|Transformer 架构深度解析 2026]] ⭐ — 面试终极武器，1617行，从数学第一性原理到 MoE/SSM/2026前沿全覆盖，附 15+道难度递进面试题+必背公式表 ★★★★★
 - [[AI/LLM/Architecture/BERT|BERT]] — 双向编码器
 - [[AI/LLM/Architecture/GPT|GPT]] — 自回归生成
 - [[AI/LLM/Architecture/T5|T5]] — Encoder-Decoder
@@ -53,12 +54,14 @@ tags:
 - [[AI/LLM/Prompt-Engineering/数据合成|数据合成]]
 
 ## 监督微调 SFT
+- [[AI/LLM/Training/LLM微调实战-2026技术全景|LLM 微调实战 2026 全景]] ⭐ — 面试武器版，1850行，SFT→LoRA→QLoRA→RLHF→DPO→GRPO全链路，含实战代码+常见坑 ★★★★★
 - [[AI/LLM/SFT/SFT 原理|SFT 原理]] — 监督微调基础
 - [[AI/LLM/SFT/SFT-TRL实践|SFT-TRL实践]]
 - [[AI/LLM/SFT/LoRA|LoRA]] — 低秩适应
 - [[AI/LLM/SFT/PEFT 方法对比|PEFT 方法对比]]
 - [[AI/LLM/SFT/训练数据构建|训练数据构建]]
 - [[AI/LLM/SFT/Post-Training Unified View 论文|Post-Training 统一视角]]
+- [[AI/LLM/SFT/EWC-LoRA-Continual-Learning-Low-Rank|EWC-LoRA（持续学习+低秩正则）]] ⭐ — 证明独立Fisher估计A/B在bilinear结构下数学不完整；全维Fisher投影到LoRA空间；存储恒定+λ连续可调；ICLR 2026（西安交通大学）★★★★☆
 
 ## ⭐ 强化学习 RL → [[AI/LLM/RL/_MOC|RL 详细 MOC]]
 - PPO / GRPO / DPO / DAPO / KTO / RLOO 及更多算法

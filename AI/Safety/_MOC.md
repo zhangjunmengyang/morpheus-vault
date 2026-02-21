@@ -19,6 +19,7 @@ tags:
 
 ## 真实攻击案例 & 能力基准
 
+- [[AI/Safety/AutoInject-RL-Prompt-Injection-Attack|AutoInject（RL自动化Prompt Injection）]] ⭐ — ICML 2026：1.5B攻击模型用GRPO训练，比较式密集奖励解决reward稀疏；77%+ ASR破Gemini-2.5-Flash，SecAlign-70B防御模型也被攻破21.88%；universal suffix可迁移通杀70个任务——盾卫项目必读（arXiv:2602.05746）★★★★★
 - [[AI/Safety/Clinejection-AI-Coding-Agent-Supply-Chain-Attack|Clinejection]] ⭐ — 2026-02-17 真实事件：Cline AI triage bot 被 prompt injection 劫持，恶意代码推送给 5M+ 开发者；完整攻击链分析 + 防御建议（★★★★★）
 - [[AI/Safety/EVMbench-AI-Agent-Smart-Contract-Exploit|EVMbench]] ⭐ — OpenAI+Paradigm：AI agent 自主利用智能合约漏洞基准；GPT-5.3-Codex 利用率 <20%→>70%；守护 $100B+ 资产的 EVM 合约正暴露于 AI 自主攻击（★★★★★）
 

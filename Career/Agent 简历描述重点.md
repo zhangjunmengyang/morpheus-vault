@@ -103,3 +103,10 @@ tags:
 - **合规率**：通过 Reflection+ComplianceChecker 实现对回答内容的实时审查，违规话术出现率由 3% 降至 **0.5%** 以下；由于合规自检能力，减少了约 **60%** 的人工二次复核工作量。
 - **代理人使用规模**：系统在 3 个月内覆盖了 **1000+** 代理人日常销售过程，每日调用工具 **2000~3000** 次，极大提升了条款解释和报价效率。
 - **性能与响应时延**：借助异步IO与缓存策略，将每次工具调用的平均耗时控制在 **1.8s**；相较初版系统，综合延迟减少 **40%**。
+## See Also
+
+- [[Career/_MOC|Career MOC]] — 职业发展知识域全索引
+- [[Career/AI面试速查手册|AI 面试速查手册]] — 速查层：面试前30分钟过一遍
+- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识域全索引，简历描述的技术深度来源
+- [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 综合分析]] — 四大维度框架，可将工具调用决策问题升维到 reward/workflow 层表达
+- [[AI/Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer (CWRPO)]] — Workflow 结构可学习性，简历中"工作流编排"的前沿论证

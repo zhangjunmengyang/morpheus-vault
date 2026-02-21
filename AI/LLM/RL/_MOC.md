@@ -86,7 +86,8 @@ tags:
 - [[AI/LLM/RL/Other-Algorithms/Stable-Asynchrony-VCPO-Off-Policy-RL|Stable Asynchrony (VCPO)]] — 异步 off-policy RL 的方差爆炸根因与修复：Variance-Controlled Policy Optimization，解决 generation/training 解耦后的 staleness 问题；MIT HAN Lab（Song Han）★★★★
 - [[AI/LLM/RL/Other-Algorithms/SAPO-Soft-Adaptive-Policy-Optimization|SAPO]] — Qwen 团队（Qwen3-VL 在用）：sech² 软门控替代硬裁剪，不对称温度处理正负 advantage；同步 RL 场景下比 GRPO/GSPO 更稳定；GSPO→SAPO 改进链条（arXiv:2511.20347）★★★★
 - [[AI/LLM/RL/Other-Algorithms/RePO-Rephrasing-Policy-Optimization|RePO]] — Rephrasing Policy Optimization：Off-policy 知识变成 On-policy 兼容轨迹再注入训练，解决 hard sample 三角困境（SFT退化/On-policy采不到/Off-policy不稳定）；★★★（arXiv:2602.10819）
-- [[AI/LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 统一梯度利用+概率质量+信号可靠性的 GRPO 三维改进：软裁剪替代硬裁剪 + 概率质量校正 + reward 信号可靠性加权；微软亚研（arXiv:2602.17xxx）★★★★
+- [[AI/LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 统一梯度利用+概率质量+信号可靠性的 GRPO 三维改进：软裁剪替代硬裁剪 + 概率质量校正 + reward 信号可靠性加权；微软亚研（arXiv:2602.17550）★★★★
+- [[AI/LLM/RL/Other-Algorithms/RICOL-Retrospective-In-Context-Online-Learning|RICOL]] ⭐ — NeurIPS 2025，CMU+HKU+Stanford：Theorem 4.1 打通 ICL=RL 理论等价性——ICL 前后 log-prob 差正比于 advantage function；critic-free sparse reward credit assignment；样本效率 PPO 的 3-5×（arXiv:2602.17497）★★★★
 - [[AI/LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]] — Root Saturation 问题根治：Pivot-Driven Resampling 专攻深层 error-prone states；对比 TreeRL/AttnRL 探索启发式的缺陷；ICML 投稿，2602.14169（★★★★☆）
 - [[AI/LLM/RL/Other-Algorithms/VESPO-Variational-Sequence-Policy-Optimization|VESPO]] ⭐ — 变分推导闭合形式 soft kernel `ϕ(W)=W^α·exp(-λW)`，理论严格超越所有 heuristic clip（GRPO/GSPO/SAPO），staleness ratio 64× 异步训练稳定；★★★★★（arXiv:2602.10693）
 - [[AI/LLM/RL/Other-Algorithms/AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL]] — 多模态 RLVR：仅 15% token 有强视觉-文本耦合（"视觉锚点"），图聚类识别并选择性强化；32B 模型 MathVista 80.2 超越 72B-Instruct；仅 1.2% 开销（arXiv:2602.11455）★★★★

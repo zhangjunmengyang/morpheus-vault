@@ -188,6 +188,7 @@ REMuL 追问：如何让 LLM 推理**真实**？
 - [[AI/LLM/RL/GRPO/ProGRPO-Probabilistic-Advantage-Reweighting|ProGRPO]] — 同为 GRPO 改进；ProGRPO 改 advantage 结构，REMuL 改优化目标本身
 - [[AI/LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL 训练稳定性 2026 统一分析]] — faithfulness-correctness 冲突的梯度干扰，与训练稳定性分析的 token-level 视角互补
 - [[AI/Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer (CWRPO)]] — 设计哲学同构：conditional release reward（structure quality 门控 answer reward）与 REMuL 的两阶段训练（faithfulness RL → masked SFT）都在用"过程质量"约束"结果优化"，殊途同归
+- [[AI/LLM/RL/Other-Algorithms/RICOL-Retrospective-In-Context-Online-Learning|RICOL]] — 方法论互补：REMuL 用多监听者 faithfulness 作为 RL reward（优化过程质量），RICOL 用 ICL 前后 log-prob 差作为 advantage（免 critic credit assignment）——两者都在挖掘 LLM 内部能力作为训练信号
 
 ## Tags
 `#faithfulness` `#CoT` `#interpretability` `#RL` `#GRPO` `#multi-agent` `#reasoning` `#ICML` `#2026-02`

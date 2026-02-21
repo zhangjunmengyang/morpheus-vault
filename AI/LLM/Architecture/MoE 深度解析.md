@@ -1,11 +1,13 @@
 ---
 title: "MoE (Mixture of Experts) 深度解析"
 date: 2026-02-13
+domain: AI/LLM/Architecture
 tags:
   - ai/llm/architecture
   - ai/llm/moe
   - type/concept
   - interview/hot
+rating: 5
 status: active
 ---
 

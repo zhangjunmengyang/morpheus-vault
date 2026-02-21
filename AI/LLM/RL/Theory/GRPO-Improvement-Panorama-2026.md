@@ -90,7 +90,7 @@ RePO 和 ProGRPO 解决了 diversity 的两个不同来源：
 解法：S2T mask（Spurious-to-Truncate）——把这类 token 的 clip 截断从 1+ε 提前到 1  
 效果：+7.13% vs GRPO on MATH benchmarks；entropy 稳定
 
-**MASPO**（arXiv 2602.17xxx，MSRA，Xiaoliang Fu/Xunliang Cai）  
+**MASPO**（arXiv 2602.17550 ✅，MSRA，Xiaoliang Fu/Xunliang Cai）  
 发现：正/负样本的概率质量分布不平衡（正样本 token 概率 > 0.5 占多数，负样本相反）→ 固定 clip ε 对两类样本效果不同  
 解法：Soft Adaptive Trust Region——根据每个 token 的概率质量动态调整 clip 范围  
 效果：比固定 clip GRPO 提升 ~5%

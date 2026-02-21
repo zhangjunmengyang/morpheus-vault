@@ -128,3 +128,11 @@ https://github.com/CNFeffery/DataScienceStudyNotes
 书配套教程：https://github.com/jakevdp/PythonDataScienceHandbook
 带有时间表：https://github.com/ossu/data-science?tab=readme-ov-file 两年内成为高级的数据科学家
 ```
+
+## See Also
+
+- [[AI/_MOC|AI MOC]] — AI 知识域全索引
+- [[AI/LLM/_MOC|LLM MOC]] — AI 学习的核心技术域
+- [[AI/Foundations/_MOC|Foundations MOC]] — 数学/DL 基础：AI 学习的地基
+- [[Career/AI 应用工程师职业路径|AI 应用工程师职业路径]] — 学习方向与职业路径的对齐
+- [[Career/AI面试速查手册|AI 面试速查手册]] — 将学习成果转化为面试武器
