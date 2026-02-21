@@ -95,3 +95,12 @@ type: note
 
 ### Q5: 如何估算预训练需要的计算量？
 **答**：经验公式 C ≈ 6 × N × D，其中 N 是参数量，D 是训练 token 数。例如 7B 模型训练 2T tokens：C = 6 × 7e9 × 2e12 = 8.4e22 FLOPs。按 H100 GPU 的有效吞吐 ~400 TFLOPS，需要 8.4e22 / 4e14 ≈ 2.1e8 秒 ≈ 6700 GPU 小时。8 卡节点约 838 小时 ≈ 35 天。
+
+---
+
+## See Also
+
+- [[AI/Foundations/Training/Scaling Laws|Scaling Laws]] — loss 曲线宏观规律：参数量/数据量/计算量的幂律
+- [[AI/Foundations/Math/向量微积分|向量微积分]] — 梯度下降、反向传播的数学基础
+- [[AI/LLM/Frameworks/verl/verl 概述|verl 框架]] — 分布式 RL 训练中的 loss 监控
+- [[AI/Foundations/_MOC|Foundations MOC]] — 训练基础全图谱

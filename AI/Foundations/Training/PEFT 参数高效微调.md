@@ -343,3 +343,12 @@ $$W' = m \cdot \frac{V + \Delta V}{||V + \Delta V||_c} \quad \text{其中} \quad
 - **方案三：合并导出**：为每个任务合并一个独立模型，用路由层分发请求（简单但显存倍增）
 - **关键技术**：S-LoRA 使用统一内存管理 + 自定义 CUDA kernel，可在单 GPU 上服务数千个 LoRA
 - **vLLM 支持**：vLLM 已原生支持多 LoRA serving，动态加载切换
+
+---
+
+## See Also
+
+- [[AI/LLM/RL/Fundamentals/强化学习的数学原理|强化学习数学原理]] — PEFT 与 RL 结合：LoRA + GRPO 的参数高效 post-training
+- [[AI/LLM/Frameworks/Unsloth/Unsloth 概述|Unsloth]] — PEFT 实践工具：LoRA/QLoRA 的高效训练框架
+- [[AI/Foundations/Training/Scaling Laws|Scaling Laws]] — PEFT 的动机：为什么小参数微调能保留大模型能力
+- [[AI/Foundations/_MOC|Foundations MOC]] — 训练基础全图谱

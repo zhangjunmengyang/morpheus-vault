@@ -172,3 +172,12 @@ $\alpha$ 和 $\beta$ 的值由网络深度 $N$ 决定：
 
 ### Q6: Norm 层的参数量是多少？对总参数量影响大吗？
 > **答**：LayerNorm 有 $2d$ 参数（$\gamma$ 和 $\beta$），RMSNorm 有 $d$ 参数（只有 $\gamma$）。以 LLaMA-7B（$d=4096$，32 层，每层 2 个 Norm）为例，RMSNorm 参数约 $32 \times 2 \times 4096 = 262K$，占总参数量 7B 的 0.004%，几乎可忽略。Norm 的开销主要在计算（每次前向都要做 reduce），不在参数。
+
+---
+
+## See Also
+
+- [[AI/Foundations/DL-Basics/Transformer|Transformer 通识]] — LayerNorm 在 Transformer 架构中的位置（Pre-Norm vs Post-Norm）
+- [[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]] — RMSNorm 在各模型架构中的应用比较
+- [[AI/Foundations/Training/Training Loss 分析|Training Loss 分析]] — 归一化层对训练稳定性的影响
+- [[AI/Foundations/_MOC|Foundations MOC]] — 深度学习基础全图谱

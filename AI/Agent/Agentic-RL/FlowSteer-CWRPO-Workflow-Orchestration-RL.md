@@ -222,6 +222,7 @@ FlowSteer 的角度不同：**自动化 workflow 结构本身**，不是在已�
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] — CWRPO 是 GRPO 在 workflow 场景的领域适配（mask + composite reward + conditional gate）
 - [[AI/Agent/EnterpriseGym-Corecraft|EnterpriseGym Corecraft]] — 同为 Agentic RL 环境设计，Corecraft 做 OOD 泛化，FlowSteer 做 workflow 结构学习
 - [[AI/LLM/RL/Theory/REMuL-CoT-Faithfulness-Multi-Listener-RL|REMuL]] — 设计哲学同构：FlowSteer 用 structure quality 门控 answer reward（先保过程再保结果），REMuL 用 faithfulness RL 再加 masked SFT correctness（先保推理忠实再保正确）——两者都在用"过程质量"约束"结果优化"
+- [[AI/Agent/AgentConductor-Topology-Evolution-Multi-Agent-Code|AgentConductor]] — 同为 GRPO + multi-turn workflow RL，但 AgentConductor 做 MAS 动态拓扑（agent 间通信图），FlowSteer 做 operator DAG；AgentConductor 有 difficulty-aware 密度函数更 principled，FlowSteer 更通用
 
 ## Tags
 `#agentic-rl` `#workflow` `#compound-ai` `#GRPO` `#CWRPO` `#multi-turn-rl` `#tool-use` `#2026-02`

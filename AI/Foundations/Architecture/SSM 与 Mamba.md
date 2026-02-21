@@ -344,3 +344,12 @@ S4 (2021) → S5 → H3 → Hyena
 - Mamba-2 论文: "Transformers are SSMs" (Dao & Gu, 2024)
 - Jamba 论文: "Jamba: A Hybrid Transformer-Mamba Language Model" (AI21, 2024)
 - Albert Gu 的博士论文: 系统性介绍 SSM 发展脉络
+
+---
+
+## See Also
+
+- [[AI/Foundations/Architecture/Decoder-Only vs Encoder-Decoder|Decoder-Only vs Encoder-Decoder]] — Mamba 作为 Transformer 替代的背景
+- [[AI/Foundations/DL-Basics/Transformer|Transformer 通识]] — SSM 希望替代的架构
+- [[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]] — Linear Attention 与 SSM 的收敛趋势
+- [[AI/Foundations/_MOC|Foundations MOC]] — 架构基础全图谱

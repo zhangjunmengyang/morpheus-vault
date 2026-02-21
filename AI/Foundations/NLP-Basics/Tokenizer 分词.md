@@ -302,3 +302,12 @@ tokens = tokenizer.encode("Hello, 世界!")
 
 ### Q7: tokenizer 对模型效果有多大影响？
 > **答**：影响非常大但容易被忽视。（1）分词粒度决定了模型"看"文本的方式——拆得太碎会丢失语义，拆得太粗会导致 OOV；（2）分词效率决定了有效上下文长度；（3）不同语言的分词公平性直接影响多语言能力。一个好的 tokenizer 能让中文的 token 效率从 2.5 token/字提升到 1.1 token/字，等效于上下文窗口翻倍。
+
+---
+
+## See Also
+
+- [[AI/LLM/Architecture/Tokenizer 深度理解|Tokenizer 深度理解]] — 深度版：BPE/WordPiece/SentencePiece 内部机制
+- [[AI/Foundations/DL-Basics/Transformer|Transformer 通识]] — Tokenizer 在 Transformer pipeline 中的位置
+- [[AI/Foundations/ML-Basics/数据预处理|数据预处理]] — Tokenization 是文本数据预处理的核心步骤
+- [[AI/Foundations/_MOC|Foundations MOC]] — NLP 基础全图谱

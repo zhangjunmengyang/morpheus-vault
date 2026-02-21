@@ -282,3 +282,12 @@ x3 ✓  ✓  ✓                       x3 ✓  ✓  ✓  ✗  ✗  ✗       x3 
   - 但这是靠规模堆出来的，性价比不如 Encoder-Decoder
 - **工业实践**：Google Translate 从 LSTM-based Encoder-Decoder → Transformer Encoder-Decoder，仍然是 Encoder-Decoder 架构
 - 总结：**任务特化选 Encoder-Decoder，通用能力选 Decoder-Only**
+
+---
+
+## See Also
+
+- [[AI/Foundations/DL-Basics/Transformer|Transformer 通识]] — Decoder-Only 的架构基础
+- [[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]] — 不同架构下的 Attention 变体
+- [[AI/Foundations/Architecture/SSM 与 Mamba|SSM 与 Mamba]] — 非 Transformer 架构的替代路线
+- [[AI/Foundations/_MOC|Foundations MOC]] — 架构基础全图谱

@@ -190,3 +190,12 @@ nanochat 项目复现了 GPT-2 级别模型，训练成本从 2019 年的约 $43
 ### Q6: 为什么 Scaling Laws 对行业如此重要？
 
 **要点**：因为大模型训练极其昂贵（GPT-4 估计 $100M+），不可能反复试错。Scaling Laws 使训练变得**可预测**：小实验 → 拟合曲线 → 预测大模型表现 → 理性投资决策。本质上是把 AI 训练从"炼丹"变成了"工程"。
+
+---
+
+## See Also
+
+- [[AI/Foundations/Training/Training Loss 分析|Training Loss 分析]] — Scaling Law 中 loss 曲线的微观解读
+- [[AI/LLM/Pretraining/LLM预训练与分布式训练2026全景|LLM 预训练 2026 全景]] — Scaling Law 在工程实践中的落地：Chinchilla 最优 vs Over-train
+- [[AI/Foundations/Math/向量微积分|向量微积分]] — 幂律拟合的数学直觉
+- [[AI/Foundations/_MOC|Foundations MOC]] — 训练基础全图谱

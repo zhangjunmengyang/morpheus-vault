@@ -184,3 +184,11 @@ plt.show()
 # 三、CDF 推导
 
 待补充
+
+---
+
+## See Also
+
+- [[AI/Foundations/ML-Basics/激活函数|激活函数]] — GELU 所属的激活函数家族：ReLU/GELU/SiLU 对比
+- [[AI/Foundations/DL-Basics/Transformer|Transformer 通识]] — GELU 在 Transformer FFN 层的应用
+- [[AI/Foundations/_MOC|Foundations MOC]] — ML 基础全图谱

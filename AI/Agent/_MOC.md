@@ -49,6 +49,8 @@ tags:
 ## Agentic RL ⭐（前沿方向）
 - [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — 三大难题（credit assignment/reward/环境）与对应解法，185行合成笔记（2026-02-20）⭐
 - [[AI/Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer (CWRPO)]] — Workflow 结构自动化 via End-to-End RL：policy model 学习构建/调试 DAG workflow，CWRPO 用 conditional release reward 门控消除 shortcut；CUHK+NTU+NUS（arXiv:2602.01664）★★★☆
+- [[AI/Agent/AgentConductor-Topology-Evolution-Multi-Agent-Code|AgentConductor]] ⭐ — 上交大 ICML 投稿：RL 训练 3B orchestrator 动态生成 DAG topology，difficulty-aware 密度函数实现准确率+14.6%同时 token cost-68%；固定 topology 的终结者（arXiv:2602.17100）★★★★
+- [[AI/Agent/Agentic-RL/SquRL-Dynamic-Workflow-Text-to-SQL|SquRL]] — Theorem 3.1 形式化证明动态 workflow 优于任何静态 pipeline，RL 训练 selector policy 按 query 难度自适应选工具链；Dynamic Actor Masking 防 training collapse；Text-to-SQL 任务（arXiv:2602.15564）★★★
 - [[AI/Agent/Agentic-RL/Agent-RL-训练实战指南|Agent RL 训练实战指南]] ⭐ — 现象·坑·解法系统整理：算法层/奖励层/信用分配层三层框架，1001行，面试可用；★★★★★
 - [[AI/Agent/Agentic-RL/PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]] — Phase-Aware MoE 解决 Simplicity Bias：复杂任务仅获5%参数容量 → LoRA expert 按行为阶段分配，1.5B 打 7B；★★★★（arXiv:2602.17038）
 - [[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]] ⭐ — NUS+MIT：极长任务（12h/700+轮）训练方案：轨迹切割 SFT（cold start）+ 渐进式 RL（2h→4h→6h 课程）；106B 在 PaperBench 以 62.59% 超越 Kimi K2 Thinking 1T（51.31%）；专门化训练 > 通用规模（arXiv:2602.17547）★★★★★

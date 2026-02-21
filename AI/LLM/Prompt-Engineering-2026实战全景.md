@@ -2783,3 +2783,13 @@ You are a banking compliance assistant.
 ---
 
 *本文完成于 2026-02-20，覆盖 Prompt Engineering 基础原理、核心技巧体系、高级模式、安全攻防、多模态 Prompt、工程实践、2026 新趋势等方向。共 12 道面试题。*
+
+---
+
+## See Also
+
+- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱
+- [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — 自动 prompt 优化的 RL 方向：从手动 PE 到 E-SPL/GEPA 自动进化
+- [[AI/Agent/Agentic-RL/Agent-RL-训练实战指南|Agent RL 训练实战指南]] — System prompt 在 Agentic RL 中的角色
+- [[AI/Safety/AI安全与对齐-2026技术全景|AI 安全与对齐 2026 全景]] — Prompt injection 攻击的防御视角
+- [[AI/LLM/Evaluation/LLM 评测体系|LLM 评测体系]] — Prompt 质量如何影响 benchmark 结果

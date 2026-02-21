@@ -789,3 +789,12 @@ DeepSeek V3 的方案最优雅——完全消除了 auxiliary loss 和主损失�
 ---
 
 > **最后提醒**：面试中展示 "工程直觉" 比 "背公式" 更重要。能说清楚 "为什么这样设计"、"解决什么问题"、"有什么 trade-off" 比默写公式更有价值。
+
+---
+
+## See Also
+
+- [[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]] — 同主题深度版，覆盖 MQA/GQA/FlashAttention 等
+- [[AI/Foundations/DL-Basics/Transformer|Transformer 通识]] — 基础原理版
+- [[AI/Foundations/Architecture/SSM 与 Mamba|SSM 与 Mamba]] — 2026 架构演进的另一条线
+- [[AI/Foundations/_MOC|Foundations MOC]] — 架构基础全图谱

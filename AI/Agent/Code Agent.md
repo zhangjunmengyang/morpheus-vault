@@ -3,13 +3,16 @@ title: "Code Agent 与 Computer Use"
 date: 2026-02-14
 tags: [agent, coding, computer-use, interview]
 type: note
+domain: AI/Agent
+rating: 4
+status: evergreen
 ---
 
 # Code Agent 与 Computer Use Agent
 
 ## 1. Code Agent 定义
 
-Code Agent 是一类以 **LLM 为核心推理引擎**，能够自主完成软件工程任务的 AI Agent。与传统代码补全（Copilot 行级补全）不同，Code Agent 具备：
+Code Agent 是一类以 **LLM 为核心推理引擎**，能够自主完成软件工程任务的 [[AI/Agent/_MOC|AI Agent]]。与传统代码补全（Copilot 行级补全）不同，Code Agent 具备：
 
 - **端到端任务执行**：从需求理解 → 代码定位 → 编辑 → 测试 → 修复的完整闭环
 - **工具使用**：调用文件系统、终端、搜索、浏览器等外部工具
@@ -31,6 +34,8 @@ Code Agent 是一类以 **LLM 为核心推理引擎**，能够自主完成软件
 ## 2. 代表产品
 
 ### 2.1 GitHub Copilot (Agent Mode)
+
+> 深度技术细节见 [[AI/Agent/GitHub-Agentic-Workflows|GitHub Agentic Workflows 深度分析]]
 
 - **定位**：从行级补全进化为 IDE 内 Agent（2025 起 Agent Mode）
 - **架构**：VS Code 集成，调用 GPT-4o / Claude 3.5 Sonnet
@@ -125,6 +130,8 @@ Code Agent 是一类以 **LLM 为核心推理引擎**，能够自主完成软件
 ## 4. SWE-bench 评估流程
 
 ### 什么是 SWE-bench
+
+> 代码生成能力的系统性全景见 [[AI/LLM/Application/LLM代码生成-2026技术全景|LLM 代码生成 2026 技术全景]]
 
 - Princeton 发布的 Code Agent benchmark
 - 从 12 个 Python 开源仓库的真实 GitHub issue 构建
@@ -348,6 +355,8 @@ CI/CD: 自动部署
    - Human-in-the-loop：关键节点暂停等待人类审核
 
 ### Q5: Agentic Engineering 会如何改变软件工程师的角色？需要培养哪些新技能？
+
+> 相关：[[AI/Agent/Fundamentals/Agent 生产实践|Agent 生产实践]] | [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]]（底层训练方法论）
 
 **答**：
 

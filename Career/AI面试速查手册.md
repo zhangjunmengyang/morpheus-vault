@@ -931,3 +931,54 @@ tags: [面试, 速查, AI]
 - 用户冷启动：bandit 探索 / 画像迁移 / LLM 对话问偏好
 - 物品冷启动：内容特征替代行为特征 / 元学习 MAML / 流量倾斜
 - 系统冷启动：内容特征 + 人工规则 → 种子用户行为 → 协同过滤
+
+---
+
+## 十六、LLM 应用部署与工程化方向
+
+**本方向核心关键词**：vLLM、PagedAttention、Continuous Batching、GPTQ/AWQ/GGUF、KV-Cache、Speculative Decoding、TP/PP、TTFT/TPS、MLOps
+
+### Q1: 如何把 70B 模型部署到 4×A100 服务 1000 QPS？
+- TP=4 切分（需 NVLink）+ vLLM continuous batching
+- INT4/AWQ 量化降内存 + PagedAttention 优化 KV-Cache
+- Prefix caching（system prompt 共享）+ 水平扩展多副本
+- 先 benchmark：compute-bound → 量化/batching，memory-bound → KV 优化/量化
+
+### Q2: PagedAttention 为什么能提升 2-4x 吞吐？
+- 传统：每个请求独立分配连续 KV-Cache 内存 → 碎片化严重（利用率~50%）
+- PagedAttention：借鉴 OS 分页，KV-Cache 按 block（16 tokens）分配
+- block table 做虚拟→物理映射，消除碎片，内存利用率→~95%
+- 不改模型/不改精度，纯工程优化
+
+### Q3: GPTQ vs AWQ vs GGUF 怎么选？
+- GPTQ：Hessian 逆矩阵最小化误差，需 128 条校准数据，极端压缩(3-bit)较好
+- AWQ：保护 salient channels，部署更快（少校准），vLLM 官方支持好
+- GGUF：llama.cpp 生态，CPU/消费级 GPU 首选，imatrix 量化质量优秀
+- 规则：服务器 GPU → AWQ+vLLM，本地/边缘 → GGUF+Ollama
+
+### Q4: Speculative Decoding 的原理和限制？
+- 小模型快速生成 K 个候选，大模型一次验证（rejection sampling）
+- 数学等价：输出分布与纯大模型完全一致
+- 限制：draft 质量差→接受率低、需额外内存、高 batch 场景效果弱
+- 适合延迟敏感的交互式场景，不适合吞吐优先的批处理
+
+### Q5: TTFT 太高怎么定位和优化？
+- 定位：prefill 阶段慢（长 prompt）vs batch 排队（容量不足）vs 冷启动
+- 优化：prompt 压缩 / chunked prefill / 调 batching 参数 / 预热常驻 / 扩容
+- 区分 compute-bound（GPU利用率高）和 memory-bound（KV-Cache 满）
+
+### Q6: TP 和 PP 怎么选？
+- TP（张量并行）：每层切分到多 GPU，需 NVLink，通信量=2×hidden_size×batch
+- PP（流水线并行）：不同层放不同 GPU，通信量小但有 pipeline bubble
+- 单机内（4/8 GPU）→ TP，跨机器 → PP，大规模 → TP+PP 混合
+
+### Q7: 模型灰度发布流程？
+- 5%→20%→50%→100% 分阶段放量
+- 每阶段监控：延迟/质量/错误率/成本
+- 自动回滚条件：错误率>1% 或 P99>SLA
+- 影子模式（shadow traffic）：新模型处理真实请求但不返回用户
+
+### Q8: 在线推理 vs 离线批处理的核心区别？
+- 在线：延迟优先 TTFT<500ms，auto-scaling，streaming，小 batch
+- 离线：吞吐优先，大 batch（64-256），spot instance 降本，无 streaming
+- 共用模型权重但 serving 配置完全不同

@@ -19,3 +19,12 @@ PPL的计算基于语言模型对测试集的概率估计。给定一个测试�
 其中， 是语言模型对整个测试集的概率估计， 是语言模型在给定前i-1个单词的情况下，对第i个单词的概率估计。
 
 由于连乘的概率值很小，为了避免下溢出(underflow)，通常使用对数概率进行计算。因此，PPL的计算公式可以改写为:
+
+---
+
+## See Also
+
+- [[AI/LLM/Evaluation/LLM 评测体系|LLM 评测体系]] — PPL 作为语言模型评估指标的位置
+- [[AI/Foundations/ML-Basics/损失函数|损失函数]] — 交叉熵损失与 PPL 的关系：PPL = exp(cross-entropy)
+- [[AI/Foundations/Training/Scaling Laws|Scaling Laws]] — PPL 与模型规模/数据量的幂律关系
+- [[AI/Foundations/_MOC|Foundations MOC]] — ML 基础全图谱
