@@ -515,3 +515,12 @@ OpenClaw/ClawHub 生态相比论文描述的通用 skill marketplace 有一些�
 ## 一句话总结
 
 > Agent Skill 是 LLM agent 从"什么都会一点"到"按需专精"的范式跃迁，但它引入了**比传统软件包更广泛、更隐蔽、更难防御的攻击面**。26.1% 的社区 skill 含漏洞不是 bug，是这个新范式的**结构性特征**。OpenClaw/ClawHub 生态必须在开放扩张之前建立治理框架——现在就是窗口期。
+
+---
+
+## See Also
+
+- [[AI/Safety/Clinejection-AI-Coding-Agent-Supply-Chain-Attack|Clinejection]] — Agent 安全的真实案例：Cline prompt injection 供应链攻击
+- [[AI/Safety/Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive Regularization]] — 防止安全对齐被 fine-tuning 破坏
+- [[AI/Safety/_MOC|Safety MOC]] — AI 安全知识全图谱
+- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱

@@ -83,3 +83,11 @@ tags:
 
 1. **渐进式演进策略**：对于新项目，可以从单一智能体+MCP开始，随着复杂度增加再考虑演进到MAS架构。
 1. **混合架构考量**：在某些情况下，"主智能体+辅助智能体"的轻量级混合架构可能是理想的折中方案。
+---
+
+## See Also
+
+- [[AI/Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]] — MAS 的基础概念
+- [[AI/Agent/IMAGINE — 多Agent蒸馏到单模型|IMAGINE]] — Agent vs MAS 的新视角：MAS 能力蒸馏进单 Agent
+- [[AI/Agent/AgentConductor-Topology-Evolution-Multi-Agent-Code|AgentConductor]] — MAS 拓扑优化论文
+- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱

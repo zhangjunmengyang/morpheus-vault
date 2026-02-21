@@ -1340,3 +1340,11 @@ PABU代表了LLM Agent效率优化的一个重要里程碑，其创新性不仅�
 从更广阔的视角看，PABU的价值远超一个具体的技术方案。它展现了如何在复杂AI系统中平衡性能与效率，如何设计可解释且可扩展的状态表示，如何将认知科学的洞察转化为工程实践。这些设计哲学将深刻影响下一代AI Agent系统的架构演进。
 
 随着技术的不断成熟和应用场景的拓展，PABU有望成为Agent技术栈中的基础设施级组件，为构建更智能、更高效、更可靠的AI系统提供核心支撑。对于每一位AI从业者，深入理解PABU的设计思想和实现细节，将是把握Agent技术发展趋势的重要一步。
+---
+
+## See Also
+
+- [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — PABU 在 credit assignment 问题框架中的位置
+- [[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]] — 同为长程 Agent 效率问题，KLong 解决训练 horizon，PABU 解决推理 state tracking
+- [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — PABU 的 RL 算法上游
+- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱

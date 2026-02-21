@@ -1035,3 +1035,58 @@ tags: [面试, 速查, AI]
 - 长上下文（1M+）：RoPE 外推 + Ring Attention，但 Lost-in-the-Middle 仍存在
 - Reasoning Models：RL+可验证 reward 涌现推理能力，可蒸馏到小模型
 - 底层趋势：NLP 边界模糊化，多模态统一，Agent 成为应用主线
+
+---
+
+## 十八、强化学习与 RLHF 应用方向
+
+> 深度笔记：[[强化学习与RLHF应用-2026全景]]
+
+**本方向核心关键词**：MDP、Bellman、PPO、GAE、RLHF、DPO、GRPO、Reward Hacking、Bradley-Terry、Process RM、Test-time Compute、MARL、Bandit
+
+### Q1: PPO 的 Clipped Objective 怎么理解？
+- ratio $r_t = \pi_\theta / \pi_{old}$，clip 到 $[1-\epsilon, 1+\epsilon]$
+- $A>0$ 时 clip 限制上界防止过度强化好动作；$A<0$ 时限制下界
+- 取 min 是 pessimistic bound，等价于 TRPO trust region 但只需一阶优化
+- $\epsilon=0.1\text{-}0.2$ 通用，LLM 对齐沿用此范围
+
+### Q2: RLHF 三阶段各自的坑？
+- SFT：chat template 不一致、loss masking（只对 assistant 算 loss）、2-3 epochs 防过拟合
+- RM：标注一致性仅 65-75%、length/position bias、Bradley-Terry model
+- PPO：4 模型并行显存巨大、reward hacking、KL 爆炸、generation 瓶颈
+
+### Q3: DPO 的推导核心步骤？
+- 从 KL-constrained RL 最优策略解析解出发（Gibbs distribution）
+- 反解 reward $r = \beta\log(\pi/\pi_{ref}) + \beta\log Z(x)$
+- 代入 Bradley-Terry，$Z(x)$ 在 $r_w - r_l$ 做差时消掉
+- 得到只依赖策略概率的 classification loss，绕过 RM 和 PPO
+
+### Q4: GRPO vs PPO 核心区别？
+- GRPO 去掉 Critic，用组内相对 reward 标准化做 advantage $\hat{A}=(r-\mu)/\sigma$
+- 省 ~25% 显存（3 模型 vs 4 模型），特别适合稀疏/二值 reward
+- DeepSeek-R1 用 GRPO + rule-based reward 从 base model 涌现推理能力
+- DAPO 改进：Decoupled Clipping + Dynamic Sampling + Token-Level Loss
+
+### Q5: Reward Hacking 怎么防？
+- 常见形式：length exploitation、sycophancy、formatting tricks
+- 检测信号：RM score↑ 但 human eval↓（Goodhart's Law）
+- 防御：KL penalty + RM ensemble + length normalization + 迭代 retrain RM
+- 根本性方案：verifiable rewards（代码测试/数学验证）不可 hack
+
+### Q6: Online vs Offline Preference Learning？
+- Online（PPO/GRPO）：当前策略实时生成数据，持续探索，性能天花板高
+- Offline（DPO/KTO）：固定数据集，纯 supervised，简单稳定但无探索
+- DPO 的 mode collapse 问题：无 entropy bonus → 策略坍缩到单一模式
+- 最优折中：Iterative DPO / Online DPO（每轮用当前策略生成新偏好对）
+
+### Q7: Process RM vs Outcome RM？
+- ORM：整个 response 一个分数，标注简单但 signal 稀疏
+- PRM：每个推理步骤一个分数，dense signal 可指导 tree search
+- PRM + MCTS 在数学推理上显著优于 ORM
+- PRM 标注昂贵→可用 Monte Carlo 估计（Math-Shepherd）降本
+
+### Q8: 2026 RL for LLM 的关键趋势？
+- Reasoning via RL：o1/R1 证明 RL 可涌现推理，范式从 scaling data → scaling test-time compute
+- Code Agent RL：代码有 verifiable reward，是 RL 最佳应用场景
+- GRPO 普及：无需 RM/Critic，降低 RL 训练门槛
+- Offline RL 复兴：Decision Transformer + DPO 本质是 offline RL

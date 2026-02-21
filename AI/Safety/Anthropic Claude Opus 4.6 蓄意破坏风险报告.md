@@ -108,3 +108,11 @@ created: 2026-02-13
 - [Anthropic 原始报告 PDF](https://www-cdn.anthropic.com/f21d93f21602ead5cdbecb8c8e1c765759d9e232.pdf)
 - [Mrinank Sharma 辞职推文](https://x.com/MrinankSharma/status/2020881722003583421)
 - [AI Safety Memes 分析长文](https://x.com/AISafetyMemes/status/2021632173535617033)
+
+## See Also
+
+- [[AI/Safety/_MOC|Safety MOC]] — AI 安全全景索引
+- [[AI/Safety/AI安全与对齐-2026技术全景|AI安全与对齐 2026 全景]] — 宏观技术综述
+- [[AI/Safety/对齐技术总结|对齐技术总结]] — RLHF/宪法 AI 技术路线
+- [[AI/Safety/Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization]] — hidden state 安全探测研究
+- [[AI/Frontiers/Claude Opus 4.6|Claude Opus 4.6]] — 对应的模型技术分析

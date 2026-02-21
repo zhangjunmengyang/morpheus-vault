@@ -180,3 +180,11 @@ Human node
 - 能手动编辑/添加/删除全篇报告中的任意内容，保留用户使用报告的完整轨迹，行为可能指导 Agent：
 - **实现高层次人机协同**：“我注意到用户删除了 xxx，并修改了 xxx 为 xxx，我将依照用户的思路...”
 - 收集数据
+---
+
+## See Also
+
+- [[AI/Agent/Fundamentals/Agent or Workflow？|Agent or Workflow？]] — 演进分析中的核心问题
+- [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — 演进的最新前沿：Agentic RL
+- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱
+- [[AI/Frontiers/Kimi-K2.5-技术分析|Kimi K2.5]] — Agent 演进的工业标杆

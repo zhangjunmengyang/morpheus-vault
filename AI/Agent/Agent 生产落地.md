@@ -415,3 +415,12 @@ else:
 - 设置超时：审批超时后自动取消，避免任务永远挂起
 
 进阶：用 **confidence score** 动态决策——同一个操作，Agent 置信度高时自动执行，置信度低时请求人工介入。
+
+---
+
+## See Also
+
+- [[AI/Agent/Fundamentals/Agent 生产实践|Agent 生产实践]] — 同方向互补笔记
+- [[AI/Agent/Agent-Skills-Security|Agent Skills Security]] — 生产落地中的安全威胁
+- [[AI/Agent/Agentic-RL/Agent-RL-训练实战指南|Agent RL 训练实战指南]] — 生产级 RL 训练的坑与解法
+- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱

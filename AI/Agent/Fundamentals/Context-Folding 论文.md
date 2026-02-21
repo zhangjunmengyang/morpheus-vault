@@ -87,3 +87,12 @@ Whether the folding agent can benefit from parallel branching — i.e., creating
 # 动手实验
 
 原始论文是通过“**在推理时，通过KV-cache回滚实现高效的上下文管理。**”，但不从推理层面，直接基于工具管理上下文也能实现类似的效果，值得从应用层进行试验。
+
+---
+
+## See Also
+
+- [[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]] — 极长 horizon 下 context 压缩的另一路线
+- [[AI/LLM/Inference/KV Cache 优化|KV Cache 优化]] — Context 压缩的底层机制
+- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱
+- [[AI/LLM/_MOC|LLM MOC]] — Context 管理在 LLM 层面的全景

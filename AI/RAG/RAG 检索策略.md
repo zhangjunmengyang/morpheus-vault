@@ -439,3 +439,11 @@ Parent Chunk（大块，如 2000 tokens）
   - 模糊查询走 Rewrite + HyDE
   - 复杂查询走 Decomposition
 - **关键原则**：检索质量 > 生成质量，garbage in garbage out
+
+## See Also
+
+- [[AI/RAG/_MOC|RAG MOC]] — 检索增强生成全景索引
+- [[AI/RAG/Advanced RAG|Advanced RAG]] — 本文检索策略的进阶应用
+- [[AI/RAG/向量数据库选型|向量数据库选型]] — 实现稠密检索的基础设施
+- [[AI/RAG/RAG-2026-技术全景|RAG 2026 技术全景]] — 宏观综述，包含检索策略在完整系统中的位置
+- [[AI/LLM/Inference/模型量化综述|模型量化综述]] — 向量检索中 embedding 压缩的相关技术

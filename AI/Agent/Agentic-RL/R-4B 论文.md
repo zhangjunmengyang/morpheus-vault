@@ -21,3 +21,12 @@ PaperScope.ai 解读：https://paperscope.ai/hf/2508.21113
 研究针对现有模型在简单问题上冗余思考导致的效率问题，创新性地设计了双模退火训练策略，通过构建包含549万条推理数据和1087万条直接回答数据的混合数据集，使模型同时掌握两种响应模式。在此基础上提出的 **双模策略优化（BPO）算法**，采用数学领域规则奖励信号驱动强化学习，在无需复杂奖励工程的情况下，通过强制生成思考与非思考双路径响应，有效解决了模型偏好非思考模式的"思考萎缩"问题。
 
 实验表明，R-4B-RL在MMMU-val等25项基准测试中超越Qwen2.5-VL-7B，并在数学推理和图表理解任务中达到与16B参数模型Kimi-VL-A3B-Thinking相当的水平，同时推理效率提升40%。该模型在保持70亿参数规模下，通过动态调整思考模式，在OCR等简单任务中输出token量仅66个（非思考模式57个），而在MathVista等复杂任务中自动扩展至996个token，实现了推理性能与计算成本的最优平衡。研究提出的双模训练框架和策略优化方法为构建高效智能的多模态模型提供了新范式。
+
+---
+
+## See Also
+
+- [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — R-4B 的宏观定位：MLLM Auto-Thinking
+- [[AI/MLLM/MLLM 概述|MLLM 概述]] — 多模态 LLM 的基础框架
+- [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — Bi-Mode Annealing 与 GRPO 探索维度的关系
+- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱

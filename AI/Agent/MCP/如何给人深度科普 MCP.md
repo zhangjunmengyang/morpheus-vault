@@ -382,3 +382,12 @@ MCP的真正贡献，在于它通过“**关注点分离**”这一经典的工�
 参考2：FunctionCalling与MCP：https://blog.dailydoseofds.com/p/function-calling-and-mcp-for-llms
 
 参考3：CherryStudio：https://github.com/CherryHQ/cherry-studio
+
+---
+
+## See Also
+
+- [[AI/Agent/MCP/HF MCP Course|HF MCP Course]] — MCP 的课程版（实践）
+- [[AI/Agent/Fundamentals/Tool Use|Tool Use]] — Tool Use 是 MCP 的底层能力
+- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱
+- [[AI/LLM/_MOC|LLM MOC]] — MCP 在 LLM 生态中的位置

@@ -31,6 +31,7 @@ tags:
 
 - [[AI/Safety/安全对齐与红队|安全对齐与红队]] — Jailbreak 分类、红队流程、防御策略、Anthropic/OpenAI 安全报告
 - [[AI/Safety/对齐技术总结|对齐技术总结]] — 对齐技术综述：RLHF/DPO/Constitutional AI/Scalable Oversight 完整覆盖
+- [[AI/Safety/Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive Regularization]] ⭐ — Harmful intent 在 pre-generation hidden state 中线性可分（AUROC>0.9）；safety critic 动态调整 KL 强度，ASR 从97%压回1-9%（arXiv:2602.17546）★★★★
 
 ## 关联
 

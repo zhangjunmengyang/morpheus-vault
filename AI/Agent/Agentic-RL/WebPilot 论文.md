@@ -51,3 +51,12 @@ tags:
 “其中 (*) 是基于已执行的动作和当前观察得出的继续原因。如果子任务确认为完成，则搜索终止。否则，DES 在 RENE 的指导下进行一步向前模拟，生成一个模拟反思 ( *)，这作为一次浅层尝试，为下一次探索提供洞见。这一过程使得智能体通过模拟潜在结果来更好地理解不可预测的转换，有助于澄清模糊性和不确定性。通过这些模拟赋予的定量值指导智能体做出更明智的决策，有效地在管理不可预测性和不完整信息的同时，导航最有前景的路径。”
 
 最大值反向传播（Maximal Value Backpropagation，MVB）通过优先考虑最有希望的道路来增强传统的蒙特卡洛树搜索（MCTS）的反向传播步骤。与典型的蒙特卡洛树搜索不同，后者通常平均子节点的值，并可能导致探索较不优的道路，MVB使用所有子节点中的最大值，即  ，其中 Q(s) 代表在状态 s 完成子任务的潜在价值。对于首次访问的状态，Q 值初始化为在DES中评估的总得分 。这种方法在整个决策树中累积价值，始终针对具有长期成功最大潜力的策略。通过关注这些高价值路径，WebPilot 确保与最终目标保持一致，而不仅仅是推进到下一个直接步骤。
+
+---
+
+## See Also
+
+- [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — WebPilot 在 Web Automation RL 方向的位置
+- [[AI/Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]] — WebPilot 是 Multi-Agent 系统的 Web 特化版
+- [[AI/Agent/Fundamentals/Tool Use|Tool Use]] — Web 导航依赖的 tool use 能力
+- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱

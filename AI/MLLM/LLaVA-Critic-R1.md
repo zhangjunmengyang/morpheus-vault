@@ -23,3 +23,11 @@ by：马里兰大学、俄亥俄州立大学和新加坡国立大学
 1. 提出测试时自我批评机制，通过Best-of-128策略在5个基准上平均提升13.8%。
 1. 
 实验表明，**批评能力提升与策略性能增强存在强正相关**，模型在视觉感知和结构化推理两方面均显著优化。该研究揭示了批评数据蕴含的生成能力提升潜力，为构建兼具评估与生成能力的统一模型提供了新范式，其测试时自我改进机制也为开发自进化多模态系统指明了方向。
+
+## See Also
+
+- [[AI/MLLM/_MOC|MLLM MOC]] — 多模态大模型全景索引
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO]] — LLaVA-Critic-R1 核心训练算法
+- [[AI/MLLM/多模态大模型-2026-技术全景|多模态大模型 2026 全景]] — MLLM 宏观综述
+- [[AI/LLM/RL/Theory/REMuL-CoT-Faithfulness-Multi-Listener-RL|REMuL]] — 同样研究"critic能力与policy性能正相关"（多模态版 vs 纯文本版）
+- [[AI/MLLM/BLIP-2|BLIP-2]] — 另一个 critic-style 评估设计先驱

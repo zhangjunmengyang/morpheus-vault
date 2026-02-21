@@ -26,3 +26,11 @@ PVPO通过引入参考模型作为优势参考锚点，并结合数据预采样�
 
 - 静态V值估计机制，通过预训练参考模型生成任务奖励锚点，替代传统动态组内平均值，显著降低策略更新方差；
 - 组采样策略，利用参考模型离线评估样本难度，过滤低价值数据并生成零准确率样本的高质量轨迹，提升训练效率。
+---
+
+## See Also
+
+- [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — PVPO 的宏观定位
+- [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — PVPO 与 GRPO 的异同：PVPO 引入预估价值
+- [[AI/Agent/Agentic-RL/Agent-RL-训练实战指南|Agent RL 训练实战指南]] — value estimation 的工程实践
+- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱

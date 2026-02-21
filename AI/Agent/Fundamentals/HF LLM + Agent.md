@@ -203,3 +203,11 @@ https://huggingface.co/learn/agents-course/zh-CN/bonus-unit1/fine-tuning
 
 - 但其实对可量化的问题还算有效，但比如分析场景，每次迭代如何用可量化的指标来衡量分析的“好与坏”，非常困难
 - https://huggingface.co/learn/agents-course/zh-CN/bonus_unit2/monitoring-and-evaluating-agents-notebook
+---
+
+## See Also
+
+- [[AI/Agent/Fundamentals/HF Agent Course|HF Agent Course]] — HF Agent 学习系列的另一篇
+- [[AI/Agent/Fundamentals/Tool Use|Tool Use]] — HF LLM+Agent 的核心能力：tool use
+- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱
+- [[AI/Foundations/ML-Basics/机器学习|机器学习]] — LLM 的 ML 基础

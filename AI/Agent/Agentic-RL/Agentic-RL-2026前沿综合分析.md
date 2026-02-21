@@ -1,20 +1,44 @@
 ---
-title: "Agentic RL 2026 前沿综合分析 — 三大难题与对应解法"
-date: 2026-02-20
+title: "Agentic RL 2026 前沿综合分析 — 四大维度与对应解法"
+date: 2026-02-21
 type: synthesis
-tags: [agentic-RL, credit-assignment, reward-design, environment, synthesis, 2026]
+tags: [agentic-RL, credit-assignment, reward-design, environment, workflow-design, topology, synthesis, 2026]
 related:
   - "[[Kimi-K2.5-PARL]]"
   - "[[CM2]]"
   - "[[HiPER-Hierarchical-RL-Credit-Assignment]]"
   - "[[EnterpriseGym-Corecraft]]"
   - "[[OpenRS-Pairwise-Adaptive-Rubric]]"
-  - "[[Agentic RL Training]]"
+  - "[[FlowSteer-CWRPO-Workflow-Orchestration-RL]]"
+  - "[[AgentConductor-Topology-Evolution-Multi-Agent-Code]]"
+  - "[[SquRL-Dynamic-Workflow-Text-to-SQL]]"
+  - "[[PA-MoE-Phase-Aware-Mixture-of-Experts]]"
 ---
 
-# Agentic RL 2026 前沿综合分析 — 三大难题与对应解法
+# Agentic RL 2026 前沿综合分析 — 四大维度与对应解法
+
+> v2.0（2026-02-21）：框架从「三大难题」升级为「四大维度」，新增 Workflow/Topology 设计维度，补充 FlowSteer/AgentConductor/SquRL/PA-MoE 等新工作。
 
 > 这篇笔记是对 2026 年 2 月集中涌现的 Agentic RL 工作的综合理解，不是论文列表，是一个框架。
+
+---
+
+## 核心框架（v2 升级）
+
+v1 的「三大难题」框架（环境/Reward/算法）捕捉到了早期工作的主要分野。但 2/17-20 密集涌现的新一批论文揭示了**第四个维度**：
+
+> **Workflow/Topology 设计本身就是 agent 能力的决定变量**，不亚于算法或 reward。
+
+升级后的框架：
+
+```
+Agentic RL 训练 = 环境 × Reward × Workflow/Topology × 算法
+
+原三大难题保持不变，新增第四维度：
+4. Workflow/Topology 问题：静态设计的 pipeline 是性能瓶颈而非模型能力
+```
+
+---
 
 ## 为什么 Agentic RL 现在是最热的方向
 
@@ -136,28 +160,120 @@ PARL：subagent 固定 → orchestrator 学如何分解任务 + 创建 subagent
 
 ---
 
-## 整合框架：2026 Agentic RL 研究地图
+---
+
+## 难题 4：静态 Workflow/Topology 是性能瓶颈
+
+### 问题
+
+2/17-21 涌现了一批共同指向同一根本问题的论文：
+
+> **「最佳模型能力」和「最佳任务表现」之间存在 workflow gap**——不是 LLM 本身的问题，是 workflow 设计的问题。
+
+具体表现：
+- 同一个 7B 模型，用不同 workflow 可以差出 15%+ 的 pass@1
+- 复杂任务需要 dense cross-agent DAG，简单任务只需 chain，静态选择一种必有损失
+- 单一 policy 的 simplicity bias：agent 对所有难度的任务都用相同参数量应对
+
+### 四种解法从不同粒度切入：
+
+**解法 A — FlowSteer CWRPO（2602.01664）: Operator 级别**
+
+把数学解题分解为 operator 序列，用 RL 学编排顺序：
+```
+核心创新：条件释放设计
+R(τ) = R_struct + I[R_struct ≥ θ] × λ × R_ans
+                    ↑
+        只有结构质量达标，才给 correctness reward
+```
+切断了 "shortcut 答案 bypass 结构质量" 的奖励路径。
+
+**解法 B — AgentConductor（2602.17100）: Agent 通信 Topology 级别**
+
+用 RL 训练 3B orchestrator 为每道题生成 YAML 格式的 DAG：
+```
+关键发现：
+- 简单题：sparse chain（密度低），节省 68% token
+- 难题：dense cross-layer DAG（密度高）
+- density function = f(task_difficulty)
+```
+三个指标同向改善：pass@1 +14.6%，density -13%，cost -68%。**这是 "越难题用越复杂图" 的第一次 formalization。**
+
+**解法 C — SquRL（2602.15564）: Workflow 选择级别**
+
+形式化证明动态 workflow 选择的理论优势（Theorem 3.1）：
+
+$$\text{EX}_{\text{dynamic}} \geq \text{EX}_{\text{static}}，\Delta = 0 \text{ iff 某个 workflow 覆盖所有 success regions}$$
+
+Oracle evaluation 显示动态选择上界达到 81.5%，远超任何单一静态 workflow。
+核心机制：**Dynamic Actor Masking**（随机 dropout actors，强迫探索更多 workflow 组合）。
+
+**解法 D — PA-MoE（2602.17038）: Expert 路由级别（Phase-Aware MoE）**
+
+单一 policy 的 simplicity bias 根源：不同任务 phase 需要不同 skill，但同一 policy 用同一参数覆盖所有 phase：
+```
+Phase 识别：CrossAttn(obs, goal) + LSTM(action history)
+路由粒度：8次/episode（比 token-level 的45次 更合适，比 trajectory-level 的3次 更细）
+效果：1.5B PA-MoE > 7B baseline
+```
+
+### 四种解法的定位比较
+
+| 解法 | 粒度 | 核心机制 | 代表任务 | 核心贡献 |
+|------|------|---------|---------|---------|
+| FlowSteer | Operator 序列 | 条件奖励门控 | 数学解题 | 切断 shortcut reward |
+| AgentConductor | Agent 通信图 | RL 生成 DAG | 竞赛代码 | difficulty-aware density |
+| SquRL | Workflow 选择 | Dynamic Actor Masking | Text-to-SQL | 理论证明 dynamic > static |
+| PA-MoE | MoE expert 路由 | Phase-aware routing | ALFWorld/WebShop | 参数效率 |
+
+**统一视角**：四者都在解决「固定结构无法适应任务多样性」的问题，只是在不同粒度切入。
+
+---
+
+## 整合框架：2026 Agentic RL 研究地图（v2）
 
 ```
 Agentic RL 训练 Pipeline
 │
-├── 🏗️ 环境设计
+├── 🏗️ 维度 1：环境设计
 │   └── EnterpriseGym Corecraft（高保真企业环境）
 │       原则：task diversity + expert rubrics + realistic workflows
 │
-├── 🎯 Reward 设计  
+├── 🎯 维度 2：Reward 设计  
 │   ├── CM2 — Checklist reward（工具调用场景）
 │   ├── OpenRS — Rubric-based reward（通用对齐）
-│   └── (Corecraft 的 expert rubrics 也是一种 reward 设计)
+│   └── FlowSteer — 条件释放 reward（结构质量门控）
 │
-├── ⚙️ 训练算法
-│   ├── HiPER — HAE（单 agent，时间分层）
+├── 🔗 维度 3：Workflow / Topology 设计（新）
+│   ├── AgentConductor — RL 生成 agent communication DAG
+│   ├── SquRL — RL 选择最优 workflow 组合
+│   └── PA-MoE — Phase-aware expert routing
+│
+├── ⚙️ 维度 4：训练算法
+│   ├── HiPER — HAE（单 agent，时间分层 credit assignment）
 │   ├── PARL — Freeze subagents（多 agent，空间分离）
 │   └── GRPO/PPO 仍是基础算法
 │
 └── 📏 评估
-    └── Gaia2（异步动态环境，action-level verifier）
+    └── Gaia2 / ALFWorld / WebShop / SynSQL
 ```
+
+---
+
+---
+
+## 跨域连接：Agentic RL 与 Safety 的汇合
+
+2/19 的一篇论文（2602.17546）揭示了一个重要发现，虽然不直接是 agentic RL，但对 agent safety 有直接意义：
+
+**Harmful intent 在 pre-generation activation 中线性可分（AUROC > 0.9）**
+
+这意味着：
+1. Agent 在调用工具、写 code、访问 memory **之前**，其内部状态已经编码了 intent
+2. 可以用轻量 probe 在 generation 发生之前检测并拦截
+3. 对于 agentic workflow，可以在每个 action step 之前插入 safety gate
+
+这与盾卫项目的核心思路完全契合：**不是等 agent 输出有害内容再拦截，而是在 forward pass 中早期发现意图，零 inference overhead**。
 
 ---
 
@@ -173,6 +289,24 @@ Agentic RL 训练 Pipeline
 
 ---
 
+## 2026 年 Agentic RL 工作全景（按时间）
+
+| 日期 | 论文 | arXiv | 维度 | 评分 |
+|------|------|-------|------|------|
+| 2/10 | EnterpriseGym Corecraft | 2602.16179 | 环境 | ★★★★★ |
+| 2/13 | CM2 | 2602.12268 | Reward | ★★★★☆ |
+| 2/14 | OpenRS | 2602.14069 | Reward | ★★★☆☆ |
+| 2/15 | HiPER | 2602.16165 | 算法 | ★★★★☆ |
+| 2/15 | KLong | 2602.17547 | 算法 | ★★★★☆ |
+| 2/16 | Kimi-K2.5 PARL | 2602.02276 | 算法 | ★★★★☆ |
+| 2/17 | FlowSteer CWRPO | 2602.01664 | Workflow | ★★★☆☆ |
+| 2/17 | SquRL | 2602.15564 | Workflow | ★★★☆☆ |
+| 2/19 | AgentConductor | 2602.17100 | Workflow | ★★★★☆ |
+| 2/20 | PA-MoE | 2602.17038 | Workflow | ★★★★☆ |
+| 2/20 | Calibrate-Then-Act | 2602.11841 | 算法 | ★★★☆☆ |
+
+---
+
 ## 对老板的直接价值
 
 如果在面试中被问到"你对 agentic RL 的理解"，这个框架给出了一个结构化回答：
@@ -183,3 +317,27 @@ Agentic RL 训练 Pipeline
 4. **开放问题**：honest 地说明当前上限在哪里
 
 这种回答比列举论文名字深度高一个数量级。
+
+---
+
+## 核心洞察（一句话）
+
+**2026 年 Agentic RL 的根本争论不是"哪个算法更好"，而是"瓶颈到底在哪里"：**
+
+- 环境派：bottleneck 是环境质量（Corecraft 的证据）  
+- Reward 派：bottleneck 是 reward 可靠性（CM2/OpenRS 的证据）  
+- Workflow 派：bottleneck 是 pipeline 静态性（AgentConductor/SquRL 的证据）  
+- 算法派：bottleneck 是 credit assignment（HiPER/PARL 的证据）  
+
+**正确答案可能是全部**——但不同任务和不同发展阶段，各维度的权重不同。
+
+## See Also（全路径索引）
+
+> 本笔记正文内链为 Scholar 写入的简短路径；以下为馆长补充的全路径对照，便于 Obsidian 图谱检索。
+
+- [[AI/Agent/_MOC|Agent MOC]] — Agentic RL 在 Agent 知识域的位置
+- [[AI/Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer (CWRPO)]] — 维度 4：Operator 级 workflow 设计（Workflow/Topology 解法 A）
+- [[AI/Agent/Agentic-RL/AgentConductor-Topology-Evolution-Multi-Agent-Code|AgentConductor]] — 维度 4：Agent 通信 Topology 级（解法 B，difficulty-aware density）
+- [[AI/Agent/Agentic-RL/SquRL-Dynamic-Workflow-Text-to-SQL|SquRL]] — 维度 4：Workflow 选择级（解法 C，Theorem 3.1 形式化证明）
+- [[AI/LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — reward modeling 自适应分配（与 Reward 维度高度互补）
+- [[AI/Safety/Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization]] — Agentic RL × Safety 汇合点：pre-generation hidden state 安全门控

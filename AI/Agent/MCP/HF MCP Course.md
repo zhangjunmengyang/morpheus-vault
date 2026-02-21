@@ -113,3 +113,12 @@ Streamable HTTP 相较于传统的 HTTP + SSE 机制，具有以下优势：[osc
 Streamable HTTP 是 MCP 协议的一次重要升级，通过引入按需流式传输、统一端点和会话管理机制，解决了传统 HTTP + SSE 机制在资源消耗和连接稳定性方面的不足，提升了通信的灵活性和可靠性。对于需要高并发、实时反馈和状态管理的 AI 应用，Streamable HTTP 提供了更优的解决方案。[阿里云开发者社区+4博客园](https%3A%2F%2Fwww.cnblogs.com%2Falisystemsoftware%2Fp%2F18851650%3Futm_source%3Dchatgpt.com)[+4fastclass.cn](https%3A%2F%2Fwww.cnblogs.com%2Falisystemsoftware%2Fp%2F18851650%3Futm_source%3Dchatgpt.com)[+4](https%3A%2F%2Fwww.cnblogs.com%2Falisystemsoftware%2Fp%2F18851650%3Futm_source%3Dchatgpt.com)
 
 如果您对 Streamable HTTP 的具体实现或在特定场景中的应用有进一步的兴趣，欢迎继续提问。
+
+---
+
+## See Also
+
+- [[AI/Agent/MCP/如何给人深度科普 MCP|如何深度科普 MCP]] — MCP 的概念深度版
+- [[AI/Agent/Fundamentals/Tool Use|Tool Use]] — MCP 是 Tool Use 的标准化协议
+- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱
+- [[AI/LLM/_MOC|LLM MOC]] — MCP 在 LLM 生态中的位置
