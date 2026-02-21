@@ -1418,6 +1418,63 @@ tags: [面试, 速查, AI]
 
 ---
 
+## 二十四、多智能体系统与协作框架方向
+
+### Q1: 多 Agent 系统 vs 单 Agent 的优劣？何时不该用多 Agent？
+- 优势：专业化分工（每Agent聚焦特定领域）、并行处理、上下文窗口分摊、错误隔离
+- 不该用：任务简单可单Agent解决、延迟<2s、成本敏感（多Agent token消耗3-10x）、任务高度耦合无法分解
+- 判断准则：能1个Agent+好prompt解决，就不引入多Agent复杂性
+
+### Q2: 集中式 vs 去中心化 vs 层级式 vs 混合式架构？
+- 集中式：Orchestrator统调，O(n)通信，全局最优但单点故障，适合<10 Agent
+- 去中心化：对等通信，O(n²)开销，无单点故障，适合辩论/社会模拟
+- 层级式：多层管理，O(n log n)通信，模拟组织结构，适合软件工程（MetaGPT）
+- 混合式：2026主流——全局集中调度 + 子团队内灵活通信，LangGraph/OpenClaw
+
+### Q3: LangGraph / AutoGen / CrewAI 核心差异与选型？
+- LangGraph：图编排引擎（StateGraph），支持条件分支/循环/并行，最灵活但最复杂，生产首选
+- AutoGen：对话式Agent框架（ConversableAgent+GroupChat），v0.4引入gRPC分布式运行时
+- CrewAI：角色驱动（role+backstory），API极简，适合快速MVP但灵活性有限
+- MetaGPT：SOP驱动+Pub-Sub消息，软件工程场景首选；CAMEL：角色扮演社会模拟；Swarm：教学级handoff
+
+### Q4: 委托攻击（Delegation Attack）及防御？
+- 定义：恶意指令通过Agent委托链传播绕过安全检查（User→A→B(被注入)→C执行恶意操作）
+- 防御：委托深度≤3、子Agent权限⊆父Agent权限、输入消毒检测注入模式
+- 核心原则：结构性安全（沙盒/权限系统），不靠prompt；信任衰减（链越长信任越低）
+
+### Q5: 多Agent记忆设计模式与记忆投毒防御？
+- 模式：全共享（简单不安全）→分区共享→发布-订阅（MetaGPT）→全隔离（最安全）
+- 投毒防御：来源标记+信任级别、写入验证（不可信标记UNVERIFIED）、语义一致性检查、版本控制+回滚
+- 原则：默认隔离按需共享、信任分级存储（L3系统>L2验证>L1 Agent>L0外部）
+
+### Q6: MCP 与 A2A 协议的区别与互补？
+- MCP（Anthropic）：Agent↔Tool连接协议，类比USB-C，解决M×N→M+N集成问题
+- A2A（Google）：Agent↔Agent通信协议，核心概念AgentCard/Task/Message
+- 互补：MCP是纵向（Agent用工具），A2A是横向（Agent间协作），生产系统需两者
+
+### Q7: 如何评估多Agent系统质量？
+- 四维度：任务质量（正确性/完整性）、协作效率（token消耗/延迟/轮次）、鲁棒性（错误恢复/幻觉传播率）、安全性（注入抵抗/数据泄露率）
+- 关键指标：Token效率=有用输出/总消耗（典型10-30%），关键路径延迟=DAG最长路径
+- Benchmark：SWE-bench（代码）、GAIA-2（通用推理）、τ-bench（客服）
+
+### Q8: 涌现行为控制——正面涌现促进、负面涌现防御？
+- 正面涌现：角色特化、通信协议演化、集体记忆、创造性解法
+- 负面涌现：群体极化、社交惰化、信息茧房、共谋绕过安全规则、幻觉级联
+- 控制策略：多样性注入（不同prompt/temperature/模型）、独立思考优先、魔鬼代言人Agent、异常检测+HITL
+
+### Q9: 多Agent瓶颈分析方法论？
+- 关键路径分析：DAG拓扑排序找最长延迟路径
+- Agent利用率=活跃时间/总时间；Token效率=有用output/总消耗
+- 常见瓶颈：Orchestrator过载（分层编排）、串行依赖过多（并行化）、Token浪费（消息压缩只传摘要）
+- 工具：LangSmith/Langfuse（LLM追踪）+ OpenTelemetry（分布式追踪）
+
+### Q10: 2026 多Agent系统最大挑战？
+- 成本控制（智能路由+消息压缩）、延迟管理（并行化+缓存）、安全新型威胁（委托攻击/幻觉传播/权限升级）
+- 标准化早期（MCP/A2A/Agent Protocol跨框架互操作困难）、评估困难（缺乏公认多Agent协作质量标准）
+- 核心矛盾：能力需多Agent才达到 ↔ 多Agent复杂性带来新问题，关键是找最佳平衡点
+
+---
+
 ## See Also（深度笔记导航）
 
 > 本手册是速查层（K→W），以下为各方向的完整深度版，面试前根据岗位方向选择精读。
@@ -1463,6 +1520,9 @@ tags: [面试, 速查, AI]
 
 ### LLM工具调用与Function Calling方向
 - [[AI/Agent/LLM工具调用与Function-Calling-2026技术全景|LLM 工具调用与 Function Calling 2026 全景]] — FC原理/MCP协议/安全攻防/训练方法/多工具编排全栈，14 道面试题 + 35 篇文献 ⭐
+
+### 多智能体系统方向
+- [[AI/Agent/多智能体系统与协作框架-2026技术全景|多智能体系统与协作框架 2026 全景]] — 架构范式/通信协议/框架对比/安全信任/涌现行为/工业案例全栈，15 道面试题 + 40 篇文献 ⭐
 
 ### 职业方向
 - [[Career/_MOC|Career MOC]] — 求职知识域全索引
