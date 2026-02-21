@@ -1090,3 +1090,106 @@ tags: [面试, 速查, AI]
 - Code Agent RL：代码有 verifiable reward，是 RL 最佳应用场景
 - GRPO 普及：无需 RM/Critic，降低 RL 训练门槛
 - Offline RL 复兴：Decision Transformer + DPO 本质是 offline RL
+
+---
+
+## 十九、计算机视觉基础与前沿方向
+
+**本方向核心关键词**：CNN、ViT、YOLO、DETR、UNet、SAM、CLIP、DINOv2、Diffusion、3DGS、Flow Matching、VLA
+
+### Q1: 为什么 ResNet 能训练很深而 VGG 不行？
+- 残差连接提供 identity shortcut，梯度直通：$\frac{\partial \mathcal{L}}{\partial x_l}$ 含恒等项 1
+- 隐式 ensemble：$2^n$ 个子网络集成，单层删除影响小
+- Loss landscape 更平滑，优化更容易
+- VGG 深了后**训练** loss 变差 = 优化问题，非过拟合
+
+### Q2: ViT 和 CNN 的核心区别？
+- CNN：局部卷积 + 平移等变性，归纳偏置强，小数据友好，$O(N)$
+- ViT：全局 Self-Attention，几乎无归纳偏置，需大数据，$O(N^2)$
+- 大数据下 ViT 胜出（更大假设空间），小数据下 CNN 胜出
+- ConvNeXt 证明 CNN 用 ViT 训练策略可追平，趋势是 Hybrid
+
+### Q3: YOLO 系列的核心演进线？
+- v1→v3：Anchor-based + 多尺度 FPN，Darknet backbone
+- v5→v8：Anchor-free + Decoupled head + DFL loss + Task-Aligned Assigner
+- v10：NMS-free（Consistent Dual Assignment），端到端
+- YOLO-World：Open-vocabulary，结合 CLIP text encoder
+
+### Q4: DETR 相比 YOLO 的核心优劣？
+- **优势**：端到端（无 NMS/Anchor），全局推理（Self-Attention），集合预测
+- **劣势**：收敛慢（500 epochs），小目标弱，计算量大
+- 改进线：Deformable DETR → DINO-DETR(63.3 mAP) → RT-DETR(实时)
+
+### Q5: Diffusion Model 的训练目标是什么？为什么比 GAN 好？
+- 训练：预测噪声 $\mathcal{L} = \|\epsilon - \epsilon_\theta(x_t, t)\|^2$，简单 MSE loss
+- 前向加噪 $q(x_t|x_0) = \mathcal{N}(\sqrt{\bar\alpha_t}x_0, (1-\bar\alpha_t)I)$，反向去噪
+- 比 GAN 好：训练稳定、无 mode collapse、条件生成灵活、可 scale up
+- CFG = $(1+w)\epsilon_\theta(x_t,c) - w\epsilon_\theta(x_t,\varnothing)$，平衡质量和多样性
+
+### Q6: SAM 的 "万物分割" 是怎么实现的？
+- Data Engine 飞轮：手动标注 → 半自动 → 全自动 → 11M 图 1.1B masks
+- Promptable 架构：Image Encoder(ViT-H) + Prompt Encoder + Mask Decoder
+- Ambiguity-aware：一个提示返回 3 个候选 mask + IoU score
+- SAM 不做语义分类，结合 CLIP/GroundingDINO 才有语义
+
+### Q7: CLIP 的 zero-shot 分类原理和局限？
+- 原理：400M 图文对对比预训练 → 图文共享 embedding → 文本即分类器
+- 局限：粗粒度对齐、Bag-of-Words（词序不敏感）、属性绑定弱、计数/空间关系差
+- SigLIP 改进：Sigmoid loss 替代 Softmax → 去全局归一化 → 超大 batch 更高效
+
+### Q8: 3D Gaussian Splatting vs NeRF 的核心 trade-off？
+- NeRF：隐式 MLP，训练数小时，渲染秒级，存储小，不可编辑
+- 3DGS：显式 Gaussian 集合，训练 30min，实时渲染(>100FPS)，存储大，可编辑
+- 3DGS 用可微光栅化（alpha blending），NeRF 用体渲染（ray marching）
+- 3DGS 挑战：存储压缩、动态场景、大场景扩展
+
+### Q9: DINOv2 为什么不用标签就能学到很好的特征？
+- 三目标互补：Self-distillation(DINO) + MIM(iBOT) + KoLeo regularizer
+- 高质量数据 LVD-142M：从 1.2B 图像 curate 出 142M
+- 冻结特征 + 线性 probe 即达 86.3% ImageNet → task-agnostic 通用视觉表征
+
+### Q10: 视觉 Agent 面临的核心挑战？
+- Grounding 精度：UI 元素定位误差 10-20px 可能点错按钮
+- 错误累积：每步 95% 准确 → 20 步后仅 36% 成功率
+- 泛化：网站/APP 布局千变万化，需理解功能语义非死记布局
+- 安全：操作真实系统有不可逆风险，需 HITL + 沙箱 + 权限控制
+
+---
+
+## See Also（深度笔记导航）
+
+> 本手册是速查层（K→W），以下为各方向的完整深度版，面试前根据岗位方向选择精读。
+
+### Agent 方向
+- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识域全索引
+- [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 四大维度分析]] — 四大维度框架（环境/Reward/Workflow/算法），面试必备 ⭐
+- [[AI/Agent/Agentic-RL/Agent-RL-训练实战指南|Agent RL 训练实战指南]] — 现象·坑·解法，1001行 ★★★★★
+
+### LLM 技术方向
+- [[AI/LLM/_MOC|LLM MOC]] — LLM 知识域全索引
+- [[AI/LLM/RL/RLHF-DPO-2026-技术全景|RLHF DPO 2026 技术全景]] — 对齐技术深度版（RLHF/DPO/宪法AI）
+- [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 改进全景]] — GRPO 七大维度深度分析
+- [[AI/LLM/Inference/模型量化综述|模型量化综述]] — 推理优化方向深度
+- [[AI/LLM/Efficiency/知识蒸馏与模型压缩-2026技术全景|知识蒸馏与模型压缩 2026]] — 效率方向深度
+
+### Safety 方向
+- [[AI/Safety/_MOC|Safety MOC]] — AI 安全全索引
+- [[AI/Safety/AI安全与对齐-2026技术全景|AI 安全与对齐 2026 全景]] — Safety 面试深度版
+- [[AI/Safety/Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization]] — 2026 最新：hidden state 安全检测 AUROC>0.9
+
+### RL 方向
+- [[AI/LLM/RL/_MOC|RL MOC]] — 强化学习知识域全索引
+- [[AI/LLM/RL/Fundamentals/强化学习的数学原理|强化学习数学原理]] — MDP/Bellman/GAE 数学基础
+- [[AI/LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — 2026 Reward Modeling 前沿（Fisher信息驱动）
+
+### RAG 方向
+- [[AI/RAG/_MOC|RAG MOC]] — RAG 知识域全索引
+- [[AI/RAG/Advanced RAG|Advanced RAG]] — Self-RAG/GraphRAG 进阶技术
+- [[AI/RAG/向量数据库选型|向量数据库选型]] — FAISS/Milvus/Chroma 对比
+
+### 计算机视觉方向
+- [[计算机视觉基础与前沿-2026技术全景|CV 2026 技术全景]] — CNN/ViT/检测/分割/生成/3D/Agent，12+ 面试题 + 39 篇文献 ⭐
+
+### 职业方向
+- [[Career/_MOC|Career MOC]] — 求职知识域全索引
+- [[Career/Job-Board/_求职看板|求职看板]] — 当前投递状态追踪
