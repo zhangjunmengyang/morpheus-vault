@@ -203,3 +203,12 @@ KV Cache 管理: PagedAttention / Paged KV Cache
 ### Q6: 如何支持长上下文（128K+）推理？
 
 **要点**：多管齐下 —— GQA 减少 KV 头数、KV Cache 量化（FP8/INT8）减少每个元素大小、Sliding Window 限制缓存长度、PagedAttention 减少碎片、Offloading 利用 CPU 内存。提到 Ring Attention（跨设备分布式 KV Cache）更佳。
+
+---
+
+## See Also
+
+- [[AI/LLM/Inference/KV Cache|KV Cache（LLM 深度版）]] — 本文面试版，深度版含 PagedAttention/vLLM/MLA/量化实现
+- [[AI/LLM/Architecture/长上下文技术|长上下文技术]] — 128K+ 场景下 KV Cache 是核心瓶颈；GQA/Sliding Window/Ring Attention 均是 KV Cache 的扩展方案
+- [[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]] — MLA/GQA/MQA 从架构层减少 KV heads，是 KV Cache 的根本优化方向
+- [[AI/Foundations/Inference/Speculative Decoding|Speculative Decoding（推理加速）]] — KV Cache 优化显存，Speculative Decoding 优化 latency；两者是推理加速的两个独立维度，组合使用

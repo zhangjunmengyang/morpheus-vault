@@ -1,12 +1,16 @@
 ---
 title: "CLIP"
+date: 2021-01-05
 type: paper
 domain: ai/mllm
 created: "2026-02-13"
-updated: "2026-02-13"
+updated: "2026-02-21"
 tags:
   - ai/mllm
   - type/paper
+arxiv: "2103.00020"
+rating: ★★★★★
+status: active
 ---
 # CLIP
 
@@ -98,12 +102,12 @@ CLIP 在各种分布偏移测试（ImageNet-V2、ImageNet-Sketch、ImageNet-A �
 
 ## 相关
 
-- [[AI/CV/ViT|ViT]]
-- [[BLIP-2]]
-- [[Qwen-VL]]
-- [[AI/LLM/Architecture/BERT|BERT]]
+- [[AI/CV/ViT|ViT]] — CLIP 的 Image Encoder 选项之一
+- [[AI/MLLM/BLIP-2|BLIP-2]] — 继承 CLIP 对比学习范式，用 Q-Former 解决 frozen encoder 对齐
+- [[AI/MLLM/Qwen-VL|Qwen-VL]] — 阿里 MLLM，使用 CLIP-style Vision Encoder 接 LLM
+- [[AI/LLM/Architecture/BERT|BERT]] — Transformer 编码器，CLIP Text Encoder 的架构基础
 - [[AI/Foundations/DL-Basics/深度学习|深度学习]]
-- [[AI/MLLM/InternVL3|InternVL3]]
-- [[AI/MLLM/DeepSeek-VL|DeepSeek-VL]]
-- [[AI/MLLM/MLLM 概述|MLLM 概述]]
-- [[AI/MLLM/非文本的模态对齐|非文本的模态对齐]]
+- [[AI/MLLM/InternVL3|InternVL3]] — 后续 MLLM，同样基于 CLIP-style 视觉-语言对齐
+- [[AI/MLLM/DeepSeek-VL|DeepSeek-VL]] — DeepSeek 多模态，使用 SigLIP（CLIP 改进版）作 Vision Encoder
+- [[AI/MLLM/MLLM 概述|MLLM 概述]] — 多模态大模型整体框架综述
+- [[AI/MLLM/非文本的模态对齐|非文本的模态对齐]] — CLIP 的核心贡献正是"非文本模态对齐"的奠基工作

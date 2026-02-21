@@ -73,6 +73,7 @@ tags:
 - [[AI/LLM/Inference/TensorRT-LLM|TensorRT-LLM]] — NVIDIA 推理优化
 - [[AI/LLM/Inference/Ollama|Ollama]] — 本地部署
 - [[AI/LLM/Inference/Test-Time-Compute|Test-Time Compute (TTC)]] — 推理时扩展综述：CoT/PRM/Best-of-N/Budget Forcing
+- [[AI/LLM/Inference/TTC-Test-Time-Compute-Efficiency-2026-综合分析|TTC 效率 2026 综合分析]] ⭐ — 面试级元分析：四大路线分类框架（自适应早停/选择性遗忘/Token质量控制/训练时嵌入）+ 四诊断对比矩阵 + 未解根本问题；覆盖 ConformalThinking/IntroLLM/DTR/Accordion/PTE（★★★★★）
 - [[AI/LLM/Inference/Gemini-3-Deep-Think|Gemini 3 Deep Think]] — ARC-AGI-2 84.6%, TTC scaling
 - [[AI/LLM/Inference/Deep-Thinking-Ratio-DTR|Deep-Thinking Ratio (DTR)]] — 质量 > 数量：深层 token 占比 r=0.828 准确率，推翻"CoT 越长越好"，UVA+Google（★★★★☆）
 - [[AI/LLM/Inference/Deep-Thinking-Ratio-DTR-v2-Think-At-N|DTR v2 + Think@N]] ⭐ — 精读完整版：50-token prefix DTR 比全序列更准；Think@N 在 AIME25 准确率+2%同时成本减半；"推理深度在开头50 token已决定"（★★★★★）
@@ -86,6 +87,7 @@ tags:
 - [[AI/LLM/Inference/Sink-Aware-Pruning-Diffusion-LLM|Sink-Aware Pruning]] — Diffusion LLM 注意力 sink 感知剪枝：LLaDA 上 40% 冗余层可裁剪，MMLU/GSM8K 仅降 <0.5%，MBZUAI（arXiv:2602.17664，★★★★☆）
 - [[AI/LLM/Inference/Progressive-Thought-Encoding-Cache-Efficient-RL|PTE（Progressive Thought Encoding）]] ⭐ — KV cache 满时先学习再 evict：cross-attention 压缩 evicted token 到 LoRA ΔW，online self-distillation；AIME +33%，内存 -40%；ICLR 2026，微软研究院（arXiv:2602.16839）★★★★★
 - [[AI/LLM/Inference/Accordion-Thinking-Self-Regulated-Step-Summaries|Accordion-Thinking]] — 让模型用 RL 学会主动压缩：每步生成 summary 后 fold（丢弃原始 CoT），RL 强制 summary 无损；Gap-Vanishing 现象证明压缩=等价；4× throughput 零精度损失；ICML 2026（arXiv:2602.03249）★★★★☆
+- [[AI/LLM/Inference/ConformalThinking-Risk-Control-Test-Time-Compute|ConformalThinking]] ⭐ — 把"何时停止思考"重新定义为统计风险控制：双阈值停止（停-on-confident + 停-on-hopeless）+ distribution-free 保证，用户指定 error rate ε 自动校准阈值；JHU+Google DeepMind，ICML 2026（arXiv:2602.03814）★★★★★
 - [[AI/LLM/Inference/推理优化|推理优化]] — 综述
 - [[AI/LLM/Inference/端侧推理量化精度陷阱-跨骁龙芯片精度失真|端侧量化精度陷阱]] — 同一 INT8 模型跨 5 款骁龙 SoC 精度差 20%；云端 benchmark 完全失真；NPU INT8 算子实现差异根因；PTQ vs QAT 端侧选型建议（馆长工程笔记，2026-02-20）★★★★☆
 - [[AI/LLM/Inference/推理服务架构|推理服务架构]]
@@ -166,11 +168,15 @@ tags:
 - [[AI/LLM/Application/RAG/检索策略|检索策略]]
 
 ### 合成数据
+- [[AI/LLM/Application/Synthetic-Data/合成数据与数据飞轮-2026技术全景|合成数据与数据飞轮 2026 全景]] ⭐ — 面试武器库#25，1738行：Self-Instruct/RLAIF/Model-Collapse/数据飞轮架构/质量控制全覆盖 ★★★★★
 - [[AI/LLM/Application/Synthetic-Data/Synthetic Data|合成数据]]
 - [[AI/LLM/Application/Synthetic-Data/DataFlow|DataFlow]]
 
 ### 代码生成
 - [[AI/LLM/Application/LLM代码生成-2026技术全景|LLM 代码生成 2026 全景]] ⭐ — 面试武器库 #17，1083行：预训练数据工程→代码模型架构→核心模型对比→代码 RL 训练→安全合规（2026-02-20）★★★★★
+
+### 角色扮演 (RolePlaying)
+- [[AI/LLM/RolePlaying/OpenCharacter-Large-Scale-Synthetic-Persona-Training|OpenCharacter（合成Persona角色扮演训练）]] — Tencent AI Lab：20k合成角色+306k对话SFT，8B达GPT-4o水平；Character Generalization元能力；与PERSIST的张力：表面风格✅可学，结构稳定性❌未解决（arXiv:2501.15427）★★★
 
 ### 其他应用
 - [[AI/LLM/Application/LLMOps|LLMOps]]
@@ -200,6 +206,7 @@ tags:
 - [[AI/LLM/LLM评估与Benchmark-2026技术全景|LLM 评估与 Benchmark 2026 技术全景]] ⭐ — 1854行全景：Benchmark 设计·主流评测集·自动化评估·前沿趋势（2026-02-20）★★★★★
 - [[AI/LLM/Evaluation/LLM 评测体系|LLM 评测体系]]
 - [[AI/LLM/Evaluation/ICLR-2026-趋势分析|ICLR 2026 趋势分析]] — 5357 篇 accepted papers 趋势
+- [[AI/LLM/Evaluation/PERSIST-LLM-Personality-Stability-Benchmark|PERSIST（LLM人格稳定性基准）]] ⭐ — AAAI 2026，Mila：25模型/200万+回复最大规模研究；核心结论：Scaling不解决一致性，CoT反而放大不稳定，400B+模型SD>0.3；当前LLM缺乏行为一致性的架构基础（arXiv:2508.04826）★★★★★
 
 ## 其他
 - [[AI/LLM/小规模训练手册|小规模训练手册]] — 构建世界级 LLM 的秘密

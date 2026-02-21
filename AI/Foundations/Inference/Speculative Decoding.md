@@ -269,3 +269,12 @@ $\alpha$ 取决于 draft model 与 target model 分布的接近程度。
 - Cai et al. (2024). *Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads*
 - Li et al. (2024). *EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty*
 - Fu et al. (2024). *Break the Sequential Dependency of LLM Inference Using Lookahead Decoding*
+
+---
+
+## See Also
+
+- [[AI/LLM/Inference/Speculative Decoding|Speculative Decoding（LLM 深度版）]] — 本文面试版，深度版含 Medusa/EAGLE/Lookahead 实现细节
+- [[AI/Foundations/Inference/KV Cache|KV Cache]] — 推理加速双轮：Speculative Decoding 降 latency，KV Cache 优化降显存；两者互补
+- [[AI/Foundations/Inference/采样策略|采样策略]] — Speculative Decoding 的 draft token 验收机制依赖采样策略（temperature/top-p）；草稿模型用贪心，验证阶段用修正采样
+- [[AI/LLM/Inference/LLM推理优化2026全景|LLM 推理优化 2026 全景]] ⭐ — 推理加速工程全景；Speculative Decoding 是其中 compute-bound 场景的核心技术

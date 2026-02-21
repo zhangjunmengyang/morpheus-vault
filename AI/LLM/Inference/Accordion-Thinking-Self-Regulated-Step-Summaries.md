@@ -185,11 +185,11 @@ Accordion-Thinking 提供了一个新路径：**压缩推理链，而非截断�
 
 ## 关键词连接
 
-- [[GRPO]] - 采用 GRPO 变体（无 KL，无 length normalization）
-- [[Progressive-Thought-Encoding]] - 同类问题（长 CoT 效率），不同路径（主动 vs 被动压缩）
-- [[Jet-RL-FP8-On-Policy-RL-Training]] - 系统效率（量化）vs 算法效率（压缩），可组合
-- [[RL-Training-Stability-2026-Unified-Analysis]] - 归属 Exploration/Efficiency 维度
-- [[Test-Time-Compute-Scaling]] - ICLR 2026 最大热点，Accordion 是 TTC 扩展的资源高效方案
+- [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO全景]] — 采用 GRPO 变体（无 KL，无 length normalization）
+- [[AI/LLM/Inference/Progressive-Thought-Encoding-Cache-Efficient-RL|PTE（Progressive Thought Encoding）]] — 同类问题（长 CoT 效率），不同路径（主动 vs 被动压缩）
+- [[AI/LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 系统效率（量化）vs 算法效率（压缩），可组合
+- [[AI/LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL训练稳定性分析]] — 归属 Exploration/Efficiency 维度
+- [[AI/LLM/Inference/TTC-Test-Time-Compute-Efficiency-2026-综合分析|TTC效率2026综合分析]] — Accordion 是四大路线之"选择性遗忘（压缩版）"的代表工作；ICLR 2026 最大热点方向
 
 ---
 

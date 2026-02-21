@@ -1,7 +1,10 @@
 ---
 title: "Transformer 架构演进 2026（面试武器版）"
-tags: [transformer, architecture, attention, ssm, interview-prep]
 date: 2026-02-20
+domain: AI/Foundations/Architecture
+tags: [transformer, architecture, attention, ssm, interview-prep]
+rating: 5
+status: active
 ---
 
 # Transformer 架构演进 2026（面试武器版）

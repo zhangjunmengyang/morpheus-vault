@@ -930,4 +930,11 @@ class MoEModelServer:
 
 ---
 
-相关笔记：[[Transformer 架构详解]] | [[模型并行策略]] | [[大模型推理优化]]
+---
+
+## See Also
+
+- [[AI/Foundations/DL-Basics/MoE 基础|MoE 基础]] — 本文进阶版的前置：Expert 路由 / Top-K 门控 / 负载均衡基础
+- [[AI/LLM/Architecture/MoE 深度解析|MoE 深度解析（LLM 面试版）]] — 生产级 MoE 实践：DeepSeek-V2/V3 的 Expert Parallelism + 专家微调 LoRA 策略 + 推理优化
+- [[AI/LLM/Infra/分布式训练|分布式训练]] — MoE 的 Expert Parallelism 是分布式训练的专项扩展；专家分片到多 GPU 的通信模式
+- [[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]] — MoE 替换 FFN 层，Attention 变体替换 Attention 层；两类技术共同定义 Transformer 进化方向

@@ -116,7 +116,16 @@ RePO 和 ProGRPO 解决了 diversity 的两个不同来源：
 这不是目的设计，但 QeRL 把它系统化为 AQN（Adaptive Quantization Noise）  
 效果：reward 在 200 步内快速上升（vs vanilla LoRA 需 500+ 步）
 
-**共同洞察**：GRPO 的探索依赖温度和 group size，这是非常粗糙的机制。Pivot 级别的 targeted exploration 和 parameter-level entropy injection 是两种不同路径，可以组合。
+**IntroLLM**（arXiv 2602.13035，ICML 投稿，2026-02-13）  
+发现：温度是 RLVR 最被忽视的控制变量——固定温度无法适应 token 位置、prompt 难度、训练阶段的变化  
+解法：Hierarchical RL — 从 LLM **内部隐状态** hₜ 学习 temperature policy πϕ(τₜ|hₜ)  
+- 轻量 MLP head（d/2 bottleneck）从最后一层 decoder 分支
+- 混合离散-连续动作：Bernoulli gate（是否更新）+ Beta 分布（连续值采样）
+- GRPO coordinate ascent 联合优化 token policy θ 和 temperature policy ϕ
+效果：一致优于固定温度和启发式自适应；高温自然分配到推理转折点，低温到数值计算/答案合成  
+关键洞察：这是三级探索控制精度的最高级 — trajectory-level（粗）→ token-level（中）→ **hidden-state-conditioned token-level（最细）**
+
+**共同洞察**：GRPO 的探索依赖温度和 group size，这是非常粗糙的机制。Pivot 级别的 targeted exploration（DEEP-GRPO）、parameter-level entropy injection（QeRL）、internal-state-conditioned temperature（IntroLLM）是三种不同精度的路径，可以组合。
 
 ---
 

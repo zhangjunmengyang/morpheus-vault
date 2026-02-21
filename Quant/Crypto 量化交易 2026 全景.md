@@ -805,5 +805,15 @@ Exchanges (Binance, OKX, Bybit, Hyperliquid, DEX...)
 *Status: Living document — 持续更新*
 
 ---
+
+## See Also
+
+- [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026综合分析]] — §8.5 AI Agent Trading 的理论基础：Agent RL 的四大维度框架（探索/信用/稳定/泛化）同样适用于量化 Agent 设计
+- [[AI/LLM/Inference/TTC-Test-Time-Compute-Efficiency-2026-综合分析|TTC 效率 2026综合分析]] — §2.5 LLM情绪分析的计算成本视角：实时情绪分析的token效率是 latency-sensitive 量化策略的关键约束
+- [[AI/Safety/AI Agent 集体行为与安全漂移|AI Agent 集体行为与安全漂移]] — §2.6.194行"Multi-Agent 竞争：RL agent 博弈均衡漂移"的安全视角——多个量化 Agent 共存会产生集体行为涌现，与安全漂移机制同构
+- [[AI/LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — Reward Model 设计视角：§8.5 AI Agent Trading 中 Sharpe Ratio 作为 reward 的方法论，与 MARS 的 margin-aware reward 建模思路有方法论共鸣
+- [[AI/Foundations/ML-Basics/机器学习|机器学习]] — §3 AI/ML 技术（TFT/N-BEATS/CNN-LSTM）的基础理论支撑
+
+---
 > [!note] 范围说明
 > 馆长当前聚焦 AI 笔记，Quant 方向暂不维护。此文件由 Scholar 生成，归档于 Quant/ 目录，暂无对应 MOC。如老板需要建立 Quant 知识体系，可另行激活。

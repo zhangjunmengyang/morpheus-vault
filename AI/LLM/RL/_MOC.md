@@ -89,6 +89,7 @@ tags:
 - [[AI/LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 统一梯度利用+概率质量+信号可靠性的 GRPO 三维改进：软裁剪替代硬裁剪 + 概率质量校正 + reward 信号可靠性加权；微软亚研（arXiv:2602.17550）★★★★
 - [[AI/LLM/RL/Other-Algorithms/RICOL-Retrospective-In-Context-Online-Learning|RICOL]] ⭐ — NeurIPS 2025，CMU+HKU+Stanford：Theorem 4.1 打通 ICL=RL 理论等价性——ICL 前后 log-prob 差正比于 advantage function；critic-free sparse reward credit assignment；样本效率 PPO 的 3-5×（arXiv:2602.17497）★★★★
 - [[AI/LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]] — Root Saturation 问题根治：Pivot-Driven Resampling 专攻深层 error-prone states；对比 TreeRL/AttnRL 探索启发式的缺陷；ICML 投稿，2602.14169（★★★★☆）
+- [[AI/LLM/RL/Other-Algorithms/IntroLLM-Introspective-Temperature-Policy-Hierarchical-RL|IntroLLM（自省温度策略）]] ⭐ — GRPO七维Diversity维度最细粒度实现：用隐状态hₜ学习temperature policy（hierarchical RL）；Beta分布混合动作空间；高温=推理转折点/低温=数值计算；盾卫Phase3激活探针的间接支持——同一hₜ能否区分注入攻击？（arXiv:2602.13035，ICML投稿）★★★★
 - [[AI/LLM/RL/Other-Algorithms/VESPO-Variational-Sequence-Policy-Optimization|VESPO]] ⭐ — 变分推导闭合形式 soft kernel `ϕ(W)=W^α·exp(-λW)`，理论严格超越所有 heuristic clip（GRPO/GSPO/SAPO），staleness ratio 64× 异步训练稳定；★★★★★（arXiv:2602.10693）
 - [[AI/LLM/RL/Other-Algorithms/AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL]] — 多模态 RLVR：仅 15% token 有强视觉-文本耦合（"视觉锚点"），图聚类识别并选择性强化；32B 模型 MathVista 80.2 超越 72B-Instruct；仅 1.2% 开销（arXiv:2602.11455）★★★★
 

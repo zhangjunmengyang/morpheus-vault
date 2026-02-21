@@ -1,3 +1,22 @@
+---
+title: "PERSIST: LLM Personality Stability Benchmark"
+date: 2026-02-21
+arxiv: "2508.04826"
+domain: AI/LLM/Evaluation
+tags:
+  - llm-evaluation
+  - personality
+  - benchmark
+  - stability
+  - big-five
+  - dark-triad
+  - alignment
+  - AAAI-2026
+  - type/paper
+rating: 5
+status: permanent
+---
+
 # PERSIST: LLM 人格稳定性基准评估
 
 **评分**：★★★★★（魂匣项目必读，AI 对齐基础研究）  
@@ -194,3 +213,14 @@ PERSIST 测的是"模型填 BFI 问卷的稳定性"，不是"模型在真实任�
 
 ## Tags
 #LLM评估 #人格稳定性 #HEXACO #BigFive #DarkTriad #AAAI2026 #魂匣 #SoulBox #Benchmark #提示敏感性 #AIAlignment #行为一致性
+
+---
+
+## See Also
+
+- [[AI/LLM/LLM评估与Benchmark-2026技术全景|LLM评估与Benchmark 2026全景]] ⭐ — 评估方法论全景；PERSIST是"行为一致性"这一评估维度的里程碑研究，1854行全景版为PERSIST提供方法论背景
+- [[AI/Safety/对齐技术总结|对齐技术总结]] — PERSIST的核心结论"当前对齐策略不足以保障可预期行为"直接挑战现有对齐技术的充分性；Scaling+RLHF解决了价值对齐，但未解决行为一致性
+- [[AI/Safety/AI安全与对齐-2026技术全景|AI安全与对齐2026全景]] ⭐ — 行为不稳定性是Agent安全部署的核心风险；PERSIST量化了"最坏情况下的不稳定性"（400B模型SD>0.3），为安全边界设定提供实证基础
+- [[AI/LLM/Evaluation/ICLR-2026-趋势分析|ICLR 2026趋势分析]] — PERSIST发现推理（CoT）放大人格不稳定性，与ICLR 2026中大量"CoT稳健性"工作形成对话；reasoning能力提升≠行为一致性提升
+- [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026前沿综合分析]] ⭐ — Agent行为一致性是Agentic RL的隐性前提；PERSIST说明这个前提在基础模型层面并未满足，agent部署必须额外设计稳定性机制而非假设模型天然一致
+- [[AI/LLM/RolePlaying/OpenCharacter-Large-Scale-Synthetic-Persona-Training|OpenCharacter（合成Persona训练）]] — 工程能做什么 vs 架构限制是什么：OpenCharacter用306k合成对话SFT提升角色风格一致性，PERSIST证明即使如此，结构性人格稳定性（SD>0.3）仍未被解决——"表面一致"与"深层稳定"是两个不同的问题

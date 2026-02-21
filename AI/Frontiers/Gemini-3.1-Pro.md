@@ -51,6 +51,8 @@ tags:
 *Source: The Decoder, 2026-02-19*
 
 ## See Also
-- [[AI/Frontiers/Claude-Opus-4.6|Claude Opus 4.6]] — ARC-AGI-2 68.8%，Gemini 3.1 Pro 直接竞品
-- [[AI/Frontiers/Claude-Sonnet-4.6|Claude Sonnet 4.6]] — 性价比对标
-- [[AI/Frontiers/GLM-5-技术报告精读|GLM-5]] — 2026 模型竞争格局的另一重要数据点
+- [[AI/Frontiers/Claude-Opus-4.6|Claude Opus 4.6]] — ARC-AGI-2 68.8% vs Gemini 3.1 Pro 61.7%，推理旗舰直接对决；格局逆转标志性节点
+- [[AI/Frontiers/Claude-Sonnet-4.6|Claude Sonnet 4.6]] — 性价比对标；Gemini 3.1 Flash 对标 Sonnet 4.6 价位
+- [[AI/Frontiers/GLM-5-技术报告精读|GLM-5]] — 2026 模型竞争格局的另一重要数据点；中美模型同期发布潮
+- [[AI/Frontiers/2026年2月模型潮|2026年2月模型潮]] — Gemini 3.1 Pro 是本次模型潮的核心角色；ARC-AGI-2 成为新的竞争标尺
+- [[AI/LLM/Evaluation/PERSIST-LLM-Personality-Stability-Benchmark|PERSIST（LLM人格稳定性）]] — frontier模型（25个，1B-685B）的人格一致性评测；Gemini 3.1 Pro 这个规模段的模型在 PERSIST 中仍有 SD>0.3，说明模型能力提升与行为一致性是独立维度

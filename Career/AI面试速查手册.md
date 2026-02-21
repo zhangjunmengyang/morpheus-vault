@@ -1353,6 +1353,71 @@ tags: [面试, 速查, AI]
 
 ---
 
+## 二十三、LLM工具调用与Function Calling方向
+
+**本方向核心关键词**：Function Calling、MCP、Tool Poisoning、ReAct、Toolformer、Gorilla、BFCL、ToolBench、CHS架构、Skill
+
+### Q1: Function Calling 原理？模型真的在执行函数吗？
+- 不是。LLM 只输出结构化调用意图（JSON），应用层解析执行，结果注入上下文
+- 通过 SFT 训练：(query, tools, call, result, response) 五元组数据
+- 特殊 token `<tool_call>` + constrained decoding 确保合法 JSON
+- tool_choice 四种模式：auto / none / required / 指定工具
+
+### Q2: ReAct 和 Function Calling Agent 区别？
+- ReAct 是 prompting 策略（文本解析），FC Agent 是模型原生能力（结构化 JSON）
+- FC Agent 更稳定、支持并行调用、准确率更高
+- ReAct 适用于不支持 FC 的模型，Thought 步骤提供可解释性
+- 现代 Tool Calling Agent 本质是 "native ReAct"
+
+### Q3: MCP 是什么？和 Function Calling 什么关系？
+- MCP = Agent-Tool 连接协议（应用层），FC = 模型决策能力（模型层），互补不互斥
+- 解决 M×N → M+N 集成问题，类比 USB-C
+- CHS 三组件：Host（唯一承载 AI）、Client（通信管道）、Server（能力执行器）
+- 2025.12 捐给 Linux Foundation AAIF，OpenAI/Google 已跟进
+
+### Q4: MCP 的安全风险有哪些？
+- Tool Poisoning：工具描述注入 prompt injection（对 LLM 可见，用户不可见）
+- Token 泄露：CVE-2026-25253，从 URL query string 获取 gatewayUrl → 自动连接 → token 泄露 → RCE
+- 权限逃逸、数据泄露、供应链攻击（恶意 MCP Server 包）
+- 防御：签名验证 + 权限审计 + 沙盒执行 + HITL 确认
+
+### Q5: 工具数量多时如何选择？
+- <20：全量注入 context；20-200：语义检索 top-K；>200：分类路由两阶段
+- MCP 动态发现：运行时从 Server 获取工具列表
+- 超大规模：专门训练 tool selection model
+- 工具 description 质量是选择准确率的关键决定因素
+
+### Q6: OpenAI 和 Anthropic Tool Use API 关键差异？
+- Schema：OpenAI 用 `parameters`，Anthropic 用 `input_schema`
+- 返回：OpenAI 在 `message.tool_calls[]`，Anthropic 在 `content` blocks
+- 回传：OpenAI `role:"tool"` + tool_call_id，Anthropic `role:"user"` + tool_result
+- 功能等价：都支持并行调用、强制/禁止调用、Streaming
+
+### Q7: 如何训练开源模型的 FC 能力？
+- 数据：SFT 五元组（GPT-4 合成 + 执行验证），ToolBench/Glaive-FC-v2
+- 阶段：基础格式 → 复杂调用 → 拒绝判断 → RL 微调
+- 关键：30-40% 负样本避免 over-calling，chat template 含 tool_call token
+- 评估：BFCL + T-Eval 六维度
+
+### Q8: Skill 和 Tool 的本质区别？
+- Tool 执行并返回结果（execute and return）
+- Skill 准备 agent 去解决问题——注入程序性知识、修改执行上下文
+- Skill 改变 agent 的认知状态，Tool 改变可用的能力
+- 安全差异：Skill 一旦加载视为权威上下文，攻击面比 Tool 大得多
+
+### Q9: 什么是 CREATOR 和 LATM？
+- CREATOR：Agent 自主创建新工具（判断→生成代码→测试→注册→使用）
+- LATM：强模型（GPT-4）创建工具（一次性），弱模型（GPT-3.5）使用（反复），降成本 50-70%
+- SAGE：RL 训练 + Sequential Rollout，skill 库随训练自然生长
+
+### Q10: 生产级 Tool Use 系统架构？
+- 六层：Input Guard → Tool Router → LLM FC → Policy Engine → Sandbox Executor → Output Guard
+- 关键设计：幂等性、超时控制、错误分类（可重试 vs 不可重试）、结果大小限制
+- 安全边界必须是 structural 的（沙盒/权限），不能是 prompting 的
+- 监控：异常调用模式实时检测 + 全量审计日志
+
+---
+
 ## See Also（深度笔记导航）
 
 > 本手册是速查层（K→W），以下为各方向的完整深度版，面试前根据岗位方向选择精读。
@@ -1395,6 +1460,9 @@ tags: [面试, 速查, AI]
 
 ### 合成数据与数据飞轮方向
 - [[AI/LLM/Application/Synthetic-Data/合成数据与数据飞轮-2026技术全景|合成数据与数据飞轮 2026 全景]] — 生成方法论/数据飞轮/质量控制/RLAIF/领域应用全栈，14 道面试题 + 35 篇文献 ⭐
+
+### LLM工具调用与Function Calling方向
+- [[AI/Agent/LLM工具调用与Function-Calling-2026技术全景|LLM 工具调用与 Function Calling 2026 全景]] — FC原理/MCP协议/安全攻防/训练方法/多工具编排全栈，14 道面试题 + 35 篇文献 ⭐
 
 ### 职业方向
 - [[Career/_MOC|Career MOC]] — 求职知识域全索引

@@ -13,6 +13,7 @@ created: 2026-02-20
 see-also:
   - "[[AI/LLM/RL/Other-Algorithms/E-SPL-Evolutionary-System-Prompt-Learning]]"
   - "[[AI/LLM/RL/Other-Algorithms/GEPA-Reflective-Prompt-Evolution]]"
+  - "[[AI/LLM/Inference/ConformalThinking-Risk-Control-Test-Time-Compute]]"
 ---
 
 # Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents
