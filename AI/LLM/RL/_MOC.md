@@ -104,6 +104,9 @@ tags:
 - [[AI/LLM/RL/Theory/REMuL-CoT-Faithfulness-Multi-Listener-RL|REMuL]] ⭐ — CoT Faithfulness via Multi-Listener RL：定义可操作的 faithfulness（推理链可被其他模型"继续执行"到相同结论），两阶段训练（GRPO faithfulness RL → masked SFT correctness），**唯一同时提升 faithfulness 和 accuracy 的方法**；UNC+Cisco（arXiv:2602.16154，ICML投稿）★★★★★
 - [[AI/LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL 训练稳定性 2026 统一分析]] ⭐ — Scholar 综合笔记 v3：STAPO/Goldilocks/VCPO/DEEP-GRPO/MASPO/DAPO/LACONIC 四维拓扑（Token/样本/探索/系统），持续更新中（2026-02-20）★★★★★
 - [[AI/LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — Fisher information 证明低 margin pair 提供最大训练曲率，adaptive margin-aware 数据增强聚焦 decision boundary 附近；ICML投稿（arXiv:2602.17658）★★★★
+- [[AI/LLM/RL/Theory/Rationale-Consistency-GenRM-Deceptive-Alignment|Rationale Consistency（GenRM 欺骗性对齐）]] ⭐ — GenRM/LLM-as-Judge 存在"欺骗性对齐"：outcome accuracy 完全无法区分正确推理 vs 表面猜对；引入 RC 指标 + R_rationale×R_outcome 乘法门控；RM-Bench SOTA 87.1%，RLHF创意写作+7%；Qwen Team+Fudan+Tsinghua（arXiv:2602.04649）★★★★★
+- [[AI/LLM/RL/Theory/Likelihood-Based-Reward-Designs-CoT-RL|Likelihood-Based Reward（log-prob通用reward）]] — 系统比较六种log-prob衍生reward，发现log-prob是唯一在可验证+不可验证场景下都work的方法；消除"每任务专用verifier"需求；Meta FAIR+UvA+NYU（arXiv:2602.03979）★★★★☆
+- [[AI/LLM/RL/Theory/Reward-Design-2026-Panorama|Reward Design 2026 全景]] ⭐ — 原创元分析：密度（log-prob）/推理质量（RC乘法门控）/边界（MARS Fisher）三维框架统一MARS+RC+Likelihood三篇；4场景决策树（有无verifier×是否需要GenRM）；已知3个未解问题（★★★★★）
 - [[AI/LLM/RL/强化学习与RLHF应用-2026全景|强化学习与RLHF应用 2026 全景]] ⭐ — 面试武器版，741行，经典RL(MDP/Bellman/PPO/GAE)→RLHF/DPO/GRPO全链路，从基础到前沿完整覆盖 ★★★★★
 - [[AI/LLM/RL/RLHF 全链路|RLHF 全链路]] — 完整 RLHF 三阶段
 - [[AI/LLM/RL/RLHF-DPO-2026-技术全景|RLHF/DPO 2026 技术全景]] — 面试武器版，1147行，RLHF→RLAIF→DPO 全链路（2026-02-20）

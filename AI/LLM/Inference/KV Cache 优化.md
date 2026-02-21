@@ -6,8 +6,11 @@ tags:
   - ai/llm/optimization
   - type/concept
   - interview/hot
-status: active
+status: deprecated
 ---
+
+> [!warning] ⚠️ Deprecated
+> 本文为早期精简版（265行）。完整版见 [[AI/LLM/Inference/KV Cache]]（830行，含原理详解 + 优化全景 + 面试版链接）。保留供参考，不再维护。
 
 # KV Cache 优化全景
 

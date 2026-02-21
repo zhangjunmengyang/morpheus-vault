@@ -31,6 +31,7 @@ status: active
 - [[AI/LLM/Inference/Progressive-Thought-Encoding-Cache-Efficient-RL|PTE]] — 计算资源受限下的另一侧应对：KV cache 满时学习再 evict（PTE），置信度超阈值时早停（ConformalThinking）——从内存和计算两个角度共同构成 TTC 预算管理框架
 - [[AI/LLM/Inference/Test-Time-Compute|Test-Time Compute 综述]] — ConformalThinking 是 TTC 领域的方法论补丁：现有 Best-of-N/PRM/Budget Forcing 都没解决"何时停止"的统计保证问题
 - [[AI/LLM/RL/Other-Algorithms/IntroLLM-Introspective-Temperature-Policy-Hierarchical-RL|IntroLLM]] — 相反的置信度应用：IntroLLM 用内省温度提升生成多样性，ConformalThinking 用置信度信号触发双阈值停止——都依赖 token-level confidence 但目标方向相反（发散 vs 收敛）
+- [[AI/Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（训练时搜索）]] — 对偶视角：ConformalThinking 在推理时控制 compute（"何时停"），TSR 在训练时用 search 提升 rollout 质量（"如何花"）——两者共同说明 compute 分配在推理/训练两个时间维度都有巨大优化空间
 
 ---
 

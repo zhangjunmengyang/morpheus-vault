@@ -1,16 +1,40 @@
 ---
 title: "Test-Time Compute (TTC) — 推理时扩展综述"
+brief: "TTC 是对 training-time scaling 的正交补充——在推理阶段分配更多算力（CoT/Best-of-N/PRM/Budget Forcing）来提升准确率，而非训练更大模型；Snell et al. (arXiv:2408.03314) 证明对难题小模型+大TTC可超越大模型+小TTC；理解 TTC 是读懂 o1/R1/s1 推理范式的关键"
 type: survey
 domain: ai/llm/inference
+created: "2026-02-19"
+updated: "2026-02-22"
 tags:
   - ai/llm/inference
   - concept/ttc
   - concept/scaling
   - type/survey
-created: 2026-02-19
+  - interview/hot
+status: complete
+sources:
+  - "Scaling LLM Test-Time Compute Optimally arXiv:2408.03314 (Snell et al., Google DeepMind, 2024)"
+  - "Let's Verify Step by Step (PRM) arXiv:2305.20050 (Lightman et al., OpenAI, 2023)"
+  - "Self-Consistency Improves Chain of Thought Reasoning arXiv:2203.11171 (Wang et al., 2022)"
+  - "Chain-of-Thought Prompting arXiv:2201.11903 (Wei et al., Google, 2022)"
+  - "Deep-Thinking Ratio arXiv:2602.13517 (2026)"
+  - "s1: Simple Test-Time Scaling (Stanford, 2025)"
+related:
+  - "[[AI/LLM/Inference/推理优化|推理优化]]"
+  - "[[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO]]"
+  - "[[AI/LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]"
+  - "[[Gemini-3-Deep-Think]]"
+  - "[[ICLR-2026-趋势分析]]"
+  - "[[RLVR-Edge-of-Competence]]"
+  - "[[Deep-Thinking-Ratio-DTR]]"
+  - "[[采样策略]]"
 ---
 
 # Test-Time Compute (TTC) — 推理时扩展综述
+
+> **Brief**：TTC 在推理阶段分配更多算力（CoT/Best-of-N/PRM/Budget Forcing）来提升准确率，是对 training-time scaling 的正交补充。Snell et al. (arXiv:2408.03314) 的关键发现：对难题，小模型+大TTC 可超越大模型+小TTC。
+>
+> 来源：Snell et al. arXiv:2408.03314; Let's Verify Step by Step arXiv:2305.20050; Self-Consistency arXiv:2203.11171
 
 > 关键词：inference-time scaling, test-time compute, chain-of-thought, self-verification, budget forcing
 
@@ -18,7 +42,7 @@ created: 2026-02-19
 
 **在推理阶段分配更多算力（而不是训练更大的模型）来提升任务准确率。**
 
-这是对 training-time scaling law（Chinchilla）的正交补充维度。
+这是对 training-time scaling law（Chinchilla, arXiv:2203.15556）的正交补充维度。
 
 ---
 
@@ -36,9 +60,11 @@ created: 2026-02-19
 
 LLM 可以做同样的事：在 inference 时多分配算力，而不是训练更大的模型。
 
-关键 empirical 发现（Snell et al., 2024；Google DeepMind, 2024）：
+关键 empirical 发现：
 - **对难题**：小模型 + 大量 TTC > 大模型 + 少量 TTC
 - **compute-optimal 点随任务难度移动**：难题值得分配更多推理算力
+
+> 来源：Snell et al. arXiv:2408.03314 "Scaling LLM Test-Time Compute Optimally Can be More Effective than Scaling Model Parameters", Sec. 4
 
 ---
 
@@ -59,11 +85,15 @@ CoT 把 latent reasoning 变成 token generation，模型可以在中间步骤�
 
 在生成过程中，对每一步推理做评分，而不是只评最终答案。
 
+> 来源：Lightman et al. arXiv:2305.20050 "Let's Verify Step by Step" (OpenAI, 2023)
+
 - **Outcome Reward Model (ORM)**：只看结果对不对
 - **Process Reward Model (PRM)**：每步都打分
 - PRM 能更早发现错误路径，引导模型 self-correct
 
 ### 3. Best-of-N / Self-Consistency
+
+> 来源：Wang et al. arXiv:2203.11171 "Self-Consistency Improves Chain of Thought Reasoning in Language Models"
 
 - 生成 N 个候选答案，用 majority vote 或 reward model 选最优
 - 简单有效，compute 线性扩展
@@ -205,4 +235,90 @@ Gemini 3 Deep Think（2026）的路线：
 - [[Deep-Thinking-Ratio-DTR]] — 推理质量新指标，超越 token 长度
 
 ---
+
+## 🔧 落地应用
+
+### 什么时候用 TTC？
+
+| 场景 | TTC 策略 | 效果 | 成本 |
+|------|---------|------|------|
+| 数学/代码竞赛 | Best-of-N + PRM | 极好 | 高（N 次推理） |
+| 复杂推理任务 | Long CoT + Budget Forcing | 很好 | 中高（长输出） |
+| 实时对话 | 不适合大 TTC | — | 延迟不可接受 |
+| 离线批处理（代码 review、论文分析） | 大 Budget + PRM | 最佳 | 可接受 |
+| 简单 QA | 不需要 TTC | — | 浪费算力 |
+
+### 工程实现要点
+
+- **Best-of-N 是最简单的 TTC 实现**：N=8-16 通常就能显著提升准确率，低成本验证有效性
+- **PRM 训练需要 step-level 标注**：成本高，但一旦训练好可以复用
+- **Budget Forcing 的实现**：在生成时设置最小 token 数，遇到 `<end>` token 替换为 `\n` 继续生成
+- **动态预算分配**：简单问题给少量 TTC，难题给大量 TTC → 需要一个难度评估器（可以用 prompt 的 perplexity 或初始 logits 的 entropy 估算）
+
+### 面试高频问法
+
+- **Q: TTC 为什么 work？和搜索有什么关系？**
+  A: TTC 本质是在 solution space 中搜索更久。CoT 提供中间状态使搜索有方向，PRM 提供 guidance 避免盲目搜索，Best-of-N 是最简单的并行搜索。
+
+- **Q: 给你固定算力预算，是训练更大模型还是用更多 TTC？**
+  A: 取决于任务难度。Snell et al. (arXiv:2408.03314) 证明：难题上 TTC 的 ROI 更高，简单任务用大模型更划算。Compute-optimal 点随难度移动。
+
+- **Q: Budget Forcing 和 Chain-of-Thought 的区别？**
+  A: CoT 是"让模型展示推理步骤"，模型自己决定想多久。Budget Forcing 是"强制模型想更久"，即使模型想早停也不允许。后者往往能发现第一印象的错误。
+
+---
+
+## 💡 启发与思考
+
+### So What？
+
+TTC 揭示了一个深刻的范式转变：**推理能力不仅可以通过训练获得，也可以通过推理时的计算分配来增强**。这类似于人类的直觉和深思——快速直觉（System 1）对应标准推理，深入思考（System 2）对应 TTC。
+
+对老板的启示：
+- **Agent 设计中应该内置 TTC 策略**：对简单请求快速响应，对复杂任务自动分配更多思考预算
+- **成本控制的新维度**：不再只是"用多大的模型"，还要考虑"给多少推理预算"
+- **小模型 + 大 TTC 可能是性价比最高的方案**：比如 7B 模型 + Best-of-16 可能比 70B 模型 + 单次推理更好
+
+### 局限与未解问题
+
+- **延迟问题**：TTC 增加推理时间，实时应用难以接受（o1 的"思考中..."就是延迟的体现）
+- **成本线性增长**：Best-of-N 的成本随 N 线性增长，没有"免费午餐"
+- **PRM 的训练数据获取困难**：step-level 标注成本极高，自动标注方法仍在探索
+- **DTR 研究还很初步**：Deep-Thinking Ratio 证明"思考深度比长度重要"，但如何引导模型深度思考仍不清楚
+- **TTC 对不同模型架构的效果差异**：MoE vs Dense 模型在 TTC 上的表现是否不同？
+
+### 脑暴拓展
+
+- **自适应 TTC 预算分配器**：训练一个轻量模型预测"这个问题需要多少 TTC"→ 在延迟和准确率间动态 trade-off
+- **TTC + MoE 的协同**：不同 expert 处理不同推理深度？浅层 expert 负责 System 1 推理，深层 expert 负责 System 2？
+- **DTR 作为 RL reward 信号**：在 RLVR 训练中用 DTR 代替（或辅助）ORM/PRM，鼓励模型生成"深度思考 token"而非"长但浅的 token"
+
+> 🔗 See also:
+> - [[AI/LLM/Inference/推理优化|推理优化]] — 工程层面的 inference 优化（减少 latency）
+> - [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO]] — RL 训练赋予模型 TTC 能力
+> - [[AI/LLM/Architecture/DeepSeek-R1|DeepSeek-R1]] — GRPO + long CoT 的实践
+> - [[Deep-Thinking-Ratio-DTR]] — 推理质量新指标，思考深度 > 思考长度
+
+---
+
+## 📚 推荐阅读
+
+### 原始论文
+- [Scaling LLM Test-Time Compute Optimally Can be More Effective than Scaling Model Parameters](https://arxiv.org/abs/2408.03314) — TTC 领域最重要的理论工作，证明 compute-optimal 分配策略 ⭐⭐⭐⭐⭐
+- [Let's Verify Step by Step](https://arxiv.org/abs/2305.20050) — PRM 的奠基论文，process reward 比 outcome reward 更有效 ⭐⭐⭐⭐⭐
+- [Self-Consistency Improves Chain of Thought Reasoning](https://arxiv.org/abs/2203.11171) — Best-of-N + majority vote 的简单但强大的 TTC 方法 ⭐⭐⭐⭐⭐
+- [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903) — CoT 的开山之作，最早的 TTC 形式 ⭐⭐⭐⭐⭐
+- [Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/abs/2305.10601) — 树形搜索 + 显式状态评估 ⭐⭐⭐⭐
+
+### 深度解读
+- [OpenAI o1 System Card](https://openai.com/index/openai-o1-system-card/) — o1 的设计哲学和安全考量 ⭐⭐⭐⭐
+- [DeepSeek-R1 Technical Report](https://arxiv.org/abs/2501.12948) — GRPO + long CoT 训练的工程实践 ⭐⭐⭐⭐⭐
+
+### 实践资源
+- [s1: Simple Test-Time Scaling (GitHub)](https://github.com/simplescaling/s1) — Stanford 的 Budget Forcing 实现，小模型超越 o1 ⭐⭐⭐⭐
+- [PRM800K Dataset (OpenAI)](https://github.com/openai/prm800k) — PRM 训练数据集，800K step-level 标注 ⭐⭐⭐⭐
+
+---
+
 *Created: 2026-02-19 by Librarian heartbeat — 补全知识缺口 TTC*
+*Updated: 2026-02-22 — 补充 frontmatter/出处/推荐阅读/落地应用/启发思考*

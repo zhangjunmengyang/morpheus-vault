@@ -121,6 +121,6 @@ DataFlow 的优势在于轻量和易用，适合 SFT/对齐数据的场景。
 ## 相关
 
 - [[AI/LLM/Application/Synthetic-Data/Synthetic Data|Synthetic Data 综述]]
-- [[AI/LLM/Prompt-Engineering/数据合成|数据合成（Prompt 视角）]]
+- [[AI/LLM/Application/数据合成|数据合成（Prompt 视角）]]
 - [[AI/LLM/Frameworks/Unsloth/数据合成|Unsloth 数据合成]]
 - [[AI/LLM/SFT/SFT 原理|SFT 原理]]

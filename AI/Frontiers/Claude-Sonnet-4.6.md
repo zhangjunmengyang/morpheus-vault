@@ -96,7 +96,7 @@ GLM-5:        $0.80 ←── 中国开源价格锚
 - [[AI/LLM/Inference/Test-Time-Compute]] — TTC scaling 背景
 
 > [!note] 完整技术规格
-> 详细 API 规格、完整 benchmark 表、Computer Use 历史数据、pricing 细节、竞品对比表见 [[LLM/Claude Sonnet 4.6]]（499行，早期完整版）。
+> 详细 API 规格、完整 benchmark 表、Computer Use 历史数据、pricing 细节、竞品对比表见 [[AI/Frontiers/Claude-Sonnet-4.6-完整技术规格]]（506行）。
 
 ---
 *Created: 2026-02-19 by Scholar heartbeat*

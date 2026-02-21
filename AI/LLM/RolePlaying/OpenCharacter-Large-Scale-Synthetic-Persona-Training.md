@@ -161,4 +161,4 @@ OpenCharacter 的结果告诉我们：
 - [[AI/LLM/Application/Synthetic-Data/合成数据与数据飞轮-2026技术全景|合成数据与数据飞轮2026全景]] ⭐ — 方法论上游：OpenCharacter的306k对话是数据飞轮思想的角色扮演应用——从20k personas合成对话，是"LLM生成→LLM训练→LLM更强"的完整飞轮；全景版提供系统性理论
 - [[AI/LLM/SFT/EWC-LoRA-Continual-Learning-Low-Rank|EWC-LoRA（持续学习LoRA）]] — 解决OpenCharacter未解决的问题：OpenCharacter SFT后如果要持续添加新角色，EWC-LoRA的Fisher正则化可以防止新角色覆盖旧角色记忆；两者组合=可扩展的角色扮演系统
 - [[AI/LLM/SFT/训练数据构建|训练数据构建]] — OpenCharacter的两种合成策略（Rewriting vs Generation）是训练数据构建在角色扮演场景的专项延伸；Generation策略优于Rewriting的原因：避免了原始回答的"标准框架"干扰
-- [[AI/LLM/Training/LLM微调实战-2026技术全景|LLM微调实战2026全景]] ⭐ — LLaMA-3 8B SFT的工程落地参考；OpenCharacter的训练流水线（合成数据→SFT→PersonaGym评测）是微调实战的角色扮演专项案例
+- [[AI/LLM/SFT/LLM微调实战-2026技术全景|LLM微调实战2026全景]] ⭐ — LLaMA-3 8B SFT的工程落地参考；OpenCharacter的训练流水线（合成数据→SFT→PersonaGym评测）是微调实战的角色扮演专项案例

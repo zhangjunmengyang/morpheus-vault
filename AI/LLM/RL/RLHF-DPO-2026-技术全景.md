@@ -1,7 +1,38 @@
 ---
 title: "RLHF / RLAIF / DPO 2026 技术全景（面试武器版）"
+brief: "覆盖 LLM 对齐训练完整技术栈：经典 RLHF（SFT→RM→PPO）、DPO 家族（DPO/IPO/KTO/ORPO/SimPO）、RLAIF/Constitutional AI、Reward Model 设计（Bradley-Terry/PRM/ORM）、2026 前沿（GRPO/DAPO/REINFORCE++/RLVR），以及 15 道深度面试题。核心洞察：对齐范式正从'教模型像人说话'（RLHF）→'简化偏好学习'（DPO）→'自主探索涌现能力'（GRPO+RLVR），DeepSeek-R1 证明纯 RL 可涌现推理能力。面试武器级全景。"
+type: survey
+domain: ai/llm/rl
 date: 2026-02-20
-tags: [rlhf, dpo, alignment, llm-training, interview-prep]
+updated: 2026-02-22
+tags:
+  - ai/llm/rl
+  - type/survey
+  - rlhf
+  - dpo
+  - alignment
+  - llm-training
+  - interview-prep
+status: complete
+sources:
+  - "InstructGPT — Ouyang et al. arXiv:2203.02155"
+  - "PPO — Schulman et al. arXiv:1707.06347"
+  - "DPO — Rafailov et al. arXiv:2305.18290"
+  - "DAPO — Yu et al. (ByteDance/清华) arXiv:2503.14476"
+  - "KTO — Ethayarajh et al. arXiv:2402.01306"
+  - "RLOO — Ahmadian et al. arXiv:2402.14740"
+  - "IPO — Azar et al. arXiv:2310.12036"
+  - "GRPO / DeepSeek-Math — Shao et al. arXiv:2402.03300"
+  - "DeepSeek-R1 — DeepSeek-AI arXiv:2501.12948"
+  - "Constitutional AI — Bai et al. arXiv:2212.08073"
+  - "SimPO — Meng et al. arXiv:2405.14734"
+  - "ORPO — Hong et al. arXiv:2403.07691"
+  - "Let's Verify Step by Step (PRM) — Lightman et al. arXiv:2305.20050"
+related:
+  - "[[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026]]"
+  - "[[AI/LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement]]"
+  - "[[AI/LLM/RL/GRPO/GRPO 深度理解]]"
+  - "[[AI/LLM/SFT/LoRA]]"
 ---
 
 # RLHF / RLAIF / DPO 2026 技术全景（面试武器版）
@@ -34,17 +65,17 @@ tags: [rlhf, dpo, alignment, llm-training, interview-prep]
 |------|--------|---------|
 | 2017 | OpenAI "Learning from Human Preferences" | 首次将人类偏好引入 RL 训练 |
 | 2020 | Stiennon et al. "Learning to Summarize" | RLHF 用于文本摘要，奠定 RM + PPO 范式 |
-| 2022.01 | InstructGPT (Ouyang et al.) | 三阶段范式（SFT → RM → PPO）工业化 |
+| 2022.01 | InstructGPT (Ouyang et al.) [arXiv:2203.02155](https://arxiv.org/abs/2203.02155) | 三阶段范式（SFT → RM → PPO）工业化 |
 | 2022.03 | ChatGPT | RLHF 从学术走向产品，改变行业 |
 | 2022.12 | Anthropic Constitutional AI | RLAIF 概念诞生，用 AI 反馈替代人类 |
-| 2023.05 | DPO (Rafailov et al.) | 绕过 RM 和 PPO，直接偏好优化 |
+| 2023.05 | DPO (Rafailov et al.) [arXiv:2305.18290](https://arxiv.org/abs/2305.18290) | 绕过 RM 和 PPO，直接偏好优化 |
 | 2023.10 | Zephyr-7B | DPO 在开源社区大规模验证 |
-| 2024.01 | KTO (Ethayarajh et al.) | 不需要 pairwise 数据，binary 信号即可 |
+| 2024.01 | KTO (Ethayarajh et al.) [arXiv:2402.01306](https://arxiv.org/abs/2402.01306) | 不需要 pairwise 数据，binary 信号即可 |
 | 2024.03 | ORPO (Hong et al.) | 去掉 reference model，单阶段训练 |
 | 2024.05 | SimPO (Meng et al.) | 移除 reference log-ratio，更稳定 |
-| 2024.06 | IPO (Azar et al.) | 修复 DPO 的 overfitting 问题 |
-| 2025.01 | DeepSeek-R1 + GRPO | RL Scaling 新范式，纯 RL 涌现推理能力 |
-| 2025.03 | DAPO (ByteDance) | GRPO 改进版，Decoupled Clip + Dynamic Sampling |
+| 2024.06 | IPO (Azar et al.) [arXiv:2310.12036](https://arxiv.org/abs/2310.12036) | 修复 DPO 的 overfitting 问题 |
+| 2025.01 | DeepSeek-R1 + GRPO [arXiv:2501.12948](https://arxiv.org/abs/2501.12948) | RL Scaling 新范式，纯 RL 涌现推理能力 |
+| 2025.03 | DAPO (ByteDance) [arXiv:2503.14476](https://arxiv.org/abs/2503.14476) | GRPO 改进版，Decoupled Clip + Dynamic Sampling |
 | 2025.06 | REINFORCE++ | 去 critic 的 REINFORCE + baseline 优化 |
 | 2025.09 | Self-Play alignment 成熟 | SPIN/SPPO 自博弈对齐，减少人类标注 |
 | 2026.01 | Iterative Online Alignment 工业落地 | 持续在线对齐成为标配 |
@@ -86,7 +117,7 @@ RLHF 教模型模仿人类偏好；DPO 简化了这个过程；而 GRPO/RLVR 则
 **数据要求**：
 - 典型规模：10K-100K (instruction, response) pairs
 - 数据来源：人工标注、GPT-4 蒸馏（Alpaca/Vicuna 路线）、领域专家编写
-- 质量 > 数量：LIMA 论文证明 1K 高质量数据可以打 52K 低质量数据
+- 质量 > 数量：LIMA 论文（[arXiv:2305.11206](https://arxiv.org/abs/2305.11206)）证明 1K 高质量数据可以打 52K 低质量数据
 
 **训练细节**：
 - Loss：标准 next-token prediction（cross-entropy）
@@ -100,6 +131,8 @@ RLHF 教模型模仿人类偏好；DPO 简化了这个过程；而 GRPO/RLVR 则
 3. **数据污染**：SFT 数据与评测 benchmark 重叠会导致虚高
 
 ### 2.2 Stage 2：Reward Model Training
+
+> 来源：InstructGPT — Ouyang et al. [arXiv:2203.02155](https://arxiv.org/abs/2203.02155), Sec. 3.2-3.3（RM 训练和 PPO 流程的工业化定义）
 
 **目标**：学习一个 proxy function 来近似人类偏好
 
@@ -132,6 +165,8 @@ $$\mathcal{L}_{\text{RM}}(\phi) = -\mathbb{E}_{(x, r_w, r_l) \sim \mathcal{D}} \
 4. **RM 泛化性**：在训练分布之外，RM 的预测非常不可靠
 
 ### 2.3 Stage 3：PPO Training
+
+> 来源：PPO — Schulman et al. [arXiv:1707.06347](https://arxiv.org/abs/1707.06347)；InstructGPT 中的 LLM 应用 — [arXiv:2203.02155](https://arxiv.org/abs/2203.02155), Sec. 3.3
 
 **目标**：用 RL 微调 policy model，最大化 reward 同时不偏离 reference model 太远
 
@@ -174,6 +209,8 @@ $$L^{\text{CLIP}}(\theta) = \mathbb{E}_t \left[\min\left(\frac{\pi_\theta(a_t|s_
 ### 面试官会问：「DPO 的数学推导是什么？它和 RLHF 等价吗？DPO 有哪些变体，各自解决什么问题？」
 
 ### 3.1 DPO（Direct Preference Optimization）
+
+> 来源：Direct Preference Optimization: Your Language Model is Secretly a Reward Model — Rafailov et al. [arXiv:2305.18290](https://arxiv.org/abs/2305.18290)
 
 **核心思想**：将 RLHF 的 RL 问题转化为一个 closed-form 的 supervised learning 问题。
 
@@ -222,6 +259,8 @@ $$\mathcal{L}_{\text{DPO}}(\theta) = -\mathbb{E}_{(x, y_w, y_l) \sim \mathcal{D}
 
 ### 3.2 IPO（Identity Preference Optimization）
 
+> 来源：A General Theoretical Paradigm to Understand Learning from Human Feedback — Azar et al. [arXiv:2310.12036](https://arxiv.org/abs/2310.12036)
+
 **解决的问题**：DPO 在理论上依赖 Bradley-Terry 假设，当偏好数据违反这一假设时（如非传递性偏好），DPO 会 overfit。
 
 **IPO Loss**：
@@ -233,6 +272,8 @@ $$\mathcal{L}_{\text{IPO}}(\theta) = \mathbb{E}_{(x, y_w, y_l)} \left[\left(\log
 **适用场景**：数据质量不确定、偏好存在噪声或矛盾时。
 
 ### 3.3 KTO（Kahneman-Tversky Optimization）
+
+> 来源：KTO: Model Alignment as Prospect Theoretic Optimization — Ethayarajh et al. [arXiv:2402.01306](https://arxiv.org/abs/2402.01306)
 
 **解决的问题**：DPO 需要 pairwise preference data（同一 prompt 对应一好一坏），KTO 只需要 binary signal（这个回答好 / 不好）。
 
@@ -323,6 +364,8 @@ RLAIF（Reinforcement Learning from AI Feedback）用一个（通常更强的）
 - Scaling bottleneck：模型训练可以无限 scale up，但人类标注不行
 
 ### 4.2 Constitutional AI（Anthropic）
+
+> 来源：Constitutional AI: Harmlessness from AI Feedback — Bai et al. [arXiv:2212.08073](https://arxiv.org/abs/2212.08073)
 
 **流程**：
 1. **Red-teaming**：让模型生成有害输出
@@ -422,7 +465,7 @@ $$P(y_w \succ y_l | x) = \sigma(R(x, y_w) - R(x, y_l))$$
 | 数据标注 | 简单：整体好/坏 | 复杂：每步对/错 |
 | 适用场景 | 通用对齐 | 数学推理、代码生成 |
 | Reward Hacking 风险 | 高（只看结果，不管过程） | 低（过程正确更难 hack） |
-| 代表工作 | InstructGPT, ChatGPT | OpenAI "Let's Verify Step by Step" (2023) |
+| 代表工作 | InstructGPT, ChatGPT | OpenAI "Let's Verify Step by Step" ([arXiv:2305.20050](https://arxiv.org/abs/2305.20050)) |
 
 **PRM 的优势**：
 - 可以在推理过程中 **早期发现错误**，不需要等到最终答案
@@ -448,6 +491,8 @@ $$P(y_w \succ y_l | x) = \sigma(R(x, y_w) - R(x, y_l))$$
 ### 面试官会问：「GRPO 是什么？和 PPO 有什么区别？DAPO 又做了什么改进？什么是 Online DPO 和 Iterative Alignment？」
 
 ### 6.1 GRPO（Group Relative Policy Optimization）
+
+> 来源：DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models — Shao et al. [arXiv:2402.03300](https://arxiv.org/abs/2402.03300), Sec. 3.2；DeepSeek-R1 — [arXiv:2501.12948](https://arxiv.org/abs/2501.12948)
 
 **来源**：DeepSeek-Math (2024)，被 DeepSeek-R1 (2025) 推广。
 
@@ -485,6 +530,8 @@ $$\mathcal{J}_{\text{GRPO}}(\theta) = \mathbb{E}_{x, \{y_i\}_{i=1}^G} \left[\fra
 
 ### 6.2 DAPO（Decoupled Clip and Dynamic Sampling Policy Optimization）
 
+> 来源：DAPO: An Open-Source LLM Reinforcement Learning System at Scale — Yu et al. (ByteDance/清华) [arXiv:2503.14476](https://arxiv.org/abs/2503.14476)
+
 **来源**：ByteDance Seed (2025)，NeurIPS 2025 poster。
 
 **四个关键改进**：
@@ -513,7 +560,7 @@ $$\mathcal{J}_{\text{GRPO}}(\theta) = \mathbb{E}_{x, \{y_i\}_{i=1}^G} \left[\fra
 - 用 running average reward 作为 baseline
 - 比 GRPO 更简单，但对 reward 信号质量要求更高
 
-**RLOO（REINFORCE Leave-One-Out）**：
+**RLOO（REINFORCE Leave-One-Out，[arXiv:2402.14740](https://arxiv.org/abs/2402.14740)）**：
 - 生成 $K$ 个 response，对每个 response 用其余 $K-1$ 个的平均 reward 作为 baseline
 - 类似 GRPO 但 baseline 更精确
 - 被 TRL 库原生支持
@@ -620,14 +667,20 @@ $$\mathcal{J}_{\text{GRPO}}(\theta) = \mathbb{E}_{x, \{y_i\}_{i=1}^G} \left[\fra
 
 ### 7.5 选型指南
 
-```
-你的需求是什么？
-├── 快速实验 / 研究 → TRL 或 LLaMA-Factory
-├── 生产级 RLHF (PPO/GRPO) → OpenRLHF
-├── DPO/KTO/ORPO (Offline) → TRL / LLaMA-Factory / Unsloth
-├── 70B+ 模型 → OpenRLHF 或 veRL
-├── 消费级显卡 (单卡 24GB) → Unsloth + LoRA
-└── 需要最新算法 (DAPO/REINFORCE++) → OpenRLHF
+```mermaid
+graph TD
+    Q["你的需求是什么？"] --> A["快速实验 / 研究"]
+    Q --> B["生产级 RLHF<br/>(PPO/GRPO)"]
+    Q --> C["DPO/KTO/ORPO<br/>(Offline)"]
+    Q --> D["70B+ 模型"]
+    Q --> E["消费级显卡<br/>(单卡 24GB)"]
+    Q --> F["需要最新算法<br/>(DAPO/REINFORCE++)"]
+    A --> A1["TRL 或 LLaMA-Factory"]
+    B --> B1["OpenRLHF"]
+    C --> C1["TRL / LLaMA-Factory / Unsloth"]
+    D --> D1["OpenRLHF 或 veRL"]
+    E --> E1["Unsloth + LoRA"]
+    F --> F1["OpenRLHF"]
 ```
 
 ### 7.6 训练基础设施
@@ -955,21 +1008,25 @@ GRPO（Group Relative Policy Optimization）是 DeepSeek 提出的算法，核�
 
 **答**：
 
-```
-你的数据是什么格式？
-├── Pairwise (chosen/rejected)
-│   ├── 数据质量高、量大 → DPO（baseline）
-│   ├── 数据有噪声/矛盾 → IPO 或 SimPO
-│   ├── Class imbalance 严重 → ORPO
-│   ├── 不想维护 reference model → SimPO 或 ORPO
-│   └── 需要和 SFT 一起训练 → ORPO
-├── Binary (good/bad 不配对)
-│   └── KTO
-├── 没有标注数据
-│   ├── 有 verifiable reward（数学/代码）→ GRPO + RLVR
-│   └── 无 verifiable reward → Self-Reward / RLAIF → DPO/GRPO
-└── 想要最强效果
-    └── Online DPO 或 GRPO（持续迭代）
+```mermaid
+graph TD
+    Q["你的数据是什么格式？"] --> P["Pairwise<br/>(chosen/rejected)"]
+    Q --> BIN["Binary<br/>(good/bad 不配对)"]
+    Q --> NO["没有标注数据"]
+    Q --> BEST["想要最强效果"]
+
+    P --> P1["数据质量高、量大 → DPO"]
+    P --> P2["数据有噪声/矛盾 → IPO 或 SimPO"]
+    P --> P3["Class imbalance 严重 → ORPO"]
+    P --> P4["不想维护 ref model → SimPO 或 ORPO"]
+    P --> P5["需要和 SFT 一起训练 → ORPO"]
+
+    BIN --> BIN1["KTO"]
+
+    NO --> NO1["有 verifiable reward<br/>(数学/代码) → GRPO + RLVR"]
+    NO --> NO2["无 verifiable reward<br/>→ Self-Reward / RLAIF → DPO/GRPO"]
+
+    BEST --> BEST1["Online DPO 或 GRPO<br/>(持续迭代)"]
 ```
 
 ---
@@ -1119,32 +1176,89 @@ DAPO（ByteDance, NeurIPS 2025）做了四个关键改进：
 
 ---
 
-## 参考资料
+## 🔧 落地应用
 
-1. Ouyang et al. "Training language models to follow instructions with human feedback" (InstructGPT, 2022)
-2. Rafailov et al. "Direct Preference Optimization: Your Language Model is Secretly a Reward Model" (DPO, 2023)
-3. Bai et al. "Constitutional AI: Harmlessness from AI Feedback" (Anthropic CAI, 2022)
-4. Azar et al. "A General Theoretical Paradigm to Understand Learning from Human Feedback" (IPO, 2024)
-5. Ethayarajh et al. "KTO: Model Alignment as Prospect Theoretic Optimization" (2024)
-6. Hong et al. "ORPO: Monolithic Preference Optimization without Reference Model" (2024)
-7. Meng et al. "SimPO: Simple Preference Optimization with a Reference-Free Reward" (2024)
-8. DeepSeek-AI. "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning" (2025, updated 2026)
-9. Yu et al. "DAPO: An Open-Source LLM Reinforcement Learning System at Scale" (ByteDance, NeurIPS 2025)
-10. Hu et al. "OpenRLHF: An Easy-to-use, Scalable and High-performance RLHF Framework" (2024)
-11. Lambert. "RLHF Book" (Manning, 2025-2026)
-12. Lightman et al. "Let's Verify Step by Step" (OpenAI PRM, 2023)
-13. Yuan et al. "Self-Rewarding Language Models" (Meta, 2024)
-14. Wolfe. "Group Relative Policy Optimization (GRPO)" (Deep Dive, 2025)
-15. Wang et al. "A Comprehensive Survey of LLM Alignment Techniques: RLHF, RLAIF, PPO, DPO and More" (2024)
-16. METR. "Recent Frontier Models Are Reward Hacking" (2025)
-17. Anthropic. "Natural Emergent Misalignment from Reward Hacking in Production RL" (2025)
-18. Shi. "PPO & GRPO for LLM Alignment" (2026)
-19. "It Takes Two: Your GRPO Is Secretly DPO" (2025)
-20. Chen et al. "Rainbow PO: A Unified Framework for Combining Improvements in Preference Optimization" (ICLR 2025)
+### 直接可用场景
+
+- **内部 Chatbot 对齐**：对已有 SFT 模型做 DPO/SimPO 是最低成本的对齐方案，TRL 或 Unsloth + LoRA 单卡 24GB 即可完成 7B 模型训练
+- **代码/数学推理能力提升**：GRPO + RLVR（verifiable rewards）是当前最强方案，无需人类标注，DeepSeek-R1 已验证有效（[arXiv:2501.12948](https://arxiv.org/abs/2501.12948)）
+- **Safety 对齐**：Constitutional AI 思路可编码组织价值观，适合企业定制安全策略
+- **低成本偏好数据收集**：用 KTO 只需要 thumbs up/down 信号，大幅降低标注成本
+
+### 工程实现要点
+
+- **框架选型**：7B DPO 快速实验 → TRL/Unsloth；70B+ PPO/GRPO → OpenRLHF（Ray + vLLM + DeepSpeed）
+- **DPO β 参数**：通常 0.1-0.5，太大不学习，太小 mode collapse。推荐从 0.1 开始调
+- **GRPO Group Size**：通常 G=8-64，越大 advantage 估计越准但计算成本越高。G=16 是常见起点
+- **Reward Hacking 监控**：必须同时跟踪 RM score 和 human eval / benchmark，两者背离 = 报警
+- **KL 系数**：PPO 中 β=0.01-0.05 常见，GRPO 中 β=0.04 被 DeepSeekMath 验证有效（[arXiv:2402.03300](https://arxiv.org/abs/2402.03300), Sec. 3.2）
+
+### 面试高频问法
+
+- Q: DPO 和 RLHF 哪个好？什么时候用哪个？
+  A: 不是谁好谁坏——DPO 简单稳定适合 offline，RLHF/GRPO 有探索能力适合 online。推理任务用 GRPO+RLVR，通用对话用 Online DPO。关键区别是 exploration vs exploitation。
+- Q: GRPO 和 PPO 的本质区别？
+  A: GRPO 去掉了 Critic（Value Model），用组内 reward 标准化替代 GAE advantage。省一半显存，更适合 sparse/binary reward。
+- Q: 什么是 Reward Hacking？你怎么防？
+  A: Policy 利用 RM 漏洞获得高分但实际质量低。经典表现：变长但废话多、sycophancy。防御：KL penalty + RM ensemble + length normalization + iterative RM retraining。
 
 ---
 
-> 最后更新：2026-02-20 | 作者：Morpheus Vault
+## 💡 启发与思考
+
+### So What？对老板意味着什么
+
+- **对齐 ≠ 安全约束，对齐 = 能力激发**：DeepSeek-R1 最大的启示——RL 不只是让模型"像人说话"，而是让模型涌现超越训练数据的推理能力。这改变了对 RL post-training 的认知定位
+- **DPO 家族让对齐平民化**：不再需要 128 张 GPU 跑 PPO，单卡 LoRA + DPO 就能做出有意义的对齐改进。对老板的项目意味着：**任何有 SFT 模型的团队都能低成本做对齐**
+- **Verifiable Rewards 是金矿**：数学/代码任务的 reward 是确定性的（对/错），这意味着这些领域的 RL scaling 几乎没有上限。老板如果做代码/数学相关产品，GRPO+RLVR 是最高 ROI 的投入方向
+
+### 未解问题与局限
+
+- **开放性任务的 RL Scaling 还没有被验证**：GRPO/RLVR 在数学/代码上效果惊艳，但对话、创意写作等无法 verify 的任务，RL 的 scaling law 是否成立？目前证据不足
+- **Reward Hacking 仍然是根本性挑战**：即使用 ensemble + KL penalty，METR 2025 报告指出 frontier 模型仍然在 reward hack。这是一个 arms race，没有终极解
+- **GRPO = DPO 的统一理论还很初步**："It Takes Two" 论文指出 GRPO 和 DPO 在光谱上相连，但实际训练动力学差异仍然很大，理论还不完善
+- **Alignment Tax 的定量化不够**：我们知道对齐会损失能力，但损失多少、在哪些维度、如何最优 trade-off——缺乏系统性的量化框架
+
+### 脑暴：如果往下延伸
+
+- 如果把 [[AI/LLM/Inference/LLM-推理优化-2026-全景|推理优化]] 和 GRPO 训练结合——GRPO 的 group generation 阶段是密集推理，Speculative Decoding 加速 generation 可以直接加速 RL 训练
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO]] + [[AI/LLM/SFT/LoRA|LoRA]] 的组合：LoRA 做 parameter-efficient 的 RL 训练，减少 alignment tax（只改部分参数），是否能找到更好的 capability-alignment 平衡？
+- 6 个月后预测：Online DPO + RLAIF 的全自动循环将成为标配，人类只在 safety-critical 场景做 spot-check。Self-Play 对齐走向成熟。
+
+---
+
+## 📚 推荐阅读
+
+### 原始论文
+
+- [InstructGPT: Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155) — RLHF 三阶段范式的工业化定义，奠基之作
+- [Direct Preference Optimization (DPO)](https://arxiv.org/abs/2305.18290) — 绕过 RM 和 PPO 的优雅数学推导，DPO 家族的起源
+- [PPO: Proximal Policy Optimization](https://arxiv.org/abs/1707.06347) — RL 基础，理解 clipped objective 的设计动机
+- [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](https://arxiv.org/abs/2501.12948) — 纯 RL 涌现推理的里程碑，GRPO 的大规模验证
+- [DAPO: An Open-Source LLM Reinforcement Learning System at Scale](https://arxiv.org/abs/2503.14476) — GRPO 四项关键改进，NeurIPS 2025
+- [KTO: Model Alignment as Prospect Theoretic Optimization](https://arxiv.org/abs/2402.01306) — 非 pairwise 对齐，前景理论在 LLM 中的创新应用
+- [IPO: A General Theoretical Paradigm to Understand Learning from Human Feedback](https://arxiv.org/abs/2310.12036) — 修复 DPO 的 overfitting 理论问题
+- [RLOO: Back to Basics: Revisiting REINFORCE Style Optimization for Learning from Human Feedback](https://arxiv.org/abs/2402.14740) — Leave-One-Out baseline 的简洁有效方法
+- [Constitutional AI: Harmlessness from AI Feedback](https://arxiv.org/abs/2212.08073) — 原则驱动的 AI 自我对齐
+- [Let's Verify Step by Step (PRM)](https://arxiv.org/abs/2305.20050) — Process Reward Model，数学推理 reward 设计的重要参考
+
+### 深度解读
+
+- [Chip Huyen: RLHF: Reinforcement Learning from Human Feedback](https://huyenchip.com/2023/05/02/rlhf.html) — 全景式梳理，适合入门 ⭐⭐⭐⭐⭐
+- [Nathan Lambert: RLHF Book (Manning)](https://www.rlhfbook.com/) — 系统性教材，从理论到工程 ⭐⭐⭐⭐⭐
+- [PPO & GRPO for LLM Alignment — Shi (2026)](https://cameronrwolfe.substack.com/) — GRPO 深度技术解读 ⭐⭐⭐⭐
+- [A Comprehensive Survey of LLM Alignment Techniques — Wang et al.](https://arxiv.org/abs/2407.16216) — 全面综述 ⭐⭐⭐⭐
+
+### 实践资源
+
+- [TRL (Transformers Reinforcement Learning)](https://github.com/huggingface/trl) — HuggingFace 官方 RLHF 框架，支持 PPO/DPO/KTO/ORPO/RLOO，最适合快速实验
+- [OpenRLHF](https://github.com/OpenRLHF/OpenRLHF) — 分布式 RLHF/GRPO 训练框架，70B+ 模型的最佳选择
+- [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) — 一站式微调平台，DPO/ORPO/KTO 开箱即用
+- [Unsloth](https://github.com/unslothai/unsloth) — 消费级显卡上的高效 LoRA + DPO/GRPO 训练
+
+---
+
+> 最后更新：2026-02-22 | 作者：Morpheus Vault
 
 ---
 
@@ -1152,5 +1266,7 @@ DAPO（ByteDance, NeurIPS 2025）做了四个关键改进：
 
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — RLHF 之后的前沿方法七维全景
 - [[AI/LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — Reward Model 训练的新方向
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — GRPO 算法的数学推导与实现细节
+- [[AI/LLM/SFT/LoRA|LoRA]] — Parameter-efficient fine-tuning，对齐训练的显存优化手段
 - [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
 - [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱

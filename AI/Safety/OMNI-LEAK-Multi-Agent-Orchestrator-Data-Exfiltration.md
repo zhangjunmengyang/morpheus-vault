@@ -27,8 +27,11 @@ status: active
 
 ## See Also
 
-- [[AI/Safety/AutoInject-RL-Prompt-Injection-Attack|AutoInject]] — RL 生成 universal adversarial suffix，单 agent 设置；OMNI-LEAK 是多 agent 版本，攻击链更复杂但更隐蔽
-- [[AI/Agent/CowCorpus-Human-Intervention-Modeling-Web-Agents|CowCorpus]] — 人类干预建模，强调何时需要人类确认；OMNI-LEAK 的防御需要 CowCorpus 式的干预节点
+- [[AI/Safety/AgentLeak-Full-Stack-Privacy-Leakage-Multi-Agent-Benchmark|AgentLeak]] — 姊妹论文，测量端：系统性量化 multi-agent 所有渠道的泄漏率；OMNI-LEAK 是攻击端——两篇共同结论：output-only 审计是系统性盲区
+- [[AI/Safety/AutoInject-RL-Prompt-Injection-Attack|AutoInject]] — RL 生成 universal adversarial suffix（单 agent 攻击原型）；OMNI-LEAK 是 orchestrator 级别的多 agent 扩展，ASR 更高且更隐蔽
+- [[AI/Agent/CowCorpus-Human-Intervention-Modeling-Web-Agents|CowCorpus]] — 人类干预时机建模；OMNI-LEAK 的 Notification Agent 无限制 send 问题正是 CowCorpus 干预节点能阻断的典型场景
+- [[AI/Safety/Clinejection-AI-Coding-Agent-Supply-Chain-Attack|Clinejection]] — 真实供应链 injection 事件；OMNI-LEAK 的实验室场景在 Clinejection 中变成了真实攻击——攻击链演进方向一致
+- [[AI/Safety/AI Agent 集体行为与安全漂移|AI Agent 集体行为与安全漂移]] — 多 Agent 安全漂移的理论框架；OMNI-LEAK 中 orchestrator 污染子 agent 正是一种受控的"安全漂移"实验
 
 ---
 

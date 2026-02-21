@@ -526,6 +526,6 @@ print(f"推荐方法: {method}, 理由: {reason}")
 
 - [[AI/LLM/SFT/LoRA|LoRA（低秩适应）]] — PEFT家族核心成员，本文对比的基准方法；LoRA的rank选择直接决定参数效率与表达能力的折中
 - [[AI/LLM/SFT/EWC-LoRA-Continual-Learning-Low-Rank|EWC-LoRA（持续学习LoRA）]] — LoRA在持续学习场景的扩展：Fisher information正则化克服灾难性遗忘，是PEFT方法在multi-task场景下的前沿演化方向
-- [[AI/LLM/Training/LLM微调实战-2026技术全景|LLM微调实战2026全景]] ⭐ — PEFT方法的工程落地指南；哪个场景用LoRA、QLoRA、DoRA，本文理论 + 微调实战提供实践配方
+- [[AI/LLM/SFT/LLM微调实战-2026技术全景|LLM微调实战2026全景]] ⭐ — PEFT方法的工程落地指南；哪个场景用LoRA、QLoRA、DoRA，本文理论 + 微调实战提供实践配方
 - [[AI/LLM/Inference/Progressive-Thought-Encoding-Cache-Efficient-RL|PTE（渐进式思维编码）]] — PEFT思想向推理阶段的迁移：PTE在KV cache被压缩时用LoRA ΔW在线蒸馏保存evicted token，本质是LoRA作为"记忆压缩器"的创新用法
 - [[AI/LLM/SFT/Post-Training Unified View 论文|Post-Training 统一视角]] — PEFT是post-training工程的核心工具；统一视角论文提供了SFT/RLHF/DPO在PEFT框架下的系统性理解

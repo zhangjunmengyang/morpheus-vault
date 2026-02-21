@@ -7,8 +7,11 @@ tags:
   - ai/peft
   - type/survey
   - interview/hot
-status: active
+status: deprecated
 ---
+
+> [!warning] ⚠️ Deprecated
+> 本文为早期精简版（343行）。更完整的对比分析见 [[AI/LLM/SFT/PEFT 方法对比]]（530行）。保留供参考，不再维护。
 
 # PEFT 方法综述：参数高效微调技术全景
 

@@ -1,8 +1,21 @@
 ---
 title: "Decoder-Only vs Encoder-Decoder vs Prefix LM"
+brief: "三大 LLM 架构的本质区别在 Attention Mask：Encoder-Decoder = 输入全双向+cross-attention+输出因果；Decoder-Only = 全因果（当前主流）；Prefix LM = prefix 双向+后续因果。Decoder-Only 成为主流的核心原因：Scaling 效率更高、NTP 目标简洁、工程实现简单、生态正反馈。"
 date: 2026-02-14
+updated: 2026-02-22
 tags: [architecture, transformer, gpt, t5, interview]
-type: note
+type: concept
+domain: ai/foundations/architecture
+sources:
+  - "Attention is All You Need arXiv:1706.03762 (Vaswani et al., 2017)"
+  - "T5: Exploring the Limits of Transfer Learning arXiv:1910.10683 (Raffel et al., 2019)"
+  - "GPT-3: Language Models are Few-Shot Learners arXiv:2005.14165 (Brown et al., 2020)"
+  - "LLaMA arXiv:2302.13971 (Touvron et al., 2023)"
+  - "Wang et al. (2022) Decoder-Only vs Prefix LM 对比研究"
+related:
+  - "[[AI/Foundations/DL-Basics/Attention 详解]]"
+  - "[[AI/LLM/Architecture/Attention 变体综述]]"
+  - "[[AI/Foundations/Architecture/SSM 与 Mamba]]"
 ---
 
 # Decoder-Only vs Encoder-Decoder vs Prefix LM
@@ -28,16 +41,35 @@ Prefix LM:
 
 ### Attention Mask 对比（核心！）
 
-```
-Encoder-Decoder (Encoder 部分):    Decoder-Only:              Prefix LM:
-  x1 x2 x3                          x1 x2 x3 y1 y2 y3         x1 x2 x3 y1 y2 y3
-x1 ✓  ✓  ✓                       x1 ✓  ✗  ✗  ✗  ✗  ✗       x1 ✓  ✓  ✓  ✗  ✗  ✗
-x2 ✓  ✓  ✓                       x2 ✓  ✓  ✗  ✗  ✗  ✗       x2 ✓  ✓  ✓  ✗  ✗  ✗
-x3 ✓  ✓  ✓                       x3 ✓  ✓  ✓  ✗  ✗  ✗       x3 ✓  ✓  ✓  ✗  ✗  ✗
-                                  y1 ✓  ✓  ✓  ✓  ✗  ✗       y1 ✓  ✓  ✓  ✓  ✗  ✗
-                                  y2 ✓  ✓  ✓  ✓  ✓  ✗       y2 ✓  ✓  ✓  ✓  ✓  ✗
-                                  y3 ✓  ✓  ✓  ✓  ✓  ✓       y3 ✓  ✓  ✓  ✓  ✓  ✓
-```
+**Encoder-Decoder（Encoder 部分）— 全双向：**
+
+| 看→ | x1 | x2 | x3 |
+|-----|----|----|-----|
+| x1  | ✅ | ✅ | ✅ |
+| x2  | ✅ | ✅ | ✅ |
+| x3  | ✅ | ✅ | ✅ |
+
+**Decoder-Only — 严格因果掩码：**
+
+| 看→ | x1 | x2 | x3 | y1 | y2 | y3 |
+|-----|----|----|----|----|----|----|
+| x1  | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| x2  | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| x3  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
+| y1  | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
+| y2  | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| y3  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+
+**Prefix LM — prefix 双向 + 后续因果：**
+
+| 看→ | x1 | x2 | x3 | y1 | y2 | y3 |
+|-----|----|----|----|----|----|----|
+| x1  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
+| x2  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
+| x3  | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
+| y1  | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
+| y2  | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| y3  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
 关键观察：
 - **Encoder-Decoder**：输入端完全双向，输出端因果，中间通过 cross-attention 桥接
@@ -284,6 +316,39 @@ x3 ✓  ✓  ✓                       x3 ✓  ✓  ✓  ✗  ✗  ✗       x3 
 - 总结：**任务特化选 Encoder-Decoder，通用能力选 Decoder-Only**
 
 ---
+
+---
+
+## 🔧 落地应用
+
+**面试即战力**（最高频场景）：
+- "为什么 Decoder-Only 是主流？" → 五维度回答：Scaling / 目标简洁 / 工程简单 / ICL / 生态
+- "Encoder-Decoder 还有价值吗？" → 有，在翻译/ASR/条件生成等 seq2seq 任务上仍是最优选
+- "Prefix LM 和 Decoder-Only 的区别？" → attention mask 不同；大规模下差异几乎消失
+
+**架构选型快查**：
+- 通用对话/代码生成/指令遵循 → **Decoder-Only**
+- 机器翻译/语音识别/摘要 → **Encoder-Decoder**
+- 小模型 NLU 任务 → **Encoder-Only (BERT 系)**
+
+---
+
+## 💡 启发与思考
+
+**So What（对老板的意义）**：Decoder-Only 的主导并不是"技术上最优"，而是在规模效应下，其 Scaling 效率优势被放大 + 生态正反馈形成锁定。这说明：**工程选型中，技术优劣往往比不上生态惯性**——这个教训对设计 Agent 框架、选 RL 算法都适用。
+
+**待探索问题**：
+1. Decoder-Only 在分类/NLU 任务上的劣势随着规模增大而消失的临界点在哪？（涉及 emergent abilities 研究）
+2. 未来 MoE + Decoder-Only 的规模继续扩展，Encoder-Decoder 的残余优势还会保留吗？
+
+---
+
+## 📚 推荐阅读
+
+- [Attention is All You Need](https://arxiv.org/abs/1706.03762) — Transformer 原论文，Encoder-Decoder 架构的起点 ⭐⭐⭐⭐⭐
+- [T5 论文](https://arxiv.org/abs/1910.10683) — Encoder-Decoder 的集大成者，text-to-text 范式 ⭐⭐⭐⭐
+- [GPT-3 论文](https://arxiv.org/abs/2005.14165) — Decoder-Only + ICL 的突破，理解为什么全世界跟着跑 ⭐⭐⭐⭐⭐
+- [LLaMA 论文](https://arxiv.org/abs/2302.13971) — 开源 Decoder-Only 的最佳实践，Chinchilla Scaling Law 实战 ⭐⭐⭐⭐
 
 ## See Also
 

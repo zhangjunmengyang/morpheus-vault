@@ -1,8 +1,27 @@
 ---
 title: "Transformer 架构深度解析 — 2026 技术全景"
+brief: "从数学第一性原理出发的 Transformer 架构全景，覆盖 Attention 机制（MHA/GQA/MLA）、位置编码（RoPE/YaRN）、KV Cache 优化（PagedAttention/Speculative Decoding）、稀疏注意力、MoE、SSM/Mamba、归一化与激活函数演进，以及 2026 前沿架构（MoD/Hyper-Connections/Token Merging）。面试武器级深度，含 18 道难度递进面试题。"
+type: survey
+domain: ai/llm/architecture
 date: 2026-02-21
+updated: "2026-02-22"
 tags: [面试, Transformer, Attention, MoE, SSM, 架构, 深度解析]
 status: complete
+sources:
+  - "Vaswani et al., Attention Is All You Need, arXiv:1706.03762 (2017)"
+  - "Dao et al., FlashAttention, arXiv:2205.14135 (2022)"
+  - "Su et al., RoPE/RoFormer, arXiv:2104.09864 (2021)"
+  - "Ainslie et al., GQA, arXiv:2305.13245 (2023)"
+  - "DeepSeek-AI, DeepSeek-V2/V3 (2024)"
+  - "Gu & Dao, Mamba, arXiv:2312.00752 (2023)"
+  - "Kwon et al., PagedAttention/vLLM, SOSP 2023"
+  - "Peng et al., YaRN, arXiv:2309.00071 (2023)"
+related:
+  - "[[AI/LLM/Architecture/_MOC|Architecture MOC]]"
+  - "[[AI/LLM/Architecture/MoE 深度解析|MoE 深度解析]]"
+  - "[[AI/LLM/Architecture/FlashAttention|FlashAttention]]"
+  - "[[Career/AI面试速查手册|AI 面试速查手册]]"
+  - "[[AI/LLM/SFT/LLM微调实战-2026技术全景|LLM 微调实战 2026]]"
 ---
 
 # Transformer 架构深度解析 — 2026 技术全景
@@ -711,7 +730,7 @@ $$
 - 计算量减少约 7-10%（省去均值计算和减法）
 
 **为什么可以去掉 mean centering？**
-- 实验表明 mean centering 的贡献远小于 variance normalization
+- Zhang & Sennrich (arXiv:1910.07467) 实验表明 mean centering 的贡献远小于 variance normalization
 - Re-centering 可以由后续的线性层补偿
 - LLaMA、Mistral、DeepSeek 等 2023+ 模型几乎全部采用 RMSNorm
 
@@ -898,7 +917,7 @@ $$
 **BF16 为什么优于 FP16？**
 - FP16 范围小（max 65504），attention logits 容易溢出 → 需要 loss scaling
 - BF16 范围与 FP32 相同，无需 loss scaling
-- BF16 精度低于 FP16，但实验表明对 LLM 训练影响极小
+- BF16 精度低于 FP16，但 Google Brain 的 BFloat16 实验及后续 LLaMA/PaLM 训练实践表明对 LLM 训练影响极小
 
 **混合精度策略**：
 - 权重 master copy：FP32
@@ -1506,7 +1525,7 @@ $$
 **纠正**：RoPE 理论上对任意位置有定义，但实际效果受限于训练长度。超出训练长度后，低频维度的角度超出训练分布 → 性能下降。需要 YaRN / NTK-aware scaling 等方法微调。
 
 ### 误区 4：Pre-Norm 一定比 Post-Norm 好
-**纠正**：Pre-Norm 训练更稳定，但多项研究表明 Post-Norm 的表示质量略好（尤其在 NLU 任务上）。DeepNorm 证明了深层 Post-Norm 也可以稳定训练。选择取决于训练 budget 和任务。
+**纠正**：Pre-Norm 训练更稳定，但 Xiong et al. (arXiv:2002.04745) 和 Liu et al. (arXiv:2004.08249) 的分析表明 Post-Norm 的表示质量略好（尤其在 NLU 任务上）。DeepNorm（Wang et al., arXiv:2203.00555）证明了深层 Post-Norm 也可以稳定训练。选择取决于训练 budget 和任务。
 
 ### 误区 5：Mamba 可以完全替代 Attention
 **纠正**：SSM 的固定维度隐状态是信息瓶颈，精确检索（needle-in-a-haystack）和 ICL 能力弱于 Attention。2026 共识是混合架构（少量 Attention 层 + 大量 SSM 层）。
@@ -1613,5 +1632,86 @@ $$
 
 ---
 
-> **Last Updated**: 2026-02-21
-> **See Also**: [[AI/LLM/Architecture/_MOC|Architecture MOC]] · [[Career/AI面试速查手册|AI 面试速查手册]] · [[AI/LLM/Architecture/MoE 深度解析|MoE 深度解析]] · [[AI/LLM/Architecture/Transformer 位置编码|位置编码详解]] · [[AI/LLM/Architecture/FlashAttention|FlashAttention]] · [[AI/LLM/Training/LLM微调实战-2026技术全景|LLM 微调实战 2026]] — 配套：先懂架构再学微调，两文合读=面试全覆盖
+---
+
+## 🔧 落地应用
+
+### 直接可用场景
+
+- **模型选型决策**：理解 MHA vs GQA vs MLA 的 KV Cache trade-off 后，可根据部署硬件（单卡 vs 多卡、显存大小）精准选择模型变体。例如：24GB 单卡部署选 GQA-8 的 7B 模型；多卡集群选 MLA 的 DeepSeek-V3 以最大化吞吐。
+- **推理服务优化**：PagedAttention + Continuous Batching 是生产级 LLM 服务的标配——vLLM 部署可将显存利用率从 20-40% 提升到 96%，吞吐提升 2-5×。Speculative Decoding 进一步加速 2-3×。
+- **长上下文应用**：RoPE + YaRN 从 4K 扩展到 128K+ 仅需 400-600 步微调。适用于长文档分析、代码库理解、多轮对话等场景。Ring Attention 可将上下文进一步扩展到 1M+ tokens。
+- **MoE 部署**：Mixtral 8x7B 用 46B 参数达到 LLaMA-2 70B 性能，推理成本仅为后者约 1/5。适合算力受限但需要强模型的场景。
+
+### 工程实现要点
+
+- **FlashAttention 必选**：所有 2024+ 的生产部署都应启用 FlashAttention-2/3。PyTorch 2.0+ 内置 `torch.nn.functional.scaled_dot_product_attention` 自动调用
+- **KV Cache 量化**：INT8/INT4 KV Cache 量化可在几乎不损精度的前提下将缓存压缩 2-4×（配合 GQA 效果更佳）
+- **Position Interpolation 实操**：扩展上下文时，优先尝试 YaRN（效果最好），退而求其次用 NTK-aware scaling（免微调）
+- **MoE 负载均衡监控**：部署 MoE 模型时必须监控 expert load distribution，不均衡会导致特定 GPU 成为瓶颈
+
+### 面试高频问法
+
+- **Q**: 如何从零设计一个 7B LLM 的架构？
+  **A**: Decoder-only + Pre-RMSNorm + SwiGLU($d_{ff}=8d/3$) + GQA($h=32, g=8$) + RoPE($\theta=500000$) + 32L × 4096d。（详见 Q11）
+- **Q**: FlashAttention 降低了计算复杂度吗？
+  **A**: 没有，仍是 $O(n^2d)$。降低的是 IO 复杂度：通过分块 + online softmax 在 SRAM 完成计算，显存 $O(n^2) \to O(n)$。（详见 Q6）
+
+---
+
+## 💡 启发与思考
+
+### So What？对老板意味着什么
+
+- **面试终极武器**：本文 18 道面试题覆盖从基础到专家级全梯度。掌握 Attention 缩放原理 + RoPE 数学 + FlashAttention IO 分析 + MLA absorption trick = Transformer 面试无盲区。
+- **技术判断力提升**：理解"为什么 Decoder-only 胜出"、"MoE 的真实推理成本"、"SSM 不能完全替代 Attention"这三个结论，在技术选型讨论中就不会被忽悠。
+- **架构直觉**：所有优化的底层逻辑只有两个——减少内存访问（FlashAttention、KV Cache 优化）和条件计算（MoE、MoD、稀疏 attention）。理解这个 meta-pattern 比记住每个细节更有价值。
+
+### 未解问题与局限
+
+- **Attention $O(n^2)$ 的根本困境**：稀疏 attention 和 SSM 各有局限（信息丢失 vs 精确检索瓶颈），混合架构是当前最优解但仍是工程妥协而非根本突破
+- **MoE 训练不稳定性**：routing 的离散性导致梯度噪声，DeepSeek-V3 的 bias-based 方案大幅改善但未彻底解决 expert 坍塌风险
+- **超长上下文的真实效用**：模型支持 128K+ 上下文 ≠ 有效利用。Lost-in-the-middle 问题（[Liu et al., arXiv:2307.03172](https://arxiv.org/abs/2307.03172)）表明模型对中间位置信息的利用率远低于首尾
+- **FP8 训练的边界**：DeepSeek-V3 成功用 FP8 训练，但对精度敏感的任务（数学推理、代码生成）的影响尚需更多验证
+
+### 脑暴：如果往下延伸
+
+- **MLA + MoE + MoD 全组合**：DeepSeek-V3 已做 MLA + MoE，若再加 MoD（动态跳层），理论上可以在 1T 参数模型上实现 <50B 活跃参数的推理成本。这是否是通向 AGI 级模型的可行路径？
+- **[[AI/Agent/AI-Agent-2026-技术全景|Agent]] 对架构的反向需求**：Agent 需要超长 context（episodic memory）+ 快速推理（多步决策）+ 低成本（高频调用）。这三个需求同时推动 SSM 混合架构、Speculative Decoding 和 MoE 的发展。
+- **Mamba-2 + Attention 的最优混合比**：Jamba 用 3:1，但这个比例是否随任务类型变化？针对特定领域（代码 vs 对话 vs 数学）的最优混合比可能完全不同。
+- **Token Merging 的极限**：如果能将 128K token 动态合并到 8K 有效 token 且不损精度，相当于免费获得 16× 上下文扩展。这比架构层面的优化可能更实用。
+
+> 🔗 See also: [[AI/LLM/Architecture/MoE 深度解析|MoE 深度解析]] — MoE 架构的专题深入（负载均衡、Expert Parallelism 细节）
+> 🔗 See also: [[AI/Agent/AI-Agent-2026-技术全景|AI Agent 2026 全景]] — Agent 如何依赖和推动 Transformer 架构演进
+> 🔗 See also: [[AI/LLM/Inference/LLM-推理优化-2026-全景|LLM 推理优化]] — 推理加速的工程全景（与本文架构视角互补）
+
+---
+
+## 📚 推荐阅读
+
+### 原始论文
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762) — Transformer 开山之作，必读 ⭐⭐⭐⭐⭐
+- [FlashAttention](https://arxiv.org/abs/2205.14135) — IO-aware attention，理解现代推理优化的基础 ⭐⭐⭐⭐⭐
+- [RoFormer (RoPE)](https://arxiv.org/abs/2104.09864) — 旋转位置编码，2023+ 所有主流模型采用 ⭐⭐⭐⭐⭐
+- [GQA](https://arxiv.org/abs/2305.13245) — MHA→GQA 的迁移方法，LLaMA-2 关键技术 ⭐⭐⭐⭐
+- [Mamba](https://arxiv.org/abs/2312.00752) — Selective SSM，$O(n)$ 序列建模新范式 ⭐⭐⭐⭐
+- [DeepSeek-V2 (MLA)](https://arxiv.org/abs/2405.04434) — MLA + absorption trick，KV Cache 压缩 28× ⭐⭐⭐⭐⭐
+- [YaRN](https://arxiv.org/abs/2309.00071) — RoPE 长度扩展最优方案 ⭐⭐⭐⭐
+- [PagedAttention/vLLM](https://arxiv.org/abs/2309.06180) — 虚拟内存式 KV Cache 管理 ⭐⭐⭐⭐
+- [Mixture-of-Depths](https://arxiv.org/abs/2404.02258) — 动态计算分配，2024 前沿 ⭐⭐⭐
+
+### 深度解读
+- [Lilian Weng, "The Transformer Family Version 2.0"](https://lilianweng.github.io/posts/2023-01-27-the-transformer-family-v2/) — Transformer 变体最佳综述 ⭐⭐⭐⭐⭐
+- [Jay Alammar, "The Illustrated Transformer"](https://jalammar.github.io/illustrated-transformer/) — 可视化入门经典 ⭐⭐⭐⭐
+- [Sasha Rush, "The Annotated Transformer"](https://nlp.seas.harvard.edu/annotated-transformer/) — 代码级注解 ⭐⭐⭐⭐
+
+### 实践资源
+- [vLLM GitHub](https://github.com/vllm-project/vllm) — 生产级 LLM 推理引擎，PagedAttention + Continuous Batching
+- [FlashAttention GitHub](https://github.com/Dao-AILab/flash-attention) — 官方实现，支持 FA-2/3
+- [HuggingFace Transformers](https://github.com/huggingface/transformers) — 所有主流架构的参考实现
+- [DeepSeek 开源系列](https://github.com/deepseek-ai) — MLA + MoE 的工业级实现
+
+---
+
+> **Last Updated**: 2026-02-22
+> **See Also**: [[AI/LLM/Architecture/_MOC|Architecture MOC]] · [[Career/AI面试速查手册|AI 面试速查手册]] · [[AI/LLM/Architecture/MoE 深度解析|MoE 深度解析]] · [[AI/LLM/Architecture/Transformer 位置编码|位置编码详解]] · [[AI/LLM/Architecture/FlashAttention|FlashAttention]] · [[AI/LLM/SFT/LLM微调实战-2026技术全景|LLM 微调实战 2026]] — 配套：先懂架构再学微调，两文合读=面试全覆盖

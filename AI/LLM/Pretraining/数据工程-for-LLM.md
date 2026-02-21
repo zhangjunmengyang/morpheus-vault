@@ -7,8 +7,11 @@ tags:
   - ai/synthetic-data
   - type/practice
   - interview/hot
-status: active
+status: deprecated
 ---
+
+> [!warning] ⚠️ Deprecated
+> 本文为早期精简版（386行）。完整技术全景版见 [[AI/LLM/Pretraining/LLM-数据工程-2026-技术全景]]（3793行）。保留供参考，不再维护。
 
 # 数据工程 for LLM：从预训练到对齐
 
@@ -247,7 +250,7 @@ def validate_sft_sample(instruction, response, validator_model):
     return sum(scores.values()) / len(scores) > 4.0
 ```
 
-**2025 年经验**：参见 [[SFT 实战指南]]，**1000 条高质量 > 100K 条低质量**（LIMA 论文）。
+**2025 年经验**：参见 [[SFT-实战指南]]，**1000 条高质量 > 100K 条低质量**（LIMA 论文）。
 
 ## 4. DPO 偏好数据构造
 

@@ -315,8 +315,8 @@ response = openai.chat.completions.create(
 
 ## 相关笔记
 
-- [[Prompt Engineering]] — 基础 Prompt Engineering
-- [[Prompt engineering 概述]] — PE 概述
+- [[Prompt-Engineering-基础]] — 基础 Prompt Engineering
+- [[Prompt-Engineering-概述]] — PE 概述
 - [[RLHF 全链路]] — RLHF 完整流程
 - [[PPO 原理]] — PPO 算法
 - [[RAG 工程实践]] — 检索增强生成

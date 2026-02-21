@@ -151,5 +151,5 @@ verl 的 agentic RL training 就是解决这个问题的，参见 [[AI/Agent/Age
 
 - [[AI/Agent/Fundamentals/记忆模块|记忆模块]] — Agent 的另一核心能力
 - [[AI/Agent/Agentic-RL/Agentic RL Training|Agentic RL Training]] — 用 RL 训练 Tool Use
-- [[AI/LLM/Prompt-Engineering/Tools|Prompt Engineering Tools]] — 系统 prompt 的工具描述
+- [[AI/LLM/Application/Prompt-Tools|Prompt Engineering Tools]] — 系统 prompt 的工具描述
 - [[AI/Agent/Multi-Agent/零碎的点|Multi-Agent 零碎的点]] — 多 Agent 工具协作

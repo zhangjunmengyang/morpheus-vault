@@ -99,7 +99,7 @@ response_b = model.generate(f"基于以下反馈改进回答：{critique}")
 ## 相关
 
 - [[AI/LLM/Application/Synthetic-Data/DataFlow|DataFlow 框架]]
-- [[AI/LLM/Prompt-Engineering/数据合成|数据合成（Prompt 视角）]]
+- [[AI/LLM/Application/数据合成|数据合成（Prompt 视角）]]
 - [[AI/LLM/Frameworks/Unsloth/数据合成|Unsloth 数据合成]]
 - [[AI/LLM/SFT/SFT 原理|SFT 原理]]
 - [[AI/LLM/RL/DPO/DPO-TRL实践|DPO 实践]]

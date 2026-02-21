@@ -124,7 +124,7 @@ optimized = optimizer.compile(Classifier(), trainset=train_data)
 
 ## 相关
 
-- [[AI/LLM/Prompt-Engineering/Prompt engineering 概述|Prompt Engineering 概述]]
-- [[AI/LLM/Prompt-Engineering/prompt 攻击|Prompt 攻击]]
-- [[AI/LLM/Prompt-Engineering/数据合成|数据合成]]
-- [[AI/LLM/Prompt-Engineering/Prompt Engineering|Prompt Engineering 实践]]
+- [[AI/LLM/Application/Prompt-Engineering-概述|Prompt Engineering 概述]]
+- [[AI/LLM/Application/Prompt-攻击|Prompt 攻击]]
+- [[AI/LLM/Application/数据合成|数据合成]]
+- [[AI/LLM/Application/Prompt-Engineering-基础|Prompt Engineering 实践]]
