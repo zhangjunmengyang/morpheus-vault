@@ -1156,6 +1156,72 @@ tags: [面试, 速查, AI]
 
 ---
 
+## 二十、Transformer 架构深度解析方向
+
+**本方向核心关键词**：Scaled Dot-Product、RoPE/YaRN、FlashAttention、MLA/GQA、MoE、SSM/Mamba、PagedAttention、Speculative Decoding、SwiGLU、Pre-RMSNorm
+
+### Q1: Self-Attention 为什么除以 √d_k？不除会怎样？
+- 点积方差 = d_k，softmax 进入饱和区 → 梯度消失
+- 除以 √d_k 归一化方差到 1，本质是 temperature scaling
+- 不除：attention 变 one-hot，训练初期发散或极慢收敛
+
+### Q2: FlashAttention 优化了什么？降低计算复杂度了吗？
+- **没有降低**计算复杂度（仍 O(n²d)），优化的是 IO 复杂度
+- 分块在 SRAM 计算 + online softmax，不存 n×n 矩阵到 HBM
+- 显存 O(n²)→O(n)，速度 2-4×（因 attention 是 memory-bound）
+
+### Q3: GQA vs MQA vs MLA 的 KV Cache trade-off？
+- MHA：2hd_kn per layer（最大），MQA：2d_kn（h 倍压缩），GQA-g：2gd_kn
+- MLA：压缩到 latent c_kv (d_c=512)，absorption trick 直接在 latent 空间做 attention
+- DeepSeek-V3 MLA：cache 576 维 vs MHA 16384 维，压缩 28.5×
+
+### Q4: RoPE 长度外推为什么需要 YaRN？
+- RoPE 超出训练长度后低频维度角度超出分布 → 性能崩溃
+- YaRN 分频段：高频不动（局部关系）、低频线性插值（远程关系）、中间渐进
+- 加 attention temperature 补偿长序列时分布变 flat，仅需 400-600 步微调
+
+### Q5: Speculative Decoding 为什么输出分布严格等于 target model？
+- 修正拒绝采样：accept prob = min(1, p(x)/q(x))
+- 被拒绝时从修正分布 normalize(max(0, p(x)-q(x))) 采样
+- 数学证明 P(output=x) = p(x)，完全无损，加速 2-3×
+
+### Q6: MoE 负载均衡：DeepSeek-V3 为什么不用 auxiliary loss？
+- Auxiliary loss (αN·Σf_i·P_i) 干扰主训练目标，α 需调参
+- DeepSeek-V3 用 bias-based：g'_i = g_i + b_i，动态调整偏向负载不足的 expert
+- 不干扰 gating 梯度 + Shared Expert 保证通用知识基线
+
+### Q7: Mamba 和 Attention 各自的信息论局限？
+- Attention O(n²)：精确全 pairwise 交互的代价，信息论下界
+- SSM O(n)：固定维度隐状态是有损压缩，无法精确检索任意历史 token
+- 混合架构最优：少量 Attention 兜底检索 + 大量 SSM 省显存
+
+### Q8: SwiGLU 为什么 d_ff = 8d/3？
+- SwiGLU 有三个权重矩阵（W1, W2, W3），标准 FFN 只有两个
+- 参数补偿：3×d×d_ff = 2×d×4d → d_ff = 8d/3
+- 门控机制 + Swish 平滑非单调 → 相同参数量下 PPL 一致更优
+
+### Q9: PagedAttention 如何解决 KV Cache 内存碎片？
+- 借鉴 OS 虚拟内存：KV Cache 分固定大小 block，按需分配
+- Block Table 映射逻辑→物理地址，利用率从 20-40% 提升到 ~96%
+- Copy-on-Write 支持 beam search 共享前缀，Prefix Caching 共享系统 prompt
+
+### Q10: Mixture of Depths vs Early Exit 的核心区别？
+- Early Exit：token 在某层提前退出，之后所有层都跳过
+- MoD：每层独立决定哪些 token 计算/跳过（更细粒度）
+- MoD 对 batched inference 更友好，相同性能下 FLOPs 减 12.5-50%
+
+### Q11: Pre-RMSNorm 成为 2026 标准的原因？
+- Pre-Norm：残差路径无非线性，梯度直通（恒等项 I）
+- RMSNorm：去掉 mean centering，计算快 ~10%，实验证明无性能损失
+- Post-Norm 的 LayerNorm Jacobian 可能导致梯度不稳定，需 warmup
+
+### Q12: 设计 7B LLM 的架构 checklist？
+- Decoder-only + 32L×4096d + GQA(h=32,g=8) + RoPE(θ=500K)
+- SwiGLU(d_ff=11008) + Pre-RMSNorm + BF16 + Cosine/WSD schedule
+- Warmup 2000 steps + Gradient Clip 1.0 + Weight Decay 0.1
+
+---
+
 ## See Also（深度笔记导航）
 
 > 本手册是速查层（K→W），以下为各方向的完整深度版，面试前根据岗位方向选择精读。
@@ -1186,6 +1252,9 @@ tags: [面试, 速查, AI]
 - [[AI/RAG/_MOC|RAG MOC]] — RAG 知识域全索引
 - [[AI/RAG/Advanced RAG|Advanced RAG]] — Self-RAG/GraphRAG 进阶技术
 - [[AI/RAG/向量数据库选型|向量数据库选型]] — FAISS/Milvus/Chroma 对比
+
+### Transformer 架构方向
+- [[AI/LLM/Architecture/Transformer架构深度解析-2026技术全景|Transformer 架构深度解析 2026]] — 注意力/位置编码/MoE/SSM/推理优化全栈，18 道面试题 + 42 篇文献 ⭐
 
 ### 计算机视觉方向
 - [[计算机视觉基础与前沿-2026技术全景|CV 2026 技术全景]] — CNN/ViT/检测/分割/生成/3D/Agent，12+ 面试题 + 39 篇文献 ⭐
