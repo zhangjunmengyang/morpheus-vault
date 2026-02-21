@@ -173,3 +173,12 @@ Z.AI 提供订阅制编码方案，支持 Claude Code、Cursor、Cline、OpenCla
 - [Reuters 报道](https://www.reuters.com/technology/chinas-ai-startup-zhipu-releases-new-flagship-model-glm-5-2026-02-11/)
 - [llm-stats 分析](https://llm-stats.com/blog/research/glm-5-launch)
 - [Digital Applied 分析](https://www.digitalapplied.com/blog/zhipu-ai-glm-5-release-744b-moe-model-analysis)
+
+---
+
+## See Also
+
+- [[AI/Frontiers/GLM-5-技术报告精读|GLM-5 技术报告精读]] — GLM-5 完整技术分析（正式版）
+- [[AI/LLM/Frameworks/Slime-RL-Framework|Slime RL Framework]] — GLM-5 使用的 RL 训练框架
+- [[AI/Agent/_MOC|Agent MOC]] — Agentic Engineering 全图谱
+- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱

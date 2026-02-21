@@ -356,3 +356,11 @@ Future: Multi-modal Agentic RL
 ---
 
 *总计约19.8KB，涵盖了从理论基础到实践应用的全面分析。这篇论文代表了Agentic RL领域的一个重要突破，特别是在reward engineering和multi-step reasoning的结合上。*
+---
+
+## See Also
+
+- [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — CM2 的 reward 设计属于 GRPO 七维中的 Reward 维度
+- [[AI/Agent/Agentic-RL/VerlTool 论文|VerlTool]] — 同为 Tool Use RL 方向
+- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
+- [[AI/Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer]] — Checklist reward 与 conditional release reward 的设计比较

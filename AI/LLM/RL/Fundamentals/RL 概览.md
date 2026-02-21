@@ -91,3 +91,12 @@ https://api-docs.deepseek.com/guides/reasoning_model
 008 核心强化学习算法，GRPO、RLOO、REINFORCE++、REINFORCE++ baseline
 
 https://github.com/chunhuizhang/llm_rl/blob/main/tutorials/objectives_adv/core_algo_adv.ipynb
+
+---
+
+## See Also
+
+- [[AI/LLM/RL/Fundamentals/强化学习的数学原理|强化学习数学原理]] — RL 概览的数学深化版
+- [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — 概览之后的前沿：GRPO 七维改进体系
+- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
+- [[AI/Foundations/ML-Basics/机器学习|机器学习]] — 监督学习到 RL 的演化

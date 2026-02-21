@@ -68,3 +68,12 @@ Reranking 任务的数据集格式为：
 社区相关讨论：[https://github.com/FlagOpen/FlagEmbedding/issues/179](https%3A%2F%2Fgithub.com%2FFlagOpen%2FFlagEmbedding%2Fissues%2F179)
 
 微调资源占用：small 模型，4090 显存占用 20G。
+
+---
+
+## See Also
+
+- [[AI/LLM/Application/Embedding/Embedding 选型|Embedding 选型]] — 同方向实践版，与本篇互补
+- [[AI/RAG/RAG 检索策略|RAG 检索策略]] — Embedding 在 RAG 中的核心角色
+- [[AI/Foundations/DL-Basics/Transformer|Transformer 通识]] — Embedding 的架构基础
+- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱

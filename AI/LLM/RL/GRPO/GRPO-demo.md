@@ -429,3 +429,11 @@ trainer.train()
 - 最短长度也在上升，应该是由 reasoning 部分影响，可能代表着推理能力正在逐渐上升。
 - correct 趋于收敛。
 - entropy 也降低收敛，说明输出多样性变少了，趋于稳定。
+---
+
+## See Also
+
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — GRPO 算法原理
+- [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — GRPO 的七维改进框架
+- [[AI/LLM/RL/GRPO/TRL 中实现 GRPO|TRL 中实现 GRPO]] — 实现细节
+- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱

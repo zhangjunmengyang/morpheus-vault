@@ -193,3 +193,12 @@ training_args = GRPOConfig(
 训练现象二：可以看到，随着模型学习，奖励函数的奖励值逐渐接近 0。这是一个好迹象，表明模型正在学习生成正确长度的文本。
 
 ![image](assets/WRHzdBrDCo78YVxzwZ8cXE8Snbb.png)
+
+---
+
+## See Also
+
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — 算法原理，实现的数学基础
+- [[AI/LLM/RL/GRPO/GRPO-demo|GRPO Demo]] — Demo 实践，与本篇互补
+- [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]] — TRL 框架全貌
+- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱

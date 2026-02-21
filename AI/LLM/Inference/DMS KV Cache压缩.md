@@ -479,3 +479,12 @@ DMS 训练效率高的根本原因在于三个设计选择：
 2. **Adaptive CR**: 论文中压缩比在训练时固定。是否可以设计一个在推理时动态调整 CR 的机制？比如当检测到"困难段落"时降低压缩比？
 
 3. **Speculative Decoding 结合**: DMS 的 8× 压缩释放的显存可以用来加载一个 draft model 做 speculative decoding，这样的组合是否比单独使用任一方法更优？
+
+---
+
+## See Also
+
+- [[AI/LLM/Inference/KV Cache 优化|KV Cache 优化]] — KV Cache 优化全貌
+- [[AI/LLM/Inference/Sparrow-Video-LLM-Speculative-Decoding|Sparrow 推测解码]] — 推理加速的另一路线
+- [[AI/Foundations/Inference/模型量化综述|模型量化综述]] — 量化与 KV Cache 压缩的结合
+- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱

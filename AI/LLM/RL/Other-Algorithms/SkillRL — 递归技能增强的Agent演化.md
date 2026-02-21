@@ -805,3 +805,11 @@ def skill_quality_score(skill, validation_trajectories):
 - 技能库size的上限
 - Real-time retrieval的latency requirements
 - 分布式deployment的synchronization costs
+---
+
+## See Also
+
+- [[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]] — 同为长期 Agent RL，KLong 聚焦极长 horizon，SkillRL 聚焦技能层级化
+- [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — SkillRL 的 RL 算法基础
+- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
+- [[AI/Agent/_MOC|Agent MOC]] — SkillRL 是 Agent RL 方向的子课题

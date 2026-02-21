@@ -101,6 +101,7 @@ tags:
 - [[AI/LLM/RL/Theory/RLRR-Reference-Guided-Alignment-Non-Verifiable|RLRR]] ⭐ — Reference-Guided RL Alignment for Non-Verifiable Domains：用高质量 reference + RefEval judge 为对齐任务造软 verifier，DPO 性能接近专训 ArmoRM；ICLR 2026（Yale+Meta+Scale AI+Salesforce，arXiv:2602.16802）★★★★☆
 - [[AI/LLM/RL/Theory/REMuL-CoT-Faithfulness-Multi-Listener-RL|REMuL]] ⭐ — CoT Faithfulness via Multi-Listener RL：定义可操作的 faithfulness（推理链可被其他模型"继续执行"到相同结论），两阶段训练（GRPO faithfulness RL → masked SFT correctness），**唯一同时提升 faithfulness 和 accuracy 的方法**；UNC+Cisco（arXiv:2602.16154，ICML投稿）★★★★★
 - [[AI/LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL 训练稳定性 2026 统一分析]] ⭐ — Scholar 综合笔记 v3：STAPO/Goldilocks/VCPO/DEEP-GRPO/MASPO/DAPO/LACONIC 四维拓扑（Token/样本/探索/系统），持续更新中（2026-02-20）★★★★★
+- [[AI/LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — Fisher information 证明低 margin pair 提供最大训练曲率，adaptive margin-aware 数据增强聚焦 decision boundary 附近；ICML投稿（arXiv:2602.17658）★★★★
 - [[AI/LLM/RL/RLHF 全链路|RLHF 全链路]] — 完整 RLHF 三阶段
 - [[AI/LLM/RL/RLHF-DPO-2026-技术全景|RLHF/DPO 2026 技术全景]] — 面试武器版，1147行，RLHF→RLAIF→DPO 全链路（2026-02-20）
 - [[AI/LLM/RL/对齐技术综述|对齐技术综述]] — RLHF → DPO → ORPO → KTO → SteerLM → Constitutional AI

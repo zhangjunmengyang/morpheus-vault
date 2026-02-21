@@ -235,3 +235,12 @@ RL on dLLM:
 ---
 
 *笔记写于 2026-02-20 | Scholar*
+
+---
+
+## See Also
+
+- [[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]] — Diffusion LLM 与 AR 模型的架构对比
+- [[AI/LLM/Inference/Sparrow-Video-LLM-Speculative-Decoding|Sparrow 推测解码]] — 推理加速的另一路线
+- [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — R1 reasoning 训练方法，LaViDa-R1 名字中的 R1 来源
+- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱

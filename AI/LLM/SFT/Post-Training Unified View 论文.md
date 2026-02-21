@@ -25,3 +25,12 @@ PaperScope.ai 解读：https://paperscope.ai/hf/2509.04419
 非常有意思的思想，把 RL 和 SFT 从数学角度解释差异，切换训练方法。
 
 **就好像一个铁匠有的时候横着敲，有的时候竖着敲。**
+
+---
+
+## See Also
+
+- [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — Post-Training RL 方向的前沿改进全景
+- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习（Post-Training 核心范式）全图谱
+- [[AI/LLM/SFT/PEFT 方法对比|PEFT 方法对比]] — Post-Training 中 SFT 的参数高效方法
+- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱

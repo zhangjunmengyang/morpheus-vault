@@ -982,3 +982,56 @@ tags: [面试, 速查, AI]
 - 在线：延迟优先 TTFT<500ms，auto-scaling，streaming，小 batch
 - 离线：吞吐优先，大 batch（64-256），spot instance 降本，无 streaming
 - 共用模型权重但 serving 配置完全不同
+
+---
+
+## 十七、NLP 基础与前沿方向
+
+**本方向核心关键词**：BPE/SentencePiece、Self-Attention、RoPE、MLM/CLM、LoRA/QLoRA、RLHF/DPO、RAG、Structured Generation、Test-time Compute
+
+### Q1: BPE 和 WordPiece 的核心区别？
+- BPE：统计字节对频率，贪心合并最高频 pair（GPT 系列）
+- WordPiece：选使语言模型似然增益最大的合并（BERT）
+- SentencePiece：语言无关框架，直接处理 raw text，不依赖预分词
+- Byte-level BPE：256 字节基础词表，100% 覆盖无 UNK（GPT-2+）
+
+### Q2: Self-Attention 为什么除以 √d_k？
+- q·k 各分量独立、均值 0 方差 1 → 内积方差 = d_k
+- 除以 √d_k 使方差稳定为 1，防 softmax 进入饱和区（梯度消失）
+- Multi-Head：不同 head 学不同模式（位置/语法/语义），d_k = d_model / h
+
+### Q3: RoPE vs ALiBi 位置编码？
+- RoPE：将位置编码为旋转矩阵作用于 Q/K，相对位置信息自然体现
+- ALiBi：不编码位置，直接在 attention score 加线性距离 bias
+- RoPE 外推：NTK-aware / YaRN 可扩展到训练长度的 4-8x
+- 2026 主流：LLaMA/Qwen/Mistral 用 RoPE，BLOOM/MPT 用 ALiBi
+
+### Q4: MLM vs CLM 预训练哪个更好？
+- MLM（BERT）：双向上下文，理解任务强（分类/NER/QA）
+- CLM（GPT）：单向自回归，生成任务强，LLM 时代主导
+- Seq2Seq（T5）：Encoder-Decoder，翻译/摘要优秀
+- LLM 时代 CLM 胜出原因：生成能力 + 规模涌现 + few-shot 通用性
+
+### Q5: LoRA 的原理和选型？
+- 在权重旁加低秩矩阵 ΔW=BA，r≪d，可训练参数 0.1-1%
+- 推理时 ΔW 可合并到原权重，无额外延迟
+- QLoRA：NF4 量化基模型+LoRA，单卡 24GB 可微调 70B
+- 选型：<100 条→ICL，100-10K→LoRA，>100K→考虑 Full FT
+
+### Q6: RLHF vs DPO 核心 trade-off？
+- RLHF（PPO）：4 模型、在线探索、不稳定但性能天花板高
+- DPO：2 模型、offline、简单稳定但无探索可能 mode collapse
+- GRPO（DeepSeek）：去掉 value model，group 内相对 reward
+- 经验法则：好数据+DPO > 差数据+PPO
+
+### Q7: RAG 架构的关键设计决策？
+- Chunking：固定大小 vs 语义分割 vs Parent-Child（精确检索+完整上下文）
+- 检索：Hybrid Search（BM25+Dense）几乎总优于纯 Dense
+- Reranker：Cross-Encoder 精度高但慢，ColBERT 兼顾精度和速度
+- 评估：RAGAS 四维（Faithfulness/Relevancy/Precision/Recall）
+
+### Q8: 2026 NLP 前沿三大趋势？
+- Test-time Compute：推理时投入更多算力换准确率（o1/DeepSeek R1）
+- 长上下文（1M+）：RoPE 外推 + Ring Attention，但 Lost-in-the-Middle 仍存在
+- Reasoning Models：RL+可验证 reward 涌现推理能力，可蒸馏到小模型
+- 底层趋势：NLP 边界模糊化，多模态统一，Agent 成为应用主线

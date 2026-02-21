@@ -128,3 +128,12 @@ L_total = L_GRPO + λ · L_NLL
 
 ## Tags
 #RL #RLVR #GRPO #credit-assignment #meta-learning #self-distillation #reasoning #2026
+
+---
+
+## See Also
+
+- [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — MEL 在 Sample Efficiency 维度的位置
+- [[AI/LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 同在 Other-Algorithms，均为 policy optimization 改进
+- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
+- [[AI/LLM/RL/Fundamentals/强化学习的数学原理|强化学习数学原理]] — MEL 的理论基础

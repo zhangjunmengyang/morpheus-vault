@@ -69,3 +69,12 @@ source: "arXiv:2602.11761"
 ---
 
 *Source: arXiv:2602.11761, OpenBMB MiniCPM Team, 2026-02*
+
+---
+
+## See Also
+
+- [[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]] — SALA 是 Attention 变体的一种
+- [[AI/LLM/Architecture/SLA2-Learnable-Router|SLA2 Learnable Router]] — 同期 MiniCPM 架构论文，互补
+- [[AI/Foundations/DL-Basics/Transformer|Transformer 通识]] — SALA 的架构基础
+- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱

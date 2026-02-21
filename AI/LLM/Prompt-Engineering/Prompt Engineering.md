@@ -167,3 +167,12 @@ ReAct 框架允许 LLMs 与外部工具交互来获取额外信息，从而给�
 # Multimodal CoT Prompting
 
 最近，[Zhang等人（2023）(opens in a new tab)](https%3A%2F%2Farxiv.org%2Fabs%2F2302.00923)提出了一种多模态思维链提示方法。传统的思维链提示方法侧重于语言模态。相比之下，多模态思维链提示将文本和视觉融入到一个两阶段框架中。第一步涉及基于多模态信息的理性生成。接下来是第二阶段的答案推断，它利用生成的理性信息。
+
+---
+
+## See Also
+
+- [[AI/LLM/Prompt-Engineering/Prompt Engineering 高级|高级 Prompt 技巧]] — 进阶篇
+- [[AI/LLM/Prompt-Engineering-2026实战全景|Prompt Engineering 2026 实战全景]] — 2026 年完整全景版（2784行）
+- [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — 自动 PE 方向：E-SPL/GEPA 用 RL 进化 prompt
+- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱

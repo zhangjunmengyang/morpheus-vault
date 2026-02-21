@@ -38,3 +38,12 @@ https://zhuanlan.zhihu.com/p/9644482549
 (2)[上限置信区间算法](https%3A%2F%2Fzhida.zhihu.com%2Fsearch%3Fcontent_id%3D250951745%26content_type%3DArticle%26match_order%3D1%26q%3D%25E4%25B8%258A%25E9%2599%2590%25E7%25BD%25AE%25E4%25BF%25A1%25E5%258C%25BA%25E9%2597%25B4%25E7%25AE%2597%25E6%25B3%2595%26zhida_source%3Dentity)（Upper Confidence Bounds, UCB）:为每个动作的奖励期望计算一个估计的范围，优先采用估计范围上限较高的动作。(也是蒙特卡洛树用到的算法）
 
 假设每个摇臂的收益的均值为 Q(k) ，估计的偏差为 δ(k) ，则每次根据Q(k)+δ(k) 的上界选择摇臂。
+
+---
+
+## See Also
+
+- [[AI/LLM/RL/Fundamentals/RL 概览|RL 概览]] — MCTS 在 RL 框架中的位置（树搜索 vs 梯度策略）
+- [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — Exploration 维度：MCTS 与 GRPO 探索策略对比
+- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
+- [[AI/Agent/_MOC|Agent MOC]] — MCTS 在 Agent planning 中的应用

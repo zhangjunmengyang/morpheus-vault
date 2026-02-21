@@ -42,3 +42,12 @@ Karpathy 的 nanochat 用 ~1000 行代码，在单个 8×H100 节点上 3 小时
 - [GitHub: karpathy/nanochat](https://github.com/karpathy/nanochat)
 - [DeepWiki 文档](https://deepwiki.com/karpathy/nanochat)
 - [B站解读](https://www.bilibili.com/video/BV171cwzWE5C/)
+
+---
+
+## See Also
+
+- [[AI/LLM/Pretraining/LLM预训练与分布式训练2026全景|LLM 预训练 2026 全景]] — nanochat 实验与工业级预训练的对比
+- [[AI/Foundations/Training/预训练流程|预训练流程]] — 预训练的基础概念
+- [[AI/LLM/Frameworks/verl/verl 概述|verl 框架]] — 对照：verl 是工业级 RL 训练框架
+- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱

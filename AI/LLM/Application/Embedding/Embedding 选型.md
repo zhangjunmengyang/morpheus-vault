@@ -85,3 +85,12 @@ tags:
 ### C-MTEB
 
 我们只关心 Rerank 和 Retrieval 评测，结果见 [mteb](https%3A%2F%2Fhuggingface.co%2Fspaces%2Fmteb%2Fleaderboard)
+
+---
+
+## See Also
+
+- [[AI/LLM/Application/Embedding/Embedding|Embedding 原理]] — 选型的理论基础
+- [[AI/RAG/RAG 检索策略|RAG 检索策略]] — 选型服务的下游：检索系统性能
+- [[AI/LLM/Application/Embedding/大模型线上排查 SOP|大模型线上排查 SOP]] — 选型部署后的生产问题排查
+- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱

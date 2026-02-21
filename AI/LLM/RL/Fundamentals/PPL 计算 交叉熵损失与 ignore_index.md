@@ -20,3 +20,11 @@ tags:
 - 两种方式等效：
 - 直接求 loss loss **=** nn**.**CrossEntropyLoss()
 - 先 F**.**log_softmax(input, dim**=-**1)，然后取平均，再去掉负号
+---
+
+## See Also
+
+- [[AI/Foundations/ML-Basics/PPL 困惑度|PPL 困惑度]] — PPL 的基础概念版
+- [[AI/LLM/RL/Fundamentals/RL & LLMs 入门|RL & LLMs 入门]] — PPL 在 RL training 中作为 KL 参考项
+- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
+- [[AI/Foundations/ML-Basics/损失函数|损失函数]] — 交叉熵 loss 的通用框架

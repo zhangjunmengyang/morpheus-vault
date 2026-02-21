@@ -332,3 +332,12 @@ DoRA 的核心发现是：全量微调倾向于**大幅改变权重方向但小�
 ### Q5: PEFT 方法能否用于预训练（而非仅 SFT）？
 
 可以但场景有限。**Continual Pre-training (CPT)** 场景下 LoRA 常用于领域适配（如法律/医学语料续训），但需要更高的 rank (r=64-256)。核心问题是：预训练的权重变化不一定是低秩的——新知识注入可能需要高秩更新。实践中 CPT 用 LoRA 的效果通常不如全量微调（差距 3-10%），但在资源受限时是可行折中。LoRA 更适合 **SFT/对齐** 阶段，因为格式/风格适配确实是低秩的。
+
+---
+
+## See Also
+
+- [[AI/Foundations/Training/PEFT 参数高效微调|PEFT 参数高效微调]] — Foundations 基础版，与本篇互补
+- [[AI/LLM/SFT/PEFT 方法对比|PEFT 方法对比]] — 深度对比版
+- [[AI/LLM/Frameworks/Unsloth/Unsloth 概述|Unsloth]] — PEFT 实践工具
+- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱
