@@ -1222,6 +1222,78 @@ tags: [面试, 速查, AI]
 
 ---
 
+## 二十一、LLM 微调实战方向
+
+**本方向核心关键词**：LoRA、QLoRA、DoRA、PEFT、SFT、DPO、RLHF、对齐税、灾难性遗忘、DeepSpeed ZeRO、FSDP
+
+### Q1: LoRA 的核心原理？
+- 假设微调的权重更新 ΔW 具有低秩结构，分解为 ΔW = (α/r)·B·A
+- B∈R^{d×r}, A∈R^{r×k}, r≪min(d,k)；B 初始化零保证训练起点=预训练
+- 参数量仅 0.1-1%，7B 模型 r=16 约 16.7M 参数（0.24%）
+- 推理时可合并回基座 W_new = W₀ + (α/r)·B·A，零额外延迟
+
+### Q2: QLoRA 如何在消费级 GPU 上微调 7B 模型？
+- 三大技术：NF4 量化（4-bit 信息论最优）+ 双重量化（scale 再量化）+ 分页优化器
+- 7B 模型显存：FFT ~56GB → LoRA ~14GB → QLoRA ~3.6GB
+- 关键配置：bnb_4bit_compute_dtype=bfloat16，用 float16 有数值问题
+- 缺点：训练速度降 20-30%，与 FSDP 不兼容
+
+### Q3: DoRA 比 LoRA 好在哪里？
+- 将权重解耦为方向 Direction + 大小 Magnitude：W = m · (W₀+BA)/‖W₀+BA‖
+- FFT 中方向变化 >> 大小变化；LoRA 耦合学习受低秩限制
+- DoRA(r=16) ≈ LoRA(r=64) 效果，额外仅一个 d 维向量（8KB）
+- 2026 新项目推荐 DoRA + LoRA+ 组合，零额外成本
+
+### Q4: SFT 为什么只对 response 计算 loss？
+- 目标是训练"回答能力"而非"复述问题"；instruction mask 为 labels=-100
+- 不 mask 后果：模型学会 parroting（开头复述问题），生成质量下降
+- 多轮对话需正确 mask 每轮 instruction，防止"偷看"后续轮次
+- Chat Template 必须与模型匹配——这比任何超参调优都重要
+
+### Q5: DPO vs RLHF(PPO) 的核心区别？
+- RLHF：SFT → Reward Model → PPO；4 个模型同时训练，效果天花板最高
+- DPO：跳过 RM 和 RL，直接用偏好数据做监督学习；隐式 reward = β·log(π/π_ref)
+- DPO 计算成本为 PPO 的 1/3-1/5，训练稳定性远好
+- 2026 主流：DPO/SimPO/KTO；PPO 用于需要 Online RL 的推理增强场景
+
+### Q6: 如何解决微调中的灾难性遗忘？
+- 首选 LoRA（冻结基座天然防遗忘）+ 数据混合 Replay（10-30% 预训练数据）
+- 学习率控制：LoRA lr=1e-4~3e-4，少 epoch（1-3），cosine schedule
+- NEFTune：输入嵌入加噪声，一行代码实现，提升泛化
+- 监控多维基准，任一下降 >3% 立即排查
+
+### Q7: LoRA 微调应该用 DeepSpeed ZeRO-2 还是 ZeRO-3？
+- 首选 ZeRO-2：LoRA 可训练参数极少，ZeRO-3 对冻结参数的 all-gather 是纯浪费
+- ZeRO-3 通信量 3× 参数量 vs ZeRO-2 的 1×，吞吐量差距大
+- 何时用 ZeRO-3：冻结基座单卡放不下（如 70B on A100-40GB）
+- 70B QLoRA 推荐 ZeRO-2（NF4 量化后模型仅 ~17GB）
+
+### Q8: 如何选择 LoRA 的 rank 和 alpha？
+- rank：r=16 是大多数 NLP 任务的甜蜜点；复杂推理/跨域 → r=32-64
+- alpha：常设 α=2r（有效缩放=2）；改 r 时保持 α/r 恒定或同步调 lr
+- rsLoRA 改进：用 α/√r 替代 α/r，不同 rank 间更具可比性
+- 目标模块：对所有线性层加 LoRA（attention + MLP）效果最优
+
+### Q9: 高质量 SFT 数据集怎么构建？
+- 种子标注 500 条 → LLM 扩展 → Reward Model 过滤 → 语义去重 → 多样性采样
+- LIMA 定律：1000 条高质量 > 100K 低质量；质量 >> 数量
+- 数据混合：通用指令 60% + 领域数据 30% + 安全数据 10%
+- 加入 5% 预训练数据作为 replay buffer 防遗忘
+
+### Q10: LoRA Merging 中的 task interference 如何解决？
+- TIES-Merging：Trim（去小值）→ Elect Sign（多数投票决定符号）→ Disjoint Merge
+- DARE：随机 drop 90-99% delta 参数 → Rescale 保持期望 → 稀疏合并降低冲突
+- 实战：DARE + TIES 组合效果最佳；mergekit 工具一键完成
+- 应用：代码 LoRA + 数学 LoRA + 中文 LoRA 独立训练后合并
+
+### Q11: 2026 微调前沿：MoLoRA 和 ReFT 是什么？
+- MoLoRA：多个 LoRA 作为 experts，路由器动态选择 → 更强表达力 + 天然多任务
+- ReFT：不改权重，在隐层表示上做低秩干预，参数量比 LoRA 少 10-50×
+- LoReFT：h' = h + R(Rᵀh - s)，在低秩子空间中编辑表示
+- 趋势：从"改权重"到"改表示"的范式转移，连接 Mechanistic Interpretability
+
+---
+
 ## See Also（深度笔记导航）
 
 > 本手册是速查层（K→W），以下为各方向的完整深度版，面试前根据岗位方向选择精读。
@@ -1258,6 +1330,9 @@ tags: [面试, 速查, AI]
 
 ### 计算机视觉方向
 - [[计算机视觉基础与前沿-2026技术全景|CV 2026 技术全景]] — CNN/ViT/检测/分割/生成/3D/Agent，12+ 面试题 + 39 篇文献 ⭐
+
+### LLM 微调方向
+- [[AI/LLM/Training/LLM微调实战-2026技术全景|LLM 微调实战 2026 全景]] — LoRA/QLoRA/DoRA/SFT/DPO/分布式微调全栈，18 道面试题 + 32 篇文献 ⭐
 
 ### 职业方向
 - [[Career/_MOC|Career MOC]] — 求职知识域全索引
