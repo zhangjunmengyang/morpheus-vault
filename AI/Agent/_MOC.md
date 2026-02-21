@@ -32,6 +32,7 @@ tags:
 - [[AI/Agent/Multi-Agent/untitled_SB2HwKNC|Multi-Agent 草稿]]
 
 ## 研究论文 (Recent Papers)
+- [[AI/Agent/CowCorpus-Human-Intervention-Modeling-Web-Agents|CowCorpus]] — CMU+Duke：首个 Human-in-the-Loop 干预建模数据集，四种协作风格分类（Hands-off/Hands-on/Collaborative/Takeover），intervention 预测准确率+63%，用户感知有用性+26.5%；PTS 指标设计精妙（时机比结果更重要）（arXiv:2602.17588）★★★★☆
 - [[AI/Agent/AgentAuditor — Reasoning Tree审计多Agent系统|AgentAuditor]] — Reasoning Tree 审计多 Agent 系统
 - [[AI/Agent/Aletheia-Math-Research-Agent|Aletheia]] — Gemini Deep Think 数学科研 Agent，从 benchmark 到真实科研产出的跨越（arXiv:2602.10177）
 - [[AI/Agent/Aletheia (DeepMind 数学研究Agent)|Aletheia 早期概览]] — 2026-02-15 早期版（96行），深度版见上方 Aletheia-Math-Research-Agent

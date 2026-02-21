@@ -19,7 +19,9 @@ tags:
 ## 求职与面试
 - [[Career/Job-Board/_求职看板|🎯 求职看板]] — AI Agent / LLM 工程岗位追踪看板（主力工具，持续更新）
 - [[Career/AI 岗位机会追踪|AI 岗位机会追踪]] — 字节/阿里/DeepSeek/月之暗面等重点 HC，持续更新
-- [[Career/AI面试速查手册|AI面试速查手册]]
+- [[Career/AI面试速查手册|AI 面试速查手册]] ⭐ — 30分钟速查版，覆盖 Agent/LLM/Safety/RL/RAG 全方向
+- [[Career/LLM-应用部署与工程化-2026技术全景|LLM 应用部署与工程化 2026]] — 推理工程·vLLM·量化·Serving 面试深度笔记 ★★★★★
+- [[Career/AI搜索与推荐系统-2026技术全景|搜索与推荐系统 2026]] — 排序·检索·Embedding·召回面试深度笔记 ★★★★★
 
 ## 述职与晋升
 - [[Career/述职-晋升/晋升注意点|晋升注意点]]

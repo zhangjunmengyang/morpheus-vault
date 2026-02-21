@@ -54,6 +54,7 @@ tags:
 - [[AI/Foundations/Architecture/长上下文处理|长上下文处理]]
 
 ## NLP 基础 (NLP-Basics)
+- [[AI/Foundations/NLP-Basics/NLP基础与前沿技术-2026全景|NLP 基础与前沿技术 2026 全景]] ⭐ — 面试武器版，700行，分词→词表示→Transformer→预训练→LLM时代全覆盖 ★★★★★
 - [[AI/Foundations/NLP-Basics/Tokenizer 分词|Tokenizer 分词]]
 
 ## 训练 (Training)
