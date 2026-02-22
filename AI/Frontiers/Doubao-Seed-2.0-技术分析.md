@@ -1,9 +1,17 @@
 ---
 title: "Doubao-Seed-2.0 技术分析"
+brief: "ByteDance Seed 团队 2026-02-14 发布的'Agent Era'模型家族（Pro/Lite/Mini/Code 四档）：面向大规模生产环境 Agent 任务执行，核心优势是非结构化信息处理能力（混杂图表/文档）；定价比 GPT-5.2/Gemini 3 Pro 低一个数量级；Pro 深度推理，Mini 低延迟高并发（256k ctx + 4档思考长度）。"
 date: 2026-02-14
+updated: 2026-02-22
 tags: [Doubao, ByteDance, Agent模型, MaaS, 旗舰模型, 技术分析]
-domain: AI/Frontiers
+domain: ai/frontiers
 status: permanent
+sources:
+  - "Doubao-Seed-2.0 官网：https://seed.bytedance.com/zh/seed2"
+  - "Model Card：79 页 LaTeX 技术文档（2026-02-14）"
+related:
+  - "[[AI/Frontiers/_MOC]]"
+  - "[[AI/Frontiers/2026年2月模型潮]]"
 ---
 
 # Doubao-Seed-2.0 技术分析

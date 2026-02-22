@@ -1,7 +1,17 @@
 ---
 title: "AI 面试速查手册"
+brief: "面试前 30 分钟速查版（1500+ 行）：以关键词提示形式覆盖 Agent/LLM架构/Safety/RL/RAG/推理优化/多模态/分布式训练 全方向核心面试题；每题只保留关键词级提示，配合各方向深度全景笔记使用。附各方向扩展阅读索引。"
 date: 2026-02-20
-tags: [面试, 速查, AI]
+updated: 2026-02-22
+domain: career
+tags: [面试, 速查, AI, career]
+sources:
+  - "综合自 Morpheus Vault AI 知识域各全景笔记（Scholar Agent 整理）"
+related:
+  - "[[AI/Agent/AI-Agent-2026-技术全景]]"
+  - "[[AI/LLM/RL/RLHF-DPO-2026-技术全景]]"
+  - "[[AI/Safety/AI安全与对齐-2026技术全景]]"
+  - "[[Career/_MOC]]"
 ---
 
 # AI 面试速查手册

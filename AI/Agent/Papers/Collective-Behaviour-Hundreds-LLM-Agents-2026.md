@@ -1,3 +1,19 @@
+---
+title: "Evaluating Collective Behaviour of Hundreds of LLM Agents"
+brief: "首个将 LLM Agent 集体行为评估扩展到数百规模的框架；核心发现：更强的模型在社会困境中产生更差的集体结果，文化进化动力学表明存在收敛到差均衡的风险；Agent 用算法编码策略而非自然语言，支持部署前静态审计。"
+tags: [multi-agent, collective-behaviour, social-dilemma, cultural-evolution, evaluation, safety]
+rating: ★★★★☆
+sources:
+  - arXiv: 2602.16662
+  - Authors: Richard Willis et al.
+  - Published: 2026-02-18
+domain: ai/agent/safety
+related:
+  - "[[AI/Agent/Papers/Colosseum-Multi-Agent-Collusion-Audit-2026]]"
+  - "[[AI/Agent/_MOC]]"
+  - "[[AI/Safety/_MOC]]"
+---
+
 # Evaluating Collective Behaviour of Hundreds of LLM Agents
 
 **arXiv**: 2602.16662 (2026-02-18)
@@ -38,4 +54,9 @@
 
 ---
 
-Tags: #multi-agent #collective-behaviour #social-dilemma #cultural-evolution #evaluation
+---
+
+> 🔗 See also:
+> - [[AI/Agent/Papers/Colosseum-Multi-Agent-Collusion-Audit-2026|Colosseum]] — 同为多 Agent 集体行为安全研究：本文研究社会困境中的被动失调（能力强→社会更差），Colosseum 研究主动勾结（Agent 形成子联盟追求次目标）
+> - [[AI/Safety/AI Agent 集体行为与安全漂移|AI Agent 集体行为与安全漂移]] — Vault 中已有的相关综述
+> - [[AI/Agent/_MOC|Agent MOC]] | [[AI/Safety/_MOC|Safety MOC]]

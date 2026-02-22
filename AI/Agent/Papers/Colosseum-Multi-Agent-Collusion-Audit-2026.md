@@ -1,3 +1,19 @@
+---
+title: "Colosseum: Auditing Collusion in Cooperative Multi-Agent Systems"
+brief: "首个系统化审计 LLM 多 Agent 勾结行为的框架；新现象：'纸上勾结'（Agent 计划勾结但实际不执行）；用 DCOP 形式化多 Agent 合作，regret 指标量化偏离合作最优的程度；网络拓扑直接影响勾结倾向，与盾卫 Trust DAG 设计高度相关。"
+tags: [multi-agent, security, collusion, trust, DCOP, safety, audit]
+rating: ★★★★☆
+sources:
+  - arXiv: 2602.15198
+  - Authors: Mason Nakamura et al.
+  - Published: 2026-02-16
+domain: ai/agent/safety
+related:
+  - "[[AI/Agent/Papers/Collective-Behaviour-Hundreds-LLM-Agents-2026]]"
+  - "[[AI/Agent/Agent-Skills-Security]]"
+  - "[[AI/Safety/_MOC]]"
+---
+
 # Colosseum: Auditing Collusion in Cooperative Multi-Agent Systems
 
 **arXiv**: 2602.15198 (2026-02-16)
@@ -40,4 +56,9 @@
 
 ---
 
-Tags: #multi-agent #security #collusion #trust #DCOP #盾卫
+---
+
+> 🔗 See also:
+> - [[AI/Agent/Papers/Collective-Behaviour-Hundreds-LLM-Agents-2026|Collective Behaviour（100+ Agents）]] — 同为多 Agent 集体行为安全：本文研究主动勾结（DCOP + regret），另文研究被动失调（强模型→差社会结果）
+> - [[AI/Agent/Agent-Skills-Security|Agent Skills Security]] — Agent 安全威胁的另一侧面：技能层面的漏洞
+> - [[AI/Agent/_MOC|Agent MOC]] | [[AI/Safety/_MOC|Safety MOC]]

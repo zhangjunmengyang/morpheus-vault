@@ -341,3 +341,8 @@ Agentic RL 训练 Pipeline
 - [[AI/Agent/Agentic-RL/SquRL-Dynamic-Workflow-Text-to-SQL|SquRL]] — 维度 4：Workflow 选择级（解法 C，Theorem 3.1 形式化证明）
 - [[AI/LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — reward modeling 自适应分配（与 Reward 维度高度互补）
 - [[AI/Safety/Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization]] — Agentic RL × Safety 汇合点：pre-generation hidden state 安全门控
+- [[AI/Agent/Agentic-RL/UI-TARS-2 论文|UI-TARS-2]] — GUI Agent RL 工程极致路线：Data Flywheel + 异步 multi-turn RL + Hybrid 沙盒（★★★★★）
+- [[AI/Agent/UI-R1-GUI-Action-Prediction-RL|UI-R1]] — GUI Agent RL 极简路线：136 条数据 rule-based GRPO，3B ≈ SFT 7B@76K（★★★★☆）
+- [[AI/Agent/Memory-R1-RL-for-LLM-Memory-Management|Memory-R1]] — RL 训练 Memory Manager（ADD/UPDATE/DELETE/NOOP），记忆管理新范式（★★★★☆）
+- [[AI/Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training|ASTRA]] — 全自动 tool-use RL 流水线，MCP 工具图 + verifiable 环境（★★★★☆）
+- [[AI/Agent/Agentic-RL/RC-GRPO-Reward-Conditioned-Tool-Calling-RL|RC-GRPO]] — reward token conditioning 解决 multi-turn GRPO reward 同质化（★★★★☆）

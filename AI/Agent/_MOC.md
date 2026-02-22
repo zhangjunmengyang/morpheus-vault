@@ -33,6 +33,7 @@ updated: 2026-02-22
 - [[AI/Agent/Fundamentals/记忆模块|记忆模块]] — 短期/长期记忆
 - [[AI/Agent/Agent Memory 机制|Agent Memory 机制]] — 短期/长期/工作记忆、RAG-based memory、MemGPT/Letta
 - [[AI/Agent/Agent World Model|Agent World Model]] — Agentic RL + 合成环境 + 世界模型
+- [[AI/Agent/Memory-R1-RL-for-LLM-Memory-Management|Memory-R1]] ⭐ — RL 驱动的记忆管理（ADD/UPDATE/DELETE/NOOP），152 条数据超 Mem0 的 F1 +28%；outcome reward 设计范式（LMU+TU Munich+Cambridge，arXiv:2508.19828）★★★★☆
 
 ### 1.3 综合全景
 
@@ -62,7 +63,8 @@ updated: 2026-02-22
 > 多 Agent 协作、编排、通信
 
 - [[AI/Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]]
-- [[AI/Agent/Multi-Agent/Multi-Agent-架构模式详解|Multi-Agent 架构模式详解]] — Supervisor/Pipeline/Debate三模式含代码实现（馆长重命名自untitled，2026-02-22）★★★★☆
+- [[AI/Agent/Multi-Agent/Multi-Agent-架构模式详解|Multi-Agent 架构模式详解]] — Supervisor/Pipeline/Debate三模式含代码实现 ★★★★☆
+- [[AI/Agent/多智能体系统与协作框架-2026技术全景|🔥 多智能体系统与协作框架 2026 全景]] ⭐ — 架构/通信/框架对比/信任安全/记忆/评估/集体智能全览，面试武器级 ★★★★★
 - [[AI/Agent/Multi-Agent/Agent vs MAS|Agent vs MAS]]
 - [[AI/Agent/Multi-Agent/Planner|Planner]]
 - [[AI/Agent/Multi-Agent/零碎的点|零碎的点]]
@@ -70,6 +72,7 @@ updated: 2026-02-22
 - [[AI/Agent/IMAGINE — 多Agent蒸馏到单模型|IMAGINE]] — 多 Agent 蒸馏到单模型
 - [[AI/Agent/Kimi-K2.5-PARL|Kimi K2.5 & PARL]] — 并行多 Agent 强化学习
 - [[AI/Agent/GitHub-Agentic-Workflows|GitHub Agentic Workflows]]
+- [[AI/Agent/Papers/Collective-Behaviour-Hundreds-LLM-Agents-2026|Collective Behaviour（100+ LLM Agents）]] — 更强模型→更差社会结果；文化进化→差均衡收敛；100+ 规模集体行为评估框架（arXiv:2602.16662）★★★★☆
 
 ---
 
@@ -112,7 +115,8 @@ updated: 2026-02-22
 - [[AI/Agent/EnterpriseGym-Corecraft|EnterpriseGym Corecraft]] — 高保真企业 RL 环境 ★★★★
 - [[AI/Agent/Agentic-RL/VerlTool 论文|VerlTool]] — 工具使用 RL 统一框架
 - [[AI/Agent/Agentic-RL/PVPO 论文|PVPO]] — 价值预估策略优化
-- [[AI/Agent/Agentic-RL/UI-TARS-2 论文|UI-TARS-2]] — GUI Agent RL
+- [[AI/Agent/Agentic-RL/UI-TARS-2 论文|UI-TARS-2]] ⭐ — GUI Agent RL 工程极致路线：Data Flywheel + 异步 multi-turn RL，OSWorld 47.5（arXiv:2509.02544）★★★★★
+- [[AI/Agent/UI-R1-GUI-Action-Prediction-RL|UI-R1]] — GUI Agent RL 极简路线：136 条数据 rule-based GRPO，3B 媲美 SFT 7B@76K（vivo AI+CUHK，arXiv:2503.21620）★★★★☆
 - [[AI/Agent/Agentic-RL/WebPilot 论文|WebPilot]] — Web 自动化
 - [[AI/Agent/Agentic-RL/R-4B 论文|R-4B]] — MLLM Auto-Thinking
 
@@ -140,6 +144,7 @@ updated: 2026-02-22
 - [[AI/Agent/Agent-Skills-Security|Agent Skills Security]] — 26.1% 社区 skill 含漏洞
 - [[AI/Agent/CowCorpus-Human-Intervention-Modeling-Web-Agents|CowCorpus]] — Human-in-the-Loop 干预建模 ★★★★☆
 - [[AI/Agent/PABU — Progress-Aware Belief State高效Agent|PABU]] — 进度感知信念更新
+- [[AI/Agent/Papers/Colosseum-Multi-Agent-Collusion-Audit-2026|Colosseum（勾结审计）]] — 首个系统化审计多 Agent 勾结的框架；"纸上勾结"新现象（计划勾结但行动不勾结）；DCOP 形式化 + regret 度量（arXiv:2602.15198）★★★★☆
 
 ### 6.2 评测
 
