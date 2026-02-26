@@ -14,27 +14,17 @@ status: active
 
 > Reinforcement Learning from Human Feedback — 从偏好数据到模型对齐的完整工程 Pipeline
 
-## 1. RLHF 全景图
+## 1. RLHF Pipeline 总览
 
-```
-                    ┌─────────────────────────────────────────┐
-                    │           RLHF Full Pipeline            │
-                    └─────────────────────────────────────────┘
-                                      │
-         ┌────────────────────────────┼────────────────────────────┐
-         ▼                            ▼                            ▼
-   Stage 1: SFT               Stage 2: RM                Stage 3: RL
-   监督微调                    奖励模型训练                策略优化
-   ─────────                   ──────────                  ────────
-   Human demos →               Human prefs →               RM scores →
-   Instruction tuning          Bradley-Terry               PPO / GRPO
-                               Pairwise ranking            Policy gradient
-
-                    ┌─────────────────────────────────────────┐
-                    │        Direct Alignment (跳过 RM)       │
-                    └─────────────────────────────────────────┘
-                         DPO / KTO / ORPO / SimPO
-                      直接从偏好数据优化策略，无需 RM
+```mermaid
+flowchart TD
+    A[Pre-trained Base Model] --> B[Stage 1: SFT\n监督微调\nHuman demos → Instruction tuning]
+    B --> C[Stage 2: Reward Model\n偏好数据 → Bradley-Terry\nPairwise ranking]
+    B --> E
+    C --> D[Stage 3: RL Policy Optimization\nPPO / GRPO\nRM scores → Policy gradient]
+    D --> F[Aligned Model]
+    B -->|Direct Alignment 跳过RM| E[DPO / KTO / ORPO / SimPO\n直接从偏好数据优化策略]
+    E --> F
 ```
 
 ## 2. Stage 1: SFT（监督微调）
@@ -102,26 +92,12 @@ def reward_loss(chosen_reward, rejected_reward):
 
 参见 [[PPO 原理|PPO 原理]] 和 [[PPO-TRL实践|PPO-TRL 实践]]。
 
-```
-PPO Architecture:
-┌──────────────┐    ┌──────────────┐
-│ Policy Model │    │ Value Model  │  ← Actor-Critic 架构
-│   (Actor)    │    │   (Critic)   │
-└──────┬───────┘    └──────┬───────┘
-       │                   │
-       ▼                   ▼
-  Generate response    Estimate V(s)
-       │                   │
-       ▼                   ▼
-  ┌──────────┐      ┌──────────────┐
-  │ Reward   │      │  Advantage   │
-  │ Model    │─────→│  Estimation  │
-  └──────────┘      └──────┬───────┘
-                           │
-                    ┌──────▼───────┐
-                    │ Clipped PPO  │
-                    │    Loss      │
-                    └──────────────┘
+```mermaid
+flowchart LR
+    PM[Policy Model\nActor] -->|Generate response| RM[Reward Model]
+    VM[Value Model\nCritic] -->|Estimate V&#40;s&#41;| AE[Advantage Estimation]
+    RM -->|RM scores| AE
+    AE --> CL[Clipped PPO Loss]
 ```
 
 核心公式：
