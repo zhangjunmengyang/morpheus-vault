@@ -37,7 +37,7 @@ Code Agent 是一类以 **LLM 为核心推理引擎**，能够自主完成软件
 
 ### 2.1 GitHub Copilot (Agent Mode)
 
-> 深度技术细节见 [[GitHub-Agentic-Workflows|GitHub Agentic Workflows 深度分析]]
+> 深度技术细节见 [[AI/2-Agent/Fundamentals/GitHub-Agentic-Workflows|GitHub Agentic Workflows 深度分析]]
 
 - **定位**：从行级补全进化为 IDE 内 Agent（2025 起 Agent Mode）
 - **架构**：VS Code 集成，调用 GPT-4o / Claude 3.5 Sonnet
@@ -358,7 +358,7 @@ CI/CD: 自动部署
 
 ### Q5: Agentic Engineering 会如何改变软件工程师的角色？需要培养哪些新技能？
 
-> 相关：[[Agent 生产实践|Agent 生产实践]] | [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]]（底层训练方法论）
+> 相关：[[AI/2-Agent/Fundamentals/Agent 生产实践|Agent 生产实践]] | [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 2026 全景]]（底层训练方法论）
 
 **答**：
 

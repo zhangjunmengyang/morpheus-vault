@@ -13,7 +13,7 @@ status: supplementary
 ---
 
 > [!note] 版本说明
-> 本文为 2026-02-14 早期版本（含面试速查），深度技术分析见：[[Engram-Conditional-Memory-DeepSeek-V4|Engram-Conditional-Memory-DeepSeek-V4]]（2026-02-20，217行，arXiv:2601.07372，★★★★★）
+> 本文为 2026-02-14 早期版本（含面试速查），深度技术分析见：[[AI/3-LLM/Architecture/Engram-Conditional-Memory-DeepSeek-V4|Engram-Conditional-Memory-DeepSeek-V4]]（2026-02-20，217行，arXiv:2601.07372，★★★★★）
 
 # DeepSeek Engram：条件记忆架构革命
 
@@ -125,8 +125,8 @@ Engram 预计将成为即将发布的 DeepSeek V4（预计 2026 年 2 月中旬�
 
 ### 技术栈整合
 - **Engram**: 内存效率
-- **[[Manifold-Constrained Hyper-Connections|Manifold-Constrained Hyper-Connections]]**: 训练稳定性
-- **[[Multi-Head Latent Attention|Multi-Head Latent Attention]]**: KV 缓存优化
+- **[[AI/3-LLM/Architecture/Manifold-Constrained Hyper-Connections|Manifold-Constrained Hyper-Connections]]**: 训练稳定性
+- **[[AI/3-LLM/Architecture/Multi-Head Latent Attention|Multi-Head Latent Attention]]**: KV 缓存优化
 - **R1 强化学习**: 推理能力
 
 ### 战略定位
@@ -203,7 +203,7 @@ A: 支持内存卸载到 DRAM，减少对昂贵 GPU HBM 的依赖。需要高带
 
 ## 相关技术
 
-- [[Multi-Head Latent Attention|Multi-Head Latent Attention]]：KV 缓存优化
-- [[Manifold-Constrained Hyper-Connections|Manifold-Constrained Hyper-Connections]]：训练稳定性
-- [[MoE 深度解析|Mixture of Experts]]：计算稀疏性
-- [[DeepSeek-R1|DeepSeek V3 Architecture]]：基础架构
+- [[AI/3-LLM/Architecture/Multi-Head Latent Attention|Multi-Head Latent Attention]]：KV 缓存优化
+- [[AI/3-LLM/Architecture/Manifold-Constrained Hyper-Connections|Manifold-Constrained Hyper-Connections]]：训练稳定性
+- [[AI/3-LLM/Architecture/MoE 深度解析|Mixture of Experts]]：计算稀疏性
+- [[AI/3-LLM/Architecture/DeepSeek-R1|DeepSeek V3 Architecture]]：基础架构

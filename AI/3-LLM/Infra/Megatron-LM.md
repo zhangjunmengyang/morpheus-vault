@@ -15,9 +15,9 @@ sources:
   - Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM — arXiv:2104.04473
   - https://github.com/NVIDIA/Megatron-LM
 related:
-  - "[[DeepSpeed|DeepSpeed]]"
-  - "[[FSDP|FSDP]]"
-  - "[[模型并行策略|模型并行策略]]"
+  - "[[AI/3-LLM/Infra/DeepSpeed|DeepSpeed]]"
+  - "[[AI/3-LLM/Infra/FSDP|FSDP]]"
+  - "[[AI/3-LLM/Infra/模型并行策略|模型并行策略]]"
 ---
 # Megatron-LM
 
@@ -103,14 +103,14 @@ PP 适合放在 **跨节点** 场景，因为只需要在 stage 边界传递 act
 
 ## 与 DeepSpeed 的对比
 
-| 维度 | Megatron-LM | [[DeepSpeed]] |
+| 维度 | Megatron-LM | [[AI/3-LLM/Infra/DeepSpeed]] |
 |------|-------------|---------------|
 | 核心优势 | TP 极致优化 + PP 调度 | ZeRO 系列省显存，API 友好 |
 | TP 支持 | 原生内建 | 需额外配置 |
 | 上手门槛 | 高 | 中 |
 | 实践组合 | 经常与 DeepSpeed 混用（Megatron-DeepSpeed） | — |
 
-我的观点：**训练 70B+ 模型，Megatron 的 TP + PP 基本是标配**。[[DeepSpeed]] ZeRO-3 虽然也能跑，但通信效率在大规模集群上不如 Megatron 的手动并行。小模型（< 13B）直接用 DeepSpeed ZeRO-2/3 更省心。
+我的观点：**训练 70B+ 模型，Megatron 的 TP + PP 基本是标配**。[[AI/3-LLM/Infra/DeepSpeed]] ZeRO-3 虽然也能跑，但通信效率在大规模集群上不如 Megatron 的手动并行。小模型（< 13B）直接用 DeepSpeed ZeRO-2/3 更省心。
 
 ## 踩坑记录
 
@@ -137,7 +137,7 @@ PP 适合放在 **跨节点** 场景，因为只需要在 stage 边界传递 act
 
 ### 直接可用场景
 - **70B+ 模型预训练**：Megatron TP+PP 是大规模集群训练的标配方案
-- **RLHF/RL 训练后端**：[[训练后端|verl]] 和 NeMo-Aligner 直接调用 Megatron-Core 做模型并行
+- **RLHF/RL 训练后端**：[[AI/3-LLM/Frameworks/verl/训练后端|verl]] 和 NeMo-Aligner 直接调用 Megatron-Core 做模型并行
 
 ### 工程实现要点
 - **TP size 选择**：必须整除 attention heads 数，通常 TP=8（单节点 NVLink）
@@ -159,19 +159,19 @@ PP 适合放在 **跨节点** 场景，因为只需要在 stage 边界传递 act
 - FSDP2 + torch.compile 正在追赶 Megatron 的性能，PyTorch 原生方案是否会取代 Megatron 是开放问题
 
 ### 脑暴：如果往下延伸
-- 如果把 [[模型并行策略|模型并行策略]] 的 Zero Bubble PP 和 Megatron 结合，能否进一步压缩万卡训练的 bubble？
+- 如果把 [[AI/3-LLM/Infra/模型并行策略|模型并行策略]] 的 Zero Bubble PP 和 Megatron 结合，能否进一步压缩万卡训练的 bubble？
 - Megatron-Core 作为"并行原语库"，能否标准化为类似 NCCL 的行业基础层？
 
 ## 相关
 
-> 🔗 See also: [[DeepSpeed|DeepSpeed]] — ZeRO 系显存优化，与 Megatron TP/PP 互补
-> 🔗 See also: [[FSDP|FSDP]] — PyTorch 原生竞品方案（ZeRO-3 等价）
-> 🔗 See also: [[模型并行策略|模型并行策略]] — DP/TP/PP/SP/CP 全景对比
+> 🔗 See also: [[AI/3-LLM/Infra/DeepSpeed|DeepSpeed]] — ZeRO 系显存优化，与 Megatron TP/PP 互补
+> 🔗 See also: [[AI/3-LLM/Infra/FSDP|FSDP]] — PyTorch 原生竞品方案（ZeRO-3 等价）
+> 🔗 See also: [[AI/3-LLM/Infra/模型并行策略|模型并行策略]] — DP/TP/PP/SP/CP 全景对比
 
-- [[分布式训练|分布式训练]] — 并行策略全景
-- [[Ray|Ray]] — 另一个分布式计算框架
-- [[训练后端|verl 训练后端]] — verl 中使用 Megatron 后端
-- [[HybridFlow|HybridFlow]] — verl 的混合并行编排
-- [[verl 概述|verl 概述]]
-- [[TRL 概述|TRL 概述]]
-- [[OpenRLHF|OpenRLHF]]
+- [[AI/3-LLM/Infra/分布式训练|分布式训练]] — 并行策略全景
+- [[AI/3-LLM/Infra/Ray|Ray]] — 另一个分布式计算框架
+- [[AI/3-LLM/Frameworks/verl/训练后端|verl 训练后端]] — verl 中使用 Megatron 后端
+- [[AI/3-LLM/Frameworks/verl/HybridFlow|HybridFlow]] — verl 的混合并行编排
+- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]]
+- [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL 概述]]
+- [[AI/3-LLM/Frameworks/OpenRLHF/OpenRLHF|OpenRLHF]]

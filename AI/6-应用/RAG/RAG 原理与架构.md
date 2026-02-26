@@ -18,9 +18,9 @@ sources:
   - LangChain Documentation https://python.langchain.com/
 related:
   - "[[RAG-2026-技术全景|RAG 2026 全景]]"
-  - "[[检索策略]]"
-  - "[[文档解析]]"
-  - "[[Embedding 与向量检索]]"
+  - "[[AI/6-应用/RAG/检索策略]]"
+  - "[[AI/6-应用/RAG/文档解析]]"
+  - "[[AI/3-LLM/Application/Embedding 与向量检索]]"
 ---
 
 # RAG 原理与架构
@@ -522,7 +522,7 @@ class CodeRAG:
 **A**: RAG 评估包括多个维度：1）检索质量：Recall@K、Precision@K、MRR；2）生成质量：BLEU、ROUGE、BERTScore；3）端到端性能：Answer Accuracy、F1 Score；4）用户体验：响应时间、相关性评分；5）可信度：事实准确性、来源可靠性。需要结合自动化指标和人工评估。
 
 ### Q4: RAG 中的检索策略有哪些？
-**A**: 主要包括：1）稠密检索：基于向量相似度（BERT、Sentence-BERT）；2）稀疏检索：基于关键词匹配（BM25、TF-IDF）；3）混合检索：结合稠密和稀疏方法；4）分阶段检索：粗排+精排；5）[[检索策略|检索策略]]：HyDE、Query Expansion、Multi-vector等高级策略。
+**A**: 主要包括：1）稠密检索：基于向量相似度（BERT、Sentence-BERT）；2）稀疏检索：基于关键词匹配（BM25、TF-IDF）；3）混合检索：结合稠密和稀疏方法；4）分阶段检索：粗排+精排；5）[[AI/6-应用/RAG/检索策略|检索策略]]：HyDE、Query Expansion、Multi-vector等高级策略。
 
 ### Q5: RAG 系统在生产环境中的主要挑战是什么？
 **A**: 主要挑战包括：1）延迟控制：检索和生成的平衡；2）成本优化：向量数据库和 LLM 调用成本；3）数据更新：实时性与一致性；4）质量保证：检索精度和生成质量；5）规模扩展：大规模知识库的索引和查询效率；6）安全隐私：敏感信息的访问控制和数据泄露防护。
@@ -567,8 +567,8 @@ class CodeRAG:
 - 评估体系不完善——RAGAS 的 LLM-as-Judge 存在评估器偏差
 
 ### 脑暴：如果往下延伸
-- 结合 [[检索策略|检索策略]] 的 HyDE/Query Decomposition 可显著提升复杂查询的效果
+- 结合 [[AI/6-应用/RAG/检索策略|检索策略]] 的 HyDE/Query Decomposition 可显著提升复杂查询的效果
 - Agentic RAG（参见 [[RAG-2026-技术全景|RAG 2026 全景]]）让检索从固定管线变成动态决策
 
-> 🔗 See also: [[Embedding 与向量检索]] — Embedding 选型和向量数据库是 RAG 检索质量的基座
-> 🔗 See also: [[文档解析]] — 文档解析是 RAG 管线的起点，质量直接决定检索上限
+> 🔗 See also: [[AI/3-LLM/Application/Embedding 与向量检索]] — Embedding 选型和向量数据库是 RAG 检索质量的基座
+> 🔗 See also: [[AI/6-应用/RAG/文档解析]] — 文档解析是 RAG 管线的起点，质量直接决定检索上限

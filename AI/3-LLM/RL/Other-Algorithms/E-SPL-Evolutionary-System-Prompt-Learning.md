@@ -13,9 +13,9 @@ tags:
 arxiv: "2602.14697"
 created: 2026-02-20
 see-also:
-  - "[[GEPA-Reflective-Prompt-Evolution]]"
-  - "[[Calibrate-Then-Act-Cost-Aware-Exploration]]"
-  - "[[RLVR-Edge-of-Competence]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/GEPA-Reflective-Prompt-Evolution]]"
+  - "[[AI/2-Agent/Agentic-RL/Calibrate-Then-Act-Cost-Aware-Exploration]]"
+  - "[[AI/3-LLM/RL/Theory/RLVR-Edge-of-Competence]]"
 ---
 
 # E-SPL: Evolutionary System Prompt Learning for RL

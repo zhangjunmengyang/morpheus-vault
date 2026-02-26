@@ -268,10 +268,10 @@ print(result[0]["generated_text"])
 
 ## 相关
 
-- [[SFT 原理]] — SFT 的理论基础
-- [[LoRA]] — LoRA 技术详解
-- [[TRL 概述|TRL 概述]] — TRL 框架总览
-- [[DPO-TRL实践|DPO-TRL实践]] — SFT 之后的 DPO 对齐
-- [[GRPO-TRL实践|GRPO-TRL实践]] — SFT 之后的 GRPO 训练
-- [[FSDP|FSDP]] — 分布式 SFT 训练
-- [[DeepSpeed|DeepSpeed]] — 分布式 SFT 训练
+- [[AI/3-LLM/SFT/SFT 原理]] — SFT 的理论基础
+- [[AI/3-LLM/SFT/LoRA]] — LoRA 技术详解
+- [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL 概述]] — TRL 框架总览
+- [[AI/3-LLM/RL/DPO/DPO-TRL实践|DPO-TRL实践]] — SFT 之后的 DPO 对齐
+- [[AI/3-LLM/RL/GRPO/GRPO-TRL实践|GRPO-TRL实践]] — SFT 之后的 GRPO 训练
+- [[AI/3-LLM/Infra/FSDP|FSDP]] — 分布式 SFT 训练
+- [[AI/3-LLM/Infra/DeepSpeed|DeepSpeed]] — 分布式 SFT 训练

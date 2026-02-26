@@ -15,11 +15,11 @@ tags:
 sources:
   - arXiv:2509.19199v3
 related:
-  - "[[GiGPO-Group-in-Group-Policy-Optimization|GiGPO]]"
-  - "[[AgentPRM-Process-Reward-Models-for-LLM-Agents|AgentPRM]]"
-  - "[[Long-Horizon-Credit-Assignment专题|Long-Horizon CA 专题]]"
+  - "[[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]]"
+  - "[[AI/2-Agent/Agentic-RL/AgentPRM-Process-Reward-Models-for-LLM-Agents|AgentPRM]]"
+  - "[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon CA 专题]]"
   - "[[RLHF-DPO-2026-技术全景|RLHF-DPO-2026-技术全景]]"
-  - "[[Agentic-RL-2026前沿综合分析|Agentic RL 2026 综合分析]]"
+  - "[[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 综合分析]]"
 ---
 
 # iStar：Agentic RL 隐式步骤奖励（Implicit Step Rewards）
@@ -28,7 +28,7 @@ related:
 **arXiv**：2509.19199v3  
 **机构**：未知（论文标注 cs.CL）  
 **难度**：★★★★★（Agent RL credit assignment 理论统一，DPO ≡ PRM 的桥接工作）  
-**关联**：[[GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] | [[Long-Horizon-Credit-Assignment专题|Long-Horizon CA 专题]] | [[lc8-DPO-IPO-手撕实操|lc8-DPO-IPO-手撕实操]] | [[AI/3-LLM/MA-RLHF课程/lc8-PRM-O1-Search-手撕实操|lc8-PRM-O1-Search-手撕实操]]
+**关联**：[[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] | [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon CA 专题]] | [[lc8-DPO-IPO-手撕实操|lc8-DPO-IPO-手撕实操]] | [[AI/3-LLM/MA-RLHF课程/lc8-PRM-O1-Search-手撕实操|lc8-PRM-O1-Search-手撕实操]]
 
 ---
 
@@ -275,20 +275,20 @@ A：用 LLM-as-judge 对 rollout 轨迹排序，生成 trajectory preference pai
 ## See Also
 
 **Credit Assignment 谱系（step-level 方法族）**
-- [[GiGPO-Group-in-Group-Policy-Optimization|GiGPO（NeurIPS 2025）]] — **正交互补**：GiGPO 用显式 anchor state grouping 做 step-level credit（依赖 state overlap），iStar 用隐式 DPO 推导（不依赖 state overlap，但需要 trajectory pair）；两者可组合
-- [[AgentPRM-Process-Reward-Models-for-LLM-Agents|AgentPRM（Cornell/AI2）]] — 显式 PRM：MC rollout 估计，需要额外 rollout 成本；iStar 无此成本
-- [[CSO-Verified-Critical-Step-Optimization|CSO（Tencent AI Lab+HKU）]] — 失败轨迹维度的 credit assignment；与 iStar 信号来源正交（失败 vs 隐式偏好）
-- [[Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — Vault 元分析笔记：iStar 在谱系中的定位（隐式 PRM 路线）
+- [[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO（NeurIPS 2025）]] — **正交互补**：GiGPO 用显式 anchor state grouping 做 step-level credit（依赖 state overlap），iStar 用隐式 DPO 推导（不依赖 state overlap，但需要 trajectory pair）；两者可组合
+- [[AI/2-Agent/Agentic-RL/AgentPRM-Process-Reward-Models-for-LLM-Agents|AgentPRM（Cornell/AI2）]] — 显式 PRM：MC rollout 估计，需要额外 rollout 成本；iStar 无此成本
+- [[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO（Tencent AI Lab+HKU）]] — 失败轨迹维度的 credit assignment；与 iStar 信号来源正交（失败 vs 隐式偏好）
+- [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — Vault 元分析笔记：iStar 在谱系中的定位（隐式 PRM 路线）
 
 **DPO 理论基础**
 - [[RLHF-DPO-2026-技术全景|RLHF-DPO-2026-技术全景]] — iStar 的数学推导建立在 DPO 等价性上，需要理解 trajectory-level DPO 的推导
 - [[lc8-DPO-IPO-手撕实操|lc8-DPO-IPO-手撕实操]] — DPO 的实现层理解，帮助理解 iStar 的隐式 reward 含义
 
 **Agentic RL 全景**
-- [[Agentic-RL-2026前沿综合分析|Agentic RL 2026 综合分析（v11）]] — iStar 在五大维度框架中的位置：Credit Assignment 维度，隐式方法路线
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 综合分析（v11）]] — iStar 在五大维度框架中的位置：Credit Assignment 维度，隐式方法路线
 
 ## 推荐阅读
 
 1. **原文**：[arXiv:2509.19199](https://arxiv.org/abs/2509.19199) — iStar 全文（含理论证明）
 2. **DPO 基础**：[[RLHF-DPO-2026-技术全景|RLHF-DPO-2026-技术全景]] — DPO ≡ PRM 的数学前提
-3. **信号比较**：[[GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — 与 iStar 最直接的对比工作
+3. **信号比较**：[[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — 与 iStar 最直接的对比工作

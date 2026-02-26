@@ -154,11 +154,11 @@ RL 训练稳定性是目前 LLM post-training 的真实痛点（GLM-5、Qwen3、
 
 ## 连接
 
-- 相关：[[GRPO 深度理解|GRPO]]、[[DAPO-verl实践|DAPO]]、[[Blockwise-Advantage-Estimation|Blockwise-Advantage-Estimation]]（同样是 credit assignment 问题）
-- 对比：[[LACONIC-Length-Constrained-RL|LACONIC-Length-Constrained-RL]]（也是 token 级别干预）
-- 框架：在 [[Slime-RL-Framework|Slime-RL-Framework]] 的 async 设置下，S2T mask 计算开销接近零
-- 同族：[[Stable-Asynchrony-VCPO-Off-Policy-RL|Stable-Asynchrony-VCPO-Off-Policy-RL]]（系统级稳定，与 STAPO token 级正交）、[[Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks-RL-Task-Difficulty-Curriculum]]（样本级稳定）
-- 统一框架：[[RL-Training-Stability-2026-Unified-Analysis|RL-Training-Stability-2026-Unified-Analysis]]（Token/样本/系统三分法，覆盖 STAPO）
+- 相关：[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO]]、[[AI/3-LLM/RL/DAPO/DAPO-verl实践|DAPO]]、[[AI/3-LLM/RL/GRPO/Blockwise-Advantage-Estimation|Blockwise-Advantage-Estimation]]（同样是 credit assignment 问题）
+- 对比：[[AI/3-LLM/RL/Other-Algorithms/LACONIC-Length-Constrained-RL|LACONIC-Length-Constrained-RL]]（也是 token 级别干预）
+- 框架：在 [[AI/3-LLM/RL/Frameworks/Slime-RL-Framework|Slime-RL-Framework]] 的 async 设置下，S2T mask 计算开销接近零
+- 同族：[[AI/3-LLM/RL/Other-Algorithms/Stable-Asynchrony-VCPO-Off-Policy-RL|Stable-Asynchrony-VCPO-Off-Policy-RL]]（系统级稳定，与 STAPO token 级正交）、[[AI/3-LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks-RL-Task-Difficulty-Curriculum]]（样本级稳定）
+- 统一框架：[[AI/3-LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL-Training-Stability-2026-Unified-Analysis]]（Token/样本/系统三分法，覆盖 STAPO）
 
 ---
 

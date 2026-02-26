@@ -69,11 +69,11 @@ tags:
 
 ## See Also
 
-- [[PPO 原理|PPO 原理]] — PPO 算法理论基础（Actor/Critic/clip loss 数学推导）
+- [[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]] — PPO 算法理论基础（Actor/Critic/clip loss 数学推导）
 - [[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO 手撕实操]] — 手写 PPO 核心流程（从零实现）
-- [[GRPO-TRL实践|GRPO-TRL 实践]] — GRPO 工程指南，无需 Critic，更轻量
-- [[DPO-TRL实践|DPO-TRL 实践]] — DPO 工程指南，离线偏好优化
-- [[TRL 概述|TRL 框架概述]] — TRL 全框架能力总览
+- [[AI/3-LLM/RL/GRPO/GRPO-TRL实践|GRPO-TRL 实践]] — GRPO 工程指南，无需 Critic，更轻量
+- [[AI/3-LLM/RL/DPO/DPO-TRL实践|DPO-TRL 实践]] — DPO 工程指南，离线偏好优化
+- [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL 框架概述]] — TRL 全框架能力总览
 - [[RLHF-DPO-2026-技术全景|RLHF-DPO 2026 全景]] — 对齐算法全图谱，本篇是 PPO 工程实现参考
 
 ## 推荐阅读

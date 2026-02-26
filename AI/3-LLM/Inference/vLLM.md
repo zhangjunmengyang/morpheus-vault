@@ -195,13 +195,13 @@ LLM(
 
 ## 相关
 
-- [[Ollama|Ollama]] — 本地推理的另一个选择（面向个人用户）
-- [[DeepSeek-R1|DeepSeek-R1]] — vLLM 用于 R1 的推理部署
-- [[GRPO 深度理解|GRPO 深度理解]] — vLLM 在 RL 训练中的角色
-- [[TRL 概述|TRL 概述]] — 集成 vLLM 的训练框架
-- [[verl 概述|verl 概述]] — 另一个集成 vLLM 的框架
-- [[分布式训练|分布式训练]] — Tensor Parallel 基础
-- [[LLaMA|LLaMA]]
+- [[AI/3-LLM/Inference/Ollama|Ollama]] — 本地推理的另一个选择（面向个人用户）
+- [[AI/3-LLM/Architecture/DeepSeek-R1|DeepSeek-R1]] — vLLM 用于 R1 的推理部署
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — vLLM 在 RL 训练中的角色
+- [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL 概述]] — 集成 vLLM 的训练框架
+- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]] — 另一个集成 vLLM 的框架
+- [[AI/3-LLM/Infra/分布式训练|分布式训练]] — Tensor Parallel 基础
+- [[AI/3-LLM/Architecture/LLaMA|LLaMA]]
 - [[AI/3-LLM/Inference/vLLM-手撕实操|vLLM-手撕实操]] — **代码路径**：从零实现 PagedAttention + Continuous Batching 完整代码注解，理解 vLLM 内部机制 ⭐⭐⭐⭐⭐
 - [[AI/3-LLM/Inference/vLLM-V0-V1-完整系统实操|vLLM V0/V1 完整系统实操]] — **系统级深度**：V0 page-level Prefill 转换 + last-token 提取；V1 SchedulerInfo + merge_prompt + KV.split 统一调度；完整 10 文件代码结构 ⭐⭐⭐⭐⭐
 - [[LLM-推理优化-2026-全景|LLM 推理优化 2026 全景]] — vLLM 在整个推理优化生态中的位置

@@ -179,8 +179,8 @@ Phase 2.4 目标：
 
 ## 与 Vault 其他笔记的关联
 
-- **[[PI-Landscape-SoK-Prompt-Injection-Taxonomy-Defense|PI-Landscape SoK]]**：提供理论分类框架，本文是实践实现
-- **[[OMNI-LEAK-Multi-Agent-Orchestrator-Data-Exfiltration|OMNI-LEAK]]**：本文 Data Exfiltration 类别的真实攻击案例
+- **[[AI/5-AI 安全/PI-Landscape-SoK-Prompt-Injection-Taxonomy-Defense|PI-Landscape SoK]]**：提供理论分类框架，本文是实践实现
+- **[[AI/5-AI 安全/OMNI-LEAK-Multi-Agent-Orchestrator-Data-Exfiltration|OMNI-LEAK]]**：本文 Data Exfiltration 类别的真实攻击案例
 - **[[Agent 安全威胁全景 2026-02|Agent 安全威胁全景 2026-02]]**：宏观视角补充
 
 ---
@@ -188,8 +188,8 @@ Phase 2.4 目标：
 ## 推荐阅读
 
 - **原论文**：[arXiv:2509.14285v4](https://arxiv.org/abs/2509.14285)（Wichita State + Marshall + Aizu，2025-09）
-- **理论框架**：[[PI-Landscape-SoK-Prompt-Injection-Taxonomy-Defense|PI-Landscape SoK]]（SoK，更全面的分类）
-- **实攻击分析**：[[OMNI-LEAK-Multi-Agent-Orchestrator-Data-Exfiltration|OMNI-LEAK]]（真实 context-dependent 攻击）
+- **理论框架**：[[AI/5-AI 安全/PI-Landscape-SoK-Prompt-Injection-Taxonomy-Defense|PI-Landscape SoK]]（SoK，更全面的分类）
+- **实攻击分析**：[[AI/5-AI 安全/OMNI-LEAK-Multi-Agent-Orchestrator-Data-Exfiltration|OMNI-LEAK]]（真实 context-dependent 攻击）
 - **延伸**：IsolateGPT（Wu et al.）、ProgENT（Shi et al.）——执行层防御
 
 ---

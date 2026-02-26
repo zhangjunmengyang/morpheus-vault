@@ -16,10 +16,10 @@ sources:
   - arXiv:2602.21215 (2026-02-26, ICML 2026)
   - "Institution: NTU + 多家机构（Jie Zhang, Tianwei Zhang 等）"
 related:
-  - "[[Deep-Thinking-Ratio-DTR-v2-Think-At-N|DTR-v2 (Think@N)]]"
-  - "[[Accordion-Thinking-Self-Regulated-Step-Summaries|Accordion-Thinking]]"
-  - "[[ICLR-2026-趋势分析|ICLR-2026-趋势分析]]"
-  - "[[Gemini-3-Deep-Think|Gemini-3-Deep-Think]]"
+  - "[[AI/3-LLM/Inference/Deep-Thinking-Ratio-DTR-v2-Think-At-N|DTR-v2 (Think@N)]]"
+  - "[[AI/3-LLM/Inference/Accordion-Thinking-Self-Regulated-Step-Summaries|Accordion-Thinking]]"
+  - "[[AI/3-LLM/Evaluation/ICLR-2026-趋势分析|ICLR-2026-趋势分析]]"
+  - "[[AI/3-LLM/Inference/Gemini-3-Deep-Think|Gemini-3-Deep-Think]]"
 ---
 
 # SIA: Sparse Inference-time Alignment via Junction Steering
@@ -28,7 +28,7 @@ related:
 > **机构**：NTU + 多家机构（Jie Zhang, Tianwei Zhang 等）  
 > **难度**：★★★☆☆  
 > **影响力**：★★★★☆（推理时 alignment 的重要简化）  
-> **关联**：[[Deep-Thinking-Ratio-DTR-v2-Think-At-N|DTR-v2 (Think@N)]] [[Gemini-3-Deep-Think|Gemini-3-Deep-Think]] [[ICLR-2026-趋势分析|ICLR-2026-趋势分析]]
+> **关联**：[[AI/3-LLM/Inference/Deep-Thinking-Ratio-DTR-v2-Think-At-N|DTR-v2 (Think@N)]] [[AI/3-LLM/Inference/Gemini-3-Deep-Think|Gemini-3-Deep-Think]] [[AI/3-LLM/Evaluation/ICLR-2026-趋势分析|ICLR-2026-趋势分析]]
 
 ---
 
@@ -158,9 +158,9 @@ L(θ) = E[(1/T × Σ V_θ(x, y≤t) - R(x, y))²]
 
 ## 延伸阅读
 
-- [[Deep-Thinking-Ratio-DTR-v2-Think-At-N|DTR-v2 (Think@N)]] — token 级别的 TTC 分配
-- [[Accordion-Thinking-Self-Regulated-Step-Summaries|Accordion-Thinking]] — 推理时 compute 分配
-- [[ICLR-2026-趋势分析|ICLR-2026-趋势分析]] — TTC 方向综览
+- [[AI/3-LLM/Inference/Deep-Thinking-Ratio-DTR-v2-Think-At-N|DTR-v2 (Think@N)]] — token 级别的 TTC 分配
+- [[AI/3-LLM/Inference/Accordion-Thinking-Self-Regulated-Step-Summaries|Accordion-Thinking]] — 推理时 compute 分配
+- [[AI/3-LLM/Evaluation/ICLR-2026-趋势分析|ICLR-2026-趋势分析]] — TTC 方向综览
 
 ---
 

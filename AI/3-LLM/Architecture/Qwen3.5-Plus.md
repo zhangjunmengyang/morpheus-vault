@@ -271,4 +271,4 @@ Qwen3-Next 是架构验证版本（80B-A3B），Qwen3.5 是该架构的全面放
 - [MarkTechPost 分析](https://www.marktechpost.com/2026/02/16/alibaba-qwen-team-releases-qwen3-5-397b-moe-model-with-17b-active-parameters-and-1m-token-context-for-ai-agents/)
 - [Reuters 报道](https://www.reuters.com/world/china/alibaba-unveils-new-qwen35-model-agentic-ai-era-2026-02-16/)
 - [Latent Space AINews](https://www.latent.space/p/ainews-qwen35-397b-a17b-the-smallest)
-- 关联笔记：[[Qwen 系列架构]]
+- 关联笔记：[[AI/3-LLM/Architecture/Qwen 系列架构]]

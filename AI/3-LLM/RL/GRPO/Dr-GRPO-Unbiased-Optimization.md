@@ -15,10 +15,10 @@ sources:
   - https://github.com/sail-sg/understand-r1-zero
 venue: COLM 2025
 related:
-  - "[[GRPO 深度理解|GRPO 深度理解]]"
-  - "[[REINFORCE-Plus-Plus-Global-Advantage-Normalization|REINFORCE++]]"
-  - "[[GRPO-Improvement-Panorama-2026|GRPO-Improvement-Panorama-2026]]"
-  - "[[DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/REINFORCE-Plus-Plus-Global-Advantage-Normalization|REINFORCE++]]"
+  - "[[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO-Improvement-Panorama-2026]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]]"
 ---
 
 # Dr. GRPO: 修复 GRPO 的两个系统性偏差
@@ -111,22 +111,22 @@ loss = -advantage * log_prob                 # 去掉 length normalization
 
 - 原论文：[arXiv:2503.20783](https://arxiv.org/abs/2503.20783)（COLM 2025）
 - 代码：[sail-sg/understand-r1-zero](https://github.com/sail-sg/understand-r1-zero)
-- 相关修复：[[REINFORCE-Plus-Plus-Global-Advantage-Normalization|REINFORCE++]]（不同角度的同类修复）
-- GRPO 基础：[[GRPO 深度理解|GRPO 深度理解]]
-- 全景：[[GRPO-Improvement-Panorama-2026|GRPO-Improvement-Panorama-2026]]
+- 相关修复：[[AI/3-LLM/RL/Other-Algorithms/REINFORCE-Plus-Plus-Global-Advantage-Normalization|REINFORCE++]]（不同角度的同类修复）
+- GRPO 基础：[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- 全景：[[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO-Improvement-Panorama-2026]]
 
 ---
 
 ## See Also
 
 ### GRPO 修复谱系（同维度算法对照）
-- [[REINFORCE-Plus-Plus-Global-Advantage-Normalization|REINFORCE++]] — 同类修复但角度不同：REINFORCE++ 用全局 batch 归一化解决 advantage 估计问题；Dr. GRPO 直接对 loss 函数去偏（length/difficulty 两个维度）；两者可组合
-- [[GRPO-Improvement-Panorama-2026|GRPO 改进全景]] — Dr. GRPO 在七维改进框架中属于"优化偏差修正"维度，全景视角定位
-- [[GRPO 深度理解|GRPO 深度理解]] — 理论基础：理解 Dr. GRPO 修复的前提是理解原版 GRPO 的 advantage 计算缺陷
+- [[AI/3-LLM/RL/Other-Algorithms/REINFORCE-Plus-Plus-Global-Advantage-Normalization|REINFORCE++]] — 同类修复但角度不同：REINFORCE++ 用全局 batch 归一化解决 advantage 估计问题；Dr. GRPO 直接对 loss 函数去偏（length/difficulty 两个维度）；两者可组合
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进全景]] — Dr. GRPO 在七维改进框架中属于"优化偏差修正"维度，全景视角定位
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — 理论基础：理解 Dr. GRPO 修复的前提是理解原版 GRPO 的 advantage 计算缺陷
 
 ### 相关偏差问题
 - [[AI/3-LLM/RL/Other-Algorithms/DAPO-Decoupled-Clip-Dynamic-Sampling|DAPO]] — 同为 GRPO 稳定性修复，DAPO 解决 entropy collapse 和 clip 不对称；Dr. GRPO 解决 length/difficulty bias；两者互补（熵稳定 + 梯度去偏）
-- [[SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO]] — ⚠️ 理论边界：GRPO（含 Dr. GRPO）的修复在单轮场景有效；multi-turn agent 训练需要 SeeUPO 逆序更新框架
+- [[AI/2-Agent/Agentic-RL/SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO]] — ⚠️ 理论边界：GRPO（含 Dr. GRPO）的修复在单轮场景有效；multi-turn agent 训练需要 SeeUPO 逆序更新框架
 
 ### 跨域实证（difficulty bias 的通用性验证）
-- [[NoRD-Dr-GRPO-Reasoning-Free-VLA-Autonomous-Driving|NoRD（CVPR 2026，Applied Intuition + UC Berkeley）]] — **首次在自动驾驶 VLA 域验证 difficulty bias 机制**：弱 SFT + high variance 中等难度样本被系统压制，Dr. GRPO 修复后 PDM score +11.68%（vs GRPO +0.67%）；确认 difficulty bias 不是 LLM 推理特有问题，而是"reward 分布极化 + std 归一化"的通用组合失效
+- [[AI/3-LLM/RL/Other-Algorithms/NoRD-Dr-GRPO-Reasoning-Free-VLA-Autonomous-Driving|NoRD（CVPR 2026，Applied Intuition + UC Berkeley）]] — **首次在自动驾驶 VLA 域验证 difficulty bias 机制**：弱 SFT + high variance 中等难度样本被系统压制，Dr. GRPO 修复后 PDM score +11.68%（vs GRPO +0.67%）；确认 difficulty bias 不是 LLM 推理特有问题，而是"reward 分布极化 + std 归一化"的通用组合失效

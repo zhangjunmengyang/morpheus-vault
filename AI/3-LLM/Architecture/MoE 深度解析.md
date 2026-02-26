@@ -20,12 +20,12 @@ sources:
   - Mixtral arXiv:2401.04088 (Jiang et al., 2024)
 related:
   - "[[MoE 基础]]"
-  - "[[DeepSeek-R1]]"
-  - "[[DeepSeek Engram]]"
-  - "[[分布式训练]]"
-  - "[[DeepSpeed]]"
-  - "[[vLLM]]"
-  - "[[LoRA]]"
+  - "[[AI/3-LLM/Architecture/DeepSeek-R1]]"
+  - "[[AI/3-LLM/Architecture/DeepSeek Engram]]"
+  - "[[AI/3-LLM/Infra/分布式训练]]"
+  - "[[AI/3-LLM/Infra/DeepSpeed]]"
+  - "[[AI/3-LLM/Inference/vLLM]]"
+  - "[[AI/3-LLM/SFT/LoRA]]"
 ---
 
 # MoE (Mixture of Experts) 深度解析
@@ -130,7 +130,7 @@ flowchart TD
 #### Multi-head Latent Attention (MLA)
 - 压缩 KV Cache：将 Key-Value 压缩到低秩隐空间
 - 显存从标准 MHA 的 **100%** 降到约 **5-10%**
-- 这也是 [[vLLM|vLLM]] 等推理框架需要适配的关键特性
+- 这也是 [[AI/3-LLM/Inference/vLLM|vLLM]] 等推理框架需要适配的关键特性
 
 > 来源：DeepSeek-V2 arXiv:2405.04434, Sec. 3.1 (Multi-head Latent Attention)
 
@@ -182,7 +182,7 @@ def route_with_bias(x, W_gate, bias):
 #### Multi-Token Prediction (MTP)
 - 每个位置预测下一个 token 的同时，额外预测后续 1-2 个 token
 - 在训练时提供更丰富的监督信号
-- 推理时可用于 [[推理优化|Speculative Decoding]]
+- 推理时可用于 [[AI/3-LLM/Inference/推理优化|Speculative Decoding]]
 
 > 来源：DeepSeek-V3 arXiv:2412.19437, Sec. 3.4
 
@@ -289,7 +289,7 @@ DeepSeek-V3 的通信优化：
 
 - **显存需求**：即使只激活部分专家，所有参数都要加载
 - DeepSeek-V3 671B → 需要约 **350GB+ 显存**（FP8 量化后约 ~170GB）
-- [[vLLM|vLLM]] 已支持 DeepSeek-V3 的 MoE 推理
+- [[AI/3-LLM/Inference/vLLM|vLLM]] 已支持 DeepSeek-V3 的 MoE 推理
 - Expert offloading：冷门专家可以 offload 到 CPU/SSD
 
 ## 5. 面试常见问题
@@ -304,7 +304,7 @@ A: 给每个专家加一个 bias 项，影响路由决策但不影响权重计�
 A: 细粒度专家提供更灵活的知识组合方式。8 个大专家 → 每次选 2 个只有 $C(8,2)=28$ 种组合；160 个小专家选 6 个 → 组合数 $C(160,6) \approx 2.1 \times 10^{10}$，表达力远超。（来源：DeepSeekMoE arXiv:2401.06066, Sec. 2）
 
 **Q4: MoE 微调为什么容易过拟合？**
-A: 因为每个专家看到的数据量少（总数据被 $K/N$ 稀释），而参数量又大。解决方案：使用 [[LoRA|LoRA]] 微调、冻结 Router、增加正则化。
+A: 因为每个专家看到的数据量少（总数据被 $K/N$ 稀释），而参数量又大。解决方案：使用 [[AI/3-LLM/SFT/LoRA|LoRA]] 微调、冻结 Router、增加正则化。
 
 **Q5: 路由坍塌（Route Collapse）是什么？如何检测和解决？**
 A: 路由器持续只选少数专家，其他专家得不到训练。检测：监控每个专家的 token 接收量分布。解决：负载均衡损失/Dynamic Bias/Expert Choice Routing。
@@ -356,10 +356,10 @@ MoE 证明了一个深刻的设计哲学：**不是所有知识都需要同时�
 
 > 🔗 See also:
 > - [[MoE 基础]] — 入门概念
-> - [[DeepSeek-R1]] — 推理能力，GRPO 训练
-> - [[DeepSeek Engram]] — 条件记忆新维度
-> - [[分布式训练]] — Expert Parallelism 的分布式实现
-> - [[DeepSpeed]] — MoE 训练支持
+> - [[AI/3-LLM/Architecture/DeepSeek-R1]] — 推理能力，GRPO 训练
+> - [[AI/3-LLM/Architecture/DeepSeek Engram]] — 条件记忆新维度
+> - [[AI/3-LLM/Infra/分布式训练]] — Expert Parallelism 的分布式实现
+> - [[AI/3-LLM/Infra/DeepSpeed]] — MoE 训练支持
 
 ---
 

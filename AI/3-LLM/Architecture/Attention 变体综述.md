@@ -18,10 +18,10 @@ sources:
   - "Beltagy et al. Longformer: The Long-Document Transformer (Sliding Window). arXiv:2004.05150"
   - "Liu et al. DeepSeek-V2: A Strong, Economical, and Efficient MoE LM (MLA). arXiv:2405.04434"
 related:
-  - "[[GQA-MQA|GQA/MQA 深度解析]]"
-  - "[[FlashAttention|FlashAttention 深度解析]]"
-  - "[[Multi-Head Latent Attention|MLA 详解]]"
-  - "[[Mamba-SSM|Mamba/SSM]]"
+  - "[[AI/3-LLM/Architecture/GQA-MQA|GQA/MQA 深度解析]]"
+  - "[[AI/3-LLM/Architecture/FlashAttention|FlashAttention 深度解析]]"
+  - "[[AI/3-LLM/Architecture/Multi-Head Latent Attention|MLA 详解]]"
+  - "[[AI/3-LLM/Architecture/Mamba-SSM|Mamba/SSM]]"
   - "[[AI/3-LLM/Inference/KV Cache|KV Cache 原理与优化]]"
 ---
 
@@ -112,7 +112,7 @@ class MultiQueryAttention(nn.Module):
 
 > 来源：Ainslie et al., "GQA: Training Generalized Multi-Query Attention from Multi-Head Checkpoints", arXiv:2305.13245
 
-详见 [[GQA-MQA|GQA/MQA 深度解析]]。
+详见 [[AI/3-LLM/Architecture/GQA-MQA|GQA/MQA 深度解析]]。
 
 ### 核心思想
 
@@ -185,7 +185,7 @@ class MultiHeadLatentAttention(nn.Module):
 
 ### Decoupled RoPE
 
-MLA 的低秩分解与 [[Transformer 位置编码|RoPE]] 不兼容（RoPE 改变了矩阵的秩），因此 DeepSeek 提出 **Decoupled RoPE**：
+MLA 的低秩分解与 [[AI/3-LLM/Architecture/Transformer 位置编码|RoPE]] 不兼容（RoPE 改变了矩阵的秩），因此 DeepSeek 提出 **Decoupled RoPE**：
 
 ```
 K = concat([K_nope, K_rope])
@@ -338,7 +338,7 @@ RoPE 对 Q 和 K 施加旋转变换（位置相关），这会**破坏低秩结�
 ## 💡 启发与思考
 
 ### So What？对老板意味着什么
-- **MLA 的低秩压缩思想与 LoRA 同源**：都是利用参数矩阵的内在低秩性。这个 insight 可以迁移到其他需要压缩的场景（如 [[LoRA|LoRA 微调]]）
+- **MLA 的低秩压缩思想与 LoRA 同源**：都是利用参数矩阵的内在低秩性。这个 insight 可以迁移到其他需要压缩的场景（如 [[AI/3-LLM/SFT/LoRA|LoRA 微调]]）
 - **混合架构是工程妥协的典范**：纯 linear attention 质量不够，纯 softmax attention 序列长度受限。最终落地的总是折中方案
 
 ### 未解问题与局限
@@ -346,7 +346,7 @@ RoPE 对 Q 和 K 施加旋转变换（位置相关），这会**破坏低秩结�
 - MLA 目前仅 DeepSeek 使用，生态支持（推理框架、量化工具）不如 GQA 成熟
 
 ### 脑暴：如果往下延伸
-- 如果把 [[Mamba-SSM|Mamba]] 的选择性 SSM 和 Transformer 的 MLA 在同一模型中混合，可能在超长上下文（>1M tokens）场景取得突破
+- 如果把 [[AI/3-LLM/Architecture/Mamba-SSM|Mamba]] 的选择性 SSM 和 Transformer 的 MLA 在同一模型中混合，可能在超长上下文（>1M tokens）场景取得突破
 - 6 个月后预测：会出现自动化的 attention 架构搜索——哪些层用 softmax、哪些用 linear，由 NAS 自动决定
 
 ---
@@ -376,8 +376,8 @@ RoPE 对 Q 和 K 施加旋转变换（位置相关），这会**破坏低秩结�
 
 ## See Also
 
-> 🔗 See also: [[GQA-MQA|GQA/MQA 深度解析]] — KV head 共享机制的详细实现和性能对比
-> 🔗 See also: [[FlashAttention|FlashAttention]] — Attention 计算加速，与本文架构优化互补
+> 🔗 See also: [[AI/3-LLM/Architecture/GQA-MQA|GQA/MQA 深度解析]] — KV head 共享机制的详细实现和性能对比
+> 🔗 See also: [[AI/3-LLM/Architecture/FlashAttention|FlashAttention]] — Attention 计算加速，与本文架构优化互补
 > 🔗 See also: [[AI/3-LLM/Inference/KV Cache|KV Cache]] — Attention 变体直接影响 KV Cache 大小，推理优化的核心关联
-> 🔗 See also: [[Multi-Head Latent Attention|MLA 详解]] — DeepSeek MLA 的完整技术细节
-> 🔗 See also: [[Mamba-SSM|Mamba/SSM]] — Linear Attention 的替代路线：选择性状态空间模型
+> 🔗 See also: [[AI/3-LLM/Architecture/Multi-Head Latent Attention|MLA 详解]] — DeepSeek MLA 的完整技术细节
+> 🔗 See also: [[AI/3-LLM/Architecture/Mamba-SSM|Mamba/SSM]] — Linear Attention 的替代路线：选择性状态空间模型

@@ -79,13 +79,13 @@ Block 3: [confidence tokens]  ← reward_calibration
 
 ## 关联笔记
 
-- [[GRPO 深度理解|GRPO 深度理解]] — Blockwise 是 GRPO completion-level advantage 的 block-level 升级
-- [[DeepSeek R1 学习笔记|DeepSeek R1 学习笔记]]
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — Blockwise 是 GRPO completion-level advantage 的 block-level 升级
+- [[AI/3-LLM/RL/GRPO/DeepSeek R1 学习笔记|DeepSeek R1 学习笔记]]
 - [[AI/3-LLM/RL/Theory/对齐技术综述|对齐技术综述]]
 
 > **see-also（Agent 场景）**：Block-level credit assignment 与 Agent 场景的 step-level credit assignment 解决同一根问题（粗粒度 advantage → 细粒度），路线不同：
-> - [[GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — Anchor State Grouping（无额外 rollout 实现 step-level CA，与 Blockwise 的 group statistics 思路同源）
-> - [[Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — step-level CA 全景，Blockwise 可作为 block-level 中间层
+> - [[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — Anchor State Grouping（无额外 rollout 实现 step-level CA，与 Blockwise 的 group statistics 思路同源）
+> - [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — step-level CA 全景，Blockwise 可作为 block-level 中间层
 
 ---
 *Created: 2026-02-16 by Scholar heartbeat*

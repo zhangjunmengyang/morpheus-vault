@@ -203,10 +203,10 @@ graph LR
     B --> E
 ```
 
-- **[[OMNI-LEAK-Multi-Agent-Orchestrator-Data-Exfiltration|OMNI-LEAK]]**：SoK 分类中"indirect injection → context-dependent"的典型案例
-- **[[AutoInject-RL-Prompt-Injection-Attack|AutoInject]]**：优化型 PI 攻击的代表
-- **[[AgentLeak-Full-Stack-Privacy-Leakage-Multi-Agent-Benchmark|AgentLeak]]**：与 AgentPI 互补的 benchmark
-- **[[Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization]]** — 跨域不可能三角：本文的 agent防御三目标 trade-off（可信/可用/延迟）与 Adaptive-Reg 的 fine-tuning 防御三目标 trade-off（safety/utility/adaptability）在结构上完全同构——防御系统的不可能三角是普遍规律
+- **[[AI/5-AI 安全/OMNI-LEAK-Multi-Agent-Orchestrator-Data-Exfiltration|OMNI-LEAK]]**：SoK 分类中"indirect injection → context-dependent"的典型案例
+- **[[AI/5-AI 安全/AutoInject-RL-Prompt-Injection-Attack|AutoInject]]**：优化型 PI 攻击的代表
+- **[[AI/5-AI 安全/AgentLeak-Full-Stack-Privacy-Leakage-Multi-Agent-Benchmark|AgentLeak]]**：与 AgentPI 互补的 benchmark
+- **[[AI/5-AI 安全/Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization]]** — 跨域不可能三角：本文的 agent防御三目标 trade-off（可信/可用/延迟）与 Adaptive-Reg 的 fine-tuning 防御三目标 trade-off（safety/utility/adaptability）在结构上完全同构——防御系统的不可能三角是普遍规律
 
 ---
 
@@ -242,8 +242,8 @@ A: LLM 安全主要是 context-independent 的——用户输入包含攻击。A
 ## 推荐阅读
 
 - **原论文**：[arXiv:2602.10453](https://arxiv.org/abs/2602.10453)（2026-02，cs.CR）
-- **实例**：[[OMNI-LEAK-Multi-Agent-Orchestrator-Data-Exfiltration|OMNI-LEAK]]（context-dependent 攻击的完整案例）
-- **多 Agent 防御**：[[Multi-Agent-Defense-Pipeline-Prompt-Injection|Multi-Agent Defense Pipeline]]（本 SoK 的实践补充）
+- **实例**：[[AI/5-AI 安全/OMNI-LEAK-Multi-Agent-Orchestrator-Data-Exfiltration|OMNI-LEAK]]（context-dependent 攻击的完整案例）
+- **多 Agent 防御**：[[AI/5-AI 安全/Multi-Agent-Defense-Pipeline-Prompt-Injection|Multi-Agent Defense Pipeline]]（本 SoK 的实践补充）
 - **OWASP LLM Top 10**：https://genai.owasp.org/llmrisk/llm01-prompt-injection/
 - **AgentArmor**（Wang et al., 2025）：执行层防御，与盾卫高度相关
 

@@ -20,10 +20,10 @@ tags:
 related:
   - "[[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操]]"
   - "[[AI/3-LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]]"
-  - "[[REBEL-Regret-Based-RL-LLM-Alignment|REBEL]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/REBEL-Regret-Based-RL-LLM-Alignment|REBEL]]"
   - "[[AI/3-LLM/RL/GRPO/GRPO-Improvement-Panorama-2026|GRPO-Improvement-Panorama-2026]]"
-  - "[[GRPO 深度理解|GRPO深度理解]]"
-  - "[[MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO深度理解]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]]"
 ---
 
 # OAPL: LLMs Can Learn to Reason Via Off-Policy RL
@@ -249,10 +249,10 @@ OAPL 是 off-policy 方向中**理论最干净**的方案：没有 heuristic（�
 ## See Also
 
 **Off-Policy RL 生态：**
-- [[MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 另一种自适应软策略优化，同属 off-policy 改进方向
-- [[GRPO-Improvement-Panorama-2026|GRPO改进全景]] — OAPL 在 off-policy 方向的完整定位
-- [[REBEL-Regret-Based-RL-LLM-Alignment|REBEL]] — Regret-based 目标，与 OAPL 同为 critic-free 替代
-- [[SAPO-Soft-Adaptive-Policy-Optimization|SAPO]] — **正交可叠加**：OAPL 改 IS ratio（squared loss），SAPO 改 clip 函数（sigmoid 软衰减）；解决不同维度，理论上可组合
+- [[AI/3-LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 另一种自适应软策略优化，同属 off-policy 改进方向
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO改进全景]] — OAPL 在 off-policy 方向的完整定位
+- [[AI/3-LLM/RL/Other-Algorithms/REBEL-Regret-Based-RL-LLM-Alignment|REBEL]] — Regret-based 目标，与 OAPL 同为 critic-free 替代
+- [[AI/3-LLM/RL/Other-Algorithms/SAPO-Soft-Adaptive-Policy-Optimization|SAPO]] — **正交可叠加**：OAPL 改 IS ratio（squared loss），SAPO 改 clip 函数（sigmoid 软衰减）；解决不同维度，理论上可组合
 
 **代码实操（理解 off-policy 的工程含义）：**
 - [[AI/3-LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]] — GRPO on-policy 实现对照
@@ -260,13 +260,13 @@ OAPL 是 off-policy 方向中**理论最干净**的方案：没有 heuristic（�
 - [[AI/3-LLM/Infra/Ray-分布式RL训练实操|Ray分布式RL训练实操]] — 异步训练架构，OAPL 解决的工程问题来源
 
 **理论相关：**
-- [[GRPO 深度理解|GRPO深度理解]] — 理解 GRPO 局限是理解 OAPL 动机的前提
-- [[SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO]] — 同样质疑 GRPO 的收敛性，但从 multi-turn 角度
-- [[iStar-Implicit-Step-Rewards-Agentic-RL|iStar]] — **KL-reg 框架同根**：iStar 用 $\beta\log\frac{\pi_\phi}{\pi_\text{old}}$ 作 step-level reward，OAPL 用 $\beta\log\frac{\pi^*}{\pi_\text{ref}}$ 推导闭合 squared loss；两者共享 KL-reg RL 的最优解结构，分别解决 credit assignment 和 off-policy 稳定性；详见 [[Long-Horizon-Credit-Assignment专题|Long-Horizon CA 专题 § 11-B]]
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO深度理解]] — 理解 GRPO 局限是理解 OAPL 动机的前提
+- [[AI/2-Agent/Agentic-RL/SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO]] — 同样质疑 GRPO 的收敛性，但从 multi-turn 角度
+- [[AI/2-Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar]] — **KL-reg 框架同根**：iStar 用 $\beta\log\frac{\pi_\phi}{\pi_\text{old}}$ 作 step-level reward，OAPL 用 $\beta\log\frac{\pi^*}{\pi_\text{ref}}$ 推导闭合 squared loss；两者共享 KL-reg RL 的最优解结构，分别解决 credit assignment 和 off-policy 稳定性；详见 [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon CA 专题 § 11-B]]
 
 ## 推荐阅读
 
 1. **原文**：[arXiv:2602.19362](https://arxiv.org/abs/2602.19362) — OAPL: LLMs Can Learn to Reason Via Off-Policy RL
-2. **前置阅读**：[[GRPO 深度理解|GRPO深度理解]] — 理解 OAPL 在改进什么
+2. **前置阅读**：[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO深度理解]] — 理解 OAPL 在改进什么
 3. **工程对照**：[[AI/3-LLM/Infra/Ray-分布式RL训练实操|Ray分布式RL训练实操]] — 异步架构中 OAPL 的应用场景
-4. **姊妹论文**：[[SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO]] — 同期从不同角度批判 GRPO 收敛性
+4. **姊妹论文**：[[AI/2-Agent/Agentic-RL/SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO]] — 同期从不同角度批判 GRPO 收敛性

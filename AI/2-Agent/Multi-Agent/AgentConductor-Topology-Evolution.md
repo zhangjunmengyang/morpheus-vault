@@ -32,7 +32,7 @@ status: permanent
 
 ## 一句话
 
-[[Multi-Agent 概述|Multi-agent]] 竞赛级代码生成的瓶颈不是 LLM 能力，而是 **interaction topology 的设计**：easy 题用 full mesh 是浪费，hard 题用 chain 是瓶颈。AgentConductor 用 [[GRPO-Improvement-Panorama-2026|RL（GRPO）]] 训练一个轻量 orchestrator（3B）动态生成 YAML 表示的 DAG topology，随 task difficulty 和 execution feedback 演化，同时引入 density function 把"效率"纳入 reward。
+[[AI/2-Agent/Multi-Agent/Multi-Agent 概述|Multi-agent]] 竞赛级代码生成的瓶颈不是 LLM 能力，而是 **interaction topology 的设计**：easy 题用 full mesh 是浪费，hard 题用 chain 是瓶颈。AgentConductor 用 [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|RL（GRPO）]] 训练一个轻量 orchestrator（3B）动态生成 YAML 表示的 DAG topology，随 task difficulty 和 execution feedback 演化，同时引入 density function 把"效率"纳入 reward。
 
 ---
 
@@ -216,9 +216,9 @@ AgentConductor 的密度函数更 principled，FlowSteer 的 operator 抽象更�
 
 ## See Also
 
-- [[FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer CWRPO]] — 同为 GRPO + workflow multi-turn RL，但拓扑表达力弱于 AgentConductor（chain/tree vs DAG）；FlowSteer 更通用，AgentConductor 更专精
-- [[IMAGINE-多Agent蒸馏到单模型|IMAGINE]] — MAS 反方向：把多 Agent 集体能力蒸馏进单模型（能力集中）vs AgentConductor（动态组合）
-- [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — AgentConductor 使用 GRPO 训练 orchestrator 的算法基础
+- [[AI/2-Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer CWRPO]] — 同为 GRPO + workflow multi-turn RL，但拓扑表达力弱于 AgentConductor（chain/tree vs DAG）；FlowSteer 更通用，AgentConductor 更专精
+- [[AI/2-Agent/Multi-Agent/IMAGINE-多Agent蒸馏到单模型|IMAGINE]] — MAS 反方向：把多 Agent 集体能力蒸馏进单模型（能力集中）vs AgentConductor（动态组合）
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 2026 全景]] — AgentConductor 使用 GRPO 训练 orchestrator 的算法基础
 - [[LLM代码生成-2026技术全景|LLM 代码生成 2026 全景]] — 代码生成赛道全局视图，AgentConductor 在竞赛级代码的位置
 -  — Agent 研究全图谱
 

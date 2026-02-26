@@ -151,8 +151,8 @@ Qwen3.5 是阿里 2026 年春节前一系列发布的顶点：
 
 ## 相关笔记
 
-- [[GLM-5|GLM-5 技术报告]] — 同期竞品，ARC 综合更强
-- [[Doubao-Seed-2.0|Doubao Seed 2.0]] — ByteDance 竞品，混合专家架构
+- [[AI/4-模型/GLM/GLM-5|GLM-5 技术报告]] — 同期竞品，ARC 综合更强
+- [[AI/4-模型/Seed/Doubao-Seed-2.0|Doubao Seed 2.0]] — ByteDance 竞品，混合专家架构
 - [[2026年2月模型潮（这篇毫无价值，哪怕梳理个从 deepseek R1 以来的时间线都比这强）|2026年2月模型潮（这篇毫无价值）]] — 整体竞争格局背景
 -  — 前沿模型全景索引
 - [[AI/3-LLM/Architecture/Attention变体综述|Attention 变体综述]] — Qwen3.5 采用的架构技术基础

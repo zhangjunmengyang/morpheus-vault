@@ -143,7 +143,7 @@ p_q = 0 或 1 → 梯度消失。在随机采样下，大量训练步骤在"太�
 
 两机制互补：ESS scaling 控制"更新步长"，optimal baseline 控制"估计器方差"。
 
-*(arXiv ID 待确认，full text 精读待补；详见 [[Stable-Asynchrony-VCPO-Off-Policy-RL|Stable-Asynchrony-VCPO]])*
+*(arXiv ID 待确认，full text 精读待补；详见 [[AI/3-LLM/RL/Other-Algorithms/Stable-Asynchrony-VCPO-Off-Policy-RL|Stable-Asynchrony-VCPO]])*
 
 ---
 
@@ -175,7 +175,7 @@ p_q = 0 或 1 → 梯度消失。在随机采样下，大量训练步骤在"太�
 
 **与 Token/Sample/System 三层的关系**：探索层是独立维度——它解决"什么样的轨迹值得优化"，而不是"如何优化给定轨迹"。可以叠加使用。
 
-*(详见 [[DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]])*
+*(详见 [[AI/3-LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]])*
 
 ---
 
@@ -188,7 +188,7 @@ GRPO 的 hard binary clip 在三个维度上不匹配 LLM 优化：
 
 **MASPO = Mass-Adaptive Soft Policy Optimization**：用 adaptive soft trust region 替代 hard clip 统一解决。
 
-*(详见 [[MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]]；全文待读，abstract-based 分析)*
+*(详见 [[AI/3-LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]]；全文待读，abstract-based 分析)*
 
 ---
 
@@ -269,34 +269,34 @@ Layer 1: Token 层（STAPO + MASPO）
 ## 连接
 
 **Token 级别**
-- [[STAPO-Spurious-Token-Aware-Policy-Optimization|STAPO]] — spurious token mask，零成本稳定性
-- [[MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — soft adaptive trust region，概率质量校正
+- [[AI/3-LLM/RL/Other-Algorithms/STAPO-Spurious-Token-Aware-Policy-Optimization|STAPO]] — spurious token mask，零成本稳定性
+- [[AI/3-LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — soft adaptive trust region，概率质量校正
 
 **样本级别**
-- [[Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] — Teacher 动态课程，中间难度最优
-- [[PACED-RL-Partition-Function-Difficulty-Scheduler|PACED-RL]] ★ — GFlowNet Z_φ 独立收敛同一规律（新增，2026-02-21）
+- [[AI/3-LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] — Teacher 动态课程，中间难度最优
+- [[AI/3-LLM/RL/Other-Algorithms/PACED-RL-Partition-Function-Difficulty-Scheduler|PACED-RL]] ★ — GFlowNet Z_φ 独立收敛同一规律（新增，2026-02-21）
 
 **探索级别**
-- [[DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]] — Pivot-Driven Resampling，Root Saturation 修复
-- [[VAM-Verbalized-Action-Masking-Exploration|VAM]] ★ — Within-state 探索塌缩（新增，2026-02-21）
+- [[AI/3-LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]] — Pivot-Driven Resampling，Root Saturation 修复
+- [[AI/3-LLM/RL/Other-Algorithms/VAM-Verbalized-Action-Masking-Exploration|VAM]] ★ — Within-state 探索塌缩（新增，2026-02-21）
 
 **系统/Off-Policy 级别**
-- [[Stable-Asynchrony-VCPO-Off-Policy-RL|Stable Asynchrony (VCPO)]] — 方差控制 IS correction
-- [[Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 统一 FP8 精度 flow，消除量化引入的 off-policy
-- [[VESPO-Variational-Sequence-Policy-Optimization|VESPO]] ★ — 变分推导最优 IS kernel，理论最严格（新增，2026-02-21）
-- [[SAPO-Soft-Adaptive-Policy-Optimization|SAPO]] ★ — sech² 软门控，Qwen3-VL 生产在用（新增，2026-02-21）
-- [[GSPO-Group-Sequence-Policy-Optimization|GSPO]] ★ — 序列级 IS 替代 token 级，Qwen3 团队（新增，2026-02-21）
+- [[AI/3-LLM/RL/Other-Algorithms/Stable-Asynchrony-VCPO-Off-Policy-RL|Stable Asynchrony (VCPO)]] — 方差控制 IS correction
+- [[AI/3-LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 统一 FP8 精度 flow，消除量化引入的 off-policy
+- [[AI/3-LLM/RL/Other-Algorithms/VESPO-Variational-Sequence-Policy-Optimization|VESPO]] ★ — 变分推导最优 IS kernel，理论最严格（新增，2026-02-21）
+- [[AI/3-LLM/RL/Other-Algorithms/SAPO-Soft-Adaptive-Policy-Optimization|SAPO]] ★ — sech² 软门控，Qwen3-VL 生产在用（新增，2026-02-21）
+- [[AI/3-LLM/RL/Other-Algorithms/GSPO-Group-Sequence-Policy-Optimization|GSPO]] ★ — 序列级 IS 替代 token 级，Qwen3 团队（新增，2026-02-21）
 
 **Trust Region**
-- [[LACONIC-Length-Constrained-RL|LACONIC]] — Primal-Dual RL 长度控制
+- [[AI/3-LLM/RL/Other-Algorithms/LACONIC-Length-Constrained-RL|LACONIC]] — Primal-Dual RL 长度控制
 
 **基础理论**
-- [[RLVR-Edge-of-Competence|RLVR-Edge-of-Competence]] — 边界竞争力理论
-- [[Blockwise-Advantage-Estimation|Blockwise Advantage Estimation]] — 分块优势估计
-- [[GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] — 六维框架元分析，本文的学术上位文档
+- [[AI/3-LLM/RL/Theory/RLVR-Edge-of-Competence|RLVR-Edge-of-Competence]] — 边界竞争力理论
+- [[AI/3-LLM/RL/GRPO/Blockwise-Advantage-Estimation|Blockwise Advantage Estimation]] — 分块优势估计
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进全景 2026]] — 六维框架元分析，本文的学术上位文档
 
 **系统基础设施**
-- [[Slime-RL-Framework|Slime RL Framework]] — 异步 RL infra，Stable Asynchrony 的实战场景
+- [[AI/3-LLM/RL/Frameworks/Slime-RL-Framework|Slime RL Framework]] — 异步 RL infra，Stable Asynchrony 的实战场景
 
 ---
 

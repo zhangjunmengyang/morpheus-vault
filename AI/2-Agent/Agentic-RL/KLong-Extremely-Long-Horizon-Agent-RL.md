@@ -239,19 +239,19 @@ KLong 是"Context Management for RL Training"方向的开创性工作——之�
 
 ## 七、关联笔记
 
-- [[LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL]] — long horizon RL（在 context 内）对比
-- [[TSR-Trajectory-Search-Rollouts-Multi-Turn-RL]] — training-time tree search 对比
-- [[SCoRe-Self-Correction-via-Reinforcement-Learning]] — multi-turn RL 稳定性对比
-- [[Agent评估体系批判-Goodhart法则与Benchmark陷阱]] — PaperBench 的特点分析
-- [[Agent-RL-环境工程系统论]] — 基础设施挑战的系统视角
-- [[Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — KLong 解决"轨迹放不下"的物理问题；CA专题解决"reward如何归因"的算法问题——同一大难题的两个维度
-- [[PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]] — 同为 Agentic RL 训练改进：KLong 解决极长 horizon 上下文+课程问题，PA-MoE 解决参数容量 Simplicity Bias；两者正交可叠加
-- [[Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] ⭐ — **同一课程原则的不同实现**：Goldilocks 在样本难度做课程（选什么题），KLong 在时间长度做课程（允许多长的任务）；本质都是"从简单到难"
-- [[DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]] — 轨迹切割（KLong）和 pivot resampling（DEEP-GRPO）都涉及在长轨迹关键节点处理，思路相通
-- [[Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — KLong 是极长任务 Agentic RL 训练的实证端，补充理论分析
-- [[Agent-RL-训练实战指南|Agent RL 训练实战指南]] — 实战指南的 credit assignment 和 reward 设计章节与 KLong 高度相关
-- [[WebAgent-R1-Multi-Turn-RL-Web-Agent|WebAgent-R1（Amazon+UVA）]] — **Context Overflow 的正交解法**：KLong 用 trajectory-splitting（切轨迹），WebAgent-R1 用 dynamic context compression（压缩历史 HTML）；同问题不同思路，可组合
-- [[RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO]] — **KLong 的理论背景**：RAGEN 诊断了 multi-turn RL 训练不稳定（Echo Trap），KLong 在此基础上解决极长 horizon（700+ turns）的 context + curriculum 问题
+- [[AI/2-Agent/Agentic-RL/LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL]] — long horizon RL（在 context 内）对比
+- [[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL]] — training-time tree search 对比
+- [[AI/2-Agent/Agentic-RL/SCoRe-Self-Correction-via-Reinforcement-Learning]] — multi-turn RL 稳定性对比
+- [[AI/2-Agent/Evaluation/Agent评估体系批判-Goodhart法则与Benchmark陷阱]] — PaperBench 的特点分析
+- [[AI/2-Agent/Agentic-RL/Agent-RL-环境工程系统论]] — 基础设施挑战的系统视角
+- [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — KLong 解决"轨迹放不下"的物理问题；CA专题解决"reward如何归因"的算法问题——同一大难题的两个维度
+- [[AI/2-Agent/Agentic-RL/PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]] — 同为 Agentic RL 训练改进：KLong 解决极长 horizon 上下文+课程问题，PA-MoE 解决参数容量 Simplicity Bias；两者正交可叠加
+- [[AI/3-LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] ⭐ — **同一课程原则的不同实现**：Goldilocks 在样本难度做课程（选什么题），KLong 在时间长度做课程（允许多长的任务）；本质都是"从简单到难"
+- [[AI/3-LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]] — 轨迹切割（KLong）和 pivot resampling（DEEP-GRPO）都涉及在长轨迹关键节点处理，思路相通
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — KLong 是极长任务 Agentic RL 训练的实证端，补充理论分析
+- [[AI/2-Agent/Agentic-RL/Agent-RL-训练实战指南|Agent RL 训练实战指南]] — 实战指南的 credit assignment 和 reward 设计章节与 KLong 高度相关
+- [[AI/2-Agent/Agentic-RL/WebAgent-R1-Multi-Turn-RL-Web-Agent|WebAgent-R1（Amazon+UVA）]] — **Context Overflow 的正交解法**：KLong 用 trajectory-splitting（切轨迹），WebAgent-R1 用 dynamic context compression（压缩历史 HTML）；同问题不同思路，可组合
+- [[AI/2-Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO]] — **KLong 的理论背景**：RAGEN 诊断了 multi-turn RL 训练不稳定（Echo Trap），KLong 在此基础上解决极长 horizon（700+ turns）的 context + curriculum 问题
 
 ---
 

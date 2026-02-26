@@ -28,14 +28,14 @@ sources:
   - "SkyRL-Agent: arXiv 2511.16108"
   - "AWM (Agent World Model): arXiv 2602.10090, ICML 2026, Snowflake AI"
 related:
-  - "[[EnterpriseGym-Corecraft|EnterpriseGym-Corecraft]]"
-  - "[[AWM-Agent-World-Model-Synthetic-Environments|AWM]]"
-  - "[[Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]]"
-  - "[[Agent-RL-训练实战指南|Agent-RL-训练实战指南]]"
+  - "[[AI/2-Agent/Agentic-RL/EnterpriseGym-Corecraft|EnterpriseGym-Corecraft]]"
+  - "[[AI/2-Agent/Agentic-RL/AWM-Agent-World-Model-Synthetic-Environments|AWM]]"
+  - "[[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]]"
+  - "[[AI/2-Agent/Agentic-RL/Agent-RL-训练实战指南|Agent-RL-训练实战指南]]"
   - "[[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]]"
-  - "[[Tool-Use-RL-训练专题|Tool-Use-RL-训练专题]]"
-  - "[[Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]]"
-  - "[[Agent-评测与-Benchmark|Agent 评测与 Benchmark]]"
+  - "[[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL-训练专题]]"
+  - "[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]]"
+  - "[[AI/2-Agent/Evaluation/Agent-评测与-Benchmark|Agent 评测与 Benchmark]]"
 ---
 
 # Agent RL 环境工程系统论
@@ -212,7 +212,7 @@ graph LR
 
 $$\text{pass@1}_{\text{7B}} < 10\% \implies P(\text{reward}>0) < 10\% \implies \text{几乎无正向梯度}$$
 
-**Agent-RLVR 解法**（arXiv 2506.11425）：Guidance rewards，两阶段循环（见[[Tool-Use-RL-训练专题|Tool-Use-RL-训练专题]]）→ 9.4% → 22.4%
+**Agent-RLVR 解法**（arXiv 2506.11425）：Guidance rewards，两阶段循环（见[[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL-训练专题]]）→ 9.4% → 22.4%
 
 **基础设施**：每 rollout 需要独立 Docker container，并行需要 container 编排系统
 
@@ -258,7 +258,7 @@ flowchart LR
 ## 五、合成环境：AWM 方法论
 
 **AWM = Agent World Model**（arXiv:2602.10090，**ICML 2026**，Snowflake AI + UIUC）  
-**完整精读笔记**：[[AWM-Agent-World-Model-Synthetic-Environments|AWM 精读笔记]]
+**完整精读笔记**：[[AI/2-Agent/Agentic-RL/AWM-Agent-World-Model-Synthetic-Environments|AWM 精读笔记]]
 
 ### 核心思路
 
@@ -470,9 +470,9 @@ $$\text{评估分层} = \begin{cases} \text{Task-level} & \text{整体任务成�
 - **Agent-RLVR**: https://arxiv.org/abs/2506.11425
 
 ### 相关 Vault 笔记
-- [[EnterpriseGym-Corecraft|EnterpriseGym-Corecraft]] — Corecraft 单独深读
-- [[AWM-Agent-World-Model-Synthetic-Environments|AWM-Agent-World-Model-Synthetic-Environments]] — 合成环境方法论
-- [[Tool-Use-RL-训练专题|Tool-Use-RL-训练专题]] — Reward 设计详细展开
-- [[Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]] — 长任务 credit assignment 算法
+- [[AI/2-Agent/Agentic-RL/EnterpriseGym-Corecraft|EnterpriseGym-Corecraft]] — Corecraft 单独深读
+- [[AI/2-Agent/Agentic-RL/AWM-Agent-World-Model-Synthetic-Environments|AWM-Agent-World-Model-Synthetic-Environments]] — 合成环境方法论
+- [[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL-训练专题]] — Reward 设计详细展开
+- [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]] — 长任务 credit assignment 算法
 - [[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong-Extremely-Long-Horizon-Agent]] — KLong 单独深读
-- [[Agent-评测与-Benchmark|Agent 评测与 Benchmark]] — 评估体系
+- [[AI/2-Agent/Evaluation/Agent-评测与-Benchmark|Agent 评测与 Benchmark]] — 评估体系

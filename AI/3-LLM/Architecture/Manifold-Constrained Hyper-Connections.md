@@ -13,7 +13,7 @@ status: supplementary
 ---
 
 > [!note] 版本说明
-> 本文为 2026-02-14 面试速查版（305行）。DeepSeek V4 专项深度分析见：[[mHC-Manifold-Constrained-Hyper-Connections-DeepSeek|mHC-Manifold-Constrained-Hyper-Connections-DeepSeek]]（217行，arXiv:2512.24880，★★★★☆）
+> 本文为 2026-02-14 面试速查版（305行）。DeepSeek V4 专项深度分析见：[[AI/3-LLM/Architecture/mHC-Manifold-Constrained-Hyper-Connections-DeepSeek|mHC-Manifold-Constrained-Hyper-Connections-DeepSeek]]（217行，arXiv:2512.24880，★★★★☆）
 
 # Manifold-Constrained Hyper-Connections (mHC)：训练稳定性革命
 
@@ -221,8 +221,8 @@ class mHCResidual(nn.Module):
 ## 在 DeepSeek V4 中的应用
 
 ### 与其他技术的协同
-- **mHC + [[DeepSeek Engram|DeepSeek Engram]]**: 训练稳定性 + 内存效率
-- **mHC + [[Multi-Head Latent Attention|Multi-Head Latent Attention]]**: 稳定训练 + 推理优化
+- **mHC + [[AI/3-LLM/Architecture/DeepSeek Engram|DeepSeek Engram]]**: 训练稳定性 + 内存效率
+- **mHC + [[AI/3-LLM/Architecture/Multi-Head Latent Attention|Multi-Head Latent Attention]]**: 稳定训练 + 推理优化
 - **mHC + MoE**: 大规模稀疏模型的稳定训练
 
 ### 架构演进路径
@@ -305,7 +305,7 @@ A: 1）与条件记忆（Engram）等技术结合；2）更智能的流数量和
 
 ## 相关技术
 
-- [[DeepSeek Engram|DeepSeek Engram]]：条件记忆架构
-- [[Multi-Head Latent Attention|Multi-Head Latent Attention]]：KV 缓存优化
+- [[AI/3-LLM/Architecture/DeepSeek Engram|DeepSeek Engram]]：条件记忆架构
+- [[AI/3-LLM/Architecture/Multi-Head Latent Attention|Multi-Head Latent Attention]]：KV 缓存优化
 - ResNet：残差连接基础
 - Highway Networks：早期门控连接尝试

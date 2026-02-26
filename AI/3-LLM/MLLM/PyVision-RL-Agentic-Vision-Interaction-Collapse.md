@@ -15,9 +15,9 @@ tags:
   - video-reasoning
 status: snapshot — PDF 未转 HTML，待精读
 related:
-  - "[[SELAUR-Self-Evolving-LLM-Agent-Uncertainty-Rewards|SELAUR]]"
-  - "[[Agentic-RL-2026前沿综合分析|Agentic-RL 综合分析]]"
-  - "[[RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN Echo Trap]]"
+  - "[[AI/2-Agent/Agentic-RL/SELAUR-Self-Evolving-LLM-Agent-Uncertainty-Rewards|SELAUR]]"
+  - "[[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL 综合分析]]"
+  - "[[AI/2-Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN Echo Trap]]"
 ---
 
 # PyVision-RL: Forging Open Agentic Vision Models via RL
@@ -130,24 +130,24 @@ PDF: <https://arxiv.org/pdf/2602.20739>
 ## See Also
 
 **训练失败模式谱系（跨模态）**
-- [[RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN（Echo Trap 奠基，Northwestern+Stanford）]] — Echo Trap：文本 agent RL 训练崩溃三联征；Interaction Collapse 是其多模态版本，共同指向"RL 压力推动退化策略"根因
-- [[SELAUR-Self-Evolving-LLM-Agent-Uncertainty-Rewards|SELAUR（JHU+ASU，2602.21158）]] — 同样处理 RL 失败轨迹问题，但视角不同：SELAUR 从失败轨迹中提取 uncertainty reward（浅层），PyVision-RL 在训练时主动过滤退化轨迹（系统层）
+- [[AI/2-Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN（Echo Trap 奠基，Northwestern+Stanford）]] — Echo Trap：文本 agent RL 训练崩溃三联征；Interaction Collapse 是其多模态版本，共同指向"RL 压力推动退化策略"根因
+- [[AI/2-Agent/Agentic-RL/SELAUR-Self-Evolving-LLM-Agent-Uncertainty-Rewards|SELAUR（JHU+ASU，2602.21158）]] — 同样处理 RL 失败轨迹问题，但视角不同：SELAUR 从失败轨迹中提取 uncertainty reward（浅层），PyVision-RL 在训练时主动过滤退化轨迹（系统层）
 
 **多模态 RL 感知体系**
-- [[Multimodal-Perception-RL-综合分析|多模态感知 RL 综合分析]] — 四条多模态 RL 技术路线全景；Interaction Collapse 是感知之外的第五类问题（训练动态稳定性）
-- [[AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL（Anchor Token，视觉 credit assignment）]] — 多模态 credit assignment 角度，与 PyVision-RL 的 rollout filtering 正交：AT-RL 解决"哪些视觉 token 值得信用"，PyVision-RL 解决"哪些轨迹值得训练"
+- [[AI/3-LLM/MLLM/Multimodal-Perception-RL-综合分析|多模态感知 RL 综合分析]] — 四条多模态 RL 技术路线全景；Interaction Collapse 是感知之外的第五类问题（训练动态稳定性）
+- [[AI/3-LLM/RL/Other-Algorithms/AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL（Anchor Token，视觉 credit assignment）]] — 多模态 credit assignment 角度，与 PyVision-RL 的 rollout filtering 正交：AT-RL 解决"哪些视觉 token 值得信用"，PyVision-RL 解决"哪些轨迹值得训练"
 
 **Rollout 质量控制谱系**
-- [[TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（ICML 2026，TU Munich）]] — Trajectory Search Rollout：树搜索选优 rollout，与 Oversampling-Filtering-Ranking 同属"主动控制训练 rollout 质量"的思路，但 TSR 针对多轮任务搜索最优路径，PyVision-RL 针对多模态 agent 过滤退化轨迹
+- [[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（ICML 2026，TU Munich）]] — Trajectory Search Rollout：树搜索选优 rollout，与 Oversampling-Filtering-Ranking 同属"主动控制训练 rollout 质量"的思路，但 TSR 针对多轮任务搜索最优路径，PyVision-RL 针对多模态 agent 过滤退化轨迹
 
 **Reward 设计**
-- [[Search-R1-Reasoning-Search-Engine-RL|Search-R1（Action-level Penalty）]] — Search-R1++ 的 action penalty 惩罚不必要工具调用；Accumulative Tool Reward 奖励必要工具调用——两者一负一正，共同指向"维持 agentic 行为密度"
+- [[AI/2-Agent/Agentic-RL/Search-R1-Reasoning-Search-Engine-RL|Search-R1（Action-level Penalty）]] — Search-R1++ 的 action penalty 惩罚不必要工具调用；Accumulative Tool Reward 奖励必要工具调用——两者一负一正，共同指向"维持 agentic 行为密度"
 
 ---
 
 ## 推荐阅读
 
 1. [PyVision-RL 原文（arXiv:2602.20739）](https://arxiv.org/abs/2602.20739) — 精读待补
-2. [[RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN]] — Echo Trap 完整诊断与理论，Interaction Collapse 理解的理论前提
-3. [[Multimodal-Perception-RL-综合分析|多模态感知 RL 综合分析]] — 多模态 RL 训练的全景地图，PyVision-RL 的上下文背景
-4. [[Agentic-RL-2026前沿综合分析|Agentic-RL 综合分析 v10]] — Interaction Collapse 在 Agentic RL 训练失败模式谱系中的位置
+2. [[AI/2-Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN]] — Echo Trap 完整诊断与理论，Interaction Collapse 理解的理论前提
+3. [[AI/3-LLM/MLLM/Multimodal-Perception-RL-综合分析|多模态感知 RL 综合分析]] — 多模态 RL 训练的全景地图，PyVision-RL 的上下文背景
+4. [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL 综合分析 v10]] — Interaction Collapse 在 Agentic RL 训练失败模式谱系中的位置

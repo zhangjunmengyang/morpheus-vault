@@ -134,7 +134,7 @@ L_total = L_GRPO + λ · L_NLL
 
 ## See Also
 
-- [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — MEL 在 Sample Efficiency 维度的位置
-- [[MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 同在 Other-Algorithms，均为 policy optimization 改进
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 2026 全景]] — MEL 在 Sample Efficiency 维度的位置
+- [[AI/3-LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 同在 Other-Algorithms，均为 policy optimization 改进
 -  — LLM 强化学习全图谱
-- [[强化学习的数学原理|强化学习数学原理]] — MEL 的理论基础
+- [[AI/3-LLM/RL/Fundamentals/强化学习的数学原理|强化学习数学原理]] — MEL 的理论基础

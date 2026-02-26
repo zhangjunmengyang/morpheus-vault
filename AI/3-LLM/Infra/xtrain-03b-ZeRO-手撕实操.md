@@ -708,8 +708,8 @@ if __name__ == '__main__':
 - [[AI/3-LLM/Infra/Ray-分布式RL训练实操|Ray-分布式RL训练实操]] — verl 工程实践层（ZeRO 作为 actor 后端）
 
 **理论对应**
-- [[训练后端|verl 训练后端]] — ZeRO（FSDP）在 verl 中的工程集成
-- [[MA-RLHF-手撕实操-系列索引|MA-RLHF 手撕实操系列索引]] — ZeRO 在整个课程中的位置（lc9 分布式RL训练）
+- [[AI/3-LLM/Frameworks/verl/训练后端|verl 训练后端]] — ZeRO（FSDP）在 verl 中的工程集成
+- [[AI/3-LLM/Infra/MA-RLHF-手撕实操-系列索引|MA-RLHF 手撕实操系列索引]] — ZeRO 在整个课程中的位置（lc9 分布式RL训练）
 
 ## 推荐阅读
 

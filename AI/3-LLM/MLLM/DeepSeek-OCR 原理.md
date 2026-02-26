@@ -129,7 +129,7 @@ VLM-based OCR 的优势在「理解」而非「识别」。传统 OCR 在标准�
 
 ## 相关
 
-- [[DeepSeek-VL|DeepSeek-VL]] — 底层多模态架构
-- [[DeepSeek-OCR-Unsloth实践|DeepSeek-OCR Unsloth 实践]] — 微调实战
-- [[Qwen 2.5 VL-Unsloth训练|Qwen 2.5 VL 训练]] — 另一种 VLM OCR 方案
-- [[InternVL3|InternVL3]] — 对比方案
+- [[AI/3-LLM/MLLM/DeepSeek-VL|DeepSeek-VL]] — 底层多模态架构
+- [[AI/3-LLM/MLLM/DeepSeek-OCR-Unsloth实践|DeepSeek-OCR Unsloth 实践]] — 微调实战
+- [[AI/3-LLM/MLLM/Qwen 2.5 VL-Unsloth训练|Qwen 2.5 VL 训练]] — 另一种 VLM OCR 方案
+- [[AI/3-LLM/MLLM/InternVL3|InternVL3]] — 对比方案

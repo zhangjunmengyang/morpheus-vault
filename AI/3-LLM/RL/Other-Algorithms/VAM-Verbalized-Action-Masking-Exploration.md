@@ -180,5 +180,5 @@ VAM 属于 **Exploration 维度**，但与 DEEP-GRPO 正交：
 ## 元数据
 
 - **Tags**: #exploration #GRPO #action-masking #chess #RLVR
-- **关联笔记**: [[DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling]] [[GRPO-Improvement-Panorama-2026|GRPO-Improvement-Panorama-2026]] [[PACED-RL-Partition-Function-Difficulty-Scheduler|PACED-RL-Partition-Function-Difficulty-Scheduler]]
+- **关联笔记**: [[AI/3-LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling]] [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO-Improvement-Panorama-2026]] [[AI/3-LLM/RL/Other-Algorithms/PACED-RL-Partition-Function-Difficulty-Scheduler|PACED-RL-Partition-Function-Difficulty-Scheduler]]
 - **写于**: 2026-02-21

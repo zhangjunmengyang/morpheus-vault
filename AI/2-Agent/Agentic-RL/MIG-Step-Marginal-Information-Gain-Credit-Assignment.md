@@ -206,14 +206,14 @@ MIG 是谱系中**唯一基于内在信息量**（模型自身条件似然）的
 ## 九、推荐阅读
 
 - [arXiv:2602.01034](https://arxiv.org/abs/2602.01034) — 原文
-- [[GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — Anchor State Grouping（Credit Assignment 谱系对比）
+- [[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — Anchor State Grouping（Credit Assignment 谱系对比）
 - [[AI/2-Agent/Agentic-RL/AgentPRM-Process-Reward-Models-LLM-Agents|AgentPRM]] — MC rollout Q-value（绝对 Q vs 相对 advantage）
-- [[iStar-Implicit-Step-Rewards-Agentic-RL|iStar]] — unverifiable reward 场景下的 credit assignment
-- [[Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — Credit Assignment 全谱系综合
-- [[TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR]] — 训练时树搜索提升 rollout 质量（与 MIG dense reward 正交互补）
-- [[GRPO 深度理解|GRPO 深度理解]] — MIG 是 GRPO episode-level reward 的信息论升级版；MIG 验证对比基准即 GRPO
-- [[RICOL-Retrospective-In-Context-Online-Learning|RICOL（arXiv:2602.17497，NeurIPS 2025）]] — 同为 Credit Assignment 谱系的替代方案：RICOL 用 ICL 回顾估计 advantage，MIG 用信息论量化步骤贡献；方法论互为对照
-- [[CoT-Monitorability-Information-Theory|CoT Monitorability（arXiv:2602.18297，ICLR 2026）]] ⭐ — **信息论交叉**：MIG 量化 CoT 每步对正确答案的信息增益（RL训练视角）；CoT Monitorability 量化 CoT 对 misbehavior 的信息保留（安全监控视角）——同一问题"CoT 有多少信息"，一个从 RL 训练看，一个从安全监控看
+- [[AI/2-Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar]] — unverifiable reward 场景下的 credit assignment
+- [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — Credit Assignment 全谱系综合
+- [[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR]] — 训练时树搜索提升 rollout 质量（与 MIG dense reward 正交互补）
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — MIG 是 GRPO episode-level reward 的信息论升级版；MIG 验证对比基准即 GRPO
+- [[AI/3-LLM/RL/Other-Algorithms/RICOL-Retrospective-In-Context-Online-Learning|RICOL（arXiv:2602.17497，NeurIPS 2025）]] — 同为 Credit Assignment 谱系的替代方案：RICOL 用 ICL 回顾估计 advantage，MIG 用信息论量化步骤贡献；方法论互为对照
+- [[AI/5-AI 安全/CoT-Monitorability-Information-Theory|CoT Monitorability（arXiv:2602.18297，ICLR 2026）]] ⭐ — **信息论交叉**：MIG 量化 CoT 每步对正确答案的信息增益（RL训练视角）；CoT Monitorability 量化 CoT 对 misbehavior 的信息保留（安全监控视角）——同一问题"CoT 有多少信息"，一个从 RL 训练看，一个从安全监控看
 
 ---
 
@@ -227,6 +227,6 @@ MIG 是谱系中**唯一基于内在信息量**（模型自身条件似然）的
 > Credit assignment 本质上是在问：这一步让我们离答案更近了多少？MIG 用"对正确答案的条件似然增量"来量化"更近"，并用 watermark 防止反向操纵。这是一个从信息量角度定义"进展"的优雅方案——尽管有适用范围限制。
 
 ---
-**数学基础**：[[信息论|信息论]] — MIG 的"条件似然增量"本质是条件互信息增量 I(y*; CoT_k | CoT_{k-1})，数学根基在信息论笔记
+**数学基础**：[[AI/1-Foundations/Math/信息论|信息论]] — MIG 的"条件似然增量"本质是条件互信息增量 I(y*; CoT_k | CoT_{k-1})，数学根基在信息论笔记
 
 *Source: arXiv:2602.01034 | 写于 2026-02-23 | Agentic-RL Credit Assignment 系列*

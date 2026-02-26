@@ -16,9 +16,9 @@ sources:
   - "ZeRO-Offload: Democratizing Billion-Scale Model Training — arXiv:2101.06840"
   - https://github.com/microsoft/DeepSpeed
 related:
-  - "[[FSDP|FSDP]]"
-  - "[[Megatron-LM|Megatron-LM]]"
-  - "[[模型并行策略|模型并行策略]]"
+  - "[[AI/3-LLM/Infra/FSDP|FSDP]]"
+  - "[[AI/3-LLM/Infra/Megatron-LM|Megatron-LM]]"
+  - "[[AI/3-LLM/Infra/模型并行策略|模型并行策略]]"
 ---
 # DeepSpeed
 
@@ -57,7 +57,7 @@ ZeRO 的核心是分阶段消除冗余，每个阶段分片更多的内容：
 
 所有东西都分片。前向和反向传播时需要 All-Gather 收集完整参数，计算完再丢弃。通信量增加 50%，但显存降到极致。
 
-**等价于 [[FSDP]] 的 FULL_SHARD。**
+**等价于 [[AI/3-LLM/Infra/FSDP]] 的 FULL_SHARD。**
 
 > 来源：arXiv:1910.02054, Sec. 3.2 — ZeRO Stage 3 的通信量分析：相比 DDP 增加约 50%
 
@@ -216,7 +216,7 @@ accelerate launch --config_file accelerate_ds.yaml train.py
 
 ### 直接可用场景
 - **SFT/预训练加速**：ZeRO-2 + HuggingFace Trainer 一行配置即可启用
-- **RLHF 训练**：[[OpenRLHF|OpenRLHF]] 和 [[TRL 概述|TRL]] 均深度集成 DeepSpeed
+- **RLHF 训练**：[[AI/3-LLM/Frameworks/OpenRLHF/OpenRLHF|OpenRLHF]] 和 [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL]] 均深度集成 DeepSpeed
 - **单卡训大模型**：ZeRO-3 + CPU Offload 让 24GB 消费级 GPU 也能微调 7B 模型
 
 ### 工程实现要点
@@ -235,21 +235,21 @@ accelerate launch --config_file accelerate_ds.yaml train.py
 - 理解 ZeRO 的显存模型（参数 + 梯度 + 优化器 = $2P + 2P + 12P = 16P$ bytes for Adam FP16）是估算训练资源的基础
 
 ### 未解问题与局限
-- ZeRO-3 的通信频率（每层两次 AllGather）在超大规模集群上不如 [[Megatron-LM]] 的手动 TP 高效
+- ZeRO-3 的通信频率（每层两次 AllGather）在超大规模集群上不如 [[AI/3-LLM/Infra/Megatron-LM]] 的手动 TP 高效
 - CPU Offload 的 PCIe 带宽瓶颈（~32 GB/s）在 NVMe SSD 场景更严重
 
 ### 脑暴：如果往下延伸
 - ZeRO++ 的 hierarchical partitioning + quantized communication 能否让 ZeRO-3 在万卡集群上追平 Megatron？
-- 如果把 [[FSDP|FSDP2]] 的 DTensor + torch.compile 与 DeepSpeed 的 offload 结合，是否是最佳方案？
+- 如果把 [[AI/3-LLM/Infra/FSDP|FSDP2]] 的 DTensor + torch.compile 与 DeepSpeed 的 offload 结合，是否是最佳方案？
 
 ## 相关
 
-> 🔗 See also: [[FSDP]] — PyTorch 原生的 ZeRO-3 实现，与 DeepSpeed 直接对标
-> 🔗 See also: [[Megatron-LM]] — TP/PP 并行，与 ZeRO 互补（大规模集群常混用）
-> 🔗 See also: [[模型并行策略|模型并行策略]] — 从 DP 到 5D 并行的全景对比
+> 🔗 See also: [[AI/3-LLM/Infra/FSDP]] — PyTorch 原生的 ZeRO-3 实现，与 DeepSpeed 直接对标
+> 🔗 See also: [[AI/3-LLM/Infra/Megatron-LM]] — TP/PP 并行，与 ZeRO 互补（大规模集群常混用）
+> 🔗 See also: [[AI/3-LLM/Infra/模型并行策略|模型并行策略]] — 从 DP 到 5D 并行的全景对比
 
-- [[分布式训练]] — 分布式训练概览
-- [[Ray]] — 分布式计算框架
-- [[TRL 概述|TRL 概述]] — 集成 DeepSpeed 的训练框架
-- [[verl 概述|verl 概述]] — verl 对分布式训练的支持
-- [[OpenRLHF|OpenRLHF]]
+- [[AI/3-LLM/Infra/分布式训练]] — 分布式训练概览
+- [[AI/3-LLM/Infra/Ray]] — 分布式计算框架
+- [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL 概述]] — 集成 DeepSpeed 的训练框架
+- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]] — verl 对分布式训练的支持
+- [[AI/3-LLM/Frameworks/OpenRLHF/OpenRLHF|OpenRLHF]]

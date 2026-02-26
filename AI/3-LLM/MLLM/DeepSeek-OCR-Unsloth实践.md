@@ -174,8 +174,8 @@ print(response)
 
 ## 相关
 
-- [[DeepSeek-OCR 原理|DeepSeek-OCR 原理]] — 底层原理
-- [[DeepSeek-VL|DeepSeek-VL]] — 基座模型
-- [[Qwen 2.5 VL-Unsloth训练|Qwen 2.5 VL Unsloth 训练]] — 同类实践
-- [[训练示例概述|Unsloth 训练示例]] — Unsloth 通用指南
-- [[运行 & 保存模型|Unsloth 运行保存]]
+- [[AI/3-LLM/MLLM/DeepSeek-OCR 原理|DeepSeek-OCR 原理]] — 底层原理
+- [[AI/3-LLM/MLLM/DeepSeek-VL|DeepSeek-VL]] — 基座模型
+- [[AI/3-LLM/MLLM/Qwen 2.5 VL-Unsloth训练|Qwen 2.5 VL Unsloth 训练]] — 同类实践
+- [[AI/3-LLM/Frameworks/Unsloth/训练示例概述|Unsloth 训练示例]] — Unsloth 通用指南
+- [[AI/3-LLM/Frameworks/Unsloth/运行 & 保存模型|Unsloth 运行保存]]

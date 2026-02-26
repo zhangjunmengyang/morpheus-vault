@@ -422,7 +422,7 @@ else:
 
 ## See Also
 
-- [[Agent 生产实践|Agent 生产实践]] — 同方向互补笔记
-- [[Agent-Skills-Security|Agent Skills Security]] — 生产落地中的安全威胁
-- [[Agent-RL-训练实战指南|Agent RL 训练实战指南]] — 生产级 RL 训练的坑与解法
+- [[AI/2-Agent/Fundamentals/Agent 生产实践|Agent 生产实践]] — 同方向互补笔记
+- [[AI/2-Agent/Evaluation/Agent-Skills-Security|Agent Skills Security]] — 生产落地中的安全威胁
+- [[AI/2-Agent/Agentic-RL/Agent-RL-训练实战指南|Agent RL 训练实战指南]] — 生产级 RL 训练的坑与解法
 -  — Agent 知识全图谱

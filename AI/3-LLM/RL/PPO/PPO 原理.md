@@ -15,9 +15,9 @@ sources:
   - Trust Region Policy Optimization (TRPO) — arXiv:1502.05477
   - Training language models to follow instructions with human feedback (InstructGPT) — arXiv:2203.02155
 related:
-  - "[[GRPO 深度理解|GRPO 深度理解]]"
-  - "[[KL散度|KL散度]]"
-  - "[[策略梯度方法|策略梯度方法]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]"
+  - "[[AI/3-LLM/RL/Fundamentals/KL散度|KL散度]]"
+  - "[[AI/3-LLM/RL/Fundamentals/策略梯度方法|策略梯度方法]]"
 ---
 
 # PPO 原理
@@ -94,7 +94,7 @@ $$R_{\text{RLHF}}(s, a) = R_{\text{RM}}(s, a) - \beta \cdot D_{\text{KL}}(\pi_\t
 
 - $R_{\text{RM}}$：Reward Model 给出的奖励
 - $\beta$：KL 惩罚系数（通常 0.01-0.2）
-- [[KL散度|KL 散度]]惩罚防止模型偏离 SFT 基线太远（reward hacking）
+- [[AI/3-LLM/RL/Fundamentals/KL散度|KL 散度]]惩罚防止模型偏离 SFT 基线太远（reward hacking）
 
 ### PPO vs GRPO 的核心区别
 
@@ -137,7 +137,7 @@ $$R_{\text{RLHF}}(s, a) = R_{\text{RM}}(s, a) - \beta \cdot D_{\text{KL}}(\pi_\t
 ### 工程实现要点
 - **clip 范围 ε**：通常 0.1-0.2，太大训练不稳，太小收敛慢
 - **mini-batch 数量**：PPO 对一批 rollout 做多个 epoch 更新（通常 4 epochs），需要足够的 mini-batch 防止过拟合
-- **Generation + Training 资源分配**：verl 的 [[HybridFlow|HybridFlow]] 用 SPMD+MPMD 混合解决此问题
+- **Generation + Training 资源分配**：verl 的 [[AI/3-LLM/Frameworks/verl/HybridFlow|HybridFlow]] 用 SPMD+MPMD 混合解决此问题
 
 ### 面试高频问法
 - Q: PPO 的 clip 目标函数怎么理解？为什么不直接用 TRPO？
@@ -154,20 +154,20 @@ $$R_{\text{RLHF}}(s, a) = R_{\text{RM}}(s, a) - \beta \cdot D_{\text{KL}}(\pi_\t
 - PPO 在 LLM 场景下的 reward hacking 问题是否可以从根本上解决？
 
 ### 脑暴：如果往下延伸
-- [[GRPO 深度理解|GRPO]] 去掉 Critic 后用组内相对排名替代优势估计——这是否意味着 Critic 在 LLM 场景下本身就不必要？
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO]] 去掉 Critic 后用组内相对排名替代优势估计——这是否意味着 Critic 在 LLM 场景下本身就不必要？
 - 如果把 PPO 的 per-token credit assignment 和 GRPO 的 group comparison 结合，能否得到更好的方法？
 
 ## 相关
 
-> 🔗 See also: [[GRPO 深度理解|GRPO 深度理解]] — 无 Critic 的 PPO 替代方案
-> 🔗 See also: [[KL散度|KL散度]] — PPO 中 KL 惩罚的数学基础
-> 🔗 See also: [[策略梯度方法|策略梯度方法]] — PPO 的理论根基
+> 🔗 See also: [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — 无 Critic 的 PPO 替代方案
+> 🔗 See also: [[AI/3-LLM/RL/Fundamentals/KL散度|KL散度]] — PPO 中 KL 惩罚的数学基础
+> 🔗 See also: [[AI/3-LLM/RL/Fundamentals/策略梯度方法|策略梯度方法]] — PPO 的理论根基
 
-- [[DPO-TRL实践|DPO]] — 不需要 RL 的偏好优化方法
-- [[TRL 概述|TRL 概述]] — PPO/GRPO/DPO Trainer 实现
-- [[verl 概述|verl 概述]] — 高性能 RLHF 框架
-- [[OpenRLHF|OpenRLHF]] — 支持 PPO 的开源 RLHF 框架
-- [[DeepSeek-R1|DeepSeek-R1]] — 使用 GRPO 替代 PPO 的实例
+- [[AI/3-LLM/RL/DPO/DPO-TRL实践|DPO]] — 不需要 RL 的偏好优化方法
+- [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL 概述]] — PPO/GRPO/DPO Trainer 实现
+- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]] — 高性能 RLHF 框架
+- [[AI/3-LLM/Frameworks/OpenRLHF/OpenRLHF|OpenRLHF]] — 支持 PPO 的开源 RLHF 框架
+- [[AI/3-LLM/Architecture/DeepSeek-R1|DeepSeek-R1]] — 使用 GRPO 替代 PPO 的实例
 - [[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操（MA-RLHF）]] — **代码路径**：从零实现 PPO actor-critic，含 GAE/clip/KL 惩罚完整代码注解 ⭐⭐⭐⭐⭐
 - [[AI/3-LLM/RL/PPO/RLHF-PPO-完整Pytorch实现|RLHF-PPO 完整 Pytorch 实现]] — **端到端 56-cell Notebook**：四模型架构 + GAE + KL 约束完整链路，配合手撕实操查工程细节 ⭐⭐⭐⭐⭐
 - [[AI/3-LLM/RL/PPO/LLaMA2-Reward-Model实现|LLaMA2 Reward Model 实现]] — **RM 工程**：Bradley-Terry Loss + LLaMA2 RM Head，RLHF 第一步的代码参考
@@ -176,5 +176,5 @@ $$R_{\text{RLHF}}(s, a) = R_{\text{RM}}(s, a) - \beta \cdot D_{\text{KL}}(\pi_\t
 - [[AI/3-LLM/RL/PPO/O1-PRM搜索完整实现|O1-PRM 搜索完整实现]] — **MCTS Notebook**：UCT + 树回溯 + PRM 打分完整 MCTS 实现
 
 > 🤖 **PPO 在 Agent 场景的变体**（Critic-free 化方向）：
-> - [[LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL|LOOP（Apple Research）]] — Leave-One-Out PPO：去掉 Critic（单倍 LLM 显存），用同组其他 rollout 的 outcome 估计 baseline；长 horizon IDA 任务；32B 超 o1 +9pp
-> - [[SCoRe-Self-Correction-via-Reinforcement-Learning|SCoRe（DeepMind）]] — 双阶段 PPO 训练 multi-turn 自我纠错：Phase 1 KL 约束初始化 + Phase 2 reward bonus；PPO 用于 behavior collapse 防护
+> - [[AI/2-Agent/Agentic-RL/LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL|LOOP（Apple Research）]] — Leave-One-Out PPO：去掉 Critic（单倍 LLM 显存），用同组其他 rollout 的 outcome 估计 baseline；长 horizon IDA 任务；32B 超 o1 +9pp
+> - [[AI/2-Agent/Agentic-RL/SCoRe-Self-Correction-via-Reinforcement-Learning|SCoRe（DeepMind）]] — 双阶段 PPO 训练 multi-turn 自我纠错：Phase 1 KL 约束初始化 + Phase 2 reward bonus；PPO 用于 behavior collapse 防护

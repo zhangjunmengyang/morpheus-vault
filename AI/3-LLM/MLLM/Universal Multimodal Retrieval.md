@@ -118,6 +118,6 @@ Universal Multimodal Retrieval 是 RAG 系统的下一步演进。当前大多�
 
 ## 相关
 
-- [[DeepSeek-VL|DeepSeek-VL]] — 可用作 retrieval backbone 的 MLLM
-- [[InternVL3|InternVL3]] — 强力视觉编码器
-- [[Synthetic Data|Synthetic Data]] — 检索训练数据合成
+- [[AI/3-LLM/MLLM/DeepSeek-VL|DeepSeek-VL]] — 可用作 retrieval backbone 的 MLLM
+- [[AI/3-LLM/MLLM/InternVL3|InternVL3]] — 强力视觉编码器
+- [[AI/3-LLM/Application/Synthetic-Data/Synthetic Data|Synthetic Data]] — 检索训练数据合成

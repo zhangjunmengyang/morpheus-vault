@@ -193,9 +193,9 @@ $$\text{如果这个 batch 是 benign} \Rightarrow \text{松开 KL，自由学�
 
 ## See Also
 
-- [[MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — 同样是 adaptive, model-aware 训练策略：MARS 按 reward margin 分配增强 budget，本文按 harmful intent score 分配 KL 强度；共同思想：model-aware 资源分配
-- [[RLRR-Reference-Guided-Alignment-Non-Verifiable|RLRR]] — 对齐的另一个维度：RLRR 解决 non-verifiable 对齐，本文解决 fine-tuning 对对齐的破坏；互补形成安全对齐双线
+- [[AI/3-LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — 同样是 adaptive, model-aware 训练策略：MARS 按 reward margin 分配增强 budget，本文按 harmful intent score 分配 KL 强度；共同思想：model-aware 资源分配
+- [[AI/3-LLM/RL/Theory/RLRR-Reference-Guided-Alignment-Non-Verifiable|RLRR]] — 对齐的另一个维度：RLRR 解决 non-verifiable 对齐，本文解决 fine-tuning 对对齐的破坏；互补形成安全对齐双线
 - [[AI安全与对齐-2026技术全景|AI 安全与对齐 2026 全景]] — 有害微调攻击在安全全景中的位置
 -  — AI 安全知识图谱
 -  — KL 正则、trust region 在 RL 训练中的理论基础
-- [[PI-Landscape-SoK-Prompt-Injection-Taxonomy-Defense|PI-Landscape SoK]] — 防御不可能三角的跨域印证：SoK 发现 agent 防御无法同时达到高可信+高可用+低延迟；本文发现 fine-tuning 防御无法同时达到 safety+utility+adaptability——两个方向的结构性权衡收敛到同一哲学
+- [[AI/5-AI 安全/PI-Landscape-SoK-Prompt-Injection-Taxonomy-Defense|PI-Landscape SoK]] — 防御不可能三角的跨域印证：SoK 发现 agent 防御无法同时达到高可信+高可用+低延迟；本文发现 fine-tuning 防御无法同时达到 safety+utility+adaptability——两个方向的结构性权衡收敛到同一哲学

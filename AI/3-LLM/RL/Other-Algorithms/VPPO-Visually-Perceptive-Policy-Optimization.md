@@ -155,7 +155,7 @@ $\mathcal{S}(s_t, I) = D_{\text{KL}}(\pi_\theta(\cdot|s_t, I) \| \pi_\theta(\cdo
 
 ### 4.3 与 AT-RL 的对比
 
-Vault 已有 [[AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal]]——那篇工作也是识别"关键 token"然后集中学习。对比：
+Vault 已有 [[AI/3-LLM/RL/Other-Algorithms/AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal]]——那篇工作也是识别"关键 token"然后集中学习。对比：
 
 | 维度 | AT-RL | VPPO |
 |------|-------|------|
@@ -196,9 +196,9 @@ graph TD
     C --> C1[关键问题：reward 设计<br>不解决 token 级粒度问题]
 ```
 
-- **[[AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL（Anchor Token RL）]]** — 同样做 token-level 掩码，但基于熵而非视觉依赖度；VPPO 是专门的多模态扩展
+- **[[AI/3-LLM/RL/Other-Algorithms/AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL（Anchor Token RL）]]** — 同样做 token-level 掩码，但基于熵而非视觉依赖度；VPPO 是专门的多模态扩展
 - **[[AI/3-LLM/RL/GRPO/GRPO-Improvement-Panorama-2026|GRPO Improvement Panorama]]** — VPPO 是 GRPO 的多模态特化改进，填补 Perception 维度
-- **[[Tree-GRPO-Tree-Search-LLM-Agent-RL|Tree-GRPO（ICLR 2026）]]** — Tree-GRPO 从 rollout 结构解决 credit assignment；VPPO 从 token 粒度解决 perception credit；两者都在解决 GRPO 的信号粒度问题，正交可组合
+- **[[AI/2-Agent/Agentic-RL/Tree-GRPO-Tree-Search-LLM-Agent-RL|Tree-GRPO（ICLR 2026）]]** — Tree-GRPO 从 rollout 结构解决 credit assignment；VPPO 从 token 粒度解决 perception credit；两者都在解决 GRPO 的信号粒度问题，正交可组合
 
 ---
 
@@ -248,9 +248,9 @@ VPPO 指向了一个更大的问题：**多模态 LLM 的训练信号设计完�
 
 1. **原始论文**：[arXiv:2510.09285](https://arxiv.org/abs/2510.09285) — VPPO 全文
 2. **代码仓库**：[github.com/huaixuheqing/VPPO-RL](https://github.com/huaixuheqing/VPPO-RL)
-3. **对比阅读**：[[AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL]] — 文本域的 anchor token 方法
+3. **对比阅读**：[[AI/3-LLM/RL/Other-Algorithms/AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL]] — 文本域的 anchor token 方法
 4. **背景理解**：[[AI/3-LLM/RL/GRPO/GRPO-Improvement-Panorama-2026|GRPO Improvement Panorama]] — GRPO 改进全景，VPPO 补充 Perception 维度
 5. **Survey 位置**：Agentic RL Survey (2509.02547) §3.6 Perception — VPPO 是该章节的代表工作
-6. **互补解法**：[[Perception-R1-Visual-Perception-Reward-RLVR|Perception-R1]] — 显式感知 Reward 解法（路线 B）；VPPO 修 token 梯度（路线 C），两者正交可组合
-7. **综合视角**：[[Multimodal-Perception-RL-综合分析|多模态感知 RL 综合分析]] — 四路线全景，VPPO 是路线 C 代表
-8. **元原则**：[[RL-Signal-Granularity-Causal-Structure-Principle|RL 信号粒度与因果结构匹配原则]] — VPPO 是路径3（修改 Gradient 流）的实现，与 Tree-GRPO/GiGPO/Perception-R1 共同印证该原则
+6. **互补解法**：[[AI/3-LLM/MLLM/Perception-R1-Visual-Perception-Reward-RLVR|Perception-R1]] — 显式感知 Reward 解法（路线 B）；VPPO 修 token 梯度（路线 C），两者正交可组合
+7. **综合视角**：[[AI/3-LLM/MLLM/Multimodal-Perception-RL-综合分析|多模态感知 RL 综合分析]] — 四路线全景，VPPO 是路线 C 代表
+8. **元原则**：[[AI/3-LLM/RL/Theory/RL-Signal-Granularity-Causal-Structure-Principle|RL 信号粒度与因果结构匹配原则]] — VPPO 是路径3（修改 Gradient 流）的实现，与 Tree-GRPO/GiGPO/Perception-R1 共同印证该原则

@@ -16,9 +16,9 @@ created: 2026-02-20
 authors: Lakshya A Agrawal et al.
 affiliation: UC Berkeley + Stanford + Databricks + MIT
 see-also:
-  - "[[E-SPL-Evolutionary-System-Prompt-Learning]]"
-  - "[[Calibrate-Then-Act-Cost-Aware-Exploration]]"
-  - "[[RLVR-Edge-of-Competence]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/E-SPL-Evolutionary-System-Prompt-Learning]]"
+  - "[[AI/2-Agent/Agentic-RL/Calibrate-Then-Act-Cost-Aware-Exploration]]"
+  - "[[AI/3-LLM/RL/Theory/RLVR-Edge-of-Competence]]"
 ---
 
 # GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning
@@ -208,9 +208,9 @@ E-SPL 的 Evolution-only 条件就是 GEPA 的简化版（E-SPL 论文明确提�
 
 ## 相关论文
 
-- [[E-SPL-Evolutionary-System-Prompt-Learning|E-SPL]] (arXiv:2602.14697) — 在 GEPA 基础上加上 RL weight update，联合优化；E-SPL 论文明确说「our EA is very similar to GEPA」
-- [[Calibrate-Then-Act-Cost-Aware-Exploration|Calibrate-Then-Act]] (arXiv:2602.16699) — 显式先验注入，探索策略不能从 RL 自动涌现；与 GEPA 结论三角互证
-- [[RLVR-Edge-of-Competence|RLVR Edge of Competence]] — RL 在能力边界附近才有效；GEPA 补充了"软边界内 language 更优"的视角
+- [[AI/3-LLM/RL/Other-Algorithms/E-SPL-Evolutionary-System-Prompt-Learning|E-SPL]] (arXiv:2602.14697) — 在 GEPA 基础上加上 RL weight update，联合优化；E-SPL 论文明确说「our EA is very similar to GEPA」
+- [[AI/2-Agent/Agentic-RL/Calibrate-Then-Act-Cost-Aware-Exploration|Calibrate-Then-Act]] (arXiv:2602.16699) — 显式先验注入，探索策略不能从 RL 自动涌现；与 GEPA 结论三角互证
+- [[AI/3-LLM/RL/Theory/RLVR-Edge-of-Competence|RLVR Edge of Competence]] — RL 在能力边界附近才有效；GEPA 补充了"软边界内 language 更优"的视角
 - **MIPROv2** — Instruction + few-shot 联合优化，GEPA 的主要 baseline
 - **TextGrad** — 基于文本 gradient 的 prompt 优化
 - **FunSearch/AlphaEvolve** — 代码层面的演化搜索，同类思路不同对象

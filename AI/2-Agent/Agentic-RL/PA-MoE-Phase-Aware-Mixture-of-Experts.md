@@ -210,5 +210,5 @@ L_total = L_RL + L_div + L_bal + L_switch
 ## 元数据
 
 - **Tags**: #Agentic-RL #MoE #LoRA #credit-assignment #routing-granularity
-- **关联笔记**: [[HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment]] [[Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks-RL-Task-Difficulty-Curriculum]] [[GRPO-Improvement-Panorama-2026|GRPO-Improvement-Panorama-2026]]
+- **关联笔记**: [[AI/2-Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment]] [[AI/3-LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks-RL-Task-Difficulty-Curriculum]] [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO-Improvement-Panorama-2026]]
 - **写于**: 2026-02-20

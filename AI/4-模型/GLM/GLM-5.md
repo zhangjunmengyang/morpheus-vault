@@ -223,7 +223,7 @@ Base Model → SFT → Reasoning RL → Agentic RL → General RL
 
 - **DSA**: 继承自 DeepSeek-V3.2，GLM-5 是首个在 744B MoE 上落地的公开报告
 - **MLA**: 继承自 DeepSeek-V2/V3，Muon Split 是 GLM-5 的增量改进
-- **Slime 框架**: [[Slime-RL-Framework]] — GLM 系列专用异步 RL infra
+- **Slime 框架**: [[AI/3-LLM/RL/Frameworks/Slime-RL-Framework]] — GLM 系列专用异步 RL infra
 - **Sequential RL**: 与 InstructGPT 的 RLHF pipeline 精神类似，但扩展到三阶段
 
 ---
@@ -239,10 +239,10 @@ Base Model → SFT → Reasoning RL → Agentic RL → General RL
 
 ## 相关笔记
 
-- [[Slime-RL-Framework]] — 智谱异步 RL 框架
-- [[GRPO 深度理解|GRPO]] — GLM-5 使用的 RL 算法族
+- [[AI/3-LLM/RL/Frameworks/Slime-RL-Framework]] — 智谱异步 RL 框架
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO]] — GLM-5 使用的 RL 算法族
 - [[2026年2月模型潮（这篇毫无价值，哪怕梳理个从 deepseek R1 以来的时间线都比这强）]] — 竞争背景
-- [[ICLR-2026-趋势分析]] — 学术趋势背景
+- [[AI/3-LLM/Evaluation/ICLR-2026-趋势分析]] — 学术趋势背景
 
 ---
 

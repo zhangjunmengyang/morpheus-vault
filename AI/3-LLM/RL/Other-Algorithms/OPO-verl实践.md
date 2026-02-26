@@ -86,10 +86,10 @@ OPO 是 DPO 的自然进化 — 解决了 DPO 最大的问题（离线数据分�
 
 ## 相关
 
-- [[DPO-Unsloth实践|DPO Unsloth 实践]] — 离线版
-- [[GRPO-verl实践|GRPO verl 实践]] — function reward 方案
-- [[SPPO-verl实践|SPPO verl 实践]]
-- [[实现其他 RL 方法|verl 实现其他 RL 方法]]
-- [[GRPO 深度理解|GRPO 深度理解]]
-- [[PPO 原理|PPO 原理]]
-- [[verl 概述|verl 概述]]
+- [[AI/3-LLM/RL/DPO/DPO-Unsloth实践|DPO Unsloth 实践]] — 离线版
+- [[AI/3-LLM/RL/GRPO/GRPO-verl实践|GRPO verl 实践]] — function reward 方案
+- [[AI/3-LLM/RL/Other-Algorithms/SPPO-verl实践|SPPO verl 实践]]
+- [[AI/3-LLM/Frameworks/verl/实现其他 RL 方法|verl 实现其他 RL 方法]]
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]]

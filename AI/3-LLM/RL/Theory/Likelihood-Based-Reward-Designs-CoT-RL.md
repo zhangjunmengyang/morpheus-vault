@@ -27,11 +27,11 @@ status: active
 
 ## See Also
 
-- [[Rationale-Consistency-GenRM-Deceptive-Alignment|Rationale Consistency]] — reward model 的推理质量问题；本文是 reward 信号的密度/通用性问题——两者都在问"如何让 reward signal 更好"，角度互补（RC=判断质量，本文=信号设计）
-- [[RLVR-Edge-of-Competence|RLVR Edge of Competence]] — RLVR 的能力边界理论；本文的 non-verifiable 分析与该理论直接对话：边界附近的问题恰好是 binary reward 最稀疏的区域
-- [[PACED-RL-Partition-Function-Difficulty-Scheduler|PACED-RL]] — GFlowNet + difficulty scheduler；本文的 log-prob reward 与 partition function 有数学联系（JEPO 的 log-mean-exp 结构与 GFlowNet 目标函数同构）
-- [[GRPO-Improvement-Panorama-2026|GRPO全景]] — 本文使用 RLOO（GRPO 的无偏版本）作为 optimizer；log-prob reward 是对 GRPO 七维框架中 Token 维度问题的新解法
-- [[RLRR-Reference-Guided-Alignment-Non-Verifiable|RLRR]] — 同样针对 non-verifiable 场景：RLRR 用高质量 reference + RefEval judge 造软 verifier；本文用 log-prob 完全绕过 verifier——两者是 non-verifiable reward 问题的两条路径（RLRR=构造verifier，本文=绕过verifier）
+- [[AI/3-LLM/RL/Theory/Rationale-Consistency-GenRM-Deceptive-Alignment|Rationale Consistency]] — reward model 的推理质量问题；本文是 reward 信号的密度/通用性问题——两者都在问"如何让 reward signal 更好"，角度互补（RC=判断质量，本文=信号设计）
+- [[AI/3-LLM/RL/Theory/RLVR-Edge-of-Competence|RLVR Edge of Competence]] — RLVR 的能力边界理论；本文的 non-verifiable 分析与该理论直接对话：边界附近的问题恰好是 binary reward 最稀疏的区域
+- [[AI/3-LLM/RL/Other-Algorithms/PACED-RL-Partition-Function-Difficulty-Scheduler|PACED-RL]] — GFlowNet + difficulty scheduler；本文的 log-prob reward 与 partition function 有数学联系（JEPO 的 log-mean-exp 结构与 GFlowNet 目标函数同构）
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO全景]] — 本文使用 RLOO（GRPO 的无偏版本）作为 optimizer；log-prob reward 是对 GRPO 七维框架中 Token 维度问题的新解法
+- [[AI/3-LLM/RL/Theory/RLRR-Reference-Guided-Alignment-Non-Verifiable|RLRR]] — 同样针对 non-verifiable 场景：RLRR 用高质量 reference + RefEval judge 造软 verifier；本文用 log-prob 完全绕过 verifier——两者是 non-verifiable reward 问题的两条路径（RLRR=构造verifier，本文=绕过verifier）
 
 ---
 

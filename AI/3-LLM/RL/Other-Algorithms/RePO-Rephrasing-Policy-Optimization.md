@@ -150,7 +150,7 @@ RePO 蒸馏：teacher 给解题路径，student 先理解再改写，然后从�
 
 ## See Also
 
-- [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — RePO 在 Diversity 维度（与 ProGRPO 共同构成该维度）
-- [[ProGRPO-Probabilistic-Advantage-Reweighting|ProGRPO]] — 同在 Diversity 维度，两者互补：RePO 改输入多样性，ProGRPO 改权重分布
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 2026 全景]] — RePO 在 Diversity 维度（与 ProGRPO 共同构成该维度）
+- [[AI/3-LLM/RL/GRPO/ProGRPO-Probabilistic-Advantage-Reweighting|ProGRPO]] — 同在 Diversity 维度，两者互补：RePO 改输入多样性，ProGRPO 改权重分布
 -  — LLM 强化学习全图谱
-- [[MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — 多样性视角：RePO 在 response 层增多样性，MARS 在 reward 层聚焦低 margin
+- [[AI/3-LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — 多样性视角：RePO 在 response 层增多样性，MARS 在 reward 层聚焦低 margin

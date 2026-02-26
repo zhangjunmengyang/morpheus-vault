@@ -99,12 +99,12 @@ verl 默认是 on-policy 流程（rollout → reward → update）。但也支�
 # 用 importance sampling ratio 修正分布偏移
 ```
 
-参见 [[Off Policy 异步训练器|Off Policy 异步训练器]]
+参见 [[AI/3-LLM/Frameworks/verl/Off Policy 异步训练器|Off Policy 异步训练器]]
 
 ## 相关
 
-- [[为什么 PPO 优于 PG|为什么 PPO 优于 PG]] — PPO 的设计动机
-- [[GRPO-verl实践|GRPO-verl实践]] — GRPO 在 verl 中的使用
-- [[DPO-Unsloth实践|DPO-Unsloth实践]] — Off-policy 的 DPO
-- [[DAPO-verl实践|DAPO-verl实践]] — DAPO 变体
-- [[Off Policy 异步训练器|Off Policy 异步训练器]] — verl 的 off-policy 支持
+- [[AI/3-LLM/RL/Fundamentals/为什么 PPO 优于 PG|为什么 PPO 优于 PG]] — PPO 的设计动机
+- [[AI/3-LLM/RL/GRPO/GRPO-verl实践|GRPO-verl实践]] — GRPO 在 verl 中的使用
+- [[AI/3-LLM/RL/DPO/DPO-Unsloth实践|DPO-Unsloth实践]] — Off-policy 的 DPO
+- [[AI/3-LLM/RL/DAPO/DAPO-verl实践|DAPO-verl实践]] — DAPO 变体
+- [[AI/3-LLM/Frameworks/verl/Off Policy 异步训练器|Off Policy 异步训练器]] — verl 的 off-policy 支持

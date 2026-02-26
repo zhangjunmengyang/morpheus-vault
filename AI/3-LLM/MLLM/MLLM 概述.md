@@ -16,10 +16,10 @@ sources:
   - "Dai et al. 'InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning' arXiv:2305.06500"
   - "Zhang et al. 'MM-LLMs: Recent Advances in MultiModal Large Language Models' arXiv:2312.16602"
 related:
-  - "[[多模态 LLM 架构]]"
-  - "[[CLIP|CLIP]]"
-  - "[[BLIP-2|BLIP-2]]"
-  - "[[InternVL3|InternVL3]]"
+  - "[[AI/3-LLM/MLLM/多模态 LLM 架构]]"
+  - "[[AI/3-LLM/MLLM/CLIP|CLIP]]"
+  - "[[AI/3-LLM/MLLM/BLIP-2|BLIP-2]]"
+  - "[[AI/3-LLM/MLLM/InternVL3|InternVL3]]"
   - "[[AI/CV/ViT|ViT]]"
 ---
 
@@ -114,7 +114,7 @@ flowchart TD
 
 $$\mathcal{L} = -\sum_{t=1}^{T} \log P(x_t | P_X, F_T, x_{<t})$$
 
-实现方式（参见 [[多模态 LLM 架构|多模态 LLM 架构]] 的 Projector 对比）：
+实现方式（参见 [[AI/3-LLM/MLLM/多模态 LLM 架构|多模态 LLM 架构]] 的 Projector 对比）：
 - **MLP**（2 层）：最简单有效，2025 年主流选择（LLaVA-1.5+, InternVL）
 - **Cross-Attention**：可学习 query 压缩特征到固定长度
 - **Q-Former**（InstructBLIP, arXiv:2305.06500）：32 个可学习 queries 提取视觉表示
@@ -195,15 +195,15 @@ PEFT 方法（Prefix-tuning、Adapter、LoRA）可以在 <0.1% 参数下实现�
 
 ### 脑暴：如果往下延伸
 - MLLM + [[RAG-2026-技术全景|RAG]] = 多模态 RAG，是 2025-2026 的热门方向
-- 结合 [[多模态 LLM 架构|多模态 LLM 架构]] 理解不同 Projector 设计的 trade-off
+- 结合 [[AI/3-LLM/MLLM/多模态 LLM 架构|多模态 LLM 架构]] 理解不同 Projector 设计的 trade-off
 - 6 个月后 Any-to-Any 模型（文字→图→视频→音频的统一生成）可能进入实用阶段
 
 ## 相关
 
-- [[多模态 LLM 架构]] — 架构细节深入，Projector 对比
-- [[CLIP|CLIP]] — 多模态对齐的基石
-- [[BLIP-2|BLIP-2]] — Q-Former 的原始设计
-- [[Qwen-VL|Qwen-VL]] — 中文 MLLM 的代表
-- [[InternVL3|InternVL3]] — 最强开源 MLLM
-- [[DeepSeek-VL|DeepSeek-VL]] — DeepSeek 的多模态版本
+- [[AI/3-LLM/MLLM/多模态 LLM 架构]] — 架构细节深入，Projector 对比
+- [[AI/3-LLM/MLLM/CLIP|CLIP]] — 多模态对齐的基石
+- [[AI/3-LLM/MLLM/BLIP-2|BLIP-2]] — Q-Former 的原始设计
+- [[AI/3-LLM/MLLM/Qwen-VL|Qwen-VL]] — 中文 MLLM 的代表
+- [[AI/3-LLM/MLLM/InternVL3|InternVL3]] — 最强开源 MLLM
+- [[AI/3-LLM/MLLM/DeepSeek-VL|DeepSeek-VL]] — DeepSeek 的多模态版本
 - [[AI/CV/ViT|ViT]] — 视觉编码器基础

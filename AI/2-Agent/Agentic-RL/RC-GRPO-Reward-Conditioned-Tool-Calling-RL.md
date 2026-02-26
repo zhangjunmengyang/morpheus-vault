@@ -147,9 +147,9 @@ RC-GRPO 是从 **group diversity** 角度解决的，与其他方法正交，可
 ## 推荐阅读
 
 - 原论文：[arXiv:2602.03025](https://arxiv.org/abs/2602.03025)
-- [[ASTRA-Automated-Tool-Agent-Training|ASTRA]] — RC-GRPO 解决的是 ASTRA RL 阶段 GRPO 崩塌问题，可直接插入 ASTRA 训练框架
-- DEEP-GRPO（另一种 exploration 方案）：[[DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]]
-- IntroLLM（温度策略驱动探索）：[[IntroLLM-Introspective-Temperature-Policy-Hierarchical-RL|IntroLLM]]
-- VAM（动作空间裁剪探索）：[[VAM-Verbalized-Action-Masking-Exploration|VAM]]
-- 专题：[[Tool-Use-RL-训练专题|Tool-Use-RL 训练专题]] | [[AI/3-LLM/RL/GRPO/GRPO-Improvement-Panorama-2026|GRPO Improvement Panorama]]
-- **行为坍缩防御**：[[SCoRe-Self-Correction-via-Reinforcement-Learning|SCoRe（NeurIPS 2024）]] — 同样处理 multi-turn sparse reward 同质化，RC-GRPO 用 conditioning token，SCoRe 用 reward bonus + KL 约束，路线互补
+- [[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training|ASTRA]] — RC-GRPO 解决的是 ASTRA RL 阶段 GRPO 崩塌问题，可直接插入 ASTRA 训练框架
+- DEEP-GRPO（另一种 exploration 方案）：[[AI/3-LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]]
+- IntroLLM（温度策略驱动探索）：[[AI/3-LLM/RL/Other-Algorithms/IntroLLM-Introspective-Temperature-Policy-Hierarchical-RL|IntroLLM]]
+- VAM（动作空间裁剪探索）：[[AI/3-LLM/RL/Other-Algorithms/VAM-Verbalized-Action-Masking-Exploration|VAM]]
+- 专题：[[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL 训练专题]] | [[AI/3-LLM/RL/GRPO/GRPO-Improvement-Panorama-2026|GRPO Improvement Panorama]]
+- **行为坍缩防御**：[[AI/2-Agent/Agentic-RL/SCoRe-Self-Correction-via-Reinforcement-Learning|SCoRe（NeurIPS 2024）]] — 同样处理 multi-turn sparse reward 同质化，RC-GRPO 用 conditioning token，SCoRe 用 reward bonus + KL 约束，路线互补

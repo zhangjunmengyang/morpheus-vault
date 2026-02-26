@@ -213,8 +213,8 @@ DeepSeek R1 论文代表了语言模型开发中的一个重要里程碑。组�
 
 ## 相关
 
-- [[GRPO 深度理解|GRPO 深度理解]]
-- [[PPO 原理|PPO 原理]]
-- [[DeepSeek-R1|DeepSeek-R1]]
-- [[verl 概述|verl 概述]]
-- [[DeepSeek-Math|DeepSeek-Math]]
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/3-LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]
+- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]]
+- [[AI/3-LLM/RL/GRPO/DeepSeek-Math|DeepSeek-Math]]

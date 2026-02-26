@@ -18,11 +18,11 @@ sources:
   - "WizardLM: Empowering Large Language Models to Follow Complex Instructions arXiv:2304.12244"
   - NEFTune arXiv:2310.05914 (Jain et al., 2023)
 related:
-  - "[[DPO-TRL实践|DPO]]"
-  - "[[GRPO 深度理解|GRPO]]"
-  - "[[PPO 原理|PPO]]"
-  - "[[TRL 概述|TRL]]"
-  - "[[LoRA|LoRA]]"
+  - "[[AI/3-LLM/RL/DPO/DPO-TRL实践|DPO]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO]]"
+  - "[[AI/3-LLM/RL/PPO/PPO 原理|PPO]]"
+  - "[[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL]]"
+  - "[[AI/3-LLM/SFT/LoRA|LoRA]]"
   - "[[RLHF-DPO-2026-技术全景|RLHF-DPO 全景]]"
   - "[[LLM-预训练与分布式训练-2026-全景|预训练与分布式训练]]"
 ---
@@ -177,7 +177,7 @@ LIMA（Less Is More for Alignment）是 SFT 领域最重要的实证研究之一
 └── 无噪声：没有矛盾、错误、或低质量回复
 ```
 
-> 🔗 See also: [[LoRA|LoRA]] — 参数高效微调，SFT 数据量少时 LoRA 是首选
+> 🔗 See also: [[AI/3-LLM/SFT/LoRA|LoRA]] — 参数高效微调，SFT 数据量少时 LoRA 是首选
 
 ---
 
@@ -277,7 +277,7 @@ def neftune_forward(model, input_ids, noise_alpha=5):
 | LoRA | 高效、不易过拟合 | 效果略逊 | 数据量少（<10K）、资源有限 |
 | QLoRA | 极致省显存 | 速度较慢 | 单卡微调大模型 |
 
-> 🔗 See also: [[LoRA|LoRA]] — 参数高效微调的详细原理
+> 🔗 See also: [[AI/3-LLM/SFT/LoRA|LoRA]] — 参数高效微调的详细原理
 
 ---
 
@@ -379,10 +379,10 @@ LIMA 的"表面对齐假说"进一步说明：**对齐不是一个知识问题�
 - **SFT 数据能否全自动生成？**：Self-Instruct → Evol-Instruct → 未来是否可以完全闭环，人类只做最终质量把关？
 
 > 🔗 See also:
-> - [[DPO-TRL实践|DPO]] — SFT 之后的对齐方法，比 PPO 更简单
-> - [[GRPO 深度理解|GRPO]] — DeepSeek 的 RL 方法，SFT 模型是起点
-> - [[PPO 原理|PPO]] — InstructGPT 使用的经典 RL 算法
-> - [[TRL 概述|TRL]] — HuggingFace 的训练框架，支持 SFT+DPO+PPO 全流程
+> - [[AI/3-LLM/RL/DPO/DPO-TRL实践|DPO]] — SFT 之后的对齐方法，比 PPO 更简单
+> - [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO]] — DeepSeek 的 RL 方法，SFT 模型是起点
+> - [[AI/3-LLM/RL/PPO/PPO 原理|PPO]] — InstructGPT 使用的经典 RL 算法
+> - [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL]] — HuggingFace 的训练框架，支持 SFT+DPO+PPO 全流程
 
 ---
 
@@ -406,4 +406,4 @@ LIMA 的"表面对齐假说"进一步说明：**对齐不是一个知识问题�
 
 ### 代码手撕（理论 → 代码）
 - [[AI/3-LLM/SFT/SFT-手撕实操|SFT-手撕实操]] — **必看**：从零实现 SFT 训练循环（数据格式化/loss mask/LoRA 集成），MA-RLHF 项目配套 ⭐⭐⭐⭐⭐
-- [[MA-RLHF-手撕实操-系列索引|MA-RLHF 手撕实操系列索引]] — SFT → PPO → GRPO → DPO 完整对齐链路代码总索引
+- [[AI/3-LLM/Infra/MA-RLHF-手撕实操-系列索引|MA-RLHF 手撕实操系列索引]] — SFT → PPO → GRPO → DPO 完整对齐链路代码总索引

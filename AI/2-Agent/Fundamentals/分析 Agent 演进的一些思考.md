@@ -185,7 +185,7 @@ Human node
 
 ## See Also
 
-- [[Agent or Workflow？|Agent or Workflow？]] — 演进分析中的核心问题
-- [[Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — 演进的最新前沿：Agentic RL
+- [[AI/2-Agent/Fundamentals/Agent or Workflow？|Agent or Workflow？]] — 演进分析中的核心问题
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — 演进的最新前沿：Agentic RL
 -  — Agent 知识全图谱
-- [[Kimi-K2.5|Kimi K2.5]] — Agent 演进的工业标杆
+- [[AI/4-模型/Kimi/Kimi-K2.5|Kimi K2.5]] — Agent 演进的工业标杆

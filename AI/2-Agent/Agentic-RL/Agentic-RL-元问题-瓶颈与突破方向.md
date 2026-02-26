@@ -21,11 +21,11 @@ sources:
   - "PACED-RL: arXiv:2602.12642（课程学习调度）"
   - "MARS2: arXiv:2602.07848（multi-agent diversity scaling law）"
 related:
-  - "[[Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]]"
-  - "[[Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]]"
-  - "[[SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO]]"
-  - "[[AWM-Agent-World-Model-Synthetic-Environments|AWM]]"
-  - "[[Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]]"
+  - "[[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]]"
+  - "[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]]"
+  - "[[AI/2-Agent/Agentic-RL/SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO]]"
+  - "[[AI/2-Agent/Agentic-RL/AWM-Agent-World-Model-Synthetic-Environments|AWM]]"
+  - "[[AI/2-Agent/Agentic-RL/Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]]"
 ---
 
 # Agentic RL 元问题：真正的瓶颈在哪，下一步突破在哪
@@ -143,28 +143,28 @@ LLM 模拟环境的根本问题是：state transition 由 LLM 生成 → 幻觉 
 
 **核心依据（本文判断的论据来源）**
 
-- [[Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] ⭐ — 五大维度系统综述，本文是对该综述的元层批判与升维
-- [[Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — §1.1 判断的依据：credit assignment 论文在开放任务里的局限
-- [[SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO（arXiv:2602.06554）]] — §1.2 / §3.1 的直接依据：multi-turn 收敛的理论根因（不可能定理）
-- [[AWM-Agent-World-Model-Synthetic-Environments|AWM（ICML 2026）]] — §1.3 / §3.3 的依据：代码驱动 vs LLM 模拟的方法论本质差异
-- [[CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2（Checklist Rewards）]] — §1.1 提到的 intermediate verification 方向（人工设计 checklist 的局限）
-- [[GiGPO-Group-in-Group-Policy-Optimization|GiGPO（NeurIPS 2025）]] — §3.2 修正的依据：anchor grouping 零额外计算成本的工程优势被低估
-- [[Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]] — §二 长期判断的依据：MARS2 diversity scaling law（2×32B > 1×72B）
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] ⭐ — 五大维度系统综述，本文是对该综述的元层批判与升维
+- [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — §1.1 判断的依据：credit assignment 论文在开放任务里的局限
+- [[AI/2-Agent/Agentic-RL/SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO（arXiv:2602.06554）]] — §1.2 / §3.1 的直接依据：multi-turn 收敛的理论根因（不可能定理）
+- [[AI/2-Agent/Agentic-RL/AWM-Agent-World-Model-Synthetic-Environments|AWM（ICML 2026）]] — §1.3 / §3.3 的依据：代码驱动 vs LLM 模拟的方法论本质差异
+- [[AI/2-Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2（Checklist Rewards）]] — §1.1 提到的 intermediate verification 方向（人工设计 checklist 的局限）
+- [[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO（NeurIPS 2025）]] — §3.2 修正的依据：anchor grouping 零额外计算成本的工程优势被低估
+- [[AI/2-Agent/Agentic-RL/Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]] — §二 长期判断的依据：MARS2 diversity scaling law（2×32B > 1×72B）
 
 **Open Problems 关联方向**
 
-- [[RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO]] — §1.2 背景：Echo Trap = SeeUPO 理论证明的实验征兆
-- [[Agent-RL-环境工程系统论|Agent RL 环境工程系统论]] — §1.3 背景：自适应课程设计的工程框架
-- [[PACED-RL-Partition-Function-Difficulty-Scheduler|PACED-RL]] — §1.3 提到的课程学习方向（数学场景，尚未迁移到工具调用）
-- [[SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL|SHARP（ICML 2026）]] — §二 短期判断的反例：credit assignment 横向维度已有实用方案
+- [[AI/2-Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO]] — §1.2 背景：Echo Trap = SeeUPO 理论证明的实验征兆
+- [[AI/2-Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent RL 环境工程系统论]] — §1.3 背景：自适应课程设计的工程框架
+- [[AI/3-LLM/RL/Other-Algorithms/PACED-RL-Partition-Function-Difficulty-Scheduler|PACED-RL]] — §1.3 提到的课程学习方向（数学场景，尚未迁移到工具调用）
+- [[AI/2-Agent/Agentic-RL/SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL|SHARP（ICML 2026）]] — §二 短期判断的反例：credit assignment 横向维度已有实用方案
 
 **2026-02-25 新增实证（§四 第③问题的三个数据点）**
 
 > 以下三篇论文共同回答了"验证器可用性"如何从根本上决定 RL 策略选择——直接关联§四第③open problem（可验证 ↔ 不可验证 reward 的桥梁）：
 
-- [[Aletheia-Gemini3-DeepThink-FirstProof|Aletheia FirstProof（arXiv:2602.21201）]] — **有严格数学验证器**的极端案例：TTC scaling（推理计算扩展）比 RL 训练更快达到 frontier——说明当验证器足够可靠时，RL 的独特价值在于**无验证器任务**和**提升 base model 本身**；Weinberger 开放问题首次被 AI 自主解决
-- [[NoRD-Dr-GRPO-Reasoning-Free-VLA-Autonomous-Driving|NoRD（arXiv:2602.21172，CVPR 2026）]] — **有 simulation-based dense 验证器**（PDM score）：弱 SFT + Dr. GRPO 可行，关键前提是验证器足够 dense；跨域实证 difficulty bias 的通用性，同时间接验证本文§四判断——**dense verifiable reward 是弱 SFT + 强 RL 范式的必要条件**
-- [[PyVision-RL-Agentic-Vision-Interaction-Collapse|PyVision-RL（arXiv:2602.20739）]] — **验证器不明确**的多模态 agent 场景：Interaction Collapse（模型退化为少工具少多轮路径）正是 reward 稀疏 + 无中间验证信号的症状；Accumulative Tool Reward 是一种人工设计的 dense 中间信号——验证了本文§四判断：**reward signal quality 是训练稳定性的根本瓶颈**
+- [[AI/2-Agent/Evaluation/Aletheia-Gemini3-DeepThink-FirstProof|Aletheia FirstProof（arXiv:2602.21201）]] — **有严格数学验证器**的极端案例：TTC scaling（推理计算扩展）比 RL 训练更快达到 frontier——说明当验证器足够可靠时，RL 的独特价值在于**无验证器任务**和**提升 base model 本身**；Weinberger 开放问题首次被 AI 自主解决
+- [[AI/3-LLM/RL/Other-Algorithms/NoRD-Dr-GRPO-Reasoning-Free-VLA-Autonomous-Driving|NoRD（arXiv:2602.21172，CVPR 2026）]] — **有 simulation-based dense 验证器**（PDM score）：弱 SFT + Dr. GRPO 可行，关键前提是验证器足够 dense；跨域实证 difficulty bias 的通用性，同时间接验证本文§四判断——**dense verifiable reward 是弱 SFT + 强 RL 范式的必要条件**
+- [[AI/3-LLM/MLLM/PyVision-RL-Agentic-Vision-Interaction-Collapse|PyVision-RL（arXiv:2602.20739）]] — **验证器不明确**的多模态 agent 场景：Interaction Collapse（模型退化为少工具少多轮路径）正是 reward 稀疏 + 无中间验证信号的症状；Accumulative Tool Reward 是一种人工设计的 dense 中间信号——验证了本文§四判断：**reward signal quality 是训练稳定性的根本瓶颈**
 
 *写作时间：2026-02-24 08:01 | 基于 37+ 篇 Vault 笔记的整合判断*
 *馆长炼化（frontmatter/See Also）：2026-02-24 08:08 | 2026-02-25 15:14 补充三个验证器实证数据点*

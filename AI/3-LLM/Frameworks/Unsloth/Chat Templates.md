@@ -147,8 +147,8 @@ print(repr(formatted))  # 看 special tokens 是否正确
 
 ## 相关
 
-- [[Unsloth 概述|Unsloth 概述]]
-- [[训练示例概述|训练示例概述]]
+- [[AI/3-LLM/Frameworks/Unsloth/Unsloth 概述|Unsloth 概述]]
+- [[AI/3-LLM/Frameworks/Unsloth/训练示例概述|训练示例概述]]
 - [[AI/3-LLM/Frameworks/Unsloth/数据合成|Unsloth 数据合成]]
-- [[Qwen3 训练|Qwen3 训练]]
-- [[SFT 原理|SFT 原理]]
+- [[AI/3-LLM/Frameworks/Unsloth/Qwen3 训练|Qwen3 训练]]
+- [[AI/3-LLM/SFT/SFT 原理|SFT 原理]]

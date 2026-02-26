@@ -148,11 +148,11 @@ Agent Swarm → 并行多 agent（PARL 训练的 orchestrator）
 
 ## 关联笔记
 
-- [[CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2-checklist-rewards]] — 同方向互补：单 agent multi-turn tool use
-- [[Aletheia-Math-Research-Agent|Aletheia-Math-Research-Agent]] — 同方向互补：open-domain research agent
-- [[OpenRS-Pairwise-Adaptive-Rubric|OpenRS]] — 同方向互补：non-verifiable reward 对齐
-- [[GLM-5 Agentic Engineering|GLM-5-Agentic-Engineering]] — Slime 框架下的 agentic RL infra 对比
-- [[GitHub-Agentic-Workflows|GitHub-Agentic-Workflows]] — 工程侧的 multi-agent 应用
+- [[AI/2-Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2-checklist-rewards]] — 同方向互补：单 agent multi-turn tool use
+- [[AI/2-Agent/Evaluation/Aletheia-Math-Research-Agent|Aletheia-Math-Research-Agent]] — 同方向互补：open-domain research agent
+- [[AI/3-LLM/RL/Other-Algorithms/OpenRS-Pairwise-Adaptive-Rubric|OpenRS]] — 同方向互补：non-verifiable reward 对齐
+- [[AI/3-LLM/Architecture/GLM-5 Agentic Engineering|GLM-5-Agentic-Engineering]] — Slime 框架下的 agentic RL infra 对比
+- [[AI/2-Agent/Fundamentals/GitHub-Agentic-Workflows|GitHub-Agentic-Workflows]] — 工程侧的 multi-agent 应用
 
 ---
 *Created: 2026-02-19 by Scholar heartbeat*

@@ -22,10 +22,10 @@ sources:
   - arXiv:2602.21172 (Rawal, Gupta, Hu, Zhan; Applied Intuition + Texas A&M + UC Berkeley, CVPR 2026)
   - https://arxiv.org/abs/2602.21172
 related:
-  - "[[Dr-GRPO-Unbiased-Optimization|Dr. GRPO（原始论文，COLM 2025）]]"
-  - "[[GRPO-Improvement-Panorama-2026|GRPO 改进全景]]"
-  - "[[SAPO-Soft-Adaptive-Policy-Optimization|SAPO（同解 advantage 问题，不同路径）]]"
-  - "[[OAPL-Off-Policy-RL-LLM-Reasoning|OAPL（advantage 计算修改对比）]]"
+  - "[[AI/3-LLM/RL/GRPO/Dr-GRPO-Unbiased-Optimization|Dr. GRPO（原始论文，COLM 2025）]]"
+  - "[[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进全景]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/SAPO-Soft-Adaptive-Policy-Optimization|SAPO（同解 advantage 问题，不同路径）]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/OAPL-Off-Policy-RL-LLM-Reasoning|OAPL（advantage 计算修改对比）]]"
 ---
 
 # NoRD: 无推理 VLA + Dr. GRPO 解决自动驾驶训练中的 Difficulty Bias
@@ -168,7 +168,7 @@ NoRD 成立的一个重要前提：PDM score 是 **dense** 且 **simulation-base
 
 NoRD 明确表态："不是说 VLA 不能从语言推理中获益，而是高效 VLA 不**必须**依赖推理和大数据。"
 
-这跟 [[ERL-Experiential-Reinforcement-Learning|ERL（把反思内化到 base policy）]]的方向有趣对立：
+这跟 [[AI/2-Agent/Agentic-RL/ERL-Experiential-Reinforcement-Learning|ERL（把反思内化到 base policy）]]的方向有趣对立：
 - ERL：让推理可训练后消失（distill into base behavior）
 - NoRD：一开始就不要推理
 
@@ -185,27 +185,27 @@ NoRD 明确表态："不是说 VLA 不能从语言推理中获益，而是高效
 ## See Also
 
 **Dr. GRPO 体系（difficulty bias 修复）**
-- [[Dr-GRPO-Unbiased-Optimization|Dr. GRPO（原始论文，COLM 2025）]] — NoRD 所采用的核心修复方案：去掉 std 归一化消除 difficulty bias；原始论文在 LLM 数学推理域验证，NoRD 首次在自动驾驶 VLA 跨域实证其通用性
-- [[GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] — NoRD 的 Dr. GRPO 属于全景「difficulty_debiasing」分支；与 DAPO 非对称 clipping 组合使用（NoRD 同时采用）
+- [[AI/3-LLM/RL/GRPO/Dr-GRPO-Unbiased-Optimization|Dr. GRPO（原始论文，COLM 2025）]] — NoRD 所采用的核心修复方案：去掉 std 归一化消除 difficulty bias；原始论文在 LLM 数学推理域验证，NoRD 首次在自动驾驶 VLA 跨域实证其通用性
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进全景 2026]] — NoRD 的 Dr. GRPO 属于全景「difficulty_debiasing」分支；与 DAPO 非对称 clipping 组合使用（NoRD 同时采用）
 
 **同解 GRPO advantage 问题的不同路径（对比理解）**
-- [[SAPO-Soft-Adaptive-Policy-Optimization|SAPO（Qwen 团队）]] — 改 clip 函数形状（hard→sigmoid 软衰减），解决 advantage 过度截断；与 Dr. GRPO 正交：SAPO 改 clip，Dr. GRPO 改 std 归一化；两者理论上可叠加
-- [[OAPL-Off-Policy-RL-LLM-Reasoning|OAPL（Cornell+Databricks+Harvard）]] — 从 KL-reg RL 第一性原理推导 squared loss 替代 clip；与 Dr. GRPO 正交：OAPL 改 IS-ratio 处理，Dr. GRPO 改 std 归一化
+- [[AI/3-LLM/RL/Other-Algorithms/SAPO-Soft-Adaptive-Policy-Optimization|SAPO（Qwen 团队）]] — 改 clip 函数形状（hard→sigmoid 软衰减），解决 advantage 过度截断；与 Dr. GRPO 正交：SAPO 改 clip，Dr. GRPO 改 std 归一化；两者理论上可叠加
+- [[AI/3-LLM/RL/Other-Algorithms/OAPL-Off-Policy-RL-LLM-Reasoning|OAPL（Cornell+Databricks+Harvard）]] — 从 KL-reg RL 第一性原理推导 squared loss 替代 clip；与 Dr. GRPO 正交：OAPL 改 IS-ratio 处理，Dr. GRPO 改 std 归一化
 
 **Rollout 质量维度（正交可叠加）**
-- [[TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（ICML 2026，TU Munich）]] — 训练时树搜索选优 rollout；与 Dr. GRPO 正交：TSR 改 rollout 采样策略，Dr. GRPO 改 advantage 计算；两者组合是"好的 rollout + 好的更新信号"的完整方案
+- [[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（ICML 2026，TU Munich）]] — 训练时树搜索选优 rollout；与 Dr. GRPO 正交：TSR 改 rollout 采样策略，Dr. GRPO 改 advantage 计算；两者组合是"好的 rollout + 好的更新信号"的完整方案
 
 **VLA 与多模态 RL**
-- [[AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL（视觉锚点）]] — 多模态 credit assignment，与 NoRD 的 advantage 计算修复正交；AT-RL 解决"哪些视觉 token 值得信用"，NoRD 解决"哪些样本难度应该有梯度"
+- [[AI/3-LLM/RL/Other-Algorithms/AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL（视觉锚点）]] — 多模态 credit assignment，与 NoRD 的 advantage 计算修复正交；AT-RL 解决"哪些视觉 token 值得信用"，NoRD 解决"哪些样本难度应该有梯度"
 
 ---
 
 ## 推荐阅读
 
 1. [原文（arXiv:2602.21172）](https://arxiv.org/abs/2602.21172) — CVPR 2026 完整实验
-2. [[Dr-GRPO-Unbiased-Optimization|Dr. GRPO（COLM 2025）]] — difficulty bias 的理论基础
-3. [[GRPO-Improvement-Panorama-2026|GRPO 改进全景]] — NoRD 在 GRPO 改进谱系中的完整定位
-4. [[GRPO 深度理解|GRPO 深度理解]] — 理解 std 归一化为何导致 difficulty bias 的数学基础
+2. [[AI/3-LLM/RL/GRPO/Dr-GRPO-Unbiased-Optimization|Dr. GRPO（COLM 2025）]] — difficulty bias 的理论基础
+3. [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进全景]] — NoRD 在 GRPO 改进谱系中的完整定位
+4. [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — 理解 std 归一化为何导致 difficulty bias 的数学基础
 
 ---
 

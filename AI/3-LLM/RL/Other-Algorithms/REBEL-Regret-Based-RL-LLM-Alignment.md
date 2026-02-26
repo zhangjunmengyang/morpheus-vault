@@ -18,9 +18,9 @@ sources:
   - arXiv:2404.16767v4 (Zhaolin Gao, Jonathan Chang, Wenhao Zhan, Owen Oertell, Gokul Swamy, Kianté Brantley, Thorsten Joachims, J. Andrew Bagnell, Jason D. Lee, Wen Sun — CMU+Cornell+Princeton, Apr 2024 → Dec 2024)
 venue: preprint (2024)
 related:
-  - "[[PPO 原理]]"
-  - "[[GRPO 深度理解]]"
-  - "[[DPO-TRL实践]]"
+  - "[[AI/3-LLM/RL/PPO/PPO 原理]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解]]"
+  - "[[AI/3-LLM/RL/DPO/DPO-TRL实践]]"
 ---
 
 # REBEL: Reinforcement Learning via Regressing Relative Rewards
@@ -174,7 +174,7 @@ REBEL 不做此假设——它直接回归 reward 差值。当 BT 假设成立�
 
 - **原始论文**：[arXiv:2404.16767](https://arxiv.org/abs/2404.16767)
 - **关联笔记**：
-  - [[PPO 原理|PPO]] — REBEL 试图简化的对象
-  - [[GRPO 深度理解|GRPO]] — 另一种 critic-free 简化
-  - [[DPO-TRL实践|DPO]] — 理论近亲（BT 假设下等价）
-  - [[IPO-Identity-Preference-Optimization|IPO]] — 同一问题的另一种解法
+  - [[AI/3-LLM/RL/PPO/PPO 原理|PPO]] — REBEL 试图简化的对象
+  - [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO]] — 另一种 critic-free 简化
+  - [[AI/3-LLM/RL/DPO/DPO-TRL实践|DPO]] — 理论近亲（BT 假设下等价）
+  - [[AI/3-LLM/RL/Preference-Optimization/IPO-Identity-Preference-Optimization|IPO]] — 同一问题的另一种解法

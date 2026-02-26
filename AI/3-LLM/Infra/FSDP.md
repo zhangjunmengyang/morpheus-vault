@@ -15,9 +15,9 @@ sources:
   - "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models — arXiv:1910.02054"
   - https://pytorch.org/docs/stable/fsdp.html
 related:
-  - "[[DeepSpeed|DeepSpeed]]"
-  - "[[Megatron-LM|Megatron-LM]]"
-  - "[[模型并行策略|模型并行策略]]"
+  - "[[AI/3-LLM/Infra/DeepSpeed|DeepSpeed]]"
+  - "[[AI/3-LLM/Infra/Megatron-LM|Megatron-LM]]"
+  - "[[AI/3-LLM/Infra/模型并行策略|模型并行策略]]"
 ---
 # FSDP
 
@@ -25,7 +25,7 @@ related:
 
 FSDP（Fully Sharded Data Parallel）是 PyTorch 原生的分布式训练方案，核心思想是**将模型参数、梯度和优化器状态在所有 GPU 之间分片（shard）**，每个 GPU 只持有完整模型的 1/N。
 
-FSDP 本质上是 Microsoft ZeRO（Zero Redundancy Optimizer）的 PyTorch 原生实现，对标 [[DeepSpeed]] ZeRO Stage 3。但因为是 PyTorch 官方维护，与 PyTorch 生态（torch.compile、FSDP2 等）的集成更好。
+FSDP 本质上是 Microsoft ZeRO（Zero Redundancy Optimizer）的 PyTorch 原生实现，对标 [[AI/3-LLM/Infra/DeepSpeed]] ZeRO Stage 3。但因为是 PyTorch 官方维护，与 PyTorch 生态（torch.compile、FSDP2 等）的集成更好。
 
 > 来源：Zhao et al., "PyTorch FSDP: Experiences on Scaling Fully Sharded Data Parallel" arXiv:2304.11277
 
@@ -221,7 +221,7 @@ accelerate launch --config_file fsdp_config.yaml train.py
 
 ### 直接可用场景
 - **7B-70B 模型微调/SFT**：FSDP FULL_SHARD + Accelerate 是最主流的方案
-- **verl RL 训练**：[[verl 概述|verl]] 同时支持 FSDP 和 Megatron 后端，FSDP 更易调试
+- **verl RL 训练**：[[AI/3-LLM/Frameworks/verl/verl 概述|verl]] 同时支持 FSDP 和 Megatron 后端，FSDP 更易调试
 - **需要 torch.compile 加速**：FSDP2 是目前唯一与 compile 良好兼容的分布式方案
 
 ### 工程实现要点
@@ -245,17 +245,17 @@ accelerate launch --config_file fsdp_config.yaml train.py
 - FSDP2 尚未完全稳定（截至 PyTorch 2.5），生产环境需谨慎
 
 ### 脑暴：如果往下延伸
-- FSDP2 的 per-parameter sharding + [[Megatron-LM|Megatron-Core]] 的 TP 能否在同一模型上自由组合？
+- FSDP2 的 per-parameter sharding + [[AI/3-LLM/Infra/Megatron-LM|Megatron-Core]] 的 TP 能否在同一模型上自由组合？
 - 如果 PyTorch 原生支持 ZeRO-1/2（不仅仅是 3），DeepSpeed 的存在意义是否会被侵蚀？
 
 ## 相关
 
-> 🔗 See also: [[DeepSpeed]] — FSDP 的主要竞品，ZeRO 系列的原始实现
-> 🔗 See also: [[Megatron-LM]] — TP/PP 并行方案，与 FSDP 的 DP 方向互补
-> 🔗 See also: [[模型并行策略|模型并行策略]] — 从 DP 到 5D 并行的全景选型
+> 🔗 See also: [[AI/3-LLM/Infra/DeepSpeed]] — FSDP 的主要竞品，ZeRO 系列的原始实现
+> 🔗 See also: [[AI/3-LLM/Infra/Megatron-LM]] — TP/PP 并行方案，与 FSDP 的 DP 方向互补
+> 🔗 See also: [[AI/3-LLM/Infra/模型并行策略|模型并行策略]] — 从 DP 到 5D 并行的全景选型
 
-- [[分布式训练]] — 分布式训练概览
-- [[Ray]] — 分布式计算框架
-- [[verl 概述|verl 概述]] — verl 对 FSDP 的集成
-- [[TRL 概述|TRL 概述]]
-- [[OpenRLHF|OpenRLHF]]
+- [[AI/3-LLM/Infra/分布式训练]] — 分布式训练概览
+- [[AI/3-LLM/Infra/Ray]] — 分布式计算框架
+- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]] — verl 对 FSDP 的集成
+- [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL 概述]]
+- [[AI/3-LLM/Frameworks/OpenRLHF/OpenRLHF|OpenRLHF]]

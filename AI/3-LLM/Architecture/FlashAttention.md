@@ -15,10 +15,10 @@ sources:
   - "Dao. FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning. arXiv:2307.08691"
   - "Shah et al. FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision. arXiv:2407.08608"
 related:
-  - "[[GQA-MQA|GQA/MQA]]"
+  - "[[AI/3-LLM/Architecture/GQA-MQA|GQA/MQA]]"
   - "[[AI/3-LLM/Inference/KV Cache|KV Cache 原理与优化]]"
-  - "[[Attention 变体综述|Attention 变体综述]]"
-  - "[[量化综述|量化综述]]"
+  - "[[AI/3-LLM/Architecture/Attention 变体综述|Attention 变体综述]]"
+  - "[[AI/3-LLM/Inference/量化综述|量化综述]]"
   - "[[Transformer架构深度解析-2026技术全景|Transformer 架构全景]]"
 ---
 
@@ -244,7 +244,7 @@ flowchart TD
 | **作用阶段** | 训练 + 推理 | 仅推理 |
 | **协同** | FlashAttention 计算 Attention kernel，PagedAttention 管理 KV 存储 |
 
-在 [[vLLM|vLLM]] 中，两者协同工作：PagedAttention 管理 KV Cache 的物理内存分页，FlashAttention 负责高效计算 Attention 得分。
+在 [[AI/3-LLM/Inference/vLLM|vLLM]] 中，两者协同工作：PagedAttention 管理 KV Cache 的物理内存分页，FlashAttention 负责高效计算 Attention 得分。
 
 ## 7. 实际使用
 
@@ -294,9 +294,9 @@ python -c "import flash_attn; print(flash_attn.__version__)"
 ## 8. 与其他优化技术的关系
 
 - **[[AI/3-LLM/Inference/KV Cache|KV Cache 优化]]**：FlashAttention 降低计算开销，KV Cache 减少重复计算
-- **[[量化综述|量化]]**：v3 的 FP8 支持与量化互补，进一步降低显存
-- **[[GQA-MQA|GQA/MQA]]**：减少 KV head 数量 → KV Cache 更小 → FlashAttention 每块处理更高效
-- **[[推理优化|推理优化]]**：FlashAttention 是推理优化 stack 中 Attention 层的核心组件
+- **[[AI/3-LLM/Inference/量化综述|量化]]**：v3 的 FP8 支持与量化互补，进一步降低显存
+- **[[AI/3-LLM/Architecture/GQA-MQA|GQA/MQA]]**：减少 KV head 数量 → KV Cache 更小 → FlashAttention 每块处理更高效
+- **[[AI/3-LLM/Inference/推理优化|推理优化]]**：FlashAttention 是推理优化 stack 中 Attention 层的核心组件
 - **[[AI/3-LLM/Inference/Speculative Decoding|Speculative Decoding]]**：正交优化，FlashAttention 加速单次 Attention，SD 减少解码步数
 
 ## 面试常见问题
@@ -356,7 +356,7 @@ python -c "import flash_attn; print(flash_attn.__version__)"
 - Online Softmax 的增量更新引入了浮点累积误差，极长序列（>100K）可能有数值精度问题（实践中通常可忽略）
 
 ### 脑暴：如果往下延伸
-- 如果把 FlashAttention 的 tiling 策略和 [[GQA-MQA|GQA]] 的 KV head 共享结合，可以在 kernel 层面做更深度的融合优化（减少 KV broadcast 的开销）
+- 如果把 FlashAttention 的 tiling 策略和 [[AI/3-LLM/Architecture/GQA-MQA|GQA]] 的 KV head 共享结合，可以在 kernel 层面做更深度的融合优化（减少 KV broadcast 的开销）
 - v4 可能的方向：针对 Blackwell (B200) 架构的进一步适配，以及原生支持 MLA 的解压缩计算
 
 ---
@@ -380,8 +380,8 @@ python -c "import flash_attn; print(flash_attn.__version__)"
 
 ## See Also
 
-> 🔗 See also: [[Attention 变体综述|Attention 变体综述]] — FlashAttention 加速的计算层与 Attention 变体的架构层互补
-> 🔗 See also: [[GQA-MQA|GQA/MQA]] — GQA 减少 KV 数量，FlashAttention 减少 IO，二者协同
+> 🔗 See also: [[AI/3-LLM/Architecture/Attention 变体综述|Attention 变体综述]] — FlashAttention 加速的计算层与 Attention 变体的架构层互补
+> 🔗 See also: [[AI/3-LLM/Architecture/GQA-MQA|GQA/MQA]] — GQA 减少 KV 数量，FlashAttention 减少 IO，二者协同
 > 🔗 See also: [[AI/3-LLM/Inference/KV Cache|KV Cache]] — FlashAttention（计算加速）与 PagedAttention（内存管理）在 vLLM 中协同工作
-> 🔗 See also: [[量化综述|量化综述]] — v3 的 FP8 支持与量化技术的交叉点
+> 🔗 See also: [[AI/3-LLM/Inference/量化综述|量化综述]] — v3 的 FP8 支持与量化技术的交叉点
 > 🔗 See also: [[Transformer架构深度解析-2026技术全景|Transformer 全景]] — FlashAttention 是 Transformer 推理优化 stack 的核心组件

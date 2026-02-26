@@ -245,12 +245,12 @@ VESPO 提供了**统一视角**：把 GRPO/GSPO/SAPO/DAPO 所有的 clip/norm �
 
 ## 关键词连接
 
-- [[Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 消除 off-policy vs 纠正 off-policy，互补；Jet-RL 从精度角度保证 on-policy，VESPO 从理论角度纠正 off-policy 梯度
-- [[Stable-Asynchrony-VCPO-Off-Policy-RL|VCPO]] — **同类问题（异步/off-policy），不同路径**：VCPO=LR scaling（系统工程），VESPO=变分 IS reshaping（算法理论）；两篇互读理解 off-policy 全貌
-- [[GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] — VESPO 归属 Off-Policy 稳定性维度，是该维度理论最强一篇
-- [[MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 都在解决 fixed ε 的局限，token 级 vs sequence 级
-- [[GSPO-Group-Sequence-Policy-Optimization|GSPO（Qwen3正式版）]] ⭐ — **理论验证关系**：GSPO 发现 1/T 归一化引入 length bias（序列级IS），VESPO 从变分推导严格证明并给出最优 kernel——VESPO 是 GSPO 的理论上界；两篇合读理解序列级 IS 的完整故事
-- [[SAPO-Soft-Adaptive-Policy-Optimization|SAPO（Qwen3-VL生产版）]] — **理论对立面**：SAPO 用 sigmoid 软门控作为 heuristic 设计，实验中 N≥8 时 collapse；VESPO 从变分原理证明为什么 SAPO 的设计次优（对 W<1 负优势 token 抑制不足），两篇合读理解"启发式设计 vs 理论最优设计"的差距
+- [[AI/3-LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 消除 off-policy vs 纠正 off-policy，互补；Jet-RL 从精度角度保证 on-policy，VESPO 从理论角度纠正 off-policy 梯度
+- [[AI/3-LLM/RL/Other-Algorithms/Stable-Asynchrony-VCPO-Off-Policy-RL|VCPO]] — **同类问题（异步/off-policy），不同路径**：VCPO=LR scaling（系统工程），VESPO=变分 IS reshaping（算法理论）；两篇互读理解 off-policy 全貌
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进全景 2026]] — VESPO 归属 Off-Policy 稳定性维度，是该维度理论最强一篇
+- [[AI/3-LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 都在解决 fixed ε 的局限，token 级 vs sequence 级
+- [[AI/3-LLM/RL/Other-Algorithms/GSPO-Group-Sequence-Policy-Optimization|GSPO（Qwen3正式版）]] ⭐ — **理论验证关系**：GSPO 发现 1/T 归一化引入 length bias（序列级IS），VESPO 从变分推导严格证明并给出最优 kernel——VESPO 是 GSPO 的理论上界；两篇合读理解序列级 IS 的完整故事
+- [[AI/3-LLM/RL/Other-Algorithms/SAPO-Soft-Adaptive-Policy-Optimization|SAPO（Qwen3-VL生产版）]] — **理论对立面**：SAPO 用 sigmoid 软门控作为 heuristic 设计，实验中 N≥8 时 collapse；VESPO 从变分原理证明为什么 SAPO 的设计次优（对 W<1 负优势 token 抑制不足），两篇合读理解"启发式设计 vs 理论最优设计"的差距
 
 ---
 

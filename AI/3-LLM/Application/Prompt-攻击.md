@@ -144,7 +144,7 @@ is_attack = judge_llm(judge_prompt)
 
 ## 相关
 
-- [[Prompt-Engineering-概述|Prompt Engineering 概述]]
-- [[Prompt-Tools|Prompt 工具集]]
-- [[AI 安全及隐私保护|AI 安全及隐私保护]]
-- [[AI 伦理和治理|AI 伦理和治理]]
+- [[AI/3-LLM/Application/Prompt-Engineering-概述|Prompt Engineering 概述]]
+- [[AI/3-LLM/Application/Prompt-Tools|Prompt 工具集]]
+- [[AI/5-AI 安全/AI 安全及隐私保护|AI 安全及隐私保护]]
+- [[AI/5-AI 安全/AI 伦理和治理|AI 伦理和治理]]

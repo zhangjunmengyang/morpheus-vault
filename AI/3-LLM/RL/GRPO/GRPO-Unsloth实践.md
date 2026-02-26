@@ -21,7 +21,7 @@ https://docs.unsloth.ai/get-started/reinforcement-learning-rl-guide/rl-reward-ha
 
 ## 相关
 
-- [[GRPO 深度理解|GRPO 深度理解]]
-- [[PPO 原理|PPO 原理]]
-- [[Unsloth 概述|Unsloth 概述]]
-- [[DeepSeek-R1|DeepSeek-R1]]
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/3-LLM/Frameworks/Unsloth/Unsloth 概述|Unsloth 概述]]
+- [[AI/3-LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]

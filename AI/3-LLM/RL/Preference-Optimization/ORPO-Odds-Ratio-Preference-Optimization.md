@@ -18,10 +18,10 @@ sources:
   - https://github.com/xfactlab/orpo (HuggingFace trl 已集成)
 venue: preprint (2024)
 related:
-  - "[[DPO-TRL实践]]"
-  - "[[SimPO-Simple-Preference-Optimization-Reference-Free]]"
-  - "[[IPO-Identity-Preference-Optimization]]"
-  - "[[KTO-TRL实践]]"
+  - "[[AI/3-LLM/RL/DPO/DPO-TRL实践]]"
+  - "[[AI/3-LLM/RL/DPO/SimPO-Simple-Preference-Optimization-Reference-Free]]"
+  - "[[AI/3-LLM/RL/Preference-Optimization/IPO-Identity-Preference-Optimization]]"
+  - "[[AI/3-LLM/RL/KTO/KTO-TRL实践]]"
 ---
 
 # ORPO: 一阶段 Preference Alignment（无需 SFT + 无需 Reference Model）
@@ -164,8 +164,8 @@ ORPO 走的是 **极致简化** 路线——一步到位，但代价是理论保
 - **原始论文**：[arXiv:2403.07691](https://arxiv.org/abs/2403.07691)
 - **HuggingFace 教程**：`trl.ORPOTrainer`
 - **关联笔记**：
-  - [[DPO-TRL实践|DPO]] — ORPO 试图简化的两阶段方法
-  - [[SimPO-Simple-Preference-Optimization-Reference-Free|SimPO]] — reference-free 但仍需 SFT
-  - [[IPO-Identity-Preference-Optimization|IPO]] — 理论修正路线
-  - [[KTO-TRL实践|KTO]] — unpaired preference 路线
-  - [[对齐技术综述|对齐技术综述]] — 全景路线图
+  - [[AI/3-LLM/RL/DPO/DPO-TRL实践|DPO]] — ORPO 试图简化的两阶段方法
+  - [[AI/3-LLM/RL/DPO/SimPO-Simple-Preference-Optimization-Reference-Free|SimPO]] — reference-free 但仍需 SFT
+  - [[AI/3-LLM/RL/Preference-Optimization/IPO-Identity-Preference-Optimization|IPO]] — 理论修正路线
+  - [[AI/3-LLM/RL/KTO/KTO-TRL实践|KTO]] — unpaired preference 路线
+  - [[AI/3-LLM/RL/对齐技术综述|对齐技术综述]] — 全景路线图

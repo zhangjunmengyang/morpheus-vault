@@ -20,8 +20,8 @@ sources:
   - OpenTelemetry 官方文档 — https://opentelemetry.io/
   - LangSmith 追踪文档 — https://docs.smith.langchain.com/
 related:
-  - "[[ReAct 与 CoT|ReAct 与 CoT]]"
-  - "[[Tool Use|Tool Use]]"
+  - "[[AI/2-Agent/Fundamentals/ReAct 与 CoT|ReAct 与 CoT]]"
+  - "[[AI/2-Agent/Fundamentals/Tool Use|Tool Use]]"
   - "[[AI-Agent-2026-技术全景|AI Agent 技术全景]]"
   - "[[AI安全与对齐-2026技术全景|AI 安全与对齐]]"
 ---
@@ -925,8 +925,8 @@ $$C_{total} = \sum_{i=1}^{N} \frac{T_{input}^{(i)}}{1000} \cdot P_{input} + \fra
 - **多 Agent 协作的可观测性**：当多个 Agent 并行执行，trace 的因果关系和时序对齐变得极为复杂
 
 ### 脑暴：如果往下延伸
-- 将本文的熔断降级模式与 [[ReAct 与 CoT|ReAct]] 的 Reflexion 结合：Agent 在熔断后不只是降级到规则引擎，而是基于失败原因反思并自动切换推理策略
-- Token 预算管理 + [[幻觉问题|幻觉检测]]：预算紧张时 Agent 倾向于生成更短回答 → 可能增加幻觉率。需要在成本和质量之间建立动态平衡机制
+- 将本文的熔断降级模式与 [[AI/2-Agent/Fundamentals/ReAct 与 CoT|ReAct]] 的 Reflexion 结合：Agent 在熔断后不只是降级到规则引擎，而是基于失败原因反思并自动切换推理策略
+- Token 预算管理 + [[AI/3-LLM/Application/幻觉问题|幻觉检测]]：预算紧张时 Agent 倾向于生成更短回答 → 可能增加幻觉率。需要在成本和质量之间建立动态平衡机制
 - 6 个月预判：Agent 可观测性将从"自建"走向"标准化"，OpenTelemetry 的 LLM 语义约定将成为行业标准
 
 ```mermaid
@@ -951,8 +951,8 @@ flowchart TD
 
 ## 相关概念
 
-- [[ReAct 与 CoT|ReAct 与 CoT]] — Agent 推理模式的理论基础
-- [[Tool Use|Tool Use]] — 工具调用安全与最佳实践
+- [[AI/2-Agent/Fundamentals/ReAct 与 CoT|ReAct 与 CoT]] — Agent 推理模式的理论基础
+- [[AI/2-Agent/Fundamentals/Tool Use|Tool Use]] — 工具调用安全与最佳实践
 - [[AI-Agent-2026-技术全景|AI Agent 技术全景]] — Agent 生产架构在全景中的位置
 - [[AI安全与对齐-2026技术全景|AI 安全与对齐]] — Agent 安全防护的完整框架
-- [[幻觉问题|幻觉问题]] — Agent 输出可靠性的核心挑战
+- [[AI/3-LLM/Application/幻觉问题|幻觉问题]] — Agent 输出可靠性的核心挑战

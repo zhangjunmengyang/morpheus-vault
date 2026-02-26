@@ -62,7 +62,7 @@ stability: [gradient_norm, learning_rate_schedule]
 ```
 
 **微调策略**
-- **[[LoRA|LoRA]]**: 低秩适应，参数效率高
+- **[[AI/3-LLM/SFT/LoRA|LoRA]]**: 低秩适应，参数效率高
 - **[[QLoRA]]**: 量化 + LoRA，内存友好
 - **[[PEFT]]**: 参数效率微调方法族
 
@@ -108,7 +108,7 @@ Load Balancer → API Gateway → Model Server → GPU Cluster
 
 **模型更新**
 - **增量训练**：基于新数据持续优化
-- **[[Prompt-Engineering-基础|Prompt-Engineering-基础]]**: 优化系统提示词
+- **[[AI/3-LLM/Application/Prompt-Engineering-基础|Prompt-Engineering-基础]]**: 优化系统提示词
 - **[[RAG-2026-技术全景|RAG]] 知识更新**：向量库更新和索引优化
 
 ## 关键工具链
@@ -292,6 +292,6 @@ def route_request(query):
 
 - [[MLOps 基础]]
 - [[LLM 部署架构]]
-- [[Prompt-Engineering-基础|Prompt-Engineering-基础]]
+- [[AI/3-LLM/Application/Prompt-Engineering-基础|Prompt-Engineering-基础]]
 - [[模型评估方法]]
 - [[生产环境监控]]

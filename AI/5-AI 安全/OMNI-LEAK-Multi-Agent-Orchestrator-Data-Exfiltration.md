@@ -29,11 +29,11 @@ status: active
 
 ## See Also
 
-- [[AgentLeak-Full-Stack-Privacy-Leakage-Multi-Agent-Benchmark|AgentLeak]] — 姊妹论文，测量端：系统性量化 multi-agent 所有渠道的泄漏率；OMNI-LEAK 是攻击端——两篇共同结论：output-only 审计是系统性盲区
-- [[AutoInject-RL-Prompt-Injection-Attack|AutoInject]] — RL 生成 universal adversarial suffix（单 agent 攻击原型）；OMNI-LEAK 是 orchestrator 级别的多 agent 扩展，ASR 更高且更隐蔽
-- [[CowCorpus-Human-Intervention-Modeling-Web-Agents|CowCorpus]] — 人类干预时机建模；OMNI-LEAK 的 Notification Agent 无限制 send 问题正是 CowCorpus 干预节点能阻断的典型场景
-- [[Clinejection-AI-Coding-Agent-Supply-Chain-Attack|Clinejection]] — 真实供应链 injection 事件；OMNI-LEAK 的实验室场景在 Clinejection 中变成了真实攻击——攻击链演进方向一致
-- [[AI Agent 集体行为与安全漂移|AI Agent 集体行为与安全漂移]] — 多 Agent 安全漂移的理论框架；OMNI-LEAK 中 orchestrator 污染子 agent 正是一种受控的"安全漂移"实验
+- [[AI/5-AI 安全/AgentLeak-Full-Stack-Privacy-Leakage-Multi-Agent-Benchmark|AgentLeak]] — 姊妹论文，测量端：系统性量化 multi-agent 所有渠道的泄漏率；OMNI-LEAK 是攻击端——两篇共同结论：output-only 审计是系统性盲区
+- [[AI/5-AI 安全/AutoInject-RL-Prompt-Injection-Attack|AutoInject]] — RL 生成 universal adversarial suffix（单 agent 攻击原型）；OMNI-LEAK 是 orchestrator 级别的多 agent 扩展，ASR 更高且更隐蔽
+- [[AI/2-Agent/Evaluation/CowCorpus-Human-Intervention-Modeling-Web-Agents|CowCorpus]] — 人类干预时机建模；OMNI-LEAK 的 Notification Agent 无限制 send 问题正是 CowCorpus 干预节点能阻断的典型场景
+- [[AI/5-AI 安全/Clinejection-AI-Coding-Agent-Supply-Chain-Attack|Clinejection]] — 真实供应链 injection 事件；OMNI-LEAK 的实验室场景在 Clinejection 中变成了真实攻击——攻击链演进方向一致
+- [[AI/5-AI 安全/AI Agent 集体行为与安全漂移|AI Agent 集体行为与安全漂移]] — 多 Agent 安全漂移的理论框架；OMNI-LEAK 中 orchestrator 污染子 agent 正是一种受控的"安全漂移"实验
 
 ---
 
@@ -204,9 +204,9 @@ OMNI-LEAK 的 clever 在于它**没有试图直接攻破任何单个 agent 的�
 
 ## See Also
 
-- [[PI-Landscape-SoK-Prompt-Injection-Taxonomy-Defense|PI-Landscape SoK]] ⭐ — OMNI-LEAK 是 SoK "indirect injection → context-dependent"盲区的核心实例；SoK 的不可能三角框架解释了为何防御OMNI-LEAK类攻击在高可用场景下极难实现
-- [[Multi-Agent-Defense-Pipeline-Prompt-Injection|Multi-Agent Defense Pipeline]] — OMNI-LEAK 暴露了攻击链，Multi-Agent Defense 提供了应对多Agent场景injection的防御框架（Chain + Coordinator双层架构）
-- [[Promptware-Kill-Chain-LLM-Malware|Promptware Kill Chain]] ⭐ — OMNI-LEAK 是七阶段 kill chain 的完整实例（Initial Access → Persistence(SQL DB注入) → Lateral Movement(orchestrator链) → Actions(数据外泄)）；Kill Chain 框架提供了 OMNI-LEAK 的理论归类（arXiv:2601.09625，Schneier联署）
+- [[AI/5-AI 安全/PI-Landscape-SoK-Prompt-Injection-Taxonomy-Defense|PI-Landscape SoK]] ⭐ — OMNI-LEAK 是 SoK "indirect injection → context-dependent"盲区的核心实例；SoK 的不可能三角框架解释了为何防御OMNI-LEAK类攻击在高可用场景下极难实现
+- [[AI/5-AI 安全/Multi-Agent-Defense-Pipeline-Prompt-Injection|Multi-Agent Defense Pipeline]] — OMNI-LEAK 暴露了攻击链，Multi-Agent Defense 提供了应对多Agent场景injection的防御框架（Chain + Coordinator双层架构）
+- [[AI/5-AI 安全/Promptware-Kill-Chain-LLM-Malware|Promptware Kill Chain]] ⭐ — OMNI-LEAK 是七阶段 kill chain 的完整实例（Initial Access → Persistence(SQL DB注入) → Lateral Movement(orchestrator链) → Actions(数据外泄)）；Kill Chain 框架提供了 OMNI-LEAK 的理论归类（arXiv:2601.09625，Schneier联署）
 
 ## Tags
 #MultiAgent #OrchestratorPattern #PromptInjection #DataLeakage #RedTeaming #AgentSecurity #ICML2026 #盾卫 #信息流控制 #MultiAgentSafety

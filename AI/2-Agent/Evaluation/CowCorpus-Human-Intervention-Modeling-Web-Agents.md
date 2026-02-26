@@ -198,8 +198,8 @@ PTS = (1/Z) · σ(𝕀_correct - Σ_{i∈E} α · d_i²)
 ## See Also
 
 -  — Agent 知识域全索引
-- [[AgentConductor-Topology-Evolution|AgentConductor]] — 同样研究 multi-agent 协调，但 agent↔agent；本文是 human↔agent（互补视角）
-- [[SquRL-Dynamic-Workflow-Text-to-SQL|SquRL]] — 动态 workflow 选择，尚未考虑 human-in-the-loop——本文填补此缺口
-- [[Calibrate-Then-Act-Cost-Aware-Exploration|Calibrate-Then-Act]] — cost-aware exploration："不确定时停下来问"的成本建模，与 CowCorpus intervention timing 形成理论互补
-- [[Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization]] — 同类"agent 行为意图预测"研究：hidden state 安全探测（pre-generation），与本文的 intervention prediction（运行时）形成安全门控双层架构
-- [[Agentic-RL-2026前沿综合分析|Agentic RL 2026 综合分析]] — Reward 维度：CowCorpus 的 intervention prediction 可为 open-ended agent 任务提供 human-signal 作为补充 reward
+- [[AI/2-Agent/Multi-Agent/AgentConductor-Topology-Evolution|AgentConductor]] — 同样研究 multi-agent 协调，但 agent↔agent；本文是 human↔agent（互补视角）
+- [[AI/2-Agent/Agentic-RL/SquRL-Dynamic-Workflow-Text-to-SQL|SquRL]] — 动态 workflow 选择，尚未考虑 human-in-the-loop——本文填补此缺口
+- [[AI/2-Agent/Agentic-RL/Calibrate-Then-Act-Cost-Aware-Exploration|Calibrate-Then-Act]] — cost-aware exploration："不确定时停下来问"的成本建模，与 CowCorpus intervention timing 形成理论互补
+- [[AI/5-AI 安全/Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization]] — 同类"agent 行为意图预测"研究：hidden state 安全探测（pre-generation），与本文的 intervention prediction（运行时）形成安全门控双层架构
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 综合分析]] — Reward 维度：CowCorpus 的 intervention prediction 可为 open-ended agent 任务提供 human-signal 作为补充 reward

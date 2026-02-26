@@ -13,7 +13,7 @@ tags:
   - kl-divergence
   - policy-gradient
 related:
-  - "[[GRPO 深度理解]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解]]"
   - "[[AI/3-LLM/RL/GRPO/GRPO-手撕实操]]"
   - "[[AI/3-LLM/RL/GRPO/GRPO-完整Notebook实现]]"
   - "[[AI/3-LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"

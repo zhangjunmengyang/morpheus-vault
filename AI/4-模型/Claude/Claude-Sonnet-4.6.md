@@ -15,7 +15,7 @@ pricing_output: "$15/M tokens"
 ---
 
 > [!note] 关联版本
-> 本文为完整技术规格版（506行）。精华分析版见 [[Claude-Sonnet-4.6]]（102行，含竞争格局评估）。
+> 本文为完整技术规格版（506行）。精华分析版见 [[AI/4-模型/Claude/Claude-Sonnet-4.6]]（102行，含竞争格局评估）。
 
 # Claude Sonnet 4.6
 

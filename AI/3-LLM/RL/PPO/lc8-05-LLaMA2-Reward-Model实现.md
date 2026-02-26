@@ -15,7 +15,7 @@ tags:
 related:
   - "[[AI/3-LLM/RL/DPO/Bradley-Terry模型实现]]"
   - "[[AI/3-LLM/RL/PPO/RLHF-PPO-完整Pytorch实现]]"
-  - "[[PPO 原理]]"
+  - "[[AI/3-LLM/RL/PPO/PPO 原理]]"
   - "[[AI/3-LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"
 ---
 

@@ -19,9 +19,9 @@ sources:
   - "YaRN: Efficient Context Window Extension of LLMs — arXiv:2309.00071 (Peng et al., 2023)"
   - NTK-Aware Scaled RoPE — Reddit/Kaiokendev 2023
 related:
-  - "[[长上下文技术|长上下文技术]]"
-  - "[[FlashAttention|FlashAttention]]"
-  - "[[Attention 变体综述|Attention 变体综述]]"
+  - "[[AI/3-LLM/Architecture/长上下文技术|长上下文技术]]"
+  - "[[AI/3-LLM/Architecture/FlashAttention|FlashAttention]]"
+  - "[[AI/3-LLM/Architecture/Attention 变体综述|Attention 变体综述]]"
 ---
 
 # Transformer 位置编码：从 Sinusoidal 到 YaRN
@@ -105,17 +105,17 @@ def get_alibi_slopes(num_heads: int):
 **优点**：
 - 零参数，无需学习
 - 天然外推——线性偏置对未见距离自动生效
-- 实现极简，与 [[FlashAttention|FlashAttention]] 完美兼容
+- 实现极简，与 [[AI/3-LLM/Architecture/FlashAttention|FlashAttention]] 完美兼容
 
 **缺点**：
 - 单调线性衰减假设过于简单，不适合所有任务
-- 效果不如 [[Transformer 位置编码|RoPE]] 在长上下文场景
+- 效果不如 [[AI/3-LLM/Architecture/Transformer 位置编码|RoPE]] 在长上下文场景
 
 代表模型：BLOOM、MPT
 
 ### 3.2 RoPE（Rotary Position Embedding）— 核心重点 ⭐
 
-Su et al., 2021 提出，现已成为 **LLM 主流位置编码方案**（[[LLaMA|LLaMA]]、Qwen、[[DeepSeek-R1|DeepSeek]]、Mistral 均采用）。
+Su et al., 2021 提出，现已成为 **LLM 主流位置编码方案**（[[AI/3-LLM/Architecture/LLaMA|LLaMA]]、Qwen、[[AI/3-LLM/Architecture/DeepSeek-R1|DeepSeek]]、Mistral 均采用）。
 
 #### 核心思想
 
@@ -328,7 +328,7 @@ graph LR
 ### 工程实现要点
 - **RoPE base 选择**：LLaMA 3 用 500K，Qwen2.5 用 1M，base 越大原生支持越长
 - **YaRN 微调**：仅需 ~400 steps 即可适配新长度，远少于 PI 的 ~10K steps
-- **兼容性**：RoPE 与 [[FlashAttention|FlashAttention]]、GQA 完美兼容
+- **兼容性**：RoPE 与 [[AI/3-LLM/Architecture/FlashAttention|FlashAttention]]、GQA 完美兼容
 
 ### 面试高频问法
 - **Q: 为什么现在所有主流 LLM 都用 RoPE？**
@@ -343,10 +343,10 @@ graph LR
 ### 未解问题与局限
 - RoPE 的旋转假设是否最优？是否存在比旋转更好的位置编码方式？
 - 超长上下文（1M+）场景下，RoPE 外推仍有 PPL 退化，MiniMax-01 选择了线性注意力路线
-- [[Multi-Head Latent Attention|MLA]] 中的解耦 RoPE 增加了额外维度，是否有更优雅的方案？
+- [[AI/3-LLM/Architecture/Multi-Head Latent Attention|MLA]] 中的解耦 RoPE 增加了额外维度，是否有更优雅的方案？
 
 ### 脑暴：如果往下延伸
-- 位置编码和 [[长上下文技术|长上下文技术]] 是同一枚硬币的两面——外推能力直接决定上下文窗口天花板
+- 位置编码和 [[AI/3-LLM/Architecture/长上下文技术|长上下文技术]] 是同一枚硬币的两面——外推能力直接决定上下文窗口天花板
 - 如果把 RoPE 的频率分解思想应用到**多模态**（图像 patch 的 2D 位置编码），会怎样？
 
 ## 📚 推荐阅读
@@ -369,8 +369,8 @@ graph LR
 
 ## See Also
 
-- [[长上下文技术|长上下文技术]] — RoPE 外推是长上下文的核心技术路线之一；YaRN/LongRoPE 在此文有更深入的工程实践讨论
-- [[FlashAttention|FlashAttention]] — RoPE 的旋转操作与 FlashAttention 完美兼容；IO 感知计算不影响位置编码效果
-- [[Attention 变体综述|Attention 变体综述]] — 位置编码和注意力变体共同定义 Transformer 的信息处理方式
-- [[Multi-Head Latent Attention|MLA]] — MLA 中的解耦 RoPE 是位置编码与 KV 压缩结合的典型案例
-- [[LLaMA|LLaMA]] — RoPE 的最重要工业应用，LLaMA 系列推动了 RoPE 成为事实标准
+- [[AI/3-LLM/Architecture/长上下文技术|长上下文技术]] — RoPE 外推是长上下文的核心技术路线之一；YaRN/LongRoPE 在此文有更深入的工程实践讨论
+- [[AI/3-LLM/Architecture/FlashAttention|FlashAttention]] — RoPE 的旋转操作与 FlashAttention 完美兼容；IO 感知计算不影响位置编码效果
+- [[AI/3-LLM/Architecture/Attention 变体综述|Attention 变体综述]] — 位置编码和注意力变体共同定义 Transformer 的信息处理方式
+- [[AI/3-LLM/Architecture/Multi-Head Latent Attention|MLA]] — MLA 中的解耦 RoPE 是位置编码与 KV 压缩结合的典型案例
+- [[AI/3-LLM/Architecture/LLaMA|LLaMA]] — RoPE 的最重要工业应用，LLaMA 系列推动了 RoPE 成为事实标准

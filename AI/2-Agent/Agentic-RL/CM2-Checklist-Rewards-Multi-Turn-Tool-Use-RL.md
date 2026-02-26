@@ -18,11 +18,11 @@ sources:
   - arXiv:2602.12268 (v2, 2026-02-20)
   - 代码：https://github.com/namezhenzhang/CM2-RLCR-Tool-Agent
 related:
-  - "[[iStar-Implicit-Step-Rewards-Agentic-RL|iStar]]"
-  - "[[CSO-Verified-Critical-Step-Optimization|CSO]]"
-  - "[[Tool-Use-RL-训练专题|Tool-Use-RL 训练专题]]"
-  - "[[Agent-RL-环境工程系统论|Agent-RL-环境工程系统论]]"
-  - "[[Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]]"
+  - "[[AI/2-Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar]]"
+  - "[[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO]]"
+  - "[[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL 训练专题]]"
+  - "[[AI/2-Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent-RL-环境工程系统论]]"
+  - "[[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]]"
 ---
 
 # CM2: Reinforcement Learning with Checklist Rewards for Multi-Turn and Multi-Step Agentic Tool Use
@@ -307,14 +307,14 @@ Multi-Turn Agent RL 的核心张力：
 ## 七、See Also
 
 **Unverifiable Reward 解法谱系（CM2 的定位）：**
-- [[iStar-Implicit-Step-Rewards-Agentic-RL|iStar（2509.19199，阿里通义）]] — **同为 unverifiable reward 场景，不同路线**：iStar 用隐式 DPO → step-level reward（有理论保证），CM2 用 explicit checklist（工程可行、直接）；两者互补：对话/社交场景 iStar 更优，multi-turn tool-use 场景 CM2 更直接
-- [[CSO-Verified-Critical-Step-Optimization|CSO（2602.03412，Tencent AI Lab+HKU）]] — **信号精度的不同维度**：CM2 解决 reward 如何构造，CSO 解决 credit 如何精准归因（从失败轨迹反事实验证）；两者关注不同层次的信号质量问题
-- [[AWM-Agent-World-Model-Synthetic-Environments|AWM（ICML 2026）]] — **训练基础设施正交互补**：AWM 解决"环境怎么建"（5阶段合成），CM2 解决"reward 怎么设计"（checklist dense evaluation）；AWM+CM2 = 完整的 tool-use RL 训练基础设施
+- [[AI/2-Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar（2509.19199，阿里通义）]] — **同为 unverifiable reward 场景，不同路线**：iStar 用隐式 DPO → step-level reward（有理论保证），CM2 用 explicit checklist（工程可行、直接）；两者互补：对话/社交场景 iStar 更优，multi-turn tool-use 场景 CM2 更直接
+- [[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO（2602.03412，Tencent AI Lab+HKU）]] — **信号精度的不同维度**：CM2 解决 reward 如何构造，CSO 解决 credit 如何精准归因（从失败轨迹反事实验证）；两者关注不同层次的信号质量问题
+- [[AI/2-Agent/Agentic-RL/AWM-Agent-World-Model-Synthetic-Environments|AWM（ICML 2026）]] — **训练基础设施正交互补**：AWM 解决"环境怎么建"（5阶段合成），CM2 解决"reward 怎么设计"（checklist dense evaluation）；AWM+CM2 = 完整的 tool-use RL 训练基础设施
 
 **工程应用：**
-- [[Tool-Use-RL-训练专题|Tool-Use-RL 训练专题]] — CM2 是 Tool Use RL 的重要方法，属于 reward 设计维度
-- [[Agent-RL-环境工程系统论|Agent-RL-环境工程系统论]] — CM2 的 LLM 模拟环境是"代码驱动环境"的变体，补充此系统论
-- [[Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]] — 综合分析 Reward Design 章节：CM2 是 Checklist Reward 解法代表
+- [[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL 训练专题]] — CM2 是 Tool Use RL 的重要方法，属于 reward 设计维度
+- [[AI/2-Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent-RL-环境工程系统论]] — CM2 的 LLM 模拟环境是"代码驱动环境"的变体，补充此系统论
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]] — 综合分析 Reward Design 章节：CM2 是 Checklist Reward 解法代表
 
 ## 补充洞察（合并自副本 2026-02-26）
 
@@ -352,7 +352,7 @@ CM2 和 MIG 都强调 reward 信号的 stability。MIG 用 Monotonic Watermark �
 
 1. **原文**：[arXiv:2602.12268](https://arxiv.org/abs/2602.12268) — CM2: RL with Checklist Rewards
 2. **代码**：[github.com/namezhenzhang/CM2-RLCR-Tool-Agent](https://github.com/namezhenzhang/CM2-RLCR-Tool-Agent)
-3. **对比阅读**：[[iStar-Implicit-Step-Rewards-Agentic-RL|iStar]] — 同为 unverifiable reward，隐式 vs 显式的设计对比
-4. **工程配套**：[[AWM-Agent-World-Model-Synthetic-Environments|AWM]] — CM2 的 reward 设计 + AWM 的环境建设 = 完整训练基础设施
+3. **对比阅读**：[[AI/2-Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar]] — 同为 unverifiable reward，隐式 vs 显式的设计对比
+4. **工程配套**：[[AI/2-Agent/Agentic-RL/AWM-Agent-World-Model-Synthetic-Environments|AWM]] — CM2 的 reward 设计 + AWM 的环境建设 = 完整训练基础设施
 
 <!-- 2026-02-26 dedup: 删除了2个CM2副本（CM2-Checklist-Rewards-Agentic-Tool-Use.md + CM2-Checklist-Rewards-Multi-Turn-Agentic-Tool-Use.md），合并了Reward设计四方对比表、二维象限框架、MIG关系分析 -->

@@ -193,11 +193,11 @@ MIG (2602.01034)      step-level        信息论（Marginal Information Gain）
 - [GitHub: verl-agent](https://github.com/langfengQ/verl-agent) — 代码（基于 verl 框架）
 
 **相关 Vault 笔记**：
-- [[Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — Credit assignment 全景：GiGPO/AgentPRM/LOOP/MIG/MCTS/iStar
-- [[iStar-Implicit-Step-Rewards-Agentic-RL|iStar（2509.19199）]] — 另一种 step-level credit assignment，基于 DPO 等价，支持 unverifiable reward
-- [[PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]] — 在 GiGPO 基础上加 phase-aware MoE，ALFWorld 再 +7.7%
-- [[RL-Signal-Granularity-Causal-Structure-Principle|RL 信号粒度与因果结构匹配原则]] ⭐ — W 层元命题：GiGPO 是四路印证之一（anchor state = Agent 任务的最小因果单元）
-- [[GRPO 深度理解|GRPO 深度理解]] — 理论基础：GiGPO 是 GRPO 在 Agent 场景的根本性改造（episode-level advantage → step-level advantage via anchor state grouping）
+- [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — Credit assignment 全景：GiGPO/AgentPRM/LOOP/MIG/MCTS/iStar
+- [[AI/2-Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar（2509.19199）]] — 另一种 step-level credit assignment，基于 DPO 等价，支持 unverifiable reward
+- [[AI/2-Agent/Agentic-RL/PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]] — 在 GiGPO 基础上加 phase-aware MoE，ALFWorld 再 +7.7%
+- [[AI/3-LLM/RL/Theory/RL-Signal-Granularity-Causal-Structure-Principle|RL 信号粒度与因果结构匹配原则]] ⭐ — W 层元命题：GiGPO 是四路印证之一（anchor state = Agent 任务的最小因果单元）
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — 理论基础：GiGPO 是 GRPO 在 Agent 场景的根本性改造（episode-level advantage → step-level advantage via anchor state grouping）
 
 ---
 
@@ -229,11 +229,11 @@ MIG (2602.01034)      step-level        信息论（Marginal Information Gain）
 
 ## See Also
 
-- [[HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]] — **正交升维**：GiGPO 做 step-level（anchor grouping within segment），HiPER 做 segment-level（HAE between segments）；两者理论可组合，GiGPO+HiPER 或许是 Credit Assignment 的最强组合
-- [[Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — 完整谱系（trajectory/segment/step 三层）
-- [[MIG-Step-Marginal-Information-Gain-Credit-Assignment|MIG]] — 信息论视角 step-level CA（与 GiGPO 正交：anchor grouping vs 信息增益）
-- [[Tree-GRPO-Tree-Search-LLM-Agent-RL|Tree-GRPO（ICLR 2026）]] — 树搜索 + 双层 advantage（与 GiGPO 同问题，不同粒度，可组合）
-- [[GRPO 深度理解|GRPO 深度理解]] — GiGPO 的理论基础
-- [[SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL|SHARP（ICML 2026，arXiv:2602.08335）]] — **正交互补（横向维度）**：GiGPO 解决纵向（单 agent 不同时间步）credit assignment，SHARP 解决横向（多 agent 之间）credit assignment；两者从不同维度完善 multi-agent 系统的 CA 图景
-- [[CSO-Verified-Critical-Step-Optimization|CSO（Tencent AI Lab+HKU，arXiv:2602.03412）]] — **互补信号来源**：GiGPO 从成功轨迹的 anchor state 归因（在线 RL），CSO 从失败轨迹反事实验证归因（离线 DPO）；两种信号互补，联合使用可覆盖成功和失败轨迹的 credit 信息
-- [[SELAUR-Self-Evolving-LLM-Agent-Uncertainty-Rewards|SELAUR（arXiv:2602.21158）]] — **失败信号激活**：GiGPO 精化成功轨迹的 step-level credit，SELAUR 用 token 不确定性激活失败轨迹的 reward 信号（原本 =0）；两者**正交互补**：联合使用覆盖成功+失败轨迹的完整 credit 图景，ALFWorld/WebShop 超越单独 GiGPO
+- [[AI/2-Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]] — **正交升维**：GiGPO 做 step-level（anchor grouping within segment），HiPER 做 segment-level（HAE between segments）；两者理论可组合，GiGPO+HiPER 或许是 Credit Assignment 的最强组合
+- [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — 完整谱系（trajectory/segment/step 三层）
+- [[AI/2-Agent/Agentic-RL/MIG-Step-Marginal-Information-Gain-Credit-Assignment|MIG]] — 信息论视角 step-level CA（与 GiGPO 正交：anchor grouping vs 信息增益）
+- [[AI/2-Agent/Agentic-RL/Tree-GRPO-Tree-Search-LLM-Agent-RL|Tree-GRPO（ICLR 2026）]] — 树搜索 + 双层 advantage（与 GiGPO 同问题，不同粒度，可组合）
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — GiGPO 的理论基础
+- [[AI/2-Agent/Agentic-RL/SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL|SHARP（ICML 2026，arXiv:2602.08335）]] — **正交互补（横向维度）**：GiGPO 解决纵向（单 agent 不同时间步）credit assignment，SHARP 解决横向（多 agent 之间）credit assignment；两者从不同维度完善 multi-agent 系统的 CA 图景
+- [[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO（Tencent AI Lab+HKU，arXiv:2602.03412）]] — **互补信号来源**：GiGPO 从成功轨迹的 anchor state 归因（在线 RL），CSO 从失败轨迹反事实验证归因（离线 DPO）；两种信号互补，联合使用可覆盖成功和失败轨迹的 credit 信息
+- [[AI/2-Agent/Agentic-RL/SELAUR-Self-Evolving-LLM-Agent-Uncertainty-Rewards|SELAUR（arXiv:2602.21158）]] — **失败信号激活**：GiGPO 精化成功轨迹的 step-level credit，SELAUR 用 token 不确定性激活失败轨迹的 reward 信号（原本 =0）；两者**正交互补**：联合使用覆盖成功+失败轨迹的完整 credit 图景，ALFWorld/WebShop 超越单独 GiGPO

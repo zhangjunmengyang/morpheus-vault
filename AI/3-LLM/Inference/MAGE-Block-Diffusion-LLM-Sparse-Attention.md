@@ -14,11 +14,11 @@ tags:
 arxiv: "2602.14209"
 created: 2026-02-20
 see-also:
-  - "[[Sparrow-Video-LLM-Speculative-Decoding|Sparrow]]"
-  - "[[LaViDa-R1-Diffusion-LLM-Reasoning|LaViDa-R1]]"
-  - "[[MiniCPM-SALA|MiniCPM-SALA]]"
-  - "[[Sink-Aware-Pruning-Diffusion-LLM|Sink-Aware Pruning]]"
-  - "[[Accordion-Thinking-Self-Regulated-Step-Summaries|Accordion-Thinking]]"
+  - "[[AI/3-LLM/Inference/Sparrow-Video-LLM-Speculative-Decoding|Sparrow]]"
+  - "[[AI/3-LLM/Architecture/LaViDa-R1-Diffusion-LLM-Reasoning|LaViDa-R1]]"
+  - "[[AI/3-LLM/Architecture/MiniCPM-SALA|MiniCPM-SALA]]"
+  - "[[AI/3-LLM/Inference/Sink-Aware-Pruning-Diffusion-LLM|Sink-Aware Pruning]]"
+  - "[[AI/3-LLM/Inference/Accordion-Thinking-Self-Regulated-Step-Summaries|Accordion-Thinking]]"
 ---
 
 # MAGE: [MASK]-Guided Sparse Attention for Block Diffusion LLMs

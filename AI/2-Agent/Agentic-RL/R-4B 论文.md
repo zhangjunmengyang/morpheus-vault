@@ -30,7 +30,7 @@ PaperScope.ai 解读：https://paperscope.ai/hf/2508.21113
 
 ## See Also
 
-- [[Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — R-4B 的宏观定位：MLLM Auto-Thinking
-- [[MLLM 概述|MLLM 概述]] — 多模态 LLM 的基础框架
-- [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — Bi-Mode Annealing 与 GRPO 探索维度的关系
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — R-4B 的宏观定位：MLLM Auto-Thinking
+- [[AI/3-LLM/MLLM/MLLM 概述|MLLM 概述]] — 多模态 LLM 的基础框架
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 2026 全景]] — Bi-Mode Annealing 与 GRPO 探索维度的关系
 -  — Agent 知识全图谱

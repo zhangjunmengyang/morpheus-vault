@@ -137,14 +137,14 @@ DAPO 是 GRPO 的工程改进版——原理上没有本质突破，但在实践
 
 ## 相关
 
-- [[GRPO 深度理解|GRPO 深度理解]] — 基础算法
-- [[GRPO-verl实践|GRPO verl 实践]] — 对比参考
-- [[verl 训练参数|verl 训练参数]]
-- [[实现其他 RL 方法|verl 实现其他 RL 方法]]
-- [[硬件资源预估|硬件资源预估]]
-- [[PPO 原理|PPO 原理]]
-- [[verl 概述|verl 概述]]
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — 基础算法
+- [[AI/3-LLM/RL/GRPO/GRPO-verl实践|GRPO verl 实践]] — 对比参考
+- [[AI/3-LLM/Frameworks/verl/verl 训练参数|verl 训练参数]]
+- [[AI/3-LLM/Frameworks/verl/实现其他 RL 方法|verl 实现其他 RL 方法]]
+- [[AI/3-LLM/Frameworks/verl/硬件资源预估|硬件资源预估]]
+- [[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]]
 
 > **see-also（Agent 训练场景）**：DAPO 的 clip-higher（非对称 clip）和动态采样是 Agent RL 训练最常用的稳定性工具，在以下 Agent 场景中频繁被引用：
-> - [[Agent-RL-训练实战指南|Agent RL 训练实战指南]] — DAPO clip-higher 在 Agent 场景的完整实践指南，含 entropy collapse 的诊断和修复配方
+> - [[AI/2-Agent/Agentic-RL/Agent-RL-训练实战指南|Agent RL 训练实战指南]] — DAPO clip-higher 在 Agent 场景的完整实践指南，含 entropy collapse 的诊断和修复配方
 > - [[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong（极长 horizon Agent）]] — 极长任务场景下 DAPO 思路的延伸：如何在 100+ step 的训练中维持探索熵

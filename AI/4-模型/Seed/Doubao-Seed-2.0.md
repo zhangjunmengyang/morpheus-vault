@@ -133,8 +133,8 @@ related:
 
 ## 相关笔记
 - [[2026年2月模型潮（这篇毫无价值，哪怕梳理个从 deepseek R1 以来的时间线都比这强）|2026年2月模型潮（这篇毫无价值）]] — 7 款 frontier model 同月发布的整体分析
-- [[GLM-5|GLM-5]] — 同期发布的另一款国产旗舰，744B MoE + Slime 异步 RL
-- [[Slime-RL-Framework|Slime RL Framework]] — GLM-5/Doubao 系共用异步 RL 基础设施对比
+- [[AI/4-模型/GLM/GLM-5|GLM-5]] — 同期发布的另一款国产旗舰，744B MoE + Slime 异步 RL
+- [[AI/3-LLM/RL/Frameworks/Slime-RL-Framework|Slime RL Framework]] — GLM-5/Doubao 系共用异步 RL 基础设施对比
 -  — Doubao-Seed-2.0 定位 Agent-first，参见 Agent 全图谱
 
 ---

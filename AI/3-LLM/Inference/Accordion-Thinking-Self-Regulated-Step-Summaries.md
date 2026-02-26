@@ -186,12 +186,12 @@ Accordion-Thinking 提供了一个新路径：**压缩推理链，而非截断�
 
 ## 关键词连接
 
-- [[GRPO-Improvement-Panorama-2026|GRPO全景]] — 采用 GRPO 变体（无 KL，无 length normalization）
-- [[Progressive-Thought-Encoding-Cache-Efficient-RL|PTE（Progressive Thought Encoding）]] — 同类问题（长 CoT 效率），不同路径（主动 vs 被动压缩）
-- [[Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 系统效率（量化）vs 算法效率（压缩），可组合
-- [[RL-Training-Stability-2026-Unified-Analysis|RL训练稳定性分析]] — 归属 Exploration/Efficiency 维度
-- [[TTC-Test-Time-Compute-Efficiency-2026-综合分析|TTC效率2026综合分析]] — Accordion 是四大路线之"选择性遗忘（压缩版）"的代表工作；ICLR 2026 最大热点方向
-- [[SIA-Sparse-Inference-time-Alignment|SIA（ICML 2026，NTU）]] — **同族正交工作**：SIA 用 entropy 识别 Junction 节点做稀疏对齐，Accordion 用 RL 主动压缩中间步骤——两者都基于"不是每个 token 同等重要"的核心信念，解决不同问题（对齐效率 vs 推理效率）
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO全景]] — 采用 GRPO 变体（无 KL，无 length normalization）
+- [[AI/3-LLM/Inference/Progressive-Thought-Encoding-Cache-Efficient-RL|PTE（Progressive Thought Encoding）]] — 同类问题（长 CoT 效率），不同路径（主动 vs 被动压缩）
+- [[AI/3-LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 系统效率（量化）vs 算法效率（压缩），可组合
+- [[AI/3-LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL训练稳定性分析]] — 归属 Exploration/Efficiency 维度
+- [[AI/3-LLM/Inference/TTC-Test-Time-Compute-Efficiency-2026-综合分析|TTC效率2026综合分析]] — Accordion 是四大路线之"选择性遗忘（压缩版）"的代表工作；ICLR 2026 最大热点方向
+- [[AI/3-LLM/Inference/SIA-Sparse-Inference-time-Alignment|SIA（ICML 2026，NTU）]] — **同族正交工作**：SIA 用 entropy 识别 Junction 节点做稀疏对齐，Accordion 用 RL 主动压缩中间步骤——两者都基于"不是每个 token 同等重要"的核心信念，解决不同问题（对齐效率 vs 推理效率）
 
 ---
 

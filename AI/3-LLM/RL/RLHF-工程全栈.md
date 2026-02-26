@@ -31,7 +31,7 @@ flowchart TD
 
 起点是一个预训练 base model，通过高质量指令-回答对进行微调。
 
-参见 [[SFT 原理|SFT 原理]] 和 [[SFT-TRL实践|SFT-TRL 实践]]。
+参见 [[AI/3-LLM/SFT/SFT 原理|SFT 原理]] 和 [[AI/3-LLM/SFT/SFT-TRL实践|SFT-TRL 实践]]。
 
 关键注意点：
 - SFT 数据质量 >> 数量（千条高质量 > 万条噪声数据）
@@ -90,7 +90,7 @@ def reward_loss(chosen_reward, rejected_reward):
 
 经典 RLHF 算法，OpenAI InstructGPT 使用。
 
-参见 [[PPO 原理|PPO 原理]] 和 [[PPO-TRL实践|PPO-TRL 实践]]。
+参见 [[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]] 和 [[AI/3-LLM/RL/PPO/PPO-TRL实践|PPO-TRL 实践]]。
 
 ```mermaid
 flowchart LR
@@ -115,7 +115,7 @@ $$\mathcal{L}^{PPO} = -\mathbb{E}[\min(r_t(\theta)\hat{A}_t, \text{clip}(r_t(\th
 
 DeepSeek 在 2024 年提出，R1 的核心训练算法。
 
-参见 [[GRPO 深度理解|GRPO 深度理解]]。
+参见 [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]。
 
 ```
 GRPO vs PPO 的关键区别：
@@ -153,7 +153,7 @@ def grpo_step(policy, ref_policy, reward_model, prompt, G=16):
 
 跳过 RM 训练，直接从偏好数据优化策略。
 
-参见 [[DPO-TRL实践|DPO-TRL 实践]]。
+参见 [[AI/3-LLM/RL/DPO/DPO-TRL实践|DPO-TRL 实践]]。
 
 $$\mathcal{L}_{DPO} = -\mathbb{E}\left[\log\sigma\left(\beta\log\frac{\pi_\theta(y_w|x)}{\pi_{ref}(y_w|x)} - \beta\log\frac{\pi_\theta(y_l|x)}{\pi_{ref}(y_l|x)}\right)\right]$$
 
@@ -209,7 +209,7 @@ trainer.train()
     → TRL DPO/GRPO → verl PPO/GRPO
 ```
 
-参见 [[TRL 概述|TRL 概述]] 和 [[verl 概述|verl 概述]]。
+参见 [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL 概述]] 和 [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]]。
 
 ## 6. 工程 Pipeline 实操
 
@@ -248,7 +248,7 @@ reward:
   # 或 type: model_based + reward_model_path
 ```
 
-参见 [[AI/3-LLM/Frameworks/verl/GRPO-verl实践|GRPO-verl 实践]] 和 [[GRPO-TRL实践|GRPO-TRL 实践]]。
+参见 [[AI/3-LLM/Frameworks/verl/GRPO-verl实践|GRPO-verl 实践]] 和 [[AI/3-LLM/RL/GRPO/GRPO-TRL实践|GRPO-TRL 实践]]。
 
 ## 7. 前沿趋势 (2025-2026)
 
@@ -292,10 +292,10 @@ A: 检测：监控 reward 上升但 win rate 下降。缓解：KL 惩罚、长�
 
 ## 相关链接
 
-- [[PPO 原理|PPO 原理]] / [[PPO-TRL实践|PPO-TRL 实践]]
-- [[GRPO 深度理解|GRPO 深度理解]] / [[GRPO-TRL实践|GRPO-TRL 实践]]
-- [[DPO-TRL实践|DPO-TRL 实践]]
+- [[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]] / [[AI/3-LLM/RL/PPO/PPO-TRL实践|PPO-TRL 实践]]
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] / [[AI/3-LLM/RL/GRPO/GRPO-TRL实践|GRPO-TRL 实践]]
+- [[AI/3-LLM/RL/DPO/DPO-TRL实践|DPO-TRL 实践]]
 - [[AI/3-LLM/RL/DAPO/|DAPO]]
-- [[verl 概述|verl 概述]] / [[OpenRLHF|OpenRLHF]]
-- [[SFT 原理|SFT 原理]]
-- [[RL 概览|RL 概览]]
+- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]] / [[AI/3-LLM/Frameworks/OpenRLHF/OpenRLHF|OpenRLHF]]
+- [[AI/3-LLM/SFT/SFT 原理|SFT 原理]]
+- [[AI/3-LLM/RL/Fundamentals/RL 概览|RL 概览]]

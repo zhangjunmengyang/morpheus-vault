@@ -17,7 +17,7 @@ related:
   - "[[AI/3-LLM/Infra/xtrain-lc6-Context并行RingAttention手写]]"
   - "[[AI/3-LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]]"
   - "[[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]"
-  - "[[分布式训练]]"
+  - "[[AI/3-LLM/Infra/分布式训练]]"
 ---
 
 # xtrain lc5 — 流水线并行从零手写
@@ -442,5 +442,5 @@ A：PP（层间切分）+ TP（层内切分）+ DP（数据复制）= 3D 并行�
 - [[AI/3-LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]] — 前置：ZeRO+PP 减少每 stage 显存
 - [[AI/3-LLM/Infra/xtrain-lc6-Context并行RingAttention手写]] — 后置：CP 序列维度切分，PP+CP 超长序列训练
 - [[AI/3-LLM/Infra/xtrain-lc7-MoE专家并行从零手写]] — DualPipe 设计动机正是 MoE EP 通信重叠
-- [[分布式训练]] — 分布式训练理论全景
+- [[AI/3-LLM/Infra/分布式训练]] — 分布式训练理论全景
 - [[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]] — xtrain 系列课程地图

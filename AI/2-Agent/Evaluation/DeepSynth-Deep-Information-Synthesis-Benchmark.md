@@ -16,11 +16,11 @@ tags:
 sources:
   - "arXiv:2602.21143 — DeepSynth: Deep Information Synthesis Benchmark"
 related:
-  - "[[Agent-RL-环境工程系统论]]"
-  - "[[CSO-Verified-Critical-Step-Optimization]]"
-  - "[[Aletheia-Gemini3-DeepThink-FirstProof]]"
-  - "[[Agent评估体系批判-Goodhart法则与Benchmark陷阱]]"
-  - "[[Search-R1-Reasoning-Search-Engine-RL]]"
+  - "[[AI/2-Agent/Agentic-RL/Agent-RL-环境工程系统论]]"
+  - "[[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization]]"
+  - "[[AI/2-Agent/Evaluation/Aletheia-Gemini3-DeepThink-FirstProof]]"
+  - "[[AI/2-Agent/Evaluation/Agent评估体系批判-Goodhart法则与Benchmark陷阱]]"
+  - "[[AI/2-Agent/Agentic-RL/Search-R1-Reasoning-Search-Engine-RL]]"
 ---
 
 # DeepSynth: 深度信息综合 Agent Benchmark
@@ -216,15 +216,15 @@ DeepSynth 揭示的核心能力缺口：
 
 ## See Also
 
-- [[Agent-RL-环境工程系统论]] — 真实世界任务的 Reward 设计挑战；DeepSynth 类任务的 JSON 验证器可作为 Reward 信号来源
-- [[CSO-Verified-Critical-Step-Optimization]] — 反事实 credit assignment：导航错误（找不到正确数据源）和综合错误（拿到数据但推理出错）是两种不同的失败模式，对应 CSO 的不同 credit 维度
-- [[Aletheia-Gemini3-DeepThink-FirstProof]] — 研究级任务评估对比：数学（形式可验证，Lean 4）vs 信息综合（JSON 可验证）；两种验证器的工程差异
-- [[Agent评估体系批判-Goodhart法则与Benchmark陷阱]] — DeepSynth 在设计上对抗 Goodhart's Law（不可直接搜索 + 双重标注），但规模偏小是统计弱点
-- [[Search-R1-Reasoning-Search-Engine-RL]] — 搜索 RL 训练方法；DeepSynth 的多源导航任务可作为更难的 Search-RL 训练数据
+- [[AI/2-Agent/Agentic-RL/Agent-RL-环境工程系统论]] — 真实世界任务的 Reward 设计挑战；DeepSynth 类任务的 JSON 验证器可作为 Reward 信号来源
+- [[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization]] — 反事实 credit assignment：导航错误（找不到正确数据源）和综合错误（拿到数据但推理出错）是两种不同的失败模式，对应 CSO 的不同 credit 维度
+- [[AI/2-Agent/Evaluation/Aletheia-Gemini3-DeepThink-FirstProof]] — 研究级任务评估对比：数学（形式可验证，Lean 4）vs 信息综合（JSON 可验证）；两种验证器的工程差异
+- [[AI/2-Agent/Evaluation/Agent评估体系批判-Goodhart法则与Benchmark陷阱]] — DeepSynth 在设计上对抗 Goodhart's Law（不可直接搜索 + 双重标注），但规模偏小是统计弱点
+- [[AI/2-Agent/Agentic-RL/Search-R1-Reasoning-Search-Engine-RL]] — 搜索 RL 训练方法；DeepSynth 的多源导航任务可作为更难的 Search-RL 训练数据
 
 ## 推荐阅读
 
 1. **arXiv:2602.21143** — DeepSynth 原文，重点看 RQ2（提供步骤+170%）和 RQ4（导航/综合错误各占 50%）
 2. **GAIA benchmark**（arXiv:2311.12983）— 对比：GAIA vs DeepSynth 在多源综合深度上的差异
-3. **[[Agentic-RL-2026前沿综合分析]]** — Reward 设计挑战章节（DeepSynth 提供了新的真实 verifiable reward 来源）
+3. **[[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析]]** — Reward 设计挑战章节（DeepSynth 提供了新的真实 verifiable reward 来源）
 4. **[[AI/3-LLM/Evaluation/LLM评估与Benchmark-2026技术全景]]** — Benchmark 生态全景，DeepSynth 填补信息综合维度缺口

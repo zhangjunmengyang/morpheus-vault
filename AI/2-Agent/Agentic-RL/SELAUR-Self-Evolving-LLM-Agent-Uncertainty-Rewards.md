@@ -15,10 +15,10 @@ tags:
   - credit-assignment
   - exploration
 related:
-  - "[[CSO-Verified-Critical-Step-Optimization|CSO — 反事实验证失败轨迹]]"
-  - "[[GiGPO-Group-in-Group-Policy-Optimization|GiGPO — step-level credit]]"
-  - "[[ERL-Experiential-Reinforcement-Learning|ERL — 反思内化失败经验]]"
-  - "[[Agentic-RL-2026前沿综合分析|Agentic-RL 综合分析]]"
+  - "[[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO — 反事实验证失败轨迹]]"
+  - "[[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO — step-level credit]]"
+  - "[[AI/2-Agent/Agentic-RL/ERL-Experiential-Reinforcement-Learning|ERL — 反思内化失败经验]]"
+  - "[[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL 综合分析]]"
 ---
 
 # SELAUR: Self Evolving LLM Agent via Uncertainty-aware Rewards
@@ -231,15 +231,15 @@ Reward 来源谱系（更新）：
 ## See Also
 
 **失败轨迹利用谱系（三种深度）：**
-- [[CSO-Verified-Critical-Step-Optimization|CSO（arXiv:2602.03412）]] — 失败轨迹 + 反事实验证（PRM + expert 生成 + rollout 验证），信号最可靠但成本最高（需 expert model）；SELAUR 是其零成本替代方案
-- [[ERL-Experiential-Reinforcement-Learning|ERL（arXiv:2602.13949）]] — 失败轨迹 + 反思循环（生成反思 Δ → 重试 → SFT 蒸馏），中等成本；SELAUR 更轻量但信息深度不及 ERL
+- [[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO（arXiv:2602.03412）]] — 失败轨迹 + 反事实验证（PRM + expert 生成 + rollout 验证），信号最可靠但成本最高（需 expert model）；SELAUR 是其零成本替代方案
+- [[AI/2-Agent/Agentic-RL/ERL-Experiential-Reinforcement-Learning|ERL（arXiv:2602.13949）]] — 失败轨迹 + 反思循环（生成反思 Δ → 重试 → SFT 蒸馏），中等成本；SELAUR 更轻量但信息深度不及 ERL
 
 **Credit Assignment 协同（成功 vs 失败双维度）：**
-- [[GiGPO-Group-in-Group-Policy-Optimization|GiGPO（arXiv:2505.10978）]] — step-level credit assignment 处理**成功**轨迹；与 SELAUR 正交互补：GiGPO 精化成功信号，SELAUR 激活失败信号；两者组合是 multi-turn RL 训练信号的完整覆盖
+- [[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO（arXiv:2505.10978）]] — step-level credit assignment 处理**成功**轨迹；与 SELAUR 正交互补：GiGPO 精化成功信号，SELAUR 激活失败信号；两者组合是 multi-turn RL 训练信号的完整覆盖
 
 **探索增强同族（exploration 维度）：**
-- [[DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO（arXiv:2602.14169）]] — Pivot-Driven Resampling 解决 GRPO 探索塌缩（root saturation）；与 SELAUR 的 uncertainty-based 探索思路相似（都关注探索不足），但机制不同（DEEP-GRPO 识别 pivot 轨迹重采样，SELAUR 用 token 熵直接 reshape reward）
-- [[PyVision-RL-Agentic-Vision-Interaction-Collapse|PyVision-RL（arXiv:2602.20739）]] — 多模态 Agentic RL 的 Interaction Collapse（RL 退化为少工具少多轮）；Oversampling-Filtering-Ranking 主动过滤退化轨迹 vs SELAUR 对失败轨迹 reward reshape——两者处理 RL 训练中 agent 行为退化问题，但层次不同：SELAUR 在 reward 层激活失败信号，PyVision-RL 在 rollout 层过滤退化轨迹
+- [[AI/3-LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO（arXiv:2602.14169）]] — Pivot-Driven Resampling 解决 GRPO 探索塌缩（root saturation）；与 SELAUR 的 uncertainty-based 探索思路相似（都关注探索不足），但机制不同（DEEP-GRPO 识别 pivot 轨迹重采样，SELAUR 用 token 熵直接 reshape reward）
+- [[AI/3-LLM/MLLM/PyVision-RL-Agentic-Vision-Interaction-Collapse|PyVision-RL（arXiv:2602.20739）]] — 多模态 Agentic RL 的 Interaction Collapse（RL 退化为少工具少多轮）；Oversampling-Filtering-Ranking 主动过滤退化轨迹 vs SELAUR 对失败轨迹 reward reshape——两者处理 RL 训练中 agent 行为退化问题，但层次不同：SELAUR 在 reward 层激活失败信号，PyVision-RL 在 rollout 层过滤退化轨迹
 
 **综述导航：**
-- [[Agentic-RL-2026前沿综合分析|Agentic-RL 2026 综合分析]] — Reward Design 维度框架；SELAUR 填补「uncertainty intrinsic reward」类别
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL 2026 综合分析]] — Reward Design 维度框架；SELAUR 填补「uncertainty intrinsic reward」类别

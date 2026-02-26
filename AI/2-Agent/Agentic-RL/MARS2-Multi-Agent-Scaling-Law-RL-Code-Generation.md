@@ -233,9 +233,9 @@ MARS2 揭示了一个与 TTS（test-time compute scaling）平行的维度——
   - Stronger-MAS (2510.11062) — flexible workflow + multi-agent RL
   - M-GRPO (2511.13288) — vertical multi-agent (Deep Research 场景)
 - **关联笔记**：
-  - [[GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — step-level credit assignment
-  - [[LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL|LOOP]] — value-free PPO for long-horizon
-  - [[PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]] — phase-level 路由，另一种 agent 多样性视角
-  - [[Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — Agentic RL 全景
-  - [[Tool-Use-RL-训练专题|Tool-Use-RL 训练专题]] — 工具调用 RL 的相关设计
-  - [[Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]] — MAGRPO/AT-GRPO 系列与本文三条路线的系统性对比
+  - [[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — step-level credit assignment
+  - [[AI/2-Agent/Agentic-RL/LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL|LOOP]] — value-free PPO for long-horizon
+  - [[AI/2-Agent/Agentic-RL/PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]] — phase-level 路由，另一种 agent 多样性视角
+  - [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — Agentic RL 全景
+  - [[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL 训练专题]] — 工具调用 RL 的相关设计
+  - [[AI/2-Agent/Agentic-RL/Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]] — MAGRPO/AT-GRPO 系列与本文三条路线的系统性对比

@@ -32,5 +32,5 @@ PaperScope.ai 解读：https://paperscope.ai/hf/2509.01055
 
 ## 相关
 
-- [[verl 概述|verl 概述]]
-- [[GRPO 深度理解|GRPO 深度理解]]
+- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]]
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]

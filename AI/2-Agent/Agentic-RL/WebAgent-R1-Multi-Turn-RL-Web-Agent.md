@@ -197,16 +197,16 @@ ToRL/ARTIST/Search-R1 mask 掉 tool output；WebAgent-R1 compress 掉历史 obse
 ## See Also
 
 **Context Overflow 同族（正交解法）**
-- [[KLong-Extremely-Long-Horizon-Agent-RL|KLong（NUS+MIT）]] — trajectory-splitting SFT + Progressive RL；WebAgent-R1 用 Dynamic Compression，KLong 用 Trajectory Splitting——同问题不同解法，可组合
-- [[TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR]] — rollout 质量维度，per-turn 树搜索
+- [[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent-RL|KLong（NUS+MIT）]] — trajectory-splitting SFT + Progressive RL；WebAgent-R1 用 Dynamic Compression，KLong 用 Trajectory Splitting——同问题不同解法，可组合
+- [[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR]] — rollout 质量维度，per-turn 树搜索
 
 **Token Masking 同族**
-- [[Search-R1-Reasoning-Search-Engine-RL|Search-R1（UIUC/UMass）]] — retrieved token masking；与 WebAgent-R1 dynamic compression 同根（哪些 tokens 不参与梯度）
-- [[ARTIST-Agentic-Reasoning-Tool-Integration-RL|ARTIST（Microsoft Research）]] — 工具输出 token masking + 三类 reward；instruct model 路线
-- [[ToRL-Tool-Integrated-Reinforcement-Learning|ToRL（SJTU/GAIR）]] — base model 直接 RL，对比 BC 热启动策略
+- [[AI/2-Agent/Agentic-RL/Search-R1-Reasoning-Search-Engine-RL|Search-R1（UIUC/UMass）]] — retrieved token masking；与 WebAgent-R1 dynamic compression 同根（哪些 tokens 不参与梯度）
+- [[AI/2-Agent/Agentic-RL/ARTIST-Agentic-Reasoning-Tool-Integration-RL|ARTIST（Microsoft Research）]] — 工具输出 token masking + 三类 reward；instruct model 路线
+- [[AI/2-Agent/Agentic-RL/ToRL-Tool-Integrated-Reinforcement-Learning|ToRL（SJTU/GAIR）]] — base model 直接 RL，对比 BC 热启动策略
 
 **Web/GUI Agent**
-- [[UI-TARS-2 论文|UI-TARS-2]] — 多模态 GUI Agent RL（视觉路线，对比 WebAgent-R1 的纯文本路线）
+- [[AI/2-Agent/Agentic-RL/UI-TARS-2 论文|UI-TARS-2]] — 多模态 GUI Agent RL（视觉路线，对比 WebAgent-R1 的纯文本路线）
 
 **Tool Use RL 全景**
-- [[Tool-Use-RL-训练专题|Tool Use RL 训练专题]] — 完整谱系（ToolRL/ToRL/ARTIST/Search-R1/WebAgent-R1）
+- [[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool Use RL 训练专题]] — 完整谱系（ToolRL/ToRL/ARTIST/Search-R1/WebAgent-R1）

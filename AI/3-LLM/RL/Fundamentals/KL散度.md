@@ -16,9 +16,9 @@ sources:
   - DeepSeekMath (GRPO) — arXiv:2402.03300
   - Cover & Thomas, Elements of Information Theory, 2nd ed., Wiley, 2006
 related:
-  - "[[GRPO 深度理解|GRPO 深度理解]]"
-  - "[[PPO 原理|PPO 原理]]"
-  - "[[信息论|信息论]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]"
+  - "[[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]]"
+  - "[[AI/1-Foundations/Math/信息论|信息论]]"
 ---
 #  K1-K3 & Forward vs. Reverse KL散度
 
@@ -222,14 +222,14 @@ plt.legend()
 - 是否存在比 K3 更优的 KL 估计器？自适应方差的估计器（如 RLOO）是否更好？
 
 ### 脑暴：如果往下延伸
-- 如果把 [[PPO 原理|PPO]] 的 clip ratio 和 KL 惩罚统一到一个框架，能否得到更优的策略约束？
+- 如果把 [[AI/3-LLM/RL/PPO/PPO 原理|PPO]] 的 clip ratio 和 KL 惩罚统一到一个框架，能否得到更优的策略约束？
 - Jensen-Shannon 散度（Forward + Reverse 的对称平均）在 RLHF 中是否有应用潜力？
 
 ## 相关
 
-> 🔗 See also: [[GRPO 深度理解|GRPO 深度理解]] — 使用 Reverse KL + K3 的主流 RL 对齐方法
-> 🔗 See also: [[PPO 原理|PPO 原理]] — KL 约束的另一种实现（clip ratio）
-> 🔗 See also: [[信息论|信息论]] — KL 散度的数学基础
+> 🔗 See also: [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — 使用 Reverse KL + K3 的主流 RL 对齐方法
+> 🔗 See also: [[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]] — KL 约束的另一种实现（clip ratio）
+> 🔗 See also: [[AI/1-Foundations/Math/信息论|信息论]] — KL 散度的数学基础
 
-- [[概率与分布|概率与分布]]
-- [[DPO-TRL实践|DPO]]
+- [[AI/1-Foundations/Math/概率与分布|概率与分布]]
+- [[AI/3-LLM/RL/DPO/DPO-TRL实践|DPO]]

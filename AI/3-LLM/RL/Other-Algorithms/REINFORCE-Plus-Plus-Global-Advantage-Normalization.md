@@ -15,10 +15,10 @@ sources:
   - https://github.com/OpenRLHF/OpenRLHF
 venue: preprint
 related:
-  - "[[GRPO 深度理解|GRPO 深度理解]]"
-  - "[[PPO 原理|PPO 原理]]"
-  - "[[RLOO-TRL实践|RLOO-TRL实践]]"
-  - "[[GRPO-Improvement-Panorama-2026|GRPO-Improvement-Panorama-2026]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]"
+  - "[[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]]"
+  - "[[AI/3-LLM/RL/RLOO/RLOO-TRL实践|RLOO-TRL实践]]"
+  - "[[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO-Improvement-Panorama-2026]]"
 ---
 
 # REINFORCE++: Global Advantage Normalization
@@ -116,7 +116,7 @@ graph TD
 
 - 原论文：[arXiv:2501.03262](https://arxiv.org/abs/2501.03262)
 - 代码：[OpenRLHF](https://github.com/OpenRLHF/OpenRLHF)
-- 谱系对比：[[GRPO 深度理解|GRPO 深度理解]] / [[PPO 原理|PPO 原理]] / [[RLOO-TRL实践|RLOO-TRL实践]]
+- 谱系对比：[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] / [[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]] / [[AI/3-LLM/RL/RLOO/RLOO-TRL实践|RLOO-TRL实践]]
 - 理论统一视角：[From REINFORCE to Dr. GRPO](https://lancelqf.github.io/note/llm_post_training/)
 
 ---
@@ -124,11 +124,11 @@ graph TD
 ## See Also
 
 ### GRPO/REINFORCE 算法谱系（直接对照）
-- [[GRPO 深度理解|GRPO 深度理解]] — REINFORCE++ 是 GRPO 的 critic-free 替代方案；全局 batch normalization vs group-within-batch normalization 的关键区别
-- [[Dr-GRPO-Unbiased-Optimization|Dr. GRPO]] — 同类修复，角度互补：REINFORCE++ 修 advantage 估计的归一化问题，Dr. GRPO 修 length/difficulty 带来的去偏问题；两者可组合使用
-- [[PPO 原理|PPO 原理]] — 有 critic 的对照：PPO 用 value network 估计 baseline，REINFORCE++ 用全局平均 reward 作 baseline——计算更简单，性能相当
-- [[RLOO-TRL实践|RLOO-TRL实践]] — 另一条 critic-free 路线：Leave-One-Out 估计器，与 REINFORCE++ 的全局归一化各有优劣
-- [[GRPO-Improvement-Panorama-2026|GRPO 改进全景]] — 七维框架中，REINFORCE++ 属于"无偏 advantage 估计"维度
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — REINFORCE++ 是 GRPO 的 critic-free 替代方案；全局 batch normalization vs group-within-batch normalization 的关键区别
+- [[AI/3-LLM/RL/GRPO/Dr-GRPO-Unbiased-Optimization|Dr. GRPO]] — 同类修复，角度互补：REINFORCE++ 修 advantage 估计的归一化问题，Dr. GRPO 修 length/difficulty 带来的去偏问题；两者可组合使用
+- [[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]] — 有 critic 的对照：PPO 用 value network 估计 baseline，REINFORCE++ 用全局平均 reward 作 baseline——计算更简单，性能相当
+- [[AI/3-LLM/RL/RLOO/RLOO-TRL实践|RLOO-TRL实践]] — 另一条 critic-free 路线：Leave-One-Out 估计器，与 REINFORCE++ 的全局归一化各有优劣
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进全景]] — 七维框架中，REINFORCE++ 属于"无偏 advantage 估计"维度
 
 ### 工程实践
-- [[ReMax-RL-Alignment-REINFORCE-Max-Baseline|ReMax]] — 同为 REINFORCE 改进，ReMax 用 greedy rollout 作 baseline（省 46% 内存）；REINFORCE++ 用全局批次均值；内存受限场景首选 ReMax，批次均值更稳定时选 REINFORCE++
+- [[AI/3-LLM/RL/Other-Algorithms/ReMax-RL-Alignment-REINFORCE-Max-Baseline|ReMax]] — 同为 REINFORCE 改进，ReMax 用 greedy rollout 作 baseline（省 46% 内存）；REINFORCE++ 用全局批次均值；内存受限场景首选 ReMax，批次均值更稳定时选 REINFORCE++

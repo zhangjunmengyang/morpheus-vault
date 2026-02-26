@@ -82,11 +82,11 @@ git worktrees 并行 + 自动 merge 是软件工程场景的第一个真实可�
 
 ## 关联
 
-- [[Claude-Sonnet-4.6]] — 发布于 2/17，在 agent 任务上追平 Opus 4.6，但 1/5 价格
-- [[Kimi-K2.5-PARL]] — 同期 Agent Swarm，PARL 学术路线 vs Anthropic Agent Teams 产品路线
-- [[EnterpriseGym-Corecraft]] — Corecraft benchmark 中 Opus 4.6 < 30% pass rate，说明当前 frontier 在真实企业 agent 任务上仍远未饱和
-- [[Gemini-3-Deep-Think]] — Gemini 3 Pro ARC-AGI-2 45.1% vs Opus 4.6 68.8%，差距显著
-- [[Gemini-3.1-Pro|Gemini 3.1 Pro]] — ARC-AGI-2 77.1% 反超 Opus 4.6（68.8%），格局逆转，2026-02-19 发布
+- [[AI/4-模型/Claude/Claude-Sonnet-4.6]] — 发布于 2/17，在 agent 任务上追平 Opus 4.6，但 1/5 价格
+- [[AI/2-Agent/Multi-Agent/Kimi-K2.5-PARL]] — 同期 Agent Swarm，PARL 学术路线 vs Anthropic Agent Teams 产品路线
+- [[AI/2-Agent/Agentic-RL/EnterpriseGym-Corecraft]] — Corecraft benchmark 中 Opus 4.6 < 30% pass rate，说明当前 frontier 在真实企业 agent 任务上仍远未饱和
+- [[AI/3-LLM/Inference/Gemini-3-Deep-Think]] — Gemini 3 Pro ARC-AGI-2 45.1% vs Opus 4.6 68.8%，差距显著
+- [[AI/4-模型/Gemini/Gemini-3.1-Pro|Gemini 3.1 Pro]] — ARC-AGI-2 77.1% 反超 Opus 4.6（68.8%），格局逆转，2026-02-19 发布
 
 ## 备注
 

@@ -19,9 +19,9 @@ sources:
   - https://github.com/liziniu/ReMax
 venue: ICML 2024
 related:
-  - "[[PPO 原理]]"
-  - "[[REINFORCE-Plus-Plus-Global-Advantage-Normalization]]"
-  - "[[GRPO 深度理解]]"
+  - "[[AI/3-LLM/RL/PPO/PPO 原理]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/REINFORCE-Plus-Plus-Global-Advantage-Normalization]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解]]"
 ---
 
 # ReMax: REINFORCE + Max-Rollout Baseline for LLM Alignment
@@ -170,7 +170,7 @@ ReMax 是第一个在 LLM RLHF 中证明"不需要 critic"的工作，历史意�
 - **原始论文**：[arXiv:2310.10505](https://arxiv.org/abs/2310.10505)
 - **代码**：[github.com/liziniu/ReMax](https://github.com/liziniu/ReMax)
 - **关联笔记**：
-  - [[REINFORCE-Plus-Plus-Global-Advantage-Normalization|REINFORCE++]] — ReMax 的演进版
-  - [[GRPO 深度理解|GRPO]] — 另一条 critic-free 路线
-  - [[LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL|LOOP]] — LOO baseline 用于 agent 任务
-  - [[PPO 原理|PPO]] — ReMax 试图简化的对象
+  - [[AI/3-LLM/RL/Other-Algorithms/REINFORCE-Plus-Plus-Global-Advantage-Normalization|REINFORCE++]] — ReMax 的演进版
+  - [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO]] — 另一条 critic-free 路线
+  - [[AI/2-Agent/Agentic-RL/LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL|LOOP]] — LOO baseline 用于 agent 任务
+  - [[AI/3-LLM/RL/PPO/PPO 原理|PPO]] — ReMax 试图简化的对象

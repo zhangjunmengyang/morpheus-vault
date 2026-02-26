@@ -27,6 +27,6 @@ https://verl.readthedocs.io/en/latest/algo/rollout_corr_math.html
 
 ## 相关
 
-- [[PPO 原理|PPO 原理]]
-- [[GRPO-verl实践|GRPO-verl实践]]
-- [[verl 概述|verl 概述]]
+- [[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/3-LLM/RL/GRPO/GRPO-verl实践|GRPO-verl实践]]
+- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]]

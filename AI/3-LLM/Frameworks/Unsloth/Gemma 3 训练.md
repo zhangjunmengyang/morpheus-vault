@@ -114,8 +114,8 @@ trainer.train()
 
 ## 相关
 
-- [[Unsloth 概述|Unsloth 概述]]
-- [[Qwen3 训练|Qwen3 训练]]
-- [[Chat Templates|Chat Templates]]
-- [[训练示例概述|训练示例概述]]
-- [[notebook 合集|Notebook 合集]]
+- [[AI/3-LLM/Frameworks/Unsloth/Unsloth 概述|Unsloth 概述]]
+- [[AI/3-LLM/Frameworks/Unsloth/Qwen3 训练|Qwen3 训练]]
+- [[AI/3-LLM/Frameworks/Unsloth/Chat Templates|Chat Templates]]
+- [[AI/3-LLM/Frameworks/Unsloth/训练示例概述|训练示例概述]]
+- [[AI/3-LLM/Frameworks/Unsloth/notebook 合集|Notebook 合集]]

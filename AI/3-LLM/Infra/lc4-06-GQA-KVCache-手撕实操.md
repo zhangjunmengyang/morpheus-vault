@@ -18,7 +18,7 @@ related:
   - "[[AI/3-LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写]]"
   - "[[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操]]"
   - "[[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写]]"
-  - "[[Attention 变体综述]]"
+  - "[[AI/3-LLM/Architecture/Attention 变体综述]]"
 ---
 
 # GQA + KVCache 手撕实操（MA-RLHF Batch D）
@@ -311,4 +311,4 @@ MLA 可以看作 GQA 的深化：GQA 在"头数"维度压缩，MLA 在"低秩"�
 - [[AI/3-LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写]] — TPA 的 head-specific 低秩 KV（另一维度压缩）
 - [[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操]] — KV Cache 的物理内存管理（PagedAttention），工程层扩展
 - [[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写]] — TP 下 GQA 权重切分细节（分布式场景）
-- [[Attention 变体综述]] — MHA/MQA/GQA/MLA 全谱系理论对比
+- [[AI/3-LLM/Architecture/Attention 变体综述]] — MHA/MQA/GQA/MLA 全谱系理论对比

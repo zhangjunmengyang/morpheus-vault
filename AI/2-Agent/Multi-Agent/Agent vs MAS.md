@@ -88,7 +88,7 @@ tags:
 
 ## See Also
 
-- [[Multi-Agent 概述|Multi-Agent 概述]] — MAS 的基础概念
-- [[IMAGINE-多Agent蒸馏到单模型|IMAGINE]] — Agent vs MAS 的新视角：MAS 能力蒸馏进单 Agent
-- [[AgentConductor-Topology-Evolution|AgentConductor]] — MAS 拓扑优化论文
+- [[AI/2-Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]] — MAS 的基础概念
+- [[AI/2-Agent/Multi-Agent/IMAGINE-多Agent蒸馏到单模型|IMAGINE]] — Agent vs MAS 的新视角：MAS 能力蒸馏进单 Agent
+- [[AI/2-Agent/Multi-Agent/AgentConductor-Topology-Evolution|AgentConductor]] — MAS 拓扑优化论文
 -  — Agent 知识全图谱

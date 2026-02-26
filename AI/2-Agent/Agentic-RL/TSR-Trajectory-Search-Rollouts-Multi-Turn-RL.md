@@ -17,10 +17,10 @@ tags:
 sources:
   - arXiv:2602.11767 (v2, 2026-02-21) — ICML 2026
 related:
-  - "[[Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]]"
-  - "[[GiGPO-Group-in-Group-Policy-Optimization|GiGPO]]"
-  - "[[HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER]]"
-  - "[[RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO]]"
+  - "[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]]"
+  - "[[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]]"
+  - "[[AI/2-Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER]]"
+  - "[[AI/2-Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO]]"
 ---
 
 # TSR: Trajectory-Search Rollouts for Multi-Turn RL of LLM Agents
@@ -329,28 +329,28 @@ TSR 的最大价值不是 "15% 提升" 本身，而是它证明了：
 ## See Also
 
 **Multi-Turn RL 训练基础设施（TSR 的生态位）：**
-- [[RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO（arXiv:2504.20073）]] — **TSR 的出发点**：RAGEN 发现 Echo Trap（rollout 多样性崩溃），TSR 用树搜索 + Instance Filtering 直接解决 Echo Trap；RAGEN 是症状诊断，TSR 是训练侧工程修复
+- [[AI/2-Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO（arXiv:2504.20073）]] — **TSR 的出发点**：RAGEN 发现 Echo Trap（rollout 多样性崩溃），TSR 用树搜索 + Instance Filtering 直接解决 Echo Trap；RAGEN 是症状诊断，TSR 是训练侧工程修复
 
 **Credit Assignment 协同（Rollout 质量 × 梯度质量双支柱）：**
-- [[Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — TSR 提升 rollout 质量（输入端），CA 方法提升梯度归因精度（输出端）；两者正交可组合
-- [[GiGPO-Group-in-Group-Policy-Optimization|GiGPO（NeurIPS 2025）]] — step-level credit assignment；TSR+GiGPO = 高质量 rollout + 精确 step credit，潜在最优组合
-- [[HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]] — segment-level CA；TSR 兼容所有 CA 方法（optimizer-agnostic 特性）
+- [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — TSR 提升 rollout 质量（输入端），CA 方法提升梯度归因精度（输出端）；两者正交可组合
+- [[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO（NeurIPS 2025）]] — step-level credit assignment；TSR+GiGPO = 高质量 rollout + 精确 step credit，潜在最优组合
+- [[AI/2-Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]] — segment-level CA；TSR 兼容所有 CA 方法（optimizer-agnostic 特性）
 
 **Rollout 质量 vs 其他训练优化视角：**
-- [[CSO-Verified-Critical-Step-Optimization|CSO（arXiv:2602.03412）]] — 同样关注轨迹质量，但策略不同：TSR 是 online RL 阶段选优质轨迹，CSO 是 offline DPO 从失败轨迹反事实验证；两者维度互补（在线生成 vs 离线挖掘）
-- [[CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2（arXiv:2602.12268）]] — multi-turn RL 的 reward 构造维度；CM2 解决"reward 信号怎么设计"，TSR 解决"rollout 怎么生成"；两者覆盖 multi-turn RL 训练基础设施的不同层
+- [[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO（arXiv:2602.03412）]] — 同样关注轨迹质量，但策略不同：TSR 是 online RL 阶段选优质轨迹，CSO 是 offline DPO 从失败轨迹反事实验证；两者维度互补（在线生成 vs 离线挖掘）
+- [[AI/2-Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2（arXiv:2602.12268）]] — multi-turn RL 的 reward 构造维度；CM2 解决"reward 信号怎么设计"，TSR 解决"rollout 怎么生成"；两者覆盖 multi-turn RL 训练基础设施的不同层
 
 **反思内化协同（训练动态层）：**
-- [[ERL-Experiential-Reinforcement-Learning|ERL（arXiv:2602.13949）]] — 与 TSR 正交可叠加：TSR 解决"哪条 rollout 有训练价值"（树搜索选优）；ERL 解决"失败后如何显式提取纠错信号"（反思循环 + 蒸馏内化）；理论上 TSR+ERL 组合 = 高质量 rollout + 结构化纠错，Sokoban +81%
+- [[AI/2-Agent/Agentic-RL/ERL-Experiential-Reinforcement-Learning|ERL（arXiv:2602.13949）]] — 与 TSR 正交可叠加：TSR 解决"哪条 rollout 有训练价值"（树搜索选优）；ERL 解决"失败后如何显式提取纠错信号"（反思循环 + 蒸馏内化）；理论上 TSR+ERL 组合 = 高质量 rollout + 结构化纠错，Sokoban +81%
 
 **综述导航：**
-- [[Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]] — TSR 在五大维度框架中的定位（Environment/Rollout 工程维度）
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]] — TSR 在五大维度框架中的定位（Environment/Rollout 工程维度）
 
 ## 推荐阅读
 
 1. **原文**：[arXiv:2602.11767](https://arxiv.org/abs/2602.11767) — TSR: Trajectory-Search Rollouts, ICML 2026
-2. **前驱工作**：[[RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO]] — Echo Trap 发现，TSR 的出发点
-3. **协同方案**：[[GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — 与 TSR 正交可组合（rollout 质量 × step credit）
-4. **全景导航**：[[Agentic-RL-2026前沿综合分析|Agentic RL 2026 综合分析]] — 训练基础设施完整框架
+2. **前驱工作**：[[AI/2-Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO]] — Echo Trap 发现，TSR 的出发点
+3. **协同方案**：[[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — 与 TSR 正交可组合（rollout 质量 × step credit）
+4. **全景导航**：[[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 综合分析]] — 训练基础设施完整框架
 
 <!-- 2026-02-26 dedup: 删除了TSR副本（TSR-Trajectory-Search-Rollouts.md），合并了Curriculum Learning关系批判、episode-end-only reward退化分析 -->

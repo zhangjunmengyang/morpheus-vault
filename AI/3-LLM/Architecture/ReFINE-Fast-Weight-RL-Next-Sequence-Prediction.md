@@ -16,8 +16,8 @@ date: 2026-02-20
 institution: Princeton University
 venue: ICML (submitted)
 see-also:
-  - "[[Mamba-SSM]]"
-  - "[[Attention 变体综述]]"
+  - "[[AI/3-LLM/Architecture/Mamba-SSM]]"
+  - "[[AI/3-LLM/Architecture/Attention 变体综述]]"
   - "[[AI/3-LLM/RL/GRPO/_MOC]]"
 ---
 
@@ -190,8 +190,8 @@ ReFINE 的 reward 是 **self-supervised**（用 ground truth token 做监督，�
 
 - → DeltaNet (架构背景)
 - → LaCT (Fast weight 的实现)
-- → [[GRPO 深度理解|GRPO]] (优化算法)
-- → [[MEL-Meta-Experience-Learning|MEL-Meta-Experience-Learning]] (自监督 RL 方向)
-- → [[MAGE-Block-Diffusion-LLM-Sparse-Attention|MAGE-Block-Diffusion-LLM-Sparse-Attention]] (同日读，推理优化方向)
-- → [[Sparrow-Video-LLM-Speculative-Decoding|Sparrow-Video-LLM-Speculative-Decoding]] (同日读，架构特性利用)
-- → [[Test-Time-Compute|Test-Time-Compute]] (TTT 方向)
+- → [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO]] (优化算法)
+- → [[AI/3-LLM/RL/Other-Algorithms/MEL-Meta-Experience-Learning|MEL-Meta-Experience-Learning]] (自监督 RL 方向)
+- → [[AI/3-LLM/Inference/MAGE-Block-Diffusion-LLM-Sparse-Attention|MAGE-Block-Diffusion-LLM-Sparse-Attention]] (同日读，推理优化方向)
+- → [[AI/3-LLM/Inference/Sparrow-Video-LLM-Speculative-Decoding|Sparrow-Video-LLM-Speculative-Decoding]] (同日读，架构特性利用)
+- → [[AI/3-LLM/Inference/Test-Time-Compute|Test-Time-Compute]] (TTT 方向)

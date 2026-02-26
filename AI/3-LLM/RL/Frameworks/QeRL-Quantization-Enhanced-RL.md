@@ -198,10 +198,10 @@ Jet-RL 引用了 "FlashRL"（即 QeRL 的直接竞争对手），但没有直接
 
 ## 技术连接
 
-- [[Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 同组后作，FP8 精度 + on-policy 统一，解决量化 off-policy 问题；两篇合看：量化在 RL 中有益（QeRL）但须精度一致（Jet-RL）
-- [[DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]] — 同样解决 GRPO 探索不足，但从采样策略而非参数噪声角度
-- [[MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 解决 GRPO 正负样本概率质量不平衡，与 QeRL 的探索方向正交
-- [[RL-Training-Stability-2026-Unified-Analysis|RL 训练稳定性 2026 统一分析]] — 归属系统效率维度
+- [[AI/3-LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 同组后作，FP8 精度 + on-policy 统一，解决量化 off-policy 问题；两篇合看：量化在 RL 中有益（QeRL）但须精度一致（Jet-RL）
+- [[AI/3-LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]] — 同样解决 GRPO 探索不足，但从采样策略而非参数噪声角度
+- [[AI/3-LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 解决 GRPO 正负样本概率质量不平衡，与 QeRL 的探索方向正交
+- [[AI/3-LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL 训练稳定性 2026 统一分析]] — 归属系统效率维度
 
 ---
 

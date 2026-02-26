@@ -10,13 +10,13 @@ tags:
   - RLHF
 rating: ★★★★★
 status: deprecated
-canonical: "[[Rationale-Consistency-GenRM-Deceptive-Alignment|Rationale Consistency — 正式版]]"
+canonical: "[[AI/3-LLM/RL/Theory/Rationale-Consistency-GenRM-Deceptive-Alignment|Rationale Consistency — 正式版]]"
 brief: 此为 Scholar 重写简化版，正式版在 RL/Theory/ 目录（更完整：266行，含完整数学推导+实验数据+面试角度）。
 sources:
   - "[arXiv:2602.04649] MetaJudge: Rationale Consistency for Generative Reward Models (Qwen Team + 复旦大学, 2026)"
 ---
 
-> ⚠️ **DEPRECATED** — 请使用正式完整版：[[Rationale-Consistency-GenRM-Deceptive-Alignment|Rationale Consistency（完整版）]]
+> ⚠️ **DEPRECATED** — 请使用正式完整版：[[AI/3-LLM/RL/Theory/Rationale-Consistency-GenRM-Deceptive-Alignment|Rationale Consistency（完整版）]]
 > 正式版包含完整数学推导、实验数据、我的分析视角，本文是简化重写版本。
 
 ---
@@ -139,8 +139,8 @@ graph LR
     G[Log-prob Reward<br>Likelihood-based] -.->|另一修复思路| E
 ```
 
-- [[MARS-Margin-Aware-Reward-Modeling-Self-Refinement]] — 同期工作，从 margin 角度改进 reward
-- [[Likelihood-Based-Reward-Designs-CoT-RL]] — 用 log-probability 替代 discrete outcome，避开 RC 问题的另一思路
+- [[AI/3-LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement]] — 同期工作，从 margin 角度改进 reward
+- [[AI/3-LLM/RL/Theory/Likelihood-Based-Reward-Designs-CoT-RL]] — 用 log-probability 替代 discrete outcome，避开 RC 问题的另一思路
 - [[Reward-Design-2026-Panorama]] — 三篇合并视角综合分析
 
 ## 学者评价
@@ -156,7 +156,7 @@ graph LR
 - RC ≈ 0.4 的上限是否有 fundamental 原因，还是训练数据/方法问题？论文未充分回答
 - 乘法 gating 如果 $R_{\text{rationale}}$ 估计不准，会引入噪声惩罚好的 outcome
 
-**深层含义**：GenRM 的问题本质是 **CoT faithfulness**，和 REMuL（[[REMuL-CoT-Faithfulness-Multi-Listener-RL]]）从 policy 侧解决的是同一枚硬币的两面。MetaJudge 从 judge 侧解决，REMuL 从 policy 侧解决——两者结合才是完整方案。
+**深层含义**：GenRM 的问题本质是 **CoT faithfulness**，和 REMuL（[[AI/3-LLM/RL/Theory/REMuL-CoT-Faithfulness-Multi-Listener-RL]]）从 policy 侧解决的是同一枚硬币的两面。MetaJudge 从 judge 侧解决，REMuL 从 policy 侧解决——两者结合才是完整方案。
 
 ## 面试高频问法
 
@@ -187,7 +187,7 @@ RC 问题说明 reward signal 本身可能有内在矛盾，导致 policy 优化
 ## 推荐阅读
 
 - **原始论文**：[arXiv:2602.04649](https://arxiv.org/abs/2602.04649)
-- **同期工作**：[[MARS-Margin-Aware-Reward-Modeling-Self-Refinement]]（margin-aware reward）
-- **CoT 侧修复**：[[REMuL-CoT-Faithfulness-Multi-Listener-RL]]（policy 端 CoT faithfulness）
+- **同期工作**：[[AI/3-LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement]]（margin-aware reward）
+- **CoT 侧修复**：[[AI/3-LLM/RL/Theory/REMuL-CoT-Faithfulness-Multi-Listener-RL]]（policy 端 CoT faithfulness）
 - **综合视角**：[[Reward-Design-2026-Panorama]]（三篇合并分析）
-- **Log-prob 方案**：[[Likelihood-Based-Reward-Designs-CoT-RL]]（避开 RC 问题的另一路）
+- **Log-prob 方案**：[[AI/3-LLM/RL/Theory/Likelihood-Based-Reward-Designs-CoT-RL]]（避开 RC 问题的另一路）

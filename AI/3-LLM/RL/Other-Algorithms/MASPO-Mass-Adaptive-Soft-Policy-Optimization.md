@@ -17,9 +17,9 @@ sources:
   - "SAPO: 软自适应策略优化（对比基线）"
   - "DAC: 动态自适应裁剪（对比基线）"
 related:
-  - "[[GRPO 深度理解|GRPO 深度理解]]"
-  - "[[GRPO-Improvement-Panorama-2026|GRPO 改进全景]]"
-  - "[[SAPO-Soft-Adaptive-Policy-Optimization|SAPO]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]"
+  - "[[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进全景]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/SAPO-Soft-Adaptive-Policy-Optimization|SAPO]]"
 updated: 2026-02-24
 ---
 
@@ -135,10 +135,10 @@ MASPO 的贡献是把三个各自独立的改进方向用一个统一框架整�
 
 ## See Also
 
-- [[GRPO 深度理解|GRPO 深度理解]] — MASPO 是 GRPO 的 drop-in 改进，需先理解 GRPO 基础
-- [[GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] — MASPO 应归入此全景（trust region 改进维度）
-- [[SAPO-Soft-Adaptive-Policy-Optimization|SAPO]] — MASPO 的直接对比基线，同属 soft clipping 方向
-- [[SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO（arXiv:2602.06554）]] — MASPO 改进单轮 GRPO 工程性能；SeeUPO 从理论上证明 multi-turn 场景需要完全不同算法——两者适用场景不重叠
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — MASPO 是 GRPO 的 drop-in 改进，需先理解 GRPO 基础
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进全景 2026]] — MASPO 应归入此全景（trust region 改进维度）
+- [[AI/3-LLM/RL/Other-Algorithms/SAPO-Soft-Adaptive-Policy-Optimization|SAPO]] — MASPO 的直接对比基线，同属 soft clipping 方向
+- [[AI/2-Agent/Agentic-RL/SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO（arXiv:2602.06554）]] — MASPO 改进单轮 GRPO 工程性能；SeeUPO 从理论上证明 multi-turn 场景需要完全不同算法——两者适用场景不重叠
 
 ## 推荐阅读
 

@@ -189,9 +189,9 @@ log πϕ(τₜ | hₜ) = log P(cₜ) + cₜ · log p(zₜ | α, β)
 
 ## See Also
 
-- [[DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO（深密探索Pivot重采样）]] — 同为 Diversity 维度，方法粒度不同：DEEP-GRPO 在 trajectory 层面重采样 error-prone pivot，IntroLLM 在 token 层面用 hₜ 动态调温——前者选"在哪个节点多探索"，后者让模型自己决定"现在该高温还是低温"
-- [[GRPO-Improvement-Panorama-2026|GRPO 七维改进全景]] ⭐ — IntroLLM 属于第七维 Diversity 层的最细粒度实现；全景框架提供定位：trajectory-level → token-level → internal-state-conditioned token-level（由粗到精）
-- [[AutoInject-RL-Prompt-Injection-Attack|AutoInject（RL自动化Prompt Injection）]] ⭐ — 同一技术假设的正反两面：IntroLLM 用 hₜ 预测最优采样温度（生成质量提升），盾卫 Phase 3 用 hₜ 检测注入攻击（安全防御）——hₜ 包含比表面 token 更丰富信息这一命题，IntroLLM 是正向验证
-- [[REMuL-CoT-Faithfulness-Multi-Listener-RL|REMuL（CoT Faithfulness多听众RL）]] — 同为 GRPO 框架的精细化：REMuL 在 reward 信号上精细化（faithfulness），IntroLLM 在采样策略上精细化（adaptive temperature）——两者合用=更可信的推理链 + 更有效的探索
-- [[ProGRPO-Probabilistic-Advantage-Reweighting|ProGRPO（概率优势重加权）]] — Diversity 维度的另一路：ProGRPO 重加权 advantage 估计（从 reward 信号层面增加探索），IntroLLM 从采样温度层面增加探索——同目标，前者改 training，后者改 inference-time sampling
-- [[LACONIC-Length-Constrained-RL|LACONIC（Primal-Dual长度约束RL）]] — 约束 RL 的互补维度：IntroLLM 约束采样**温度**（控探索多样性），LACONIC 约束输出**长度**（控推理成本）——两者从不同维度对 RL 生成过程施加结构性控制，可互补叠加
+- [[AI/3-LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO（深密探索Pivot重采样）]] — 同为 Diversity 维度，方法粒度不同：DEEP-GRPO 在 trajectory 层面重采样 error-prone pivot，IntroLLM 在 token 层面用 hₜ 动态调温——前者选"在哪个节点多探索"，后者让模型自己决定"现在该高温还是低温"
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 七维改进全景]] ⭐ — IntroLLM 属于第七维 Diversity 层的最细粒度实现；全景框架提供定位：trajectory-level → token-level → internal-state-conditioned token-level（由粗到精）
+- [[AI/5-AI 安全/AutoInject-RL-Prompt-Injection-Attack|AutoInject（RL自动化Prompt Injection）]] ⭐ — 同一技术假设的正反两面：IntroLLM 用 hₜ 预测最优采样温度（生成质量提升），盾卫 Phase 3 用 hₜ 检测注入攻击（安全防御）——hₜ 包含比表面 token 更丰富信息这一命题，IntroLLM 是正向验证
+- [[AI/3-LLM/RL/Theory/REMuL-CoT-Faithfulness-Multi-Listener-RL|REMuL（CoT Faithfulness多听众RL）]] — 同为 GRPO 框架的精细化：REMuL 在 reward 信号上精细化（faithfulness），IntroLLM 在采样策略上精细化（adaptive temperature）——两者合用=更可信的推理链 + 更有效的探索
+- [[AI/3-LLM/RL/GRPO/ProGRPO-Probabilistic-Advantage-Reweighting|ProGRPO（概率优势重加权）]] — Diversity 维度的另一路：ProGRPO 重加权 advantage 估计（从 reward 信号层面增加探索），IntroLLM 从采样温度层面增加探索——同目标，前者改 training，后者改 inference-time sampling
+- [[AI/3-LLM/RL/Other-Algorithms/LACONIC-Length-Constrained-RL|LACONIC（Primal-Dual长度约束RL）]] — 约束 RL 的互补维度：IntroLLM 约束采样**温度**（控探索多样性），LACONIC 约束输出**长度**（控推理成本）——两者从不同维度对 RL 生成过程施加结构性控制，可互补叠加

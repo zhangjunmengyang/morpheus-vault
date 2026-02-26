@@ -18,13 +18,13 @@ sources:
   - "VPPO: arXiv:2510.09285 (上海 AI Lab + SJTU + CUHK)"
   - "Perception-R1: arXiv:2506.07218 (USTC + iFLYTEK)"
 related:
-  - "[[Tree-GRPO-Tree-Search-LLM-Agent-RL|Tree-GRPO（ICLR 2026）]]"
-  - "[[Long-Horizon-Credit-Assignment专题|GiGPO / Long-Horizon Credit Assignment]]"
-  - "[[VPPO-Visually-Perceptive-Policy-Optimization|VPPO]]"
-  - "[[Perception-R1-Visual-Perception-Reward-RLVR|Perception-R1]]"
+  - "[[AI/2-Agent/Agentic-RL/Tree-GRPO-Tree-Search-LLM-Agent-RL|Tree-GRPO（ICLR 2026）]]"
+  - "[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|GiGPO / Long-Horizon Credit Assignment]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/VPPO-Visually-Perceptive-Policy-Optimization|VPPO]]"
+  - "[[AI/3-LLM/MLLM/Perception-R1-Visual-Perception-Reward-RLVR|Perception-R1]]"
   - "[[Reward-Design-2026-Panorama|Reward Design 2026 全景]]"
-  - "[[HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）—— segment-level 信号粒度，路径5]]"
-  - "[[RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO —— Echo Trap 是粒度失配的直接实证]]"
+  - "[[AI/2-Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）—— segment-level 信号粒度，路径5]]"
+  - "[[AI/2-Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO —— Echo Trap 是粒度失配的直接实证]]"
   - "[[AI/3-LLM/RL/GRPO/GRPO-Improvement-Panorama-2026|GRPO Improvement Panorama]]"
 ---
 
@@ -163,11 +163,11 @@ A: 任务因果链的异质性。文本任务的因果链是"推理 → 输出"�
 
 ## 推荐阅读
 
-1. **[[Tree-GRPO-Tree-Search-LLM-Agent-RL|Tree-GRPO（ICLR 2026）]]** — 路径1：重定义 Group
-2. **[[GiGPO-Group-in-Group-Policy-Optimization|GiGPO（NeurIPS 2025）]]** — 路径2：anchor state credit（独立深度笔记）；综合全景见 [[Long-Horizon-Credit-Assignment专题|Long-Horizon CA 专题]]
-3. **[[VPPO-Visually-Perceptive-Policy-Optimization|VPPO]]** — 路径3：视觉依赖 token 梯度掩码
-4. **[[Perception-R1-Visual-Perception-Reward-RLVR|Perception-R1]]** — 路径4：显式感知 Reward
-5. **[[HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]]** — 路径5：segment-level 信号粒度（hierarchical advantage estimation）——planner 决策的因果单元是整个 subgoal 执行 segment，而非单步 action；HAE 把信号粒度对齐到这个因果结构
-6. **[[RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO]]** — "信号粒度失配 → 训练崩溃"的直接实证：outcome reward 无法驱动 step-level reasoning（Echo Trap = trajectory-level 信号无法区分好坏步骤），是本原则的反面案例
+1. **[[AI/2-Agent/Agentic-RL/Tree-GRPO-Tree-Search-LLM-Agent-RL|Tree-GRPO（ICLR 2026）]]** — 路径1：重定义 Group
+2. **[[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO（NeurIPS 2025）]]** — 路径2：anchor state credit（独立深度笔记）；综合全景见 [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon CA 专题]]
+3. **[[AI/3-LLM/RL/Other-Algorithms/VPPO-Visually-Perceptive-Policy-Optimization|VPPO]]** — 路径3：视觉依赖 token 梯度掩码
+4. **[[AI/3-LLM/MLLM/Perception-R1-Visual-Perception-Reward-RLVR|Perception-R1]]** — 路径4：显式感知 Reward
+5. **[[AI/2-Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]]** — 路径5：segment-level 信号粒度（hierarchical advantage estimation）——planner 决策的因果单元是整个 subgoal 执行 segment，而非单步 action；HAE 把信号粒度对齐到这个因果结构
+6. **[[AI/2-Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO]]** — "信号粒度失配 → 训练崩溃"的直接实证：outcome reward 无法驱动 step-level reasoning（Echo Trap = trajectory-level 信号无法区分好坏步骤），是本原则的反面案例
 7. **[[Reward-Design-2026-Panorama|Reward Design 2026 全景]]** — 更广泛的 Reward 设计视角
 8. **[[AI/3-LLM/RL/GRPO/GRPO-Improvement-Panorama-2026|GRPO Improvement Panorama]]** — 本原则在 GRPO 视角的对应位置（Token/Diversity维度）

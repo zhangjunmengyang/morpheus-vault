@@ -14,9 +14,9 @@ tags:
 sources:
   - arXiv:2602.20502 (2026-02-24)
 related:
-  - "[[WebAgent-R1-Multi-Turn-RL-Web-Agent|WebAgent-R1]]"
-  - "[[ASTRA-Automated-Tool-Agent-Training|ASTRA]]"
-  - "[[UI-R1-GUI-Action-Prediction-RL|UI-R1-GUI-Action-Prediction-RL]]"
+  - "[[AI/2-Agent/Agentic-RL/WebAgent-R1-Multi-Turn-RL-Web-Agent|WebAgent-R1]]"
+  - "[[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training|ASTRA]]"
+  - "[[AI/2-Agent/Agentic-RL/UI-R1-GUI-Action-Prediction-RL|UI-R1-GUI-Action-Prediction-RL]]"
 ---
 
 # ActionEngine: From Reactive to Programmatic GUI Agents via State Machine Memory
@@ -185,15 +185,15 @@ ActionEngine 是 **非 RL 路线**——用符号规划替代 end-to-end RL。
 ## See Also
 
 **同为 GUI/Web Agent RL 工作**
-- [[WebAgent-R1-Multi-Turn-RL-Web-Agent|WebAgent-R1（Amazon+UVA）]] — RL 端到端训练 Web Agent（与 ActionEngine training-free 正交）
-- [[UI-R1-GUI-Action-Prediction-RL|UI-R1（vivo AI+CUHK）]] — GUI 动作预测极简 GRPO，136 条数据超 7B SFT
-- [[ASTRA-Automated-Tool-Agent-Training|ASTRA]] — MCP 工具图结构化（与 ActionEngine 的 SMG 同一设计哲学：把环境结构化）
+- [[AI/2-Agent/Agentic-RL/WebAgent-R1-Multi-Turn-RL-Web-Agent|WebAgent-R1（Amazon+UVA）]] — RL 端到端训练 Web Agent（与 ActionEngine training-free 正交）
+- [[AI/2-Agent/Agentic-RL/UI-R1-GUI-Action-Prediction-RL|UI-R1（vivo AI+CUHK）]] — GUI 动作预测极简 GRPO，136 条数据超 7B SFT
+- [[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training|ASTRA]] — MCP 工具图结构化（与 ActionEngine 的 SMG 同一设计哲学：把环境结构化）
 
 **设计哲学关联**
 - [[AI/3-LLM/Application/RAG/RAG-原理与架构|RAG 原理与架构]] — Offline indexing/Online retrieval 分离（与 ActionEngine Offline SMG/Online Planning 同构）
-- [[Agentic-RL-2026前沿综合分析|Agentic-RL 2026 综合分析]] — Training-free 与 RL 训练范式的对比框架
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL 2026 综合分析]] — Training-free 与 RL 训练范式的对比框架
 
 ## 推荐阅读
 
 1. **原文**：[arXiv:2602.20502](https://arxiv.org/abs/2602.20502) — ActionEngine 全文
-2. **对比**：[[WebAgent-R1-Multi-Turn-RL-Web-Agent|WebAgent-R1]] — 同 task 的 RL 训练路线，理解 training-free 的适用边界
+2. **对比**：[[AI/2-Agent/Agentic-RL/WebAgent-R1-Multi-Turn-RL-Web-Agent|WebAgent-R1]] — 同 task 的 RL 训练路线，理解 training-free 的适用边界

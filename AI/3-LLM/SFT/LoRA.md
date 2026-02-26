@@ -16,14 +16,14 @@ sources:
   - DoRA arXiv:2402.09353 (Liu et al., 2024)
   - rsLoRA arXiv:2312.03732 (Kalajdzievski, 2023)
 related:
-  - "[[Unsloth 概述]]"
-  - "[[LLaMA]]"
-  - "[[SFT-TRL实践]]"
-  - "[[分布式训练]]"
-  - "[[量化]]"
-  - "[[SFT 原理]]"
-  - "[[矩阵分解]]"
-  - "[[TRL 概述]]"
+  - "[[AI/3-LLM/Frameworks/Unsloth/Unsloth 概述]]"
+  - "[[AI/3-LLM/Architecture/LLaMA]]"
+  - "[[AI/3-LLM/SFT/SFT-TRL实践]]"
+  - "[[AI/3-LLM/Infra/分布式训练]]"
+  - "[[AI/3-LLM/Frameworks/Unsloth/量化]]"
+  - "[[AI/3-LLM/SFT/SFT 原理]]"
+  - "[[AI/1-Foundations/Math/矩阵分解]]"
+  - "[[AI/3-LLM/Frameworks/TRL/TRL 概述]]"
 ---
 
 # LoRA
@@ -225,11 +225,11 @@ LoRA 揭示了一个深刻的现象：**预训练模型在微调时的权重变�
 - LoRA 在 RL 中的应用：GRPO 训练时用 LoRA 而非 full update，能否降低 RL 的不稳定性？
 
 > 🔗 See also:
-> - [[SFT 原理]] — LoRA 是 SFT 的具体实现方式
-> - [[矩阵分解]] — LoRA 的数学基础：低秩分解
-> - [[Unsloth 概述]] — LoRA 训练的高效框架
-> - [[量化]] — QLoRA 依赖的量化技术
-> - [[MoE 深度解析]] — MoE 微调中 LoRA 的应用
+> - [[AI/3-LLM/SFT/SFT 原理]] — LoRA 是 SFT 的具体实现方式
+> - [[AI/1-Foundations/Math/矩阵分解]] — LoRA 的数学基础：低秩分解
+> - [[AI/3-LLM/Frameworks/Unsloth/Unsloth 概述]] — LoRA 训练的高效框架
+> - [[AI/3-LLM/Frameworks/Unsloth/量化]] — QLoRA 依赖的量化技术
+> - [[AI/3-LLM/Architecture/MoE 深度解析]] — MoE 微调中 LoRA 的应用
 
 ---
 

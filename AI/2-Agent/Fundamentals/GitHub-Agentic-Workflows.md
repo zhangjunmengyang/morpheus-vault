@@ -110,7 +110,7 @@ tools:
 
 ## 关联笔记
 
-- [[Agent-Tool-Use|Agent Tool Use]]
-- [[Agent-框架对比|Agent 框架对比]]
-- [[Code Agent|Code Agent]]
-- [[Agent-生产落地|Agent 生产落地]]
+- [[AI/2-Agent/Fundamentals/Agent-Tool-Use|Agent Tool Use]]
+- [[AI/2-Agent/Multi-Agent/Agent-框架对比|Agent 框架对比]]
+- [[AI/2-Agent/Fundamentals/Code Agent|Code Agent]]
+- [[AI/2-Agent/Fundamentals/Agent-生产落地|Agent 生产落地]]

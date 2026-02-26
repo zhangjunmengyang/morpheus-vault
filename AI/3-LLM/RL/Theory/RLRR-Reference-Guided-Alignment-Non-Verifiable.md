@@ -16,9 +16,9 @@ arxiv: "2602.16802"
 rating: 4
 status: permanent
 see-also:
-  - "[[ProGRPO-Probabilistic-Advantage-Reweighting|ProGRPO]]"
-  - "[[对齐技术总结|对齐技术总结]]"
-  - "[[GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]]"
+  - "[[AI/3-LLM/RL/GRPO/ProGRPO-Probabilistic-Advantage-Reweighting|ProGRPO]]"
+  - "[[AI/5-AI 安全/对齐技术总结|对齐技术总结]]"
+  - "[[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进全景 2026]]"
 ---
 
 # RLRR: References Improve LLM Alignment in Non-Verifiable Domains
@@ -162,11 +162,11 @@ RLRR 更系统（ICLR 2026，5 个 benchmark，11 个 judge），结论更可信
 
 ## see-also
 
-- [[RLHF 全链路|RLHF 全链路]] — RLVR 的传统对齐路线（RLRR 是其 non-verifiable 扩展）
-- [[对齐技术总结|对齐技术总结]] — RLHF/DPO/Constitutional AI 对齐方法全景
+- [[AI/3-LLM/RL/RLHF-工程全栈|RLHF 全链路]] — RLVR 的传统对齐路线（RLRR 是其 non-verifiable 扩展）
+- [[AI/5-AI 安全/对齐技术总结|对齐技术总结]] — RLHF/DPO/Constitutional AI 对齐方法全景
 - [[AI安全与对齐-2026技术全景|AI 安全与对齐 2026 全景]] — Scalable Oversight 等与 RLRR 问题动机相关
-- [[GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] — RLVR 在 verifiable 域的改进全景（与 RLRR non-verifiable 互补）
-- [[ProGRPO-Probabilistic-Advantage-Reweighting|ProGRPO]] — RLVR 信号质量改进；RLRR 解决的是 RLVR 能力边界（无 verifier 场景）
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进全景 2026]] — RLVR 在 verifiable 域的改进全景（与 RLRR non-verifiable 互补）
+- [[AI/3-LLM/RL/GRPO/ProGRPO-Probabilistic-Advantage-Reweighting|ProGRPO]] — RLVR 信号质量改进；RLRR 解决的是 RLVR 能力边界（无 verifier 场景）
 
 ## Tags
 `#RLHF` `#alignment` `#LLM-as-judge` `#non-verifiable` `#reference-guided` `#self-improvement` `#DPO` `#ICLR-2026` `#2026-02`

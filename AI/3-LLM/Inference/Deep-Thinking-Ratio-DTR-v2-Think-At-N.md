@@ -162,11 +162,11 @@ DTR 解决的是 **"怎么知道哪个推理轨迹是好的？"** 这个问题�
 
 ## 连接
 
-- 直接相关：[[Deep-Thinking-Ratio-DTR|Deep-Thinking-Ratio-DTR]]（旧笔记，本篇是完整版）
-- TTC 框架：[[Gemini-3-Deep-Think|Gemini-3-Deep-Think]]（ARC-AGI-2 84.6%，TTC 大胜利）
-- 样本选择：[[Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks-RL-Task-Difficulty-Curriculum]]（训练时 curriculum，推理时 Think@N，思路互补）
+- 直接相关：[[AI/3-LLM/Inference/Deep-Thinking-Ratio-DTR|Deep-Thinking-Ratio-DTR]]（旧笔记，本篇是完整版）
+- TTC 框架：[[AI/3-LLM/Inference/Gemini-3-Deep-Think|Gemini-3-Deep-Think]]（ARC-AGI-2 84.6%，TTC 大胜利）
+- 样本选择：[[AI/3-LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks-RL-Task-Difficulty-Curriculum]]（训练时 curriculum，推理时 Think@N，思路互补）
 - Interpretability 基础：DoLA (Chuang et al. 2023) — 分层对比 logit 的先驱工作
-- **同族工作**：[[SIA-Sparse-Inference-time-Alignment|SIA（ICML 2026）]] — 用 entropy 识别 Junction（高熵节点），只在这 20% token 施加 alignment 干预；DTR 用 entropy 识别思考深度，SIA 用 entropy 定位关键决策点——两者共用同一内部信号，解决不同问题
+- **同族工作**：[[AI/3-LLM/Inference/SIA-Sparse-Inference-time-Alignment|SIA（ICML 2026）]] — 用 entropy 识别 Junction（高熵节点），只在这 20% token 施加 alignment 干预；DTR 用 entropy 识别思考深度，SIA 用 entropy 定位关键决策点——两者共用同一内部信号，解决不同问题
 
 ---
 

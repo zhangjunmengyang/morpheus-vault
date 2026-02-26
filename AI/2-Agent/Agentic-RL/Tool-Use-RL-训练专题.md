@@ -25,11 +25,11 @@ sources:
   - "Agent-as-Tool: arXiv 2507.01489"
 related:
   - "[[LLM工具调用与Function-Calling-2026技术全景|LLM工具调用与Function-Calling-2026技术全景]]"
-  - "[[VerlTool 论文|VerlTool 论文]]"
-  - "[[Agent-RL-训练实战指南|Agent-RL-训练实战指南]]"
-  - "[[Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]]"
-  - "[[Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]]"
-  - "[[Agent-RL-环境工程系统论|Agent-RL-环境工程系统论]]"
+  - "[[AI/2-Agent/Agentic-RL/VerlTool 论文|VerlTool 论文]]"
+  - "[[AI/2-Agent/Agentic-RL/Agent-RL-训练实战指南|Agent-RL-训练实战指南]]"
+  - "[[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]]"
+  - "[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]]"
+  - "[[AI/2-Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent-RL-环境工程系统论]]"
   - "[[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]]"
 ---
 
@@ -113,7 +113,7 @@ $$r_{total} = r_{\text{tool\_name}} + r_{\text{param\_count}} + r_{\text{param\_
 ## 四、ToRL — Tool-Integrated RL（数学+代码工具）
 
 **arXiv 2503.23383 | GAIR-NLP**
-**完整笔记**：[[ToRL-Tool-Integrated-Reinforcement-Learning|ToRL 深度精读]]
+**完整笔记**：[[AI/2-Agent/Agentic-RL/ToRL-Tool-Integrated-Reinforcement-Learning|ToRL 深度精读]]
 
 ### 核心设计
 
@@ -149,7 +149,7 @@ Reward 仍是 binary（最终答案对错），但模型在 RL 探索中自然�
 ## 五、ARTIST — 多工具 + 多轮 Agent RL
 
 **arXiv 2505.01441 | Microsoft Research, MSR-TR-042025-V1**
-**完整笔记**：[[ARTIST-Agentic-Reasoning-Tool-Integration-RL|ARTIST 深度精读]]
+**完整笔记**：[[AI/2-Agent/Agentic-RL/ARTIST-Agentic-Reasoning-Tool-Integration-RL|ARTIST 深度精读]]
 
 ### 核心问题
 
@@ -228,7 +228,7 @@ sequenceDiagram
 ## 八、WebAgent-R1 — 端到端多轮 RL for Web Agent
 
 **arXiv 2505.16421 | Amazon + UVA + Georgia Tech**
-**完整笔记**：[[WebAgent-R1-Multi-Turn-RL-Web-Agent|WebAgent-R1 深度精读]]
+**完整笔记**：[[AI/2-Agent/Agentic-RL/WebAgent-R1-Multi-Turn-RL-Web-Agent|WebAgent-R1 深度精读]]
 
 ### 问题：Web Agent 的 RL 训练三大难点
 
@@ -458,20 +458,20 @@ Tool Use RL 的根本意义：LLM 从"知识检索机"进化为"策略性问题�
 
 ### 原始论文
 - **ToolRL** (NeurIPS 2025): https://openreview.net/forum?id=eOLdGbXT6t
-- **ToRL**: https://arxiv.org/abs/2503.23383 | 代码: https://github.com/GAIR-NLP/ToRL | 深度笔记: [[ToRL-Tool-Integrated-Reinforcement-Learning|ToRL 深度精读笔记（涌现行为三类型 + 工程四决策）]]
+- **ToRL**: https://arxiv.org/abs/2503.23383 | 代码: https://github.com/GAIR-NLP/ToRL | 深度笔记: [[AI/2-Agent/Agentic-RL/ToRL-Tool-Integrated-Reinforcement-Learning|ToRL 深度精读笔记（涌现行为三类型 + 工程四决策）]]
 - **ARTIST**: https://arxiv.org/abs/2505.01441
 - **VerlTool**: https://arxiv.org/abs/2509.01055
 - **Search-R1**: https://arxiv.org/abs/2503.09516 | 代码: https://github.com/PeterGriffinJin/Search-R1
-- **WebAgent-R1**: https://arxiv.org/abs/2505.16421 | [[WebAgent-R1-Multi-Turn-RL-Web-Agent|独立精读笔记]] — BC热启动+M-GRPO+Dynamic Context Compression
+- **WebAgent-R1**: https://arxiv.org/abs/2505.16421 | [[AI/2-Agent/Agentic-RL/WebAgent-R1-Multi-Turn-RL-Web-Agent|独立精读笔记]] — BC热启动+M-GRPO+Dynamic Context Compression
 - **Agent-RLVR**: https://arxiv.org/abs/2506.11425
 - **Turn-Level Reward**: https://arxiv.org/abs/2505.11821
-- [[ASTRA-Automated-Tool-Agent-Training|**ASTRA**]] (2026-01): https://arxiv.org/abs/2601.21558 | 代码: https://github.com/LianjiaTech/astra — 全自动 SFT+RL 流水线，MCP 工具图合成轨迹 + verifiable 环境，32B 超过 o3
-- [[RC-GRPO-Reward-Conditioned-Tool-Calling-RL|**RC-GRPO**]] (2026-02): https://arxiv.org/abs/2602.03025 — reward token conditioning 解决 multi-turn GRPO reward 同质化，7B 超闭源
-- [[CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|**CM2**]] (2026-02): https://arxiv.org/abs/2602.12268 — **Unverifiable reward 路线**：Checklist Rewards（binary criteria decomposition），Sparse assign + Dense criteria 设计，LLM-simulated 工具环境；tau-Bench +8，BFCL-V4 +10，ToolSandbox +12
+- [[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training|**ASTRA**]] (2026-01): https://arxiv.org/abs/2601.21558 | 代码: https://github.com/LianjiaTech/astra — 全自动 SFT+RL 流水线，MCP 工具图合成轨迹 + verifiable 环境，32B 超过 o3
+- [[AI/2-Agent/Agentic-RL/RC-GRPO-Reward-Conditioned-Tool-Calling-RL|**RC-GRPO**]] (2026-02): https://arxiv.org/abs/2602.03025 — reward token conditioning 解决 multi-turn GRPO reward 同质化，7B 超闭源
+- [[AI/2-Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|**CM2**]] (2026-02): https://arxiv.org/abs/2602.12268 — **Unverifiable reward 路线**：Checklist Rewards（binary criteria decomposition），Sparse assign + Dense criteria 设计，LLM-simulated 工具环境；tau-Bench +8，BFCL-V4 +10，ToolSandbox +12
 
 ### 相关 Vault 笔记
 - [[LLM工具调用与Function-Calling-2026技术全景|LLM工具调用与Function-Calling-2026技术全景]] — 工具调用原理/MCP/生产实践
-- [[Agent-RL-环境工程系统论|Agent-RL-环境工程系统论]] — 训练环境设计 + Reward 工程
-- [[Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]] — Credit Assignment 全图谱
-- [[VerlTool 论文|VerlTool 论文]] — VerlTool 单独深读
-- [[Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]] — 四大维度综合框架
+- [[AI/2-Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent-RL-环境工程系统论]] — 训练环境设计 + Reward 工程
+- [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]] — Credit Assignment 全图谱
+- [[AI/2-Agent/Agentic-RL/VerlTool 论文|VerlTool 论文]] — VerlTool 单独深读
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]] — 四大维度综合框架

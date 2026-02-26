@@ -17,12 +17,12 @@ tags:
   - ICML-2026
   - plan-execute
 related:
-  - "[[GiGPO-Group-in-Group-Policy-Optimization|GiGPO]]"
-  - "[[SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO]]"
-  - "[[LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL|LOOP]]"
-  - "[[AgentPRM-Process-Reward-Models-for-LLM-Agents|AgentPRM]]"
-  - "[[Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]]"
-  - "[[Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]]"
+  - "[[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]]"
+  - "[[AI/2-Agent/Agentic-RL/SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO]]"
+  - "[[AI/2-Agent/Agentic-RL/LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL|LOOP]]"
+  - "[[AI/2-Agent/Agentic-RL/AgentPRM-Process-Reward-Models-for-LLM-Agents|AgentPRM]]"
+  - "[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]]"
+  - "[[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]]"
 ---
 
 # HiPER: Hierarchical Plan-Execute RL with Explicit Credit Assignment

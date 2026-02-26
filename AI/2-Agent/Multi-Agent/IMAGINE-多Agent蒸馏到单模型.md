@@ -16,7 +16,7 @@ status: permanent
 
 ## 核心思想
 
-**将精心设计的[[Multi-Agent 概述|多Agent系统]]的集体推理能力蒸馏到单个紧凑模型中，不仅匹配而且超越原始多Agent系统的性能。** 这类似于让一个人获得整个团队的能力，同时避免了多Agent系统的固有限制（高推理成本、长延迟、难以端到端训练）。
+**将精心设计的[[AI/2-Agent/Multi-Agent/Multi-Agent 概述|多Agent系统]]的集体推理能力蒸馏到单个紧凑模型中，不仅匹配而且超越原始多Agent系统的性能。** 这类似于让一个人获得整个团队的能力，同时避免了多Agent系统的固有限制（高推理成本、长延迟、难以端到端训练）。
 
 ## 动机与问题
 
@@ -145,7 +145,7 @@ $$\mathcal{L}_{SFT}(\theta) = -\mathbb{E}_{(x,y)\sim\mathcal{D}}\left[\sum_{t=1}
 
 **核心创新**：设计面向复杂推理任务的定制化奖励函数
 
-**[[GRPO-Improvement-Panorama-2026|GRPO]] 算法优势**（详见全景分析）：
+**[[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO]] 算法优势**（详见全景分析）：
 - 无需价值模型（value model）
 - 通过组内响应相对比较评估优势
 $$\hat{A}_{i,t} = \frac{r(x,y_i) - \text{mean}(\{r(x,y_j)\}_{j=1}^G)}{\text{std}(\{r(x,y_j)\}_{j=1}^G)}$$
@@ -359,11 +359,11 @@ $$R = \begin{cases}
 
 ## See Also
 
-- [[Multi-Agent 概述|Multi-Agent 概述]] — 多Agent系统架构基础
-- [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — IMAGINE 使用的 RL 算法七维全景
+- [[AI/2-Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]] — 多Agent系统架构基础
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 2026 全景]] — IMAGINE 使用的 RL 算法七维全景
 - [[知识蒸馏与模型压缩-2026技术全景|知识蒸馏 2026 全景]] — 传统知识蒸馏 vs IMAGINE 的行为模式蒸馏
 -  — Agent 研究全图谱
-- [[FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer CWRPO]] — 同为 GRPO 扩展，workflow orchestration 方向
+- [[AI/2-Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer CWRPO]] — 同为 GRPO 扩展，workflow orchestration 方向
 
 ## 相关论文
 

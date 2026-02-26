@@ -15,11 +15,11 @@ sources:
   - "Shazeer. Fast Transformer Decoding: One Write-Head is All You Need (MQA). arXiv:1911.02150"
   - Vaswani et al. Attention Is All You Need (MHA). arXiv:1706.03762
 related:
-  - "[[Attention 变体综述|Attention 变体综述]]"
-  - "[[FlashAttention|FlashAttention]]"
+  - "[[AI/3-LLM/Architecture/Attention 变体综述|Attention 变体综述]]"
+  - "[[AI/3-LLM/Architecture/FlashAttention|FlashAttention]]"
   - "[[AI/3-LLM/Inference/KV Cache|KV Cache 原理与优化]]"
-  - "[[Multi-Head Latent Attention|MLA 详解]]"
-  - "[[LLaMA|LLaMA]]"
+  - "[[AI/3-LLM/Architecture/Multi-Head Latent Attention|MLA 详解]]"
+  - "[[AI/3-LLM/Architecture/LLaMA|LLaMA]]"
 ---
 
 # GQA / MQA 深度解析
@@ -295,11 +295,11 @@ GQA 几乎无损，MQA 下降明显
 
 ## 8. 与其他优化的关系
 
-- **[[FlashAttention|FlashAttention]]**：GQA 减少 KV head → 每个 head 的 KV 序列不变，但总 KV 少 → FlashAttention 计算更快
+- **[[AI/3-LLM/Architecture/FlashAttention|FlashAttention]]**：GQA 减少 KV head → 每个 head 的 KV 序列不变，但总 KV 少 → FlashAttention 计算更快
 - **[[AI/3-LLM/Inference/KV Cache|KV Cache 优化]]**：GQA 是 KV Cache 优化的 **架构层** 方案，与 PagedAttention（系统层）互补
-- **[[推理优化|推理优化]]**：GQA 是推理优化中最重要的架构设计选择之一
-- **[[Continuous Batching|Continuous Batching]]**：KV Cache 小 → 相同显存可容纳更多并发请求 → Continuous Batching 效率更高
-- **[[量化综述|量化]]**：GQA + INT4 量化 = KV Cache 双重压缩
+- **[[AI/3-LLM/Inference/推理优化|推理优化]]**：GQA 是推理优化中最重要的架构设计选择之一
+- **[[AI/3-LLM/Inference/Continuous Batching|Continuous Batching]]**：KV Cache 小 → 相同显存可容纳更多并发请求 → Continuous Batching 效率更高
+- **[[AI/3-LLM/Inference/量化综述|量化]]**：GQA + INT4 量化 = KV Cache 双重压缩
 
 ## 面试常见问题
 
@@ -335,7 +335,7 @@ MLA (Multi-head Latent Attention) 比 GQA 更激进：不是简单减少 KV head
 ### 工程实现要点
 - GQA 实现的关键是 `repeat_interleave`：将 G 个 KV heads 扩展到 h 个 Q heads 对齐
 - TP 并行时 G 必须能被 TP degree 整除，否则需要 KV heads replication
-- GQA + [[FlashAttention|FlashAttention]] + [[AI/3-LLM/Inference/KV Cache|PagedAttention]] 三者协同是 2025 年推理优化的标准 stack
+- GQA + [[AI/3-LLM/Architecture/FlashAttention|FlashAttention]] + [[AI/3-LLM/Inference/KV Cache|PagedAttention]] 三者协同是 2025 年推理优化的标准 stack
 
 ### 面试高频问法
 - Q: GQA 和 MQA 的数学关系是什么？
@@ -354,7 +354,7 @@ MLA (Multi-head Latent Attention) 比 GQA 更激进：不是简单减少 KV head
 - G 值的最优选择仍靠经验，没有理论指导（取决于任务、模型规模、硬件配置的交互）
 
 ### 脑暴：如果往下延伸
-- 如果 G 值可以 per-layer 不同（浅层用小 G，深层用大 G），是否能进一步优化质量/效率 tradeoff？类似 [[MoE 深度解析|MoE]] 的 per-layer expert 数量调整
+- 如果 G 值可以 per-layer 不同（浅层用小 G，深层用大 G），是否能进一步优化质量/效率 tradeoff？类似 [[AI/3-LLM/Architecture/MoE 深度解析|MoE]] 的 per-layer expert 数量调整
 - MLA 的成功说明 KV 的低秩压缩比简单的 head 共享更优——未来可能出现自适应的 per-head 压缩率
 
 ---
@@ -376,8 +376,8 @@ MLA (Multi-head Latent Attention) 比 GQA 更激进：不是简单减少 KV head
 
 ## See Also
 
-> 🔗 See also: [[Attention 变体综述|Attention 变体综述]] — 本文是其 GQA/MQA 章节的深度展开
-> 🔗 See also: [[FlashAttention|FlashAttention]] — GQA 减少 KV 总量，FlashAttention 加速 Attention 计算，二者协同
+> 🔗 See also: [[AI/3-LLM/Architecture/Attention 变体综述|Attention 变体综述]] — 本文是其 GQA/MQA 章节的深度展开
+> 🔗 See also: [[AI/3-LLM/Architecture/FlashAttention|FlashAttention]] — GQA 减少 KV 总量，FlashAttention 加速 Attention 计算，二者协同
 > 🔗 See also: [[AI/3-LLM/Inference/KV Cache|KV Cache]] — GQA 是 KV Cache 架构层优化的核心，与 PagedAttention（系统层）互补
-> 🔗 See also: [[Multi-Head Latent Attention|MLA 详解]] — 比 GQA 更激进的 KV 压缩路线
-> 🔗 See also: [[LLaMA|LLaMA]] — GQA 在 LLaMA 2/3 系列中的实际部署
+> 🔗 See also: [[AI/3-LLM/Architecture/Multi-Head Latent Attention|MLA 详解]] — 比 GQA 更激进的 KV 压缩路线
+> 🔗 See also: [[AI/3-LLM/Architecture/LLaMA|LLaMA]] — GQA 在 LLaMA 2/3 系列中的实际部署

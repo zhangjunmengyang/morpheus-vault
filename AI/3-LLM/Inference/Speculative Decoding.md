@@ -173,5 +173,5 @@ $$\text{Speedup} = \frac{K \cdot \alpha + (1-\alpha)}{1 + \gamma \cdot K}$$
 - [[AI/3-LLM/Inference/KV Cache|KV Cache]] - 缓存机制与内存优化
 - [[AI/3-LLM/Inference/推理服务架构|推理服务架构]] - 生产环境的服务设计
 - [[AI/3-LLM/Inference/采样策略|采样策略]] - 各种解码算法
-- [[模型并行策略|模型并行策略]] - 大模型分布式推理
-- [[推理优化|推理优化]] - 其他加速技术
+- [[AI/3-LLM/Infra/模型并行策略|模型并行策略]] - 大模型分布式推理
+- [[AI/3-LLM/Inference/推理优化|推理优化]] - 其他加速技术

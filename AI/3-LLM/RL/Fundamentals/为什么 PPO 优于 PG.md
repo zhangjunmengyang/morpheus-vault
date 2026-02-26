@@ -136,7 +136,7 @@ PPO 在 LLM 场景的特殊挑战：
 
 ## 相关
 
-- [[On-Policy vs Off-Policy|On-Policy vs Off-Policy]] — PPO 的 on-policy 属性
-- [[HF Deep RL Course|HF Deep RL Course]] — 系统学习 RL
-- [[GRPO-verl实践|GRPO-verl实践]] — 去掉 Critic 的 PPO 替代
-- [[DAPO-verl实践|DAPO-verl实践]] — DAPO 改进
+- [[AI/3-LLM/RL/Fundamentals/On-Policy vs Off-Policy|On-Policy vs Off-Policy]] — PPO 的 on-policy 属性
+- [[AI/3-LLM/RL/Fundamentals/HF Deep RL Course|HF Deep RL Course]] — 系统学习 RL
+- [[AI/3-LLM/RL/GRPO/GRPO-verl实践|GRPO-verl实践]] — 去掉 Critic 的 PPO 替代
+- [[AI/3-LLM/RL/DAPO/DAPO-verl实践|DAPO-verl实践]] — DAPO 改进

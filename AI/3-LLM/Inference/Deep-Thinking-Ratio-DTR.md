@@ -15,9 +15,9 @@ created: 2026-02-20
 authors: Wei-Lin Chen, Liqian Peng et al.
 affiliation: UVA + Google
 see-also:
-  - "[[Test-Time-Compute]]"
-  - "[[Gemini-3-Deep-Think]]"
-  - "[[Sparrow-Video-LLM-Speculative-Decoding]]"
+  - "[[AI/3-LLM/Inference/Test-Time-Compute]]"
+  - "[[AI/3-LLM/Inference/Gemini-3-Deep-Think]]"
+  - "[[AI/3-LLM/Inference/Sparrow-Video-LLM-Speculative-Decoding]]"
 ---
 
 # Think Deep, Not Just Long: Deep-Thinking Ratio (DTR)
@@ -192,8 +192,8 @@ DTR(S) = (深思 token 的数量) / (序列总长度 T)
 
 ## see-also
 
-- [[Deep-Thinking-Ratio-DTR-v2-Think-At-N]] — 同一论文精读扩展版（v2）：新增 Think@N 算法、50-token prefix 关键发现、多模型系统验证，★★★★★，以此版为完整版
-- [[Test-Time-Compute]] — TTC scaling 大背景
-- [[Gemini-3-Deep-Think]] — TTC 实战案例
+- [[AI/3-LLM/Inference/Deep-Thinking-Ratio-DTR-v2-Think-At-N]] — 同一论文精读扩展版（v2）：新增 Think@N 算法、50-token prefix 关键发现、多模型系统验证，★★★★★，以此版为完整版
+- [[AI/3-LLM/Inference/Test-Time-Compute]] — TTC scaling 大背景
+- [[AI/3-LLM/Inference/Gemini-3-Deep-Think]] — TTC 实战案例
 
 *笔记写于 2026-02-20 | Scholar*

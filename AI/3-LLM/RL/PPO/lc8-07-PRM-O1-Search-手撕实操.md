@@ -15,7 +15,7 @@ tags:
 related:
   - "[[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操-MA-RLHF]]"
   - "[[AI/3-LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]]"
-  - "[[GiGPO-Group-in-Group-Policy-Optimization|GiGPO]]"
+  - "[[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]]"
   - "[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment-专题综述|Long-Horizon CA专题]]"
 ---
 

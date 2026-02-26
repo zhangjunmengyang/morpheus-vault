@@ -181,8 +181,8 @@ R_t       = 0.5 × (timeout - time) / timeout  （效率奖励，仅在正确时
 
 ## See Also
 
-- [[AgentConductor-Topology-Evolution|AgentConductor]] — topology evolution 的兄弟工作：同为"用 RL 学 agentic 决策"，AgentConductor 做 agent 通信拓扑，SquRL 做工具链选择
-- [[FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer CWRPO]] — workflow 编排 RL 的另一视角：FlowSteer 编排 operator 步骤，SquRL 选工具链组合；同为 DAG-based Agentic RL
-- [[Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — 全景参考，SquRL 属于 Tool-Use RL 分支
-- [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — SquRL 使用 GRPO 变体训练 selector policy
+- [[AI/2-Agent/Multi-Agent/AgentConductor-Topology-Evolution|AgentConductor]] — topology evolution 的兄弟工作：同为"用 RL 学 agentic 决策"，AgentConductor 做 agent 通信拓扑，SquRL 做工具链选择
+- [[AI/2-Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer CWRPO]] — workflow 编排 RL 的另一视角：FlowSteer 编排 operator 步骤，SquRL 选工具链组合；同为 DAG-based Agentic RL
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — 全景参考，SquRL 属于 Tool-Use RL 分支
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 2026 全景]] — SquRL 使用 GRPO 变体训练 selector policy
 -  — 智能体研究全图谱

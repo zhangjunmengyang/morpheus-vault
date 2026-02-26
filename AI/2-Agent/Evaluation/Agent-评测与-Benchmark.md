@@ -240,7 +240,7 @@ type: note
 
 ## See Also
 
-- [[Gaia2-Dynamic-Async-Agent-Benchmark|Gaia2]] — 2026 最新动态异步 Agent benchmark
-- [[Agent 评测|Agent 评测]] — 评测基础方法论
+- [[AI/2-Agent/Evaluation/Gaia2-Dynamic-Async-Agent-Benchmark|Gaia2]] — 2026 最新动态异步 Agent benchmark
+- [[AI/2-Agent/Fundamentals/Agent 评测|Agent 评测]] — 评测基础方法论
 - [[AI/3-LLM/Evaluation/LLM 评测体系|LLM 评测体系]] — 从 LLM 评测到 Agent 评测的演化
 -  — Agent 知识全图谱

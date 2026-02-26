@@ -101,7 +101,7 @@ tool_call = response.choices[0].message.tool_calls[0]
 
 ## 3. ReAct 模式
 
-[[ReAct 与 CoT|ReAct]]（Reasoning + Acting）是最经典的 Agent 推理框架，由 Yao et al. (2022) 提出：
+[[AI/2-Agent/Fundamentals/ReAct 与 CoT|ReAct]]（Reasoning + Acting）是最经典的 Agent 推理框架，由 Yao et al. (2022) 提出：
 
 ### 3.1 核心循环
 
@@ -269,7 +269,7 @@ follow_up = client.messages.create(
 
 ## 6. MCP：工具生态的标准化
 
-[[如何给人深度科普-MCP|MCP]]（Model Context Protocol）由 Anthropic 提出，旨在标准化 Agent 与工具的交互协议：
+[[AI/2-Agent/Fundamentals/如何给人深度科普-MCP|MCP]]（Model Context Protocol）由 Anthropic 提出，旨在标准化 Agent 与工具的交互协议：
 
 - **Server 端**：暴露 tools、resources、prompts
 - **Client 端**：LLM 应用通过 MCP Client 连接 Server

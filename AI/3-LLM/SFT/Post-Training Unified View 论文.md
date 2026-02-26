@@ -17,8 +17,8 @@ sources:
   - 论文链接：https://hf.co/papers/2509.04419
   - PaperScope 解读：https://paperscope.ai/hf/2509.04419
 related:
-  - "[[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]]"
-  - "[[SFT-实战指南|SFT 实战指南]]"
+  - "[[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 2026 全景]]"
+  - "[[AI/3-LLM/SFT/SFT-实战指南|SFT 实战指南]]"
   - "[[RLHF-DPO-2026-技术全景|RLHF-DPO 2026 技术全景]]"
 ---
 # Towards a Unified View of Large Language Model Post-Training
@@ -49,15 +49,15 @@ PaperScope.ai 解读：https://paperscope.ai/hf/2509.04419
 
 ## See Also
 
-- [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — Post-Training RL 方向的前沿改进全景
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 2026 全景]] — Post-Training RL 方向的前沿改进全景
 -  — LLM 强化学习（Post-Training 核心范式）全图谱
-- [[PEFT 方法对比|PEFT 方法对比]] — Post-Training 中 SFT 的参数高效方法
+- [[AI/3-LLM/SFT/PEFT 方法对比|PEFT 方法对比]] — Post-Training 中 SFT 的参数高效方法
 -  — 大语言模型知识全图谱
 - [[RLHF-DPO-2026-技术全景|RLHF-DPO 2026 技术全景]] — Post-Training 的 RLHF/DPO 流派，是 HPT 的背景框架
-- [[SFT-实战指南|SFT 实战指南]] — SFT 工程实践，HPT 的 SFT 分支对应
+- [[AI/3-LLM/SFT/SFT-实战指南|SFT 实战指南]] — SFT 工程实践，HPT 的 SFT 分支对应
 
 ## 推荐阅读
 
 1. **原文**：[arXiv:2509.04419](https://arxiv.org/abs/2509.04419) — Towards a Unified View of LLM Post-Training
 2. **PaperScope 解读**：https://paperscope.ai/hf/2509.04419
-3. **理论延伸**：[[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — HPT 框架下 RL 分支的内部分化
+3. **理论延伸**：[[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 2026 全景]] — HPT 框架下 RL 分支的内部分化

@@ -227,9 +227,9 @@ python -m verl.trainer.main \
 
 ## 相关
 
-- [[verl 概述|verl 概述]]
-- [[配置文件|配置文件]]
-- [[性能调优|性能调优]]
-- [[硬件资源预估|硬件资源预估]]
-- [[算法概述|算法概述]]
-- [[grafana 看板|grafana 看板]]
+- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]]
+- [[AI/3-LLM/Frameworks/verl/配置文件|配置文件]]
+- [[AI/3-LLM/Frameworks/verl/性能调优|性能调优]]
+- [[AI/3-LLM/Frameworks/verl/硬件资源预估|硬件资源预估]]
+- [[AI/3-LLM/Frameworks/verl/算法概述|算法概述]]
+- [[AI/3-LLM/Frameworks/verl/grafana 看板|grafana 看板]]

@@ -12,7 +12,7 @@ tags:
   - grpo
   - notebook-implementation
 related:
-  - "[[GRPO 深度理解]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解]]"
   - "[[AI/3-LLM/RL/GRPO/GRPO-手撕实操]]"
   - "[[AI/3-LLM/RL/GRPO/GRPO-KL散度三种近似]]"
   - "[[AI/3-LLM/RL/PPO/RLHF-PPO-完整Pytorch实现]]"

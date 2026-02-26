@@ -18,7 +18,7 @@ related:
   - "[[AI/3-LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写]]"
   - "[[AI/3-LLM/MA-RLHF课程/lc5-DeepSeek-V3-MOC]]"
   - "[[AI/3-LLM/Inference/KV Cache|KV Cache]]"
-  - "[[Attention 变体综述]]"
+  - "[[AI/3-LLM/Architecture/Attention 变体综述]]"
 ---
 
 # DeepSeek MLA（多头潜在注意力）从零手写
@@ -271,5 +271,5 @@ A: 低秩 Q（wq_down + wq_up）减少 Q 的激活显存（中间的 c_q 维度�
 - [[AI/3-LLM/Architecture/DeepSeek-V3-手撕实操]] — DeepSeek V3 完整架构手撕（MLA + MoE 组合），本笔记 MLA 部分的扩展
 - [[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操]] — KV Cache 分配机制（PagedKVCache），与 MLA 低秩压缩正交
 - [[AI/3-LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写]] — TPA（张量积低秩分解）+ YaRN，另一种 KV 压缩 + 长度外推组合
-- [[Attention 变体综述]] — MLA/MQA/GQA/MHA 全谱系对比，理论定位
+- [[AI/3-LLM/Architecture/Attention 变体综述]] — MLA/MQA/GQA/MHA 全谱系对比，理论定位
 - [[AI/3-LLM/Inference/KV Cache|KV Cache]] — KV Cache 优化全景，MLA 的工程背景

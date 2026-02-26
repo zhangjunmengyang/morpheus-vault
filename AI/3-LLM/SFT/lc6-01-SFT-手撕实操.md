@@ -13,7 +13,7 @@ tags:
   - pytorch
 related:
   - "[[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操-MA-RLHF]]"
-  - "[[LoRA|LoRA]]"
+  - "[[AI/3-LLM/SFT/LoRA|LoRA]]"
   - "[[AI/3-LLM/RL/PPO/MA-RLHF-核心代码注解|MA-RLHF-核心代码注解]]"
 ---
 

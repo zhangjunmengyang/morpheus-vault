@@ -18,11 +18,11 @@ sources:
   - "GiGPO: arXiv:2505.10978"
   - "Dr. MAS: arXiv:2602.08847"
 related:
-  - "[[GiGPO-Group-in-Group-Policy-Optimization|GiGPO]]"
-  - "[[Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems|Dr. MAS]]"
-  - "[[Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]]"
-  - "[[MIG-Step-Marginal-Information-Gain-Credit-Assignment|MIG]]"
-  - "[[Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]]"
+  - "[[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]]"
+  - "[[AI/2-Agent/Agentic-RL/Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems|Dr. MAS]]"
+  - "[[AI/2-Agent/Agentic-RL/Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]]"
+  - "[[AI/2-Agent/Agentic-RL/MIG-Step-Marginal-Information-Gain-Credit-Assignment|MIG]]"
+  - "[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]]"
 updated: 2026-02-24
 ---
 
@@ -216,12 +216,12 @@ graph TD
 
 ## See Also
 
-- [[GiGPO-Group-in-Group-Policy-Optimization|GiGPO（NeurIPS 2025）]] — **正交互补**：GiGPO 解决纵向（单 agent 不同时间步）credit，SHARP 解决横向（多 agent 之间）credit；两者可组合
-- [[Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems|Dr. MAS（NTU，arXiv:2602.08847）]] — **殊途同归**：Dr. MAS 从稳定性出发（per-agent normalization），SHARP 从准确性出发（Shapley reward）；两者都指向 per-agent 设计原则
-- [[Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]] — MAGRPO/AT-GRPO/MARS2 全图谱，SHARP 是横向 credit 专项深挖
-- [[MIG-Step-Marginal-Information-Gain-Credit-Assignment|MIG]] — 同样基于"边际贡献"信息论视角，但 MIG 是纵向单 agent 步骤级，SHARP 是横向 multi-agent 级；两者哲学同源
-- [[Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — 完整 CA 谱系，SHARP 是最新加入的横向维度
-- [[SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO（arXiv:2602.06554）]] — turn-level CA 的理论保证版，与 SHARP 的 agent-level CA 处于不同粒度
+- [[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO（NeurIPS 2025）]] — **正交互补**：GiGPO 解决纵向（单 agent 不同时间步）credit，SHARP 解决横向（多 agent 之间）credit；两者可组合
+- [[AI/2-Agent/Agentic-RL/Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems|Dr. MAS（NTU，arXiv:2602.08847）]] — **殊途同归**：Dr. MAS 从稳定性出发（per-agent normalization），SHARP 从准确性出发（Shapley reward）；两者都指向 per-agent 设计原则
+- [[AI/2-Agent/Agentic-RL/Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]] — MAGRPO/AT-GRPO/MARS2 全图谱，SHARP 是横向 credit 专项深挖
+- [[AI/2-Agent/Agentic-RL/MIG-Step-Marginal-Information-Gain-Credit-Assignment|MIG]] — 同样基于"边际贡献"信息论视角，但 MIG 是纵向单 agent 步骤级，SHARP 是横向 multi-agent 级；两者哲学同源
+- [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — 完整 CA 谱系，SHARP 是最新加入的横向维度
+- [[AI/2-Agent/Agentic-RL/SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO（arXiv:2602.06554）]] — turn-level CA 的理论保证版，与 SHARP 的 agent-level CA 处于不同粒度
 
 ## 推荐阅读
 

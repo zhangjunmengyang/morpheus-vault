@@ -1007,21 +1007,21 @@ def phase_router(obs_t, goal, action_history):
 > 本指南所有坑和解法均有论文支撑。按章节快速跳转：
 
 ### 第一章：GRPO 失效模式
-- [[STAPO-Spurious-Token-Aware-Policy-Optimization|STAPO]] — Entropy Collapse 根治：S2T mask 精确定位 0.01% spurious token
-- [[Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] — 梯度稀疏：Teacher LM 动态课程，选 p_q≈0.5 的样本
-- [[DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]] — Root Saturation：Pivot-Driven Resampling 打开探索空间
-- [[VESPO-Variational-Sequence-Policy-Optimization|VESPO]] — Off-policy：变分推导最优 IS kernel，staleness 64× 稳定
-- [[Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 系统层 off-policy：统一 FP8 精度 flow
+- [[AI/3-LLM/RL/Other-Algorithms/STAPO-Spurious-Token-Aware-Policy-Optimization|STAPO]] — Entropy Collapse 根治：S2T mask 精确定位 0.01% spurious token
+- [[AI/3-LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] — 梯度稀疏：Teacher LM 动态课程，选 p_q≈0.5 的样本
+- [[AI/3-LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]] — Root Saturation：Pivot-Driven Resampling 打开探索空间
+- [[AI/3-LLM/RL/Other-Algorithms/VESPO-Variational-Sequence-Policy-Optimization|VESPO]] — Off-policy：变分推导最优 IS kernel，staleness 64× 稳定
+- [[AI/3-LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 系统层 off-policy：统一 FP8 精度 flow
 
 ### 第二章：Agentic RL 特有问题
-- [[HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER]] — 分层 Advantage Estimation，多步 agent credit assignment
-- [[PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]] — Simplicity Bias：Phase-level MoE expert 分离参数容量
+- [[AI/2-Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER]] — 分层 Advantage Estimation，多步 agent credit assignment
+- [[AI/2-Agent/Agentic-RL/PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]] — Simplicity Bias：Phase-level MoE expert 分离参数容量
 - [[CM2 — Checklist Rewards多轮Tool Use RL|CM2]] — Tool Use RL：Checklist reward 多轮工具交互奖励设计
-- [[EnterpriseGym-Corecraft|EnterpriseGym Corecraft]] — 环境设计：高保真企业 RL 环境 + OOD 泛化
+- [[AI/2-Agent/Agentic-RL/EnterpriseGym-Corecraft|EnterpriseGym Corecraft]] — 环境设计：高保真企业 RL 环境 + OOD 泛化
 
 ### 综述与全景
-- [[GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] — 六维框架元分析，本指南的学术上位文档
-- [[RL-Training-Stability-2026-Unified-Analysis|RL 训练稳定性统一分析]] — Token/样本/探索/系统四维拓扑
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进全景 2026]] — 六维框架元分析，本指南的学术上位文档
+- [[AI/3-LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL 训练稳定性统一分析]] — Token/样本/探索/系统四维拓扑
 
 ---
 

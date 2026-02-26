@@ -269,10 +269,10 @@ graph TD
 - 代码：[bytedance/ui-tars](https://github.com/bytedance/ui-tars)
 - Demo：[seed-tars.com](https://seed-tars.com/showcase/ui-tars-2)
 - 相关 Vault 笔记：
-  - [[Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — GUI Agent 宏观定位
-  - [[Agent-RL-环境工程系统论|Agent RL 环境工程系统论]] — 环境设计原则（OSWorld/WebArena 分析）
-  - [[ASTRA-Automated-Tool-Agent-Training|ASTRA]] — Tool-use RL 方法论（数据合成 vs Data Flywheel 的哲学对比）
-  - [[Memory-R1-RL-for-LLM-Memory-Management|Memory-R1]] — Working/Episodic Memory 的 RL 训练（可扩展至 GUI 场景）
-  - [[Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — Multi-turn credit assignment 方法论
-  - [[UI-R1-GUI-Action-Prediction-RL|UI-R1]] — GUI Agent RL 极简对立路线：136 条数据 rule-based GRPO（vivo+CUHK）；UI-R1 可作 UI-TARS-2 Data Flywheel 的冷启动 seed
+  - [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — GUI Agent 宏观定位
+  - [[AI/2-Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent RL 环境工程系统论]] — 环境设计原则（OSWorld/WebArena 分析）
+  - [[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training|ASTRA]] — Tool-use RL 方法论（数据合成 vs Data Flywheel 的哲学对比）
+  - [[AI/2-Agent/Fundamentals/Memory-R1-RL-for-LLM-Memory-Management|Memory-R1]] — Working/Episodic Memory 的 RL 训练（可扩展至 GUI 场景）
+  - [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — Multi-turn credit assignment 方法论
+  - [[AI/2-Agent/Agentic-RL/UI-R1-GUI-Action-Prediction-RL|UI-R1]] — GUI Agent RL 极简对立路线：136 条数据 rule-based GRPO（vivo+CUHK）；UI-R1 可作 UI-TARS-2 Data Flywheel 的冷启动 seed
 - GUI Agent 生态：[OSWorld](https://os-world.github.io/) | [AndroidWorld](https://google-deepmind.github.io/android_world/) | [Online-Mind2Web](https://arxiv.org/abs/2306.06070)

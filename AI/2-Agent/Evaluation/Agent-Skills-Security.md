@@ -525,7 +525,7 @@ OpenClaw/ClawHub 生态相比论文描述的通用 skill marketplace 有一些�
 
 ## See Also
 
-- [[Clinejection-AI-Coding-Agent-Supply-Chain-Attack|Clinejection]] — Agent 安全的真实案例：Cline prompt injection 供应链攻击
-- [[Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive Regularization]] — 防止安全对齐被 fine-tuning 破坏
+- [[AI/5-AI 安全/Clinejection-AI-Coding-Agent-Supply-Chain-Attack|Clinejection]] — Agent 安全的真实案例：Cline prompt injection 供应链攻击
+- [[AI/5-AI 安全/Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive Regularization]] — 防止安全对齐被 fine-tuning 破坏
 -  — AI 安全知识全图谱
 -  — Agent 知识全图谱

@@ -326,27 +326,27 @@ TSR 论文中把这个机制称为"instance filtering（retain top-p% most-uncer
 ## See Also
 
 **直接后续工作（引用 RAGEN 为前驱）**
-- [[TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（ICML 2026，TU Munich+IBM）]] — StarPO-S instance filtering → TSR 树搜索 rollout；解决 Echo Trap 的工程升级方案
-- [[HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]] — RAGEN 揭示的 trajectory-level 不稳定 → HiPER 的 segment-level HAE 作为根本修复
-- [[LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL|LOOP（Apple Research）]] — LOO baseline 直接解决 RAGEN 诊断的 gradient collapse
-- [[KLong-Extremely-Long-Horizon-Agent-RL|KLong（NUS+MIT）]] — 在 RAGEN 诊断的不稳定背景上解决超长 horizon 问题
+- [[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（ICML 2026，TU Munich+IBM）]] — StarPO-S instance filtering → TSR 树搜索 rollout；解决 Echo Trap 的工程升级方案
+- [[AI/2-Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]] — RAGEN 揭示的 trajectory-level 不稳定 → HiPER 的 segment-level HAE 作为根本修复
+- [[AI/2-Agent/Agentic-RL/LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL|LOOP（Apple Research）]] — LOO baseline 直接解决 RAGEN 诊断的 gradient collapse
+- [[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent-RL|KLong（NUS+MIT）]] — 在 RAGEN 诊断的不稳定背景上解决超长 horizon 问题
 
 **理论解释层**
-- [[SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO（Alibaba Tongyi，arXiv:2602.06554）]] ⭐ — **Echo Trap 的理论根因**：正式证明 GRPO 的 variance normalization（除以 σ）在 multi-turn 场景中破坏收敛性（不可能定理 Theorem 3.2）；逆序更新（backward induction）是理论解法；RAGEN 描述症状，SeeUPO 给出数学证明
+- [[AI/2-Agent/Agentic-RL/SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO（Alibaba Tongyi，arXiv:2602.06554）]] ⭐ — **Echo Trap 的理论根因**：正式证明 GRPO 的 variance normalization（除以 σ）在 multi-turn 场景中破坏收敛性（不可能定理 Theorem 3.2）；逆序更新（backward induction）是理论解法；RAGEN 描述症状，SeeUPO 给出数学证明
 
 **同期稳定性研究**
-- [[SCoRe-Self-Correction-via-Reinforcement-Learning|SCoRe（NeurIPS 2024，DeepMind）]] — 两阶段 RL + Phase 1 KL 约束，解决 multi-turn self-correction 的 behavior collapse（与 Echo Trap 同源问题）
-- [[Blockwise-Advantage-Estimation|Blockwise Advantage Estimation]] — block-level credit 是 StarPO-S decoupled clipping 的变体思路
-- [[Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems|Dr. MAS（NTU）]] — **正交互补**：RAGEN 处理单 agent 内部多轮 Echo Trap（梯度趋零），Dr. MAS 处理跨 agent reward 异质导致的梯度范数爆炸；两者合起来覆盖 Multi-Agent RL 稳定性的完整版图
-- [[PyVision-RL-Agentic-Vision-Interaction-Collapse|PyVision-RL（2602.20739）]] — **Echo Trap 的多模态版本**：Interaction Collapse（模型学会减少工具调用规避复杂性）；Oversampling-Filtering-Ranking 修复思路与 StarPO-S trajectory filtering 同源；跨模态验证了"RL 压力推向退化策略"根因的普遍性
+- [[AI/2-Agent/Agentic-RL/SCoRe-Self-Correction-via-Reinforcement-Learning|SCoRe（NeurIPS 2024，DeepMind）]] — 两阶段 RL + Phase 1 KL 约束，解决 multi-turn self-correction 的 behavior collapse（与 Echo Trap 同源问题）
+- [[AI/3-LLM/RL/GRPO/Blockwise-Advantage-Estimation|Blockwise Advantage Estimation]] — block-level credit 是 StarPO-S decoupled clipping 的变体思路
+- [[AI/2-Agent/Agentic-RL/Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems|Dr. MAS（NTU）]] — **正交互补**：RAGEN 处理单 agent 内部多轮 Echo Trap（梯度趋零），Dr. MAS 处理跨 agent reward 异质导致的梯度范数爆炸；两者合起来覆盖 Multi-Agent RL 稳定性的完整版图
+- [[AI/3-LLM/MLLM/PyVision-RL-Agentic-Vision-Interaction-Collapse|PyVision-RL（2602.20739）]] — **Echo Trap 的多模态版本**：Interaction Collapse（模型学会减少工具调用规避复杂性）；Oversampling-Filtering-Ranking 修复思路与 StarPO-S trajectory filtering 同源；跨模态验证了"RL 压力推向退化策略"根因的普遍性
 
 **Step-level Credit 谱系**
-- [[GiGPO-Group-in-Group-Policy-Optimization|GiGPO（NeurIPS 2025）]] — StarPO-S filtering（prompt-level多样性）与 GiGPO grouping（state-level credit）互补
-- [[Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — RAGEN 的 Echo Trap 是稀疏 reward + multi-turn 的核心症状
+- [[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO（NeurIPS 2025）]] — StarPO-S filtering（prompt-level多样性）与 GiGPO grouping（state-level credit）互补
+- [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — RAGEN 的 Echo Trap 是稀疏 reward + multi-turn 的核心症状
 
 **Reward Design**
-- [[CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2（Checklist Rewards）]] — RAGEN Finding 3（reward 不够驱动 reasoning）的工程解法：dense checklist reward
-- [[iStar-Implicit-Step-Rewards-Agentic-RL|iStar（阿里通义）]] — Finding 3 的另一解法：DPO 隐式 step reward
+- [[AI/2-Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2（Checklist Rewards）]] — RAGEN Finding 3（reward 不够驱动 reasoning）的工程解法：dense checklist reward
+- [[AI/2-Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar（阿里通义）]] — Finding 3 的另一解法：DPO 隐式 step reward
 
 *Written: 2026-02-23（第19次心跳）*  
 *Category: Multi-Turn RL Stability*

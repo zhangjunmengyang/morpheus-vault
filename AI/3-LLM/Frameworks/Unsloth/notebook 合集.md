@@ -106,8 +106,8 @@ Unsloth 的 notebook 最大的价值不在于"复制粘贴就能跑"，而在于
 
 ## 相关
 
-- [[Unsloth 概述|Unsloth 概述]]
-- [[训练示例概述|训练示例概述]]
-- [[Chat Templates|Chat Templates]]
-- [[Checkpoint|Checkpoint 管理]]
-- [[小规模训练手册|小规模训练手册]]
+- [[AI/3-LLM/Frameworks/Unsloth/Unsloth 概述|Unsloth 概述]]
+- [[AI/3-LLM/Frameworks/Unsloth/训练示例概述|训练示例概述]]
+- [[AI/3-LLM/Frameworks/Unsloth/Chat Templates|Chat Templates]]
+- [[AI/3-LLM/Frameworks/Unsloth/Checkpoint|Checkpoint 管理]]
+- [[AI/3-LLM/Pretraining/小规模训练手册|小规模训练手册]]

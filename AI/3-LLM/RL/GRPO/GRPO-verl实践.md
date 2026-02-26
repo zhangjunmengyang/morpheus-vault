@@ -160,9 +160,9 @@ verl 的资源分配比较灵活，但需要合理规划：
 
 ## 相关
 
-- [[GRPO 深度理解|GRPO 深度理解]] — 算法原理
-- [[GRPO-Unsloth实践|GRPO Unsloth 实践]] — 轻量级方案
-- [[GRPO-TRL实践|GRPO TRL 实践]] — TRL 框架方案
-- [[DAPO-verl实践|DAPO verl 实践]] — GRPO 的改进版
-- [[verl 训练参数|verl 训练参数]]
-- [[硬件资源预估|硬件资源预估]]
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — 算法原理
+- [[AI/3-LLM/RL/GRPO/GRPO-Unsloth实践|GRPO Unsloth 实践]] — 轻量级方案
+- [[AI/3-LLM/RL/GRPO/GRPO-TRL实践|GRPO TRL 实践]] — TRL 框架方案
+- [[AI/3-LLM/RL/DAPO/DAPO-verl实践|DAPO verl 实践]] — GRPO 的改进版
+- [[AI/3-LLM/Frameworks/verl/verl 训练参数|verl 训练参数]]
+- [[AI/3-LLM/Frameworks/verl/硬件资源预估|硬件资源预估]]

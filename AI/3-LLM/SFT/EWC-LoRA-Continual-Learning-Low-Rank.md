@@ -195,9 +195,9 @@ $$\mathbf{F}^{\Delta\mathbf{W}}_t = \mathbb{E}_{(x,y)\sim\mathcal{D}_t}\left[\le
 
 ## See Also
 
-- [[MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS（Fisher信息驱动RM训练）]] — 同源Fisher information理论，方向互补：MARS最大化Fisher聚焦困难样本（主动利用曲率），EWC-LoRA正则化Fisher保护重要参数（防止曲率崩塌）——Fisher矩阵的"攻"与"守"
-- [[Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization（安全退化自适应正则）]] — 同为"微调时保护重要知识"：EWC-LoRA保护旧任务技能（灾难性遗忘），Adaptive-Reg保护安全对齐能力（安全退化）；前者用Fisher penalty，后者用adaptive KL；机制不同，目标同构
-- [[LoRA|LoRA（低秩适应基础）]] — EWC-LoRA的技术底座；核心洞察：ΔW=AB的bilinear结构导致独立Fisher不可用，必须从全维Fisher投影
-- [[PEFT 方法对比|PEFT方法对比]] — 参数高效微调生态全景；EWC-LoRA在PECL（参数高效持续学习）方向填补了regularization-based的空白，与architecture-based（每任务独立LoRA）形成稳定性-存储Pareto权衡
+- [[AI/3-LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS（Fisher信息驱动RM训练）]] — 同源Fisher information理论，方向互补：MARS最大化Fisher聚焦困难样本（主动利用曲率），EWC-LoRA正则化Fisher保护重要参数（防止曲率崩塌）——Fisher矩阵的"攻"与"守"
+- [[AI/5-AI 安全/Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization（安全退化自适应正则）]] — 同为"微调时保护重要知识"：EWC-LoRA保护旧任务技能（灾难性遗忘），Adaptive-Reg保护安全对齐能力（安全退化）；前者用Fisher penalty，后者用adaptive KL；机制不同，目标同构
+- [[AI/3-LLM/SFT/LoRA|LoRA（低秩适应基础）]] — EWC-LoRA的技术底座；核心洞察：ΔW=AB的bilinear结构导致独立Fisher不可用，必须从全维Fisher投影
+- [[AI/3-LLM/SFT/PEFT 方法对比|PEFT方法对比]] — 参数高效微调生态全景；EWC-LoRA在PECL（参数高效持续学习）方向填补了regularization-based的空白，与architecture-based（每任务独立LoRA）形成稳定性-存储Pareto权衡
 - [[LLM微调实战-2026技术全景|LLM微调实战2026全景]] ⭐ — 工程化配套；持续学习（多任务顺序微调）是微调实战的高阶场景，EWC-LoRA是唯一存储恒定且λ连续可调的解法
-- [[OpenCharacter-Large-Scale-Synthetic-Persona-Training|OpenCharacter（合成Persona训练）]] — "LLM人格工程栈"三角：OpenCharacter用合成数据SFT建立角色风格（第1层），EWC-LoRA保证多角色持续微调时旧角色不被覆盖（第2层），PERSIST揭示两层都不足以解决结构性稳定（第3层→需要叙事锚点）
+- [[AI/3-LLM/Application/OpenCharacter-Large-Scale-Synthetic-Persona-Training|OpenCharacter（合成Persona训练）]] — "LLM人格工程栈"三角：OpenCharacter用合成数据SFT建立角色风格（第1层），EWC-LoRA保证多角色持续微调时旧角色不被覆盖（第2层），PERSIST揭示两层都不足以解决结构性稳定（第3层→需要叙事锚点）

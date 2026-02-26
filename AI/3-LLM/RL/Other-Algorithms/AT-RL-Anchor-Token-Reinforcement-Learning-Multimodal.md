@@ -140,9 +140,9 @@ AT-RL 用注意力图提供了一个方向，但更根本的解决方案可能�
 
 ## 关键词连接
 
-- [[GRPO-Improvement-Panorama-2026|GRPO-Improvement-Panorama-2026]] — Token 维度的多模态扩展
-- [[STAPO-Spurious-Token-Aware-Policy-Optimization|STAPO-Spurious-Token-Aware-Policy-Optimization]] — 纯语言场景下的 token 级 credit 问题
-- [[DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling]] — 探索维度的 credit 问题
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO-Improvement-Panorama-2026]] — Token 维度的多模态扩展
+- [[AI/3-LLM/RL/Other-Algorithms/STAPO-Spurious-Token-Aware-Policy-Optimization|STAPO-Spurious-Token-Aware-Policy-Optimization]] — 纯语言场景下的 token 级 credit 问题
+- [[AI/3-LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling]] — 探索维度的 credit 问题
 
 ---
 
@@ -156,4 +156,4 @@ AT-RL 提供的是多模态版本的答案。纯语言的 token 级 dense reward
 
 ---
 
-**See also**：[[VPPO-Visually-Perceptive-Policy-Optimization|VPPO]] — 同样识别"关键感知 token"，但用 KL 散度（有无图像）定义视觉依赖度，而非图聚类；AT-RL 关注跨模态锚定点，VPPO 关注视觉依赖度稀疏分布，互补视角
+**See also**：[[AI/3-LLM/RL/Other-Algorithms/VPPO-Visually-Perceptive-Policy-Optimization|VPPO]] — 同样识别"关键感知 token"，但用 KL 散度（有无图像）定义视觉依赖度，而非图聚类；AT-RL 关注跨模态锚定点，VPPO 关注视觉依赖度稀疏分布，互补视角

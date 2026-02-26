@@ -115,6 +115,6 @@ updated: 2026-02-22
 
 -  — AI 安全全景索引
 - [[AI安全与对齐-2026技术全景|AI安全与对齐 2026 全景]] — 宏观技术综述
-- [[对齐技术总结|对齐技术总结]] — RLHF/宪法 AI 技术路线
-- [[Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization]] — hidden state 安全探测研究
+- [[AI/5-AI 安全/对齐技术总结|对齐技术总结]] — RLHF/宪法 AI 技术路线
+- [[AI/5-AI 安全/Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization]] — hidden state 安全探测研究
 - [[AI/Frontiers/Claude Opus 4.6|Claude Opus 4.6]] — 对应的模型技术分析

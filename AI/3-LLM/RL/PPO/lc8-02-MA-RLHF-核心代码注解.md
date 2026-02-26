@@ -14,7 +14,7 @@ tags:
 related:
   - "[[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操-MA-RLHF]]"
   - "[[AI/3-LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]]"
-  - "[[LoRA|LoRA]]"
+  - "[[AI/3-LLM/SFT/LoRA|LoRA]]"
   - "[[AI/3-LLM/Infra/Ray-分布式RL训练实操|Ray-分布式RL训练实操]]"
 ---
 

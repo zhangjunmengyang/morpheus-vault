@@ -168,7 +168,7 @@ class SwiGLU(nn.Module):
 ## 相关概念
 
 - [[Transformer架构深度解析-2026技术全景|Transformer 架构深度解析]]
-- [[MoE 深度解析|MoE 架构深度解析]]（FFN 层设计的演进方向）
+- [[AI/3-LLM/Architecture/MoE 深度解析|MoE 架构深度解析]]（FFN 层设计的演进方向）
 - [[LLM-预训练与分布式训练-2026-全景|预训练与分布式训练]]
 
 ## 推荐阅读

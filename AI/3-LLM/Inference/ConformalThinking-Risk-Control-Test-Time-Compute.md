@@ -27,12 +27,12 @@ status: active
 
 ## See Also
 
-- [[Deep-Thinking-Ratio-DTR-v2-Think-At-N|DTR v2 + Think@N]] — 同为推理 token 效率视角：DTR 发现深层 token 占比决定质量（推理深度），ConformalThinking 用统计框架决定"何时停"（推理宽度）——互补的两个效率维度
-- [[Accordion-Thinking-Self-Regulated-Step-Summaries|Accordion-Thinking]] — RL 主动压缩 CoT 的另一路径：Accordion fold 掉已处理 token，ConformalThinking 在统计边界处停止——两者都解决"过度思考"，机制不同（内容压缩 vs 边界判定）
-- [[Progressive-Thought-Encoding-Cache-Efficient-RL|PTE]] — 计算资源受限下的另一侧应对：KV cache 满时学习再 evict（PTE），置信度超阈值时早停（ConformalThinking）——从内存和计算两个角度共同构成 TTC 预算管理框架
-- [[Test-Time-Compute|Test-Time Compute 综述]] — ConformalThinking 是 TTC 领域的方法论补丁：现有 Best-of-N/PRM/Budget Forcing 都没解决"何时停止"的统计保证问题
-- [[IntroLLM-Introspective-Temperature-Policy-Hierarchical-RL|IntroLLM]] — 相反的置信度应用：IntroLLM 用内省温度提升生成多样性，ConformalThinking 用置信度信号触发双阈值停止——都依赖 token-level confidence 但目标方向相反（发散 vs 收敛）
-- [[TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（训练时搜索）]] — 对偶视角：ConformalThinking 在推理时控制 compute（"何时停"），TSR 在训练时用 search 提升 rollout 质量（"如何花"）——两者共同说明 compute 分配在推理/训练两个时间维度都有巨大优化空间
+- [[AI/3-LLM/Inference/Deep-Thinking-Ratio-DTR-v2-Think-At-N|DTR v2 + Think@N]] — 同为推理 token 效率视角：DTR 发现深层 token 占比决定质量（推理深度），ConformalThinking 用统计框架决定"何时停"（推理宽度）——互补的两个效率维度
+- [[AI/3-LLM/Inference/Accordion-Thinking-Self-Regulated-Step-Summaries|Accordion-Thinking]] — RL 主动压缩 CoT 的另一路径：Accordion fold 掉已处理 token，ConformalThinking 在统计边界处停止——两者都解决"过度思考"，机制不同（内容压缩 vs 边界判定）
+- [[AI/3-LLM/Inference/Progressive-Thought-Encoding-Cache-Efficient-RL|PTE]] — 计算资源受限下的另一侧应对：KV cache 满时学习再 evict（PTE），置信度超阈值时早停（ConformalThinking）——从内存和计算两个角度共同构成 TTC 预算管理框架
+- [[AI/3-LLM/Inference/Test-Time-Compute|Test-Time Compute 综述]] — ConformalThinking 是 TTC 领域的方法论补丁：现有 Best-of-N/PRM/Budget Forcing 都没解决"何时停止"的统计保证问题
+- [[AI/3-LLM/RL/Other-Algorithms/IntroLLM-Introspective-Temperature-Policy-Hierarchical-RL|IntroLLM]] — 相反的置信度应用：IntroLLM 用内省温度提升生成多样性，ConformalThinking 用置信度信号触发双阈值停止——都依赖 token-level confidence 但目标方向相反（发散 vs 收敛）
+- [[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（训练时搜索）]] — 对偶视角：ConformalThinking 在推理时控制 compute（"何时停"），TSR 在训练时用 search 提升 rollout 质量（"如何花"）——两者共同说明 compute 分配在推理/训练两个时间维度都有巨大优化空间
 
 ---
 

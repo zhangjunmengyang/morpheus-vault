@@ -106,7 +106,7 @@ tags:
 
 ## 相关
 
-- [[为什么 PPO 优于 PG|为什么 PPO 优于 PG]] — PPO 的核心改进
-- [[On-Policy vs Off-Policy|On-Policy vs Off-Policy]] — 基础分类
-- [[GRPO-verl实践|GRPO-verl实践]] — 实际动手
-- [[RLOO-TRL实践|RLOO-TRL实践]] — TRL 框架的 RL 训练
+- [[AI/3-LLM/RL/Fundamentals/为什么 PPO 优于 PG|为什么 PPO 优于 PG]] — PPO 的核心改进
+- [[AI/3-LLM/RL/Fundamentals/On-Policy vs Off-Policy|On-Policy vs Off-Policy]] — 基础分类
+- [[AI/3-LLM/RL/GRPO/GRPO-verl实践|GRPO-verl实践]] — 实际动手
+- [[AI/3-LLM/RL/RLOO/RLOO-TRL实践|RLOO-TRL实践]] — TRL 框架的 RL 训练

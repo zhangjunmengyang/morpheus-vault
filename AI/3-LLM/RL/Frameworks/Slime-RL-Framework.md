@@ -13,7 +13,7 @@ domain: AI/LLM/Frameworks
 source: https://github.com/THUDM/slime
 status: permanent
 see-also:
-  - "[[GLM-5]]"
+  - "[[AI/4-模型/GLM/GLM-5]]"
 ---
 
 # Slime: 异步 RL Post-Training 框架
@@ -141,9 +141,9 @@ GLM-5 的 Agent 能力（SWE-bench 77.8、Vending Bench #1 开源）直接受益
 
 ## 相关笔记
 
-- [[OpenRLHF]] — 对比框架
-- [[verl 概述]] — 对比框架
-- [[GRPO 深度理解|GRPO]] — Slime 支持的 RL 算法之一
+- [[AI/3-LLM/Frameworks/OpenRLHF/OpenRLHF]] — 对比框架
+- [[AI/3-LLM/Frameworks/verl/verl 概述]] — 对比框架
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO]] — Slime 支持的 RL 算法之一
 - [[2026年2月模型潮（这篇毫无价值，哪怕梳理个从 deepseek R1 以来的时间线都比这强）]] — GLM-5 所在的模型发布背景
 
 ---

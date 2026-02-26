@@ -88,13 +88,13 @@ Qwen-VL 系列是目前开源 MLLM 中工程完成度最高的之一。几个值
 
 ## 相关
 
-- [[DeepSeek-VL]]
-- [[InternVL3]]
-- [[Qwen 2.5 VL-Unsloth训练]]
-- [[Universal Multimodal Retrieval]]
-- [[CLIP|CLIP]]
-- [[BLIP-2|BLIP-2]]
-- [[MLLM 概述|MLLM 概述]]
+- [[AI/3-LLM/MLLM/DeepSeek-VL]]
+- [[AI/3-LLM/MLLM/InternVL3]]
+- [[AI/3-LLM/MLLM/Qwen 2.5 VL-Unsloth训练]]
+- [[AI/3-LLM/MLLM/Universal Multimodal Retrieval]]
+- [[AI/3-LLM/MLLM/CLIP|CLIP]]
+- [[AI/3-LLM/MLLM/BLIP-2|BLIP-2]]
+- [[AI/3-LLM/MLLM/MLLM 概述|MLLM 概述]]
 - [[AI/CV/ViT|ViT]]
-- [[LLaMA|LLaMA]]
+- [[AI/3-LLM/Architecture/LLaMA|LLaMA]]
 - [[Transformer 位置编码详解|Transformer 位置编码详解]]

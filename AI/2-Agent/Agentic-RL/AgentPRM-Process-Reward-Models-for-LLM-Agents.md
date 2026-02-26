@@ -15,11 +15,11 @@ sources:
   - https://github.com/sanjibanc/agent_prm
 venue: preprint
 related:
-  - "[[GiGPO-Group-in-Group-Policy-Optimization|GiGPO-Group-in-Group-Policy-Optimization]]"
-  - "[[iStar-Implicit-Step-Rewards-Agentic-RL|iStar-Implicit-Step-Rewards-Agentic-RL]]"
-  - "[[Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]]"
-  - "[[LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL|LOOP-RL-Long-Horizon-Interactive-Agents]]"
-  - "[[Tree-GRPO-Tree-Search-LLM-Agent-RL|Tree-GRPO-Tree-Search-LLM-Agent-RL]]"
+  - "[[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO-Group-in-Group-Policy-Optimization]]"
+  - "[[AI/2-Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar-Implicit-Step-Rewards-Agentic-RL]]"
+  - "[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]]"
+  - "[[AI/2-Agent/Agentic-RL/LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL|LOOP-RL-Long-Horizon-Interactive-Agents]]"
+  - "[[AI/2-Agent/Agentic-RL/Tree-GRPO-Tree-Search-LLM-Agent-RL|Tree-GRPO-Tree-Search-LLM-Agent-RL]]"
 ---
 
 # AgentPRM: Process Reward Models for LLM Agents
@@ -204,7 +204,7 @@ MCTS 的同步树结构是工程瓶颈；异步 rollout + hashmap 聚合几乎�
 
 - **原始论文**：[arXiv:2502.10325](https://arxiv.org/abs/2502.10325)
 - **代码**：[github.com/sanjibanc/agent_prm](https://github.com/sanjibanc/agent_prm)（基于 OpenInstruct，轻量 Gym wrapper）
-- **对比阅读**：[[GiGPO-Group-in-Group-Policy-Optimization|GiGPO-Group-in-Group-Policy-Optimization]]（零成本 step-level credit）
-- **理论统一**：[[iStar-Implicit-Step-Rewards-Agentic-RL|iStar-Implicit-Step-Rewards-Agentic-RL]]（DPO ≡ implicit PRM 的数学证明）
-- **长链 RL 应用**：[[LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL|LOOP-RL-Long-Horizon-Interactive-Agents]]（value-free PPO，AppWorld）
-- **Credit Assignment 全景**：[[Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]]
+- **对比阅读**：[[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO-Group-in-Group-Policy-Optimization]]（零成本 step-level credit）
+- **理论统一**：[[AI/2-Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar-Implicit-Step-Rewards-Agentic-RL]]（DPO ≡ implicit PRM 的数学证明）
+- **长链 RL 应用**：[[AI/2-Agent/Agentic-RL/LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL|LOOP-RL-Long-Horizon-Interactive-Agents]]（value-free PPO，AppWorld）
+- **Credit Assignment 全景**：[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]]

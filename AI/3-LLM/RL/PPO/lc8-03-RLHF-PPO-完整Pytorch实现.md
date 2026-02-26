@@ -13,7 +13,7 @@ tags:
   - rlhf
   - notebook-implementation
 related:
-  - "[[PPO 原理]]"
+  - "[[AI/3-LLM/RL/PPO/PPO 原理]]"
   - "[[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF]]"
   - "[[AI/3-LLM/RL/PPO/MA-RLHF-核心代码注解]]"
   - "[[AI/3-LLM/RL/GRPO/GRPO-完整Notebook实现]]"

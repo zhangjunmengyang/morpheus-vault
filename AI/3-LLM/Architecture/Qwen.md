@@ -15,10 +15,10 @@ sources:
   - Yang et al. *Qwen2 Technical Report* arXiv:2407.10671
   - "Qwen Team. *Qwen2.5: A Party of Foundation Models* 技术报告 2024"
 related:
-  - "[[LLaMA|LLaMA]]"
+  - "[[AI/3-LLM/Architecture/LLaMA|LLaMA]]"
   - "[[Transformer 通识|Transformer 通识]]"
   - "[[AI/3-LLM/Architecture/长上下文处理|长上下文处理]]"
-  - "[[DeepSeek-R1|DeepSeek-R1]]"
+  - "[[AI/3-LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]"
 ---
 
 # Qwen 系列架构解析
@@ -33,15 +33,15 @@ Qwen（通义千问）是阿里巴巴通义实验室开发的大规模语言模�
 Qwen 1.0 作为系列的起点，建立了基本的 Transformer 架构框架，支持中英双语，模型规模从7B到72B。关键特点：
 - 基于标准 Transformer 架构，采用 Pre-RMSNorm
 - 支持32K上下文长度
-- 引入[[Attention 变体综述|分组查询注意力]]（GQA）优化推理效率
+- 引入[[AI/3-LLM/Architecture/Attention 变体综述|分组查询注意力]]（GQA）优化推理效率
 - 预训练数据覆盖多语言、代码、数学等领域
 
 ### 1.2 Qwen2（2024年初）
 Qwen2 在架构和训练方面进行了全面升级：
 - **扩展模型规模**：从0.5B到72B的完整尺寸矩阵
-- **优化注意力机制**：全面采用 [[Attention 变体综述|分组查询注意力]]（GQA），显著提升推理速度
-- **激活函数升级**：使用 [[SwiGLU|SwiGLU]] 替代传统 ReLU，提升表达能力
-- **位置编码改进**：采用 [[Transformer 位置编码|RoPE]] 旋转位置编码，支持更长序列
+- **优化注意力机制**：全面采用 [[AI/3-LLM/Architecture/Attention 变体综述|分组查询注意力]]（GQA），显著提升推理速度
+- **激活函数升级**：使用 [[AI/1-Foundations/ML-Basics/SwiGLU|SwiGLU]] 替代传统 ReLU，提升表达能力
+- **位置编码改进**：采用 [[AI/3-LLM/Architecture/Transformer 位置编码|RoPE]] 旋转位置编码，支持更长序列
 - **多语言增强**：预训练数据包含29种语言，总量达7万亿tokens
 
 ### 1.3 Qwen2.5（2024年中）
@@ -54,7 +54,7 @@ Qwen2.5 在保持架构稳定性的基础上，重点提升了特定能力：
 ### 1.4 Qwen3（2025年预期）
 虽然尚未正式发布，但从技术路线图来看，Qwen3 可能会：
 - 进一步扩大模型规模，可能达到千亿参数级别
-- 引入更先进的[[MoE 深度解析|混合专家模型]]（MoE）架构
+- 引入更先进的[[AI/3-LLM/Architecture/MoE 深度解析|混合专家模型]]（MoE）架构
 - 集成多模态能力，支持图像、音频等模态
 - 优化推理效率，支持更高效的部署
 
@@ -113,7 +113,7 @@ def swish(x):
 - 在语言建模任务中表现优于 GELU 和 ReLU
 
 ### 2.3 RoPE 位置编码
-Qwen 系列使用 [[Transformer 位置编码|RoPE]]（Rotary Position Embedding）进行位置编码：
+Qwen 系列使用 [[AI/3-LLM/Architecture/Transformer 位置编码|RoPE]]（Rotary Position Embedding）进行位置编码：
 
 ```python
 def apply_rope(q, k, cos, sin, position_ids):
@@ -299,10 +299,10 @@ SwiGLU(x) = Swish(Wx) ⊙ (Ux)         # 门控+平滑
 ### 未解问题与局限
 - Qwen2.5 的预训练数据配比细节未完全公开（18T tokens 的语言/领域分布不透明）
 - 128K 长上下文的实际使用质量仍受 Lost in the Middle 问题影响（参见 [[AI/3-LLM/Architecture/长上下文处理|长上下文处理]]）
-- Qwen3 是否会引入 MoE 架构？如果是，与 [[DeepSeek-R1|DeepSeek-R1]] 的 DeepSeekMoE 会有什么差异？
+- Qwen3 是否会引入 MoE 架构？如果是，与 [[AI/3-LLM/Architecture/DeepSeek-R1|DeepSeek-R1]] 的 DeepSeekMoE 会有什么差异？
 
 ### 脑暴：如果往下延伸
-- Qwen2.5 + [[DeepSeek-R1|DeepSeek-R1]] 的 GRPO 训练：用 R1 的 RL 方法在 Qwen2.5 上训练推理能力，事实上 R1-Distill-Qwen 系列已经验证了这条路线
-- 如果把 Qwen 的多语言能力和 [[Mamba-SSM|Mamba]] 的长序列效率结合，能否做出多语言长文档理解的"最优解"？
+- Qwen2.5 + [[AI/3-LLM/Architecture/DeepSeek-R1|DeepSeek-R1]] 的 GRPO 训练：用 R1 的 RL 方法在 Qwen2.5 上训练推理能力，事实上 R1-Distill-Qwen 系列已经验证了这条路线
+- 如果把 Qwen 的多语言能力和 [[AI/3-LLM/Architecture/Mamba-SSM|Mamba]] 的长序列效率结合，能否做出多语言长文档理解的"最优解"？
 
-> 🔗 See also: [[架构范式对比|架构范式对比]] — Qwen 的 Decoder-Only 架构在全景中的定位
+> 🔗 See also: [[AI/3-LLM/Architecture/架构范式对比|架构范式对比]] — Qwen 的 Decoder-Only 架构在全景中的定位

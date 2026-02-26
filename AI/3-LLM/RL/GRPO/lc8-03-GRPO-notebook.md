@@ -15,9 +15,9 @@ tags:
 related:
   - "[[AI/3-LLM/RL/GRPO/GRPO-手撕实操]]"
   - "[[AI/3-LLM/RL/GRPO/GRPO-完整Notebook实现]]"
-  - "[[GRPO 深度理解]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解]]"
   - "[[AI/3-LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"
-  - "[[GRPO-Improvement-Panorama-2026]]"
+  - "[[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析]]"
 ---
 
 # GRPO Pytorch 从零手写
@@ -315,6 +315,6 @@ A: 这是 GRPO 的已知问题。常见解决方案：
 
 - [[AI/3-LLM/RL/GRPO/GRPO-手撕实操]] — 同算法手撕实操版（MA-RLHF lc8 Batch A）
 - [[AI/3-LLM/RL/GRPO/GRPO-完整Notebook实现]] — 同算法 Notebook 端到端版
-- [[GRPO 深度理解]] — GRPO 理论深度解析
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解]] — GRPO 理论深度解析
 - [[AI/3-LLM/MA-RLHF课程/lc8-DPO-IPO-BT-偏好优化从零手写]] — 同系列：DPO/IPO/BT 实现
-- [[GRPO-Improvement-Panorama-2026]] — GRPO 七维改进全景
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析]] — GRPO 七维改进全景

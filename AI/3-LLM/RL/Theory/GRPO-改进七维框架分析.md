@@ -248,7 +248,7 @@ Closed-form minimum-variance baseline 进一步稳定训练
 核心洞察：与其用 IS 把 off-policy 数据伪装成 on-policy，不如直接从 KL-regularized RL closed-form 解推导一个原生 off-policy 算法。
 推导：$\max_\pi E[r] - \beta \text{KL}(\pi \| \pi_{vllm})$ → closed-form $\pi^* \propto \pi_{vllm} \cdot e^{r/\beta}$ → 最优化目标等价 squared regression loss
 效果：允许 400 步 policy lag；AIME25/HMMT25/BRUMO25 超越 GRPO+IS；LiveCodeBench v5 用 1/3 生成量匹配 DeepCoder
-参见：[[OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]] ★★★★★
+参见：[[AI/3-LLM/RL/Other-Algorithms/OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]] ★★★★★
 
 **四种路径正交，可组合**：
 - Jet-RL（系统层：消除来源）
@@ -377,7 +377,7 @@ Dr. GRPO = 对 std 大的样本不惩罚（算法层）
 2. **Exploration 组合效应**：DEEP-GRPO（pivot resampling）+ QeRL（entropy injection）能否叠加而不相互干扰？
 3. **Goldilocks 的 online 版本**：Teacher LM 预测 utility 是 offline 的，能否做到 online adaptive curriculum？
 4. **系统层和算法层的 co-design**：Jet-RL 和 VCPO 解决了系统层 off-policy，但是否有算法层能够容忍一定程度的 off-policy？（off-policy RL 算法，如 V-trace/IMPALA）
-5. **边界扩展：non-verifiable 任务**：RLRR（arXiv:2602.16802，ICLR 2026）用 reference-guided judge 为对齐任务造了软 verifier，把 RLVR 的能力边界向 non-verifiable 域推进。七维框架目前假设 verifiable reward 存在——non-verifiable 场景下，软 verifier 的误差率（~21%）如何影响这七个维度的改进效果？See: [[RLRR-Reference-Guided-Alignment-Non-Verifiable|RLRR]]
+5. **边界扩展：non-verifiable 任务**：RLRR（arXiv:2602.16802，ICLR 2026）用 reference-guided judge 为对齐任务造了软 verifier，把 RLVR 的能力边界向 non-verifiable 域推进。七维框架目前假设 verifiable reward 存在——non-verifiable 场景下，软 verifier 的误差率（~21%）如何影响这七个维度的改进效果？See: [[AI/3-LLM/RL/Theory/RLRR-Reference-Guided-Alignment-Non-Verifiable|RLRR]]
 
 ---
 
@@ -403,27 +403,27 @@ Dr. GRPO = 对 std 大的样本不惩罚（算法层）
 
 ## see-also
 
-- [[STAPO-Spurious-Token-Aware-Policy-Optimization|STAPO]] — Token 级别维度
-- [[MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 多维 GRPO 改进
-- [[DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]] — 探索维度
-- [[Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] — 样本维度
-- [[Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 系统精度维度
-- [[QeRL-Quantization-Enhanced-RL|QeRL]] — 量化探索维度
-- [[Stable-Asynchrony-VCPO-Off-Policy-RL|VCPO]] — 系统异步 off-policy 维度
-- [[VESPO-Variational-Sequence-Policy-Optimization|VESPO]] — 变分 off-policy 修正，理论最严格
-- [[SAPO-Soft-Adaptive-Policy-Optimization|SAPO]] — sech² 软门控，Qwen3-VL 生产
-- [[GSPO-Group-Sequence-Policy-Optimization|GSPO]] — 序列级 IS ratio（SAPO 前驱）
-- [[Dr-GRPO-Unbiased-Optimization|Dr. GRPO]] — 去 std 归一化，difficulty debiasing
-- [[NoRD-Dr-GRPO-Reasoning-Free-VLA-Autonomous-Driving|NoRD]] — 自动驾驶 VLA，Dr. GRPO 跨域实证 (CVPR 2026)
-- [[AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL]] — 多模态维度 credit assignment
-- [[RL-Training-Stability-2026-Unified-Analysis|RL 训练稳定性 2026 统一分析]] — 与本文互补，聚焦稳定性而非分类框架
-- [[OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]] — 目标函数范式转移：KL-regularized closed-form → squared regression，放弃 IS
-- [[LAD-Learning-Advantage-Distribution|LAD]] — 目标函数范式转移：advantage 诱导分布匹配（f-divergence），自然保留多模式轨迹；与 OAPL 正交可组合
-- [[HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]] — GRPO 的 Agent 扩展方向：StarPO → multi-turn trajectory-level GRPO → HiPER 的 segment-level HAE（三步演进）
-- [[RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO]] — GRPO 在 multi-turn agent 场景的稳定性挑战（Echo Trap），及 StarPO 框架
-- [[ProGRPO-Probabilistic-Advantage-Reweighting|ProGRPO]] — Diversity 维度：ARM 概率信号重调 advantage
-- [[RePO-Rephrasing-Policy-Optimization|RePO]] — Diversity 维度：off-policy 知识内化到 on-policy 兼容轨迹
-- [[SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO（arXiv:2602.06554）]] ⚠️ — **GRPO 的理论边界**：不可能定理证明 GRAE+PPU（GRPO主体）在 multi-turn contextual bandit 中无收敛保证；单轮推理 GRPO 仍有效，多轮 Agent 训练需换 SeeUPO 逆序更新
+- [[AI/3-LLM/RL/Other-Algorithms/STAPO-Spurious-Token-Aware-Policy-Optimization|STAPO]] — Token 级别维度
+- [[AI/3-LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 多维 GRPO 改进
+- [[AI/3-LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]] — 探索维度
+- [[AI/3-LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] — 样本维度
+- [[AI/3-LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 系统精度维度
+- [[AI/3-LLM/RL/Frameworks/QeRL-Quantization-Enhanced-RL|QeRL]] — 量化探索维度
+- [[AI/3-LLM/RL/Other-Algorithms/Stable-Asynchrony-VCPO-Off-Policy-RL|VCPO]] — 系统异步 off-policy 维度
+- [[AI/3-LLM/RL/Other-Algorithms/VESPO-Variational-Sequence-Policy-Optimization|VESPO]] — 变分 off-policy 修正，理论最严格
+- [[AI/3-LLM/RL/Other-Algorithms/SAPO-Soft-Adaptive-Policy-Optimization|SAPO]] — sech² 软门控，Qwen3-VL 生产
+- [[AI/3-LLM/RL/Other-Algorithms/GSPO-Group-Sequence-Policy-Optimization|GSPO]] — 序列级 IS ratio（SAPO 前驱）
+- [[AI/3-LLM/RL/GRPO/Dr-GRPO-Unbiased-Optimization|Dr. GRPO]] — 去 std 归一化，difficulty debiasing
+- [[AI/3-LLM/RL/Other-Algorithms/NoRD-Dr-GRPO-Reasoning-Free-VLA-Autonomous-Driving|NoRD]] — 自动驾驶 VLA，Dr. GRPO 跨域实证 (CVPR 2026)
+- [[AI/3-LLM/RL/Other-Algorithms/AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL]] — 多模态维度 credit assignment
+- [[AI/3-LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL 训练稳定性 2026 统一分析]] — 与本文互补，聚焦稳定性而非分类框架
+- [[AI/3-LLM/RL/Other-Algorithms/OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]] — 目标函数范式转移：KL-regularized closed-form → squared regression，放弃 IS
+- [[AI/3-LLM/RL/Other-Algorithms/LAD-Learning-Advantage-Distribution|LAD]] — 目标函数范式转移：advantage 诱导分布匹配（f-divergence），自然保留多模式轨迹；与 OAPL 正交可组合
+- [[AI/2-Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]] — GRPO 的 Agent 扩展方向：StarPO → multi-turn trajectory-level GRPO → HiPER 的 segment-level HAE（三步演进）
+- [[AI/2-Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO]] — GRPO 在 multi-turn agent 场景的稳定性挑战（Echo Trap），及 StarPO 框架
+- [[AI/3-LLM/RL/GRPO/ProGRPO-Probabilistic-Advantage-Reweighting|ProGRPO]] — Diversity 维度：ARM 概率信号重调 advantage
+- [[AI/3-LLM/RL/Other-Algorithms/RePO-Rephrasing-Policy-Optimization|RePO]] — Diversity 维度：off-policy 知识内化到 on-policy 兼容轨迹
+- [[AI/2-Agent/Agentic-RL/SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO（arXiv:2602.06554）]] ⚠️ — **GRPO 的理论边界**：不可能定理证明 GRAE+PPU（GRPO主体）在 multi-turn contextual bandit 中无收敛保证；单轮推理 GRPO 仍有效，多轮 Agent 训练需换 SeeUPO 逆序更新
 
 ---
 

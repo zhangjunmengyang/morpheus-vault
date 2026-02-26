@@ -15,9 +15,9 @@ sources:
   - Training language models to follow instructions with human feedback (InstructGPT) - arXiv:2203.02155
   - HuggingFace TRL documentation - https://huggingface.co/docs/trl
 related:
-  - "[[GRPO 深度理解|GRPO 深度理解]]"
-  - "[[PPO 原理|PPO 原理]]"
-  - "[[KL散度|KL散度]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]"
+  - "[[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]]"
+  - "[[AI/3-LLM/RL/Fundamentals/KL散度|KL散度]]"
 ---
 # 1. RL & LLMs
 
@@ -185,7 +185,7 @@ GRPO 在获取奖励信号方面具有灵活性 - 它可以使用奖励模型（
 ### 工程实现要点
 - **PPO vs GRPO 资源对比**：PPO 需要 4 个模型（Actor/Critic/RM/Ref），GRPO 只需 2 个（Actor/Ref），显存需求差 ~2x
 - **Reward 信号设计**：GRPO 支持任意可调用函数作为 reward（数学正确性、代码编译通过、长度惩罚等），不限于 RM
-- **KL 约束**：所有 RLHF 方法都需要 [[KL散度|KL 散度]]惩罚防止模型偏离参考策略太远
+- **KL 约束**：所有 RLHF 方法都需要 [[AI/3-LLM/RL/Fundamentals/KL散度|KL 散度]]惩罚防止模型偏离参考策略太远
 
 ### 面试高频问法
 - Q: RLHF 的三个阶段分别是什么？为什么需要 RL 而不是纯 SFT？
@@ -202,15 +202,15 @@ GRPO 在获取奖励信号方面具有灵活性 - 它可以使用奖励模型（
 - 人类标注的质量和一致性直接决定 RLHF 上限——如何 scale 高质量标注？
 
 ### 脑暴：如果往下延伸
-- 如果 reward 信号完全来自可验证的函数（数学、代码），是否可以跳过 RM 阶段？→ 这正是 [[GRPO 深度理解|GRPO]] + verifiable rewards 的方向
+- 如果 reward 信号完全来自可验证的函数（数学、代码），是否可以跳过 RM 阶段？→ 这正是 [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO]] + verifiable rewards 的方向
 - RLHF → RLAIF（AI Feedback）的转变是否意味着人类标注最终会被淘汰？
 
 ## 相关
 
-> 🔗 See also: [[PPO 原理|PPO 原理]] — RLHF 经典算法的数学细节
-> 🔗 See also: [[GRPO 深度理解|GRPO 深度理解]] — 无 Critic 的 RL 对齐方法
-> 🔗 See also: [[KL散度|KL散度]] — RLHF 中防止策略偏移的核心约束
+> 🔗 See also: [[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]] — RLHF 经典算法的数学细节
+> 🔗 See also: [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — 无 Critic 的 RL 对齐方法
+> 🔗 See also: [[AI/3-LLM/RL/Fundamentals/KL散度|KL散度]] — RLHF 中防止策略偏移的核心约束
 
-- [[RL 概览|RL 概览]] — 同方向伴侣笔记，概念互补
+- [[AI/3-LLM/RL/Fundamentals/RL 概览|RL 概览]] — 同方向伴侣笔记，概念互补
 -  — LLM 强化学习全图谱
-- [[机器学习|机器学习]] — RL 的 ML 基础
+- [[AI/1-Foundations/ML-Basics/机器学习|机器学习]] — RL 的 ML 基础

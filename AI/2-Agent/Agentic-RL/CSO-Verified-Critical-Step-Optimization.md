@@ -17,11 +17,11 @@ sources:
   - arXiv:2602.03412 — Tencent AI Lab / HKU / Northwestern University
   - 代码：https://github.com/kiaia/CSO
 related:
-  - "[[Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]]"
-  - "[[GiGPO-Group-in-Group-Policy-Optimization|GiGPO]]"
-  - "[[iStar-Implicit-Step-Rewards-Agentic-RL|iStar]]"
-  - "[[HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER]]"
-  - "[[Tool-Use-RL-训练专题|Tool-Use-RL 训练专题]]"
+  - "[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]]"
+  - "[[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]]"
+  - "[[AI/2-Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar]]"
+  - "[[AI/2-Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER]]"
+  - "[[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL 训练专题]]"
 ---
 
 # CSO: Verified Critical Step Optimization for LLM Agents
@@ -239,26 +239,26 @@ CSO 把 RLVR 中"只有高熵 token 驱动有效学习"的原则推广到了 Age
 ## 七、See Also
 
 **Credit Assignment 谱系（CSO 的定位）：**
-- [[Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — CSO 是这个专题的新成员，填充"反事实验证"视角（来自失败轨迹的 counterfactual credit）
-- [[GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — 在线 RL 版的 step-level credit assignment；CSO 是离线 DPO 版，两者互补（在线 vs 离线）
-- [[iStar-Implicit-Step-Rewards-Agentic-RL|iStar]] — 隐式 PRM 方案（DPO ≡ step-wise BT model）；iStar 不依赖 expert model，CSO 依赖但提供 ground-truth 验证
-- [[HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]] — subgoal-segment 层级方案；HiPER 侧重层级结构，CSO 侧重关键分叉点
-- [[AgentPRM-Process-Reward-Models-for-LLM-Agents|AgentPRM]] — MC rollout 估计方案（CSO 的主要对比对象之一）；CSO 验证胜过估计
-- [[MIG-Step-Marginal-Information-Gain-Credit-Assignment|MIG]] — 信息论视角的 step credit；与 CSO 正交（信息量 vs 反事实成功率）
+- [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — CSO 是这个专题的新成员，填充"反事实验证"视角（来自失败轨迹的 counterfactual credit）
+- [[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — 在线 RL 版的 step-level credit assignment；CSO 是离线 DPO 版，两者互补（在线 vs 离线）
+- [[AI/2-Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar]] — 隐式 PRM 方案（DPO ≡ step-wise BT model）；iStar 不依赖 expert model，CSO 依赖但提供 ground-truth 验证
+- [[AI/2-Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]] — subgoal-segment 层级方案；HiPER 侧重层级结构，CSO 侧重关键分叉点
+- [[AI/2-Agent/Agentic-RL/AgentPRM-Process-Reward-Models-for-LLM-Agents|AgentPRM]] — MC rollout 估计方案（CSO 的主要对比对象之一）；CSO 验证胜过估计
+- [[AI/2-Agent/Agentic-RL/MIG-Step-Marginal-Information-Gain-Credit-Assignment|MIG]] — 信息论视角的 step credit；与 CSO 正交（信息量 vs 反事实成功率）
 
 **失败信号利用（三种深度）：**
-- [[ERL-Experiential-Reinforcement-Learning|ERL（arXiv:2602.13949）]] — 失败 → 反思循环 → SFT 蒸馏，中等成本；CSO 是 offline 数据工程，ERL 是 online 训练循环——两者覆盖失败轨迹利用的不同阶段
-- [[SELAUR-Self-Evolving-LLM-Agent-Uncertainty-Rewards|SELAUR（arXiv:2602.21158）]] — 失败 → token-level 不确定性 → reward reshaping，零额外成本；信息最浅但工程成本最低；三种方法构成"失败信号利用深度谱系"（SELAUR 浅 → ERL 中 → CSO 深）
+- [[AI/2-Agent/Agentic-RL/ERL-Experiential-Reinforcement-Learning|ERL（arXiv:2602.13949）]] — 失败 → 反思循环 → SFT 蒸馏，中等成本；CSO 是 offline 数据工程，ERL 是 online 训练循环——两者覆盖失败轨迹利用的不同阶段
+- [[AI/2-Agent/Agentic-RL/SELAUR-Self-Evolving-LLM-Agent-Uncertainty-Rewards|SELAUR（arXiv:2602.21158）]] — 失败 → token-level 不确定性 → reward reshaping，零额外成本；信息最浅但工程成本最低；三种方法构成"失败信号利用深度谱系"（SELAUR 浅 → ERL 中 → CSO 深）
 
 **跨域稀疏原则验证：**
-- [[SIA-Sparse-Inference-time-Alignment|SIA（ICML 2026，NTU）]] — **同一稀疏哲学的跨域实证**：CSO 发现 16% 关键步骤决定 Agent 成败，SIA 发现 20% Junction token 承担 100% 对齐负担——两个独立工作从不同领域（Agent RL credit ↔ 推理时对齐）证明了"关键决策天然稀疏"这一原则
+- [[AI/3-LLM/Inference/SIA-Sparse-Inference-time-Alignment|SIA（ICML 2026，NTU）]] — **同一稀疏哲学的跨域实证**：CSO 发现 16% 关键步骤决定 Agent 成败，SIA 发现 20% Junction token 承担 100% 对齐负担——两个独立工作从不同领域（Agent RL credit ↔ 推理时对齐）证明了"关键决策天然稀疏"这一原则
 
 **工程应用：**
-- [[Tool-Use-RL-训练专题|Tool-Use-RL 训练专题]] — CSO 适用于 tool-use agent 后训练；关键步骤通常是工具选择分叉点
+- [[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL 训练专题]] — CSO 适用于 tool-use agent 后训练；关键步骤通常是工具选择分叉点
 
 ## 推荐阅读
 
 1. **原文**：[arXiv:2602.03412](https://arxiv.org/abs/2602.03412) — CSO: Verified Critical Step Optimization
 2. **代码**：[github.com/kiaia/CSO](https://github.com/kiaia/CSO)
-3. **理论上位**：[[Long-Horizon-Credit-Assignment专题|Long-Horizon CA 专题]] — CSO 在谱系中的位置（反事实验证分支）
-4. **对比阅读**：[[GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — 同为 step-level CA，在线 vs 离线的设计权衡
+3. **理论上位**：[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon CA 专题]] — CSO 在谱系中的位置（反事实验证分支）
+4. **对比阅读**：[[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — 同为 step-level CA，在线 vs 离线的设计权衡

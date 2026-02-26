@@ -130,7 +130,7 @@ related:
 
 | 笔记 | 核心内容 | 面试重点 |
 |------|----------|----------|
-| [[AI/MLLM/CLIP-ViT-LLaVA-手撕实操|CLIP-ViT-LLaVA-手撕实操]] | ViT + CLIP InfoNCE + LLaVA 投影 | 视觉 token 如何进 LLM |
+| [[AI/3-LLM/MLLM/CLIP-ViT-LLaVA-手撕实操|CLIP-ViT-LLaVA-手撕实操]] | ViT + CLIP InfoNCE + LLaVA 投影 | 视觉 token 如何进 LLM |
 
 ---
 
@@ -184,10 +184,10 @@ GRPO-手撕 → GRPO-Notebook → GRPO-KL三种近似 → PRM-O1搜索实现
 
 本系列笔记对应的理论深度版：
 
-- [[GRPO 深度理解|GRPO深度理解]] — GRPO 理论完整推导
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO深度理解]] — GRPO 理论完整推导
 - [[RLHF-DPO-2026-技术全景|RLHF-DPO-2026全景]] — 偏好优化算法全谱
 - [[Transformer架构深度解析-2026技术全景|Transformer架构深度解析]] — 架构演进理论视角
-- [[OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]] — off-policy RL 最新进展（与 Ray 分布式训练直接相关）
+- [[AI/3-LLM/RL/Other-Algorithms/OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]] — off-policy RL 最新进展（与 Ray 分布式训练直接相关）
 
 ---
 

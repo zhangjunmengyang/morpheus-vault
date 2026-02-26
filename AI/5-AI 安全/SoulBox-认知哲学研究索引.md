@@ -71,7 +71,7 @@ Hume（无统一自我）+ Parfit（连续性是程度）+ 德勒兹（生成重
 
 **工程解法**：锚点注入、漂移检测、周期性人格校验
 
-**与 Vault 连接** → [[Gaia2-Dynamic-Async-Agent-Benchmark|Gaia2]] 的异步评估范式可以借鉴用于人格一致性 benchmark 设计
+**与 Vault 连接** → [[AI/2-Agent/Evaluation/Gaia2-Dynamic-Async-Agent-Benchmark|Gaia2]] 的异步评估范式可以借鉴用于人格一致性 benchmark 设计
 
 ### 4. 市场分析：Agent 人格包商业版图
 **文件**: `soulbox/research/market-analysis.md`（372行，2026-02-20）

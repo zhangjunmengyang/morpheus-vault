@@ -16,12 +16,12 @@ tags:
   - sparse-reward
   - credit-assignment
 related:
-  - "[[CSO-Verified-Critical-Step-Optimization|CSO]]"
-  - "[[CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2]]"
-  - "[[TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR]]"
-  - "[[SCoRe-Self-Correction-via-Reinforcement-Learning|SCoRe (ICLR 2025)]]"
-  - "[[iStar-Implicit-Step-Rewards-Agentic-RL|iStar]]"
-  - "[[Agentic-RL-2026前沿综合分析|Agentic-RL 综合分析]]"
+  - "[[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO]]"
+  - "[[AI/2-Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2]]"
+  - "[[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR]]"
+  - "[[AI/2-Agent/Agentic-RL/SCoRe-Self-Correction-via-Reinforcement-Learning|SCoRe (ICLR 2025)]]"
+  - "[[AI/2-Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar]]"
+  - "[[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL 综合分析]]"
 ---
 
 # ERL: Experiential Reinforcement Learning
@@ -260,12 +260,12 @@ for episode in training:
 ## See Also
 
 **失败信号利用谱系（三种深度，ERL 居中）：**
-- [[CSO-Verified-Critical-Step-Optimization|CSO（arXiv:2602.03412）]] — 失败 → 反事实验证（最深，需 expert model）；ERL 是其轻量替代——无需外部 expert，用 LLM 自身反思代替
-- [[SELAUR-Self-Evolving-LLM-Agent-Uncertainty-Rewards|SELAUR（arXiv:2602.21158）]] — 失败 → token-level 不确定性 reward（最浅，零成本）；ERL 信号质量更高（反思 Δ 比熵值信息更丰富）；三者共同构成失败信号利用深度谱系
+- [[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO（arXiv:2602.03412）]] — 失败 → 反事实验证（最深，需 expert model）；ERL 是其轻量替代——无需外部 expert，用 LLM 自身反思代替
+- [[AI/2-Agent/Agentic-RL/SELAUR-Self-Evolving-LLM-Agent-Uncertainty-Rewards|SELAUR（arXiv:2602.21158）]] — 失败 → token-level 不确定性 reward（最浅，零成本）；ERL 信号质量更高（反思 Δ 比熵值信息更丰富）；三者共同构成失败信号利用深度谱系
 
 **Multi-Turn RL 四支柱中的位置（ERL = 第四支柱）：**
-- [[TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（ICML 2026）]] — Rollout 质量支柱；与 ERL 正交可叠加（好 rollout + 好反思）
-- [[SCoRe-Self-Correction-via-Reinforcement-Learning|SCoRe（NeurIPS 2024）]] — 均衡控制支柱；ERL 是"训练动态修正"，SCoRe 是"架构层修正"
+- [[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（ICML 2026）]] — Rollout 质量支柱；与 ERL 正交可叠加（好 rollout + 好反思）
+- [[AI/2-Agent/Agentic-RL/SCoRe-Self-Correction-via-Reinforcement-Learning|SCoRe（NeurIPS 2024）]] — 均衡控制支柱；ERL 是"训练动态修正"，SCoRe 是"架构层修正"
 
 **综述导航：**
-- [[Agentic-RL-2026前沿综合分析|Agentic-RL 2026 综合分析]] — ERL 在 Multi-Turn RL 四支柱框架中的定位
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL 2026 综合分析]] — ERL 在 Multi-Turn RL 四支柱框架中的定位

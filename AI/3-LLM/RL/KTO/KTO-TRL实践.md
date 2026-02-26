@@ -38,6 +38,6 @@ https://huggingface.co/docs/trl/v0.21.0/en/kto_trainer
 
 ## 相关
 
-- [[DPO-TRL实践|DPO-TRL实践]]
-- [[TRL 概述|TRL 概述]]
-- [[PPO 原理|PPO 原理]]
+- [[AI/3-LLM/RL/DPO/DPO-TRL实践|DPO-TRL实践]]
+- [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL 概述]]
+- [[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]]

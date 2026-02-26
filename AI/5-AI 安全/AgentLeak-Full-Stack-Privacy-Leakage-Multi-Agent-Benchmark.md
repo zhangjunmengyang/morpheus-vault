@@ -28,10 +28,10 @@ status: active
 
 ## See Also
 
-- [[OMNI-LEAK-Multi-Agent-Orchestrator-Data-Exfiltration|OMNI-LEAK]] — 姊妹论文，攻击端：单次 injection 通过 orchestrator 链泄漏；AgentLeak 是测量端：系统性量化哪个渠道泄漏多少——两篇殊途同归：output-only 审计是系统性盲区
-- [[AutoInject-RL-Prompt-Injection-Attack|AutoInject]] — RL 生成 universal adversarial suffix（单 agent 攻击）；AgentLeak 的 A2 adversary 级别正是这类攻击，multi-agent 环境放大了攻击面
-- [[CowCorpus-Human-Intervention-Modeling-Web-Agents|CowCorpus]] — 人类干预时机建模；AgentLeak 发现 C2 内部通信是最大泄漏渠道，指向在 C2 层引入 CowCorpus 式干预节点的高价值
-- [[AI Agent 集体行为与安全漂移|AI Agent 集体行为与安全漂移]] — 多 Agent 安全漂移机制；AgentLeak 的 68.8% 内部泄漏率是"安全漂移"在隐私维度的量化证据
+- [[AI/5-AI 安全/OMNI-LEAK-Multi-Agent-Orchestrator-Data-Exfiltration|OMNI-LEAK]] — 姊妹论文，攻击端：单次 injection 通过 orchestrator 链泄漏；AgentLeak 是测量端：系统性量化哪个渠道泄漏多少——两篇殊途同归：output-only 审计是系统性盲区
+- [[AI/5-AI 安全/AutoInject-RL-Prompt-Injection-Attack|AutoInject]] — RL 生成 universal adversarial suffix（单 agent 攻击）；AgentLeak 的 A2 adversary 级别正是这类攻击，multi-agent 环境放大了攻击面
+- [[AI/2-Agent/Evaluation/CowCorpus-Human-Intervention-Modeling-Web-Agents|CowCorpus]] — 人类干预时机建模；AgentLeak 发现 C2 内部通信是最大泄漏渠道，指向在 C2 层引入 CowCorpus 式干预节点的高价值
+- [[AI/5-AI 安全/AI Agent 集体行为与安全漂移|AI Agent 集体行为与安全漂移]] — 多 Agent 安全漂移机制；AgentLeak 的 68.8% 内部泄漏率是"安全漂移"在隐私维度的量化证据
 - [[AI安全与对齐-2026技术全景|AI 安全与对齐 2026 全景]] — 全栈安全框架；AgentLeak 提供的 channel-level 泄漏分类补充了全景中 multi-agent 安全的实证数据
 
 ---
@@ -250,8 +250,8 @@ Claude 3.5 Sonnet 内部:   28.1%（最佳，但仍然很高）
 
 ## See Also
 
-- [[PI-Landscape-SoK-Prompt-Injection-Taxonomy-Defense|PI-Landscape SoK]] ⭐ — SoK 将 AgentPI benchmark 定位为专门覆盖 context-dependent 场景的评测；AgentLeak 从隐私泄漏角度互补，两篇共同描绘多Agent安全评测的全景
-- [[OMNI-LEAK-Multi-Agent-Orchestrator-Data-Exfiltration|OMNI-LEAK]] — 殊途同归：两篇均发现"output-only 审计是系统性盲区"，但方法完全不同——OMNI-LEAK 是攻击演示，AgentLeak 是量化测量
+- [[AI/5-AI 安全/PI-Landscape-SoK-Prompt-Injection-Taxonomy-Defense|PI-Landscape SoK]] ⭐ — SoK 将 AgentPI benchmark 定位为专门覆盖 context-dependent 场景的评测；AgentLeak 从隐私泄漏角度互补，两篇共同描绘多Agent安全评测的全景
+- [[AI/5-AI 安全/OMNI-LEAK-Multi-Agent-Orchestrator-Data-Exfiltration|OMNI-LEAK]] — 殊途同归：两篇均发现"output-only 审计是系统性盲区"，但方法完全不同——OMNI-LEAK 是攻击演示，AgentLeak 是量化测量
 
 ## Tags
 #MultiAgent #PrivacyLeakage #InternalChannels #InterAgentCommunication #Benchmark #DataMinimization #FullStack #AgentSafety #InformationFlowControl #盾卫 #GDPR

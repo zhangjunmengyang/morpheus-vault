@@ -21,10 +21,10 @@ sources:
   - "Implicit PRM 前作: arXiv:2412.01981"
 venue: preprint (2025)
 related:
-  - "[[GRPO 深度理解]]"
-  - "[[PPO 原理]]"
-  - "[[GRPO-Improvement-Panorama-2026]]"
-  - "[[AgentPRM-Process-Reward-Models-for-LLM-Agents]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解]]"
+  - "[[AI/3-LLM/RL/PPO/PPO 原理]]"
+  - "[[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析]]"
+  - "[[AI/2-Agent/Agentic-RL/AgentPRM-Process-Reward-Models-for-LLM-Agents]]"
 ---
 
 # PRIME: Process Reinforcement through Implicit Rewards
@@ -188,7 +188,7 @@ Online 更新 PRM 比 offline 固定 PRM **AIME +6.7pp**——证明在线同步
 PRIME 打通了 "outcome reward → dense process reward" 的桥梁，意味着：
 - **不需要专门训练 PRM** 就能获得 step-level 信号
 - **Verifiable reward 的价值被放大**：一个 binary correct/incorrect 信号可以被"分解"成 token-level 的梯度
-- 这与 [[RL-Signal-Granularity-Causal-Structure-Principle|信号粒度匹配原则]] 完美契合——PRIME 自动将 sparse outcome reward 细化到 token 粒度
+- 这与 [[AI/3-LLM/RL/Theory/RL-Signal-Granularity-Causal-Structure-Principle|信号粒度匹配原则]] 完美契合——PRIME 自动将 sparse outcome reward 细化到 token 粒度
 
 ### 未解问题
 
@@ -205,8 +205,8 @@ PRIME 打通了 "outcome reward → dense process reward" 的桥梁，意味着�
 - **代码**：[github.com/PRIME-RL/PRIME](https://github.com/PRIME-RL/PRIME)
 - **前作 Implicit PRM**：[arXiv:2412.01981](https://arxiv.org/abs/2412.01981)
 - **关联笔记**：
-  - [[AgentPRM-Process-Reward-Models-for-LLM-Agents|AgentPRM]] — MC rollout 显式 step value
-  - [[GRPO 深度理解|GRPO]] — PRIME 的常用 backbone
-  - [[RL-Signal-Granularity-Causal-Structure-Principle|信号粒度匹配原则]] — PRIME 自动实现信号细化
-  - [[GRPO-Improvement-Panorama-2026|GRPO 改进全景]] — PRIME 属于 Token 维度改进
-  - [[iStar-Implicit-Step-Rewards-Agentic-RL|iStar]] — 另一种 implicit step reward 方案（DPO 视角）
+  - [[AI/2-Agent/Agentic-RL/AgentPRM-Process-Reward-Models-for-LLM-Agents|AgentPRM]] — MC rollout 显式 step value
+  - [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO]] — PRIME 的常用 backbone
+  - [[AI/3-LLM/RL/Theory/RL-Signal-Granularity-Causal-Structure-Principle|信号粒度匹配原则]] — PRIME 自动实现信号细化
+  - [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进全景]] — PRIME 属于 Token 维度改进
+  - [[AI/2-Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar]] — 另一种 implicit step reward 方案（DPO 视角）

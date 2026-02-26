@@ -17,7 +17,7 @@ brief: TPA（Tensor Product Attention）+ YaRN 联合手撕：TPA 用张量积�
 related:
   - "[[AI/3-LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]]"
   - "[[AI/3-LLM/MA-RLHF课程/lc5-DeepSeek-V3-MOC]]"
-  - "[[Attention 变体综述]]"
+  - "[[AI/3-LLM/Architecture/Attention 变体综述]]"
   - "[[AI/3-LLM/Architecture/DeepSeek-V3-手撕实操]]"
   - "[[AI/3-LLM/Inference/KV Cache|KV Cache]]"
 ---
@@ -288,5 +288,5 @@ A: $K = A \cdot B$，A 是 [H, r]，B 是 [r, d_h]，乘积相当于 r 个向量
 - [[AI/3-LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]] — MLA 低秩联合压缩（正交问题：MLA 压缩 Q+KV，TPA 用张量积分解 KV）
 - [[AI/3-LLM/Architecture/DeepSeek-V3-手撕实操]] — DeepSeek V3 完整架构手撕（YaRN + MLA 组合实战）
 - [[AI/3-LLM/MA-RLHF课程/lc5-DeepSeek-V3-MOC]] — lc5 课程地图，YaRN 在 Step 5 有详细理论说明
-- [[Attention 变体综述]] — Attention 变体全谱系，TPA 定位
+- [[AI/3-LLM/Architecture/Attention 变体综述]] — Attention 变体全谱系，TPA 定位
 - [[AI/3-LLM/Inference/KV Cache|KV Cache]] — KV Cache 压缩全景，TPA/MLA 的工程背景

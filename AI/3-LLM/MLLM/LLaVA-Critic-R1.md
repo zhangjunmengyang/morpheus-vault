@@ -28,7 +28,7 @@ by：马里兰大学、俄亥俄州立大学和新加坡国立大学
 ## See Also
 
 -  — 多模态大模型全景索引
-- [[GRPO 深度理解|GRPO]] — LLaVA-Critic-R1 核心训练算法
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO]] — LLaVA-Critic-R1 核心训练算法
 - [[多模态大模型-2026-技术全景|多模态大模型 2026 全景]] — MLLM 宏观综述
-- [[REMuL-CoT-Faithfulness-Multi-Listener-RL|REMuL]] — 同样研究"critic能力与policy性能正相关"（多模态版 vs 纯文本版）
-- [[BLIP-2|BLIP-2]] — 另一个 critic-style 评估设计先驱
+- [[AI/3-LLM/RL/Theory/REMuL-CoT-Faithfulness-Multi-Listener-RL|REMuL]] — 同样研究"critic能力与policy性能正相关"（多模态版 vs 纯文本版）
+- [[AI/3-LLM/MLLM/BLIP-2|BLIP-2]] — 另一个 critic-style 评估设计先驱

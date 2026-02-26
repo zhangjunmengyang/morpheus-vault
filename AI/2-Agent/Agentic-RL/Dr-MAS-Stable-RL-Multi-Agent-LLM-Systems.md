@@ -176,8 +176,8 @@ Multi-Agent RL 训练
 ## See Also
 
 **Multi-Agent RL 训练稳定性谱系**
-- [[RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO]] — **正交互补**：RAGEN 处理单 agent 内部多轮训练的 Echo Trap（梯度趋零），Dr. MAS 处理跨 agent reward 异质导致的梯度范数爆炸；两者覆盖多 agent RL 稳定性的不同维度
-- [[Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]] — AT-GRPO/MAGRPO/MARS2 全图谱；Dr. MAS 补稳定性维度
+- [[AI/2-Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO]] — **正交互补**：RAGEN 处理单 agent 内部多轮训练的 Echo Trap（梯度趋零），Dr. MAS 处理跨 agent reward 异质导致的梯度范数爆炸；两者覆盖多 agent RL 稳定性的不同维度
+- [[AI/2-Agent/Agentic-RL/Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]] — AT-GRPO/MAGRPO/MARS2 全图谱；Dr. MAS 补稳定性维度
 
 **性能 Scaling 对比**
 - [[AI/3-LLM/RL/Other-Algorithms/MARS2-Multi-Agent-Reasoning-Scaling|MARS2]] — 多 agent 性能 scaling（异构组合 > 单体大模型）；Dr. MAS 解决训练稳定性，MARS2 研究 scaling 规律，两者都关注多 agent 系统的优越性来源
@@ -186,5 +186,5 @@ Multi-Agent RL 训练
 - [[AI/3-LLM/RL/GRPO/Dr-GRPO-Duplicate-Query-Reward-Normalization|Dr. GRPO]] — 单 agent 场景的 GRPO normalization 问题（重复 query bias）；Dr. MAS 是多 agent 扩展版本，命名对应
 
 **训练拓扑与编排**
-- [[PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]] — agent 内部 phase-level expert routing；Dr. MAS 解决跨 agent reward 归一化
-- [[AdaptOrch-Task-Adaptive-Multi-Agent-Orchestration|AdaptOrch]] — 推理时多 agent 编排拓扑路由；Dr. MAS 解决训练时多 agent 梯度稳定性
+- [[AI/2-Agent/Agentic-RL/PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]] — agent 内部 phase-level expert routing；Dr. MAS 解决跨 agent reward 归一化
+- [[AI/2-Agent/Multi-Agent/AdaptOrch-Task-Adaptive-Multi-Agent-Orchestration|AdaptOrch]] — 推理时多 agent 编排拓扑路由；Dr. MAS 解决训练时多 agent 梯度稳定性

@@ -204,7 +204,7 @@ Memory-R1 的 Memory Manager RL 框架值得盾卫项目关注：
 **脑暴**：
 - Memory Manager + Safety Judge 联合设计：在 RL reward 中加入 safety 约束（如果 Memory 被 injection，reward 扣分）
 - 把 Memory Distillation 做成 process reward：不只是最终答案正确，而是过滤步骤本身也可验证
-- Memory-R1 + [[ASTRA-Automated-Tool-Agent-Training|ASTRA]]：ASTRA 合成工具调用轨迹时，把调用历史写入 Memory，Memory Manager 学会哪些工具调用经验值得保留
+- Memory-R1 + [[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training|ASTRA]]：ASTRA 合成工具调用轨迹时，把调用历史写入 Memory，Memory Manager 学会哪些工具调用经验值得保留
 
 ---
 
@@ -213,6 +213,6 @@ Memory-R1 的 Memory Manager RL 框架值得盾卫项目关注：
 - 原论文：[arXiv:2508.19828](https://arxiv.org/abs/2508.19828)
 - LoCoMo Benchmark（多 session 对话记忆评测）：[EMNLP 2024](https://arxiv.org/abs/2402.17908)
 - Mem0（被超越的 baseline）：[mem0.ai](https://mem0.ai)
-- 相关 Vault 笔记：[[Tool-Use-RL-训练专题|Tool Use RL 训练专题]] | [[Agent-RL-环境工程系统论|Agent RL 环境工程系统论]] | [[Agent-Memory-机制|Agent Memory 机制]]
+- 相关 Vault 笔记：[[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool Use RL 训练专题]] | [[AI/2-Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent RL 环境工程系统论]] | [[AI/2-Agent/Fundamentals/Agent-Memory-机制|Agent Memory 机制]]
 - Agentic RL Survey 记忆章节：[2509.02547 §3.3](https://arxiv.org/html/2509.02547v4#S3.SS3)
 - 未来方向：RL for Structured Memory（图结构记忆 RL，survey 预测的下一个热点）

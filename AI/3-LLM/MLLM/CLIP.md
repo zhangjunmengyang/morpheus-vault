@@ -104,11 +104,11 @@ CLIP 在各种分布偏移测试（ImageNet-V2、ImageNet-Sketch、ImageNet-A �
 ## 相关
 
 - [[AI/CV/ViT|ViT]] — CLIP 的 Image Encoder 选项之一
-- [[BLIP-2|BLIP-2]] — 继承 CLIP 对比学习范式，用 Q-Former 解决 frozen encoder 对齐
-- [[Qwen-VL|Qwen-VL]] — 阿里 MLLM，使用 CLIP-style Vision Encoder 接 LLM
-- [[BERT|BERT]] — Transformer 编码器，CLIP Text Encoder 的架构基础
-- [[深度学习|深度学习]]
-- [[InternVL3|InternVL3]] — 后续 MLLM，同样基于 CLIP-style 视觉-语言对齐
-- [[DeepSeek-VL|DeepSeek-VL]] — DeepSeek 多模态，使用 SigLIP（CLIP 改进版）作 Vision Encoder
-- [[MLLM 概述|MLLM 概述]] — 多模态大模型整体框架综述
-- [[非文本的模态对齐|非文本的模态对齐]] — CLIP 的核心贡献正是"非文本模态对齐"的奠基工作
+- [[AI/3-LLM/MLLM/BLIP-2|BLIP-2]] — 继承 CLIP 对比学习范式，用 Q-Former 解决 frozen encoder 对齐
+- [[AI/3-LLM/MLLM/Qwen-VL|Qwen-VL]] — 阿里 MLLM，使用 CLIP-style Vision Encoder 接 LLM
+- [[AI/3-LLM/Architecture/BERT|BERT]] — Transformer 编码器，CLIP Text Encoder 的架构基础
+- [[AI/1-Foundations/DL-Basics/深度学习|深度学习]]
+- [[AI/3-LLM/MLLM/InternVL3|InternVL3]] — 后续 MLLM，同样基于 CLIP-style 视觉-语言对齐
+- [[AI/3-LLM/MLLM/DeepSeek-VL|DeepSeek-VL]] — DeepSeek 多模态，使用 SigLIP（CLIP 改进版）作 Vision Encoder
+- [[AI/3-LLM/MLLM/MLLM 概述|MLLM 概述]] — 多模态大模型整体框架综述
+- [[AI/3-LLM/MLLM/非文本的模态对齐|非文本的模态对齐]] — CLIP 的核心贡献正是"非文本模态对齐"的奠基工作

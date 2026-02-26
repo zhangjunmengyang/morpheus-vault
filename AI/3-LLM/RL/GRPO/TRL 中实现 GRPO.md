@@ -195,7 +195,7 @@ training_args = GRPOConfig(
 
 ## See Also
 
-- [[GRPO 深度理解|GRPO 深度理解]] — 算法原理，实现的数学基础
-- [[GRPO-demo|GRPO Demo]] — Demo 实践，与本篇互补
-- [[TRL 概述|TRL 概述]] — TRL 框架全貌
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — 算法原理，实现的数学基础
+- [[AI/3-LLM/RL/GRPO/GRPO-demo|GRPO Demo]] — Demo 实践，与本篇互补
+- [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL 概述]] — TRL 框架全貌
 -  — LLM 强化学习全图谱

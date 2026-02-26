@@ -227,7 +227,7 @@ accelerate launch \
 
 ## 相关
 
-- [[PPO 原理|PPO 原理]]
-- [[DPO-TRL实践|DPO]]
-- [[TRL 概述|TRL 概述]]
-- [[DeepSeek-R1|DeepSeek-R1]]
+- [[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/3-LLM/RL/DPO/DPO-TRL实践|DPO]]
+- [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL 概述]]
+- [[AI/3-LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]

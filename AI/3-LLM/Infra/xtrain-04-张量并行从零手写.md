@@ -17,7 +17,7 @@ related:
   - "[[AI/3-LLM/Infra/xtrain-lc5-流水线并行从零手写]]"
   - "[[AI/3-LLM/Infra/Tensor-Parallel-手撕实操]]"
   - "[[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]"
-  - "[[分布式训练]]"
+  - "[[AI/3-LLM/Infra/分布式训练]]"
 ---
 
 # xtrain lc4 — 张量并行从零手写
@@ -366,5 +366,5 @@ A：行并行每卡 Linear 的 `fan_in = d_in/N`，PyTorch 默认 Kaiming 会用
 - [[AI/3-LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]] — 前置：ZeRO 切存储 vs TP 切计算，根本差异对比
 - [[AI/3-LLM/Infra/xtrain-lc5-流水线并行从零手写]] — 后置：PP 层间切分，TP+PP=混合并行
 - [[AI/3-LLM/Infra/Tensor-Parallel-手撕实操]] — 横向：更早的 TP 原理版，算法视角
-- [[分布式训练]] — 分布式训练理论全景
+- [[AI/3-LLM/Infra/分布式训练]] — 分布式训练理论全景
 - [[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]] — xtrain 系列课程地图

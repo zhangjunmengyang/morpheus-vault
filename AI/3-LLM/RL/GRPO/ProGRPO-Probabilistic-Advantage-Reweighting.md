@@ -183,7 +183,7 @@ ProGRPO 的优势：直接在 advantage 层面手术，不改变整体 objective
 
 ## See Also
 
-- [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — ProGRPO 在七维框架的 Diversity 维度
-- [[RePO-Rephrasing-Policy-Optimization|RePO]] — 同在 Diversity 维度，两者互补
-- [[GRPO 深度理解|GRPO 深度理解]] — ProGRPO 的算法基础
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 2026 全景]] — ProGRPO 在七维框架的 Diversity 维度
+- [[AI/3-LLM/RL/Other-Algorithms/RePO-Rephrasing-Policy-Optimization|RePO]] — 同在 Diversity 维度，两者互补
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — ProGRPO 的算法基础
 -  — LLM 强化学习全图谱

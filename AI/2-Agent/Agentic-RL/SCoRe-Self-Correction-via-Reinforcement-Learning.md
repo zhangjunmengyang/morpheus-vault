@@ -216,11 +216,11 @@ graph TD
 
 ### 具体关联
 
-- **[[CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2（Checklist Rewards）]]**：SCoRe 的 reward bonus 思路与 CM2 的 sparse+dense 解耦设计互补——SCoRe 解决"何时给 bonus"，CM2 解决"如何细化 reward 质量"
-- **[[RC-GRPO-Reward-Conditioned-Tool-Calling-RL|RC-GRPO]]**：都在处理 multi-turn sparse reward 的同质化问题，SCoRe 用 bonus 打破，RC-GRPO 用 conditioning token 打破
-- **[[TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（Trajectory-Search Rollouts）]]**：TSR 修 rollout 多样性，SCoRe 修 reward 设计——可以组合
-- **[[iStar-Implicit-Step-Rewards-Agentic-RL|iStar（2509.19199）]]**：SCoRe 解决"如何稳定 multi-turn RL 训练"（初始化+bonus），iStar 解决"如何做 step-level credit assignment"（隐式 DPO）——两者互补，可以组合：SCoRe 的训练稳定框架 + iStar 的 step reward 信号
-- **[[Memory-R1-RL-for-LLM-Memory-Management|Memory-R1]]**：Memory-R1 用下游 QA reward 训练 memory management，SCoRe 用 task reward 训练 self-correction——同属"用外部可验证信号训练内部能力"
+- **[[AI/2-Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2（Checklist Rewards）]]**：SCoRe 的 reward bonus 思路与 CM2 的 sparse+dense 解耦设计互补——SCoRe 解决"何时给 bonus"，CM2 解决"如何细化 reward 质量"
+- **[[AI/2-Agent/Agentic-RL/RC-GRPO-Reward-Conditioned-Tool-Calling-RL|RC-GRPO]]**：都在处理 multi-turn sparse reward 的同质化问题，SCoRe 用 bonus 打破，RC-GRPO 用 conditioning token 打破
+- **[[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（Trajectory-Search Rollouts）]]**：TSR 修 rollout 多样性，SCoRe 修 reward 设计——可以组合
+- **[[AI/2-Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar（2509.19199）]]**：SCoRe 解决"如何稳定 multi-turn RL 训练"（初始化+bonus），iStar 解决"如何做 step-level credit assignment"（隐式 DPO）——两者互补，可以组合：SCoRe 的训练稳定框架 + iStar 的 step reward 信号
+- **[[AI/2-Agent/Fundamentals/Memory-R1-RL-for-LLM-Memory-Management|Memory-R1]]**：Memory-R1 用下游 QA reward 训练 memory management，SCoRe 用 task reward 训练 self-correction——同属"用外部可验证信号训练内部能力"
 - **[[AI/3-LLM/RL/GRPO/GRPO-Improvement-Panorama-2026|GRPO Improvement Panorama]]**：SCoRe 的 behavior collapse 分析与 GRPO 全0/全1问题有相似的底层机制
 
 ---
@@ -271,6 +271,6 @@ SCoRe 在 2024 年解决了一个被认为"用 RL 无法解决"的问题（LeCun
 4. **后续延伸**：[Guided Self-Evolving LLMs (2512.02472)](https://arxiv.org/abs/2512.02472) — 2025 年自我演化方向
 5. **实践资源**：SCoRe 代码暂未开源（Gemini 内部），但框架可在开源模型上复现（参考 RC-GRPO 仓库的 multi-turn RL 实现）
 6. **理论背景**：[[RLHF-DPO-2026-技术全景|RLHF/DPO 2026 技术全景]] — SCoRe 是 RLHF 的 multi-turn 延伸；RLHF 用人工 preference 对齐 single-turn，SCoRe 用任务可验证性 reward 对齐 multi-turn 自我修正能力
-7. **正交同族**：[[ERL-Experiential-Reinforcement-Learning|ERL（arXiv:2602.13949）]] — SCoRe 是"架构层修正"（KL 约束删除假均衡），ERL 是"训练动态修正"（显式反思循环 + 内化蒸馏）；两者都认为纯 RLVR 不足以学会纠错，各自从不同角度修复——SCoRe 解决多均衡选择，ERL 解决稀疏反馈利用不足
+7. **正交同族**：[[AI/2-Agent/Agentic-RL/ERL-Experiential-Reinforcement-Learning|ERL（arXiv:2602.13949）]] — SCoRe 是"架构层修正"（KL 约束删除假均衡），ERL 是"训练动态修正"（显式反思循环 + 内化蒸馏）；两者都认为纯 RLVR 不足以学会纠错，各自从不同角度修复——SCoRe 解决多均衡选择，ERL 解决稀疏反馈利用不足
 
 <!-- 2026-02-26 dedup: 删除了SCoRe副本（SCoRe-Self-Correction-via-RL.md），合并了MBPP-R实验数据、majority voting scaling数据、消融实验详细结果 -->

@@ -124,9 +124,9 @@ RLOO 是 PPO 和 GRPO 之间的一个甜蜜点。如果你有 reward model 但�
 
 ## 相关
 
-- [[GRPO 深度理解|GRPO 深度理解]] — 对比算法
-- [[DPO-Unsloth实践|DPO Unsloth 实践]] — 离线偏好对齐
-- [[DAPO-verl实践|DAPO verl 实践]] — GRPO 改进版
-- [[实现其他 RL 方法|verl 实现其他 RL 方法]]
-- [[PPO 原理|PPO 原理]]
-- [[TRL 概述|TRL 概述]]
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — 对比算法
+- [[AI/3-LLM/RL/DPO/DPO-Unsloth实践|DPO Unsloth 实践]] — 离线偏好对齐
+- [[AI/3-LLM/RL/DAPO/DAPO-verl实践|DAPO verl 实践]] — GRPO 改进版
+- [[AI/3-LLM/Frameworks/verl/实现其他 RL 方法|verl 实现其他 RL 方法]]
+- [[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL 概述]]

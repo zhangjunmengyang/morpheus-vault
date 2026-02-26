@@ -17,9 +17,9 @@ sources:
   - DeepSeek-V3 Technical Report — arXiv:2412.19437
   - "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints — arXiv:2305.13245"
 related:
-  - "[[Transformer 位置编码|Transformer 位置编码]]"
-  - "[[Attention 变体综述|Attention 变体综述]]"
-  - "[[长上下文技术|长上下文技术]]"
+  - "[[AI/3-LLM/Architecture/Transformer 位置编码|Transformer 位置编码]]"
+  - "[[AI/3-LLM/Architecture/Attention 变体综述|Attention 变体综述]]"
+  - "[[AI/3-LLM/Architecture/长上下文技术|长上下文技术]]"
 ---
 
 # Multi-Head Latent Attention (MLA)：KV 缓存优化革命
@@ -95,7 +95,7 @@ $$K_{t,i} = W^{UK}_i \cdot c^{KV}_t, \quad V_{t,i} = W^{UV}_i \cdot c^{KV}_t$$
 $$k_{t,i} = \begin{bmatrix} k^{C}_{t,i} \\ \text{RoPE}(k^{R}_t, t) \end{bmatrix}, \quad q_{t,i} = \begin{bmatrix} q^{C}_{t,i} \\ \text{RoPE}(q^{R}_{t,i}, t) \end{bmatrix}$$
 
 - **nope 部分** ($k^C, q^C$)：从潜在空间压缩/恢复，可吸收矩阵乘法
-- **rope 部分** ($k^R, q^R$)：额外的小维度向量（$d^R_h$ 维），直接应用 [[Transformer 位置编码|RoPE]]
+- **rope 部分** ($k^R, q^R$)：额外的小维度向量（$d^R_h$ 维），直接应用 [[AI/3-LLM/Architecture/Transformer 位置编码|RoPE]]
 - **拼接后**计算注意力：位置信息由 rope 部分提供，内容信息由 nope 部分提供
 
 ### MLA 数据流架构
@@ -211,7 +211,7 @@ class MultiHeadLatentAttention(nn.Module):
 
 ### V3/V4 演进
 - V3: 优化 MLA 实现
-- V4: 预计结合 [[DeepSeek Engram|DeepSeek Engram]] 条件记忆
+- V4: 预计结合 [[AI/3-LLM/Architecture/DeepSeek Engram|DeepSeek Engram]] 条件记忆
 
 ## 行业影响
 
@@ -332,7 +332,7 @@ A: 1）与条件记忆（Engram）结合；2）更智能的潜在空间设计；
 - 目前只有 DeepSeek 系列大规模使用，其他模型（LLaMA、Qwen）仍用 GQA
 
 ### 脑暴：如果往下延伸
-- MLA + [[长上下文技术|长上下文技术]]：MLA 的低 KV Cache 天然适配百万级上下文
+- MLA + [[AI/3-LLM/Architecture/长上下文技术|长上下文技术]]：MLA 的低 KV Cache 天然适配百万级上下文
 - MLA 的思想是否可以扩展到**多模态**？视觉 token 的 KV 也可以压缩
 - 如果把 MLA 和 FP8 KV Cache 量化结合，压缩比可能达到 **200x+**
 
@@ -354,8 +354,8 @@ A: 1）与条件记忆（Engram）结合；2）更智能的潜在空间设计；
 
 ## See Also
 
-- [[Attention 变体综述|Attention 变体综述]] — MHA/MQA/GQA/MLA 的完整对比图谱；MLA 是 KV 压缩维度的优化，与 GQA 的头数优化正交
-- [[Transformer 位置编码|Transformer 位置编码]] — 解耦 RoPE 是 MLA 的关键设计挑战；理解 RoPE 才能理解为什么低秩压缩和旋转操作不可交换
-- [[长上下文技术|长上下文技术]] — MLA 的低 KV Cache 是实现 128K+ 上下文的关键使能技术
-- [[FlashAttention|FlashAttention]] — MLA 的注意力计算仍可用 FlashAttention 加速；IO 感知优化与 KV 压缩互补
+- [[AI/3-LLM/Architecture/Attention 变体综述|Attention 变体综述]] — MHA/MQA/GQA/MLA 的完整对比图谱；MLA 是 KV 压缩维度的优化，与 GQA 的头数优化正交
+- [[AI/3-LLM/Architecture/Transformer 位置编码|Transformer 位置编码]] — 解耦 RoPE 是 MLA 的关键设计挑战；理解 RoPE 才能理解为什么低秩压缩和旋转操作不可交换
+- [[AI/3-LLM/Architecture/长上下文技术|长上下文技术]] — MLA 的低 KV Cache 是实现 128K+ 上下文的关键使能技术
+- [[AI/3-LLM/Architecture/FlashAttention|FlashAttention]] — MLA 的注意力计算仍可用 FlashAttention 加速；IO 感知优化与 KV 压缩互补
 - [[MoE 进阶|MoE 进阶]] — DeepSeek-V2/V3 同时采用 MLA + MoE，两者协同优化内存和计算

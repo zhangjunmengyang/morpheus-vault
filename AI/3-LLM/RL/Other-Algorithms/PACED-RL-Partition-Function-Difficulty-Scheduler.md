@@ -199,7 +199,7 @@ Sample 维度
 ## 元数据
 
 - **Tags**: #GFlowNet #curriculum-learning #sample-efficiency #RLVR #difficulty-scheduling #partition-function
-- **关联笔记**: [[Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] ⭐ — **独立多路验证同一规律**：两者都发现中间难度（accuracy≈0.5）最优，但工具完全不同——Goldilocks 用 Teacher LM 预测难度，PACED-RL 用 GFlowNet Z_φ 估计准确率；两篇合读让这个规律从 empirical 升级为 robust finding | [[GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] | [[DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]] | [[TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR]] — TSR 提升 rollout 质量，PACED-RL 提升 batch 质量，两者正交
+- **关联笔记**: [[AI/3-LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] ⭐ — **独立多路验证同一规律**：两者都发现中间难度（accuracy≈0.5）最优，但工具完全不同——Goldilocks 用 Teacher LM 预测难度，PACED-RL 用 GFlowNet Z_φ 估计准确率；两篇合读让这个规律从 empirical 升级为 robust finding | [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进全景 2026]] | [[AI/3-LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]] | [[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR]] — TSR 提升 rollout 质量，PACED-RL 提升 batch 质量，两者正交
 - **写于**: 2026-02-21
 
 ---

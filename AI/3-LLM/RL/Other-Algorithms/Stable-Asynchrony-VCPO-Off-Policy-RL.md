@@ -13,8 +13,8 @@ arxiv: 2602.xxxxx
 rating: 4
 status: permanent
 see-also:
-  - "[[Jet-RL-FP8-On-Policy-RL-Training|Jet-RL-FP8-On-Policy-RL-Training]]"
-  - "[[QeRL-Quantization-Enhanced-RL|QeRL-Quantization-Efficient-RL]]"
+  - "[[AI/3-LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL-FP8-On-Policy-RL-Training]]"
+  - "[[AI/3-LLM/RL/Frameworks/QeRL-Quantization-Enhanced-RL|QeRL-Quantization-Efficient-RL]]"
 ---
 
 # Stable Asynchrony: Variance-Controlled Off-Policy RL for LLMs (VCPO)
@@ -178,10 +178,10 @@ GLM-5 技术报告没有详细分析 staleness 对梯度质量的影响——他
 
 ## 连接
 
-- 直接相关：[[Slime-RL-Framework|Slime-RL-Framework]]（async RL infra，VCPO 的应用场景）
-- 同类稳定性问题：[[STAPO-Spurious-Token-Aware-Policy-Optimization|STAPO-Spurious-Token-Aware-Policy-Optimization]]（token级）、[[Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks-RL-Task-Difficulty-Curriculum]]（样本级）
-- 统一框架：[[RL-Training-Stability-2026-Unified-Analysis|RL-Training-Stability-2026-Unified-Analysis]]
-- 算法基础：[[GRPO 深度理解|GRPO]]
+- 直接相关：[[AI/3-LLM/RL/Frameworks/Slime-RL-Framework|Slime-RL-Framework]]（async RL infra，VCPO 的应用场景）
+- 同类稳定性问题：[[AI/3-LLM/RL/Other-Algorithms/STAPO-Spurious-Token-Aware-Policy-Optimization|STAPO-Spurious-Token-Aware-Policy-Optimization]]（token级）、[[AI/3-LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks-RL-Task-Difficulty-Curriculum]]（样本级）
+- 统一框架：[[AI/3-LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL-Training-Stability-2026-Unified-Analysis]]
+- 算法基础：[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO]]
 
 ---
 

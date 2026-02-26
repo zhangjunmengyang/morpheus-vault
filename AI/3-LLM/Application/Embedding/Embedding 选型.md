@@ -91,7 +91,7 @@ tags:
 
 ## See Also
 
-- [[Embedding|Embedding 原理]] — 选型的理论基础
-- [[RAG 检索策略|RAG 检索策略]] — 选型服务的下游：检索系统性能
-- [[大模型线上排查 SOP|大模型线上排查 SOP]] — 选型部署后的生产问题排查
+- [[AI/3-LLM/Application/Embedding/Embedding|Embedding 原理]] — 选型的理论基础
+- [[AI/6-应用/RAG/RAG 检索策略|RAG 检索策略]] — 选型服务的下游：检索系统性能
+- [[AI/3-LLM/Application/Embedding/大模型线上排查 SOP|大模型线上排查 SOP]] — 选型部署后的生产问题排查
 -  — 大语言模型知识全图谱

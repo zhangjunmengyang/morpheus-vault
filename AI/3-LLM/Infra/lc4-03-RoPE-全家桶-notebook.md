@@ -18,7 +18,7 @@ related:
   - "[[AI/3-LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]]"
   - "[[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写]]"
   - "[[AI/3-LLM/MA-RLHF课程/lc8-GQA-KVCache-手撕实操]]"
-  - "[[Attention 变体综述]]"
+  - "[[AI/3-LLM/Architecture/Attention 变体综述]]"
 ---
 
 # RoPE 全家桶手撕实操（MA-RLHF Batch D）
@@ -336,4 +336,4 @@ RoPE（旋转位置编码，标准实现）
 - [[AI/3-LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]] — MLA 中 RoPE 解耦（低秩 KV + position 单独路径，RoPE 应用的最新工程形态）
 - [[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写]] — TP 下 RoPE 的实现考虑（各卡独立旋转，分布式场景）
 - [[AI/3-LLM/MA-RLHF课程/lc8-GQA-KVCache-手撕实操]] — KV Cache 中 RoPE 的位置追踪（增量解码时 position_ids 的正确维护）
-- [[Attention 变体综述]] — RoPE 在各类 Attention 变体中的应用全景
+- [[AI/3-LLM/Architecture/Attention 变体综述]] — RoPE 在各类 Attention 变体中的应用全景

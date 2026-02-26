@@ -94,8 +94,8 @@ ARC-AGI 不测记忆，测的是 **novel task generalization**：
 ## See Also
 
 **Aletheia 系列（Gemini 3 Deep Think 作为基础模型的最高难度实测）**
-- [[Aletheia-Gemini3-DeepThink-FirstProof|Aletheia FirstProof（arXiv:2602.21201，2026-02-25）]] ⭐ — **Gemini 3 Deep Think 迄今最强能力展示**：基于本模型的 Aletheia agent 在 FirstProof 挑战赛自主解决 6/10 研究级数学题，包括 Weinberger 书中的开放问题；P7 推理计算量比以往观测高一个数量级，验证 TTC scaling 对真正困难问题有质的影响
-- [[Aletheia-Math-Research-Agent|Aletheia（前作：Erdős 数据库）]] — 同一基础模型的前一阶段挑战
+- [[AI/2-Agent/Evaluation/Aletheia-Gemini3-DeepThink-FirstProof|Aletheia FirstProof（arXiv:2602.21201，2026-02-25）]] ⭐ — **Gemini 3 Deep Think 迄今最强能力展示**：基于本模型的 Aletheia agent 在 FirstProof 挑战赛自主解决 6/10 研究级数学题，包括 Weinberger 书中的开放问题；P7 推理计算量比以往观测高一个数量级，验证 TTC scaling 对真正困难问题有质的影响
+- [[AI/2-Agent/Evaluation/Aletheia-Math-Research-Agent|Aletheia（前作：Erdős 数据库）]] — 同一基础模型的前一阶段挑战
 
 **推理体系**
 - [[LLM-推理优化-2026-全景|LLM 推理优化 2026 全景]] — TTC scaling 在推理优化整体框架中的位置

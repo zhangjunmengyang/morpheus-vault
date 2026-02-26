@@ -11,10 +11,10 @@ tags:
   - policy-optimization
   - pytorch
 related:
-  - "[[GRPO 深度理解|GRPO深度理解]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO深度理解]]"
   - "[[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操-MA-RLHF]]"
   - "[[AI/3-LLM/Infra/Ray-分布式RL训练实操|Ray-分布式RL训练实操]]"
-  - "[[OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]]"
 ---
 
 # GRPO 手撕实操 —— MA-RLHF

@@ -19,7 +19,7 @@ related:
   - "[[AI/3-LLM/RL/PPO/RLHF-PPO-完整Pytorch实现]]"
   - "[[AI/3-LLM/MA-RLHF课程/lc8-LLaMA2-Reward-Model-从零手写]]"
   - "[[AI/3-LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"
-  - "[[PPO 原理]]"
+  - "[[AI/3-LLM/RL/PPO/PPO 原理]]"
 ---
 
 # RLHF-PPO Pytorch 从零手写
@@ -371,4 +371,4 @@ A: Critic 优势：dense reward 场景下 GAE 比 MC 更稳定；能正确处理
 - [[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF]] — 同算法手撕实操版
 - [[AI/3-LLM/MA-RLHF课程/lc8-LLaMA2-Reward-Model-从零手写]] — 同系列：RM 实现（PPO 前置）
 - [[AI/3-LLM/MA-RLHF课程/lc8-GRPO-notebook-Pytorch从零手写]] — 同系列：GRPO（无 Critic 的轻量版）
-- [[PPO 原理]] — PPO 算法理论深度解析
+- [[AI/3-LLM/RL/PPO/PPO 原理]] — PPO 算法理论深度解析

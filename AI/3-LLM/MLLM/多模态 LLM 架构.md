@@ -18,11 +18,11 @@ sources:
   - "Li et al. 'BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models' arXiv:2301.12597"
   - "Chen et al. 'InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks' arXiv:2312.14238"
 related:
-  - "[[MLLM 概述]]"
-  - "[[CLIP|CLIP]]"
-  - "[[BLIP-2|BLIP-2]]"
-  - "[[InternVL3|InternVL3]]"
-  - "[[Qwen-VL|Qwen-VL]]"
+  - "[[AI/3-LLM/MLLM/MLLM 概述]]"
+  - "[[AI/3-LLM/MLLM/CLIP|CLIP]]"
+  - "[[AI/3-LLM/MLLM/BLIP-2|BLIP-2]]"
+  - "[[AI/3-LLM/MLLM/InternVL3|InternVL3]]"
+  - "[[AI/3-LLM/MLLM/Qwen-VL|Qwen-VL]]"
 ---
 
 # 多模态 LLM 架构全景
@@ -126,7 +126,7 @@ class MLPProjector(nn.Module):
 
 ### Q-Former (BLIP-2)
 
-参见 [[BLIP-2]]。通过一组可学习 query tokens 从 visual features 中提取固定数量的表示：
+参见 [[AI/3-LLM/MLLM/BLIP-2]]。通过一组可学习 query tokens 从 visual features 中提取固定数量的表示：
 
 ```python
 class QFormer(nn.Module):
@@ -231,7 +231,7 @@ LLaVA-OneVision (2024.8): + 多任务统一训练, 视频理解
 
 ### Qwen-VL 系列
 
-参见 [[Qwen-VL]]。
+参见 [[AI/3-LLM/MLLM/Qwen-VL]]。
 
 ```
 Qwen-VL (2023.8):    自训练 ViT + Cross-Attn + Qwen 7B
@@ -249,7 +249,7 @@ Qwen2-VL 2D RoPE 创新:
 
 ### InternVL 系列
 
-参见 [[InternVL3]]。
+参见 [[AI/3-LLM/MLLM/InternVL3]]。
 
 ```
 InternVL 1.0 (2023.12): InternViT-6B + QLLaMA
@@ -323,7 +323,7 @@ Q-Former 通过可学习 queries 将视觉 token 压缩到固定数量（如 32 
 
 ### Q3: Qwen2-VL 的 2D RoPE 和传统 tile 切分有什么区别？
 
-传统方法（LLaVA-NeXT、InternVL）将高分辨率图片切成多个 tile（如 336×336），每个 tile 独立编码后拼接。问题是 **tile 边界伪影**——跨 tile 的目标被切断，模型看不到完整上下文。Qwen2-VL 让 ViT 直接处理任意分辨率（dynamic resolution），用 **2D RoPE** 为每个 patch 编码 (h, w) 二维坐标——水平方向和垂直方向各用独立的 RoPE 频率，保持了完整的 2D 空间感知。代价是 ViT 需要处理变长序列，但配合 [[FlashAttention]] 可以高效实现。
+传统方法（LLaVA-NeXT、InternVL）将高分辨率图片切成多个 tile（如 336×336），每个 tile 独立编码后拼接。问题是 **tile 边界伪影**——跨 tile 的目标被切断，模型看不到完整上下文。Qwen2-VL 让 ViT 直接处理任意分辨率（dynamic resolution），用 **2D RoPE** 为每个 patch 编码 (h, w) 二维坐标——水平方向和垂直方向各用独立的 RoPE 频率，保持了完整的 2D 空间感知。代价是 ViT 需要处理变长序列，但配合 [[AI/3-LLM/Architecture/FlashAttention]] 可以高效实现。
 
 ### Q4: 多模态 LLM 的三阶段训练各自的作用是什么？
 
@@ -382,9 +382,9 @@ Q-Former 通过可学习 queries 将视觉 token 压缩到固定数量（如 32 
 
 ### 脑暴：如果往下延伸
 - Qwen2-VL 的 2D RoPE 思路可以推广到 3D（视频的时空位置编码）——这是视频理解的潜在突破点
-- 结合 [[MLLM 概述|MLLM 概述]] 的 Any-to-Any 架构，统一的 Modality Generator 可能替代当前的"外挂扩散模型"
+- 结合 [[AI/3-LLM/MLLM/MLLM 概述|MLLM 概述]] 的 Any-to-Any 架构，统一的 Modality Generator 可能替代当前的"外挂扩散模型"
 - InternViT-6B 证明了大 ViT 的价值——6 个月后可能出现 10B+ 的视觉编码器
 
-> 🔗 See also: [[MLLM 概述]] — MLLM 整体概述与发展历程
-> 🔗 See also: [[CLIP|CLIP]] — Vision Encoder 的基石
-> 🔗 See also: [[BLIP-2|BLIP-2]] — Q-Former 的原始设计
+> 🔗 See also: [[AI/3-LLM/MLLM/MLLM 概述]] — MLLM 整体概述与发展历程
+> 🔗 See also: [[AI/3-LLM/MLLM/CLIP|CLIP]] — Vision Encoder 的基石
+> 🔗 See also: [[AI/3-LLM/MLLM/BLIP-2|BLIP-2]] — Q-Former 的原始设计

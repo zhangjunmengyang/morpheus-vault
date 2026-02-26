@@ -91,10 +91,10 @@ SPPO 的连续胜率信号确实比二元偏好更细腻，但代价是需要 re
 
 ## 相关
 
-- [[SPIN-verl实践|SPIN verl 实践]] — 简化版自我对弈
-- [[OPO-verl实践|OPO verl 实践]] — 类似在线偏好方案
-- [[DPO-Unsloth实践|DPO 实践]] — 离线方案
-- [[实现其他 RL 方法|verl 实现其他 RL 方法]]
-- [[GRPO 深度理解|GRPO 深度理解]]
-- [[PPO 原理|PPO 原理]]
-- [[verl 概述|verl 概述]]
+- [[AI/3-LLM/RL/Other-Algorithms/SPIN-verl实践|SPIN verl 实践]] — 简化版自我对弈
+- [[AI/3-LLM/RL/Other-Algorithms/OPO-verl实践|OPO verl 实践]] — 类似在线偏好方案
+- [[AI/3-LLM/RL/DPO/DPO-Unsloth实践|DPO 实践]] — 离线方案
+- [[AI/3-LLM/Frameworks/verl/实现其他 RL 方法|verl 实现其他 RL 方法]]
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]]

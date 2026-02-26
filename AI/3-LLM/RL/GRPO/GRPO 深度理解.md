@@ -14,11 +14,11 @@ sources:
   - DeepSeek-R1 arXiv:2501.12948
   - "HuggingFace TRL GRPO Trainer: https://huggingface.co/docs/trl/grpo_trainer"
 related:
-  - "[[PPO 原理]]"
-  - "[[DeepSeek R1 学习笔记]]"
-  - "[[RL & LLMs 入门]]"
-  - "[[GRPO-TRL实践]]"
-  - "[[RLHF 全链路]]"
+  - "[[AI/3-LLM/RL/PPO/PPO 原理]]"
+  - "[[AI/3-LLM/RL/GRPO/DeepSeek R1 学习笔记]]"
+  - "[[AI/3-LLM/RL/Fundamentals/RL & LLMs 入门]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO-TRL实践]]"
+  - "[[AI/3-LLM/RL/RLHF-工程全栈]]"
 ---
 
 # GRPO 深度理解
@@ -188,7 +188,7 @@ GRPO 是"极简主义 RL"的典范：PPO 用复杂的价值网络学基线，GRP
 ### 局限与未解问题
 - **奖励稀疏问题**：开放性对话任务没有明确对错，GRPO 难以直接用
 - **组大小的选择**：$G$ 太小基线估计方差大，$G$ 太大显存贵，最优 $G$ 与任务强相关
-- **长链推理中的信用分配**：每个 token 共享同一个组级优势值，长回答中早期 token 的信用分配不准确（→ 见 [[Blockwise-Advantage-Estimation]] 对此的改进）
+- **长链推理中的信用分配**：每个 token 共享同一个组级优势值，长回答中早期 token 的信用分配不准确（→ 见 [[AI/3-LLM/RL/GRPO/Blockwise-Advantage-Estimation]] 对此的改进）
 
 ### 脑暴拓展
 - 如果把 GRPO 的"组内相对"思路用到 Reward Model 训练上，是否可以做 Pairwise GRPO？
@@ -196,18 +196,18 @@ GRPO 是"极简主义 RL"的典范：PPO 用复杂的价值网络学基线，GRP
 - 极端情况：$G=2$ 时 GRPO 退化为什么？（提示：与 DPO 有联系）
 
 > 🔗 See also:
-> - [[PPO 原理]] — GRPO 去掉了 PPO 的 Critic，对比学习两者
-> - [[Blockwise-Advantage-Estimation]] — 解决 GRPO 长序列信用分配问题
+> - [[AI/3-LLM/RL/PPO/PPO 原理]] — GRPO 去掉了 PPO 的 Critic，对比学习两者
+> - [[AI/3-LLM/RL/GRPO/Blockwise-Advantage-Estimation]] — 解决 GRPO 长序列信用分配问题
 > - [[CM2 — Checklist Rewards多轮Tool Use RL]] — 多轮 RL 的奖励设计
-> - [[QeRL-Quantization-Enhanced-RL]] — GRPO 在量化环境下的稳定性
+> - [[AI/3-LLM/RL/Frameworks/QeRL-Quantization-Enhanced-RL]] — GRPO 在量化环境下的稳定性
 >
 > 🤖 **GRPO 在 Agent 场景的根本性改造**（理论 → 应用的完整链）：
-> - [[GiGPO-Group-in-Group-Policy-Optimization|GiGPO（NeurIPS 2025）]] — GRPO 在 Agent 训练的核心问题：所有 step 共享 episode-level advantage。GiGPO 用 Anchor State Grouping 实现 step-level credit assignment，内存等于 GRPO
-> - [[Tree-GRPO-Tree-Search-LLM-Agent-RL|Tree-GRPO（ICLR 2026）]] — 把 GRPO 的线性 rollout 替换为树搜索，共享前缀节省 1/4 预算，双层 advantage（intra-tree + inter-tree）
-> - [[Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]] — GRPO 的 grouping 假设在多 agent 场景 break down（不同 agent 有不同 prompt/role），MAGRPO/AT-GRPO 的专门修复方案
-> - [[TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（arXiv:2602.11767，ICML 2026）]] — GRPO 的"采样 G 条 rollout"策略假设 rollout 质量均等；TSR 指出 rollout 质量是 multi-turn RL 的真正瓶颈——用训练时树搜索保证每个 rollout 都在当前最优动作路径上，+15% 效果
-> - [[MIG-Step-Marginal-Information-Gain-Credit-Assignment|MIG（arXiv:2602.01034）]] — GRPO 的 episode-level reward 问题延伸：用信息论量化每步的边际信息增益作为 dense reward，Monotonic Watermark 防止"先降后升"的 reward hacking
-> - [[SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO（arXiv:2602.06554）]] ⚠️ **重要理论边界**：正式证明 GRPO 的 variance normalization（除以 σ）在 multi-turn contextual bandit 场景中**破坏收敛性**（不可能定理）；单轮任务 GRPO 仍有收敛保证，多轮 Agent 训练需换 SeeUPO（逆序更新 + 无 variance norm）
+> - [[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO（NeurIPS 2025）]] — GRPO 在 Agent 训练的核心问题：所有 step 共享 episode-level advantage。GiGPO 用 Anchor State Grouping 实现 step-level credit assignment，内存等于 GRPO
+> - [[AI/2-Agent/Agentic-RL/Tree-GRPO-Tree-Search-LLM-Agent-RL|Tree-GRPO（ICLR 2026）]] — 把 GRPO 的线性 rollout 替换为树搜索，共享前缀节省 1/4 预算，双层 advantage（intra-tree + inter-tree）
+> - [[AI/2-Agent/Agentic-RL/Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]] — GRPO 的 grouping 假设在多 agent 场景 break down（不同 agent 有不同 prompt/role），MAGRPO/AT-GRPO 的专门修复方案
+> - [[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（arXiv:2602.11767，ICML 2026）]] — GRPO 的"采样 G 条 rollout"策略假设 rollout 质量均等；TSR 指出 rollout 质量是 multi-turn RL 的真正瓶颈——用训练时树搜索保证每个 rollout 都在当前最优动作路径上，+15% 效果
+> - [[AI/2-Agent/Agentic-RL/MIG-Step-Marginal-Information-Gain-Credit-Assignment|MIG（arXiv:2602.01034）]] — GRPO 的 episode-level reward 问题延伸：用信息论量化每步的边际信息增益作为 dense reward，Monotonic Watermark 防止"先降后升"的 reward hacking
+> - [[AI/2-Agent/Agentic-RL/SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO（arXiv:2602.06554）]] ⚠️ **重要理论边界**：正式证明 GRPO 的 variance normalization（除以 σ）在 multi-turn contextual bandit 场景中**破坏收敛性**（不可能定理）；单轮任务 GRPO 仍有收敛保证，多轮 Agent 训练需换 SeeUPO（逆序更新 + 无 variance norm）
 
 ---
 
@@ -230,4 +230,4 @@ GRPO 是"极简主义 RL"的典范：PPO 用复杂的价值网络学基线，GRP
 - [[AI/3-LLM/RL/GRPO/GRPO-完整Notebook实现|GRPO 完整 Notebook 实现]] — **端到端验证**：组采样 + advantage 归一化 + KL 项完整 Notebook，验证理论细节
 - [[AI/3-LLM/RL/GRPO/GRPO-KL散度三种近似|GRPO KL 散度三种近似]] — k1/k2/k3 Schulman 近似实现对比：精度 vs 计算成本 tradeoff
 - [[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操]] — PPO actor-critic 实现对照，理解 GRPO 为什么能去掉 critic
-- [[MA-RLHF-手撕实操-系列索引|MA-RLHF 手撕实操系列索引]] — 架构/推理/Infra/RL 全链路代码实操总索引
+- [[AI/3-LLM/Infra/MA-RLHF-手撕实操-系列索引|MA-RLHF 手撕实操系列索引]] — 架构/推理/Infra/RL 全链路代码实操总索引

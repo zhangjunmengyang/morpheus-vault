@@ -176,9 +176,9 @@ graph TD
 
 - **原始论文**：[arXiv:2503.23383](https://arxiv.org/abs/2503.23383)
 - **代码**：[github.com/GAIR-NLP/ToRL](https://github.com/GAIR-NLP/ToRL)
-- **补充**：[[Tool-Use-RL-训练专题|Tool Use RL 训练专题]] — Tool Use RL 全景谱系
-- **对比**：[[ASTRA-Automated-Tool-Agent-Training|ASTRA（MCP工具图+verifiable env）]] — MCP 工具图 + verifiable env 路线
-- **原理**：[[RC-GRPO-Reward-Conditioned-Tool-Calling-RL|RC-GRPO（reward conditioning）]] — reward conditioning 解决同质化问题
+- **补充**：[[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool Use RL 训练专题]] — Tool Use RL 全景谱系
+- **对比**：[[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training|ASTRA（MCP工具图+verifiable env）]] — MCP 工具图 + verifiable env 路线
+- **原理**：[[AI/2-Agent/Agentic-RL/RC-GRPO-Reward-Conditioned-Tool-Calling-RL|RC-GRPO（reward conditioning）]] — reward conditioning 解决同质化问题
 - **数学 RL**：Search-R1 (arXiv:2503.09516) — 搜索引擎 + 推理 RL 同期工作
 
 ## 落地应用
@@ -200,8 +200,8 @@ graph TD
 
 ## See Also
 
-- [[ARTIST-Agentic-Reasoning-Tool-Integration-RL]] — ARTIST：ToRL 的多工具扩展版（ToRL 单工具 base model 路线 vs ARTIST 多工具 GRPO + token masking）
-- [[ASTRA-Automated-Tool-Agent-Training]] — ASTRA：MCP 工具图 + SFT → RL 路线（ToRL 的对比基准，更重工程投入）
-- [[Tool-Use-RL-训练专题]] — Tool Use RL 训练专题（ToRL 在其中的位置和对比）
-- [[Search-R1-Reasoning-Search-Engine-RL]] — Search-R1：单工具（搜索）专项 RL（与 ToRL 同路线，不同工具类型）
-- [[GRPO 深度理解]] — GRPO 深度理解（ToRL 使用的底层 RL 算法）
+- [[AI/2-Agent/Agentic-RL/ARTIST-Agentic-Reasoning-Tool-Integration-RL]] — ARTIST：ToRL 的多工具扩展版（ToRL 单工具 base model 路线 vs ARTIST 多工具 GRPO + token masking）
+- [[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training]] — ASTRA：MCP 工具图 + SFT → RL 路线（ToRL 的对比基准，更重工程投入）
+- [[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题]] — Tool Use RL 训练专题（ToRL 在其中的位置和对比）
+- [[AI/2-Agent/Agentic-RL/Search-R1-Reasoning-Search-Engine-RL]] — Search-R1：单工具（搜索）专项 RL（与 ToRL 同路线，不同工具类型）
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解]] — GRPO 深度理解（ToRL 使用的底层 RL 算法）

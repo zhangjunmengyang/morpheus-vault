@@ -22,11 +22,11 @@ sources:
   - arXiv:2505.01441 — Joykirat Singh, Raghav Magazine, Yash Pandya, Akshay Nambi（Microsoft Research）— 2025-04-28
   - "Report: MSR-TR-042025-V1"
 related:
-  - "[[ToRL-Tool-Integrated-Reinforcement-Learning]]"
-  - "[[ASTRA-Automated-Tool-Agent-Training]]"
-  - "[[Tool-Use-RL-训练专题]]"
-  - "[[Search-R1-Reasoning-Search-Engine-RL]]"
-  - "[[GRPO 深度理解]]"
+  - "[[AI/2-Agent/Agentic-RL/ToRL-Tool-Integrated-Reinforcement-Learning]]"
+  - "[[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training]]"
+  - "[[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题]]"
+  - "[[AI/2-Agent/Agentic-RL/Search-R1-Reasoning-Search-Engine-RL]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解]]"
 ---
 
 # ARTIST: Agentic Reasoning and Tool Integration in Self-Improving Transformers
@@ -250,9 +250,9 @@ graph LR
 ## 推荐阅读
 
 - **原始论文**：[arXiv:2505.01441](https://arxiv.org/abs/2505.01441)（MSR-TR-042025-V1）
-- **对比**：[[ToRL-Tool-Integrated-Reinforcement-Learning|ToRL（base model直接RL训工具）]] — base model + 单工具路线
-- **对比**：[[ASTRA-Automated-Tool-Agent-Training|ASTRA（MCP工具图+verifiable env）]] — MCP 工具图 + SFT + verifiable env
-- **Reward 深入**：[[Tool-Use-RL-训练专题|Tool Use RL 训练专题]] — ToolRL 细粒度 reward 研究
+- **对比**：[[AI/2-Agent/Agentic-RL/ToRL-Tool-Integrated-Reinforcement-Learning|ToRL（base model直接RL训工具）]] — base model + 单工具路线
+- **对比**：[[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training|ASTRA（MCP工具图+verifiable env）]] — MCP 工具图 + SFT + verifiable env
+- **Reward 深入**：[[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool Use RL 训练专题]] — ToolRL 细粒度 reward 研究
 - **Multi-turn 评估**：τ-bench (Yao et al., 2024) — retail/airline 场景
 - **函数调用**：BFCL v3 (Yan et al., 2024) — 多类别 function calling benchmark
 
@@ -275,8 +275,8 @@ graph LR
 
 ## See Also
 
-- [[ToRL-Tool-Integrated-Reinforcement-Learning]] — ToRL：base model 直接 RL 训单工具（ARTIST 的对比基准，更简洁但工具泛化性差）
-- [[ASTRA-Automated-Tool-Agent-Training]] — ASTRA：MCP 工具图 + SFT + verifiable env（更重的工程投入，ARTIST 轻量替代）
-- [[Tool-Use-RL-训练专题]] — Tool Use RL 训练专题（ARTIST 的深入背景，ToolRL 细粒度 reward 研究）
-- [[Search-R1-Reasoning-Search-Engine-RL]] — Search-R1：专注搜索工具的 GRPO 训练（单工具专项 vs ARTIST 多工具通用）
-- [[GRPO 深度理解]] — GRPO 深度理解（ARTIST 的底层算法）
+- [[AI/2-Agent/Agentic-RL/ToRL-Tool-Integrated-Reinforcement-Learning]] — ToRL：base model 直接 RL 训单工具（ARTIST 的对比基准，更简洁但工具泛化性差）
+- [[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training]] — ASTRA：MCP 工具图 + SFT + verifiable env（更重的工程投入，ARTIST 轻量替代）
+- [[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题]] — Tool Use RL 训练专题（ARTIST 的深入背景，ToolRL 细粒度 reward 研究）
+- [[AI/2-Agent/Agentic-RL/Search-R1-Reasoning-Search-Engine-RL]] — Search-R1：专注搜索工具的 GRPO 训练（单工具专项 vs ARTIST 多工具通用）
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解]] — GRPO 深度理解（ARTIST 的底层算法）

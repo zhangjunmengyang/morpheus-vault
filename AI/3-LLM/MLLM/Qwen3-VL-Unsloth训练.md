@@ -234,8 +234,8 @@ VLM 比纯文本模型显存大得多，因为图片 token 很多：
 
 ## 相关
 
-- [[Qwen-VL|Qwen-VL]]
-- [[Qwen 2.5 VL-Unsloth训练|Qwen 2.5 VL-Unsloth训练]]
-- [[MLLM 概述|MLLM 概述]]
-- [[Unsloth 概述|Unsloth 概述]]
-- [[GRPO 深度理解|GRPO 深度理解]]
+- [[AI/3-LLM/MLLM/Qwen-VL|Qwen-VL]]
+- [[AI/3-LLM/MLLM/Qwen 2.5 VL-Unsloth训练|Qwen 2.5 VL-Unsloth训练]]
+- [[AI/3-LLM/MLLM/MLLM 概述|MLLM 概述]]
+- [[AI/3-LLM/Frameworks/Unsloth/Unsloth 概述|Unsloth 概述]]
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]

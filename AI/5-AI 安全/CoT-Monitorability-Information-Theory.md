@@ -209,6 +209,6 @@ Elicitation Error → 改进 monitor 模型（更强的 monitor LLM）
 - Baker et al. (2025) — Monitoring Reasoning Models for Misbehavior and the Risks of Promoting Obfuscation
 - Korbak et al. (2025) — Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety
 - Turpin et al. (2023) — Language Models Don't Always Say What They Think
-- [[iStar-Implicit-Step-Rewards-Agentic-RL|iStar]] — CoT 信息量对 step-level credit 的影响
-- [[MIG-Step-Marginal-Information-Gain-Credit-Assignment|MIG]] — 内在信息增益视角
-- [[Promptware-Kill-Chain-LLM-Malware|Promptware Kill Chain]] — CoT 中暴露 hack 意图的攻击链视角
+- [[AI/2-Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar]] — CoT 信息量对 step-level credit 的影响
+- [[AI/2-Agent/Agentic-RL/MIG-Step-Marginal-Information-Gain-Credit-Assignment|MIG]] — 内在信息增益视角
+- [[AI/5-AI 安全/Promptware-Kill-Chain-LLM-Malware|Promptware Kill Chain]] — CoT 中暴露 hack 意图的攻击链视角

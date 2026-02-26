@@ -15,9 +15,9 @@ sources:
   - DeepSeek-AI. *DeepSeek-V3 Technical Report* arXiv:2412.19437
   - "Shao et al. *DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models* arXiv:2402.03300"
 related:
-  - "[[GRPO 深度理解|GRPO 深度理解]]"
-  - "[[PPO 原理|PPO 原理]]"
-  - "[[GPT|GPT]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]"
+  - "[[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]]"
+  - "[[AI/3-LLM/Architecture/GPT|GPT]]"
   - "[[MoE 基础|MoE 基础]]"
 ---
 # Deepseek-R1
@@ -168,23 +168,23 @@ R1-Zero 是论文中最令人兴奋的实验——直接在 base model 上做 RL
 - 开源了权重但训练细节有意留白：RL 训练的具体数据配比、reward shaping 细节不完全透明
 
 ### 脑暴：如果往下延伸
-- [[GRPO 深度理解|GRPO]] + [[Mamba-SSM|Mamba]] 的组合：SSM 的线性推理效率 + RL 的推理能力激发，能否做出推理效率极高的小模型？
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO]] + [[AI/3-LLM/Architecture/Mamba-SSM|Mamba]] 的组合：SSM 的线性推理效率 + RL 的推理能力激发，能否做出推理效率极高的小模型？
 - R1 的蒸馏成功说明 CoT 是可迁移的"知识"。那 Agent 的 ReAct 轨迹能否类似地蒸馏？这对  领域有重大意义
 
 ## 相关
 
-- [[GRPO 深度理解|GRPO 深度理解]] — R1 使用的核心 RL 算法
-- [[DeepSeek R1 学习笔记|DeepSeek R1 学习笔记]] — 更详细的学习记录
-- [[DeepSeek-Math|DeepSeek-Math]] — GRPO 最初提出的论文
-- [[PPO 原理|PPO 原理]] — GRPO 的前身对比
-- [[RL 概览|RL 概览]] — 强化学习基础
-- [[分布式训练|分布式训练]] — R1 训练所需的基础设施
-- [[OpenR1|OpenR1]] — 社区复现项目
-- [[LLaMA|LLaMA]]
-- [[GPT|GPT]] — RLHF 路线 vs 纯 RL 路线的对比
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — R1 使用的核心 RL 算法
+- [[AI/3-LLM/RL/GRPO/DeepSeek R1 学习笔记|DeepSeek R1 学习笔记]] — 更详细的学习记录
+- [[AI/3-LLM/RL/GRPO/DeepSeek-Math|DeepSeek-Math]] — GRPO 最初提出的论文
+- [[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]] — GRPO 的前身对比
+- [[AI/3-LLM/RL/Fundamentals/RL 概览|RL 概览]] — 强化学习基础
+- [[AI/3-LLM/Infra/分布式训练|分布式训练]] — R1 训练所需的基础设施
+- [[AI/3-LLM/RL/GRPO/OpenR1|OpenR1]] — 社区复现项目
+- [[AI/3-LLM/Architecture/LLaMA|LLaMA]]
+- [[AI/3-LLM/Architecture/GPT|GPT]] — RLHF 路线 vs 纯 RL 路线的对比
 - [[MoE 基础|MoE 基础]] — R1 底座的 MoE 架构
-- [[verl 概述|verl 概述]]
-- [[TRL 概述|TRL 概述]]
+- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]]
+- [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL 概述]]
 
 **代码手撕（理论 → 代码）：**
 - [[AI/3-LLM/Architecture/DeepSeek-V3-手撕实操|DeepSeek-V3-手撕实操]] ⭐⭐⭐⭐⭐ — MLA（KV cache 降 16x）+ MoE + mHC 架构从零实现，面试高频考点

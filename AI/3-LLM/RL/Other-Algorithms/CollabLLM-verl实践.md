@@ -81,10 +81,10 @@ CollabLLM 是一个有趣的研究方向，但实际落地的门槛较高——�
 
 ## 相关
 
-- [[GRPO-verl实践|GRPO verl 实践]] — 更常用的单模型方案
-- [[SPPO-verl实践|SPPO verl 实践]] — 自我对弈方案
-- [[SPIN-verl实践|SPIN verl 实践]] — 单模型自我对弈
-- [[实现其他 RL 方法|verl 实现其他 RL 方法]]
-- [[零碎的点|Multi-Agent 笔记]]
-- [[GRPO 深度理解|GRPO 深度理解]]
-- [[verl 概述|verl 概述]]
+- [[AI/3-LLM/RL/GRPO/GRPO-verl实践|GRPO verl 实践]] — 更常用的单模型方案
+- [[AI/3-LLM/RL/Other-Algorithms/SPPO-verl实践|SPPO verl 实践]] — 自我对弈方案
+- [[AI/3-LLM/RL/Other-Algorithms/SPIN-verl实践|SPIN verl 实践]] — 单模型自我对弈
+- [[AI/3-LLM/Frameworks/verl/实现其他 RL 方法|verl 实现其他 RL 方法]]
+- [[AI/2-Agent/Multi-Agent/零碎的点|Multi-Agent 笔记]]
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]]

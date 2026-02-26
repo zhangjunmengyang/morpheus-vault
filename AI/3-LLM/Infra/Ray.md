@@ -14,9 +14,9 @@ sources:
   - https://docs.ray.io/en/latest/
   - https://github.com/ray-project/ray
 related:
-  - "[[Megatron-LM|Megatron-LM]]"
-  - "[[HybridFlow|HybridFlow]]"
-  - "[[模型并行策略|模型并行策略]]"
+  - "[[AI/3-LLM/Infra/Megatron-LM|Megatron-LM]]"
+  - "[[AI/3-LLM/Frameworks/verl/HybridFlow|HybridFlow]]"
+  - "[[AI/3-LLM/Infra/模型并行策略|模型并行策略]]"
 ---
 # Ray
 
@@ -102,7 +102,7 @@ class RewardWorker:
     pass
 ```
 
-verl 就是基于 Ray Actor 来编排整个 RL 训练流程的，参见 [[HybridFlow|HybridFlow]]。
+verl 就是基于 Ray Actor 来编排整个 RL 训练流程的，参见 [[AI/3-LLM/Frameworks/verl/HybridFlow|HybridFlow]]。
 
 > 来源：verl 论文 "HybridFlow: A Flexible and Efficient RLHF Framework" arXiv:2409.19256 — Ray Actor 编排 RLHF 的工业实践
 
@@ -185,16 +185,16 @@ worker = TrainWorker.options(
 - Ray 对故障恢复的支持（checkpoint + actor restart）在长时间 RL 训练中的可靠性待验证
 
 ### 脑暴：如果往下延伸
-- 如果把 [[HybridFlow|HybridFlow]] 的 SPMD + MPMD 混合思路推广，能否构建一个"通用 RL 编排标准"？
+- 如果把 [[AI/3-LLM/Frameworks/verl/HybridFlow|HybridFlow]] 的 SPMD + MPMD 混合思路推广，能否构建一个"通用 RL 编排标准"？
 - Ray Serve + vLLM 的组合能否成为 LLM Serving 的事实标准？
 
 ## 相关
 
-> 🔗 See also: [[HybridFlow|HybridFlow]] — 基于 Ray Actor 的 RLHF 混合编排
-> 🔗 See also: [[Megatron-LM|Megatron-LM]] — Ray 编排 + Megatron 做模型并行是 verl 的核心架构
-> 🔗 See also: [[模型并行策略|模型并行策略]] — DP/TP/PP 如何与 Ray 配合
+> 🔗 See also: [[AI/3-LLM/Frameworks/verl/HybridFlow|HybridFlow]] — 基于 Ray Actor 的 RLHF 混合编排
+> 🔗 See also: [[AI/3-LLM/Infra/Megatron-LM|Megatron-LM]] — Ray 编排 + Megatron 做模型并行是 verl 的核心架构
+> 🔗 See also: [[AI/3-LLM/Infra/模型并行策略|模型并行策略]] — DP/TP/PP 如何与 Ray 配合
 
-- [[分布式训练|分布式训练]] — 分布式训练全景
-- [[训练后端|verl 训练后端]] — Ray 在 verl 中的应用
-- [[verl 概述|verl 概述]]
-- [[OpenRLHF|OpenRLHF]]
+- [[AI/3-LLM/Infra/分布式训练|分布式训练]] — 分布式训练全景
+- [[AI/3-LLM/Frameworks/verl/训练后端|verl 训练后端]] — Ray 在 verl 中的应用
+- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]]
+- [[AI/3-LLM/Frameworks/OpenRLHF/OpenRLHF|OpenRLHF]]

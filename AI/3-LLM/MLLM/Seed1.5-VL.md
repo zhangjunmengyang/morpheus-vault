@@ -100,7 +100,7 @@ Seed1.5-VL 代表了 MLLM 发展的一个方向：**从「看图说话」走向�
 
 ## 相关
 
-- [[DeepSeek-VL|DeepSeek-VL]] — DeepSeek 的开源多模态方案
-- [[InternVL3|InternVL3]] — 另一个强力开源 MLLM
-- [[Qwen 2.5 VL-Unsloth训练|Qwen 2.5 VL]] — Qwen 的多模态方案（Unsloth 训练实战）
-- [[玩玩多模态大模型|多模态大模型实践]]
+- [[AI/3-LLM/MLLM/DeepSeek-VL|DeepSeek-VL]] — DeepSeek 的开源多模态方案
+- [[AI/3-LLM/MLLM/InternVL3|InternVL3]] — 另一个强力开源 MLLM
+- [[AI/3-LLM/MLLM/Qwen 2.5 VL-Unsloth训练|Qwen 2.5 VL]] — Qwen 的多模态方案（Unsloth 训练实战）
+- [[AI/3-LLM/MLLM/玩玩多模态大模型|多模态大模型实践]]

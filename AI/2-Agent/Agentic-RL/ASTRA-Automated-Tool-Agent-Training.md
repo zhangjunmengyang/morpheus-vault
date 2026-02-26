@@ -191,8 +191,8 @@ ASTRA-14B-Thinking-v1 (Qwen2.5-14B 基座)
 
 - 原论文：[arXiv:2601.21558](https://arxiv.org/abs/2601.21558)
 - 代码：[LianjiaTech/astra](https://github.com/LianjiaTech/astra)
-- 相关工作：[[Tool-Use-RL-训练专题|Tool-Use-RL-训练专题]] | [[CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL]] | [[PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE-Phase-Aware-Mixture-of-Experts]]
-- [[RC-GRPO-Reward-Conditioned-Tool-Calling-RL|RC-GRPO]] — 解决 ASTRA RL 阶段 GRPO reward 同质化崩塌（arXiv:2602.03025）
-- 环境工程系统论：[[Agent-RL-环境工程系统论|Agent RL 环境工程系统论]]
-- [[ARTIST-Agentic-Reasoning-Tool-Integration-RL]] — ARTIST：ASTRA 的轻量替代（无需 tool-graph 工程，GRPO + token masking 直接训多工具）
-- [[ToRL-Tool-Integrated-Reinforcement-Learning]] — ToRL：最简洁路线（base model + 单工具，三种行为自然涌现）
+- 相关工作：[[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL-训练专题]] | [[AI/2-Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL]] | [[AI/2-Agent/Agentic-RL/PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE-Phase-Aware-Mixture-of-Experts]]
+- [[AI/2-Agent/Agentic-RL/RC-GRPO-Reward-Conditioned-Tool-Calling-RL|RC-GRPO]] — 解决 ASTRA RL 阶段 GRPO reward 同质化崩塌（arXiv:2602.03025）
+- 环境工程系统论：[[AI/2-Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent RL 环境工程系统论]]
+- [[AI/2-Agent/Agentic-RL/ARTIST-Agentic-Reasoning-Tool-Integration-RL]] — ARTIST：ASTRA 的轻量替代（无需 tool-graph 工程，GRPO + token masking 直接训多工具）
+- [[AI/2-Agent/Agentic-RL/ToRL-Tool-Integrated-Reinforcement-Learning]] — ToRL：最简洁路线（base model + 单工具，三种行为自然涌现）

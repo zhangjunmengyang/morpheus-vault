@@ -175,8 +175,8 @@ Rollout 用的是当前 actor weights，但 training 会更新 weights。verl �
 
 ## 相关
 
-- [[Ray|Ray]] — HybridFlow 的底层编排框架
-- [[Megatron-LM|Megatron-LM]] — 训练后端之一
-- [[训练后端|训练后端]] — Megatron vs FSDP
-- [[硬件资源预估|硬件资源预估]] — 资源规划
-- [[性能调优|性能调优]] — 训练性能优化
+- [[AI/3-LLM/Infra/Ray|Ray]] — HybridFlow 的底层编排框架
+- [[AI/3-LLM/Infra/Megatron-LM|Megatron-LM]] — 训练后端之一
+- [[AI/3-LLM/Frameworks/verl/训练后端|训练后端]] — Megatron vs FSDP
+- [[AI/3-LLM/Frameworks/verl/硬件资源预估|硬件资源预估]] — 资源规划
+- [[AI/3-LLM/Frameworks/verl/性能调优|性能调优]] — 训练性能优化

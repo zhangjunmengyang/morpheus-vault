@@ -27,12 +27,12 @@ sources:
   - "GSPO (前驱): arXiv:2507.18071"
   - Qwen3-VL 技术报告 (生产验证)
 related:
-  - "[[GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]]"
-  - "[[GSPO-Group-Sequence-Policy-Optimization|GSPO]]"
-  - "[[OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]]"
-  - "[[LAD-Learning-Advantage-Distribution|LAD]]"
-  - "[[VESPO-Variational-Sequence-Policy-Optimization|VESPO]]"
-  - "[[MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]]"
+  - "[[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进全景 2026]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/GSPO-Group-Sequence-Policy-Optimization|GSPO]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/LAD-Learning-Advantage-Distribution|LAD]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/VESPO-Variational-Sequence-Policy-Optimization|VESPO]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]]"
 ---
 
 # SAPO: Soft Adaptive Policy Optimization
@@ -200,22 +200,22 @@ SAPO 在所有方法中坚持学习最长时间后才出现不稳定迹象，Pas
 ## See Also
 
 **直接技术谱系：**
-- [[GSPO-Group-Sequence-Policy-Optimization|GSPO（Qwen3正式版）]] — **SAPO 的前驱**：GSPO 发现 sequence-level IS 可避免 token 高方差，但 hard clip 全有全无浪费梯度；SAPO 是 GSPO 的软门控改进版（理论证明在 A1+A2 假设下等价）
-- [[GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] — SAPO 归属"Trust Region 软化"维度（维度三），与 MASPO/DAPO/VAPO 同属信任域改进族
-- [[VESPO-Variational-Sequence-Policy-Optimization|VESPO]] ⭐ — **理论上界**：VESPO 用变分推导给出最优 IS kernel（`ϕ(W)=W^α·exp(-λW)`），在高 staleness（64×）异步场景仍稳定；SAPO 在 N≥8 时 collapse，VESPO 是 SAPO 的理论升级
+- [[AI/3-LLM/RL/Other-Algorithms/GSPO-Group-Sequence-Policy-Optimization|GSPO（Qwen3正式版）]] — **SAPO 的前驱**：GSPO 发现 sequence-level IS 可避免 token 高方差，但 hard clip 全有全无浪费梯度；SAPO 是 GSPO 的软门控改进版（理论证明在 A1+A2 假设下等价）
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进全景 2026]] — SAPO 归属"Trust Region 软化"维度（维度三），与 MASPO/DAPO/VAPO 同属信任域改进族
+- [[AI/3-LLM/RL/Other-Algorithms/VESPO-Variational-Sequence-Policy-Optimization|VESPO]] ⭐ — **理论上界**：VESPO 用变分推导给出最优 IS kernel（`ϕ(W)=W^α·exp(-λW)`），在高 staleness（64×）异步场景仍稳定；SAPO 在 N≥8 时 collapse，VESPO 是 SAPO 的理论升级
 
 **正交可叠加方向（改不同维度）：**
-- [[OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]] — 改 IS ratio 本身（KL-reg closed-form → squared loss）；SAPO 改 clip 函数形状；两者正交，可叠加
-- [[LAD-Learning-Advantage-Distribution|LAD]] — 改目标函数范式（f-divergence 分布匹配 vs 标量期望最大化）；与 SAPO 正交，可叠加
-- [[MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 同为 trust region 改进，但用 probability mass 自适应调整 ε；SAPO 用 sigmoid 软衰减
-- [[NoRD-Dr-GRPO-Reasoning-Free-VLA-Autonomous-Driving|NoRD（CVPR 2026）]] — 改 std 归一化（移除 → Dr. GRPO）；SAPO 改 clip 形状；两者都修改 advantage 计算但路径完全不同——SAPO 解决 trust region 过硬问题，NoRD 解决 difficulty bias；**组合设想**：NoRD 消除 bias + SAPO 软门控 = 无偏 + 稳定的训练信号
+- [[AI/3-LLM/RL/Other-Algorithms/OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]] — 改 IS ratio 本身（KL-reg closed-form → squared loss）；SAPO 改 clip 函数形状；两者正交，可叠加
+- [[AI/3-LLM/RL/Other-Algorithms/LAD-Learning-Advantage-Distribution|LAD]] — 改目标函数范式（f-divergence 分布匹配 vs 标量期望最大化）；与 SAPO 正交，可叠加
+- [[AI/3-LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 同为 trust region 改进，但用 probability mass 自适应调整 ε；SAPO 用 sigmoid 软衰减
+- [[AI/3-LLM/RL/Other-Algorithms/NoRD-Dr-GRPO-Reasoning-Free-VLA-Autonomous-Driving|NoRD（CVPR 2026）]] — 改 std 归一化（移除 → Dr. GRPO）；SAPO 改 clip 形状；两者都修改 advantage 计算但路径完全不同——SAPO 解决 trust region 过硬问题，NoRD 解决 difficulty bias；**组合设想**：NoRD 消除 bias + SAPO 软门控 = 无偏 + 稳定的训练信号
 
 ## 推荐阅读
 
 1. **原文**：[arXiv:2511.20347](https://arxiv.org/abs/2511.20347) — SAPO: Soft Adaptive Policy Optimization
-2. **前驱**：[[GSPO-Group-Sequence-Policy-Optimization|GSPO]] — 理解 SAPO 改进了什么（sequence-level IS → soft gate）
-3. **理论上界**：[[VESPO-Variational-Sequence-Policy-Optimization|VESPO]] — 变分推导的理论最优，SAPO 在高 staleness 下的理论天花板
-4. **全景定位**：[[GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] — 了解 SAPO 在整个 GRPO 改进谱系中的位置
+2. **前驱**：[[AI/3-LLM/RL/Other-Algorithms/GSPO-Group-Sequence-Policy-Optimization|GSPO]] — 理解 SAPO 改进了什么（sequence-level IS → soft gate）
+3. **理论上界**：[[AI/3-LLM/RL/Other-Algorithms/VESPO-Variational-Sequence-Policy-Optimization|VESPO]] — 变分推导的理论最优，SAPO 在高 staleness 下的理论天花板
+4. **全景定位**：[[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进全景 2026]] — 了解 SAPO 在整个 GRPO 改进谱系中的位置
 
 ---
 

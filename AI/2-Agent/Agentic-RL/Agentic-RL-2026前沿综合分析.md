@@ -14,15 +14,15 @@ tags:
   - synthesis
   - 2026
 related:
-  - "[[Kimi-K2.5-PARL|Kimi-K2.5-PARL]]"
-  - "[[CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2]]"
-  - "[[HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]]"
-  - "[[EnterpriseGym-Corecraft|EnterpriseGym-Corecraft]]"
-  - "[[OpenRS-Pairwise-Adaptive-Rubric|OpenRS-Pairwise-Adaptive-Rubric]]"
-  - "[[FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer-CWRPO-Workflow-Orchestration-RL]]"
-  - "[[AgentConductor-Topology-Evolution|AgentConductor]]"
-  - "[[SquRL-Dynamic-Workflow-Text-to-SQL|SquRL-Dynamic-Workflow-Text-to-SQL]]"
-  - "[[PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE-Phase-Aware-Mixture-of-Experts]]"
+  - "[[AI/2-Agent/Multi-Agent/Kimi-K2.5-PARL|Kimi-K2.5-PARL]]"
+  - "[[AI/2-Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2]]"
+  - "[[AI/2-Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]]"
+  - "[[AI/2-Agent/Agentic-RL/EnterpriseGym-Corecraft|EnterpriseGym-Corecraft]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/OpenRS-Pairwise-Adaptive-Rubric|OpenRS-Pairwise-Adaptive-Rubric]]"
+  - "[[AI/2-Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer-CWRPO-Workflow-Orchestration-RL]]"
+  - "[[AI/2-Agent/Multi-Agent/AgentConductor-Topology-Evolution|AgentConductor]]"
+  - "[[AI/2-Agent/Agentic-RL/SquRL-Dynamic-Workflow-Text-to-SQL|SquRL-Dynamic-Workflow-Text-to-SQL]]"
+  - "[[AI/2-Agent/Agentic-RL/PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE-Phase-Aware-Mixture-of-Experts]]"
 ---
 
 # Agentic RL 2026 前沿综合分析 — 五大维度与对应解法
@@ -183,7 +183,7 @@ Search-R1++ baseline：Qwen2.5-7B 从 0.403 → 0.442（+9.7%），Qwen2.5-3B �
 
 适用场景：reward 极稀疏 + 失败率高 + 资源有限时，SELAUR 是工程首选；资源充足时，ERL/CSO 信号更可靠。
 
-→ 详见：[[SELAUR-Self-Evolving-LLM-Agent-Uncertainty-Rewards|SELAUR（2602.21158）]]
+→ 详见：[[AI/2-Agent/Agentic-RL/SELAUR-Self-Evolving-LLM-Agent-Uncertainty-Rewards|SELAUR（2602.21158）]]
 
 **Reward Design 完整地图（v9，截至 2026-02-25）**：
 
@@ -275,7 +275,7 @@ $$\text{Rollout quality} \uparrow \Rightarrow \text{Training signal quality} \up
 - Optimizer-agnostic，兼容 PPO/GRPO，ICML 2026
 - **0.5B+TSR ≈ 3B 无 TSR**（+15% 提升，Sokoban/FrozenLake/WebShop 三环境一致）
 - **核心命题：rollout 质量是 multi-turn RL 的第四个被忽视的训练变量（与算法/reward/credit assignment 正交）**
-- 详见：[[TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR 深度笔记]]
+- 详见：[[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR 深度笔记]]
 
 ### Credit Assignment 完整谱系（v3 新增，截至 2026-02-23）
 
@@ -326,7 +326,7 @@ $$\text{Rollout quality} \uparrow \Rightarrow \text{Training signal quality} \up
 | HiPER | ❌ | ✅（trajectory）| ❌ | ❌（HAE 计算）| 无偏性 + 方差减少 |
 | **CSO** | **✅（验证 rollout）** | **✅（可验证结果）** | **❌** | **✅（expert model）** | **反事实因果（empirical）** |
 
-**面试补充（v7）**：CSO 的独特角色——其他方案都问"什么做对了"，CSO 问"什么换掉后能成功"，是 Credit Assignment 谱系里唯一开采失败轨迹的方案。16% 关键步骤 = 高熵步骤原则在 Agent 领域的首次系统验证。**跨域印证（v11）**：同一天 SIA（ICML 2026，arXiv:2602.21215）独立发现推理时对齐也是 sparse control problem——20% Junction token（高熵节点）承担 100% 对齐效果。CSO 16%（Agent RL credit） + SIA 20%（Inference Alignment）= **「关键决策天然稀疏」的跨领域双重实证**，面试时引用这个跨域一致性远比单讲论文更有深度。见：[[CSO-Verified-Critical-Step-Optimization|CSO（2602.03412）]] + [[SIA-Sparse-Inference-time-Alignment|SIA（2602.21215）]]
+**面试补充（v7）**：CSO 的独特角色——其他方案都问"什么做对了"，CSO 问"什么换掉后能成功"，是 Credit Assignment 谱系里唯一开采失败轨迹的方案。16% 关键步骤 = 高熵步骤原则在 Agent 领域的首次系统验证。**跨域印证（v11）**：同一天 SIA（ICML 2026，arXiv:2602.21215）独立发现推理时对齐也是 sparse control problem——20% Junction token（高熵节点）承担 100% 对齐效果。CSO 16%（Agent RL credit） + SIA 20%（Inference Alignment）= **「关键决策天然稀疏」的跨领域双重实证**，面试时引用这个跨域一致性远比单讲论文更有深度。见：[[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO（2602.03412）]] + [[AI/3-LLM/Inference/SIA-Sparse-Inference-time-Alignment|SIA（2602.21215）]]
 
 ### Multi-Turn RL 四支柱（v8 新增）
 
@@ -659,18 +659,18 @@ $$T^{(1)} < T^{(2)} < \cdots < T^{(M)} \quad (2h \to 4h \to 6h)$$
 
 > 本笔记正文内链为 Scholar 写入的简短路径；以下为馆长补充的全路径对照，便于 Obsidian 图谱检索。
 
-- [[Agentic-RL-元问题-瓶颈与突破方向|🧠 Agentic RL 元问题：瓶颈与突破方向]] ⭐ — **本综述的元层批判与升维**：基于37+篇论文的Wisdom层判断；指出算法层已够用，真正瓶颈是Reward Signal Quality；本综述是"是什么"，元问题笔记是"为什么不够/下一步在哪"
-- [[iStar-Implicit-Step-Rewards-Agentic-RL|iStar（2509.19199，Tongyi Lab，★★★★★）]] — trajectory DPO ≡ step-wise BT model，唯一支持 unverifiable reward 的 step-level CA，SOTOPIA +48%，2x 样本效率
-- [[Search-R1-Reasoning-Search-Engine-RL|Search-R1（前驱，arXiv:2503.09516）]] — Search-R1++ (2602.19526) 的前身：把搜索引擎集成进 RL rollout，token masking 稳定训练；Search-R1++ 在此基础上系统消融 reward/optimizer/prompt 三维度（vault_gap：Search-R1++ 独立笔记待 Scholar 补写）
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-元问题-瓶颈与突破方向|🧠 Agentic RL 元问题：瓶颈与突破方向]] ⭐ — **本综述的元层批判与升维**：基于37+篇论文的Wisdom层判断；指出算法层已够用，真正瓶颈是Reward Signal Quality；本综述是"是什么"，元问题笔记是"为什么不够/下一步在哪"
+- [[AI/2-Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar（2509.19199，Tongyi Lab，★★★★★）]] — trajectory DPO ≡ step-wise BT model，唯一支持 unverifiable reward 的 step-level CA，SOTOPIA +48%，2x 样本效率
+- [[AI/2-Agent/Agentic-RL/Search-R1-Reasoning-Search-Engine-RL|Search-R1（前驱，arXiv:2503.09516）]] — Search-R1++ (2602.19526) 的前身：把搜索引擎集成进 RL rollout，token masking 稳定训练；Search-R1++ 在此基础上系统消融 reward/optimizer/prompt 三维度（vault_gap：Search-R1++ 独立笔记待 Scholar 补写）
 -  — Agentic RL 在 Agent 知识域的位置
-- [[FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer (CWRPO)]] — 维度 4：Operator 级 workflow 设计（Workflow/Topology 解法 A）
-- [[AgentConductor-Topology-Evolution|AgentConductor]] — 维度 4：Agent 通信 Topology 级（解法 B，difficulty-aware density）
-- [[SquRL-Dynamic-Workflow-Text-to-SQL|SquRL]] — 维度 4：Workflow 选择级（解法 C，Theorem 3.1 形式化证明）
-- [[MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — reward modeling 自适应分配（与 Reward 维度高度互补）
-- [[Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization]] — Agentic RL × Safety 汇合点：pre-generation hidden state 安全门控
-- [[UI-TARS-2 论文|UI-TARS-2]] — GUI Agent RL 工程极致路线：Data Flywheel + 异步 multi-turn RL + Hybrid 沙盒（★★★★★）
-- [[UI-R1-GUI-Action-Prediction-RL|UI-R1]] — GUI Agent RL 极简路线：136 条数据 rule-based GRPO，3B ≈ SFT 7B@76K（★★★★☆）
-- [[Memory-R1-RL-for-LLM-Memory-Management|Memory-R1]] — RL 训练 Memory Manager（ADD/UPDATE/DELETE/NOOP），记忆管理新范式（★★★★☆）
-- [[ASTRA-Automated-Tool-Agent-Training|ASTRA]] — 全自动 tool-use RL 流水线，MCP 工具图 + verifiable 环境（★★★★☆）
-- [[RC-GRPO-Reward-Conditioned-Tool-Calling-RL|RC-GRPO]] — reward token conditioning 解决 multi-turn GRPO reward 同质化（★★★★☆）
-- [[PyVision-RL-Agentic-Vision-Interaction-Collapse|PyVision-RL（2602.20739）]] — **跨模态训练失败模式**：Interaction Collapse = Echo Trap 的多模态版本（v10 新增）；Oversampling-Filtering-Ranking + Accumulative Tool Reward；On-Demand Context Construction 解决视频 context 爆炸
+- [[AI/2-Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer (CWRPO)]] — 维度 4：Operator 级 workflow 设计（Workflow/Topology 解法 A）
+- [[AI/2-Agent/Multi-Agent/AgentConductor-Topology-Evolution|AgentConductor]] — 维度 4：Agent 通信 Topology 级（解法 B，difficulty-aware density）
+- [[AI/2-Agent/Agentic-RL/SquRL-Dynamic-Workflow-Text-to-SQL|SquRL]] — 维度 4：Workflow 选择级（解法 C，Theorem 3.1 形式化证明）
+- [[AI/3-LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — reward modeling 自适应分配（与 Reward 维度高度互补）
+- [[AI/5-AI 安全/Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization]] — Agentic RL × Safety 汇合点：pre-generation hidden state 安全门控
+- [[AI/2-Agent/Agentic-RL/UI-TARS-2 论文|UI-TARS-2]] — GUI Agent RL 工程极致路线：Data Flywheel + 异步 multi-turn RL + Hybrid 沙盒（★★★★★）
+- [[AI/2-Agent/Agentic-RL/UI-R1-GUI-Action-Prediction-RL|UI-R1]] — GUI Agent RL 极简路线：136 条数据 rule-based GRPO，3B ≈ SFT 7B@76K（★★★★☆）
+- [[AI/2-Agent/Fundamentals/Memory-R1-RL-for-LLM-Memory-Management|Memory-R1]] — RL 训练 Memory Manager（ADD/UPDATE/DELETE/NOOP），记忆管理新范式（★★★★☆）
+- [[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training|ASTRA]] — 全自动 tool-use RL 流水线，MCP 工具图 + verifiable 环境（★★★★☆）
+- [[AI/2-Agent/Agentic-RL/RC-GRPO-Reward-Conditioned-Tool-Calling-RL|RC-GRPO]] — reward token conditioning 解决 multi-turn GRPO reward 同质化（★★★★☆）
+- [[AI/3-LLM/MLLM/PyVision-RL-Agentic-Vision-Interaction-Collapse|PyVision-RL（2602.20739）]] — **跨模态训练失败模式**：Interaction Collapse = Echo Trap 的多模态版本（v10 新增）；Oversampling-Filtering-Ranking + Accumulative Tool Reward；On-Demand Context Construction 解决视频 context 爆炸

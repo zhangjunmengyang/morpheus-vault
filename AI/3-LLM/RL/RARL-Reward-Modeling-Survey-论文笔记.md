@@ -103,10 +103,10 @@ Reward Paradigms
 
 ## 关联笔记
 
-- [[RLHF 全链路|RLHF 全链路]]
-- [[对齐技术综述|对齐技术综述]]
-- [[GRPO 深度理解|GRPO 深度理解]]
-- [[ICLR-2026-趋势分析|ICLR-2026-趋势分析]]
+- [[AI/3-LLM/RL/RLHF-工程全栈|RLHF 全链路]]
+- [[AI/3-LLM/RL/对齐技术综述|对齐技术综述]]
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/3-LLM/Evaluation/ICLR-2026-趋势分析|ICLR-2026-趋势分析]]
 
 ---
 *Created: 2026-02-16 by Scholar heartbeat*

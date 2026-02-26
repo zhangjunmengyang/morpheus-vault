@@ -434,7 +434,7 @@ trainer.train()
 
 ## See Also
 
-- [[GRPO 深度理解|GRPO 深度理解]] — GRPO 算法原理
-- [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — GRPO 的七维改进框架
-- [[TRL 中实现 GRPO|TRL 中实现 GRPO]] — 实现细节
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — GRPO 算法原理
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 2026 全景]] — GRPO 的七维改进框架
+- [[AI/3-LLM/RL/GRPO/TRL 中实现 GRPO|TRL 中实现 GRPO]] — 实现细节
 -  — LLM 强化学习全图谱

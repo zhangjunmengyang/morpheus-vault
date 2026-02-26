@@ -239,9 +239,9 @@ LOOP 证明了一件事：**对于有 verifiable reward 的长 horizon agent 任
 - **代码**：[github.com/apple/ml-loop](https://github.com/apple/ml-loop)
 - **AppWorld 环境**：[appworld.dev](https://appworld.dev/)
 - **关联笔记**：
-  - [[RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO]] — **LOOP 的问题来源**：RAGEN 系统诊断了 multi-turn RL 的 gradient collapse（Echo Trap），LOOP 的 LOO baseline 是直接解法之一
-  - [[GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — Step-level credit 的 zero-cost 方案
-  - [[AgentPRM-Process-Reward-Models-for-LLM-Agents|AgentPRM（arXiv:2502.10325）]] — MC rollout 估计 step value
-  - [[Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — credit assignment 谱系全景
-  - [[Tool-Use-RL-训练专题|Tool-Use-RL 训练专题]] — 工具调用 RL 的系统性综述
-  - [[Agentic-RL-2026前沿综合分析|Agentic-RL-2026 前沿综合分析]] — Agentic RL 全景图
+  - [[AI/2-Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO]] — **LOOP 的问题来源**：RAGEN 系统诊断了 multi-turn RL 的 gradient collapse（Echo Trap），LOOP 的 LOO baseline 是直接解法之一
+  - [[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — Step-level credit 的 zero-cost 方案
+  - [[AI/2-Agent/Agentic-RL/AgentPRM-Process-Reward-Models-for-LLM-Agents|AgentPRM（arXiv:2502.10325）]] — MC rollout 估计 step value
+  - [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — credit assignment 谱系全景
+  - [[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL 训练专题]] — 工具调用 RL 的系统性综述
+  - [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL-2026 前沿综合分析]] — Agentic RL 全景图

@@ -20,9 +20,9 @@ sources:
   - arXiv:2310.12036v2 (Mohammad Gheshlaghi Azar, Mark Rowland, Bilal Piot, Daniel Guo, Daniele Calandriello, Michal Valko, Rémi Munos — Google DeepMind, Oct 2023)
 venue: AISTATS 2024
 related:
-  - "[[DPO-TRL实践]]"
+  - "[[AI/3-LLM/RL/DPO/DPO-TRL实践]]"
   - "[[AI/3-LLM/RL/Preference-Optimization/SimPO-Simple-Preference-Optimization-Reference-Free]]"
-  - "[[REBEL-Regret-Based-RL-LLM-Alignment]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/REBEL-Regret-Based-RL-LLM-Alignment]]"
 ---
 
 # IPO (ΨPO): 从 Pairwise Preference 直接学习的通用框架
@@ -157,7 +157,7 @@ IPO 最大的贡献不是 IPO 算法本身，而是 **ΨPO 框架** 和对 DPO �
 
 - **原始论文**：[arXiv:2310.12036](https://arxiv.org/abs/2310.12036)
 - **关联笔记**：
-  - [[DPO-TRL实践|DPO]] — IPO 试图修正的对象
-  - [[SimPO-Simple-Preference-Optimization-Reference-Free|SimPO]] — 继承 IPO "绕过 BT" 精神的实用算法
-  - [[REBEL-Regret-Based-RL-LLM-Alignment|REBEL]] — 另一种绕过 BT 假设的 regression 方案
+  - [[AI/3-LLM/RL/DPO/DPO-TRL实践|DPO]] — IPO 试图修正的对象
+  - [[AI/3-LLM/RL/DPO/SimPO-Simple-Preference-Optimization-Reference-Free|SimPO]] — 继承 IPO "绕过 BT" 精神的实用算法
+  - [[AI/3-LLM/RL/Other-Algorithms/REBEL-Regret-Based-RL-LLM-Alignment|REBEL]] — 另一种绕过 BT 假设的 regression 方案
   - [[RLHF-DPO-2026-技术全景|RLHF/DPO 2026 技术全景]] — 完整对齐技术路线图

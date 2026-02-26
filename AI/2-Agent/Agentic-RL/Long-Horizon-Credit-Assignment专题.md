@@ -25,13 +25,13 @@ sources:
   - "KLong: Liu et al., arXiv 2602.17547"
   - "HiPER: Liu et al., arXiv:2602.16165, ICML 2026"
 related:
-  - "[[HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]]"
-  - "[[Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]]"
-  - "[[Agent-RL-训练实战指南|Agent-RL-训练实战指南]]"
-  - "[[KLong-Extremely-Long-Horizon-Agent-RL|KLong]]"
-  - "[[PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]]"
-  - "[[Tool-Use-RL-训练专题|Tool-Use-RL-训练专题]]"
-  - "[[Agent-RL-环境工程系统论|Agent-RL-环境工程系统论]]"
+  - "[[AI/2-Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]]"
+  - "[[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]]"
+  - "[[AI/2-Agent/Agentic-RL/Agent-RL-训练实战指南|Agent-RL-训练实战指南]]"
+  - "[[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent-RL|KLong]]"
+  - "[[AI/2-Agent/Agentic-RL/PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]]"
+  - "[[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL-训练专题]]"
+  - "[[AI/2-Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent-RL-环境工程系统论]]"
 ---
 
 # Long-Horizon Credit Assignment 专题 — Agent RL 的核心难题
@@ -206,7 +206,7 @@ $$\text{InversePRM: } \hat{r}(s_t, a_t) = f_\theta(s_t, a_t) \approx \text{边�
 ## 六、LOOP — Value-free PPO for Long-Horizon IDA
 
 **arXiv 2502.01600 | Apple Research | Interactive Digital Agents**
-**完整笔记**：[[LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL]]
+**完整笔记**：[[AI/2-Agent/Agentic-RL/LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL]]
 
 ### 核心设计：Leave-One-Out Baseline（重要更正）
 
@@ -244,7 +244,7 @@ RL 训练后涌现的行为（arXiv 2502.01600, Section 5）：
 
 ## 七、Turn-Level Reward
 
-**arXiv 2505.11821 | Wei et al.**（详见 [[Tool-Use-RL-训练专题|Tool-Use-RL 训练专题]]）
+**arXiv 2505.11821 | Wei et al.**（详见 [[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL 训练专题]]）
 
 Turn-level advantage 公式：
 
@@ -325,7 +325,7 @@ graph TD
 
 ## 十、HiPER — 层级 Advantage 估计（ICML 2026）
 
-**独立精读笔记**：[[HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment]]  
+**独立精读笔记**：[[AI/2-Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment]]  
 **全文精读补全于 2026-02-23**
 
 ### 核心机制（精读后更正）
@@ -382,7 +382,7 @@ A^low_t = local GAE within subgoal segment
 | **HiPER** | ❌ | ❌ | 高（segment-level） | 低（1× LLM） | **有内在层次结构**的长 horizon 任务（ICML 2026）|
 | **CSO** | ❌ | ✅（验证 rollout）| 高（反事实验证）| 中（需 expert）| **失败轨迹挖掘**；有 expert model；任务有可验证结果 |
 
-> **CSO 在谱系中的独特定位**：上述所有方法都从**成功轨迹**学习（"什么步骤做对了"）。CSO 是首个系统性从**失败轨迹**出发的方案——"什么步骤换一个动作能让整件事成功"（反事实因果推断）。两个信号来源互补：成功轨迹告诉模型好策略的分布，失败轨迹告诉模型精准的决策分叉点。详见：[[CSO-Verified-Critical-Step-Optimization|CSO（arXiv:2602.03412）]]
+> **CSO 在谱系中的独特定位**：上述所有方法都从**成功轨迹**学习（"什么步骤做对了"）。CSO 是首个系统性从**失败轨迹**出发的方案——"什么步骤换一个动作能让整件事成功"（反事实因果推断）。两个信号来源互补：成功轨迹告诉模型好策略的分布，失败轨迹告诉模型精准的决策分叉点。详见：[[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO（arXiv:2602.03412）]]
 
 ---
 
@@ -459,7 +459,7 @@ $$\pi^* \propto \pi_{\text{ref}} \exp\left(\frac{r}{\beta}\right) \quad \Rightar
 
 **设计启发**：iStar 和 OAPL 分别在 credit assignment 和 off-policy 训练两个维度利用了 KL-reg 框架的同一数学性质——两者可以组合：OAPL 提供稳定的 off-policy 训练框架，iStar 提供 step-level reward 信号，两者结合可能是 unverifiable reward + 数据复用场景的完整解法。
 
-相关笔记：[[OAPL-Off-Policy-RL-LLM-Reasoning|OAPL（Off-policy RL for LLM Reasoning）]]
+相关笔记：[[AI/3-LLM/RL/Other-Algorithms/OAPL-Off-Policy-RL-LLM-Reasoning|OAPL（Off-policy RL for LLM Reasoning）]]
 
 ---
 
@@ -525,19 +525,19 @@ flowchart TD
 - **PA-MoE**: https://arxiv.org/abs/2602.17038
 
 ### 相关 Vault 笔记
-- [[GiGPO-Group-in-Group-Policy-Optimization|GiGPO 深度精读笔记（NeurIPS 2025）]] — anchor state grouping 完整推导 + 实验分析 + 批判性评价
-- [[HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]] — segment-level hierarchical advantage 方法（正式版）
-- [[PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]] — GiGPO 基础上加 phase-aware MoE
-- [[Tool-Use-RL-训练专题|Tool-Use-RL 训练专题]] — Turn-level reward 详细展开
-- [[KLong-Extremely-Long-Horizon-Agent-RL|KLong]] — 任务分解层面的解法
-- [[Agent-RL-训练实战指南|Agent-RL 训练实战指南]] — 训练实战中的坑
-- [[Agentic-RL-2026前沿综合分析|Agentic RL 2026 综合分析]] — 宏观框架
-- [[Tree-GRPO-Tree-Search-LLM-Agent-RL|Tree-GRPO（ICLR 2026）]] — 树结构 intra-tree advantage 是另一种 credit assignment 策略：GiGPO 用 anchor state grouping，Tree-GRPO 用兄弟节点 outcome 对比——同问题，不同粒度，可组合
-- [[iStar-Implicit-Step-Rewards-Agentic-RL|iStar（2509.19199）]] — trajectory DPO → implicit step reward，唯一支持 unverifiable reward 场景的 step-level CA 方案，SOTOPIA +48%
-- [[AgentPRM-Process-Reward-Models-for-LLM-Agents|AgentPRM（2502.10325）深度精读笔记]] — MC rollout 自动标注 Q 值，actor-critic 框架，3B 超 GPT-4o；InversePRM 变体无需 outcome supervision
-- [[CSO-Verified-Critical-Step-Optimization|CSO（2602.03412，Tencent AI Lab+HKU）]] — **反事实验证视角**：从失败轨迹出发，只监督 16% 关键步骤做 DPO，GAIA +37%，8B 超 GPT-4.1；谱系中唯一来自"失败轨迹"的 CA 方案
-- [[CSO-Verified-Critical-Step-Optimization|CSO（2602.03412）]] — **反事实验证视角**：从失败轨迹出发，PRM 找弱点，expert 生成替代动作，policy rollout 验证，只在 16% 关键步骤上 DPO。GAIA +37%，8B 超 GPT-4.1。唯一以 counterfactual causality 视角做 credit assignment 的方法
+- [[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO 深度精读笔记（NeurIPS 2025）]] — anchor state grouping 完整推导 + 实验分析 + 批判性评价
+- [[AI/2-Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]] — segment-level hierarchical advantage 方法（正式版）
+- [[AI/2-Agent/Agentic-RL/PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]] — GiGPO 基础上加 phase-aware MoE
+- [[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL 训练专题]] — Turn-level reward 详细展开
+- [[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent-RL|KLong]] — 任务分解层面的解法
+- [[AI/2-Agent/Agentic-RL/Agent-RL-训练实战指南|Agent-RL 训练实战指南]] — 训练实战中的坑
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 综合分析]] — 宏观框架
+- [[AI/2-Agent/Agentic-RL/Tree-GRPO-Tree-Search-LLM-Agent-RL|Tree-GRPO（ICLR 2026）]] — 树结构 intra-tree advantage 是另一种 credit assignment 策略：GiGPO 用 anchor state grouping，Tree-GRPO 用兄弟节点 outcome 对比——同问题，不同粒度，可组合
+- [[AI/2-Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar（2509.19199）]] — trajectory DPO → implicit step reward，唯一支持 unverifiable reward 场景的 step-level CA 方案，SOTOPIA +48%
+- [[AI/2-Agent/Agentic-RL/AgentPRM-Process-Reward-Models-for-LLM-Agents|AgentPRM（2502.10325）深度精读笔记]] — MC rollout 自动标注 Q 值，actor-critic 框架，3B 超 GPT-4o；InversePRM 变体无需 outcome supervision
+- [[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO（2602.03412，Tencent AI Lab+HKU）]] — **反事实验证视角**：从失败轨迹出发，只监督 16% 关键步骤做 DPO，GAIA +37%，8B 超 GPT-4.1；谱系中唯一来自"失败轨迹"的 CA 方案
+- [[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO（2602.03412）]] — **反事实验证视角**：从失败轨迹出发，PRM 找弱点，expert 生成替代动作，policy rollout 验证，只在 16% 关键步骤上 DPO。GAIA +37%，8B 超 GPT-4.1。唯一以 counterfactual causality 视角做 credit assignment 的方法
 
 > **see-also（维度扩展）**：
-> - [[Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]] — Credit assignment 问题在 Multi-Agent 场景进一步复杂化：不只是"哪个 step 贡献大"，而是"哪个 agent 贡献大"（joint reward → individual credit）。Shapley Value 是理论解但计算代价 O(2^n)，MAGRPO/AT-GRPO 用 grouping 近似——是 Long-Horizon CA 的 multi-agent 延伸。
-> - [[SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL|SHARP（ICML 2026，arXiv:2602.08335）]] — **横向 Credit Assignment 的精确实现**：用 counterfactual masking 近似 Shapley value，对 Long-Horizon CA 专题中"哪个 agent 贡献大"问题给出了真正的博弈论解答；与本专题的纵向（步骤级）CA 正交互补
+> - [[AI/2-Agent/Agentic-RL/Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]] — Credit assignment 问题在 Multi-Agent 场景进一步复杂化：不只是"哪个 step 贡献大"，而是"哪个 agent 贡献大"（joint reward → individual credit）。Shapley Value 是理论解但计算代价 O(2^n)，MAGRPO/AT-GRPO 用 grouping 近似——是 Long-Horizon CA 的 multi-agent 延伸。
+> - [[AI/2-Agent/Agentic-RL/SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL|SHARP（ICML 2026，arXiv:2602.08335）]] — **横向 Credit Assignment 的精确实现**：用 counterfactual masking 近似 Shapley value，对 Long-Horizon CA 专题中"哪个 agent 贡献大"问题给出了真正的博弈论解答；与本专题的纵向（步骤级）CA 正交互补

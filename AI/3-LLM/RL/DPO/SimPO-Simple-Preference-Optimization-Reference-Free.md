@@ -15,8 +15,8 @@ sources:
   - https://github.com/princeton-nlp/SimPO
 venue: NeurIPS 2024
 related:
-  - "[[DPO-TRL实践|DPO-TRL实践]]"
-  - "[[KTO-TRL实践|KTO-TRL实践]]"
+  - "[[AI/3-LLM/RL/DPO/DPO-TRL实践|DPO-TRL实践]]"
+  - "[[AI/3-LLM/RL/KTO/KTO-TRL实践|KTO-TRL实践]]"
   - "[[RLHF-DPO-2026-技术全景|RLHF-DPO-2026-技术全景]]"
 ---
 
@@ -107,7 +107,7 @@ graph TD
 
 - 原论文：[arXiv:2405.14734](https://arxiv.org/abs/2405.14734)
 - 代码：[princeton-nlp/SimPO](https://github.com/princeton-nlp/SimPO)
-- 对比：[[DPO-TRL实践|DPO-TRL实践]] / [[IPO-Identity-Preference-Optimization|IPO]] (arXiv:2310.12036) / [[ORPO-Odds-Ratio-Preference-Optimization|ORPO]] (arXiv:2403.07691)
+- 对比：[[AI/3-LLM/RL/DPO/DPO-TRL实践|DPO-TRL实践]] / [[AI/3-LLM/RL/Preference-Optimization/IPO-Identity-Preference-Optimization|IPO]] (arXiv:2310.12036) / [[AI/3-LLM/RL/Preference-Optimization/ORPO-Odds-Ratio-Preference-Optimization|ORPO]] (arXiv:2403.07691)
 - DPO 全景：[[RLHF-DPO-2026-技术全景|RLHF-DPO-2026-技术全景]]
 
 ---
@@ -115,10 +115,10 @@ graph TD
 ## See Also
 
 ### Reference-free 偏好优化谱系（同类算法对照）
-- [[ORPO-Odds-Ratio-Preference-Optimization|ORPO]] — 另一种 reference-free 路线：SFT + preference 合一（一阶段），SimPO 是纯偏好优化（两阶段 reference-free）
-- [[IPO-Identity-Preference-Optimization|IPO]] — 理论层修正：绕过 Bradley-Terry 假设，SimPO 的 implicit reward 仍基于 B-T 框架；两者是工程 vs 理论的不同切入角度
-- [[DPO-TRL实践|DPO-TRL实践]] — 标准 DPO 的工程实现对照，SimPO 与其格式兼容，零迁移成本
+- [[AI/3-LLM/RL/Preference-Optimization/ORPO-Odds-Ratio-Preference-Optimization|ORPO]] — 另一种 reference-free 路线：SFT + preference 合一（一阶段），SimPO 是纯偏好优化（两阶段 reference-free）
+- [[AI/3-LLM/RL/Preference-Optimization/IPO-Identity-Preference-Optimization|IPO]] — 理论层修正：绕过 Bradley-Terry 假设，SimPO 的 implicit reward 仍基于 B-T 框架；两者是工程 vs 理论的不同切入角度
+- [[AI/3-LLM/RL/DPO/DPO-TRL实践|DPO-TRL实践]] — 标准 DPO 的工程实现对照，SimPO 与其格式兼容，零迁移成本
 
 ### DPO 全景与理论背景
 - [[RLHF-DPO-2026-技术全景|RLHF-DPO-2026 技术全景]] — DPO 演进完整谱系，SimPO 属于 reference-free 分支
-- [[REBEL-Regret-Based-RL-LLM-Alignment|REBEL]] — Regret-based RL，另一个从不同理论角度绕过 reference model 的方案；与 SimPO 同属"减少 reference model 依赖"方向，但动机不同（intransitive preference vs length bias）
+- [[AI/3-LLM/RL/Other-Algorithms/REBEL-Regret-Based-RL-LLM-Alignment|REBEL]] — Regret-based RL，另一个从不同理论角度绕过 reference model 的方案；与 SimPO 同属"减少 reference model 依赖"方向，但动机不同（intransitive preference vs length bias）

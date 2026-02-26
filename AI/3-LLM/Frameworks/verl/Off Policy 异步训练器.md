@@ -139,8 +139,8 @@ trainer:
 
 ## 相关
 
-- [[verl 概述|verl 概述]]
-- [[HybridFlow|HybridFlow]]
-- [[性能调优|性能调优]]
-- [[硬件资源预估|硬件资源预估]]
-- [[verl 训练参数|verl 训练参数]]
+- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]]
+- [[AI/3-LLM/Frameworks/verl/HybridFlow|HybridFlow]]
+- [[AI/3-LLM/Frameworks/verl/性能调优|性能调优]]
+- [[AI/3-LLM/Frameworks/verl/硬件资源预估|硬件资源预估]]
+- [[AI/3-LLM/Frameworks/verl/verl 训练参数|verl 训练参数]]

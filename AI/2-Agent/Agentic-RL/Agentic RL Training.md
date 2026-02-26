@@ -176,13 +176,13 @@ def agent_reward(trajectory):
 
 ## 相关
 
-- [[Tool Use|Tool Use]] — Agent 工具调用基础
-- [[记忆模块|记忆模块]] — Agent 记忆系统
-- [[多轮 RL 训练交互|多轮 RL 训练交互]] — verl 的多轮实现
-- [[Sandbox Fusion 沙箱|Sandbox Fusion 沙箱]] — 代码执行沙箱
-- [[Off Policy 异步训练器|Off Policy 异步训练器]] — 异步训练
-- [[On-Policy vs Off-Policy|On-Policy vs Off-Policy]] — 策略分类基础
-- [[GRPO 深度理解|GRPO 深度理解]]
-- [[PPO 原理|PPO 原理]]
-- [[verl 概述|verl 概述]]
-- [[DeepSeek-R1|DeepSeek-R1]]
+- [[AI/2-Agent/Fundamentals/Tool Use|Tool Use]] — Agent 工具调用基础
+- [[AI/2-Agent/Fundamentals/记忆模块|记忆模块]] — Agent 记忆系统
+- [[AI/3-LLM/Frameworks/verl/多轮 RL 训练交互|多轮 RL 训练交互]] — verl 的多轮实现
+- [[AI/3-LLM/Frameworks/verl/Sandbox Fusion 沙箱|Sandbox Fusion 沙箱]] — 代码执行沙箱
+- [[AI/3-LLM/Frameworks/verl/Off Policy 异步训练器|Off Policy 异步训练器]] — 异步训练
+- [[AI/3-LLM/RL/Fundamentals/On-Policy vs Off-Policy|On-Policy vs Off-Policy]] — 策略分类基础
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]]
+- [[AI/3-LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]

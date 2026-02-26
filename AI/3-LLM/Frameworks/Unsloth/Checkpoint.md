@@ -146,7 +146,7 @@ model.save_pretrained_merged(
 
 ## 相关
 
-- [[训练示例概述|训练示例概述]]
-- [[运行 & 保存模型|运行 & 保存模型]]
-- [[Unsloth 概述|Unsloth 概述]]
-- [[LoRA|LoRA]]
+- [[AI/3-LLM/Frameworks/Unsloth/训练示例概述|训练示例概述]]
+- [[AI/3-LLM/Frameworks/Unsloth/运行 & 保存模型|运行 & 保存模型]]
+- [[AI/3-LLM/Frameworks/Unsloth/Unsloth 概述|Unsloth 概述]]
+- [[AI/3-LLM/SFT/LoRA|LoRA]]

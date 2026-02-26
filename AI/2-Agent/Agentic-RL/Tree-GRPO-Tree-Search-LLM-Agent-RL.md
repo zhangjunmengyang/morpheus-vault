@@ -216,11 +216,11 @@ graph TD
 
 ### 具体关联
 
-- **[[TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（Trajectory-Search Rollouts）]]**：TSR 在 inference-time 做树搜索增强 rollout 多样性；Tree-GRPO 在 training-time 的 rollout 阶段就用树结构——目标相似，实现层次不同
-- **[[Long-Horizon-Credit-Assignment专题|GiGPO（Long-Horizon Credit Assignment 专题）]]**：GiGPO 用 anchor state grouping 解决 credit assignment；Tree-GRPO 用 intra-tree 对比——两种不同的 credit assignment 策略，可组合
-- **[[RC-GRPO-Reward-Conditioned-Tool-Calling-RL|RC-GRPO]]**：RC-GRPO 解决 GRPO 全0/全1问题；Tree-GRPO 通过树内对比自然引入差异度——Root cause 相同（GRPO group 内缺乏对比），解法不同
-- **[[CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2（Checklist Rewards）]]**：CM2 优化 reward 质量（什么 reward）；Tree-GRPO 优化 rollout 结构（怎么采样）——正交互补
-- **[[SCoRe-Self-Correction-via-Reinforcement-Learning|SCoRe（NeurIPS 2024）]]**：SCoRe Phase 1 的 KL 约束防止坍缩，Tree-GRPO 的树结构本身就防止了"只走一条路"的坍缩——不同机制，相同效果
+- **[[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（Trajectory-Search Rollouts）]]**：TSR 在 inference-time 做树搜索增强 rollout 多样性；Tree-GRPO 在 training-time 的 rollout 阶段就用树结构——目标相似，实现层次不同
+- **[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|GiGPO（Long-Horizon Credit Assignment 专题）]]**：GiGPO 用 anchor state grouping 解决 credit assignment；Tree-GRPO 用 intra-tree 对比——两种不同的 credit assignment 策略，可组合
+- **[[AI/2-Agent/Agentic-RL/RC-GRPO-Reward-Conditioned-Tool-Calling-RL|RC-GRPO]]**：RC-GRPO 解决 GRPO 全0/全1问题；Tree-GRPO 通过树内对比自然引入差异度——Root cause 相同（GRPO group 内缺乏对比），解法不同
+- **[[AI/2-Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2（Checklist Rewards）]]**：CM2 优化 reward 质量（什么 reward）；Tree-GRPO 优化 rollout 结构（怎么采样）——正交互补
+- **[[AI/2-Agent/Agentic-RL/SCoRe-Self-Correction-via-Reinforcement-Learning|SCoRe（NeurIPS 2024）]]**：SCoRe Phase 1 的 KL 约束防止坍缩，Tree-GRPO 的树结构本身就防止了"只走一条路"的坍缩——不同机制，相同效果
 
 ---
 
@@ -286,6 +286,6 @@ Tree-GRPO 用树结构重定义了 "group"：group = 同一状态的不同延续
 3. **理论基础**：[TreeRL (THUDM)](https://github.com/THUDM/TreeRL) — 启发来源，GRPO 的树搜索早期实现
 4. **Search-R1**：[github.com/PeterGriffinJin/Search-R1](https://github.com/PeterGriffinJin/Search-R1) — 底层框架，RAG + RL 的 Agent 训练
 5. **Step-DPO**：step-level DPO 的原始论文（理解 Proposition 3.1 的理论背景）
-6. **对比阅读**：[[TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR]]、[[Long-Horizon-Credit-Assignment专题|GiGPO/Long-Horizon Credit Assignment]]、[[RC-GRPO-Reward-Conditioned-Tool-Calling-RL|RC-GRPO]]
-7. **元原则**：[[RL-Signal-Granularity-Causal-Structure-Principle|RL 信号粒度与因果结构匹配原则]] — Tree-GRPO 是该原则路径1（重定义 Group）的典型实现
-8. **理论基础**：[[GRPO 深度理解|GRPO 深度理解]] — Tree-GRPO 是 GRPO 的树搜索改造：线性 rollout → 树状 rollout，双层 advantage 取代单层 group advantage
+6. **对比阅读**：[[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR]]、[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|GiGPO/Long-Horizon Credit Assignment]]、[[AI/2-Agent/Agentic-RL/RC-GRPO-Reward-Conditioned-Tool-Calling-RL|RC-GRPO]]
+7. **元原则**：[[AI/3-LLM/RL/Theory/RL-Signal-Granularity-Causal-Structure-Principle|RL 信号粒度与因果结构匹配原则]] — Tree-GRPO 是该原则路径1（重定义 Group）的典型实现
+8. **理论基础**：[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — Tree-GRPO 是 GRPO 的树搜索改造：线性 rollout → 树状 rollout，双层 advantage 取代单层 group advantage

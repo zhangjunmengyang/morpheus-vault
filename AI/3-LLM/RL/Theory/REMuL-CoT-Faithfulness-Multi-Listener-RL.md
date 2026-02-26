@@ -16,9 +16,9 @@ arxiv: "2602.16154"
 rating: 5
 status: permanent
 see-also:
-  - "[[GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]]"
-  - "[[RLRR-Reference-Guided-Alignment-Non-Verifiable|RLRR]]"
-  - "[[对齐技术总结|对齐技术总结]]"
+  - "[[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进全景 2026]]"
+  - "[[AI/3-LLM/RL/Theory/RLRR-Reference-Guided-Alignment-Non-Verifiable|RLRR]]"
+  - "[[AI/5-AI 安全/对齐技术总结|对齐技术总结]]"
 ---
 
 # REMuL: Balancing Faithfulness and Performance in Reasoning via Multi-Listener Soft Execution
@@ -191,13 +191,13 @@ REMuL 追问：如何让 LLM 推理**真实**？
 
 ## see-also
 
-- [[GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] — REMuL 在 faithfulness 维度扩展了 GRPO 的优化目标（correctness → correctness + faithfulness）
-- [[RLRR-Reference-Guided-Alignment-Non-Verifiable|RLRR]] — 同方向：两篇都在解决"RLVR 只优化结果正确性"的局限；RLRR 扩展到 non-verifiable，REMuL 扩展到 faithfulness
-- [[对齐技术总结|对齐技术总结]] — REMuL 是 AI 可解释性与对齐的交叉点，faithful reasoning 是高风险场景对齐的前提
-- [[ProGRPO-Probabilistic-Advantage-Reweighting|ProGRPO]] — 同为 GRPO 改进；ProGRPO 改 advantage 结构，REMuL 改优化目标本身
-- [[RL-Training-Stability-2026-Unified-Analysis|RL 训练稳定性 2026 统一分析]] — faithfulness-correctness 冲突的梯度干扰，与训练稳定性分析的 token-level 视角互补
-- [[FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer (CWRPO)]] — 设计哲学同构：conditional release reward（structure quality 门控 answer reward）与 REMuL 的两阶段训练（faithfulness RL → masked SFT）都在用"过程质量"约束"结果优化"，殊途同归
-- [[RICOL-Retrospective-In-Context-Online-Learning|RICOL]] — 方法论互补：REMuL 用多监听者 faithfulness 作为 RL reward（优化过程质量），RICOL 用 ICL 前后 log-prob 差作为 advantage（免 critic credit assignment）——两者都在挖掘 LLM 内部能力作为训练信号
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进全景 2026]] — REMuL 在 faithfulness 维度扩展了 GRPO 的优化目标（correctness → correctness + faithfulness）
+- [[AI/3-LLM/RL/Theory/RLRR-Reference-Guided-Alignment-Non-Verifiable|RLRR]] — 同方向：两篇都在解决"RLVR 只优化结果正确性"的局限；RLRR 扩展到 non-verifiable，REMuL 扩展到 faithfulness
+- [[AI/5-AI 安全/对齐技术总结|对齐技术总结]] — REMuL 是 AI 可解释性与对齐的交叉点，faithful reasoning 是高风险场景对齐的前提
+- [[AI/3-LLM/RL/GRPO/ProGRPO-Probabilistic-Advantage-Reweighting|ProGRPO]] — 同为 GRPO 改进；ProGRPO 改 advantage 结构，REMuL 改优化目标本身
+- [[AI/3-LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL 训练稳定性 2026 统一分析]] — faithfulness-correctness 冲突的梯度干扰，与训练稳定性分析的 token-level 视角互补
+- [[AI/2-Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer (CWRPO)]] — 设计哲学同构：conditional release reward（structure quality 门控 answer reward）与 REMuL 的两阶段训练（faithfulness RL → masked SFT）都在用"过程质量"约束"结果优化"，殊途同归
+- [[AI/3-LLM/RL/Other-Algorithms/RICOL-Retrospective-In-Context-Online-Learning|RICOL]] — 方法论互补：REMuL 用多监听者 faithfulness 作为 RL reward（优化过程质量），RICOL 用 ICL 前后 log-prob 差作为 advantage（免 critic credit assignment）——两者都在挖掘 LLM 内部能力作为训练信号
 
 ## Tags
 `#faithfulness` `#CoT` `#interpretability` `#RL` `#GRPO` `#multi-agent` `#reasoning` `#ICML` `#2026-02`

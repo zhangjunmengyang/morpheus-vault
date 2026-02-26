@@ -19,11 +19,11 @@ tags:
 sources:
   - arXiv:2602.20132 https://arxiv.org/abs/2602.20132
 related:
-  - "[[GRPO-Improvement-Panorama-2026|GRPO改进全景]]"
-  - "[[GRPO 深度理解|GRPO深度理解]]"
-  - "[[OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]]"
-  - "[[REBEL-Regret-Based-RL-LLM-Alignment|REBEL]]"
-  - "[[MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]]"
+  - "[[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO改进全景]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO深度理解]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/REBEL-Regret-Based-RL-LLM-Alignment|REBEL]]"
+  - "[[AI/3-LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]]"
 ---
 
 # LAD: Learning Advantage Distribution for Reasoning
@@ -225,14 +225,14 @@ LAD 把 RLVR 的基础问题从"最大化期望 advantage"重新表述为"匹配
 ## See Also
 
 **目标函数范式转移方向（LAD 的直接对话对象）：**
-- [[GRPO-Improvement-Panorama-2026|GRPO改进全景]] — LAD 在"目标函数范式"这一支的完整定位
-- [[GRPO 深度理解|GRPO深度理解]] — 理解 LAD 改进的是什么
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO改进全景]] — LAD 在"目标函数范式"这一支的完整定位
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO深度理解]] — 理解 LAD 改进的是什么
 
 **同期相关工作（互补视角）：**
-- [[OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]] — 正交方向：off-policy regression；LAD 是 on-policy 分布匹配（可组合）
-- [[REBEL-Regret-Based-RL-LLM-Alignment|REBEL]] — 同为"离开期望奖励最大化"的重新建模，regret vs distribution matching
-- [[MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — Trust region 方向的改进，与 LAD 正交可叠加
-- [[SAPO-Soft-Adaptive-Policy-Optimization|SAPO]] — **三维正交可叠加**：SAPO 改 clip 函数（sigmoid 软衰减），LAD 改目标函数范式；OAPL+LAD+SAPO 三者覆盖 off-policy/collapse/clip 三个独立问题维度
+- [[AI/3-LLM/RL/Other-Algorithms/OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]] — 正交方向：off-policy regression；LAD 是 on-policy 分布匹配（可组合）
+- [[AI/3-LLM/RL/Other-Algorithms/REBEL-Regret-Based-RL-LLM-Alignment|REBEL]] — 同为"离开期望奖励最大化"的重新建模，regret vs distribution matching
+- [[AI/3-LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — Trust region 方向的改进，与 LAD 正交可叠加
+- [[AI/3-LLM/RL/Other-Algorithms/SAPO-Soft-Adaptive-Policy-Optimization|SAPO]] — **三维正交可叠加**：SAPO 改 clip 函数（sigmoid 软衰减），LAD 改目标函数范式；OAPL+LAD+SAPO 三者覆盖 off-policy/collapse/clip 三个独立问题维度
 
 **GFlowNet 理论前驱：**
 - LAD 证明 FlowRL（GFlowNet trajectory balance）是 LAD 在更严格条件下的特例；LAD 更一般
@@ -240,5 +240,5 @@ LAD 把 RLVR 的基础问题从"最大化期望 advantage"重新表述为"匹配
 ## 推荐阅读
 
 1. **原文**：[arXiv:2602.20132](https://arxiv.org/abs/2602.20132) — Learning Advantage Distribution for Reasoning
-2. **前置**：[[GRPO 深度理解|GRPO深度理解]] — 理解 GRPO 的结构性缺陷才能理解 LAD 的动机
-3. **对比**：[[OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]] — 同期两篇，一个解决 off-policy，一个解决 collapse；组合使用是当前理论上最完整的方案
+2. **前置**：[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO深度理解]] — 理解 GRPO 的结构性缺陷才能理解 LAD 的动机
+3. **对比**：[[AI/3-LLM/RL/Other-Algorithms/OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]] — 同期两篇，一个解决 off-policy，一个解决 collapse；组合使用是当前理论上最完整的方案

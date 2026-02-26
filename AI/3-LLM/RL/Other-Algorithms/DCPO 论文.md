@@ -25,6 +25,6 @@ DCPO将非零优势比例平均提升28%，训练效率较DAPO提高一倍，tok
 
 ## 相关
 
-- [[GRPO 深度理解|GRPO 深度理解]]
-- [[PPO 原理|PPO 原理]]
-- [[verl 概述|verl 概述]]
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]]
+- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]]

@@ -100,13 +100,13 @@ BLIP-2 的 Q-Former 虽然在后续工作中被更简单的投影层替代，但
 
 ## 相关
 
-- [[CLIP]]
-- [[Qwen-VL]]
+- [[AI/3-LLM/MLLM/CLIP]]
+- [[AI/3-LLM/MLLM/Qwen-VL]]
 - [[AI/CV/ViT|ViT]]
-- [[GPT|GPT]]
-- [[深度学习|深度学习]]
-- [[InternVL3|InternVL3]]
-- [[DeepSeek-VL|DeepSeek-VL]]
-- [[MLLM 概述|MLLM 概述]]
-- [[LLaMA|LLaMA]]
-- [[T5|T5]]
+- [[AI/3-LLM/Architecture/GPT|GPT]]
+- [[AI/1-Foundations/DL-Basics/深度学习|深度学习]]
+- [[AI/3-LLM/MLLM/InternVL3|InternVL3]]
+- [[AI/3-LLM/MLLM/DeepSeek-VL|DeepSeek-VL]]
+- [[AI/3-LLM/MLLM/MLLM 概述|MLLM 概述]]
+- [[AI/3-LLM/Architecture/LLaMA|LLaMA]]
+- [[AI/3-LLM/Architecture/T5|T5]]

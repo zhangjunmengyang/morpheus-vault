@@ -15,7 +15,7 @@ sources:
   - Published: 2026-02-18
 domain: ai/agent/safety
 related:
-  - "[[Colosseum-Multi-Agent-Collusion-Audit-2026]]"
+  - "[[AI/2-Agent/Multi-Agent/Colosseum-Multi-Agent-Collusion-Audit-2026]]"
   - ""
   - ""
 ---
@@ -65,12 +65,12 @@ related:
 ## See Also
 
 **多 Agent 集体行为与安全谱系**
-- [[Colosseum-Multi-Agent-Collusion-Audit-2026|Colosseum（勾结审计）]] — **正交互补**：本文研究被动失调（更强模型→更差社会结果，囚徒困境收敛），Colosseum 研究主动勾结（Agent 主动协商形成子联盟）；两者合起来覆盖多 Agent 集体行为安全的完整危险谱系
+- [[AI/2-Agent/Multi-Agent/Colosseum-Multi-Agent-Collusion-Audit-2026|Colosseum（勾结审计）]] — **正交互补**：本文研究被动失调（更强模型→更差社会结果，囚徒困境收敛），Colosseum 研究主动勾结（Agent 主动协商形成子联盟）；两者合起来覆盖多 Agent 集体行为安全的完整危险谱系
 - [[多智能体系统与协作框架-2026技术全景|多智能体系统全景]] — 本文的理论背景：多 Agent 架构的整体视角
-- [[SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL|SHARP（ICML 2026）]] — Shapley value 的 credit assignment 应用（博弈论工具的正面应用 vs 本文的负面效应）
+- [[AI/2-Agent/Agentic-RL/SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL|SHARP（ICML 2026）]] — Shapley value 的 credit assignment 应用（博弈论工具的正面应用 vs 本文的负面效应）
 
 **同主题综述**
-- [[AI Agent 集体行为与安全漂移|AI Agent 集体行为与安全漂移]] — Vault 核心综述笔记：勾结/协调失控/alignment 降级三类风险的系统梳理；本文(Collective Behaviour)是其重要实证来源
+- [[AI/5-AI 安全/AI Agent 集体行为与安全漂移|AI Agent 集体行为与安全漂移]] — Vault 核心综述笔记：勾结/协调失控/alignment 降级三类风险的系统梳理；本文(Collective Behaviour)是其重要实证来源
 
 **对系统设计的启示**
 - [[AI安全与对齐-2026技术全景|AI安全与对齐2026全景]] — 本文的安全背景：集体行为失调是 AI 安全的新维度
@@ -78,4 +78,4 @@ related:
 ## 推荐阅读
 
 1. **原文**：[arXiv:2602.16662](https://arxiv.org/abs/2602.16662) — 全文
-2. **配套**：[[Colosseum-Multi-Agent-Collusion-Audit-2026|Colosseum]] — 同期相关工作，完整集体行为安全视图
+2. **配套**：[[AI/2-Agent/Multi-Agent/Colosseum-Multi-Agent-Collusion-Audit-2026|Colosseum]] — 同期相关工作，完整集体行为安全视图

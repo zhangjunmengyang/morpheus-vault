@@ -17,7 +17,7 @@ related:
   - "[[AI/3-LLM/Infra/xtrain-lc5-流水线并行从零手写]]"
   - "[[AI/3-LLM/Infra/xtrain-lc6-Context并行RingAttention手写]]"
   - "[[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]"
-  - "[[分布式训练]]"
+  - "[[AI/3-LLM/Infra/分布式训练]]"
 ---
 
 # xtrain lc7 — MoE 专家并行从零手写
@@ -432,6 +432,6 @@ A：不参与。Shared Experts 的每张卡都持有完整副本（类似 dense 
 - [[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写]] — TP 与 EP 正交：TP 切层内矩阵，EP 切 expert 间
 - [[AI/3-LLM/Infra/xtrain-lc5-流水线并行从零手写]] — DualPipe：MoE EP 通信重叠的工程解法
 - [[AI/3-LLM/Infra/xtrain-lc6-Context并行RingAttention手写]] — CP+EP：超长序列 MoE 训练的四维并行
-- [[MoE 深度解析]] — MoE 理论全景（gating/负载均衡/capacity factor）
-- [[分布式训练]] — 分布式训练理论全景
+- [[AI/3-LLM/Architecture/MoE 深度解析]] — MoE 理论全景（gating/负载均衡/capacity factor）
+- [[AI/3-LLM/Infra/分布式训练]] — 分布式训练理论全景
 - [[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]] — xtrain 系列课程地图

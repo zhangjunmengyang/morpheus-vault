@@ -120,13 +120,13 @@ DeepSeek-VL 系列的核心竞争力在于：
 
 ## 相关
 
-- [[DeepSeek-OCR 原理|DeepSeek-OCR 原理]] — 基于 VL 的 OCR 应用
-- [[DeepSeek-OCR-Unsloth实践|DeepSeek-OCR Unsloth 实践]] — 微调实战
-- [[InternVL3|InternVL3]] — 同期竞品对比
-- [[Seed1.5-VL|Seed1.5-VL]] — 字节的多模态方案
-- [[CLIP|CLIP]]
-- [[BLIP-2|BLIP-2]]
-- [[Qwen-VL|Qwen-VL]]
-- [[MLLM 概述|MLLM 概述]]
+- [[AI/3-LLM/MLLM/DeepSeek-OCR 原理|DeepSeek-OCR 原理]] — 基于 VL 的 OCR 应用
+- [[AI/3-LLM/MLLM/DeepSeek-OCR-Unsloth实践|DeepSeek-OCR Unsloth 实践]] — 微调实战
+- [[AI/3-LLM/MLLM/InternVL3|InternVL3]] — 同期竞品对比
+- [[AI/3-LLM/MLLM/Seed1.5-VL|Seed1.5-VL]] — 字节的多模态方案
+- [[AI/3-LLM/MLLM/CLIP|CLIP]]
+- [[AI/3-LLM/MLLM/BLIP-2|BLIP-2]]
+- [[AI/3-LLM/MLLM/Qwen-VL|Qwen-VL]]
+- [[AI/3-LLM/MLLM/MLLM 概述|MLLM 概述]]
 - [[AI/CV/ViT|ViT]]
-- [[DeepSeek-R1|DeepSeek-R1]]
+- [[AI/3-LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]

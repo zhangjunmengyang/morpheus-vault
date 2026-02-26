@@ -146,7 +146,7 @@ AT-GRPO 还提出了支持 multi-agent workflow rollout 的训练系统：
 ### 2.3 MARS2：异构 Multi-Agent + 多样性 Scaling Law
 
 **arXiv:2602.07848 | 上海AI Lab/清华/复旦 | 2026-02-11**
-**完整笔记**：[[MARS2-Multi-Agent-Scaling-Law-RL-Code-Generation]]
+**完整笔记**：[[AI/2-Agent/Agentic-RL/MARS2-Multi-Agent-Scaling-Law-RL-Code-Generation]]
 
 #### 核心创新：Diversity as a Scaling Dimension
 
@@ -205,7 +205,7 @@ GRPO 的全局 normalization $(μ, σ)$ 对异质 agent 产生梯度放大：
 **解法**：Per-agent normalization，用 $(\mu_k, \sigma_k)$ 替换全局 $(\mu, \sigma)$，放大因子压回 1。
 
 - 数学推理 +5.6%，多轮搜索 +15.2%
-- **详细笔记**：[[Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems|Dr. MAS 精读笔记]]
+- **详细笔记**：[[AI/2-Agent/Agentic-RL/Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems|Dr. MAS 精读笔记]]
 
 ### SHARP（arXiv:2602.08335，ICML 2026）— Credit 精确归因
 
@@ -278,7 +278,7 @@ graph LR
   - 三层 reward：global accuracy + Shapley 边际贡献 + 工具过程奖励
   - Per-agent normalization（与 Dr. MAS 殊途同归）
   - 结果：MuSiQue/GAIA/WebWalkerQA/FRAMES，+23.66% over single-agent，+14.05% over multi-agent
-  - **详细笔记**：[[SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL|SHARP 精读笔记]]
+  - **详细笔记**：[[AI/2-Agent/Agentic-RL/SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL|SHARP 精读笔记]]
 
 ### 4.3 Role Specialization vs Homogenization
 
@@ -331,18 +331,18 @@ graph LR
 
 - **MAGRPO 原论文**：[arXiv:2508.04652](https://arxiv.org/abs/2508.04652) — Dec-POMDP 框架化 LLM 协作
 - **AT-GRPO 原论文**：[arXiv:2510.11062](https://arxiv.org/abs/2510.11062) — Agent-Turn-Wise grouping
-- **MARS2 完整笔记**：[[MARS2-Multi-Agent-Scaling-Law-RL-Code-Generation]]
-- **Dr. MAS 完整笔记**：[[Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems|Dr. MAS]] — 梯度稳定性 + per-agent normalization
-- **SHARP 完整笔记**：[[SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL|SHARP]] — Shapley credit attribution，ICML 2026
-- **AgentConductor**：[[AgentConductor-Topology-Evolution]] — 拓扑演化视角
+- **MARS2 完整笔记**：[[AI/2-Agent/Agentic-RL/MARS2-Multi-Agent-Scaling-Law-RL-Code-Generation]]
+- **Dr. MAS 完整笔记**：[[AI/2-Agent/Agentic-RL/Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems|Dr. MAS]] — 梯度稳定性 + per-agent normalization
+- **SHARP 完整笔记**：[[AI/2-Agent/Agentic-RL/SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL|SHARP]] — Shapley credit attribution，ICML 2026
+- **AgentConductor**：[[AI/2-Agent/Multi-Agent/AgentConductor-Topology-Evolution]] — 拓扑演化视角
 - **理论基础**：Dec-POMDP (Bernstein et al., 2002) / MAPPO (Yu et al., 2022) / CTDE 框架
-- **对比参考**：[[Agentic-RL-2026前沿综合分析]] — Single-Agent RL 全景
+- **对比参考**：[[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析]] — Single-Agent RL 全景
 
-> **see-also（credit assignment 维度）**：[[Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — Multi-Agent credit assignment 是 long-horizon CA 的 multi-agent 扩展：不只是"哪个 step 贡献大"，还是"哪个 agent 贡献大"；GiGPO 的 anchor-state grouping 与 AT-GRPO 的 agent-turn grouping 是同一问题的两种近似
+> **see-also（credit assignment 维度）**：[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — Multi-Agent credit assignment 是 long-horizon CA 的 multi-agent 扩展：不只是"哪个 step 贡献大"，还是"哪个 agent 贡献大"；GiGPO 的 anchor-state grouping 与 AT-GRPO 的 agent-turn grouping 是同一问题的两种近似
 >
-> **see-also（训练稳定性维度）**：[[Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems|Dr. MAS（NTU，arXiv:2602.08847）]] — 多 agent 角色专业化导致 reward 分布异质，全局 GRPO normalization 梯度爆炸；Agent-Wise normalization 解法；与 RAGEN（单 agent Echo Trap）正交，合起来覆盖 Multi-Agent RL 训练稳定性完整版图
+> **see-also（训练稳定性维度）**：[[AI/2-Agent/Agentic-RL/Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems|Dr. MAS（NTU，arXiv:2602.08847）]] — 多 agent 角色专业化导致 reward 分布异质，全局 GRPO normalization 梯度爆炸；Agent-Wise normalization 解法；与 RAGEN（单 agent Echo Trap）正交，合起来覆盖 Multi-Agent RL 训练稳定性完整版图
 >
-> **see-also（diversity scaling 维度）**：[[MoE 深度解析|MoE 深度解析]] — MARS2 的 Diversity scaling law（2×32B 异构 > 1×72B）与 MoE 的 expert diversity 机制有深层联系：两者都是通过路由不同的"专家"（异构 agent / expert 神经元）来覆盖更大的解空间，而非单一巨大模型
+> **see-also（diversity scaling 维度）**：[[AI/3-LLM/Architecture/MoE 深度解析|MoE 深度解析]] — MARS2 的 Diversity scaling law（2×32B 异构 > 1×72B）与 MoE 的 expert diversity 机制有深层联系：两者都是通过路由不同的"专家"（异构 agent / expert 神经元）来覆盖更大的解空间，而非单一巨大模型
 
 ---
 

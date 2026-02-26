@@ -17,9 +17,9 @@ sources:
   - Reducing Activation Recomputation in Large Transformer Models — arXiv:2205.05198
   - Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM — arXiv:2104.04473
 related:
-  - "[[分布式训练|分布式训练]]"
+  - "[[AI/3-LLM/Infra/分布式训练|分布式训练]]"
   - "[[AI/3-LLM/Infra/混合精度训练|混合精度训练]]"
-  - "[[DeepSpeed|DeepSpeed]]"
+  - "[[AI/3-LLM/Infra/DeepSpeed|DeepSpeed]]"
 ---
 
 # GPU 显存计算指南：从参数到集群
@@ -507,7 +507,7 @@ graph TD
 
 ### 脑暴：如果往下延伸
 - [[AI/3-LLM/Infra/混合精度训练|混合精度训练]] 直接影响 $b_{precision}$——从 FP32 到 BF16 再到 FP8，每降一级显存减半
-- [[Multi-Head Latent Attention|MLA]] 将 KV Cache 公式中的 $n_{kv} \times d_h$ 替换为 $d_c$（潜在维度），实现数量级压缩
+- [[AI/3-LLM/Architecture/Multi-Head Latent Attention|MLA]] 将 KV Cache 公式中的 $n_{kv} \times d_h$ 替换为 $d_c$（潜在维度），实现数量级压缩
 
 ## 📚 推荐阅读
 
@@ -527,8 +527,8 @@ graph TD
 
 ## See Also
 
-- [[分布式训练|分布式训练]] — ZeRO/TP/PP 策略直接决定每卡显存分配；本文的 $16\Phi$ 公式在 ZeRO-3 下变为 $16\Phi/N$
+- [[AI/3-LLM/Infra/分布式训练|分布式训练]] — ZeRO/TP/PP 策略直接决定每卡显存分配；本文的 $16\Phi$ 公式在 ZeRO-3 下变为 $16\Phi/N$
 - [[AI/3-LLM/Infra/混合精度训练|混合精度训练]] — 精度选择（FP32/BF16/FP8）直接影响每参数字节数，是显存公式的核心变量
-- [[Multi-Head Latent Attention|Multi-Head Latent Attention]] — MLA 将 KV Cache 压缩 8-93x，彻底改变推理显存估算
-- [[DeepSpeed|DeepSpeed]] — ZeRO 系列的工程实现，支持 offload 突破 GPU 显存限制
-- [[长上下文技术|长上下文技术]] — 128K+ 上下文的 KV Cache 是推理显存的主要瓶颈
+- [[AI/3-LLM/Architecture/Multi-Head Latent Attention|Multi-Head Latent Attention]] — MLA 将 KV Cache 压缩 8-93x，彻底改变推理显存估算
+- [[AI/3-LLM/Infra/DeepSpeed|DeepSpeed]] — ZeRO 系列的工程实现，支持 offload 突破 GPU 显存限制
+- [[AI/3-LLM/Architecture/长上下文技术|长上下文技术]] — 128K+ 上下文的 KV Cache 是推理显存的主要瓶颈

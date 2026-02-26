@@ -136,8 +136,8 @@ model.save_pretrained_gguf("qwen3_gguf", tokenizer, quantization_method="q4_k_m"
 
 ## 相关
 
-- [[Unsloth 概述|Unsloth 概述]]
-- [[Chat Templates|Chat Templates]]
-- [[训练示例概述|训练示例概述]]
-- [[Gemma 3 训练|Gemma 3 训练]]
-- [[gpt-oss 训练|gpt-oss 训练]]
+- [[AI/3-LLM/Frameworks/Unsloth/Unsloth 概述|Unsloth 概述]]
+- [[AI/3-LLM/Frameworks/Unsloth/Chat Templates|Chat Templates]]
+- [[AI/3-LLM/Frameworks/Unsloth/训练示例概述|训练示例概述]]
+- [[AI/3-LLM/Frameworks/Unsloth/Gemma 3 训练|Gemma 3 训练]]
+- [[AI/3-LLM/Frameworks/Unsloth/gpt-oss 训练|gpt-oss 训练]]

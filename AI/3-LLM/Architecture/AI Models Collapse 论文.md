@@ -41,7 +41,7 @@ Model Collapse refers to a degenerative learning process where models start forg
 
 ## See Also
 
-- [[Attention 变体综述|Attention 变体综述]] — 模型架构与 model collapse 风险的关系
+- [[AI/3-LLM/Architecture/Attention 变体综述|Attention 变体综述]] — 模型架构与 model collapse 风险的关系
 - [[预训练流程|预训练流程]] — 合成数据在预训练中的影响
 - [[AI/3-LLM/Pretraining/LLM预训练与分布式训练2026全景|LLM 预训练 2026 全景]] — 数据工程：合成数据与 model collapse 的工业实践
 -  — 大语言模型知识全图谱

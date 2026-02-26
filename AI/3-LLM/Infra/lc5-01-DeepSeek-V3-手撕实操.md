@@ -13,7 +13,7 @@ tags:
   - pytorch
 related:
   - "[[AI/3-LLM/Architecture/Llama-手撕实操|Llama-手撕实操]]"
-  - "[[MoE 深度解析|MoE深度解析]]"
+  - "[[AI/3-LLM/Architecture/MoE 深度解析|MoE深度解析]]"
   - "[[AI/3-LLM/Inference/FlashAttention-手撕实操|FlashAttention-手撕实操]]"
   - "[[AI/3-LLM/Architecture/基础数学组件手撕|基础数学组件手撕]]"
 ---

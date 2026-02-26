@@ -164,8 +164,8 @@ trainer.train()
 
 ## 相关
 
-- [[Qwen3-VL-Unsloth训练|Qwen3-VL 训练]] — 下一代 Qwen VLM
-- [[DeepSeek-OCR-Unsloth实践|DeepSeek-OCR Unsloth 实践]] — 竞品方案
-- [[GRPO 深度理解|GRPO 深度理解]] — RL 算法原理
-- [[训练示例概述|Unsloth 训练示例]]
-- [[Checkpoint|Unsloth Checkpoint]]
+- [[AI/3-LLM/MLLM/Qwen3-VL-Unsloth训练|Qwen3-VL 训练]] — 下一代 Qwen VLM
+- [[AI/3-LLM/MLLM/DeepSeek-OCR-Unsloth实践|DeepSeek-OCR Unsloth 实践]] — 竞品方案
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — RL 算法原理
+- [[AI/3-LLM/Frameworks/Unsloth/训练示例概述|Unsloth 训练示例]]
+- [[AI/3-LLM/Frameworks/Unsloth/Checkpoint|Unsloth Checkpoint]]

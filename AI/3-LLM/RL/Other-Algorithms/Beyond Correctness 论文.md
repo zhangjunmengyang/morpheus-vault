@@ -27,5 +27,5 @@ PROF通过评估PRM与ORM的一致性，过滤掉 **结果正确但推理错误*
 
 ## 相关
 
-- [[GRPO 深度理解|GRPO 深度理解]]
-- [[PPO 原理|PPO 原理]]
+- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]]

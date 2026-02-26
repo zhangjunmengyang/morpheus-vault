@@ -21,10 +21,10 @@ sources:
   - arXiv:2602.21201 (Feng, Luong et al., Google DeepMind, 2026-02-25)
   - https://1stproof.org — FirstProof 挑战赛
 related:
-  - "[[Aletheia-Math-Research-Agent|Aletheia（前作：Erdős 问题，arXiv:2602.10177）]]"
-  - "[[Gemini-3-Deep-Think|Gemini 3 Deep Think（基础模型）]]"
-  - "[[TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（推理时搜索 vs 训练时搜索对比）]]"
-  - "[[CSO-Verified-Critical-Step-Optimization|CSO（反事实验证，设计思路对比）]]"
+  - "[[AI/2-Agent/Evaluation/Aletheia-Math-Research-Agent|Aletheia（前作：Erdős 问题，arXiv:2602.10177）]]"
+  - "[[AI/3-LLM/Inference/Gemini-3-Deep-Think|Gemini 3 Deep Think（基础模型）]]"
+  - "[[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（推理时搜索 vs 训练时搜索对比）]]"
+  - "[[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO（反事实验证，设计思路对比）]]"
 ---
 
 # Aletheia：Gemini 3 Deep Think 自主解决研究级数学问题
@@ -184,26 +184,26 @@ Aletheia 不依赖 RL 训练（纯 Gemini 3 Deep Think + agentic scaffolding）�
 ## See Also
 
 **Aletheia 系列（前作 → 续集）**
-- [[Aletheia-Math-Research-Agent|Aletheia 前作（arXiv:2602.10177，Erdős 猜想数据库）]] — 同一 agent 系统的前一阶段：Erdős 4 个开放问题 → FirstProof 6/10 研究级数学题；前作覆盖 Generator-Verifier-Explorer 三组件架构，本文重点在 Best-of-2 策略与自我过滤设计
-- [[Gemini-3-Deep-Think|Gemini 3 Deep Think（基础模型）]] — Extended Thinking，AIME 2025/Codeforces frontier；FirstProof 是 Gemini 3 Deep Think 迄今最高难度的真实任务测试
+- [[AI/2-Agent/Evaluation/Aletheia-Math-Research-Agent|Aletheia 前作（arXiv:2602.10177，Erdős 猜想数据库）]] — 同一 agent 系统的前一阶段：Erdős 4 个开放问题 → FirstProof 6/10 研究级数学题；前作覆盖 Generator-Verifier-Explorer 三组件架构，本文重点在 Best-of-2 策略与自我过滤设计
+- [[AI/3-LLM/Inference/Gemini-3-Deep-Think|Gemini 3 Deep Think（基础模型）]] — Extended Thinking，AIME 2025/Codeforces frontier；FirstProof 是 Gemini 3 Deep Think 迄今最高难度的真实任务测试
 
 **推理时搜索 vs 训练时搜索（设计思路对比）**
-- [[TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（ICML 2026，TU Munich）]] — 训练时树搜索选优 rollout；Aletheia 做的是推理时搜索（Best-of-2 + Verifier 筛选）；两者代表"搜索提升 agent 能力"在训练/推理两端的表现形式
-- [[CSO-Verified-Critical-Step-Optimization|CSO（Tencent AI Lab，arXiv:2602.03412）]] — 反事实验证 credit assignment；Aletheia 的 Generator-Verifier 架构与 CSO 的"关键步骤验证"在设计哲学上同源：都将验证作为 agent 能力的核心组件；区别：CSO 在 RL 训练中验证，Aletheia 在推理时验证
+- [[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（ICML 2026，TU Munich）]] — 训练时树搜索选优 rollout；Aletheia 做的是推理时搜索（Best-of-2 + Verifier 筛选）；两者代表"搜索提升 agent 能力"在训练/推理两端的表现形式
+- [[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO（Tencent AI Lab，arXiv:2602.03412）]] — 反事实验证 credit assignment；Aletheia 的 Generator-Verifier 架构与 CSO 的"关键步骤验证"在设计哲学上同源：都将验证作为 agent 能力的核心组件；区别：CSO 在 RL 训练中验证，Aletheia 在推理时验证
 
 **AI 评估边界（对老板的方法论价值）**
-- [[Agent评估体系批判-Goodhart法则与Benchmark陷阱|Agent 评估体系批判（Goodhart 法则）]] — FirstProof 本身就是对"benchmark 可自动打分"假设的反动：用真实 open problems + 专家人工验证 = 当 agent 能力接近专家水平时，评估本身变成瓶颈；与 Goodhart 分析互证
+- [[AI/2-Agent/Evaluation/Agent评估体系批判-Goodhart法则与Benchmark陷阱|Agent 评估体系批判（Goodhart 法则）]] — FirstProof 本身就是对"benchmark 可自动打分"假设的反动：用真实 open problems + 专家人工验证 = 当 agent 能力接近专家水平时，评估本身变成瓶颈；与 Goodhart 分析互证
 
 **Frontier 模型进展**
-- [[Gemini-3.1-Pro|Gemini 3.1 Pro]] — 同期 Gemini 系列，ARC-AGI-2 格局对比；FirstProof 是 DeepMind agent 能力展示，与 Claude/OpenAI 的能力竞争背景
+- [[AI/4-模型/Gemini/Gemini-3.1-Pro|Gemini 3.1 Pro]] — 同期 Gemini 系列，ARC-AGI-2 格局对比；FirstProof 是 DeepMind agent 能力展示，与 Claude/OpenAI 的能力竞争背景
 
 ---
 
 ## 推荐阅读
 
 1. [原文（arXiv:2602.21201）](https://arxiv.org/abs/2602.21201) — FirstProof 完整实验报告
-2. [[Aletheia-Math-Research-Agent|Aletheia 前作]] — 理解 Generator-Verifier 架构完整设计
-3. [[Gemini-3-Deep-Think|Gemini 3 Deep Think]] — 基础模型能力背景
+2. [[AI/2-Agent/Evaluation/Aletheia-Math-Research-Agent|Aletheia 前作]] — 理解 Generator-Verifier 架构完整设计
+3. [[AI/3-LLM/Inference/Gemini-3-Deep-Think|Gemini 3 Deep Think]] — 基础模型能力背景
 4. [FirstProof 挑战赛（1stproof.org）](https://1stproof.org) — 10道题原题和背景
 
 ---

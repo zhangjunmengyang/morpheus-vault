@@ -150,7 +150,7 @@ actor_rollout_ref:
 
 ## 相关
 
-- [[配置文件|配置文件]] — 完整配置参考
-- [[性能调优|性能调优]] — 显存和速度优化
-- [[硬件资源预估|硬件资源预估]] — 资源需求估算
-- [[训练示例概述|Unsloth 训练示例]] — Unsloth 的 LoRA 训练
+- [[AI/3-LLM/Frameworks/verl/配置文件|配置文件]] — 完整配置参考
+- [[AI/3-LLM/Frameworks/verl/性能调优|性能调优]] — 显存和速度优化
+- [[AI/3-LLM/Frameworks/verl/硬件资源预估|硬件资源预估]] — 资源需求估算
+- [[AI/3-LLM/Frameworks/Unsloth/训练示例概述|Unsloth 训练示例]] — Unsloth 的 LoRA 训练

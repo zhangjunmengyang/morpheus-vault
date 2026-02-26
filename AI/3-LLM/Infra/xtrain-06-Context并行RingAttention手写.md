@@ -409,5 +409,5 @@ A：CP 主要适合**超长 seq（>32K）的 prefill 推理**和极长序列训�
 - [[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写]] — 前置：TP 与 CP 正交可组合（TP 切权重，CP 切序列）
 - [[AI/3-LLM/Inference/FlashAttention-手撕实操]] — FA 是 Ring Attention 的单卡版，Online Softmax 同源
 - [[AI/3-LLM/Inference/vLLM-PageAttention-手撕实操]] — Online Softmax (O,M,L) 三元组在推理端的应用
-- [[分布式训练]] — 分布式训练理论全景
+- [[AI/3-LLM/Infra/分布式训练]] — 分布式训练理论全景
 - [[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]] — xtrain 系列课程地图

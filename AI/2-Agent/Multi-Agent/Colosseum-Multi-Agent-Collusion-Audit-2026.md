@@ -16,8 +16,8 @@ sources:
   - Published: 2026-02-16
 domain: ai/agent/safety
 related:
-  - "[[Collective-Behaviour-Hundreds-LLM-Agents-2026]]"
-  - "[[Agent-Skills-Security]]"
+  - "[[AI/2-Agent/Multi-Agent/Collective-Behaviour-Hundreds-LLM-Agents-2026]]"
+  - "[[AI/2-Agent/Evaluation/Agent-Skills-Security]]"
   - ""
 ---
 
@@ -68,14 +68,14 @@ related:
 ## See Also
 
 **多 Agent 安全谱系**
-- [[Collective-Behaviour-Hundreds-LLM-Agents-2026|Collective Behaviour（100+ Agents）]] — **正交互补**：Colosseum 研究主动勾结（DCOP + 联盟形成），另文研究被动失调（社会困境中更强→更差）；合起来是多 Agent 安全的完整危险谱系
-- [[AI Agent 集体行为与安全漂移|AI Agent 集体行为与安全漂移]] — Vault 核心综述笔记：本文是其"主动勾结"章节的深度实证来源
-- [[Agent-Skills-Security|Agent Skills Security]] — Agent 安全的另一侧面：技能层漏洞（不同于集体行为层）
+- [[AI/2-Agent/Multi-Agent/Collective-Behaviour-Hundreds-LLM-Agents-2026|Collective Behaviour（100+ Agents）]] — **正交互补**：Colosseum 研究主动勾结（DCOP + 联盟形成），另文研究被动失调（社会困境中更强→更差）；合起来是多 Agent 安全的完整危险谱系
+- [[AI/5-AI 安全/AI Agent 集体行为与安全漂移|AI Agent 集体行为与安全漂移]] — Vault 核心综述笔记：本文是其"主动勾结"章节的深度实证来源
+- [[AI/2-Agent/Evaluation/Agent-Skills-Security|Agent Skills Security]] — Agent 安全的另一侧面：技能层漏洞（不同于集体行为层）
 
 **理论工具**
-- [[SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL|SHARP（ICML 2026）]] — 同样使用博弈论（Shapley value），用于正向 credit assignment vs Colosseum 的负向勾结检测
+- [[AI/2-Agent/Agentic-RL/SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL|SHARP（ICML 2026）]] — 同样使用博弈论（Shapley value），用于正向 credit assignment vs Colosseum 的负向勾结检测
 
 ## 推荐阅读
 
 1. **原文**：[arXiv:2602.15198](https://arxiv.org/abs/2602.15198) — Colosseum 全文
-2. **配套**：[[Collective-Behaviour-Hundreds-LLM-Agents-2026|Collective Behaviour]] — 同期工作，完整安全视图
+2. **配套**：[[AI/2-Agent/Multi-Agent/Collective-Behaviour-Hundreds-LLM-Agents-2026|Collective Behaviour]] — 同期工作，完整安全视图

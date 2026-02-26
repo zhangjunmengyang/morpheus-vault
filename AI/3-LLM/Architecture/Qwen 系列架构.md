@@ -185,11 +185,11 @@ Qwen 系列基于 **Transformer decoder-only** 架构，核心组件：
 
 ## See Also
 
-- [[MoE 深度解析]] — MoE 架构深度（Qwen3-MoE 的 shared expert + routing 原理）
-- [[Attention 变体综述]] — GQA/MQA/MLA 详细对比（Qwen 从 MHA→GQA 的理论基础）
+- [[AI/3-LLM/Architecture/MoE 深度解析]] — MoE 架构深度（Qwen3-MoE 的 shared expert + routing 原理）
+- [[AI/3-LLM/Architecture/Attention 变体综述]] — GQA/MQA/MLA 详细对比（Qwen 从 MHA→GQA 的理论基础）
 - [[LLM-推理优化-2026-全景]] — Qwen2.5-72B 生产部署优化全图（量化/TP/prefix cache）
 - [[Transformer架构深度解析-2026技术全景]] — Qwen 所基于的 Decoder-Only Transformer 架构全景
-- [[DeepSeek-R1]] — 同期国内主流开源 LLM 对比（架构选择差异：MoE规模/稀疏度/共享专家数）
+- [[AI/3-LLM/Architecture/DeepSeek-R1]] — 同期国内主流开源 LLM 对比（架构选择差异：MoE规模/稀疏度/共享专家数）
 
 ## 推荐阅读
 
