@@ -6,13 +6,13 @@ updated: 2026-02-26-v11
 type: synthesis
 tags: [agentic-RL, credit-assignment, reward-design, environment, workflow-design, topology, synthesis, 2026]
 related:
-  - "[[AI/Agent/Kimi-K2.5-PARL|Kimi-K2.5-PARL]]"
+  - "[[AI/Agent/Multi-Agent/Kimi-K2.5-PARL|Kimi-K2.5-PARL]]"
   - "[[AI/Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2]]"
   - "[[AI/Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]]"
-  - "[[AI/Agent/EnterpriseGym-Corecraft|EnterpriseGym-Corecraft]]"
+  - "[[AI/Agent/Agentic-RL/EnterpriseGym-Corecraft|EnterpriseGym-Corecraft]]"
   - "[[AI/LLM/RL/Other-Algorithms/OpenRS-Pairwise-Adaptive-Rubric|OpenRS-Pairwise-Adaptive-Rubric]]"
   - "[[AI/Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer-CWRPO-Workflow-Orchestration-RL]]"
-  - "[[AI/Agent/AgentConductor-Topology-Evolution-Multi-Agent-Code|AgentConductor]]"
+  - "[[AI/Agent/Multi-Agent/AgentConductor-Topology-Evolution|AgentConductor]]"
   - "[[AI/Agent/Agentic-RL/SquRL-Dynamic-Workflow-Text-to-SQL|SquRL-Dynamic-Workflow-Text-to-SQL]]"
   - "[[AI/Agent/Agentic-RL/PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE-Phase-Aware-Mixture-of-Experts]]"
 ---
@@ -656,13 +656,13 @@ $$T^{(1)} < T^{(2)} < \cdots < T^{(M)} \quad (2h \to 4h \to 6h)$$
 - [[AI/Agent/Agentic-RL/Search-R1-Reasoning-Search-Engine-RL|Search-R1（前驱，arXiv:2503.09516）]] — Search-R1++ (2602.19526) 的前身：把搜索引擎集成进 RL rollout，token masking 稳定训练；Search-R1++ 在此基础上系统消融 reward/optimizer/prompt 三维度（vault_gap：Search-R1++ 独立笔记待 Scholar 补写）
 - [[AI/Agent/目录|Agent MOC]] — Agentic RL 在 Agent 知识域的位置
 - [[AI/Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer (CWRPO)]] — 维度 4：Operator 级 workflow 设计（Workflow/Topology 解法 A）
-- [[AI/Agent/AgentConductor-Topology-Evolution-Multi-Agent-Code|AgentConductor]] — 维度 4：Agent 通信 Topology 级（解法 B，difficulty-aware density）
+- [[AI/Agent/Multi-Agent/AgentConductor-Topology-Evolution|AgentConductor]] — 维度 4：Agent 通信 Topology 级（解法 B，difficulty-aware density）
 - [[AI/Agent/Agentic-RL/SquRL-Dynamic-Workflow-Text-to-SQL|SquRL]] — 维度 4：Workflow 选择级（解法 C，Theorem 3.1 形式化证明）
 - [[AI/LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — reward modeling 自适应分配（与 Reward 维度高度互补）
 - [[AI/Safety/Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization]] — Agentic RL × Safety 汇合点：pre-generation hidden state 安全门控
 - [[AI/Agent/Agentic-RL/UI-TARS-2 论文|UI-TARS-2]] — GUI Agent RL 工程极致路线：Data Flywheel + 异步 multi-turn RL + Hybrid 沙盒（★★★★★）
-- [[AI/Agent/UI-R1-GUI-Action-Prediction-RL|UI-R1]] — GUI Agent RL 极简路线：136 条数据 rule-based GRPO，3B ≈ SFT 7B@76K（★★★★☆）
-- [[AI/Agent/Memory-R1-RL-for-LLM-Memory-Management|Memory-R1]] — RL 训练 Memory Manager（ADD/UPDATE/DELETE/NOOP），记忆管理新范式（★★★★☆）
+- [[AI/Agent/Agentic-RL/UI-R1-GUI-Action-Prediction-RL|UI-R1]] — GUI Agent RL 极简路线：136 条数据 rule-based GRPO，3B ≈ SFT 7B@76K（★★★★☆）
+- [[AI/Agent/Fundamentals/Memory-R1-RL-for-LLM-Memory-Management|Memory-R1]] — RL 训练 Memory Manager（ADD/UPDATE/DELETE/NOOP），记忆管理新范式（★★★★☆）
 - [[AI/Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training|ASTRA]] — 全自动 tool-use RL 流水线，MCP 工具图 + verifiable 环境（★★★★☆）
 - [[AI/Agent/Agentic-RL/RC-GRPO-Reward-Conditioned-Tool-Calling-RL|RC-GRPO]] — reward token conditioning 解决 multi-turn GRPO reward 同质化（★★★★☆）
 - [[AI/MLLM/PyVision-RL-Agentic-Vision-Interaction-Collapse|PyVision-RL（2602.20739）]] — **跨模态训练失败模式**：Interaction Collapse = Echo Trap 的多模态版本（v10 新增）；Oversampling-Filtering-Ranking + Accumulative Tool Reward；On-Demand Context Construction 解决视频 context 爆炸

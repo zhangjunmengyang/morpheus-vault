@@ -60,7 +60,7 @@ related:
 
 **多 Agent 集体行为与安全谱系**
 - [[AI/Agent/Multi-Agent/Colosseum-Multi-Agent-Collusion-Audit-2026|Colosseum（勾结审计）]] — **正交互补**：本文研究被动失调（更强模型→更差社会结果，囚徒困境收敛），Colosseum 研究主动勾结（Agent 主动协商形成子联盟）；两者合起来覆盖多 Agent 集体行为安全的完整危险谱系
-- [[AI/Agent/多智能体系统与协作框架-2026技术全景|多智能体系统全景]] — 本文的理论背景：多 Agent 架构的整体视角
+- [[AI/Agent/Multi-Agent/多智能体系统与协作框架-2026技术全景|多智能体系统全景]] — 本文的理论背景：多 Agent 架构的整体视角
 - [[AI/Agent/Agentic-RL/SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL|SHARP（ICML 2026）]] — Shapley value 的 credit assignment 应用（博弈论工具的正面应用 vs 本文的负面效应）
 
 **同主题综述**

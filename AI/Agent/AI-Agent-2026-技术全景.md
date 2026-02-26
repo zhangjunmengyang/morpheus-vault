@@ -25,8 +25,8 @@ sources:
   - "Anthropic MCP Spec https://spec.modelcontextprotocol.io"
 related:
   - "[[AI/Agent/Agentic-RL/AWM-Agent-World-Model-Synthetic-Environments|Agent World Model]]"
-  - "[[AI/Agent/Agent-Skills-Security|Agent Skills Security]]"
-  - "[[AI/Agent/Evaluating-AGENTS-Context|Evaluating AGENTS]]"
+  - "[[AI/Agent/Evaluation/Agent-Skills-Security|Agent Skills Security]]"
+  - "[[AI/Agent/Evaluation/Evaluating-AGENTS-Context|Evaluating AGENTS]]"
   - "[[AI/LLM/Architecture/Transformer架构深度解析-2026技术全景|Transformer 架构深度解析]]"
   - "[[AI/LLM/Inference/LLM-推理优化-2026-全景|LLM 推理优化]]"
 ---
@@ -640,7 +640,7 @@ Agent 评测比传统 NLP 评测复杂得多——因为 Agent 是**交互式、
 - **2026 SOTA**：Level 1 ~75%，Level 3 仅 ~30%——对比人类 ~92%
 - **价值**：最接近 "通用 AI 助手" 的评测
 
-**AGENTbench（Context Files 评测，Vault 关联 [[AI/Agent/Evaluating-AGENTS-Context|Evaluating AGENTS]]）**
+**AGENTbench（Context Files 评测，Vault 关联 [[AI/Agent/Evaluation/Evaluating-AGENTS-Context|Evaluating AGENTS]]）**
 - **来源**：ETH Zurich，[Gloaguen et al., arXiv:2602.11988](https://arxiv.org/abs/2602.11988)
 - **任务**：评估 context files（AGENTS.md/CLAUDE.md）对 coding agent 的实际效果
 - **关键发现**：LLM 自动生成的 context files **平均降低成功率 0.5-2%**，开发者手写的也仅提升 ~4%
@@ -1167,8 +1167,8 @@ for case in eval_suite:
 - **MCP 生态成熟后的终局**：每个 SaaS 都暴露 MCP Server → Agent 成为新的操作系统入口 → "Agent-native 应用"取代传统 GUI 应用？6 个月内可能看到第一批 MCP-native 创业公司。
 
 > 🔗 See also: [[AI/Agent/Agentic-RL/AWM-Agent-World-Model-Synthetic-Environments|Agent World Model]] — Agent 环境合成与 MCP 大规模验证
-> 🔗 See also: [[AI/Agent/Agent-Skills-Security|Agent Skills Security]] — Agent 工具安全治理框架
-> 🔗 See also: [[AI/Agent/Evaluating-AGENTS-Context|Evaluating AGENTS]] — Context Files 对 Agent 效果的实证评估
+> 🔗 See also: [[AI/Agent/Evaluation/Agent-Skills-Security|Agent Skills Security]] — Agent 工具安全治理框架
+> 🔗 See also: [[AI/Agent/Evaluation/Evaluating-AGENTS-Context|Evaluating AGENTS]] — Context Files 对 Agent 效果的实证评估
 
 ---
 
@@ -1204,8 +1204,8 @@ for case in eval_suite:
 - [arXiv 2601.12560] "Agentic AI: Architectures, Taxonomies, and Evaluation of LLM Agents" (2026)
 - [arXiv 2510.25445] "Agentic AI: A Comprehensive Survey" (2025)
 - [arXiv 2602.10090] Wang et al., "Agent World Model" (2026) → [[AI/Agent/Agentic-RL/AWM-Agent-World-Model-Synthetic-Environments|Agent World Model]]
-- [arXiv 2602.12430] Xu et al., "Agent Skills for LLMs" (2026) → [[AI/Agent/Agent-Skills-Security|Agent Skills Security]]
-- [arXiv 2602.11988] Gloaguen et al., "Evaluating AGENTS.md" (2026) → [[AI/Agent/Evaluating-AGENTS-Context|Evaluating AGENTS]]
+- [arXiv 2602.12430] Xu et al., "Agent Skills for LLMs" (2026) → [[AI/Agent/Evaluation/Agent-Skills-Security|Agent Skills Security]]
+- [arXiv 2602.11988] Gloaguen et al., "Evaluating AGENTS.md" (2026) → [[AI/Agent/Evaluation/Evaluating-AGENTS-Context|Evaluating AGENTS]]
 
 ### 行业报告
 - Google Cloud, "AI Agent Trends 2026 Report"

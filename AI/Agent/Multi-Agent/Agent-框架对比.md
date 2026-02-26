@@ -117,7 +117,7 @@ response = await agent.run("Explain transformer attention")
 
 ### 架构特点
 
-微软的 [[AI/Agent/Frameworks/AutoGen|AutoGen]] 以 **多 Agent 对话** 为核心。v0.4（AutoGen Studio）重构为事件驱动架构，Agent 之间通过消息传递协作。支持 GroupChat 模式。
+微软的 [[AI/Agent/Multi-Agent/AutoGen|AutoGen]] 以 **多 Agent 对话** 为核心。v0.4（AutoGen Studio）重构为事件驱动架构，Agent 之间通过消息传递协作。支持 GroupChat 模式。
 
 ```python
 from autogen_agentchat.agents import AssistantAgent
@@ -252,7 +252,6 @@ runtime.registerAction({
 
 ### 适用场景
 
-社交媒体 AI Agent、DeFi 自动化、链上交互 Agent。参见 [[AI/Agent/Agent-Economy/elizaOS Trust Scoring 源码研究|elizaOS Trust Scoring 源码研究]]。
 
 ## 7. Dify
 
@@ -317,6 +316,5 @@ Dify 是 **低代码 LLMOps 平台**，提供可视化 Workflow 编辑器。支�
 - [[AI/Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]] — Multi-Agent 设计模式
 - [[AI/Agent/Fundamentals/Tool Use|Tool Use]] — Agent 工具调用机制
 - [[AI/LLM/Application/RAG 工程实践|RAG 工程实践]] — 检索增强生成
-- [[AI/Agent/Frameworks/AutoGen|AutoGen]] — AutoGen 详细笔记
-- [[AI/Agent/Agent-Economy/elizaOS Trust Scoring 源码研究|elizaOS Trust Scoring 源码研究]] — elizaOS 信任机制源码
+- [[AI/Agent/Multi-Agent/AutoGen|AutoGen]] — AutoGen 详细笔记
 - [[AI/Agent/Fundamentals/记忆模块|记忆模块]] — Agent 记忆设计

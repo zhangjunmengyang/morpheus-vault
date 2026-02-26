@@ -10,11 +10,11 @@ tags:
   - interview-prep
   - type/deep-dive
 related:
-  - "[[AI/Agent/Agent Tool Use|Agent Tool Use]]"
-  - "[[AI/Agent/MCP/如何给人深度科普 MCP|如何给人深度科普 MCP]]"
-  - "[[AI/Agent/Agent-Skills-Security|Agent-Skills-Security]]"
+  - "[[AI/Agent/Fundamentals/Agent-Tool-Use|Agent Tool Use]]"
+  - "[[AI/Agent/Fundamentals/如何给人深度科普-MCP|如何给人深度科普 MCP]]"
+  - "[[AI/Agent/Evaluation/Agent-Skills-Security|Agent-Skills-Security]]"
   - "[[AI/Agent/AI-Agent-2026-技术全景|AI Agent 2026 技术全景]]"
-  - "[[AI/Agent/ReAct 推理模式|ReAct 推理模式]]"
+  - "[[AI/Agent/Fundamentals/ReAct-推理模式|ReAct 推理模式]]"
 ---
 
 # LLM 工具调用与 Function Calling — 2026 技术全景
@@ -1763,9 +1763,9 @@ Output Guard（敏感信息过滤）
 
 ## See Also
 
-- [[AI/Agent/Agent Tool Use|Agent Tool Use]] — Vault 原有 Tool Use 基础笔记，本文是其深度扩展版（面试武器级）
-- [[AI/Agent/MCP/如何给人深度科普 MCP|如何给人深度科普 MCP]] — MCP 协议专题，本文§5 MCP 标准化的前置知识
-- [[AI/Agent/Agent-Skills-Security|Agent-Skills-Security]] — Tool Use 的安全面：本文§7 安全章节与 Agent Skills 安全风险的实操对照
+- [[AI/Agent/Fundamentals/Agent-Tool-Use|Agent Tool Use]] — Vault 原有 Tool Use 基础笔记，本文是其深度扩展版（面试武器级）
+- [[AI/Agent/Fundamentals/如何给人深度科普-MCP|如何给人深度科普 MCP]] — MCP 协议专题，本文§5 MCP 标准化的前置知识
+- [[AI/Agent/Evaluation/Agent-Skills-Security|Agent-Skills-Security]] — Tool Use 的安全面：本文§7 安全章节与 Agent Skills 安全风险的实操对照
 - [[AI/Safety/OMNI-LEAK-Multi-Agent-Orchestrator-Data-Exfiltration|OMNI-LEAK]] — Tool-call 层面的安全攻击：orchestrator 通过工具返回值投毒，是本文§7.3"工具结果污染"的典型案例（ICML 2026）
 - [[AI/Safety/AutoInject-RL-Prompt-Injection-Attack|AutoInject]] — RL 自动化生成工具调用 Prompt Injection suffix；本文§7 Security 的攻击面 + 本文工具调用训练与 AutoInject 攻击训练互为镜像
 - [[AI/Agent/AI-Agent-2026-技术全景|AI Agent 2026 技术全景]] — Agent 总体架构全景；本文是其中 Tool Use 子系统的深度展开

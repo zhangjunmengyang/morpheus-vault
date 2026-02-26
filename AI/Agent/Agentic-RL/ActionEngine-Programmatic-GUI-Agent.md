@@ -10,7 +10,7 @@ sources:
 related:
   - "[[AI/Agent/Agentic-RL/WebAgent-R1-Multi-Turn-RL-Web-Agent|WebAgent-R1]]"
   - "[[AI/Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training|ASTRA]]"
-  - "[[AI/Agent/UI-R1-GUI-Action-Prediction-RL|UI-R1-GUI-Action-Prediction-RL]]"
+  - "[[AI/Agent/Agentic-RL/UI-R1-GUI-Action-Prediction-RL|UI-R1-GUI-Action-Prediction-RL]]"
 ---
 
 # ActionEngine: From Reactive to Programmatic GUI Agents via State Machine Memory
@@ -180,7 +180,7 @@ ActionEngine 是 **非 RL 路线**——用符号规划替代 end-to-end RL。
 
 **同为 GUI/Web Agent RL 工作**
 - [[AI/Agent/Agentic-RL/WebAgent-R1-Multi-Turn-RL-Web-Agent|WebAgent-R1（Amazon+UVA）]] — RL 端到端训练 Web Agent（与 ActionEngine training-free 正交）
-- [[AI/Agent/UI-R1-GUI-Action-Prediction-RL|UI-R1（vivo AI+CUHK）]] — GUI 动作预测极简 GRPO，136 条数据超 7B SFT
+- [[AI/Agent/Agentic-RL/UI-R1-GUI-Action-Prediction-RL|UI-R1（vivo AI+CUHK）]] — GUI 动作预测极简 GRPO，136 条数据超 7B SFT
 - [[AI/Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training|ASTRA]] — MCP 工具图结构化（与 ActionEngine 的 SMG 同一设计哲学：把环境结构化）
 
 **设计哲学关联**

@@ -148,7 +148,7 @@ model = AutoModelForCausalLM.from_pretrained(
 ## 相关
 
 - [[AI/Agent/Fundamentals/HF Agent Course|HF Agent Course]]
-- [[AI/Agent/MCP/HF MCP Course|HF MCP Course]]
+- [[AI/Agent/Fundamentals/HF-MCP-Course|HF MCP Course]]
 - [[AI/Agent/Fundamentals/HF LLM + Agent|HF LLM + Agent]]
 - [[KP 大神亲授课]]
 - [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]]

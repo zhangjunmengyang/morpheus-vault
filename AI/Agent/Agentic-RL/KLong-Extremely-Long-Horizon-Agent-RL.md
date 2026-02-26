@@ -242,7 +242,7 @@ KLong 是"Context Management for RL Training"方向的开创性工作——之�
 - [[AI/Agent/Agentic-RL/LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL]] — long horizon RL（在 context 内）对比
 - [[AI/Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL]] — training-time tree search 对比
 - [[AI/Agent/Agentic-RL/SCoRe-Self-Correction-via-Reinforcement-Learning]] — multi-turn RL 稳定性对比
-- [[AI/Agent/Agent评估体系批判-Goodhart法则与Benchmark陷阱]] — PaperBench 的特点分析
+- [[AI/Agent/Evaluation/Agent评估体系批判-Goodhart法则与Benchmark陷阱]] — PaperBench 的特点分析
 - [[AI/Agent/Agentic-RL/Agent-RL-环境工程系统论]] — 基础设施挑战的系统视角
 - [[AI/Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — KLong 解决"轨迹放不下"的物理问题；CA专题解决"reward如何归因"的算法问题——同一大难题的两个维度
 - [[AI/Agent/Agentic-RL/PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]] — 同为 Agentic RL 训练改进：KLong 解决极长 horizon 上下文+课程问题，PA-MoE 解决参数容量 Simplicity Bias；两者正交可叠加

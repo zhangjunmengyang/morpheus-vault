@@ -1017,7 +1017,7 @@ def phase_router(obs_t, goal, action_history):
 - [[AI/Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER]] — 分层 Advantage Estimation，多步 agent credit assignment
 - [[AI/Agent/Agentic-RL/PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]] — Simplicity Bias：Phase-level MoE expert 分离参数容量
 - [[AI/LLM/RL/Other-Algorithms/CM2 — Checklist Rewards多轮Tool Use RL|CM2]] — Tool Use RL：Checklist reward 多轮工具交互奖励设计
-- [[AI/Agent/EnterpriseGym-Corecraft|EnterpriseGym Corecraft]] — 环境设计：高保真企业 RL 环境 + OOD 泛化
+- [[AI/Agent/Agentic-RL/EnterpriseGym-Corecraft|EnterpriseGym Corecraft]] — 环境设计：高保真企业 RL 环境 + OOD 泛化
 
 ### 综述与全景
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] — 六维框架元分析，本指南的学术上位文档

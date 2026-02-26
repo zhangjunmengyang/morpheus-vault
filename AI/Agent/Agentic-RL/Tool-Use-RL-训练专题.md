@@ -24,7 +24,7 @@ sources:
   - "Turn-Level Reward: Wei et al., arXiv 2505.11821"
   - "Agent-as-Tool: arXiv 2507.01489"
 related:
-  - "[[AI/Agent/LLM工具调用与Function-Calling-2026技术全景|LLM工具调用与Function-Calling-2026技术全景]]"
+  - "[[AI/Agent/Fundamentals/LLM工具调用与Function-Calling-2026技术全景|LLM工具调用与Function-Calling-2026技术全景]]"
   - "[[AI/Agent/Agentic-RL/VerlTool 论文|VerlTool 论文]]"
   - "[[AI/Agent/Agentic-RL/Agent-RL-训练实战指南|Agent-RL-训练实战指南]]"
   - "[[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]]"
@@ -470,7 +470,7 @@ Tool Use RL 的根本意义：LLM 从"知识检索机"进化为"策略性问题�
 - [[AI/Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|**CM2**]] (2026-02): https://arxiv.org/abs/2602.12268 — **Unverifiable reward 路线**：Checklist Rewards（binary criteria decomposition），Sparse assign + Dense criteria 设计，LLM-simulated 工具环境；tau-Bench +8，BFCL-V4 +10，ToolSandbox +12
 
 ### 相关 Vault 笔记
-- [[AI/Agent/LLM工具调用与Function-Calling-2026技术全景|LLM工具调用与Function-Calling-2026技术全景]] — 工具调用原理/MCP/生产实践
+- [[AI/Agent/Fundamentals/LLM工具调用与Function-Calling-2026技术全景|LLM工具调用与Function-Calling-2026技术全景]] — 工具调用原理/MCP/生产实践
 - [[AI/Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent-RL-环境工程系统论]] — 训练环境设计 + Reward 工程
 - [[AI/Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]] — Credit Assignment 全图谱
 - [[AI/Agent/Agentic-RL/VerlTool 论文|VerlTool 论文]] — VerlTool 单独深读

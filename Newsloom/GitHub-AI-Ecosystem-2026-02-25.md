@@ -5,7 +5,7 @@ date: 2026-02-25
 type: github-scan
 tags: [github, agent-framework, microsoft, anthropic, context-engineering, weekly-scan]
 related:
-  - "[[AI/Agent/GitHub-Agentic-Workflows|GitHub Agentic Workflows]]"
+  - "[[AI/Agent/Fundamentals/GitHub-Agentic-Workflows|GitHub Agentic Workflows]]"
   - "[[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent-RL|KLong — context 管理的学术呼应]]"
   - "[[AI/LLM/RL/Other-Algorithms/OAPL-Off-Policy-RL-LLM-Reasoning|OAPL（Databricks+Cornell）— Databricks RL 研究端]]"
   - "[[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL 2026 综合分析]]"

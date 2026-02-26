@@ -213,6 +213,6 @@ Memory-R1 的 Memory Manager RL 框架值得盾卫项目关注：
 - 原论文：[arXiv:2508.19828](https://arxiv.org/abs/2508.19828)
 - LoCoMo Benchmark（多 session 对话记忆评测）：[EMNLP 2024](https://arxiv.org/abs/2402.17908)
 - Mem0（被超越的 baseline）：[mem0.ai](https://mem0.ai)
-- 相关 Vault 笔记：[[AI/Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool Use RL 训练专题]] | [[AI/Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent RL 环境工程系统论]] | [[AI/Agent/Agent Memory 机制|Agent Memory 机制]]
+- 相关 Vault 笔记：[[AI/Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool Use RL 训练专题]] | [[AI/Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent RL 环境工程系统论]] | [[AI/Agent/Fundamentals/Agent-Memory-机制|Agent Memory 机制]]
 - Agentic RL Survey 记忆章节：[2509.02547 §3.3](https://arxiv.org/html/2509.02547v4#S3.SS3)
 - 未来方向：RL for Structured Memory（图结构记忆 RL，survey 预测的下一个热点）

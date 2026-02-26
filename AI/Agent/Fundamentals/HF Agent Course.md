@@ -125,5 +125,5 @@ Code Agent 更灵活（可以写循环、条件判断、变量赋值），但安
 
 - [[Tool Use]]
 - [[AI/Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]]
-- [[AI/Agent/Frameworks/AutoGen|AutoGen]]
+- [[AI/Agent/Multi-Agent/AutoGen|AutoGen]]
 - [[记忆模块]]

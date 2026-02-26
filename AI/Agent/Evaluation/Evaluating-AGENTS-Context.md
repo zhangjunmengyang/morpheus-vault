@@ -504,7 +504,7 @@ AGENTbench 的构建方法提供了一个模板：如何为新兴的 agent 实�
 
 ## See Also
 
-- [[AI/Agent/Agent 评测与 Benchmark|Agent 评测与 Benchmark]] — 评测方法全景
-- [[AI/Agent/Gaia2-Dynamic-Async-Agent-Benchmark|Gaia2]] — 2026 标杆 benchmark：动态异步环境
-- [[AI/Agent/Code Agent|Code Agent]] — AGENTS.md / context file 对 coding agent 的影响是本篇核心
+- [[AI/Agent/Evaluation/Agent-评测与-Benchmark|Agent 评测与 Benchmark]] — 评测方法全景
+- [[AI/Agent/Evaluation/Gaia2-Dynamic-Async-Agent-Benchmark|Gaia2]] — 2026 标杆 benchmark：动态异步环境
+- [[AI/Agent/Fundamentals/Code-Agent-深度|Code Agent]] — AGENTS.md / context file 对 coding agent 的影响是本篇核心
 - [[AI/Agent/目录|Agent MOC]] — Agent 知识全图谱

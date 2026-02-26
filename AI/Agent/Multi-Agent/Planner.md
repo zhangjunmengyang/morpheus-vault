@@ -109,6 +109,6 @@ Planner 的质量严重依赖底层 LLM 的推理能力。用 GPT-4 级别的模
 ## 相关
 
 - [[AI/Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]]
-- [[AI/Agent/Frameworks/AutoGen|AutoGen]]
+- [[AI/Agent/Multi-Agent/AutoGen|AutoGen]]
 - [[AI/Agent/Fundamentals/Tool Use|Tool Use]]
 - [[AI/Agent/Fundamentals/记忆模块|记忆模块]]

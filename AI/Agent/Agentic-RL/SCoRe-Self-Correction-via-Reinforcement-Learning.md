@@ -220,7 +220,7 @@ graph TD
 - **[[AI/Agent/Agentic-RL/RC-GRPO-Reward-Conditioned-Tool-Calling-RL|RC-GRPO]]**：都在处理 multi-turn sparse reward 的同质化问题，SCoRe 用 bonus 打破，RC-GRPO 用 conditioning token 打破
 - **[[AI/Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（Trajectory-Search Rollouts）]]**：TSR 修 rollout 多样性，SCoRe 修 reward 设计——可以组合
 - **[[AI/Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar（2509.19199）]]**：SCoRe 解决"如何稳定 multi-turn RL 训练"（初始化+bonus），iStar 解决"如何做 step-level credit assignment"（隐式 DPO）——两者互补，可以组合：SCoRe 的训练稳定框架 + iStar 的 step reward 信号
-- **[[AI/Agent/Memory-R1-RL-for-LLM-Memory-Management|Memory-R1]]**：Memory-R1 用下游 QA reward 训练 memory management，SCoRe 用 task reward 训练 self-correction——同属"用外部可验证信号训练内部能力"
+- **[[AI/Agent/Fundamentals/Memory-R1-RL-for-LLM-Memory-Management|Memory-R1]]**：Memory-R1 用下游 QA reward 训练 memory management，SCoRe 用 task reward 训练 self-correction——同属"用外部可验证信号训练内部能力"
 - **[[AI/LLM/RL/GRPO/GRPO-Improvement-Panorama-2026|GRPO Improvement Panorama]]**：SCoRe 的 behavior collapse 分析与 GRPO 全0/全1问题有相似的底层机制
 
 ---

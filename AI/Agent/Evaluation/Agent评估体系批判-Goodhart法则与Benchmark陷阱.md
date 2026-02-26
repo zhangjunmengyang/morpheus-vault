@@ -342,7 +342,7 @@ graph TD
 - [[AI/Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization]] — ALFWorld 主战场
 - [[AI/Agent/Agentic-RL/LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL]] — AppWorld 主战场
 - [[AI/Agent/Agentic-RL/ARTIST-Agentic-Reasoning-Tool-Integration-RL]] — τ-bench 评估
-- [[AI/Agent/EnterpriseGym-Corecraft]] ⭐ — 泛化性研究：真实企业代码库 vs benchmark（本文 benchmark overfitting 论证的实验来源；EnterpriseGym 数据：Agent 迁移到真实场景后性能下降 30-50%）
+- [[AI/Agent/Agentic-RL/EnterpriseGym-Corecraft]] ⭐ — 泛化性研究：真实企业代码库 vs benchmark（本文 benchmark overfitting 论证的实验来源；EnterpriseGym 数据：Agent 迁移到真实场景后性能下降 30-50%）
 - SWE-bench: [arXiv:2310.06770](https://arxiv.org/abs/2310.06770)
 - OSWorld: [arXiv:2404.07972](https://arxiv.org/abs/2404.07972)
 - WebArena: [arXiv:2307.13854](https://arxiv.org/abs/2307.13854)
@@ -372,14 +372,14 @@ A: (1) 多维度报告而非单一分数；(2) 定期更新（使用近期发布
 
 ## See Also
 
-- [[AI/Agent/DeepSynth-Deep-Information-Synthesis-Benchmark|DeepSynth（arXiv:2602.21143）]] — 本文理论框架的实证案例：DeepSynth 在设计上主动对抗 Goodhart's Law（答案不可直接搜索 + 双重验证），但规模仅 120 题是统计弱点；对照 Q4 答案的五维设计原则
-- [[AI/Agent/Gaia2-Dynamic-Async-Agent-Benchmark|Gaia2]] — 动态异步 Agent benchmark，与 DeepSynth 互补（动态性 vs 信息综合深度）
+- [[AI/Agent/Evaluation/DeepSynth-Deep-Information-Synthesis-Benchmark|DeepSynth（arXiv:2602.21143）]] — 本文理论框架的实证案例：DeepSynth 在设计上主动对抗 Goodhart's Law（答案不可直接搜索 + 双重验证），但规模仅 120 题是统计弱点；对照 Q4 答案的五维设计原则
+- [[AI/Agent/Evaluation/Gaia2-Dynamic-Async-Agent-Benchmark|Gaia2]] — 动态异步 Agent benchmark，与 DeepSynth 互补（动态性 vs 信息综合深度）
 - [[AI/Agent/Agentic-RL/EnterpriseGym-Corecraft-Agent-RL-Benchmark|EnterpriseGym / Corecraft]] — 真实企业任务 benchmark，Goodhart's Law 的另一实证方向（真实工作场景 vs 合成数据）
-- [[AI/Agent/Aletheia-Gemini3-DeepThink-FirstProof|Aletheia FirstProof]] — 研究级数学任务的 beyond-benchmark 评估：严格验证器（Lean 4 可机检）是 benchmark 设计理想方向的极端案例
+- [[AI/Agent/Evaluation/Aletheia-Gemini3-DeepThink-FirstProof|Aletheia FirstProof]] — 研究级数学任务的 beyond-benchmark 评估：严格验证器（Lean 4 可机检）是 benchmark 设计理想方向的极端案例
 - [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL 2026 综合分析]] — Reward Design 章节与本文的评估批判形成方法论闭环
 
 ## 推荐阅读
 
 1. **SWE-bench（arXiv:2310.06770）**，**OSWorld（arXiv:2404.07972）** — 对比两篇的设计哲学，理解健康 benchmark 的要素
-2. **[[AI/Agent/DeepSynth-Deep-Information-Synthesis-Benchmark]]** — 多源信息综合新维度，RQ2（提供步骤 +170%）是规划能力瓶颈的直接证据
+2. **[[AI/Agent/Evaluation/DeepSynth-Deep-Information-Synthesis-Benchmark]]** — 多源信息综合新维度，RQ2（提供步骤 +170%）是规划能力瓶颈的直接证据
 3. **Goodhart's Law 原文**（1975）— "当一个度量成为目标，它就不再是好的度量"，用于面试展示方法论深度

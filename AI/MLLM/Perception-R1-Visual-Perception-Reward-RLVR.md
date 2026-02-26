@@ -167,7 +167,7 @@ graph TD
 
 - **[[AI/LLM/RL/Other-Algorithms/VPPO-Visually-Perceptive-Policy-Optimization|VPPO]]**：同一问题（视觉捷径）的 token 级解法，两者互补
 - **[[AI/Agent/Agentic-RL/Tree-GRPO-Tree-Search-LLM-Agent-RL|Tree-GRPO（ICLR 2026）]]**：同一原则——reward 应与因果结构对齐
-- **[[AI/Agent/UI-R1-GUI-Action-Prediction-RL|UI-R1]]**：极致数据效率的另一案例（136条）
+- **[[AI/Agent/Agentic-RL/UI-R1-GUI-Action-Prediction-RL|UI-R1]]**：极致数据效率的另一案例（136条）
 - **[[AI/LLM/RL/Theory/Rationale-Consistency-GenRM-Deceptive-Alignment|MetaJudge（Rationale Consistency）]]**：judging LLM 评估一致性的类似范式
 
 ---

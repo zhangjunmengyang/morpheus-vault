@@ -139,10 +139,10 @@ Kimi K2.5 的差异化：**Agent Swarm 原生支持 + 视觉 + 开权重**，三
 
 - [[AI/Frontiers/2026年2月模型潮]] — 同期发布背景
 - [[AI/Frontiers/GLM-5-技术报告精读]] — 同级竞品（744B MoE，开权重）
-- [[AI/Agent/Agent World Model]] — Agentic RL 背景
+- [[AI/Agent/Fundamentals/Agent-World-Model]] — Agentic RL 背景
 - [[AI/LLM/Inference/Test-Time-Compute]] — Thinking 模式的 TTC 背景
 - [[AI/LLM/RL/目录]] — PARL 所属的 RL 方法论
-- [[AI/Agent/Kimi-K2.5-PARL]] — PARL 深度精读版（Scholar 写，含 credit assignment / training instability 细节）
+- [[AI/Agent/Multi-Agent/Kimi-K2.5-PARL]] — PARL 深度精读版（Scholar 写，含 credit assignment / training instability 细节）
 
 ---
 *Created: 2026-02-19 by Librarian heartbeat — Newsloom 2026-02-18 → Vault 升级*

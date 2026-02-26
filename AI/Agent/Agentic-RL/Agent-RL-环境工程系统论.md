@@ -28,14 +28,14 @@ sources:
   - "SkyRL-Agent: arXiv 2511.16108"
   - "AWM (Agent World Model): arXiv 2602.10090, ICML 2026, Snowflake AI"
 related:
-  - "[[AI/Agent/EnterpriseGym-Corecraft|EnterpriseGym-Corecraft]]"
+  - "[[AI/Agent/Agentic-RL/EnterpriseGym-Corecraft|EnterpriseGym-Corecraft]]"
   - "[[AI/Agent/Agentic-RL/AWM-Agent-World-Model-Synthetic-Environments|AWM]]"
   - "[[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]]"
   - "[[AI/Agent/Agentic-RL/Agent-RL-训练实战指南|Agent-RL-训练实战指南]]"
   - "[[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]]"
   - "[[AI/Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL-训练专题]]"
   - "[[AI/Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]]"
-  - "[[AI/Agent/Agent 评测与 Benchmark|Agent 评测与 Benchmark]]"
+  - "[[AI/Agent/Evaluation/Agent-评测与-Benchmark|Agent 评测与 Benchmark]]"
 ---
 
 # Agent RL 环境工程系统论
@@ -470,9 +470,9 @@ $$\text{评估分层} = \begin{cases} \text{Task-level} & \text{整体任务成�
 - **Agent-RLVR**: https://arxiv.org/abs/2506.11425
 
 ### 相关 Vault 笔记
-- [[AI/Agent/EnterpriseGym-Corecraft|EnterpriseGym-Corecraft]] — Corecraft 单独深读
+- [[AI/Agent/Agentic-RL/EnterpriseGym-Corecraft|EnterpriseGym-Corecraft]] — Corecraft 单独深读
 - [[AI/Agent/Agentic-RL/AWM-Agent-World-Model-Synthetic-Environments|AWM-Agent-World-Model-Synthetic-Environments]] — 合成环境方法论
 - [[AI/Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL-训练专题]] — Reward 设计详细展开
 - [[AI/Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]] — 长任务 credit assignment 算法
 - [[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong-Extremely-Long-Horizon-Agent]] — KLong 单独深读
-- [[AI/Agent/Agent 评测与 Benchmark|Agent 评测与 Benchmark]] — 评估体系
+- [[AI/Agent/Evaluation/Agent-评测与-Benchmark|Agent 评测与 Benchmark]] — 评估体系

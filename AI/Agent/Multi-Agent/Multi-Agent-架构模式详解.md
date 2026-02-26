@@ -111,5 +111,5 @@ final = judge.generate(f"A 的答案：{response_a}\nB 的答案：{response_b}\
 - [[AI/Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]] — 本文的上级入口，概述层
 - [[AI/Agent/Multi-Agent/零碎的点|Multi-Agent 零碎思考]] — 补充细节
 - [[AI/Safety/OMNI-LEAK-Multi-Agent-Orchestrator-Data-Exfiltration|OMNI-LEAK]] — Supervisor模式的安全风险：orchestrator被injection后污染整个网络——本文Supervisor架构的安全反面教材
-- [[AI/Agent/AgentConductor-Topology-Evolution-Multi-Agent-Code|AgentConductor]] — 动态拓扑Multi-Agent，超越了本文的固定Supervisor/Pipeline模式
+- [[AI/Agent/Multi-Agent/AgentConductor-Topology-Evolution|AgentConductor]] — 动态拓扑Multi-Agent，超越了本文的固定Supervisor/Pipeline模式
 - [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026综合分析]] — Multi-Agent RL的整体框架，本文是其中架构模式的具体实现

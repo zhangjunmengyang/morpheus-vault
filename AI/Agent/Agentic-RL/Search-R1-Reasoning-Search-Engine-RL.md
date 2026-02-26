@@ -181,7 +181,7 @@ Search-R1 / ToRL / ARTIST 都用 pure outcome reward 驱动工具/搜索使用�
 - **设计原则统一**：[[AI/Agent/Agentic-RL/ARTIST-Agentic-Reasoning-Tool-Integration-RL|ARTIST]] — tool output masking
 - **单工具对比**：[[AI/Agent/Agentic-RL/ToRL-Tool-Integrated-Reinforcement-Learning|ToRL]] — code interpreter masking
 - **谱系总览**：[[AI/Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool Use RL 训练专题]] — Tool Use RL 全景
-- **评估体系对应**：[[AI/Agent/Agent评估体系批判-Goodhart法则与Benchmark陷阱|Agent评估体系批判：Goodhart's Law]] — Search-R1 的 7 数据集评估策略体现了"多 benchmark 组合 > 单一指标"原则；两篇互补：训练方法（Search-R1）↔ 评估体系（Goodhart批判）
+- **评估体系对应**：[[AI/Agent/Evaluation/Agent评估体系批判-Goodhart法则与Benchmark陷阱|Agent评估体系批判：Goodhart's Law]] — Search-R1 的 7 数据集评估策略体现了"多 benchmark 组合 > 单一指标"原则；两篇互补：训练方法（Search-R1）↔ 评估体系（Goodhart批判）
 
 > **⚠️ 后续工作 vault_gap**：**Search-R1++（arXiv:2602.19526）** 对 Search agent 训练做了系统性消融，发现三条关键结论：①REINFORCE > PPO > GRPO 稳定性（group sampling 方差在搜索场景过大）；②F1 reward 导致 answer avoidance（model 学会不给答案以规避 partial match 扣分），EM reward 更稳；③action-level penalty（惩罚不必要搜索）可修复 F1 reward 的崩溃问题。独立深度笔记待 Scholar 补写。参见：[[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 综合分析 v6]] 第 136 行。
 

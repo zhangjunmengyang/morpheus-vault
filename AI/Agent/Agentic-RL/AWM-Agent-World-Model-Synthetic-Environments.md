@@ -207,7 +207,7 @@ graph TD
 - [[AI/Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent RL 环境工程系统论]] — AWM 是该专题"合成环境"章节最完整的实现案例；AWM 的五阶段流水线直接对应六大设计原则
 - [[AI/Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool Use RL 训练专题]] — AWM 为 tool-use RL 提供训练基础设施；ASTRA/ARTIST/ToRL 等都需要可靠的 tool-use 训练环境
 - [[AI/Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training|ASTRA（Beike）]] — **技术栈同源**：ASTRA 用 MCP tool graph 合成轨迹，AWM 用 MCP 标准接口构建环境；两者合用 = 端到端 tool-use agent 训练流水线
-- [[AI/Agent/EnterpriseGym-Corecraft|EnterpriseGym Corecraft]] — 同为高保真 Agent RL 环境；EnterpriseGym 真实企业系统，AWM 合成规模化；两者是真实 vs 合成的互补路线
+- [[AI/Agent/Agentic-RL/EnterpriseGym-Corecraft|EnterpriseGym Corecraft]] — 同为高保真 Agent RL 环境；EnterpriseGym 真实企业系统，AWM 合成规模化；两者是真实 vs 合成的互补路线
 - [[AI/Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO（NeurIPS 2025）]] — AWM 用 binary terminal reward → credit assignment 难题；GiGPO 的 anchor state grouping 正是在 AWM 类环境中解 credit 的最优方案
 - [[AI/Agent/Agentic-RL/SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO（arXiv:2602.06554）]] — AWM 的多轮 tool-call RL 场景正是 SeeUPO 理论证明的 multi-turn contextual bandit；逆序更新在 AWM 环境上有直接应用价值
 - [[AI/Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2（Checklist Rewards）]] — **Reward 设计的互补方案**：AWM 构建训练环境（基础设施），CM2 设计 unverifiable tool-use 的 reward 信号（监督信号）；两者合用 = 完整的 open-ended tool-use RL 训练基础设施（AWM 环境 + CM2 checklist reward）

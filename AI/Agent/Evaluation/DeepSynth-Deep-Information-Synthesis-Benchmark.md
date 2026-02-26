@@ -11,8 +11,8 @@ sources:
 related:
   - "[[AI/Agent/Agentic-RL/Agent-RL-环境工程系统论]]"
   - "[[AI/Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization]]"
-  - "[[AI/Agent/Aletheia-Gemini3-DeepThink-FirstProof]]"
-  - "[[AI/Agent/Agent评估体系批判-Goodhart法则与Benchmark陷阱]]"
+  - "[[AI/Agent/Evaluation/Aletheia-Gemini3-DeepThink-FirstProof]]"
+  - "[[AI/Agent/Evaluation/Agent评估体系批判-Goodhart法则与Benchmark陷阱]]"
   - "[[AI/Agent/Agentic-RL/Search-R1-Reasoning-Search-Engine-RL]]"
 ---
 
@@ -211,8 +211,8 @@ DeepSynth 揭示的核心能力缺口：
 
 - [[AI/Agent/Agentic-RL/Agent-RL-环境工程系统论]] — 真实世界任务的 Reward 设计挑战；DeepSynth 类任务的 JSON 验证器可作为 Reward 信号来源
 - [[AI/Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization]] — 反事实 credit assignment：导航错误（找不到正确数据源）和综合错误（拿到数据但推理出错）是两种不同的失败模式，对应 CSO 的不同 credit 维度
-- [[AI/Agent/Aletheia-Gemini3-DeepThink-FirstProof]] — 研究级任务评估对比：数学（形式可验证，Lean 4）vs 信息综合（JSON 可验证）；两种验证器的工程差异
-- [[AI/Agent/Agent评估体系批判-Goodhart法则与Benchmark陷阱]] — DeepSynth 在设计上对抗 Goodhart's Law（不可直接搜索 + 双重标注），但规模偏小是统计弱点
+- [[AI/Agent/Evaluation/Aletheia-Gemini3-DeepThink-FirstProof]] — 研究级任务评估对比：数学（形式可验证，Lean 4）vs 信息综合（JSON 可验证）；两种验证器的工程差异
+- [[AI/Agent/Evaluation/Agent评估体系批判-Goodhart法则与Benchmark陷阱]] — DeepSynth 在设计上对抗 Goodhart's Law（不可直接搜索 + 双重标注），但规模偏小是统计弱点
 - [[AI/Agent/Agentic-RL/Search-R1-Reasoning-Search-Engine-RL]] — 搜索 RL 训练方法；DeepSynth 的多源导航任务可作为更难的 Search-RL 训练数据
 
 ## 推荐阅读

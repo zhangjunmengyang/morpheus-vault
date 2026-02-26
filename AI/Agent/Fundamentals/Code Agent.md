@@ -9,7 +9,7 @@ status: draft
 
 ## 概述
 
-[[AI/Agent/Code Agent|Code Agent]] 和 [[Computer Use Agent]] 代表了 AI Agent 技术的重要发展方向。Code Agent 专注于软件开发任务，如代码生成、bug 修复、代码审查等；Computer Use Agent 则更进一步，能够直接操作计算机界面，模拟人类的屏幕操作行为。本文将深入探讨这两类 Agent 的技术架构、代表性产品以及当前的局限性和发展方向。
+[[AI/Agent/Fundamentals/Code-Agent-深度|Code Agent]] 和 [[Computer Use Agent]] 代表了 AI Agent 技术的重要发展方向。Code Agent 专注于软件开发任务，如代码生成、bug 修复、代码审查等；Computer Use Agent 则更进一步，能够直接操作计算机界面，模拟人类的屏幕操作行为。本文将深入探讨这两类 Agent 的技术架构、代表性产品以及当前的局限性和发展方向。
 
 ## Code Agent
 

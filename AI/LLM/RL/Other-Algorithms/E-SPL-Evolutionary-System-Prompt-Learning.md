@@ -14,7 +14,7 @@ arxiv: "2602.14697"
 created: 2026-02-20
 see-also:
   - "[[AI/LLM/RL/Other-Algorithms/GEPA-Reflective-Prompt-Evolution]]"
-  - "[[AI/Agent/Calibrate-Then-Act-Cost-Aware-Exploration]]"
+  - "[[AI/Agent/Agentic-RL/Calibrate-Then-Act-Cost-Aware-Exploration]]"
   - "[[AI/LLM/RL/Theory/RLVR-Edge-of-Competence]]"
 ---
 
@@ -199,7 +199,7 @@ Agentic search 任务中，学到的 system prompt 自动发现了「VERIFIED/NO
 - **GEPA** (arXiv:2507.19457, ICLR 2026 Oral) — Reflective prompt evolution，与 E-SPL 相近，但不更新权重
 - **CTA** (arXiv:2602.16699) — RL 无法学习 meta-exploration，需要显式先验
 - **LACONIC** (Vault: AI/LLM/RL/Other-Algorithms/LACONIC-Length-Constrained-RL.md) — RL 对 output 格式的控制
-- **Calibrate-Then-Act** (Vault: AI/Agent/Calibrate-Then-Act-Cost-Aware-Exploration.md) — 同类思路
+- **Calibrate-Then-Act** (Vault: AI/Agent/Agentic-RL/Calibrate-Then-Act-Cost-Aware-Exploration.md) — 同类思路
 
 ---
 

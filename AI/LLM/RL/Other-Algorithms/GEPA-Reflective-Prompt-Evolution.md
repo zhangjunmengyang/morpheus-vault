@@ -17,7 +17,7 @@ authors: "Lakshya A Agrawal et al."
 affiliation: "UC Berkeley + Stanford + Databricks + MIT"
 see-also:
   - "[[AI/LLM/RL/Other-Algorithms/E-SPL-Evolutionary-System-Prompt-Learning]]"
-  - "[[AI/Agent/Calibrate-Then-Act-Cost-Aware-Exploration]]"
+  - "[[AI/Agent/Agentic-RL/Calibrate-Then-Act-Cost-Aware-Exploration]]"
   - "[[AI/LLM/RL/Theory/RLVR-Edge-of-Competence]]"
 ---
 
@@ -209,7 +209,7 @@ E-SPL 的 Evolution-only 条件就是 GEPA 的简化版（E-SPL 论文明确提�
 ## 相关论文
 
 - [[AI/LLM/RL/Other-Algorithms/E-SPL-Evolutionary-System-Prompt-Learning|E-SPL]] (arXiv:2602.14697) — 在 GEPA 基础上加上 RL weight update，联合优化；E-SPL 论文明确说「our EA is very similar to GEPA」
-- [[AI/Agent/Calibrate-Then-Act-Cost-Aware-Exploration|Calibrate-Then-Act]] (arXiv:2602.16699) — 显式先验注入，探索策略不能从 RL 自动涌现；与 GEPA 结论三角互证
+- [[AI/Agent/Agentic-RL/Calibrate-Then-Act-Cost-Aware-Exploration|Calibrate-Then-Act]] (arXiv:2602.16699) — 显式先验注入，探索策略不能从 RL 自动涌现；与 GEPA 结论三角互证
 - [[AI/LLM/RL/Theory/RLVR-Edge-of-Competence|RLVR Edge of Competence]] — RL 在能力边界附近才有效；GEPA 补充了"软边界内 language 更优"的视角
 - **MIPROv2** — Instruction + few-shot 联合优化，GEPA 的主要 baseline
 - **TextGrad** — 基于文本 gradient 的 prompt 优化

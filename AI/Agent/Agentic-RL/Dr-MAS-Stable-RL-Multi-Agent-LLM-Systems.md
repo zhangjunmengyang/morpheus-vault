@@ -187,4 +187,4 @@ Multi-Agent RL 训练
 
 **训练拓扑与编排**
 - [[AI/Agent/Agentic-RL/PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]] — agent 内部 phase-level expert routing；Dr. MAS 解决跨 agent reward 归一化
-- [[AI/Agent/AdaptOrch-Task-Adaptive-Multi-Agent-Orchestration|AdaptOrch]] — 推理时多 agent 编排拓扑路由；Dr. MAS 解决训练时多 agent 梯度稳定性
+- [[AI/Agent/Multi-Agent/AdaptOrch-Task-Adaptive-Multi-Agent-Orchestration|AdaptOrch]] — 推理时多 agent 编排拓扑路由；Dr. MAS 解决训练时多 agent 梯度稳定性

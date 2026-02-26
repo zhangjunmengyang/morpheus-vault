@@ -562,5 +562,5 @@ _这篇文章本身就是进化模式的产物：发现子 Agent 记忆缺失（
 - [[AI/Agent/AI-Agent-2026-技术全景|AI Agent 2026 技术全景]] — Agent 技术全景综述，本文的进化框架在大型 Agent 系统中普遍适用
 - [[AI/Agent/Agentic-RL/AWM-Agent-World-Model-Synthetic-Environments|AWM（Agent World Model）]] — 通过合成环境让 Agent 自我演化，与模式七（遗传进化）有技术对应
 - [[AI/Safety/AI Agent 集体行为与安全漂移|AI Agent 集体行为与安全漂移]] — 多 Agent 系统中的安全漂移，对应本文「价值观校准」章节的群体层面
-- [[AI/Agent/Calibrate-Then-Act-Cost-Aware-Exploration|Calibrate-Then-Act]] — 何时停下来问人的成本建模，与模式八（环境感知适应）互补
+- [[AI/Agent/Agentic-RL/Calibrate-Then-Act-Cost-Aware-Exploration|Calibrate-Then-Act]] — 何时停下来问人的成本建模，与模式八（环境感知适应）互补
 - [[AI/LLM/Evaluation/PERSIST-LLM-Personality-Stability-Benchmark|PERSIST]] — LLM 行为一致性基准，对应本文「价值观漂移自检」，从评估角度量化了进化偏差的问题

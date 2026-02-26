@@ -334,7 +334,7 @@ graph LR
 - **MARS2 完整笔记**：[[AI/Agent/Agentic-RL/MARS2-Multi-Agent-Scaling-Law-RL-Code-Generation]]
 - **Dr. MAS 完整笔记**：[[AI/Agent/Agentic-RL/Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems|Dr. MAS]] — 梯度稳定性 + per-agent normalization
 - **SHARP 完整笔记**：[[AI/Agent/Agentic-RL/SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL|SHARP]] — Shapley credit attribution，ICML 2026
-- **AgentConductor**：[[AI/Agent/AgentConductor-Topology-Evolution-Multi-Agent-Code]] — 拓扑演化视角
+- **AgentConductor**：[[AI/Agent/Multi-Agent/AgentConductor-Topology-Evolution]] — 拓扑演化视角
 - **理论基础**：Dec-POMDP (Bernstein et al., 2002) / MAPPO (Yu et al., 2022) / CTDE 框架
 - **对比参考**：[[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析]] — Single-Agent RL 全景
 

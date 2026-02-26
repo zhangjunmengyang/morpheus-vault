@@ -112,8 +112,8 @@ Agent 在 Gaia2 中面对：
 
 ## see-also
 
-- [[AI/Agent/Aletheia-Math-Research-Agent|Aletheia]] — 同期的 Agent benchmark 跨越（math research）
-- [[AI/Agent/EnterpriseGym-Corecraft|EnterpriseGym Corecraft]] — 企业 RL 环境，与 Gaia2 ARE 平台同类思路
+- [[AI/Agent/Evaluation/Aletheia-Math-Research-Agent|Aletheia]] — 同期的 Agent benchmark 跨越（math research）
+- [[AI/Agent/Agentic-RL/EnterpriseGym-Corecraft|EnterpriseGym Corecraft]] — 企业 RL 环境，与 Gaia2 ARE 平台同类思路
 - [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿]] — Gaia2 的训练价值需要在 Agentic RL 框架下理解
 - [[AI/LLM/Evaluation/ICLR-2026-趋势分析|ICLR 2026 趋势]] — 2026 年 Agent benchmark 整体趋势
 - [[AI/Agent/目录]] — Agent MOC
