@@ -200,4 +200,4 @@ $$\mathbf{F}^{\Delta\mathbf{W}}_t = \mathbb{E}_{(x,y)\sim\mathcal{D}_t}\left[\le
 - [[AI/LLM/SFT/LoRA|LoRA（低秩适应基础）]] — EWC-LoRA的技术底座；核心洞察：ΔW=AB的bilinear结构导致独立Fisher不可用，必须从全维Fisher投影
 - [[AI/LLM/SFT/PEFT 方法对比|PEFT方法对比]] — 参数高效微调生态全景；EWC-LoRA在PECL（参数高效持续学习）方向填补了regularization-based的空白，与architecture-based（每任务独立LoRA）形成稳定性-存储Pareto权衡
 - [[AI/LLM/SFT/LLM微调实战-2026技术全景|LLM微调实战2026全景]] ⭐ — 工程化配套；持续学习（多任务顺序微调）是微调实战的高阶场景，EWC-LoRA是唯一存储恒定且λ连续可调的解法
-- [[AI/LLM/RolePlaying/OpenCharacter-Large-Scale-Synthetic-Persona-Training|OpenCharacter（合成Persona训练）]] — "LLM人格工程栈"三角：OpenCharacter用合成数据SFT建立角色风格（第1层），EWC-LoRA保证多角色持续微调时旧角色不被覆盖（第2层），PERSIST揭示两层都不足以解决结构性稳定（第3层→需要叙事锚点）
+- [[AI/LLM/Application/OpenCharacter-Large-Scale-Synthetic-Persona-Training|OpenCharacter（合成Persona训练）]] — "LLM人格工程栈"三角：OpenCharacter用合成数据SFT建立角色风格（第1层），EWC-LoRA保证多角色持续微调时旧角色不被覆盖（第2层），PERSIST揭示两层都不足以解决结构性稳定（第3层→需要叙事锚点）

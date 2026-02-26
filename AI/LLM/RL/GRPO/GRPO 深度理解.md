@@ -199,7 +199,7 @@ GRPO 是"极简主义 RL"的典范：PPO 用复杂的价值网络学基线，GRP
 > - [[AI/LLM/RL/PPO/PPO 原理]] — GRPO 去掉了 PPO 的 Critic，对比学习两者
 > - [[AI/LLM/RL/GRPO/Blockwise-Advantage-Estimation]] — 解决 GRPO 长序列信用分配问题
 > - [[AI/LLM/RL/Other-Algorithms/CM2 — Checklist Rewards多轮Tool Use RL]] — 多轮 RL 的奖励设计
-> - [[AI/LLM/RL/Frameworks/QeRL-Quantization-Enhanced-RL]] — GRPO 在量化环境下的稳定性
+> - [[AI/LLM/Frameworks/QeRL-Quantization-Enhanced-RL]] — GRPO 在量化环境下的稳定性
 >
 > 🤖 **GRPO 在 Agent 场景的根本性改造**（理论 → 应用的完整链）：
 > - [[AI/Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO（NeurIPS 2025）]] — GRPO 在 Agent 训练的核心问题：所有 step 共享 episode-level advantage。GiGPO 用 Anchor State Grouping 实现 step-level credit assignment，内存等于 GRPO

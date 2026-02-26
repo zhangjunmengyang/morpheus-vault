@@ -47,7 +47,7 @@ AlexNet → VGG → ResNet        ViT → DeiT → Swin
 
 ### 可控生成
 
-- [[AI/CV/ControlNet|ControlNet]] — 给 Diffusion Model 加条件控制
+- [[AI/MLLM/ControlNet|ControlNet]] — 给 Diffusion Model 加条件控制
   - 输入边缘图 / 深度图 / 骨架图 → 生成符合条件的图像
   - 核心技术：zero convolution（训练开始时不影响原模型）
   - 实用场景：精确控制图像生成的构图、姿态、边缘

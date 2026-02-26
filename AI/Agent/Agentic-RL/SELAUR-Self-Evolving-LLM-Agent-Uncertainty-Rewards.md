@@ -233,7 +233,7 @@ Reward 来源谱系（更新）：
 
 **探索增强同族（exploration 维度）：**
 - [[AI/LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO（arXiv:2602.14169）]] — Pivot-Driven Resampling 解决 GRPO 探索塌缩（root saturation）；与 SELAUR 的 uncertainty-based 探索思路相似（都关注探索不足），但机制不同（DEEP-GRPO 识别 pivot 轨迹重采样，SELAUR 用 token 熵直接 reshape reward）
-- [[AI/LLM/MultiModal/PyVision-RL-Agentic-Vision-Interaction-Collapse|PyVision-RL（arXiv:2602.20739）]] — 多模态 Agentic RL 的 Interaction Collapse（RL 退化为少工具少多轮）；Oversampling-Filtering-Ranking 主动过滤退化轨迹 vs SELAUR 对失败轨迹 reward reshape——两者处理 RL 训练中 agent 行为退化问题，但层次不同：SELAUR 在 reward 层激活失败信号，PyVision-RL 在 rollout 层过滤退化轨迹
+- [[AI/MLLM/PyVision-RL-Agentic-Vision-Interaction-Collapse|PyVision-RL（arXiv:2602.20739）]] — 多模态 Agentic RL 的 Interaction Collapse（RL 退化为少工具少多轮）；Oversampling-Filtering-Ranking 主动过滤退化轨迹 vs SELAUR 对失败轨迹 reward reshape——两者处理 RL 训练中 agent 行为退化问题，但层次不同：SELAUR 在 reward 层激活失败信号，PyVision-RL 在 rollout 层过滤退化轨迹
 
 **综述导航：**
 - [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL 2026 综合分析]] — Reward Design 维度框架；SELAUR 填补「uncertainty intrinsic reward」类别

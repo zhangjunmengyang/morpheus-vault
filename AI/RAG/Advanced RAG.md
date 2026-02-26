@@ -333,7 +333,7 @@ result = evaluate(
 
 ## See Also
 
-- [[AI/RAG/目录|RAG MOC]] — 检索增强生成全景索引
+- [[AI/RAG/_MOC|RAG MOC]] — 检索增强生成全景索引
 - [[AI/RAG/RAG-2026-技术全景|RAG 2026 技术全景]] — 宏观综述
 - [[AI/RAG/RAG 检索策略|RAG 检索策略]] — 本文进阶技术的基础层
 - [[AI/RAG/向量数据库选型|向量数据库选型]] — 稠密检索的基础设施选型

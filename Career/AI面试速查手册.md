@@ -1564,7 +1564,7 @@ related:
 - [[AI/LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — 2026 Reward Modeling 前沿（Fisher信息驱动）
 
 ### RAG 方向
-- [[AI/RAG/目录|RAG MOC]] — RAG 知识域全索引
+- [[AI/RAG/_MOC|RAG MOC]] — RAG 知识域全索引
 - [[AI/RAG/Advanced RAG|Advanced RAG]] — Self-RAG/GraphRAG 进阶技术
 - [[AI/RAG/向量数据库选型|向量数据库选型]] — FAISS/Milvus/Chroma 对比
 

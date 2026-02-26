@@ -17,6 +17,6 @@ tags:
 
 - [[AI/目录|AI MOC]] — AI 知识域全索引
 - [[AI/Agent/目录|Agent MOC]] — AI 落地业务的核心技术方向
-- [[AI/RAG/目录|RAG MOC]] — 业务 AI 化的核心基础设施（知识库+检索）
+- [[AI/RAG/_MOC|RAG MOC]] — 业务 AI 化的核心基础设施（知识库+检索）
 - [[Career/AI 应用工程师职业路径|AI 应用工程师职业路径]] — AI 应用工程师如何承接业务 AI 化需求
 - [[AI/LLM/目录|LLM MOC]] — 支撑业务 AI 化的底层能力

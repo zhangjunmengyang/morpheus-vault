@@ -25,7 +25,7 @@ updated: 2026-02-22
 | 👁️ 多模态 | [[AI/MLLM/目录]] | CLIP/Qwen-VL/InternVL3 |
 | 🤝 Agent | [[AI/Agent/目录]] | 6 章 + 附录学习路线 |
 | 📈 量化交易 | [[AI/Quant/目录]] | Crypto · AI+量化融合 |
-| 🔍 RAG | [[AI/RAG/目录]] | 检索增强生成 |
+| 🔍 RAG | [[AI/RAG/_MOC]] | 检索增强生成 |
 | 🛡️ AI Safety | [[AI/Safety/目录]] | 安全 · 伦理 · 对齐 |
 | 🌐 前沿方向 | [[AI/Frontiers/目录]] | 前沿模型 + 新兴方向 |
 | 🏗️ 数学基础 | [[AI/Foundations/目录]] | 线性代数 · 概率 · 优化 |

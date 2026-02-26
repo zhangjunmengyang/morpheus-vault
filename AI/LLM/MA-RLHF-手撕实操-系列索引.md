@@ -124,7 +124,7 @@ related:
 
 | 笔记 | 核心内容 | 面试重点 |
 |------|----------|----------|
-| [[AI/MultiModal/CLIP-ViT-LLaVA-手撕实操|CLIP-ViT-LLaVA-手撕实操]] | ViT + CLIP InfoNCE + LLaVA 投影 | 视觉 token 如何进 LLM |
+| [[AI/MLLM/CLIP-ViT-LLaVA-手撕实操|CLIP-ViT-LLaVA-手撕实操]] | ViT + CLIP InfoNCE + LLaVA 投影 | 视觉 token 如何进 LLM |
 
 ---
 

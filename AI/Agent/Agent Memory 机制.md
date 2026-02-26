@@ -259,7 +259,7 @@ class HybridMemory:
 - [[AI/Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN（StarPO）]] — Echo Trap 的核心原因之一：多轮 Agent 记忆管理不当导致 reward 同质化
 - [[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent-RL|KLong]] — 超长 horizon Agent 的 Context Overflow 处理（轨迹切割策略）
 - [[AI/Agent/Fundamentals/ReAct与CoT|ReAct 与 CoT]] — Agent 工作记忆的使用方式（scratchpad 机制）
-- [[AI/LLM/Application/RAG/RAG 原理与架构|RAG 原理]] — 向量数据库实现长期记忆检索的技术基础
+- [[AI/RAG/RAG 原理与架构|RAG 原理]] — 向量数据库实现长期记忆检索的技术基础
 - [[AI/Agent/目录|Agent MOC]] — Agent 整体知识导航
 - [[AI/LLM/Architecture/Engram-Conditional-Memory-DeepSeek-V4|Engram：条件记忆（DeepSeek V4）]] — LLM 架构层面的记忆机制创新（参数化 vs 外部记忆对比视角）
 

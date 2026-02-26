@@ -282,7 +282,7 @@ Layer 1: Token 层（STAPO + MASPO）
 
 **系统/Off-Policy 级别**
 - [[AI/LLM/RL/Other-Algorithms/Stable-Asynchrony-VCPO-Off-Policy-RL|Stable Asynchrony (VCPO)]] — 方差控制 IS correction
-- [[AI/LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 统一 FP8 精度 flow，消除量化引入的 off-policy
+- [[AI/LLM/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 统一 FP8 精度 flow，消除量化引入的 off-policy
 - [[AI/LLM/RL/Other-Algorithms/VESPO-Variational-Sequence-Policy-Optimization|VESPO]] ★ — 变分推导最优 IS kernel，理论最严格（新增，2026-02-21）
 - [[AI/LLM/RL/Other-Algorithms/SAPO-Soft-Adaptive-Policy-Optimization|SAPO]] ★ — sech² 软门控，Qwen3-VL 生产在用（新增，2026-02-21）
 - [[AI/LLM/RL/Other-Algorithms/GSPO-Group-Sequence-Policy-Optimization|GSPO]] ★ — 序列级 IS 替代 token 级，Qwen3 团队（新增，2026-02-21）

@@ -215,7 +215,7 @@ Jet-RL 和 PTE 是同一个"RL 训练效率"大问题的两个子问题：
 
 ## see-also
 
-- [[AI/LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 同一"RL 训练效率"问题的另一维度：FP8 量化精度不一致→统一 precision flow（NVIDIA+MIT HAN Lab，arXiv:2601.14243）
+- [[AI/LLM/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 同一"RL 训练效率"问题的另一维度：FP8 量化精度不一致→统一 precision flow（NVIDIA+MIT HAN Lab，arXiv:2601.14243）
 - [[AI/LLM/Inference/KV Cache]] — KV Cache 核心机制
 - [[AI/LLM/Inference/KV Cache|KV Cache]] — KV Cache 优化综述
 - [[AI/LLM/Inference/Deep-Thinking-Ratio-DTR-v2-Think-At-N|DTR v2 + Think@N]] — 推理质量评估维度，与 PTE 正交（PTE 解决训练效率，DTR 解决推理轨迹选择）

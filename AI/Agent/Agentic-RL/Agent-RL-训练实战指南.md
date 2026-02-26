@@ -1011,7 +1011,7 @@ def phase_router(obs_t, goal, action_history):
 - [[AI/LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] — 梯度稀疏：Teacher LM 动态课程，选 p_q≈0.5 的样本
 - [[AI/LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]] — Root Saturation：Pivot-Driven Resampling 打开探索空间
 - [[AI/LLM/RL/Other-Algorithms/VESPO-Variational-Sequence-Policy-Optimization|VESPO]] — Off-policy：变分推导最优 IS kernel，staleness 64× 稳定
-- [[AI/LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 系统层 off-policy：统一 FP8 精度 flow
+- [[AI/LLM/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 系统层 off-policy：统一 FP8 精度 flow
 
 ### 第二章：Agentic RL 特有问题
 - [[AI/Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER]] — 分层 Advantage Estimation，多步 agent credit assignment

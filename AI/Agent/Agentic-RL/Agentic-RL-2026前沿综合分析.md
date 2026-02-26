@@ -665,4 +665,4 @@ $$T^{(1)} < T^{(2)} < \cdots < T^{(M)} \quad (2h \to 4h \to 6h)$$
 - [[AI/Agent/Memory-R1-RL-for-LLM-Memory-Management|Memory-R1]] — RL 训练 Memory Manager（ADD/UPDATE/DELETE/NOOP），记忆管理新范式（★★★★☆）
 - [[AI/Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training|ASTRA]] — 全自动 tool-use RL 流水线，MCP 工具图 + verifiable 环境（★★★★☆）
 - [[AI/Agent/Agentic-RL/RC-GRPO-Reward-Conditioned-Tool-Calling-RL|RC-GRPO]] — reward token conditioning 解决 multi-turn GRPO reward 同质化（★★★★☆）
-- [[AI/LLM/MultiModal/PyVision-RL-Agentic-Vision-Interaction-Collapse|PyVision-RL（2602.20739）]] — **跨模态训练失败模式**：Interaction Collapse = Echo Trap 的多模态版本（v10 新增）；Oversampling-Filtering-Ranking + Accumulative Tool Reward；On-Demand Context Construction 解决视频 context 爆炸
+- [[AI/MLLM/PyVision-RL-Agentic-Vision-Interaction-Collapse|PyVision-RL（2602.20739）]] — **跨模态训练失败模式**：Interaction Collapse = Echo Trap 的多模态版本（v10 新增）；Oversampling-Filtering-Ranking + Accumulative Tool Reward；On-Demand Context Construction 解决视频 context 爆炸

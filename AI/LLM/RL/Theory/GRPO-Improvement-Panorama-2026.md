@@ -407,8 +407,8 @@ Dr. GRPO = 对 std 大的样本不惩罚（算法层）
 - [[AI/LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 多维 GRPO 改进
 - [[AI/LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]] — 探索维度
 - [[AI/LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] — 样本维度
-- [[AI/LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 系统精度维度
-- [[AI/LLM/RL/Frameworks/QeRL-Quantization-Enhanced-RL|QeRL]] — 量化探索维度
+- [[AI/LLM/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 系统精度维度
+- [[AI/LLM/Frameworks/QeRL-Quantization-Enhanced-RL|QeRL]] — 量化探索维度
 - [[AI/LLM/RL/Other-Algorithms/Stable-Asynchrony-VCPO-Off-Policy-RL|VCPO]] — 系统异步 off-policy 维度
 - [[AI/LLM/RL/Other-Algorithms/VESPO-Variational-Sequence-Policy-Optimization|VESPO]] — 变分 off-policy 修正，理论最严格
 - [[AI/LLM/RL/Other-Algorithms/SAPO-Soft-Adaptive-Policy-Optimization|SAPO]] — sech² 软门控，Qwen3-VL 生产

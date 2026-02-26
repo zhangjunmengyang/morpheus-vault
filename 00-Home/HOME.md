@@ -19,10 +19,10 @@ tags:
     - [[AI/LLM/RL/目录]] — ⭐ 强化学习 for LLM（重点方向）
   - [[AI/MLLM/目录]] — 多模态大模型
   - [[AI/Agent/目录]] — Agent 智能体
-  - [[AI/RAG/目录]] — 检索增强生成（RAG）
+  - [[AI/RAG/_MOC]] — 检索增强生成（RAG）
   - [[AI/Safety/目录]] — AI 安全与对齐
   - [[AI/Frontiers/目录]] — 前沿方向（Embodied AI / World Models）
-  - [[AI/CV/目录]] — 计算机视觉
+  - [[AI/CV/_MOC]] — 计算机视觉
 
 ### 🔧 Engineering — 数据工程
 - [[Engineering/目录]] — 工程总览（Flink / Spark / Doris）

@@ -52,5 +52,5 @@ Miniforge：
 
 - [[AI/Agent/Frameworks/Agent 框架对比 2026|Agent 框架对比 2026]] — dbgpt 在主流框架中的对比分析
 - [[AI/Agent/目录|Agent MOC]] — Agent 知识全图谱
-- [[AI/LLM/Application/RAG/RAG 原理与架构|RAG 原理与架构]] — dbgpt 的核心应用场景
-- [[AI/RAG/目录|RAG MOC]] — 检索增强生成知识图谱
+- [[AI/RAG/RAG 原理与架构|RAG 原理与架构]] — dbgpt 的核心应用场景
+- [[AI/RAG/_MOC|RAG MOC]] — 检索增强生成知识图谱

@@ -128,7 +128,7 @@ PDF: <https://arxiv.org/pdf/2602.20739>
 - [[AI/Agent/Agentic-RL/SELAUR-Self-Evolving-LLM-Agent-Uncertainty-Rewards|SELAUR（JHU+ASU，2602.21158）]] — 同样处理 RL 失败轨迹问题，但视角不同：SELAUR 从失败轨迹中提取 uncertainty reward（浅层），PyVision-RL 在训练时主动过滤退化轨迹（系统层）
 
 **多模态 RL 感知体系**
-- [[AI/LLM/MultiModal/Multimodal-Perception-RL-综合分析|多模态感知 RL 综合分析]] — 四条多模态 RL 技术路线全景；Interaction Collapse 是感知之外的第五类问题（训练动态稳定性）
+- [[AI/MLLM/Multimodal-Perception-RL-综合分析|多模态感知 RL 综合分析]] — 四条多模态 RL 技术路线全景；Interaction Collapse 是感知之外的第五类问题（训练动态稳定性）
 - [[AI/LLM/RL/Other-Algorithms/AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL（Anchor Token，视觉 credit assignment）]] — 多模态 credit assignment 角度，与 PyVision-RL 的 rollout filtering 正交：AT-RL 解决"哪些视觉 token 值得信用"，PyVision-RL 解决"哪些轨迹值得训练"
 
 **Rollout 质量控制谱系**
@@ -143,5 +143,5 @@ PDF: <https://arxiv.org/pdf/2602.20739>
 
 1. [PyVision-RL 原文（arXiv:2602.20739）](https://arxiv.org/abs/2602.20739) — 精读待补
 2. [[AI/Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN]] — Echo Trap 完整诊断与理论，Interaction Collapse 理解的理论前提
-3. [[AI/LLM/MultiModal/Multimodal-Perception-RL-综合分析|多模态感知 RL 综合分析]] — 多模态 RL 训练的全景地图，PyVision-RL 的上下文背景
+3. [[AI/MLLM/Multimodal-Perception-RL-综合分析|多模态感知 RL 综合分析]] — 多模态 RL 训练的全景地图，PyVision-RL 的上下文背景
 4. [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL 综合分析 v10]] — Interaction Collapse 在 Agentic RL 训练失败模式谱系中的位置

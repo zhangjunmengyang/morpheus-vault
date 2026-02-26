@@ -18,7 +18,7 @@ type: note
 | **Qwen2.5** | 2024-09 | 全系列开源旗舰：0.5B–72B Dense + 3B-A3B MoE，预训练 18T tokens，代码/数学专项模型 |
 | **Qwen3** | 2025-04 | 混合思维模式（thinking/non-thinking 动态切换）、MoE 旗舰 235B-A22B、支持 119 种语言和方言 |
 | **Qwen3-Next** | 2025-09 | 架构验证版（80B-A3B），首次引入 Gated DeltaNet 混合线性注意力 |
-| **Qwen3.5** | 2026-02 | [[AI/Models/Qwen3.5-Plus\|详细笔记]]。Qwen3-Next 架构放大版：397B-A17B MoE（512 专家），Gated DeltaNet + Gated Attention 3:1 混合，原生多模态 Early Fusion，201 种语言，256K/1M 上下文，吞吐 19× 提升 |
+| **Qwen3.5** | 2026-02 | [[AI/LLM/Architecture/Qwen3.5-Plus\|详细笔记]]。Qwen3-Next 架构放大版：397B-A17B MoE（512 专家），Gated DeltaNet + Gated Attention 3:1 混合，原生多模态 Early Fusion，201 种语言，256K/1M 上下文，吞吐 19× 提升 |
 
 ### 核心趋势
 

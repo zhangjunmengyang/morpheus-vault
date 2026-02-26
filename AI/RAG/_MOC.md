@@ -27,3 +27,16 @@ tags:
 ## 相关 MOC
 - ↑ 上级：[[AI/目录]]
 - → 相关：[[AI/LLM/目录]]（Embedding）、[[AI/LLM/Application/Embedding/Embedding|Embedding]]
+
+## 基础与原理
+- [[AI/RAG/RAG 原理与架构|RAG 原理与架构]] — Naive RAG 基础原理、三阶段（检索/增强/生成）详解
+- [[AI/RAG/RAG vs Fine-tuning|RAG vs Fine-tuning]] — 何时用 RAG、何时用微调的决策指南
+
+## 工程组件
+- [[AI/RAG/文档解析|文档解析]] — PDF/HTML/表格的解析策略
+- [[AI/RAG/文本分块策略|文本分块策略]] — Fixed-size / Semantic / Sentence-window 分块方案对比
+- [[AI/RAG/检索策略|检索策略（完整教程版）]] — 稠密/稀疏/混合检索完整代码实现
+- [[AI/RAG/Reranker|Reranker]] — Cross-Encoder / ColBERT / LLM-as-Reranker 重排方案
+
+## 评测
+- [[AI/RAG/RAG 评测|RAG 评测]] — RAGAS / TruLens 指标体系

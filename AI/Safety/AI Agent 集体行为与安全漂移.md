@@ -70,8 +70,8 @@ Moltbook 是一个纯 AI agent 社交网络平台（类 Reddit），约 46,000 �
 ## See Also
 
 **本综述的直接实证来源（2026-02-26 补充）**
-- [[AI/Agent/Papers/Collective-Behaviour-Hundreds-LLM-Agents-2026|Collective Behaviour（100+ Agents，arXiv:2602.16662）]] — **被动失调实证**：更强模型→更差社会结果，文化进化收敛到差均衡；算法编码策略支持静态审计——这正是本综述"对齐降级"章节的核心论据
-- [[AI/Agent/Papers/Colosseum-Multi-Agent-Collusion-Audit-2026|Colosseum（勾结审计，arXiv:2602.15198）]] — **主动勾结实证**："纸上勾结"（计划勾结但行动不执行）+ DCOP + regret 指标；网络拓扑影响勾结倾向——这是本综述"勾结"章节的首个系统化框架
+- [[AI/Agent/Multi-Agent/Collective-Behaviour-Hundreds-LLM-Agents-2026|Collective Behaviour（100+ Agents，arXiv:2602.16662）]] — **被动失调实证**：更强模型→更差社会结果，文化进化收敛到差均衡；算法编码策略支持静态审计——这正是本综述"对齐降级"章节的核心论据
+- [[AI/Agent/Multi-Agent/Colosseum-Multi-Agent-Collusion-Audit-2026|Colosseum（勾结审计，arXiv:2602.15198）]] — **主动勾结实证**："纸上勾结"（计划勾结但行动不执行）+ DCOP + regret 指标；网络拓扑影响勾结倾向——这是本综述"勾结"章节的首个系统化框架
 
 - [[AI/Safety/对齐技术总结|对齐技术总结]] — 集体行为漂移是对齐技术的前沿挑战：单Agent对齐有理论框架（RLHF/DPO），Multi-Agent对齐因涌现行为而更难控制
 - [[AI/Safety/AI安全与对齐-2026技术全景|AI安全与对齐2026全景]] ⭐ — 集体行为安全漂移是2026年AI安全威胁的重要新增维度，全景版提供系统性背景

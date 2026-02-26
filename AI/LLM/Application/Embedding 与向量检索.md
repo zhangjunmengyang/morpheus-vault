@@ -18,8 +18,8 @@ sources:
   - "Chen et al. 'BGE M3-Embedding: Multi-Lingual, Multi-Functionality, Multi-Granularity' arXiv:2402.03216"
   - "Johnson et al. 'Billion-scale similarity search with GPUs (FAISS)' arXiv:1702.08734"
 related:
-  - "[[AI/LLM/Application/RAG/RAG 原理与架构]]"
-  - "[[AI/LLM/Application/RAG/检索策略]]"
+  - "[[AI/RAG/RAG 原理与架构]]"
+  - "[[AI/RAG/检索策略]]"
   - "[[AI/RAG/RAG-2026-技术全景|RAG 2026 全景]]"
 ---
 
@@ -391,9 +391,9 @@ embedding_small /= np.linalg.norm(embedding_small)  # 重新归一化
 - 高维空间的"维度灾难"：维度越高，向量间距离区分度越低
 
 ### 脑暴：如果往下延伸
-- 结合 [[AI/LLM/Application/RAG/检索策略|检索策略]] 的 Hybrid Search，BGE-M3 同时输出 Dense+Sparse 是天然的混合检索方案
+- 结合 [[AI/RAG/检索策略|检索策略]] 的 Hybrid Search，BGE-M3 同时输出 Dense+Sparse 是天然的混合检索方案
 - Matryoshka Embedding 让"效果-成本"可以连续调节——这对大规模系统意义重大
 
-> 🔗 See also: [[AI/LLM/Application/RAG/检索策略]] — 检索策略是 Embedding 选型的下游应用
+> 🔗 See also: [[AI/RAG/检索策略]] — 检索策略是 Embedding 选型的下游应用
 > 🔗 See also: [[AI/RAG/RAG-2026-技术全景|RAG 2026 全景]] — Embedding 在完整 RAG 架构中的位置
-> 🔗 See also: [[AI/LLM/Application/RAG/RAG 原理与架构]] — RAG 基础架构
+> 🔗 See also: [[AI/RAG/RAG 原理与架构]] — RAG 基础架构

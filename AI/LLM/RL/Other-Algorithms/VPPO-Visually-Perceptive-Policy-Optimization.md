@@ -251,6 +251,6 @@ VPPO 指向了一个更大的问题：**多模态 LLM 的训练信号设计完�
 3. **对比阅读**：[[AI/LLM/RL/Other-Algorithms/AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL]] — 文本域的 anchor token 方法
 4. **背景理解**：[[AI/LLM/RL/GRPO/GRPO-Improvement-Panorama-2026|GRPO Improvement Panorama]] — GRPO 改进全景，VPPO 补充 Perception 维度
 5. **Survey 位置**：Agentic RL Survey (2509.02547) §3.6 Perception — VPPO 是该章节的代表工作
-6. **互补解法**：[[AI/LLM/MultiModal/Perception-R1-Visual-Perception-Reward-RLVR|Perception-R1]] — 显式感知 Reward 解法（路线 B）；VPPO 修 token 梯度（路线 C），两者正交可组合
-7. **综合视角**：[[AI/LLM/MultiModal/Multimodal-Perception-RL-综合分析|多模态感知 RL 综合分析]] — 四路线全景，VPPO 是路线 C 代表
+6. **互补解法**：[[AI/MLLM/Perception-R1-Visual-Perception-Reward-RLVR|Perception-R1]] — 显式感知 Reward 解法（路线 B）；VPPO 修 token 梯度（路线 C），两者正交可组合
+7. **综合视角**：[[AI/MLLM/Multimodal-Perception-RL-综合分析|多模态感知 RL 综合分析]] — 四路线全景，VPPO 是路线 C 代表
 8. **元原则**：[[AI/LLM/RL/Theory/RL-Signal-Granularity-Causal-Structure-Principle|RL 信号粒度与因果结构匹配原则]] — VPPO 是路径3（修改 Gradient 流）的实现，与 Tree-GRPO/GiGPO/Perception-R1 共同印证该原则

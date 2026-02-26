@@ -98,5 +98,5 @@ GPT-4 在部分 Theory of Mind 测试中表现接近成年人水平。但这到�
 - [[AI/MLLM/MLLM 概述|MLLM 概述]]
 - [[AI/LLM/Architecture/AI Models Collapse 论文|AI Models Collapse 论文]]
 - [[AI/LLM/Inference/Ollama|Ollama]]
-- [[AI/CV/ControlNet|ControlNet]]
+- [[AI/MLLM/ControlNet|ControlNet]]
 - [[AI/Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]]

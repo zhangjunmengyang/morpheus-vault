@@ -7,7 +7,7 @@ domain: AI/LLM/RL/Frameworks
 arxiv: "2601.14243"
 rating: 4
 status: permanent
-see-also: ["[[AI/LLM/RL/Frameworks/QeRL-Quantization-Enhanced-RL|QeRL-Quantization-Efficient-RL]]"]
+see-also: ["[[AI/LLM/Frameworks/QeRL-Quantization-Enhanced-RL|QeRL-Quantization-Efficient-RL]]"]
 ---
 
 # Jet-RL: FP8 On-Policy RL Training
@@ -206,4 +206,4 @@ Backward pass 需要 save 部分 activations：
 - [[AI/LLM/Frameworks/Slime-RL-Framework|Slime RL Framework]] — 异步 RL infra，Jet-RL 的 FP8 统一可直接应用于此类框架
 - [[AI/LLM/RL/Other-Algorithms/Stable-Asynchrony-VCPO-Off-Policy-RL|VCPO]] — 同为系统级 RL 稳定性方向，解决 off-policy 方差（PTE 解决 cache 内存，VCPO 解决异步误差）
 - [[AI/LLM/Inference/Accordion-Thinking-Self-Regulated-Step-Summaries|Accordion-Thinking]] — 算法层效率（模型学会主动压缩 CoT，4× throughput），与 Jet-RL 系统层正交可组合（arXiv:2602.03249）★★★★☆
-- [[AI/LLM/RL/Frameworks/QeRL-Quantization-Enhanced-RL|QeRL]] ⭐ — **反向方向**：量化噪声对 RL **有益**（促进探索），4-bit+LoRA 不仅快 1.5×，多项基准超 16-bit；与 Jet-RL 对"量化在 RL 中的角色"形成互补论证（ICLR 2026，arXiv:2510.11696）★★★★
+- [[AI/LLM/Frameworks/QeRL-Quantization-Enhanced-RL|QeRL]] ⭐ — **反向方向**：量化噪声对 RL **有益**（促进探索），4-bit+LoRA 不仅快 1.5×，多项基准超 16-bit；与 Jet-RL 对"量化在 RL 中的角色"形成互补论证（ICLR 2026，arXiv:2510.11696）★★★★

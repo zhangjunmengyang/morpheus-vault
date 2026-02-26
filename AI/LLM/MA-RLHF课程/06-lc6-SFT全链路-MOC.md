@@ -114,7 +114,7 @@ Step 8  LLM-as-Judge & Eval        ← 模型评估模型
 
 ### Step 6：Embedding & RAG
 
-**[[AI/LLM/Application/RAG/RAG 原理与架构|RAG 原理]]**
+**[[AI/RAG/RAG 原理与架构|RAG 原理]]**
 
 - **RAG 完整流程**：文档分块 → Embedding 向量化 → 向量数据库存储 → Query Embedding → Top-K 检索 → 注入 Context → LLM 生成
 - **Embedding 模型**：将文本映射到稠密向量空间，语义相似的文本向量距离近
@@ -122,7 +122,7 @@ Step 8  LLM-as-Judge & Eval        ← 模型评估模型
 
 课程代码：`Embedding.ipynb` + `RAG.ipynb`（TODO，课程待完善）
 
-深入阅读：[[AI/LLM/Application/RAG/RAG vs Fine-tuning|RAG vs Fine-tuning]] · [[AI/LLM/Application/Embedding 与向量检索|Embedding 与向量检索]]
+深入阅读：[[AI/RAG/RAG vs Fine-tuning|RAG vs Fine-tuning]] · [[AI/LLM/Application/Embedding 与向量检索|Embedding 与向量检索]]
 
 ---
 
