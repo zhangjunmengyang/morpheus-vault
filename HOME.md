@@ -1,66 +1,102 @@
 ---
-title: "Morpheus Vault — 入口"
-type: home
+title: "HOME"
+type: moc
 domain: home
 tags:
-  - type/home
-updated: 2026-02-22
+  - type/reference
 ---
 
-# 🧠 Morpheus Vault
+# 🏠 Morpheus Vault
 
-> AI算法工程师的认知资产库 · 589 篇 · 馆长维护
+> 个人知识体系中枢 — 按知识主题组织，而非内容类型
 
-完整目录入口 → **[[00-Home/HOME|HOME（完整版）]]**
+## 核心知识域
 
----
+### 🤖 AI — 人工智能
+- [[AI/目录]] — AI 总览
+  - [[AI/Foundations/目录]] — 数学基础 / ML / DL
+  - [[AI/LLM/目录]] — 大语言模型（核心领域）⭐
+    - [[AI/LLM/RL/目录]] — ⭐ 强化学习 for LLM（重点方向）
+  - [[AI/MLLM/目录]] — 多模态大模型
+  - [[AI/Agent/目录]] — Agent 智能体
+  - [[AI/RAG/_MOC]] — 检索增强生成（RAG）
+  - [[AI/Safety/目录]] — AI 安全与对齐
+  - [[AI/Frontiers/目录]] — 前沿方向（Embodied AI / World Models）
+  - [[AI/CV/_MOC]] — 计算机视觉
 
-## 快捷入口
+### 🔧 Engineering — 数据工程
+- [[Career/数据工程/目录]] — 工程总览（Flink / Spark / Doris）
 
-| 方向 | MOC | 说明 |
-|------|-----|------|
-| 🤖 AI 总览 | [[AI/目录]] | 知识体系全景 |
-| 🧬 大语言模型 | [[AI/LLM/目录]] | 7 章 + 2 附录学习路线 |
-| 🎯 强化学习 for LLM | [[AI/LLM/RL/目录]] | PPO/GRPO/DPO/DAPO 全覆盖 |
-| 👁️ 多模态 | [[AI/MLLM/目录]] | CLIP/Qwen-VL/InternVL3 |
-| 🤝 Agent | [[AI/Agent/目录]] | 6 章 + 附录学习路线 |
-| 📈 量化交易 | [[AI/Quant/目录]] | Crypto · AI+量化融合 |
-| 🔍 RAG | [[AI/RAG/_MOC]] | 检索增强生成 |
-| 🛡️ AI Safety | [[AI/Safety/目录]] | 安全 · 伦理 · 对齐 |
-| 🌐 前沿方向 | [[AI/Frontiers/目录]] | 前沿模型 + 新兴方向 |
-| 🏗️ 数学基础 | [[AI/Foundations/目录]] | 线性代数 · 概率 · 优化 |
-| 🔧 工程 | [[Engineering/目录]] | 系统设计 · 工程实践 |
-| ✍️ 输出 | [[Output/目录]] | 发布文章 & 社区分享 |
-| 💼 职业 | [[Career/目录]] | 职业发展 |
+### 📈 Quant — 量化研究
+- Quant/ — Crypto 量化交易 2026 全景（待建 MOC，1篇）
 
----
+### ✍️ Output — 输出与发布
+- [[思考/目录]] — 发布文章 & 社区分享
 
-## 目录结构
+### 🔍 外部资源
+- [[观猹-Watcha-AI产品聚合平台|观猹（Watcha）]] — 中文 AI 产品发现与点评，Product Hunt 平替
 
+### 💼 Career — 职业发展
+- [[Career/目录]] — 述职 / 求职 / PMO / 方法论
+
+### 🚀 Projects — 项目实战
+- [[Projects/0-目录]] — 企业级项目 + 实验
+
+### 📚 Resources — 学习资源
+- [[Resources/0-目录]] — 课程索引 / 论文列表
+
+### 📰 Newsloom — 每日情报
+- Newsloom/ — Sentinel 每日 AI 情报归档（无 MOC，按日期检索）
+
+## 工作区入口
+
+- [[00-Home/Inbox|📥 Inbox]] — 新内容临时收集箱，整理后归入知识域
+
+## 快速查询
+
+```dataview
+TABLE type, domain, file.mtime as "更新时间"
+FROM ""
+WHERE type = "paper"
+SORT file.mtime DESC
+LIMIT 10
 ```
-AI/
-├── Foundations/     # 数学 + ML + DL 基础
-├── LLM/            # 大语言模型（按学习路径 7 章编排）
-│   ├── Architecture/  # 第二章：模型架构
-│   ├── Pretraining/   # 第三章：预训练
-│   ├── SFT/           # 第四章：微调训练
-│   ├── RL/            # 第四章：强化学习
-│   ├── Inference/     # 第五章：推理部署
-│   ├── Application/   # 第六章：应用层
-│   ├── Efficiency/    # 第七章：效率与压缩
-│   ├── Evaluation/    # 第七章：评估
-│   ├── Frameworks/    # 附录：工具框架
-│   └── Infra/         # 附录：训练基础设施
-├── Agent/           # Agent 智能体（6 章编排）
-├── MLLM/            # 多模态大模型
-├── RAG/             # 检索增强生成
-├── Quant/           # 量化交易（NEW）
-├── Safety/          # AI 安全
-├── Frontiers/       # 前沿模型与方向
-└── CV/              # 计算机视觉
+
+## 最近更新
+
+```dataview
+TABLE type, domain
+FROM "" AND -"Templates" AND -"00-Home"
+SORT file.mtime DESC
+LIMIT 15
 ```
 
----
 
-*由馆长维护 · 最后更新：2026-02-22*
-*本次大整理：清理 17 个废弃副本 · 消除 Training/Prompt-Engineering/ 目录重叠 · 新增 Quant 知识域 · MOC 博客化重组 · ASCII 图替换 Mermaid*
+# 论文待学习列表
+
+李沐：https://github.com/Tramac/paper-reading-note?tab=readme-ov-file
+
+选读列表：https://github.com/km1994/llms_paper
+
+https://github.com/mli/paper-reading
+
+仓库 top papers：https://github.com/dair-ai/ML-Papers-of-the-Week?tab=readme-ov-file
+
+LLM 思想
+
+- [LLMs Get Lost In Multi-Turn Conversation](https%3A%2F%2Farxiv.org%2Fabs%2F2505.06120)
+ RL
+
+- REINFORCE++： [REINFORCE++: An Efficient RLHF Algorithm with Robustness to Both Prompt and Reward Models](https%3A%2F%2Farxiv.org%2Fabs%2F2501.03262)
+- GPRO（deepseekmath）：[DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models](https%3A%2F%2Farxiv.org%2Fabs%2F2402.03300)
+- [zhuanlan.zhihu.com](https%3A%2F%2Fzhuanlan.zhihu.com%2Fp%2F20021693569)
+- https://zhuanlan.zhihu.com/p/21046265072
+- https://swift.readthedocs.io/zh-cn/latest/BestPractices/GRPO%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B.html
+- [IOPO: Empowering LLMs with Complex Instruction Following via Input-Output Preference Optimizatio](https%3A%2F%2Farxiv.org%2Fabs%2F2411.06208)
+Prompt
+*https://arxiv.org/abs/2201.11903*
+*https://arxiv.org/abs/2205.11916*
+*https://arxiv.org/abs/2203.11171*
+*https://arxiv.org/abs/2210.03493*
+*https://arxiv.org/abs/2305.10601*
+*https://arxiv.org/pdf/2303.11366.pdf*

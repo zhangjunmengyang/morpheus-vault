@@ -1,26 +1,33 @@
 ---
-title: "Transformer 架构深度解析 — 2026 技术全景"
-brief: "从数学第一性原理出发的 Transformer 架构全景，覆盖 Attention 机制（MHA/GQA/MLA）、位置编码（RoPE/YaRN）、KV Cache 优化（PagedAttention/Speculative Decoding）、稀疏注意力、MoE、SSM/Mamba、归一化与激活函数演进，以及 2026 前沿架构（MoD/Hyper-Connections/Token Merging）。面试武器级深度，含 18 道难度递进面试题。"
+title: Transformer 架构深度解析 — 2026 技术全景
+brief: 从数学第一性原理出发的 Transformer 架构全景，覆盖 Attention 机制（MHA/GQA/MLA）、位置编码（RoPE/YaRN）、KV Cache 优化（PagedAttention/Speculative Decoding）、稀疏注意力、MoE、SSM/Mamba、归一化与激活函数演进，以及 2026 前沿架构（MoD/Hyper-Connections/Token Merging）。面试武器级深度，含 18 道难度递进面试题。
 type: survey
 domain: ai/llm/architecture
 date: 2026-02-21
-updated: "2026-02-22"
-tags: [面试, Transformer, Attention, MoE, SSM, 架构, 深度解析]
+updated: 2026-02-22
+tags:
+  - 面试
+  - Transformer
+  - Attention
+  - MoE
+  - SSM
+  - 架构
+  - 深度解析
 status: complete
 sources:
-  - "Vaswani et al., Attention Is All You Need, arXiv:1706.03762 (2017)"
-  - "Dao et al., FlashAttention, arXiv:2205.14135 (2022)"
-  - "Su et al., RoPE/RoFormer, arXiv:2104.09864 (2021)"
-  - "Ainslie et al., GQA, arXiv:2305.13245 (2023)"
-  - "DeepSeek-AI, DeepSeek-V2/V3 (2024)"
-  - "Gu & Dao, Mamba, arXiv:2312.00752 (2023)"
-  - "Kwon et al., PagedAttention/vLLM, SOSP 2023"
-  - "Peng et al., YaRN, arXiv:2309.00071 (2023)"
+  - Vaswani et al., Attention Is All You Need, arXiv:1706.03762 (2017)
+  - Dao et al., FlashAttention, arXiv:2205.14135 (2022)
+  - Su et al., RoPE/RoFormer, arXiv:2104.09864 (2021)
+  - Ainslie et al., GQA, arXiv:2305.13245 (2023)
+  - DeepSeek-AI, DeepSeek-V2/V3 (2024)
+  - Gu & Dao, Mamba, arXiv:2312.00752 (2023)
+  - Kwon et al., PagedAttention/vLLM, SOSP 2023
+  - Peng et al., YaRN, arXiv:2309.00071 (2023)
 related:
   - "[[AI/LLM/Architecture/_MOC|Architecture MOC]]"
   - "[[AI/LLM/Architecture/MoE 深度解析|MoE 深度解析]]"
   - "[[AI/LLM/Architecture/FlashAttention|FlashAttention]]"
-  - "[[Career/AI面试速查手册|AI 面试速查手册]]"
+  - "[[AI面试速查手册|AI 面试速查手册]]"
   - "[[AI/LLM/SFT/LLM微调实战-2026技术全景|LLM 微调实战 2026]]"
 ---
 
@@ -1714,4 +1721,4 @@ $$
 ---
 
 > **Last Updated**: 2026-02-22
-> **See Also**: [[AI/LLM/Architecture/_MOC|Architecture MOC]] · [[Career/AI面试速查手册|AI 面试速查手册]] · [[AI/LLM/Architecture/MoE 深度解析|MoE 深度解析]] · [[AI/LLM/Architecture/Transformer 位置编码|位置编码详解]] · [[AI/LLM/Architecture/FlashAttention|FlashAttention]] · [[AI/LLM/SFT/LLM微调实战-2026技术全景|LLM 微调实战 2026]] — 配套：先懂架构再学微调，两文合读=面试全覆盖
+> **See Also**: [[AI/LLM/Architecture/_MOC|Architecture MOC]] · [[AI面试速查手册|AI 面试速查手册]] · [[AI/LLM/Architecture/MoE 深度解析|MoE 深度解析]] · [[AI/LLM/Architecture/Transformer 位置编码|位置编码详解]] · [[AI/LLM/Architecture/FlashAttention|FlashAttention]] · [[AI/LLM/SFT/LLM微调实战-2026技术全景|LLM 微调实战 2026]] — 配套：先懂架构再学微调，两文合读=面试全覆盖
