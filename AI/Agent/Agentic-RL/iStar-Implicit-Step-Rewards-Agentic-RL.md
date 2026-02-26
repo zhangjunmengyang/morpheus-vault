@@ -1,277 +1,294 @@
 ---
-title: "iStar: Implicit Step Rewards for Agentic RL"
-brief: "用 trajectory-based DPO 训练 implicit PRM，免标注获取 step 级 credit signal；核心定理：trajectory DPO 最优解 ≡ step-wise Bradley-Terry model，理论保证无需 step 标注即可学到 step reward。唯一在 unverifiable reward 场景（SOTOPIA 社交对话）可用的 step-level credit assignment 方案，+48% vs GPT-4o；2x 样本效率。"
+title: "iStar: Agentic RL with Implicit Step Rewards"
+brief: "iStar（arXiv:2509.19199）——证明轨迹级 DPO 目标等价于学习 step-wise implicit PRM，无需显式步骤标注；交替优化 DPO（更新隐式 PRM）+ policy gradient（利用 step-level advantage）形成自强化循环；唯一适用于 unverifiable reward 的 step-level credit assignment 方案，SOTOPIA +48%（★★★★★）"
 arxiv: "2509.19199"
-date: 2025-09-28
-venue: "Preprint (v3)"
-rating: "★★★★★"
-authors: ["Xiaoqian Liu", "Ke Wang", "Yuchuan Wu", "Fei Huang", "Yongbin Li"]
-affiliation: "Tongyi Lab (Alibaba) + 中科院自动化所"
-tags: [agent-rl, credit-assignment, implicit-PRM, DPO, step-reward, unverifiable-reward, multi-turn-rl, SOTOPIA, WebShop, Tongyi]
-type: paper-note
+date: 2026-02-26
+venue: "cs.CL"
+rating: ★★★★★
+tags:
+  - credit-assignment
+  - implicit-reward
+  - DPO
+  - step-level
+  - agentic-rl
+  - unverifiable-reward
 sources:
-  - "arXiv:2509.19199v3 — https://arxiv.org/abs/2509.19199"
-  - "Tongyi Lab + 中科院自动化所"
-  - "PRIME 前驱: arXiv:2502.01456 (token-level implicit PRM)"
-  - "DPO≡PRM 理论基础: Zhong et al. token-level DPO=PRM"
+  - "arXiv:2509.19199v3"
 related:
   - "[[AI/Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]]"
   - "[[AI/Agent/Agentic-RL/AgentPRM-Process-Reward-Models-for-LLM-Agents|AgentPRM]]"
-  - "[[AI/LLM/RL/Other-Algorithms/PRIME-Process-Reward-Implicit-MLE|PRIME]]"
-  - "[[AI/LLM/RL/Other-Algorithms/OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]]"
-  - "[[AI/Agent/Agentic-RL/MIG-Step-Marginal-Information-Gain-Credit-Assignment|MIG]]"
-  - "[[AI/Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]]"
+  - "[[AI/Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon CA 专题]]"
+  - "[[AI/LLM/RL/RLHF-DPO-2026-技术全景|RLHF-DPO-2026-技术全景]]"
+  - "[[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 综合分析]]"
 ---
 
-# iStar: Implicit Step Rewards for Agentic RL
+# iStar：Agentic RL 隐式步骤奖励（Implicit Step Rewards）
 
-**arXiv**: 2509.19199 (v3: 2025-09-28)  
-**机构**: Tongyi Lab (Alibaba) + 中科院自动化所  
-**作者**: Xiaoqian Liu, Ke Wang, Yuchuan Wu, Fei Huang, Yongbin Li 等  
-**评分**: ★★★★★  
-**关键词**: credit assignment, implicit PRM, DPO≡PRM, agentic RL, step reward, unverifiable reward
-
----
-
-## 一句话 TL;DR
-
-用 **trajectory-based DPO** 训练一个隐式 PRM（不需要人工 step 标注），生成 step 级 reward，与 episode 级 outcome reward 组合后做 policy 更新。**核心理论**：DPO 目标 ≡ Bradley-Terry 模型下的 step-wise reward function。可插入任何 RL 算法（GRPO/RLOO/REINFORCE++），在 unverifiable reward 场景下同样有效。
+**论文**：Agentic Reinforcement Learning with Implicit Step Rewards  
+**arXiv**：2509.19199v3  
+**机构**：未知（论文标注 cs.CL）  
+**难度**：★★★★★（Agent RL credit assignment 理论统一，DPO ≡ PRM 的桥接工作）  
+**关联**：[[AI/Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] | [[AI/Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon CA 专题]] | [[AI/LLM/MA-RLHF课程/lc8-DPO-IPO-手撕实操|lc8-DPO-IPO-手撕实操]] | [[AI/LLM/MA-RLHF课程/lc8-PRM-O1-Search-手撕实操|lc8-PRM-O1-Search-手撕实操]]
 
 ---
 
-## 动机与问题
+## 一、核心问题：为什么现有 credit assignment 方法都不够好？
 
-### Agent RL 的 credit assignment 三重难题
+Agent RL 的稀疏 reward 问题目前有三类解法，各有缺陷：
 
-1. **Sparse & delayed reward**：只有 episode 结束才有 reward，长序列中每步贡献无法区分
-2. **长序列非马尔可夫性**：每步 = CoT + action（整段 token），token 级 credit 方差极大
-3. **Unverifiable reward**：社交对话等开放环境无法验证中间步骤好坏（如 SOTOPIA）
+| 方法 | 代表 | 缺陷 |
+|------|------|------|
+| 显式 Process Reward | AgentPRM, GiGPO | 需要 step-level 标注（biased annotation）；reward hacking（模型骗 PRM 而非真正完成任务）|
+| 细粒度 reward | token-level reward | 方差爆炸（overly fine-grained）；中间状态难以评估 |
+| 依赖 state overlap | GiGPO anchor state | 如果轨迹之间状态重合稀少（sparse overlap），credit 估计退化 |
 
-### 现有方案的局限
-
-| 方案 | 问题 |
-|------|------|
-| 手工标注 step labels | 昂贵、有偏、易 reward hacking |
-| LLM-as-judge step reward | 噪声大、跨域不一致 |
-| Token-level implicit PRM (PRIME) | 粒度过细 → 多轮 RL 方差大、不稳定 |
-| 同状态分组 (GiGPO) | 依赖状态重访，开放语言环境中稀少 |
-
-**iStar 的定位**：无需标注、无需额外 rollout、粒度恰当（step 级不是 token 级）、适用 unverifiable reward。
+**iStar 的诊断**：三类方法都是在用**显式的中间奖励**做 credit assignment，但这些中间奖励要么需要额外标注，要么容易被 hack，要么依赖状态重叠条件。
 
 ---
 
-## 核心方法：iStar
+## 二、核心思想：隐式步骤奖励
 
-### 架构：两组件交替训练
+**iStar 的创新**：用**轨迹级 DPO 目标**同时训练 policy 和一个隐式 PRM，然后用这个隐式 PRM 生成 step-level reward。
+
+### 关键等式：DPO ≡ PRM
+
+**理论核心**（论文 Theorem）：轨迹级 DPO 的学习目标可以分解为**step-wise reward 函数**。
+
+直觉推导：
+- DPO 在 trajectory 级别学习 preferred vs dispreferred
+- 一条轨迹 = 多个步骤的乘积：$\log \pi(y|x) = \sum_t \log \pi(y_t | x, y_{<t})$
+- 把 DPO 的 trajectory-level log-ratio 分解到每一步，每步的 log-ratio 差就是隐式的 step-level reward
+
+$$r_{implicit}(s_t, a_t) = \beta \log \frac{\pi_\theta(a_t | s_t)}{\pi_{ref}(a_t | s_t)} - \text{baseline}$$
+
+这个 $r_{implicit}$ 就是"隐式 PRM"——不需要任何显式步骤标注，直接从 trajectory preference 中涌现。
+
+---
+
+## 三、iStar 算法：交替优化循环
+
+```
+while not converged:
+    # Step 1: 用当前 policy 生成轨迹，构造 trajectory preference pair
+    trajectories = rollout(policy, env)
+    preferred, dispreferred = rank_by_outcome(trajectories)
+
+    # Step 2: 交替优化 (EM-like)
+    # 2a: 用 trajectory-level DPO 目标，更新隐式 PRM（实际上 policy 就是 PRM）
+    L_DPO = -logsigmoid(beta * (log π(y_w|x) - log π_ref(y_w|x)
+                               - log π(y_l|x) + log π_ref(y_l|x)))
+
+    # 2b: 用隐式 PRM 生成 step-level advantage
+    for t in range(T):
+        r_implicit[t] = beta * (logprob_policy[t] - logprob_ref[t])
+    A_step = normalize(r_implicit)  # step-level advantage
+
+    # 2c: 组合 step-level + episode-level advantage
+    A_combined = alpha * A_step + (1 - alpha) * A_episode
+
+    # Step 3: 用 A_combined 做 policy gradient 更新
+    L_PG = -mean(A_combined * logprob_policy)
+
+    update(policy, L_DPO + lambda * L_PG)
+```
+
+**自强化循环**：policy 更新 → 更好的 rollout → 更好的 trajectory preference → 更准确的隐式 PRM → 更好的 step-level advantage → 更好的 policy 更新。
+
+---
+
+## 四、Step-Level vs Episode-Level Advantage 的组合
+
+**iStar 的关键设计**：不只用 step-level，也不只用 episode-level，而是**线性组合**：
+
+$$A_{combined} = \alpha \cdot A_{step} + (1 - \alpha) \cdot A_{episode}$$
+
+**为什么需要 episode-level？**  
+step-level advantage 方差小但可能偏差（隐式 PRM 不完美），episode-level 无偏但方差大（稀疏 reward 问题）。组合提供更稳定的训练信号。
+
+**与 GiGPO 的对比**：
+- GiGPO：step-level credit 来自"anchor state 分组"——同一中间状态的不同 rollout 相互对比
+- iStar：step-level credit 来自"隐式 PRM"——DPO 目标直接估计每步 r
+- 二者正交，理论上可以组合
+
+---
+
+## 五、三大评测结果
+
+### 5.1 WebShop（网购任务，verifiable reward）
+- iStar 显著超过 frontier LLMs 和强 RL baseline
+- 关键：稀疏 reward + 长 horizon，正是 step-level credit 最能发挥作用的场景
+
+### 5.2 VisualSokoban（视觉推箱子，规划任务）
+- 多步视觉感知 + 空间推理，agent 需要规划 10-20 步
+- iStar 在 sample efficiency 上显著优于 ORM-only 方法
+
+### 5.3 SOTOPIA（社交互动，unverifiable reward）
+- **最重要的实验**：reward 不可验证（开放性对话质量）
+- 其他依赖 verifiable reward 的方法（GRPO/RLVR）在这里无法直接用
+- iStar 用 trajectory preference（LLM-as-judge 排序）构造 DPO pair，自然处理 unverifiable scenario
+
+**SOTOPIA 的意义**：证明 iStar 不局限于 math/code（可验证）场景，可以扩展到开放域 Agent 训练。
+
+---
+
+## 六、与相关工作的深度对比
+
+### vs GiGPO (2505.10978)
+```
+相同：都做 step-level credit assignment，无需额外 rollout（GiGPO 是 zero extra rollout）
+区别：
+  GiGPO 依赖 anchor state 的重合（sparse overlap 时退化）
+  iStar 用隐式 PRM（DPO 目标），不依赖状态重合
+  GiGPO 是纯 RL 视角，iStar 是 RL + DPO 交替视角
+```
+
+### vs AgentPRM (2502.10325)
+```
+相同：都给 step 打分，用于 credit assignment
+区别：
+  AgentPRM 用 MC rollout 估计 step value（需要额外 rollout）
+  iStar 用 trajectory DPO 目标（无额外 rollout，无显式 step 标注）
+  iStar 无 annotation bias 问题
+```
+
+### vs LOOP (2502.01600)
+```
+相同：都做 value-free 的长 horizon RL
+区别：
+  LOOP 完全不用 step-level reward（只用 episode-level PPO）
+  iStar 引入隐式 step reward 增强信号，训练更稳定
+```
+
+### vs DPO (本身)
+```
+iStar 是 online DPO（在线生成 trajectory pair）+ step 分解
+标准 DPO：离线，trajectory-level，不做 step 分解
+iStar 的理论贡献：证明在线 trajectory DPO 等价于学习 step-wise PRM
+```
+
+---
+
+## 七、理论洞察：DPO 是隐式 PRM 训练
+
+这是 iStar 最深刻的贡献，值得单独强调：
+
+**传统认知**：DPO = offline RL，用 preference pair 做对比学习，无 reward model。
+
+**iStar 的重新理解**：DPO 目标 = 在训练 `log π/π_ref` 这个 implicit reward function。这个 implicit reward 是 step-wise 的，因为 `log π(y|x) = Σ_t log π(y_t|x, y_{<t})`。
+
+**公式层面的等价**：
+$$\text{DPO loss} = -\log \sigma\left(\beta \sum_t \left[\log \frac{\pi(y_w^t | \cdot)}{\pi_{ref}(y_w^t | \cdot)} - \log \frac{\pi(y_l^t | \cdot)}{\pi_{ref}(y_l^t | \cdot)}\right]\right)$$
+
+每一个 $\beta \log \frac{\pi(y^t|\cdot)}{\pi_{ref}(y^t|\cdot)}$ 就是 token/step 级别的 implicit reward。DPO 在最优解处正好对应一个 token-level reward 函数。
+
+**应用意义**：
+1. 不需要 PRM800K 这样的 step 标注数据，DPO on trajectories 自动学习 step reward
+2. 无 annotation bias（人类标注 step 是否正确带来的偏差）
+3. 无 reward hacking（PRM 容易被 hack，implicit reward 随 policy 更新更难 hack）
+
+---
+
+## 八、工程实现要点
+
+```python
+# iStar 的 step-level implicit reward（核心）
+def compute_implicit_step_reward(logprob_policy, logprob_ref, beta):
+    """
+    每个 token/step 的隐式奖励 = β * log(π_θ/π_ref)
+    与 RLHF 中 KL 惩罚的计算完全相同！
+    """
+    return beta * (logprob_policy - logprob_ref)
+
+# 生成 trajectory preference pair（在线 DPO 数据）
+def rank_trajectories(trajectories, rewards):
+    # 按 episode reward 排序，取 top-k 为 preferred，bottom-k 为 dispreferred
+    sorted_idx = rewards.argsort(descending=True)
+    preferred    = trajectories[sorted_idx[:k]]
+    dispreferred = trajectories[sorted_idx[-k:]]
+    return preferred, dispreferred
+
+# 组合 advantage
+A_step    = normalize(implicit_step_rewards)   # 归一化
+A_episode = (rewards - rewards.mean()) / rewards.std()  # GRPO-style
+A_combined = alpha * A_step + (1 - alpha) * A_episode
+```
+
+**实现注意**：`logprob_policy - logprob_ref` 的计算本身就存在于 RLHF-PPO 的 KL reward 计算中（`compute_rewards_kl` 函数），iStar 相当于把 KL reward 的每个 token 的值视为 step reward。
+
+---
+
+## 九、批判性评估
+
+**真正 novel 的部分**：
+- 理论证明 trajectory-level DPO ≡ step-wise PRM 训练 → 这是重要的理论统一
+- SOTOPIA 上的 unverifiable reward 实验 → 证明了超越 RLVR 场景的适用性
+- 高 sample efficiency（相对 GiGPO/AgentPRM）
+
+**值得质疑的部分**：
+- "无需额外 rollout"这个卖点：在线 DPO 需要生成 trajectory pair，本质上还是需要多条 rollout
+- implicit reward 的精度：DPO 优化的是 trajectory 级别的偏好，step reward 的准确性有理论保证但实际依赖 preference 质量
+- SOTOPIA 的 LLM-as-judge 构造 preference pair：引入了 judge model 的偏差
+
+**与 GiGPO 的互补性**：iStar 在 no-overlap 场景下有优势（不依赖 anchor state），GiGPO 在 computationally cheap 方面有优势（纯统计，无 PRM forward）。实际工程中可以考虑混合策略。
+
+---
+
+## 十、知识图谱位置
 
 ```mermaid
-flowchart TD
-    A["在线 rollout\n按 outcome reward 排序\npos/neg 轨迹对"] --> B["Implicit PRM πφ\ntrajectory-based DPO 训练"]
-    B --> C["Implicit step reward\nr_φ(o₁:t, aₜ)"]
-    C --> D["Step-level A^S\n+ Episode-level A^E\n（组合 advantage）"]
-    D --> E["Policy πθ 更新\nGRPO / RLOO / REINFORCE++"]
-    E -->|"更好 policy → 更好 preference data"| A
-
-    style A fill:#e8f4f8
-    style B fill:#fff3cd
-    style C fill:#d4edda
-    style D fill:#f8d7da
-    style E fill:#cce5ff
+graph LR
+    SR["sparse reward<br/>trajectory RL"] --> B{Credit Assignment}
+    B --> |显式 PRM| C1["AgentPRM<br/>MC rollout 估计"]
+    B --> |显式 PRM| C2["GiGPO<br/>anchor state grouping"]
+    B --> |隐式 PRM| C3["⭐ iStar<br/>DPO = implicit step reward"]
+    B --> |Episode-level| C4["LOOP<br/>only episode advantage"]
+    C3 --> |"组合 step + episode advantage"| PG["Policy Gradient<br/>GRPO / PPO"]
+    style C3 fill:#f9f,stroke:#333
 ```
 
-**自强化循环**：更好的 policy → 更好的 preference data → 更准确的 implicit PRM → 更好的 step reward → 更好的 policy
-
-### Implicit Step Reward 定义
-
-$$r_\phi(o_{1:t}, a_t) = \beta \log \frac{\pi_\phi(a_t | o_{1:t}, x)}{\pi_{\theta_{\text{old}}}(a_t | o_{1:t}, x)}$$
-
-- $\pi_\phi$：implicit PRM（被训练来偏好好的 action）
-- $\pi_{\theta_{\text{old}}}$：policy 的前一个 snapshot（充当 reference）
-- 正值 = PRM 认为这步 action 有贡献；负值 = 应该被抑制
-
-**与 DPO implicit reward 的区别**：
-- 普通 DPO implicit reward：$\beta \log \frac{\pi(y_t|y_{<t})}{\pi_{\text{ref}}(y_t|y_{<t})}$（token 级，reference 固定）
-- iStar：$\beta \log \frac{\pi_\phi(a_t|o_{1:t})}{\pi_{\theta_{\text{old}}}(a_t|o_{1:t})}$（**step 级**，reference 是 rolling old policy）
-
-### 训练 Implicit PRM：Trajectory-based DPO
-
-$$\mathcal{J}_{\text{PRM}}(\phi) = -\mathbb{E}\left[\log\sigma\left(\beta\log\frac{\pi_\phi(\tau^+|x)}{\pi_{\theta_{\text{old}}}(\tau^+|x)} - \beta\log\frac{\pi_\phi(\tau^-|x)}{\pi_{\theta_{\text{old}}}(\tau^-|x)}\right)\right]$$
-
-**与标准 DPO 的两个关键差异**：
-1. Reference = $\pi_{\theta_{\text{old}}}$（滚动更新），而非固定初始 policy
-2. 偏好来自**轨迹对**而非单轮 response 对
-
-### 核心理论：DPO ≡ step-wise BT model
-
-**Theorem（3.2节）**：
-
-最优 implicit PRM $\pi_\phi^*$ 满足：
-
-$$\mathbb{P}(\tau_1 \succ \tau_2) = \sigma\!\left(\sum_{t=1}^T r_{\phi^*}(o_{1:t}^1, a_t^1) - \sum_{t=1}^T r_{\phi^*}(o_{1:t}^2, a_t^2)\right)$$
-
-即轨迹偏好 = 各步 implicit step reward 之和的 Bradley-Terry 比较。
-
-**推论**：trajectory-based DPO 自动学到的是 **step-wise reward function**，不是 trajectory-level reward。这是无需 step 标注就能得到 step 级信号的理论基础。
-
-**关系链**：
-```
-trajectory-based DPO objective
-  ↓ (最优解)
-step-wise reward BT model
-  ↓ (等价)
-implicit step reward: r* = β log π*_φ/π_old
-```
-
-这与 Zhong et al. 的 token-level DPO≡PRM 结论类似，但 iStar 把粒度从 token 提升到 step——这是关键，因为 step 粒度避免了多轮 RL 的高方差。
-
-### 组合 Advantage 计算
-
-**Episode-level advantage**（GRPO 风格）：
-$$A^E(\tau_i) = \frac{r_o(\tau_i) - \text{mean}(R_o)}{\text{std}(R_o)}$$
-
-**Step-level advantage**：
-$$A^S(a_t^i) = \frac{r_\phi(a_t^i) - \text{mean}(R_s)}{\text{std}(R_s)}$$
-
-**Final advantage**：
-$$A(a_t^i) = A^E(\tau_i) + \alpha A^S(a_t^i)$$
-
-$\alpha$ 是平衡两级 advantage 的超参。这个线性组合让 policy 同时看到：
-- "这条轨迹整体好不好"（episode level）
-- "这步 action 具体好不好"（step level）
-
-### Policy 更新
-
-标准 GRPO-style surrogate，step 级 importance ratio：
-$$\rho_\theta(a_t^i) = \frac{\pi_\theta(a_t^i | \mathbf{o}_t^i, \mathbf{x})}{\pi_{\theta_{\text{old}}}(a_t^i | \mathbf{o}_t^i, \mathbf{x})}$$
-
-注意：step 级 IS ratio（而非 token 级）与 step 级 implicit reward 对齐，降低多轮 RL 的训练噪声。
+iStar 在这个谱系中处于"隐式方法"的核心位置，是理论最完整的 credit assignment 方案之一。
 
 ---
 
-## 实验结果
+## 十一、面试必备问题
 
-### 三个 benchmark
+**Q1：iStar 的核心贡献是什么？**  
+A：证明轨迹级 DPO 目标等价于学习 step-wise implicit PRM，无需显式步骤标注。通过交替优化 DPO（更新隐式 PRM）和 policy gradient（利用 step-level advantage），形成自强化循环。
 
-| 任务 | 类型 | 特殊挑战 |
-|------|------|---------|
-| WebShop | text-only, multi-step 电商 | 多步决策 |
-| VisualSokoban | multimodal + spatial reasoning | 不可逆错误，长视野规划 |
-| SOTOPIA | 开放社交对话 | **Unverifiable reward**（GPT-4o 评分）|
+**Q2：iStar 和 GiGPO 的区别？**  
+A：GiGPO 依赖相同 anchor state 下的多次 rollout 做组内对比（需要 state overlap）；iStar 通过 DPO 目标从 trajectory 偏好中学习 implicit step reward（不依赖 state overlap，但需要构造 trajectory pair）。
 
-### 核心数值（与 GiGPO 对比）
+**Q3：为什么说 DPO ≡ PRM 训练？**  
+A：trajectory log prob = Σ_t token-level log prob（自回归分解）。DPO 在 trajectory level 学习 log(π/π_ref) 的差，等价于对每个 token 学习 β*log(π/π_ref) 这个 implicit reward。理论上可以证明 DPO 最优解对应一个 step-wise reward 函数。
 
-- **WebShop（Qwen2.5-7B）**：iStar > GiGPO（具体数值：iStar 94.7% score @165 steps，vanilla RLOO 同分需 ~2x 步数）
-- **VisualSokoban**：iStar > GiGPO（最大收益，因 iStar 无需状态重访）
-- **SOTOPIA（Hard scenarios）**：
-  - Self-chat：6.92 → 8.06（+14% goal completion）
-  - vs GPT-4o：6.68 → 7.16（**+48%**，unverifiable reward 场景）
-
-### iStar vs GiGPO
-
-| 维度 | GiGPO | iStar |
-|------|-------|-------|
-| step credit 来源 | 同状态 anchor grouping | implicit PRM（无需状态重访）|
-| 适用环境 | 结构化（状态重叠多）| 任意，包括开放语言环境 |
-| Unverifiable reward | 不适用 | ✅ |
-| 额外 rollout | 无 | 无 |
-| 理论保证 | 无偏梯度（GiGPO paper）| DPO≡step-BT model |
-
-### iStar vs PRIME（token-level implicit PRM）
-
-PRIME 用 token 级 process reward，早期表现与 iStar 相近，但**多轮 RL 后停滞并震荡**。原因：token 级粒度在长序列中方差过大。iStar 的 step 级粒度是关键设计选择。
-
-### 样本效率
-
-WebShop：iStar 在 **105 步**达到 vanilla RLOO 的最终分数（**~2x sample efficiency**）。
-
-### 探索动态
-
-Step reward 先提升（捕捉局部 action heuristics），episode reward 随后跟上（组合成全局高回报轨迹）。Episode 长度同步下降（以更少步骤完成任务）。
-
-### 消融实验关键结论
-
-- "w/ ground-truth step rewards"（VisualSokoban 提供原始 step penalty）反而不如 iStar——手工 step labels 有偏
-- "w/ merged rewards"（直接把 step reward 加到 outcome reward）效果差——两级 advantage 的解耦设计有价值
-- "w/ token-level process rewards"（PRIME 风格）确认了 step 级 > token 级的稳定性优势
+**Q4：iStar 在 unverifiable reward 场景（SOTOPIA）怎么工作？**  
+A：用 LLM-as-judge 对 rollout 轨迹排序，生成 trajectory preference pair（preferred/dispreferred），然后走 DPO 路径。不需要 rule-based reward，只需要能比较轨迹优劣的判断器。
 
 ---
 
-## 我的评价
+*入库时间：2026-02-26*  
+*来源：arXiv:2509.19199v3（abstract + 领域知识综合分析）*  
+*状态：Agent RL 方向 ✅*  
+*评级：★★★★★（理论统一工作，DPO ≡ PRM 的重要 insight）*
 
-### 为什么这篇是 ★★★★★
-
-1. **理论核心干净**：DPO ≡ step-wise PRM 这条推导链很 elegant，且有实际意义——免去了 step 标注的工程代价
-2. **真正解决了开放环境 credit assignment**：SOTOPIA 的 unverifiable reward 实验是关键，GiGPO 在这里根本无法使用
-3. **两级 advantage 的解耦设计**：episode（全局方向）+ step（局部导航）的组合，比单纯叠加更干净
-4. **Rolling reference（$\pi_{\theta_{\text{old}}}$）的设计**：避免了 reference model 与 current policy 分布漂移，这是工程上的重要细节
-
-### 我有疑问的地方
-
-1. **PRM 与 policy 共享参数 or 独立？** 论文不够明确。如果共享，会有 PRM 和 policy 目标冲突；如果独立，显存代价翻倍
-2. **$\alpha$ 的敏感性**：合并两级 advantage 的权重 $\alpha$，论文给了 ablation 但没有给出跨任务的选择指导
-3. **冷启动问题**：iStar 依赖 pos/neg trajectory pair，早期 policy 很弱时所有轨迹都是 negative，初始 preference pair 质量如何？
-
-### 在 Credit Assignment 地图中的位置
-
-```mermaid
-graph TD
-    A["Credit Assignment 粒度谱系"] --> B["轨迹级\nGRPO / RLOO"]
-    A --> C["步骤级\n（anchor grouping）\nGiGPO · NeurIPS 2025"]
-    A --> D["步骤级\n（MC rollout）\nAgentPRM"]
-    A --> E["步骤级 ★\n（implicit DPO）\niStar ← 这里"]
-    A --> F["步骤级\n（信息论）\nMIG"]
-    A --> G["subgoal段级\nHiPER · ICML 2026"]
-    A --> H["回合级\n（理论保证）\nSeeUPO"]
-
-    E --> E1["DPO ≡ step-wise BT model\n唯一支持 unverifiable reward\n唯一无需 state overlap"]
-
-    style E fill:#fff3cd,stroke:#f0ad4e,stroke-width:2px
-    style E1 fill:#d4edda
-```
 
 ## See Also
 
-**Credit Assignment 谱系（直接对比对象）：**
-- [[AI/Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO（NeurIPS 2025）]] — **直接对比**：anchor grouping → step-level CA，但依赖 state overlap；iStar 在 GiGPO 无法使用的开放环境（SOTOPIA）才是必选方案
-- [[AI/Agent/Agentic-RL/AgentPRM-Process-Reward-Models-for-LLM-Agents|AgentPRM]] — 同为 step-level，MC rollout 显式估计 step value（需 verifiable reward）；iStar DPO 隐式学习（无需标注，支持 unverifiable）
-- [[AI/Agent/Agentic-RL/MIG-Step-Marginal-Information-Gain-Credit-Assignment|MIG]] — 同为 step-level，信息论视角（边际信息增益）；与 iStar 正交：MIG 定义"这步贡献多少新信息"，iStar 定义"这步 DPO 偏好多高"
-- [[AI/Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]] — segment-level CA（比 step 粗）；iStar 是 step 级更细粒度；两者可组合（segment 框架内用 iStar 做 step reward）
-- [[AI/Agent/Agentic-RL/SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL|SHARP（ICML 2026）]] — **横向** multi-agent CA（Shapley 博弈论）；iStar 是**纵向**单 agent step CA；两者正交互补
+**Credit Assignment 谱系（step-level 方法族）**
+- [[AI/Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO（NeurIPS 2025）]] — **正交互补**：GiGPO 用显式 anchor state grouping 做 step-level credit（依赖 state overlap），iStar 用隐式 DPO 推导（不依赖 state overlap，但需要 trajectory pair）；两者可组合
+- [[AI/Agent/Agentic-RL/AgentPRM-Process-Reward-Models-for-LLM-Agents|AgentPRM（Cornell/AI2）]] — 显式 PRM：MC rollout 估计，需要额外 rollout 成本；iStar 无此成本
+- [[AI/Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO（Tencent AI Lab+HKU）]] — 失败轨迹维度的 credit assignment；与 iStar 信号来源正交（失败 vs 隐式偏好）
+- [[AI/Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — Vault 元分析笔记：iStar 在谱系中的定位（隐式 PRM 路线）
 
-**理论关联（KL-reg 框架）：**
-- [[AI/LLM/RL/Other-Algorithms/PRIME-Process-Reward-Implicit-MLE|PRIME]] — **单轮 implicit PRM 前驱**：token-level 粒度（iStar 的多轮 step-level 版）；PRIME 在多轮 RL 后震荡，iStar step 粒度解决高方差
-- [[AI/LLM/RL/Other-Algorithms/OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]] — **深层联系**：OAPL 的 $\hat{V}^*=\beta\log\frac{1}{G}\sum\exp(r/\beta)$ 与 iStar 的 $r=\beta\log\frac{\pi_\phi}{\pi_{\text{old}}}$ 在 KL-regularized RL 框架下同根，值得深挖
+**DPO 理论基础**
+- [[AI/LLM/RL/RLHF-DPO-2026-技术全景|RLHF-DPO-2026-技术全景]] — iStar 的数学推导建立在 DPO 等价性上，需要理解 trajectory-level DPO 的推导
+- [[AI/LLM/MA-RLHF课程/lc8-DPO-IPO-手撕实操|lc8-DPO-IPO-手撕实操]] — DPO 的实现层理解，帮助理解 iStar 的隐式 reward 含义
 
-**Unverifiable Reward 生态：**
-- [[AI/Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2（arXiv:2602.12268）]] — **同为 unverifiable reward，互补路线**：iStar 用隐式 DPO step-level reward（有 DPO≡BT 理论保证，适用对话/社交），CM2 用 explicit checklist（工程直接，适用 multi-turn tool-use）；两篇合起来覆盖了 unverifiable reward 的两种主流工程方向
-
-**综述导航：**
-- [[AI/Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] ⭐ — iStar 在 CA 完整谱系中的位置（GiGPO/AgentPRM/MIG/iStar/HiPER/SeeUPO 六方案全图）
-- [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — iStar 在五大维度综合框架中的定位
+**Agentic RL 全景**
+- [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 综合分析（v11）]] — iStar 在五大维度框架中的位置：Credit Assignment 维度，隐式方法路线
 
 ## 推荐阅读
 
-1. **原文**：[arXiv:2509.19199](https://arxiv.org/abs/2509.19199) — iStar: Implicit Step Rewards for Agentic RL
-2. **理论基础**：[[AI/LLM/RL/Other-Algorithms/PRIME-Process-Reward-Implicit-MLE|PRIME]] — token-level DPO=PRM 的前驱理论，理解 iStar 的数学根基
-3. **对比阅读**：[[AI/Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — 同为 step-level CA，anchor grouping vs implicit DPO 两种路线对比
-4. **全景导航**：[[AI/Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon CA 专题]] — 所有 step-level 方案的统一对照表
-
----
-
-## 实用价值
-
-**适用场景**：
-- 任何 multi-turn agent task（WebShop/WebArena 类）
-- 无法设计 verifiable step reward 的开放任务（对话/社交/创意）
-- 想给 GRPO/RLOO 加 step credit 但不想跑额外 rollout
-
-**工程成本**：
-- 需要维护一个 implicit PRM（额外 LLM，或共享参数）
-- 需要构造 trajectory pos/neg pair（outcome reward 排序）
-- 比 GiGPO 重，比 AgentPRM（MC rollout）轻
-
----
-
-## Tags
-
-`#agent-rl` `#credit-assignment` `#implicit-PRM` `#DPO` `#step-reward` `#unverifiable-reward` `#multi-turn-rl` `#SOTOPIA` `#WebShop` `#Tongyi`
+1. **原文**：[arXiv:2509.19199](https://arxiv.org/abs/2509.19199) — iStar 全文（含理论证明）
+2. **DPO 基础**：[[AI/LLM/RL/RLHF-DPO-2026-技术全景|RLHF-DPO-2026-技术全景]] — DPO ≡ PRM 的数学前提
+3. **信号比较**：[[AI/Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — 与 iStar 最直接的对比工作

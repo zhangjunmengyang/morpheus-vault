@@ -32,6 +32,7 @@ tags:
 
 ### 🛠️ Tools — 工具与系统
 - [[Tools/OpenClaw/目录]] — OpenClaw / MCP / DevTools
+- [[Tools/观猹-Watcha-AI产品聚合平台|观猹（Watcha）]] — 中文 AI 产品发现与点评，Product Hunt 平替
 
 ### 💼 Career — 职业发展
 - [[Career/目录]] — 述职 / 求职 / PMO / 方法论

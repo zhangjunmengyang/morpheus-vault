@@ -189,8 +189,10 @@ A：ORM 只在最终结果给 reward（稀疏），信用分配困难；PRM 在�
 
 | 步骤 | Batch B 笔记 | 对应 Batch A |
 |------|-------------|-------------|
-| RM 训练 | [[AI/LLM/MA-RLHF课程/lc8-LLaMA2-Reward-Model-从零手写\|lc8-LLaMA2 RM]] | [[AI/LLM/RL/PPO/LLaMA2-Reward-Model实现\|Batch A RM]] |
-| RLHF-PPO | [[AI/LLM/MA-RLHF课程/lc8-RLHF-PPO-Pytorch从零手写\|lc8-RLHF-PPO]] | [[AI/LLM/RL/PPO/RLHF-PPO-完整Pytorch实现\|Batch A PPO]] |
-| BT + DPO + IPO | [[AI/LLM/MA-RLHF课程/lc8-DPO-IPO-BT-偏好优化从零手写\|lc8-DPO/IPO/BT]] | [[AI/LLM/RL/DPO/DPO-完整Notebook实现\|Batch A DPO]] |
-| KTO + PRM Search | [[AI/LLM/MA-RLHF课程/lc8-KTO-PRM-Search-从零手写\|lc8-KTO/PRM]] | [[AI/LLM/RL/KTO/KTO-完整Notebook实现\|Batch A KTO]] |
+| RM 训练 | [[AI/LLM/MA-RLHF课程/lc8-LLaMA2-Reward-Model手撕\|lc8-LLaMA2 RM]] | [[AI/LLM/RL/PPO/LLaMA2-Reward-Model实现\|Batch A RM]] |
+| RLHF-PPO | [[AI/LLM/MA-RLHF课程/lc8-RLHF-PPO-手撕实操\|lc8-RLHF-PPO]] | [[AI/LLM/RL/PPO/RLHF-PPO-完整Pytorch实现\|Batch A PPO]] |
+| BT + DPO + IPO | [[AI/LLM/MA-RLHF课程/lc8-DPO-IPO-手撕实操\|lc8-DPO/IPO/BT]] | [[AI/LLM/RL/DPO/DPO-完整Notebook实现\|Batch A DPO]] |
+| Bradley-Terry 偏好建模 | [[AI/LLM/MA-RLHF课程/lc8-Bradley-Terry-偏好建模手撕\|lc8-BT偏好建模]] | — |
+| KTO + PRM Search | [[AI/LLM/MA-RLHF课程/lc8-KTO-手撕实操\|lc8-KTO/PRM]] | [[AI/LLM/RL/KTO/KTO-完整Notebook实现\|Batch A KTO]] |
 | GRPO Pytorch | [[AI/LLM/MA-RLHF课程/lc8-GRPO-notebook-Pytorch从零手写\|lc8-GRPO]] | [[AI/LLM/RL/GRPO/GRPO-完整Notebook实现\|Batch A GRPO]] |
+| GRPO KL 散度三种近似 | [[AI/LLM/MA-RLHF课程/lc8-GRPO-KL-三种近似手撕\|lc8-GRPO-KL]] | — |
