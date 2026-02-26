@@ -6,10 +6,10 @@ type: code-practice
 source: "MA-RLHF lc10 推理系统 / vLLM-PageKVCache.ipynb"
 tags: ["code-practice", "inference", "vLLM", "KVCache", "PagedAttention", "memory-management"]
 related:
-  - "[[AI/LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]]"
-  - "[[AI/LLM/Inference/vLLM-PageAttention-手撕实操|vLLM-PageAttention-手撕实操]]"
-  - "[[AI/LLM/Inference/vLLM-手撕实操|vLLM-手撕实操]]"
-  - "[[AI/LLM/Inference/Chunked-Prefill-手撕实操|Chunked-Prefill-手撕实操]]"
+  - "[[AI/3-LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]]"
+  - "[[AI/3-LLM/Inference/vLLM-PageAttention-手撕实操|vLLM-PageAttention-手撕实操]]"
+  - "[[AI/3-LLM/Inference/vLLM-手撕实操|vLLM-手撕实操]]"
+  - "[[AI/3-LLM/Inference/Chunked-Prefill-手撕实操|Chunked-Prefill-手撕实操]]"
 ---
 
 # vLLM PageKVCache 手撕实操
@@ -17,7 +17,7 @@ related:
 > **来源**：MA-RLHF lc10 推理系统 / vLLM-PageKVCache.ipynb  
 > **难度**：★★★★★  
 > **面试频率**：★★★★★（vLLM 核心机制，必问）  
-> **关联**：[[AI/LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]] [[AI/LLM/Inference/vLLM-PageAttention-手撕实操|vLLM-PageAttention-手撕实操]] [[AI/LLM/Inference/vLLM-手撕实操|vLLM-手撕实操]]
+> **关联**：[[AI/3-LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]] [[AI/3-LLM/Inference/vLLM-PageAttention-手撕实操|vLLM-PageAttention-手撕实操]] [[AI/3-LLM/Inference/vLLM-手撕实操|vLLM-手撕实操]]
 
 ---
 
@@ -327,10 +327,10 @@ memory = num_pages × page_size × num_layers × num_heads × head_dim × 2 × 2
 
 ## 延伸阅读
 
-- [[AI/LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]] — 基础，理解 slot 管理
-- [[AI/LLM/Inference/vLLM-PageAttention-手撕实操|vLLM-PageAttention-手撕实操]] — PageAttention CUDA kernel 实现
-- [[AI/LLM/Inference/Chunked-Prefill-手撕实操|Chunked-Prefill-手撕实操]] — Prefill/Decode 混合，解决 Prefill 阻塞 Decode
-- [[AI/LLM/Inference/PD-Disaggregation-手撕实操|PD-Disaggregation-手撕实操]] — Prefill/Decode 异机，极致解耦
+- [[AI/3-LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]] — 基础，理解 slot 管理
+- [[AI/3-LLM/Inference/vLLM-PageAttention-手撕实操|vLLM-PageAttention-手撕实操]] — PageAttention CUDA kernel 实现
+- [[AI/3-LLM/Inference/Chunked-Prefill-手撕实操|Chunked-Prefill-手撕实操]] — Prefill/Decode 混合，解决 Prefill 阻塞 Decode
+- [[AI/3-LLM/Inference/PD-Disaggregation-手撕实操|PD-Disaggregation-手撕实操]] — Prefill/Decode 异机，极致解耦
 
 ---
 

@@ -13,7 +13,7 @@ tags:
   - vllm
   - lc10
 related:
-  - "[[AI/LLM/MA-RLHF课程/lc10-推理系统-MOC]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc10-推理系统-MOC]]"
   - "[[LLM-推理优化-2026-全景]]"
   - "[[vLLM]]"
 ---
@@ -21,8 +21,8 @@ related:
 # vLLM PageAttention 手撕实操
 
 > **来源**: MA-RLHF lc10_inference / vLLM-PageAttention.ipynb
-> **系列**: [[AI/LLM/MA-RLHF课程/lc10-推理系统-MOC|lc10-推理系统-MOC]]
-> **关联**: [[AI/LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]] | [[AI/LLM/Inference/FlashAttention-手撕实操|FlashAttention-手撕实操]] | [[AI/LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]]
+> **系列**: [[AI/3-LLM/MA-RLHF课程/lc10-推理系统-MOC|lc10-推理系统-MOC]]
+> **关联**: [[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]] | [[AI/3-LLM/Inference/FlashAttention-手撕实操|FlashAttention-手撕实操]] | [[AI/3-LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]]
 > **日期**: 2026-02-25
 
 ---
@@ -319,9 +319,9 @@ A: Decoding 时，q 对应当前新 token，而 KV_Cache 里存的是历史 toke
 
 ## 延伸阅读
 
-- [[AI/LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]] — PA 的前置：物理 page 分配和管理
-- [[AI/LLM/Inference/FlashAttention-手撕实操|FlashAttention-手撕实操]] — FA 的 SRAM tiling 实现，与 PA 正交
-- [[AI/LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]] — 调度层基础
-- [[AI/LLM/Inference/Chunked-Prefill-手撕实操|Chunked-Prefill-手撕实操]] — Prefill 分块调度，使用 PA Kernel
+- [[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]] — PA 的前置：物理 page 分配和管理
+- [[AI/3-LLM/Inference/FlashAttention-手撕实操|FlashAttention-手撕实操]] — FA 的 SRAM tiling 实现，与 PA 正交
+- [[AI/3-LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]] — 调度层基础
+- [[AI/3-LLM/Inference/Chunked-Prefill-手撕实操|Chunked-Prefill-手撕实操]] — Prefill 分块调度，使用 PA Kernel
 - vLLM 论文（Kwon et al., SOSP 2023）§3.2 PagedAttention Kernel 设计
 - vLLM second meetup slides — PageAttention + multi-query/grouped-query attention 融合

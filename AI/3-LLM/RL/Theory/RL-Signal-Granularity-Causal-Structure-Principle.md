@@ -25,7 +25,7 @@ related:
   - "[[Reward-Design-2026-Panorama|Reward Design 2026 全景]]"
   - "[[HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）—— segment-level 信号粒度，路径5]]"
   - "[[RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO —— Echo Trap 是粒度失配的直接实证]]"
-  - "[[AI/LLM/RL/GRPO/GRPO-Improvement-Panorama-2026|GRPO Improvement Panorama]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO-Improvement-Panorama-2026|GRPO Improvement Panorama]]"
 ---
 
 # RL 信号粒度与任务因果结构匹配原则
@@ -170,4 +170,4 @@ A: 任务因果链的异质性。文本任务的因果链是"推理 → 输出"�
 5. **[[HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]]** — 路径5：segment-level 信号粒度（hierarchical advantage estimation）——planner 决策的因果单元是整个 subgoal 执行 segment，而非单步 action；HAE 把信号粒度对齐到这个因果结构
 6. **[[RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO]]** — "信号粒度失配 → 训练崩溃"的直接实证：outcome reward 无法驱动 step-level reasoning（Echo Trap = trajectory-level 信号无法区分好坏步骤），是本原则的反面案例
 7. **[[Reward-Design-2026-Panorama|Reward Design 2026 全景]]** — 更广泛的 Reward 设计视角
-8. **[[AI/LLM/RL/GRPO/GRPO-Improvement-Panorama-2026|GRPO Improvement Panorama]]** — 本原则在 GRPO 视角的对应位置（Token/Diversity维度）
+8. **[[AI/3-LLM/RL/GRPO/GRPO-Improvement-Panorama-2026|GRPO Improvement Panorama]]** — 本原则在 GRPO 视角的对应位置（Token/Diversity维度）

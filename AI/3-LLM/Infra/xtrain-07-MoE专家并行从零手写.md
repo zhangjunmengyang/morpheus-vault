@@ -13,17 +13,17 @@ tags:
   - expert-parallel
   - xtrain
 related:
-  - "[[AI/LLM/Infra/xtrain-lc4-张量并行从零手写]]"
-  - "[[AI/LLM/Infra/xtrain-lc5-流水线并行从零手写]]"
-  - "[[AI/LLM/Infra/xtrain-lc6-Context并行RingAttention手写]]"
-  - "[[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]"
+  - "[[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写]]"
+  - "[[AI/3-LLM/Infra/xtrain-lc5-流水线并行从零手写]]"
+  - "[[AI/3-LLM/Infra/xtrain-lc6-Context并行RingAttention手写]]"
+  - "[[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]"
   - "[[分布式训练]]"
 ---
 
 # xtrain lc7 — MoE 专家并行从零手写
 
 > 来源：`/Users/peterzhang/project/ma-rlhf/xtrain/lecture/lc7_MoE/`
-> 系列：[[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]
+> 系列：[[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]
 > 难度：★★★★★（MoE 前向/反向 + EP All-to-All + DeepSeek-V3 创新设计）
 > 更新：2026-02-26
 
@@ -420,18 +420,18 @@ A：不参与。Shared Experts 的每张卡都持有完整副本（类似 dense 
 
 ## 十、知识关联
 
-- **前置**：[[AI/LLM/Infra/xtrain-lc4-张量并行从零手写]] — TP 与 EP 是两个正交维度（层内 vs expert 间）
-- **前置**：[[AI/LLM/Infra/xtrain-lc5-流水线并行从零手写]] — DualPipe 的设计动机正是 MoE EP 通信重叠
+- **前置**：[[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写]] — TP 与 EP 是两个正交维度（层内 vs expert 间）
+- **前置**：[[AI/3-LLM/Infra/xtrain-lc5-流水线并行从零手写]] — DualPipe 的设计动机正是 MoE EP 通信重叠
 - **深化**：DeepSeek-V3 技术报告 §3.3 — MoE 架构完整描述（256 experts, top-8, N_s=1）
 - **深化**：DeepEP 库（github.com/deepseek-ai/DeepEP）— 生产级 EP 通信库
 - **横向**：GLM-5 技术报告精读 — 华为昇腾上的 MoE EP 实现（Slime 框架）
-- **MA-RLHF 系列**：[[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]
+- **MA-RLHF 系列**：[[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]
 
 ## See Also
 
-- [[AI/LLM/Infra/xtrain-lc4-张量并行从零手写]] — TP 与 EP 正交：TP 切层内矩阵，EP 切 expert 间
-- [[AI/LLM/Infra/xtrain-lc5-流水线并行从零手写]] — DualPipe：MoE EP 通信重叠的工程解法
-- [[AI/LLM/Infra/xtrain-lc6-Context并行RingAttention手写]] — CP+EP：超长序列 MoE 训练的四维并行
+- [[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写]] — TP 与 EP 正交：TP 切层内矩阵，EP 切 expert 间
+- [[AI/3-LLM/Infra/xtrain-lc5-流水线并行从零手写]] — DualPipe：MoE EP 通信重叠的工程解法
+- [[AI/3-LLM/Infra/xtrain-lc6-Context并行RingAttention手写]] — CP+EP：超长序列 MoE 训练的四维并行
 - [[MoE 深度解析]] — MoE 理论全景（gating/负载均衡/capacity factor）
 - [[分布式训练]] — 分布式训练理论全景
-- [[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]] — xtrain 系列课程地图
+- [[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]] — xtrain 系列课程地图

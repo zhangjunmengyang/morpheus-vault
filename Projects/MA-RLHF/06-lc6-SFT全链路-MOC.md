@@ -47,7 +47,7 @@ Step 8  LLM-as-Judge & Eval        ← 模型评估模型
 
 ### Step 1：SFT 数据格式
 
-**[[AI/LLM/SFT/SFT-手撕实操|SFT 手撕实操]]**（数据部分）
+**[[AI/3-LLM/SFT/SFT-手撕实操|SFT 手撕实操]]**（数据部分）
 
 - **Chat Template**：`<|system|>...<|user|>...<|assistant|>...` 格式，special token 标记角色边界
 - **Loss Mask 关键**：只对 **assistant** 的 token 计算 Loss，system/user 部分 mask 掉 → 不让模型「学会提问」，只学回答
@@ -59,7 +59,7 @@ Step 8  LLM-as-Judge & Eval        ← 模型评估模型
 
 ### Step 2-3：SFT 训练实现
 
-**[[AI/LLM/SFT/SFT-手撕实操|SFT 手撕实操]]**
+**[[AI/3-LLM/SFT/SFT-手撕实操|SFT 手撕实操]]**
 
 两种实现路径：
 
@@ -76,7 +76,7 @@ Step 8  LLM-as-Judge & Eval        ← 模型评估模型
 
 课程代码：`Supervised_Finetuning_PyTorch.ipynb`（手动版） · `Supervised_FineTuning_transformers_Qwen3.ipynb`（🌟 Trainer + SFTTrainer 三版本对比）
 
-**[[AI/LLM/MA-RLHF课程/lc6-SFT全链路-PyTorch手撕实操|lc6-SFT全链路 PyTorch 手撕实操 ✅]]** ★★★★★ — Chat Template 格式化 + Loss Mask 逻辑 + 纯 PyTorch 训练循环 + Transformers SFTTrainer 三路径完整对比（2026-02-26）
+**[[AI/3-LLM/MA-RLHF课程/lc6-SFT全链路-PyTorch手撕实操|lc6-SFT全链路 PyTorch 手撕实操 ✅]]** ★★★★★ — Chat Template 格式化 + Loss Mask 逻辑 + 纯 PyTorch 训练循环 + Transformers SFTTrainer 三路径完整对比（2026-02-26）
 
 ---
 
@@ -93,7 +93,7 @@ Step 8  LLM-as-Judge & Eval        ← 模型评估模型
 
 课程代码：`LoRA.ipynb`（原理推导 + 梯度推导 + LoRA vs 全参微调对比实验）
 
-**[[AI/LLM/MA-RLHF课程/lc6-LoRA-手撕实操|lc6-LoRA 手撕实操 ✅]]** — 41 cells 完整实现，含 QLoRA/DoRA/LoRA+ 对比、三超参调优实战
+**[[AI/3-LLM/MA-RLHF课程/lc6-LoRA-手撕实操|lc6-LoRA 手撕实操 ✅]]** — 41 cells 完整实现，含 QLoRA/DoRA/LoRA+ 对比、三超参调优实战
 
 深入阅读：[[PEFT 方法对比|PEFT 方法对比]] · [[PEFT 方法对比|PEFT 方法综述]]
 

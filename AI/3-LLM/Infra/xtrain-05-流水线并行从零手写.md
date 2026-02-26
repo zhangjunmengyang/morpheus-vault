@@ -13,17 +13,17 @@ tags:
   - dualpipe
   - xtrain
 related:
-  - "[[AI/LLM/Infra/xtrain-lc4-张量并行从零手写]]"
-  - "[[AI/LLM/Infra/xtrain-lc6-Context并行RingAttention手写]]"
-  - "[[AI/LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]]"
-  - "[[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]"
+  - "[[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写]]"
+  - "[[AI/3-LLM/Infra/xtrain-lc6-Context并行RingAttention手写]]"
+  - "[[AI/3-LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]]"
+  - "[[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]"
   - "[[分布式训练]]"
 ---
 
 # xtrain lc5 — 流水线并行从零手写
 
 > 来源：`/Users/peterzhang/project/ma-rlhf/xtrain/lecture/lc5_pipeline_parallelism/`
-> 系列：[[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]
+> 系列：[[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]
 > 难度：★★★★★（面试必考，GPipe→1F1B→ZeroBubble→DualPipe 完整演化链）
 > 更新：2026-02-25
 
@@ -429,18 +429,18 @@ A：PP（层间切分）+ TP（层内切分）+ DP（数据复制）= 3D 并行�
 
 ## 十、知识关联
 
-- **前置**：[[AI/LLM/Infra/xtrain-lc4-张量并行从零手写]] — TP 和 PP 是两个维度的并行
-- **前置**：[[AI/LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]] — ZeRO + PP 减少每个 stage 的显存
+- **前置**：[[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写]] — TP 和 PP 是两个维度的并行
+- **前置**：[[AI/3-LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]] — ZeRO + PP 减少每个 stage 的显存
 - **深化**：DeepSeek-V3 技术报告 — DualPipe 的正式描述（Figure 5，Schedule 图）
 - **横向**：Megatron-LM 的 Virtual Stage PP — 1F1B 变体，进一步减少 bubble
 - **生产**：torchpippy / DeepSpeed pipeline engine / Megatron-LM pipeline scheduler
-- **MA-RLHF 系列**：[[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]
+- **MA-RLHF 系列**：[[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]
 
 ## See Also
 
-- [[AI/LLM/Infra/xtrain-lc4-张量并行从零手写]] — 前置：TP 层内并行，与 PP 层间切分正交可组合
-- [[AI/LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]] — 前置：ZeRO+PP 减少每 stage 显存
-- [[AI/LLM/Infra/xtrain-lc6-Context并行RingAttention手写]] — 后置：CP 序列维度切分，PP+CP 超长序列训练
-- [[AI/LLM/Infra/xtrain-lc7-MoE专家并行从零手写]] — DualPipe 设计动机正是 MoE EP 通信重叠
+- [[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写]] — 前置：TP 层内并行，与 PP 层间切分正交可组合
+- [[AI/3-LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]] — 前置：ZeRO+PP 减少每 stage 显存
+- [[AI/3-LLM/Infra/xtrain-lc6-Context并行RingAttention手写]] — 后置：CP 序列维度切分，PP+CP 超长序列训练
+- [[AI/3-LLM/Infra/xtrain-lc7-MoE专家并行从零手写]] — DualPipe 设计动机正是 MoE EP 通信重叠
 - [[分布式训练]] — 分布式训练理论全景
-- [[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]] — xtrain 系列课程地图
+- [[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]] — xtrain 系列课程地图

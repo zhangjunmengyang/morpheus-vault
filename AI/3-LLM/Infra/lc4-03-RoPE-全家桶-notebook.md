@@ -14,10 +14,10 @@ tags:
   - ntk
 brief: RoPE 从零完整推导：旋转矩阵 → 相位差相对位置感知 → 衰减性分析；上下文外推三策略对比：PI（位置插值，高频崩溃）vs NTK-RoPE（均匀频率缩放）vs YaRN（NTK-by-parts 分段，保高频），给出面试级公式推导和代码对比。
 related:
-  - "[[AI/LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写]]"
-  - "[[AI/LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]]"
-  - "[[AI/LLM/Infra/xtrain-lc4-张量并行从零手写]]"
-  - "[[AI/LLM/MA-RLHF课程/lc8-GQA-KVCache-手撕实操]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]]"
+  - "[[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-GQA-KVCache-手撕实操]]"
   - "[[Attention 变体综述]]"
 ---
 
@@ -220,7 +220,7 @@ $$\theta_i^{\text{new}} = \begin{cases} \theta_i & \text{（低频，已有足�
 
 同时加 Re-Scale：注意力权重乘以 `concentration = 0.1 × ln(scale) + 1`，补偿外推后 softmax 过于均匀的问题。
 
-详见 [[AI/LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写]]。
+详见 [[AI/3-LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写]]。
 
 ---
 
@@ -332,8 +332,8 @@ RoPE（旋转位置编码，标准实现）
 
 ## See Also
 
-- [[AI/LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写]] — YaRN 完整代码实现 + TPA 张量积注意力（本笔记理论 → 该笔记工程实现）
-- [[AI/LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]] — MLA 中 RoPE 解耦（低秩 KV + position 单独路径，RoPE 应用的最新工程形态）
-- [[AI/LLM/Infra/xtrain-lc4-张量并行从零手写]] — TP 下 RoPE 的实现考虑（各卡独立旋转，分布式场景）
-- [[AI/LLM/MA-RLHF课程/lc8-GQA-KVCache-手撕实操]] — KV Cache 中 RoPE 的位置追踪（增量解码时 position_ids 的正确维护）
+- [[AI/3-LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写]] — YaRN 完整代码实现 + TPA 张量积注意力（本笔记理论 → 该笔记工程实现）
+- [[AI/3-LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]] — MLA 中 RoPE 解耦（低秩 KV + position 单独路径，RoPE 应用的最新工程形态）
+- [[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写]] — TP 下 RoPE 的实现考虑（各卡独立旋转，分布式场景）
+- [[AI/3-LLM/MA-RLHF课程/lc8-GQA-KVCache-手撕实操]] — KV Cache 中 RoPE 的位置追踪（增量解码时 position_ids 的正确维护）
 - [[Attention 变体综述]] — RoPE 在各类 Attention 变体中的应用全景

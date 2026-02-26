@@ -15,10 +15,10 @@ tags:
   - kl-divergence
   - lc8
 related:
-  - "[[AI/LLM/RL/DPO/DPO-手撕实操]]"
-  - "[[AI/LLM/RL/DPO/DPO-完整Notebook实现]]"
-  - "[[AI/LLM/RL/GRPO/GRPO-KL散度三种近似]]"
-  - "[[AI/LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"
+  - "[[AI/3-LLM/RL/DPO/DPO-手撕实操]]"
+  - "[[AI/3-LLM/RL/DPO/DPO-完整Notebook实现]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO-KL散度三种近似]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"
   - "[[RLHF-DPO-2026-技术全景]]"
 ---
 
@@ -323,8 +323,8 @@ A: 直接计算精确 KL 需要对整个 vocab 求和（$\sum_a \pi_{ref}(a)\log
 
 ## See Also
 
-- [[AI/LLM/RL/DPO/DPO-手撕实操]] — 同算法手撕实操版（MA-RLHF lc8 Batch A）
-- [[AI/LLM/RL/DPO/DPO-完整Notebook实现]] — 同算法 Notebook 端到端版
-- [[AI/LLM/RL/GRPO/GRPO-KL散度三种近似]] — KL 散度三种近似的专题版
-- [[AI/LLM/MA-RLHF课程/lc8-RLHF-PPO-Pytorch从零手写]] — 同系列：PPO 完整实现
+- [[AI/3-LLM/RL/DPO/DPO-手撕实操]] — 同算法手撕实操版（MA-RLHF lc8 Batch A）
+- [[AI/3-LLM/RL/DPO/DPO-完整Notebook实现]] — 同算法 Notebook 端到端版
+- [[AI/3-LLM/RL/GRPO/GRPO-KL散度三种近似]] — KL 散度三种近似的专题版
+- [[AI/3-LLM/MA-RLHF课程/lc8-RLHF-PPO-Pytorch从零手写]] — 同系列：PPO 完整实现
 - [[RLHF-DPO-2026-技术全景]] — 理论全景：DPO/IPO/ORPO 等全图谱

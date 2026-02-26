@@ -167,7 +167,7 @@ tc_agent = create_tool_calling_agent(llm, tools, tc_prompt)
 | **全量注入** | 所有工具定义直接放入 system prompt | 工具数 < 20 |
 | **语义检索** | 将工具描述 embedding，按 query 语义检索 top-K | 工具数 20-200 |
 | **分类路由** | 先用小模型/classifier 判断意图类别，再加载该类工具 | 工具数 > 200 |
-| **MCP 动态发现** | 通过 [[AI/Agent/Fundamentals/如何给人深度科普-MCP|MCP]] 协议按需从 Tool Server 获取工具 | 分布式系统 |
+| **MCP 动态发现** | 通过 [[AI/2-Agent/Fundamentals/如何给人深度科普-MCP|MCP]] 协议按需从 Tool Server 获取工具 | 分布式系统 |
 | **工具推荐模型** | 专门训练一个 tool selection model | 超大规模 |
 
 ```python

@@ -12,9 +12,9 @@ tags:
   - qlora
   - pytorch
 related:
-  - "[[AI/LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操-MA-RLHF]]"
+  - "[[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操-MA-RLHF]]"
   - "[[LoRA|LoRA]]"
-  - "[[AI/LLM/RL/PPO/MA-RLHF-核心代码注解|MA-RLHF-核心代码注解]]"
+  - "[[AI/3-LLM/RL/PPO/MA-RLHF-核心代码注解|MA-RLHF-核心代码注解]]"
 ---
 
 # SFT 手撕实操 —— MA-RLHF

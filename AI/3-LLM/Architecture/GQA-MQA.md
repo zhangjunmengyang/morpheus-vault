@@ -217,7 +217,7 @@ class GroupedQueryAttention(nn.Module):
 | GPT-3 175B | MHA | 96 | 96 | 1:1 | 0% |
 | PaLM 540B | MQA | 48 | 1 | 48:1 | 97.9% |
 | Falcon 40B | MQA | 64 | 1 | 64:1 | 98.4% |
-| [[AI/LLM/Architecture/LLaMA|LLaMA]] 2 70B | GQA | 64 | 8 | 8:1 | **87.5%** |
+| [[AI/3-LLM/Architecture/LLaMA|LLaMA]] 2 70B | GQA | 64 | 8 | 8:1 | **87.5%** |
 | LLaMA 3 8B | GQA | 32 | 8 | 4:1 | **75%** |
 | LLaMA 3 70B | GQA | 64 | 8 | 8:1 | **87.5%** |
 | Mistral 7B | GQA | 32 | 8 | 4:1 | **75%** |

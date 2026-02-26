@@ -302,4 +302,4 @@ model.resize_token_embeddings(len(tokenizer))
 
 ---
 
-**相关笔记**：[[Transformer 位置编码|Transformer 位置编码]] | [[BERT|BERT]] | [[GPT|GPT]] | [[LLaMA|LLaMA]] | [[AI/LLM/Architecture/Tokenizer-Embedding-手撕实操|Tokenizer-Embedding-手撕实操]] — 手写 BPE 合并 + token embedding lookup 完整实现
+**相关笔记**：[[Transformer 位置编码|Transformer 位置编码]] | [[BERT|BERT]] | [[GPT|GPT]] | [[LLaMA|LLaMA]] | [[AI/3-LLM/Architecture/Tokenizer-Embedding-手撕实操|Tokenizer-Embedding-手撕实操]] — 手写 BPE 合并 + token embedding lookup 完整实现

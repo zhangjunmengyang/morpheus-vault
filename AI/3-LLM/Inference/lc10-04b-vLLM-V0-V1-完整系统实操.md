@@ -6,18 +6,18 @@ type: code-practice
 source: "MA-RLHF (https://github.com/dhcode-cpp/MA-RLHF/tree/main/lecture/lc10_inference)"
 tags: [code-practice, vllm, inference, paged-attention, chunked-prefill, v0-v1, ma-rlhf, lc10]
 related:
-  - "[[AI/LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM PageKVCache 手撕实操]]"
-  - "[[AI/LLM/Inference/vLLM-PageAttention-手撕实操|vLLM PageAttention 手撕实操]]"
-  - "[[AI/LLM/Inference/Chunked-Prefill-手撕实操|Chunked Prefill 手撕实操]]"
-  - "[[AI/LLM/Inference/Continue-Batching-手撕实操|Continue Batching 手撕实操]]"
-  - "[[AI/LLM/MA-RLHF课程/lc10-推理系统-MOC|lc10 推理系统专题地图]]"
+  - "[[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM PageKVCache 手撕实操]]"
+  - "[[AI/3-LLM/Inference/vLLM-PageAttention-手撕实操|vLLM PageAttention 手撕实操]]"
+  - "[[AI/3-LLM/Inference/Chunked-Prefill-手撕实操|Chunked Prefill 手撕实操]]"
+  - "[[AI/3-LLM/Inference/Continue-Batching-手撕实操|Continue Batching 手撕实操]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc10-推理系统-MOC|lc10 推理系统专题地图]]"
 ---
 
 # vLLM V0 / V1 完整系统实操
 
 > **来源**: MA-RLHF lc10_inference / vLLM-V0.ipynb + vLLM-V1/
-> **系列**: [[AI/LLM/MA-RLHF课程/lc10-推理系统-MOC|lc10 推理系统专题地图]]
-> **关联**: [[AI/LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache]] | [[AI/LLM/Inference/vLLM-PageAttention-手撕实操|vLLM-PageAttention]] | [[AI/LLM/Inference/Chunked-Prefill-手撕实操|Chunked-Prefill]]
+> **系列**: [[AI/3-LLM/MA-RLHF课程/lc10-推理系统-MOC|lc10 推理系统专题地图]]
+> **关联**: [[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache]] | [[AI/3-LLM/Inference/vLLM-PageAttention-手撕实操|vLLM-PageAttention]] | [[AI/3-LLM/Inference/Chunked-Prefill-手撕实操|Chunked-Prefill]]
 > **日期**: 2026-02-25
 
 ---
@@ -323,12 +323,12 @@ A: V1 引入 Chunked Prefill 后，长 prompt 的 Prefill 被切块，TTFT 增�
 
 ## See Also
 
-- [[AI/LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM PageKVCache 手撕实操]] — V0/V1 的 KV 存储基础：Block Table 分配 + page 级别 KV 写入/读取
-- [[AI/LLM/Inference/vLLM-PageAttention-手撕实操|vLLM PageAttention 手撕实操]] — V0/V1 的 Attention Kernel：不连续 page 上的 Online Softmax + zero-copy attention
-- [[AI/LLM/Inference/Chunked-Prefill-手撕实操|Chunked Prefill 手撕实操]] — V1 引入的核心特性：三阶段 Proj 搭便车 + Mix-PD batch 三路调度
-- [[AI/LLM/Inference/Continue-Batching-手撕实操|Continue Batching 手撕实操]] — V0/V1 调度层的基础思路：Decode 完成即插入新请求，消灭 padding
+- [[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM PageKVCache 手撕实操]] — V0/V1 的 KV 存储基础：Block Table 分配 + page 级别 KV 写入/读取
+- [[AI/3-LLM/Inference/vLLM-PageAttention-手撕实操|vLLM PageAttention 手撕实操]] — V0/V1 的 Attention Kernel：不连续 page 上的 Online Softmax + zero-copy attention
+- [[AI/3-LLM/Inference/Chunked-Prefill-手撕实操|Chunked Prefill 手撕实操]] — V1 引入的核心特性：三阶段 Proj 搭便车 + Mix-PD batch 三路调度
+- [[AI/3-LLM/Inference/Continue-Batching-手撕实操|Continue Batching 手撕实操]] — V0/V1 调度层的基础思路：Decode 完成即插入新请求，消灭 padding
 - [[LLM-推理优化-2026-全景|LLM 推理优化 2026 全景]] — 系统级视角：vLLM V0/V1 在推理优化全貌中的位置
-- [[AI/LLM/MA-RLHF课程/lc10-推理系统-MOC|lc10 推理系统专题地图]] — 课程 MOC 入口，V0/V1 在 Step 4 & 6 位置
+- [[AI/3-LLM/MA-RLHF课程/lc10-推理系统-MOC|lc10 推理系统专题地图]] — 课程 MOC 入口，V0/V1 在 Step 4 & 6 位置
 
 ## 推荐阅读
 

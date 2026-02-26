@@ -6,17 +6,17 @@ type: code-practice
 source: "https://github.com/dhcode-cpp/MA-RLHF"
 tags: [code-practice, llm-engineering, ma-rlhf, distributed-training, context-parallel, ring-attention, xtrain]
 related:
-  - "[[AI/LLM/Infra/xtrain-lc5-流水线并行从零手写]]"
-  - "[[AI/LLM/Infra/xtrain-lc4-张量并行从零手写]]"
-  - "[[AI/LLM/Infra/xtrain-lc7-MoE专家并行从零手写]]"
-  - "[[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]"
-  - "[[AI/LLM/Inference/FlashAttention-手撕实操]]"
+  - "[[AI/3-LLM/Infra/xtrain-lc5-流水线并行从零手写]]"
+  - "[[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写]]"
+  - "[[AI/3-LLM/Infra/xtrain-lc7-MoE专家并行从零手写]]"
+  - "[[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]"
+  - "[[AI/3-LLM/Inference/FlashAttention-手撕实操]]"
 ---
 
 # xtrain lc6 — Context Parallel / Ring Attention 从零手写
 
 > 来源：`/Users/peterzhang/project/ma-rlhf/xtrain/lecture/lc6_context_parallelism/`
-> 系列：[[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]
+> 系列：[[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]
 > 难度：★★★★☆（前向必须，反向为加分项；Online Softmax 是关键数学基础）
 > 更新：2026-02-26
 
@@ -396,18 +396,18 @@ A：CP 主要适合**超长 seq（>32K）的 prefill 推理**和极长序列训�
 
 ## 十、知识关联
 
-- **前置**：[[AI/LLM/Inference/vLLM-PageAttention-手撕实操]] — Online Softmax 三元组 (O,M,L) 的 inference 应用
-- **前置**：[[AI/LLM/Inference/FlashAttention-手撕实操]] — FA 是 Ring Attention 的单卡版
-- **前置**：[[AI/LLM/Infra/xtrain-lc5-流水线并行从零手写]] — PP 是层间切分，CP 是序列维度切分
+- **前置**：[[AI/3-LLM/Inference/vLLM-PageAttention-手撕实操]] — Online Softmax 三元组 (O,M,L) 的 inference 应用
+- **前置**：[[AI/3-LLM/Inference/FlashAttention-手撕实操]] — FA 是 Ring Attention 的单卡版
+- **前置**：[[AI/3-LLM/Infra/xtrain-lc5-流水线并行从零手写]] — PP 是层间切分，CP 是序列维度切分
 - **深化**：DeepSeek-V2 的 MLA — MLA 减少了 KV 头数，CP 通信量随之降低（GQA/MLA 对 CP 友好）
 - **生产**：Megatron-LM Context Parallel，LongContext 训练（Llama-3.1-405B 使用 CP）
-- **MA-RLHF 系列**：[[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]
+- **MA-RLHF 系列**：[[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]
 
 ## See Also
 
-- [[AI/LLM/Infra/xtrain-lc5-流水线并行从零手写]] — 前置：PP 层间切分，CP+PP 超长序列训练的两维度
-- [[AI/LLM/Infra/xtrain-lc4-张量并行从零手写]] — 前置：TP 与 CP 正交可组合（TP 切权重，CP 切序列）
-- [[AI/LLM/Inference/FlashAttention-手撕实操]] — FA 是 Ring Attention 的单卡版，Online Softmax 同源
-- [[AI/LLM/Inference/vLLM-PageAttention-手撕实操]] — Online Softmax (O,M,L) 三元组在推理端的应用
+- [[AI/3-LLM/Infra/xtrain-lc5-流水线并行从零手写]] — 前置：PP 层间切分，CP+PP 超长序列训练的两维度
+- [[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写]] — 前置：TP 与 CP 正交可组合（TP 切权重，CP 切序列）
+- [[AI/3-LLM/Inference/FlashAttention-手撕实操]] — FA 是 Ring Attention 的单卡版，Online Softmax 同源
+- [[AI/3-LLM/Inference/vLLM-PageAttention-手撕实操]] — Online Softmax (O,M,L) 三元组在推理端的应用
 - [[分布式训练]] — 分布式训练理论全景
-- [[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]] — xtrain 系列课程地图
+- [[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]] — xtrain 系列课程地图

@@ -6,10 +6,10 @@ type: code-practice
 source: "MA-RLHF (https://github.com/dhcode-cpp/MA-RLHF)"
 tags: [code-practice, dpo, preference-optimization, rlhf, pytorch]
 related:
-  - "[[AI/LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操-MA-RLHF]]"
-  - "[[AI/LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]]"
-  - "[[AI/LLM/RL/KTO/KTO-手撕实操|KTO-手撕实操]]"
-  - "[[AI/LLM/RL/Fundamentals/RL基础算法手撕实操|RL基础算法手撕实操]]"
+  - "[[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操-MA-RLHF]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]]"
+  - "[[AI/3-LLM/RL/KTO/KTO-手撕实操|KTO-手撕实操]]"
+  - "[[AI/3-LLM/RL/Fundamentals/RL基础算法手撕实操|RL基础算法手撕实操]]"
 ---
 
 # DPO 手撕实操 —— MA-RLHF
@@ -182,8 +182,8 @@ def train():
 
 ## See Also
 
-- [[AI/LLM/RL/DPO/Bradley-Terry模型实现|Bradley-Terry 模型实现]] — BT 偏好建模理论入口：`P(y_w>y_l) = σ(r_w - r_l)` 完整实现（DPO 数学基础）
-- [[AI/LLM/RL/DPO/DPO-完整Notebook实现|DPO 完整 Notebook 实现]] — 端到端 Notebook：偏好对处理 + log-ratio loss + β 温度控制，配合本文查工程细节
-- [[AI/LLM/RL/KTO/KTO-完整Notebook实现|KTO 完整 Notebook 实现]] — DPO 替代方案（无需 paired data），对比学习
-- [[AI/LLM/RL/PPO/RLHF-PPO-完整Pytorch实现|RLHF-PPO 完整实现]] — PPO 四模型架构对照：理解 DPO 为什么能去掉 RM 和 Critic
+- [[AI/3-LLM/RL/DPO/Bradley-Terry模型实现|Bradley-Terry 模型实现]] — BT 偏好建模理论入口：`P(y_w>y_l) = σ(r_w - r_l)` 完整实现（DPO 数学基础）
+- [[AI/3-LLM/RL/DPO/DPO-完整Notebook实现|DPO 完整 Notebook 实现]] — 端到端 Notebook：偏好对处理 + log-ratio loss + β 温度控制，配合本文查工程细节
+- [[AI/3-LLM/RL/KTO/KTO-完整Notebook实现|KTO 完整 Notebook 实现]] — DPO 替代方案（无需 paired data），对比学习
+- [[AI/3-LLM/RL/PPO/RLHF-PPO-完整Pytorch实现|RLHF-PPO 完整实现]] — PPO 四模型架构对照：理解 DPO 为什么能去掉 RM 和 Critic
 - [[RLHF-DPO-2026-技术全景|RLHF-DPO 2026 技术全景]] — 偏好优化算法完整谱系（DPO/IPO/SimPO/ORPO/KTO/REBEL）

@@ -12,8 +12,8 @@ tags:
   - pytorch
 related:
   - "[[GRPO 深度理解|GRPO深度理解]]"
-  - "[[AI/LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操-MA-RLHF]]"
-  - "[[AI/LLM/Infra/Ray-分布式RL训练实操|Ray-分布式RL训练实操]]"
+  - "[[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操-MA-RLHF]]"
+  - "[[AI/3-LLM/Infra/Ray-分布式RL训练实操|Ray-分布式RL训练实操]]"
   - "[[OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]]"
 ---
 

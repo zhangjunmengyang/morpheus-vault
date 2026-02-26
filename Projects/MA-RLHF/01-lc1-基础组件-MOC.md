@@ -41,7 +41,7 @@ Step 5  位置编码家族              ← Absolute PE → Sinusoidal → RoPE 
 
 ### Step 1-2：Tokenizer — 离散化
 
-**[[AI/LLM/Architecture/Tokenizer-Embedding-手撕实操|Tokenizer-Embedding 手撕实操]]**
+**[[AI/3-LLM/Architecture/Tokenizer-Embedding-手撕实操|Tokenizer-Embedding 手撕实操]]**
 
 - **BPE 算法核心步骤**：初始化字符级词表 → 统计相邻 pair 频次 → 合并最高频 pair → 加入词表 → 重复至目标词表大小
 - **merge 规则**：贪心策略，每次合并全局最高频 pair；`merges` 列表定义了编码时的 merge 优先级
@@ -56,7 +56,7 @@ Step 5  位置编码家族              ← Absolute PE → Sinusoidal → RoPE 
 
 ### Step 3-4：Embedding — 连续化
 
-**[[AI/LLM/Architecture/Tokenizer-Embedding-手撕实操|Tokenizer-Embedding 手撕实操]]**（同一篇，Embedding 部分）
+**[[AI/3-LLM/Architecture/Tokenizer-Embedding-手撕实操|Tokenizer-Embedding 手撕实操]]**（同一篇，Embedding 部分）
 
 - **Word2Vec**：通过上下文预测目标词（Skip-gram）或用上下文预测中心词（CBOW），训练出词向量
 - **Token Embedding**：`nn.Embedding(vocab_size, d_model)` 本质是查表，每个 token id 对应一行权重向量

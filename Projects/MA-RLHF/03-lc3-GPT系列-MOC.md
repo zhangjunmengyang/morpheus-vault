@@ -47,7 +47,7 @@ Step 8  In-Context Learning        ← GPT-3 的「涌现」能力
 
 ### Step 1：GPT 系列演进
 
-**[[AI/LLM/Architecture/GPT2-手撕实操|GPT2 手撕实操]]**
+**[[AI/3-LLM/Architecture/GPT2-手撕实操|GPT2 手撕实操]]**
 
 GPT 三代关键创新：
 
@@ -82,13 +82,13 @@ GPT 三代关键创新：
 
 课程代码：`BPE-Tokenizer.ipynb` — 一步步实现通用分词器
 
-深入阅读：[[AI/LLM/Architecture/Tokenizer-Embedding-手撕实操|Tokenizer-Embedding 手撕实操]] · [[Tokenizer 深度理解|Tokenizer 深度理解]]
+深入阅读：[[AI/3-LLM/Architecture/Tokenizer-Embedding-手撕实操|Tokenizer-Embedding 手撕实操]] · [[Tokenizer 深度理解|Tokenizer 深度理解]]
 
 ---
 
 ### Step 5：GPT-2 完整实现（🌟 核心）
 
-**[[AI/LLM/Architecture/GPT2-手撕实操|GPT2 手撕实操]]**
+**[[AI/3-LLM/Architecture/GPT2-手撕实操|GPT2 手撕实操]]**
 
 模型架构：
 ```

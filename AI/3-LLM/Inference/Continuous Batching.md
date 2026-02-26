@@ -147,9 +147,9 @@ Decode:  生成 1 个 token → 计算量很小
 
 | 框架 | 批处理策略 | Prefill 处理 | 内存管理 | 特色 |
 |------|-----------|-------------|---------|------|
-| **[[AI/LLM/Inference/vLLM|vLLM]]** | Continuous Batching | Chunked Prefill | [[AI/LLM/Inference/KV Cache|PagedAttention]] | 最成熟的开源方案 |
+| **[[AI/3-LLM/Inference/vLLM|vLLM]]** | Continuous Batching | Chunked Prefill | [[AI/3-LLM/Inference/KV Cache|PagedAttention]] | 最成熟的开源方案 |
 | **TGI** (HuggingFace) | Continuous Batching | Token streaming | 连续内存 + Flash | 生产级 API |
-| **[[AI/LLM/Inference/TensorRT-LLM|TensorRT-LLM]]** | In-flight Batching | Chunked + Pipelined | Paged KV Cache | NVIDIA 极致优化 |
+| **[[AI/3-LLM/Inference/TensorRT-LLM|TensorRT-LLM]]** | In-flight Batching | Chunked + Pipelined | Paged KV Cache | NVIDIA 极致优化 |
 | **SGLang** | Continuous Batching | Chunked Prefill | RadixAttention | Prefix Caching 强 |
 | **DeepSpeed-MII** | Dynamic SplitFuse | Split-and-Fuse | — | 长短请求拆分融合 |
 

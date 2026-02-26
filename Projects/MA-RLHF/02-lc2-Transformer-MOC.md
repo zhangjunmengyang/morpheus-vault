@@ -45,7 +45,7 @@ Step 7  推理流程                   ← 自回归生成，Greedy/Beam Search
 
 ### Step 1：Attention 机制
 
-**[[AI/LLM/Architecture/Transformer-手撕实操|Transformer 手撕实操]]**（Attention 部分）
+**[[AI/3-LLM/Architecture/Transformer-手撕实操|Transformer 手撕实操]]**（Attention 部分）
 
 - **Scaled Dot-Product Attention**：`Attn(Q,K,V) = softmax(QK^T / √d_k) · V`
 - **为什么 /√d_k**：Q·K 的内积方差随 d_k 线性增长，值过大 → softmax 进入饱和区 → 梯度消失。缩放后方差为 1，softmax 输出更平滑
@@ -58,7 +58,7 @@ Step 7  推理流程                   ← 自回归生成，Greedy/Beam Search
 
 ### Step 2-3：位置编码 & LayerNorm
 
-**[[AI/LLM/Architecture/基础数学组件手撕|基础数学组件手撕]]**
+**[[AI/3-LLM/Architecture/基础数学组件手撕|基础数学组件手撕]]**
 
 - **Sinusoidal PE**：`PE(pos,2i) = sin(pos/10000^{2i/d})`，不同频率编码不同维度
 - **LayerNorm**：对每个样本的特征维度做归一化 `y = (x-μ)/σ * γ + β`
@@ -70,7 +70,7 @@ Step 7  推理流程                   ← 自回归生成，Greedy/Beam Search
 
 ### Step 4：完整 Transformer 模型
 
-**[[AI/LLM/Architecture/Transformer-手撕实操|Transformer 手撕实操]]**（完整模型部分 🌟）
+**[[AI/3-LLM/Architecture/Transformer-手撕实操|Transformer 手撕实操]]**（完整模型部分 🌟）
 
 Encoder-Decoder 架构：
 ```

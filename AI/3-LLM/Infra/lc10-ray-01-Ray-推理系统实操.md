@@ -6,9 +6,9 @@ type: code-practice
 source: "MA-RLHF (https://github.com/dhcode-cpp/MA-RLHF)"
 tags: [code-practice, ray, inference-serving, vllm, rollout, training-infra]
 related:
-  - "[[AI/LLM/Infra/Ray-分布式RL训练实操|Ray-分布式RL训练实操]]"
-  - "[[AI/LLM/Inference/vLLM-手撕实操|vLLM-手撕实操]]"
-  - "[[AI/LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]]"
+  - "[[AI/3-LLM/Infra/Ray-分布式RL训练实操|Ray-分布式RL训练实操]]"
+  - "[[AI/3-LLM/Inference/vLLM-手撕实操|vLLM-手撕实操]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]]"
 ---
 
 # Ray 推理系统实操

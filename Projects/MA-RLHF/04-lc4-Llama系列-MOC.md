@@ -45,7 +45,7 @@ Step 7  Benchmark 评测            ← 选择题评测预训练模型
 
 ### Step 1：RMSNorm
 
-**[[AI/LLM/Architecture/Llama-手撕实操|Llama 手撕实操]]**（RMSNorm 部分）
+**[[AI/3-LLM/Architecture/Llama-手撕实操|Llama 手撕实操]]**（RMSNorm 部分）
 
 - **vs LayerNorm**：RMSNorm 去掉了 mean centering（减均值），只做 RMS 归一化：`y = x / RMS(x) * γ`
 - **RMS(x)** = `√(mean(x²))`，不需要计算均值 → 少一次 reduce 操作 → 速度快 ~10-15%
@@ -71,7 +71,7 @@ Step 7  Benchmark 评测            ← 选择题评测预训练模型
 
 ### Step 3：RoPE 旋转位置编码（🌟核心）
 
-**[[Transformer 位置编码|位置编码]]** · **[[AI/LLM/MA-RLHF课程/lc8-RoPE全家桶手撕实操|RoPE 全家桶手撕实操 ✅]]**
+**[[Transformer 位置编码|位置编码]]** · **[[AI/3-LLM/MA-RLHF课程/lc8-RoPE全家桶手撕实操|RoPE 全家桶手撕实操 ✅]]**
 
 - **核心思想**：将位置信息编码为旋转角度，对 Q/K 向量做旋转变换
 - **数学**：将 d 维向量看成 d/2 个 2D 向量，每个施加旋转矩阵 `R(mθ_i)`，θ_i = 10000^{-2i/d}
@@ -88,7 +88,7 @@ Step 7  Benchmark 评测            ← 选择题评测预训练模型
 
 ### Step 4：GQA 分组查询注意力
 
-**[[GQA-MQA|GQA-MQA 理论]]** · **[[AI/LLM/MA-RLHF课程/lc8-GQA-KVCache-手撕实操|GQA + KV Cache 手撕实操 ✅]]**
+**[[GQA-MQA|GQA-MQA 理论]]** · **[[AI/3-LLM/MA-RLHF课程/lc8-GQA-KVCache-手撕实操|GQA + KV Cache 手撕实操 ✅]]**
 
 MHA → MQA → GQA 演进：
 
@@ -110,7 +110,7 @@ MHA → MQA → GQA 演进：
 
 ### Step 5：Llama 完整模型（🌟核心）
 
-**[[AI/LLM/Architecture/Llama-手撕实操|Llama 手撕实操]]**
+**[[AI/3-LLM/Architecture/Llama-手撕实操|Llama 手撕实操]]**
 
 ```
 Token Embedding

@@ -176,8 +176,8 @@ GSPO (group_size=8, beta=0.1):
 
 ## 相关
 
-- [[AI/LLM/RL/GRPO/GRPO|GRPO]]
-- [[AI/LLM/RL/DPO/DPO|DPO]]
+- [[AI/3-LLM/RL/GRPO/GRPO|GRPO]]
+- [[AI/3-LLM/RL/DPO/DPO|DPO]]
 - [[Unsloth 概述|Unsloth 概述]]
 - [[训练示例概述|Unsloth 训练示例]]
 - [[AI/3-LLM/RL/目录|RL 算法总览]]

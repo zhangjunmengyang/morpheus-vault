@@ -11,10 +11,10 @@ tags:
   - 手撕实操
   - MA-RLHF-lc8
 related:
-  - [[AI/LLM/MA-RLHF课程/lc8-DPO-IPO-手撕实操|lc8-DPO-IPO-手撕实操]]
-  - [[AI/LLM/MA-RLHF课程/lc8-LLaMA2-Reward-Model手撕|lc8-LLaMA2-Reward-Model手撕]]
-  - [[AI/LLM/RL/RLHF-DPO-2026-技术全景|RLHF-DPO-2026-技术全景]]
-  - [[AI/LLM/MA-RLHF-手撕实操-系列索引|MA-RLHF 手撕实操系列索引]]
+  - [[AI/3-LLM/MA-RLHF课程/lc8-DPO-IPO-手撕实操|lc8-DPO-IPO-手撕实操]]
+  - [[AI/3-LLM/MA-RLHF课程/lc8-LLaMA2-Reward-Model手撕|lc8-LLaMA2-Reward-Model手撕]]
+  - [[AI/3-LLM/RL/RLHF-DPO-2026-技术全景|RLHF-DPO-2026-技术全景]]
+  - [[AI/3-LLM/MA-RLHF-手撕实操-系列索引|MA-RLHF 手撕实操系列索引]]
 ---
 
 # KTO 手撕实操（MA-RLHF lc8）
@@ -22,7 +22,7 @@ related:
 **来源**：MA-RLHF `notebook/KTO/KTO.ipynb`  
 **论文**：KTO: Model Alignment as Prospect Theoretic Optimization  
 **难度**：★★★★☆（偏好学习重要变体，无需 pair 数据，工程部署更简单）  
-**关联**：[[lc8-DPO-IPO-手撕实操|lc8-DPO-IPO-手撕实操]] | [[AI/LLM/MA-RLHF课程/lc8-Bradley-Terry-偏好建模手撕|lc8-Bradley-Terry-偏好建模手撕]]
+**关联**：[[lc8-DPO-IPO-手撕实操|lc8-DPO-IPO-手撕实操]] | [[AI/3-LLM/MA-RLHF课程/lc8-Bradley-Terry-偏好建模手撕|lc8-Bradley-Terry-偏好建模手撕]]
 
 ---
 
@@ -218,7 +218,7 @@ A：①只有点赞/踩（单标签）没有明确偏好对比的工业数据；
 
 ## 九、知识连接
 
-- **前驱**：[[AI/LLM/MA-RLHF课程/lc8-Bradley-Terry-偏好建模手撕|lc8-Bradley-Terry-偏好建模手撕]] — BT Model 是 DPO 的根基
+- **前驱**：[[AI/3-LLM/MA-RLHF课程/lc8-Bradley-Terry-偏好建模手撕|lc8-Bradley-Terry-偏好建模手撕]] — BT Model 是 DPO 的根基
 - **对比**：[[lc8-DPO-IPO-手撕实操|lc8-DPO-IPO-手撕实操]] — 需要成对数据的主流方法
 - **理论**：Prospect Theory (Kahneman & Tversky 1979) — KTO 的行为经济学基础
 - **工程**：TRL `KTOTrainer` — 工业级 KTO 实现，API 与 `DPOTrainer` 基本一致

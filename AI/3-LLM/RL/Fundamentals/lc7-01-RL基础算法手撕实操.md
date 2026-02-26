@@ -6,9 +6,9 @@ type: code-practice
 source: "MA-RLHF (https://github.com/dhcode-cpp/MA-RLHF)"
 tags: [code-practice, reinforcement-learning, policy-gradient, actor-critic, ppo, dqn, pytorch]
 related:
-  - "[[AI/LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操-MA-RLHF]]"
-  - "[[AI/LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]]"
-  - "[[AI/LLM/RL/DPO/DPO-手撕实操|DPO-手撕实操]]"
+  - "[[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操-MA-RLHF]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]]"
+  - "[[AI/3-LLM/RL/DPO/DPO-手撕实操|DPO-手撕实操]]"
 ---
 
 # RL 基础算法手撕实操 —— MA-RLHF

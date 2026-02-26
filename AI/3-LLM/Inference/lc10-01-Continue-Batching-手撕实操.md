@@ -11,9 +11,9 @@ tags:
   - continue-batching
   - scheduling
 related:
-  - "[[AI/LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]]"
-  - "[[AI/LLM/Inference/Chunked-Prefill-手撕实操|Chunked-Prefill-手撕实操]]"
-  - "[[AI/LLM/Inference/vLLM-手撕实操|vLLM-手撕实操]]"
+  - "[[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]]"
+  - "[[AI/3-LLM/Inference/Chunked-Prefill-手撕实操|Chunked-Prefill-手撕实操]]"
+  - "[[AI/3-LLM/Inference/vLLM-手撕实操|vLLM-手撕实操]]"
   - "[[LLM-推理优化-2026-全景|LLM推理优化2026全景]]"
 ---
 
@@ -22,7 +22,7 @@ related:
 > **来源**：MA-RLHF lc10 推理系统 / Continue_Batching.ipynb  
 > **难度**：★★★★☆  
 > **面试频率**：★★★★★（vLLM 必问基础）  
-> **关联**：[[AI/LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]] [[AI/LLM/Inference/vLLM-手撕实操|vLLM-手撕实操]] [[AI/LLM/Inference/FlashAttention-手撕实操|FlashAttention-手撕实操]]
+> **关联**：[[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]] [[AI/3-LLM/Inference/vLLM-手撕实操|vLLM-手撕实操]] [[AI/3-LLM/Inference/FlashAttention-手撕实操|FlashAttention-手撕实操]]
 
 ---
 
@@ -288,10 +288,10 @@ Continue Batching 利用率 → 接近 1（始终填满空位）
 
 ## 延伸阅读
 
-- [[AI/LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]] — 分页管理，解决内存碎片
-- [[AI/LLM/Inference/vLLM-PageAttention-手撕实操|vLLM-PageAttention-手撕实操]] — 块内 attention 实现
-- [[AI/LLM/Inference/Chunked-Prefill-手撕实操|Chunked-Prefill-手撕实操]] — Prefill/Decode 混合调度
-- [[AI/LLM/Inference/PD-Disaggregation-手撕实操|PD-Disaggregation-手撕实操]] — Prefill/Decode 异机部署
+- [[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]] — 分页管理，解决内存碎片
+- [[AI/3-LLM/Inference/vLLM-PageAttention-手撕实操|vLLM-PageAttention-手撕实操]] — 块内 attention 实现
+- [[AI/3-LLM/Inference/Chunked-Prefill-手撕实操|Chunked-Prefill-手撕实操]] — Prefill/Decode 混合调度
+- [[AI/3-LLM/Inference/PD-Disaggregation-手撕实操|PD-Disaggregation-手撕实操]] — Prefill/Decode 异机部署
 
 ---
 

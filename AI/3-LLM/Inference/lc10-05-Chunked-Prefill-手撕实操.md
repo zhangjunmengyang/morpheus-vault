@@ -12,9 +12,9 @@ tags:
   - SARATHI
   - scheduling
 related:
-  - "[[AI/LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]]"
-  - "[[AI/LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]]"
-  - "[[AI/LLM/Inference/vLLM-PageAttention-手撕实操|vLLM-PageAttention-手撕实操]]"
+  - "[[AI/3-LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]]"
+  - "[[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]]"
+  - "[[AI/3-LLM/Inference/vLLM-PageAttention-手撕实操|vLLM-PageAttention-手撕实操]]"
   - "[[LLM-推理优化-2026-全景|LLM推理优化2026全景]]"
 ---
 
@@ -24,7 +24,7 @@ related:
 > **论文参考**：SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills  
 > **难度**：★★★★★  
 > **面试频率**：★★★★☆（vLLM V1 核心机制，高频）  
-> **关联**：[[AI/LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]] [[AI/LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]] [[AI/LLM/Inference/PD-Disaggregation-手撕实操|PD-Disaggregation-手撕实操]]
+> **关联**：[[AI/3-LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]] [[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]] [[AI/3-LLM/Inference/PD-Disaggregation-手撕实操|PD-Disaggregation-手撕实操]]
 
 ---
 
@@ -303,11 +303,11 @@ Ring Attention / Context Parallelism（空间切分）：
 
 ## 延伸阅读
 
-- [[AI/LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]] — 基础，理解 step() 调度
-- [[AI/LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]] — 分页 KV 管理
-- [[AI/LLM/Inference/vLLM-PageAttention-手撕实操|vLLM-PageAttention-手撕实操]] — block-wise attention
-- [[AI/LLM/Infra/xtrain-lc6-Context并行RingAttention手写|xtrain-lc6-Context并行RingAttention手写]] — 空间维度的 chunk（对比理解）
-- [[AI/LLM/Inference/PD-Disaggregation-手撕实操|PD-Disaggregation-手撕实操]] — 把 Prefill/Decode 彻底分离到不同机器
+- [[AI/3-LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]] — 基础，理解 step() 调度
+- [[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]] — 分页 KV 管理
+- [[AI/3-LLM/Inference/vLLM-PageAttention-手撕实操|vLLM-PageAttention-手撕实操]] — block-wise attention
+- [[AI/3-LLM/Infra/xtrain-lc6-Context并行RingAttention手写|xtrain-lc6-Context并行RingAttention手写]] — 空间维度的 chunk（对比理解）
+- [[AI/3-LLM/Inference/PD-Disaggregation-手撕实操|PD-Disaggregation-手撕实操]] — 把 Prefill/Decode 彻底分离到不同机器
 
 ---
 

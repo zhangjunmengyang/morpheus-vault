@@ -11,8 +11,8 @@ tags:
   - draft-model
   - rejection-sampling
 related:
-  - "[[AI/LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]]"
-  - "[[AI/LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]]"
+  - "[[AI/3-LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]]"
+  - "[[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]]"
   - "[[Sparrow-Video-LLM-Speculative-Decoding|Sparrow-Video-LLM-Speculative-Decoding]]"
   - "[[LLM-推理优化-2026-全景|LLM推理优化2026全景]]"
 ---
@@ -22,7 +22,7 @@ related:
 > **来源**：MA-RLHF lc10 推理系统 / Speculative_Decoding.ipynb  
 > **难度**：★★★★☆  
 > **面试频率**：★★★★★（推理加速必考，Google/Meta/ByteDance 高频）  
-> **关联**：[[AI/LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]] [[AI/LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]] [[Sparrow-Video-LLM-Speculative-Decoding|Sparrow-Video-LLM-Speculative-Decoding]]
+> **关联**：[[AI/3-LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]] [[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]] [[Sparrow-Video-LLM-Speculative-Decoding|Sparrow-Video-LLM-Speculative-Decoding]]
 
 ---
 
@@ -274,9 +274,9 @@ vLLM 将 Speculative Decoding 与 PageKVCache 结合：
 
 ## 延伸阅读
 
-- [[AI/LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]] — 推理服务基础
-- [[AI/LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]] — KV 内存管理
-- [[AI/LLM/Inference/Chunked-Prefill-手撕实操|Chunked-Prefill-手撕实操]] — Prefill/Decode 混合调度
+- [[AI/3-LLM/Inference/Continue-Batching-手撕实操|Continue-Batching-手撕实操]] — 推理服务基础
+- [[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]] — KV 内存管理
+- [[AI/3-LLM/Inference/Chunked-Prefill-手撕实操|Chunked-Prefill-手撕实操]] — Prefill/Decode 混合调度
 - [[Sparrow-Video-LLM-Speculative-Decoding|Sparrow-Video-LLM-Speculative-Decoding]] — 视频 LLM 的推测解码变体
 
 ---

@@ -14,11 +14,11 @@ tags:
   - architecture
 brief: mHC（Manifold-Constrained Hyper-Connections）手撕实操：从标准残差连接出发，逐步推导多变换分支 → HC（可学习多分支融合）→ mHC（doubly stochastic 约束 + Sinkhorn-Knopp 迭代归一化），是 DeepSeek V4 预研的残差连接系统性重设计方向。
 related:
-  - "[[AI/LLM/MA-RLHF课程/lc5-DeepSeek-V3-MOC]]"
-  - "[[AI/LLM/Architecture/DeepSeek-V3-手撕实操]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc5-DeepSeek-V3-MOC]]"
+  - "[[AI/3-LLM/Architecture/DeepSeek-V3-手撕实操]]"
   - "[[mHC-Manifold-Constrained-Hyper-Connections-DeepSeek]]"
-  - "[[AI/LLM/Architecture/Transformer-手撕实操]]"
-  - "[[AI/LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]]"
+  - "[[AI/3-LLM/Architecture/Transformer-手撕实操]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]]"
 ---
 
 # mHC（Manifold-Constrained Hyper-Connections）从零手写
@@ -271,8 +271,8 @@ A: SK 迭代是为了找归一化因子 U,V，这两个是常数（相对于当�
 
 ## See Also
 
-- [[AI/LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]] — 同批次 Architecture notebook，MLA 低秩压缩（残差连接 vs Attention 压缩两个正交方向）
+- [[AI/3-LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]] — 同批次 Architecture notebook，MLA 低秩压缩（残差连接 vs Attention 压缩两个正交方向）
 - [[mHC-Manifold-Constrained-Hyper-Connections-DeepSeek]] — mHC 论文精读（arXiv:2512.24880），理论背景与实验结果
-- [[AI/LLM/Architecture/DeepSeek-V3-手撕实操]] — DeepSeek V3 完整架构手撕，mHC 所在的架构体系
-- [[AI/LLM/MA-RLHF课程/lc5-DeepSeek-V3-MOC]] — lc5 课程地图，DeepSeek 组件学习顺序
-- [[AI/LLM/Architecture/Transformer-手撕实操]] — 标准残差连接（mHC 的起点）手撕实操
+- [[AI/3-LLM/Architecture/DeepSeek-V3-手撕实操]] — DeepSeek V3 完整架构手撕，mHC 所在的架构体系
+- [[AI/3-LLM/MA-RLHF课程/lc5-DeepSeek-V3-MOC]] — lc5 课程地图，DeepSeek 组件学习顺序
+- [[AI/3-LLM/Architecture/Transformer-手撕实操]] — 标准残差连接（mHC 的起点）手撕实操

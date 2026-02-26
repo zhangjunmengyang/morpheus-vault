@@ -24,7 +24,7 @@ sources:
   - Kwon et al., PagedAttention/vLLM, SOSP 2023
   - Peng et al., YaRN, arXiv:2309.00071 (2023)
 related:
-  - "[[AI/LLM/Architecture/_MOC|Architecture MOC]]"
+  - "[[AI/3-LLM/Architecture/_MOC|Architecture MOC]]"
   - "[[MoE 深度解析|MoE 深度解析]]"
   - "[[FlashAttention|FlashAttention]]"
   - "[[AI面试速查手册|AI 面试速查手册]]"
@@ -1721,4 +1721,4 @@ $$
 ---
 
 > **Last Updated**: 2026-02-22
-> **See Also**: [[AI/LLM/Architecture/_MOC|Architecture MOC]] · [[AI面试速查手册|AI 面试速查手册]] · [[MoE 深度解析|MoE 深度解析]] · [[Transformer 位置编码|位置编码详解]] · [[FlashAttention|FlashAttention]] · [[LLM微调实战-2026技术全景|LLM 微调实战 2026]] — 配套：先懂架构再学微调，两文合读=面试全覆盖
+> **See Also**: [[AI/3-LLM/Architecture/_MOC|Architecture MOC]] · [[AI面试速查手册|AI 面试速查手册]] · [[MoE 深度解析|MoE 深度解析]] · [[Transformer 位置编码|位置编码详解]] · [[FlashAttention|FlashAttention]] · [[LLM微调实战-2026技术全景|LLM 微调实战 2026]] — 配套：先懂架构再学微调，两文合读=面试全覆盖

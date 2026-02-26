@@ -6,10 +6,10 @@ type: code-practice
 source: "MA-RLHF (https://github.com/dhcode-cpp/MA-RLHF)"
 tags: [code-practice, nccl, distributed-training, all-reduce, ring-allreduce, communication]
 related:
-  - "[[AI/LLM/Infra/Tensor-Parallel-手撕实操|Tensor-Parallel-手撕实操]]"
-  - "[[AI/LLM/Infra/ZeRO-手撕实操|ZeRO-手撕实操]]"
-  - "[[AI/LLM/Infra/Pipeline-Parallel-手撕实操|Pipeline-Parallel-手撕实操]]"
-  - "[[AI/LLM/Infra/MoE-Context-Parallel-手撕实操|MoE-Context-Parallel-手撕实操]]"
+  - "[[AI/3-LLM/Infra/Tensor-Parallel-手撕实操|Tensor-Parallel-手撕实操]]"
+  - "[[AI/3-LLM/Infra/ZeRO-手撕实操|ZeRO-手撕实操]]"
+  - "[[AI/3-LLM/Infra/Pipeline-Parallel-手撕实操|Pipeline-Parallel-手撕实操]]"
+  - "[[AI/3-LLM/Infra/MoE-Context-Parallel-手撕实操|MoE-Context-Parallel-手撕实操]]"
 ---
 
 # 分布式训练通信原语手撕实操

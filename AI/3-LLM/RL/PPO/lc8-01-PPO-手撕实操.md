@@ -6,10 +6,10 @@ type: code-practice
 source: "MA-RLHF (https://github.com/dhcode-cpp/MA-RLHF)"
 tags: [code-practice, ppo, rlhf, ma-rlhf, gae, pytorch]
 related:
-  - "[[AI/LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]]"
-  - "[[AI/LLM/RL/PPO/MA-RLHF-核心代码注解|MA-RLHF-核心代码注解]]"
-  - "[[AI/LLM/RL/DPO/DPO-手撕实操|DPO-手撕实操]]"
-  - "[[AI/LLM/RL/Fundamentals/RL基础算法手撕实操|RL基础算法手撕实操]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]]"
+  - "[[AI/3-LLM/RL/PPO/MA-RLHF-核心代码注解|MA-RLHF-核心代码注解]]"
+  - "[[AI/3-LLM/RL/DPO/DPO-手撕实操|DPO-手撕实操]]"
+  - "[[AI/3-LLM/RL/Fundamentals/RL基础算法手撕实操|RL基础算法手撕实操]]"
 ---
 
 # PPO 手撕实操 —— RLHF-PPO & MA-RLHF

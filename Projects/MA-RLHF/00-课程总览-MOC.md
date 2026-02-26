@@ -70,17 +70,17 @@ xtrain-lc1（通信原语）→ lc2（DP/DDP）→ lc3（ZeRO）→ lc4（TP）�
 
 | 专题 | 核心内容 | 状态 | MOC 入口 |
 |------|---------|------|---------|
-| **lc1** 基础组件 | BPE Tokenizer / Embedding / 位置编码全家族 | ✅ MOC完成 | [[AI/LLM/MA-RLHF课程/lc1-基础组件-MOC]] |
-| **lc2** Transformer | Encoder-Decoder 完整实现 / 数据集 / 训练推理全流程 | ✅ MOC完成 | [[AI/LLM/MA-RLHF课程/lc2-Transformer-MOC]] |
-| **lc3** GPT 系列 | GELU / PreNorm / BPE / KV Cache / Perplexity / ICL | ✅ MOC完成 | [[AI/LLM/MA-RLHF课程/lc3-GPT系列-MOC]] |
-| **lc4** Llama 系列 | RoPE / NTK-RoPE / GQA / RMSNorm / SwiGLU / Benchmark | ✅ MOC完成 | [[AI/LLM/MA-RLHF课程/lc4-Llama系列-MOC]] |
-| **lc5** DeepSeek V3 | MoE / MLA / MTP / YaRN / TopK梯度 / mHC / Load Balance | ✅ MOC完成 | [[AI/LLM/MA-RLHF课程/lc5-DeepSeek-V3-MOC]] |
-| **lc6** SFT 全链路 | 数据处理 / LoRA / SFT完整训练 / RAG / ReAct / LLM-Judge | ✅ MOC完成 | [[AI/LLM/MA-RLHF课程/lc6-SFT全链路-MOC]] |
-| **lc7** RL 基础 | MC/TD/Q-Learning/DQN/PolicyGradient/GAE | ✅ MOC完成 | [[AI/LLM/MA-RLHF课程/lc7-RL基础-MOC]] |
-| **lc8** RL×LLM | RLHF-PPO / Bradley-Terry / DPO / KTO / GRPO / PRM / MCTS-O1 | ✅ MOC完成 | [[AI/LLM/MA-RLHF课程/lc8-RL×LLM-MOC]] |
-| **lc9** 分布式 RL 训练 | Ray三角架构 / 异步GRPO / verl实战 / R1复现 | ✅ MOC完成 | [[AI/LLM/MA-RLHF课程/lc9-分布式RL训练-MOC]] |
-| **lc10** 推理系统 | Continue Batching / PageKV / PageAttention / vLLM V0→V1 / Chunked Prefill / PD分离 / SD | ✅ MOC完成 | [[AI/LLM/MA-RLHF课程/lc10-推理系统-MOC]] |
-| **xtrain** 分布式手写 | DP/ZeRO/TP/PP(DualPipe)/CP(RingAttn)/EP(MoE) 从零手写 | ✅ MOC完成 | [[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]] |
+| **lc1** 基础组件 | BPE Tokenizer / Embedding / 位置编码全家族 | ✅ MOC完成 | [[AI/3-LLM/MA-RLHF课程/lc1-基础组件-MOC]] |
+| **lc2** Transformer | Encoder-Decoder 完整实现 / 数据集 / 训练推理全流程 | ✅ MOC完成 | [[AI/3-LLM/MA-RLHF课程/lc2-Transformer-MOC]] |
+| **lc3** GPT 系列 | GELU / PreNorm / BPE / KV Cache / Perplexity / ICL | ✅ MOC完成 | [[AI/3-LLM/MA-RLHF课程/lc3-GPT系列-MOC]] |
+| **lc4** Llama 系列 | RoPE / NTK-RoPE / GQA / RMSNorm / SwiGLU / Benchmark | ✅ MOC完成 | [[AI/3-LLM/MA-RLHF课程/lc4-Llama系列-MOC]] |
+| **lc5** DeepSeek V3 | MoE / MLA / MTP / YaRN / TopK梯度 / mHC / Load Balance | ✅ MOC完成 | [[AI/3-LLM/MA-RLHF课程/lc5-DeepSeek-V3-MOC]] |
+| **lc6** SFT 全链路 | 数据处理 / LoRA / SFT完整训练 / RAG / ReAct / LLM-Judge | ✅ MOC完成 | [[AI/3-LLM/MA-RLHF课程/lc6-SFT全链路-MOC]] |
+| **lc7** RL 基础 | MC/TD/Q-Learning/DQN/PolicyGradient/GAE | ✅ MOC完成 | [[AI/3-LLM/MA-RLHF课程/lc7-RL基础-MOC]] |
+| **lc8** RL×LLM | RLHF-PPO / Bradley-Terry / DPO / KTO / GRPO / PRM / MCTS-O1 | ✅ MOC完成 | [[AI/3-LLM/MA-RLHF课程/lc8-RL×LLM-MOC]] |
+| **lc9** 分布式 RL 训练 | Ray三角架构 / 异步GRPO / verl实战 / R1复现 | ✅ MOC完成 | [[AI/3-LLM/MA-RLHF课程/lc9-分布式RL训练-MOC]] |
+| **lc10** 推理系统 | Continue Batching / PageKV / PageAttention / vLLM V0→V1 / Chunked Prefill / PD分离 / SD | ✅ MOC完成 | [[AI/3-LLM/MA-RLHF课程/lc10-推理系统-MOC]] |
+| **xtrain** 分布式手写 | DP/ZeRO/TP/PP(DualPipe)/CP(RingAttn)/EP(MoE) 从零手写 | ✅ MOC完成 | [[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]] |
 
 ---
 

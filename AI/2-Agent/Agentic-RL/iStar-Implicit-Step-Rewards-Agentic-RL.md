@@ -28,7 +28,7 @@ related:
 **arXiv**：2509.19199v3  
 **机构**：未知（论文标注 cs.CL）  
 **难度**：★★★★★（Agent RL credit assignment 理论统一，DPO ≡ PRM 的桥接工作）  
-**关联**：[[GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] | [[Long-Horizon-Credit-Assignment专题|Long-Horizon CA 专题]] | [[lc8-DPO-IPO-手撕实操|lc8-DPO-IPO-手撕实操]] | [[AI/LLM/MA-RLHF课程/lc8-PRM-O1-Search-手撕实操|lc8-PRM-O1-Search-手撕实操]]
+**关联**：[[GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] | [[Long-Horizon-Credit-Assignment专题|Long-Horizon CA 专题]] | [[lc8-DPO-IPO-手撕实操|lc8-DPO-IPO-手撕实操]] | [[AI/3-LLM/MA-RLHF课程/lc8-PRM-O1-Search-手撕实操|lc8-PRM-O1-Search-手撕实操]]
 
 ---
 

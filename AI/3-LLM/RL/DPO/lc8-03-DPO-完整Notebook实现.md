@@ -6,10 +6,10 @@ type: code-practice
 source: "https://github.com/dhcode-cpp/MA-RLHF"
 tags: [code-practice, llm-engineering, ma-rlhf, rl, dpo, notebook-implementation]
 related:
-  - "[[AI/LLM/RL/DPO/DPO-手撕实操]]"
-  - "[[AI/LLM/RL/DPO/Bradley-Terry模型实现]]"
-  - "[[AI/LLM/RL/PPO/RLHF-PPO-完整Pytorch实现]]"
-  - "[[AI/LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"
+  - "[[AI/3-LLM/RL/DPO/DPO-手撕实操]]"
+  - "[[AI/3-LLM/RL/DPO/Bradley-Terry模型实现]]"
+  - "[[AI/3-LLM/RL/PPO/RLHF-PPO-完整Pytorch实现]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"
 ---
 
 # DPO 完整 Notebook 实现

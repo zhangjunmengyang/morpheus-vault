@@ -226,8 +226,8 @@ GRPO 是"极简主义 RL"的典范：PPO 用复杂的价值网络学基线，GRP
 - [OpenR1 项目](https://github.com/huggingface/open-r1) — 复现 DeepSeek-R1 的开源实现，含 GRPO ⭐⭐⭐⭐⭐
 
 ### 代码手撕（理论 → 代码）
-- [[AI/LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]] — **强烈推荐**：从零手写 GRPO 训练循环（advantage 计算/clip/group normalization），MA-RLHF 项目代码注解 ⭐⭐⭐⭐⭐
-- [[AI/LLM/RL/GRPO/GRPO-完整Notebook实现|GRPO 完整 Notebook 实现]] — **端到端验证**：组采样 + advantage 归一化 + KL 项完整 Notebook，验证理论细节
-- [[AI/LLM/RL/GRPO/GRPO-KL散度三种近似|GRPO KL 散度三种近似]] — k1/k2/k3 Schulman 近似实现对比：精度 vs 计算成本 tradeoff
-- [[AI/LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操]] — PPO actor-critic 实现对照，理解 GRPO 为什么能去掉 critic
+- [[AI/3-LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]] — **强烈推荐**：从零手写 GRPO 训练循环（advantage 计算/clip/group normalization），MA-RLHF 项目代码注解 ⭐⭐⭐⭐⭐
+- [[AI/3-LLM/RL/GRPO/GRPO-完整Notebook实现|GRPO 完整 Notebook 实现]] — **端到端验证**：组采样 + advantage 归一化 + KL 项完整 Notebook，验证理论细节
+- [[AI/3-LLM/RL/GRPO/GRPO-KL散度三种近似|GRPO KL 散度三种近似]] — k1/k2/k3 Schulman 近似实现对比：精度 vs 计算成本 tradeoff
+- [[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操]] — PPO actor-critic 实现对照，理解 GRPO 为什么能去掉 critic
 - [[MA-RLHF-手撕实操-系列索引|MA-RLHF 手撕实操系列索引]] — 架构/推理/Infra/RL 全链路代码实操总索引

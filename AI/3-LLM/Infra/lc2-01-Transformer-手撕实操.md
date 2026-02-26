@@ -12,9 +12,9 @@ tags:
   - pytorch
 related:
   - "[[Transformer架构深度解析-2026技术全景|Transformer架构深度解析]]"
-  - "[[AI/LLM/Architecture/GPT2-手撕实操|GPT2-手撕实操]]"
-  - "[[AI/LLM/Inference/FlashAttention-手撕实操|FlashAttention-手撕实操]]"
-  - "[[AI/LLM/Architecture/基础数学组件手撕|基础数学组件手撕]]"
+  - "[[AI/3-LLM/Architecture/GPT2-手撕实操|GPT2-手撕实操]]"
+  - "[[AI/3-LLM/Inference/FlashAttention-手撕实操|FlashAttention-手撕实操]]"
+  - "[[AI/3-LLM/Architecture/基础数学组件手撕|基础数学组件手撕]]"
 ---
 
 # Transformer 手撕实操

@@ -30,7 +30,7 @@ related:
   - "[[Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]]"
   - "[[Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]]"
   - "[[Agent-RL-环境工程系统论|Agent-RL-环境工程系统论]]"
-  - "[[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]]"
+  - "[[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]]"
 ---
 
 # Tool Use RL 训练专题 — 用 RL 教模型学会使用工具

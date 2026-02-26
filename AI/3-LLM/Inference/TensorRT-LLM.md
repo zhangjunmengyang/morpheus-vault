@@ -214,7 +214,7 @@ for output in outputs:
 
 ## 4. TensorRT-LLM vs vLLM 对比
 
-| 维度 | TensorRT-LLM | [[AI/LLM/Inference/vLLM|vLLM]] |
+| 维度 | TensorRT-LLM | [[AI/3-LLM/Inference/vLLM|vLLM]] |
 |------|-------------|---------|
 | **厂商** | NVIDIA 官方 | UC Berkeley → 社区 |
 | **硬件** | 仅 NVIDIA GPU | NVIDIA + AMD ROCm + CPU |
@@ -296,7 +296,7 @@ kv_cache_config = {
   │   └── Yes → vLLM
   │
   ├── 单机简单推理?
-  │   └── Yes → [[AI/LLM/Inference/Ollama|Ollama]] / llama.cpp
+  │   └── Yes → [[AI/3-LLM/Inference/Ollama|Ollama]] / llama.cpp
   │
   └── 前沿功能 (RadixAttention, 结构化输出)?
       └── SGLang

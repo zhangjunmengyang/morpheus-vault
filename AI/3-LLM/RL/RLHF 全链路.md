@@ -272,7 +272,7 @@ reward:
   # 或 type: model_based + reward_model_path
 ```
 
-参见 [[AI/LLM/Frameworks/verl/GRPO-verl实践|GRPO-verl 实践]] 和 [[GRPO-TRL实践|GRPO-TRL 实践]]。
+参见 [[AI/3-LLM/Frameworks/verl/GRPO-verl实践|GRPO-verl 实践]] 和 [[GRPO-TRL实践|GRPO-TRL 实践]]。
 
 ## 7. 前沿趋势 (2025-2026)
 
@@ -319,7 +319,7 @@ A: 检测：监控 reward 上升但 win rate 下降。缓解：KL 惩罚、长�
 - [[PPO 原理|PPO 原理]] / [[PPO-TRL实践|PPO-TRL 实践]]
 - [[GRPO 深度理解|GRPO 深度理解]] / [[GRPO-TRL实践|GRPO-TRL 实践]]
 - [[DPO-TRL实践|DPO-TRL 实践]]
-- [[AI/LLM/RL/DAPO/|DAPO]]
+- [[AI/3-LLM/RL/DAPO/|DAPO]]
 - [[verl 概述|verl 概述]] / [[OpenRLHF|OpenRLHF]]
 - [[SFT 原理|SFT 原理]]
 - [[RL 概览|RL 概览]]

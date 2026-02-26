@@ -86,13 +86,13 @@ graph TD
 
     C --> C1["MCTS-guided Collection\n离线搜索 step-level Q 值"]
     C --> C2["PRM Training\n单独训练 step verifier"]
-    C --> C3["MIG 2602.01034\n信息论视角 step 贡献\n[[AI/Agent/Agentic-RL/MIG-Step-Marginal-Information-Gain-Credit-Assignment|MIG]]"]
+    C --> C3["MIG 2602.01034\n信息论视角 step 贡献\n[[AI/2-Agent/Agentic-RL/MIG-Step-Marginal-Information-Gain-Credit-Assignment|MIG]]"]
 
     D --> D1["Trajectory Splitting\nKLong 2602.17547"]
     D --> D2["Hierarchical RL\nHiPER / Agent-as-Tool"]
 
     A --> E[失败轨迹（新维度）]
-    E --> E1["反事实验证\nCSO 2602.03412\nPRM定位+expert替代+policy验证\n只监督16%关键步骤\n[[AI/Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO]]"]
+    E --> E1["反事实验证\nCSO 2602.03412\nPRM定位+expert替代+policy验证\n只监督16%关键步骤\n[[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO]]"]
 ```
 
 ---
@@ -373,7 +373,7 @@ A^low_t = local GAE within subgoal segment
 |------|-----------|------------|------|------|---------|
 | GRPO（baseline） | ❌ | ❌ | 低（traj-level） | 低 | 短任务/简单工具 |
 | GiGPO | ❌ | ❌ | 高（step-level） | 低（同 GRPO） | 多步 agent，需并行 rollout |
-| AgentPRM | ❌ | ✅（MC rollout） | 高 | 中 | 中等 horizon，有计算预算 | → [[AI/Agent/Agentic-RL/AgentPRM-Process-Reward-Models-for-LLM-Agents|AgentPRM]] |
+| AgentPRM | ❌ | ✅（MC rollout） | 高 | 中 | 中等 horizon，有计算预算 | → [[AI/2-Agent/Agentic-RL/AgentPRM-Process-Reward-Models-for-LLM-Agents|AgentPRM]] |
 | Turn-level GRPO | ❌ | ❌ | 中高（turn-level） | 低 | 多轮工具调用 |
 | LOOP | ❌ | ✅（K=6 rollouts/task）| 中（LOO traj-level）| 最低（1× LLM）| 长 horizon API agent，AppWorld |
 | MIG | ❌ | ❌ | 高（信息论） | 低 | CoT 推理 |

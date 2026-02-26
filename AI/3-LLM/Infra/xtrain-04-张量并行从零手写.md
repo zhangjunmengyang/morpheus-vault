@@ -13,17 +13,17 @@ tags:
   - autograd-function
   - xtrain
 related:
-  - "[[AI/LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]]"
-  - "[[AI/LLM/Infra/xtrain-lc5-流水线并行从零手写]]"
-  - "[[AI/LLM/Infra/Tensor-Parallel-手撕实操]]"
-  - "[[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]"
+  - "[[AI/3-LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]]"
+  - "[[AI/3-LLM/Infra/xtrain-lc5-流水线并行从零手写]]"
+  - "[[AI/3-LLM/Infra/Tensor-Parallel-手撕实操]]"
+  - "[[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]"
   - "[[分布式训练]]"
 ---
 
 # xtrain lc4 — 张量并行从零手写
 
 > 来源：`/Users/peterzhang/project/ma-rlhf/xtrain/lecture/lc4_tensor_parallelism/`
-> 系列：[[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]
+> 系列：[[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]
 > 难度：★★★★★（面试必考，TP 行列并行 + autograd.Function 手写 backward 通信）
 > 更新：2026-02-25
 
@@ -354,17 +354,17 @@ A：行并行每卡 Linear 的 `fan_in = d_in/N`，PyTorch 默认 Kaiming 会用
 
 ## 十一、知识关联
 
-- **前置**：[[AI/LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]] — ZeRO 切存储 vs TP 切计算
+- **前置**：[[AI/3-LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]] — ZeRO 切存储 vs TP 切计算
 - **前置**：`autograd.Function` 基础（`custom_gradient.py`）
-- **后置**：[[AI/LLM/Infra/xtrain-lc5-流水线并行从零手写]] — PP 在层间切分，TP + PP = 混合并行
-- **横向**：[[AI/LLM/Infra/Tensor-Parallel-手撕实操]] — 更早的 TP 原理笔记
+- **后置**：[[AI/3-LLM/Infra/xtrain-lc5-流水线并行从零手写]] — PP 在层间切分，TP + PP = 混合并行
+- **横向**：[[AI/3-LLM/Infra/Tensor-Parallel-手撕实操]] — 更早的 TP 原理笔记
 - **深化**：Megatron-LM 的 Sequence Parallelism — 把 LayerNorm/Dropout 的激活也分到不同卡，TP 通信从 AllReduce → AllGather + ReduceScatter，显存进一步降低
 - **生产对照**：FSDP + TP（2D并行）= Meta 的 PyTorch 原生混合并行方案
 
 ## See Also
 
-- [[AI/LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]] — 前置：ZeRO 切存储 vs TP 切计算，根本差异对比
-- [[AI/LLM/Infra/xtrain-lc5-流水线并行从零手写]] — 后置：PP 层间切分，TP+PP=混合并行
-- [[AI/LLM/Infra/Tensor-Parallel-手撕实操]] — 横向：更早的 TP 原理版，算法视角
+- [[AI/3-LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]] — 前置：ZeRO 切存储 vs TP 切计算，根本差异对比
+- [[AI/3-LLM/Infra/xtrain-lc5-流水线并行从零手写]] — 后置：PP 层间切分，TP+PP=混合并行
+- [[AI/3-LLM/Infra/Tensor-Parallel-手撕实操]] — 横向：更早的 TP 原理版，算法视角
 - [[分布式训练]] — 分布式训练理论全景
-- [[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]] — xtrain 系列课程地图
+- [[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]] — xtrain 系列课程地图

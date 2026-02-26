@@ -43,7 +43,7 @@ lc7 MoE 专家并行 EP   ← Expert 维度切分 + 通信计算重叠
 
 ## lc1：通信原语 — 所有并行的根基
 
-**[[AI/LLM/Infra/xtrain-lc1-分布式通信原语从零手写|xtrain-lc1 从零手写]]** · 参考手撕实操：**[[AI/LLM/Infra/分布式训练通信原语-手撕实操|通信原语-MA-RLHF版]]**
+**[[AI/3-LLM/Infra/xtrain-lc1-分布式通信原语从零手写|xtrain-lc1 从零手写]]** · 参考手撕实操：**[[AI/3-LLM/Infra/分布式训练通信原语-手撕实操|通信原语-MA-RLHF版]]**
 
 | 操作 | 功能 | 通信量 |
 |------|------|--------|
@@ -66,7 +66,7 @@ lc7 MoE 专家并行 EP   ← Expert 维度切分 + 通信计算重叠
 
 ## lc2：数据并行 DDP — 最简单的多卡训练
 
-**[[AI/LLM/Infra/xtrain-lc2-数据并行从零手写|xtrain-lc2 从零手写]]**
+**[[AI/3-LLM/Infra/xtrain-lc2-数据并行从零手写|xtrain-lc2 从零手写]]**
 
 - **核心思想**：每个 GPU 有完整模型副本，数据切分 → 各自前向反向 → AllReduce 梯度 → 同步更新
 - **关键**：是 reduce **梯度**，不是 reduce **loss**（⚠️ 常见误区）
@@ -78,7 +78,7 @@ lc7 MoE 专家并行 EP   ← Expert 维度切分 + 通信计算重叠
 
 ## lc3：ZeRO — DP 的显存极致优化
 
-**[[AI/LLM/Infra/xtrain-lc3-ZeRO优化器从零手写|xtrain-lc3 从零手写]]** · 参考：**[[AI/LLM/Infra/ZeRO-手撕实操|ZeRO 手撕]]**
+**[[AI/3-LLM/Infra/xtrain-lc3-ZeRO优化器从零手写|xtrain-lc3 从零手写]]** · 参考：**[[AI/3-LLM/Infra/ZeRO-手撕实操|ZeRO 手撕]]**
 
 ZeRO 三阶段（本质仍是 DP，但切分了冗余）：
 
@@ -102,7 +102,7 @@ ZeRO 三阶段（本质仍是 DP，但切分了冗余）：
 
 ## lc4：张量并行 TP — 模型内部切分
 
-**[[AI/LLM/Infra/xtrain-lc4-张量并行从零手写|xtrain-lc4 从零手写]]** · 参考：**[[AI/LLM/Infra/Tensor-Parallel-手撕实操|TP 手撕]]**
+**[[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写|xtrain-lc4 从零手写]]** · 参考：**[[AI/3-LLM/Infra/Tensor-Parallel-手撕实操|TP 手撕]]**
 
 - **列并行 Linear**：Weight 按列切分到各 GPU → 各自计算部分输出 → AllGather 拼接（或直接进下一层行并行）
 - **行并行 Linear**：Weight 按行切分 → Input 按列切分 → 各自计算 → AllReduce 求和
@@ -125,7 +125,7 @@ ZeRO 三阶段（本质仍是 DP，但切分了冗余）：
 
 ## lc5：流水线并行 PP — 层间切分
 
-**[[AI/LLM/Infra/xtrain-lc5-流水线并行从零手写|xtrain-lc5 从零手写]]** · 参考：**[[AI/LLM/Infra/Pipeline-Parallel-手撕实操|PP 手撕]]**
+**[[AI/3-LLM/Infra/xtrain-lc5-流水线并行从零手写|xtrain-lc5 从零手写]]** · 参考：**[[AI/3-LLM/Infra/Pipeline-Parallel-手撕实操|PP 手撕]]**
 
 演进路线：
 
@@ -153,7 +153,7 @@ DualPipe → 双向流水线，MoE EP 通信完全隐藏
 
 ## lc6：上下文并行 CP — 序列维度切分
 
-**[[AI/LLM/Infra/xtrain-lc6-Context并行RingAttention手写|xtrain-lc6 从零手写]]** · 参考：**[[AI/LLM/Infra/MoE-Context-Parallel-手撕实操|MoE+CP 手撕]]**（CP 部分）
+**[[AI/3-LLM/Infra/xtrain-lc6-Context并行RingAttention手写|xtrain-lc6 从零手写]]** · 参考：**[[AI/3-LLM/Infra/MoE-Context-Parallel-手撕实操|MoE+CP 手撕]]**（CP 部分）
 
 - **Online Softmax**：分块计算 softmax，每块只需维护 `(max, sum_exp)` → 可增量更新
 - **Ring Online Softmax**：分布式环形传递 KV 块 + Online Softmax 更新 → Ring Attention 的前置
@@ -175,7 +175,7 @@ DualPipe → 双向流水线，MoE EP 通信完全隐藏
 
 ## lc7：MoE 专家并行 EP — Expert 维度切分
 
-**[[AI/LLM/Infra/xtrain-lc7-MoE专家并行从零手写|xtrain-lc7 从零手写]]** · 参考：**[[AI/LLM/Infra/MoE-Context-Parallel-手撕实操|MoE+CP 手撕]]**（EP 部分）
+**[[AI/3-LLM/Infra/xtrain-lc7-MoE专家并行从零手写|xtrain-lc7 从零手写]]** · 参考：**[[AI/3-LLM/Infra/MoE-Context-Parallel-手撕实操|MoE+CP 手撕]]**（EP 部分）
 
 - **GShard**：每个 GPU 持有不同 Expert，All2All 交换 token → 本地 Expert 计算 → All2All 交换回结果
 - **前向**：dispatch (All2All) → local expert compute → combine (All2All)

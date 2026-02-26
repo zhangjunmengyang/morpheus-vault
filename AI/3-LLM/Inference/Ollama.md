@@ -171,7 +171,7 @@ embedding = ollama.embeddings(model='nomic-embed-text', prompt='your text')
 
 **本地推理生态**
 - [[vLLM|vLLM]] — 生产级推理引擎对比（Ollama 的进阶替代）
-- [[AI/LLM/Inference/vLLM-手撕实操|vLLM-手撕实操]] — vLLM 核心机制手撕（Continuous Batching / PagedKVCache）
+- [[AI/3-LLM/Inference/vLLM-手撕实操|vLLM-手撕实操]] — vLLM 核心机制手撕（Continuous Batching / PagedKVCache）
 - [[LLM-推理优化-2026-全景|LLM推理优化2026全景]] — 推理优化技术全貌
 
 **量化与模型格式**

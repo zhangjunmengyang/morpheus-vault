@@ -32,7 +32,7 @@ related:
   - "[[AWM-Agent-World-Model-Synthetic-Environments|AWM]]"
   - "[[Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]]"
   - "[[Agent-RL-训练实战指南|Agent-RL-训练实战指南]]"
-  - "[[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]]"
+  - "[[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]]"
   - "[[Tool-Use-RL-训练专题|Tool-Use-RL-训练专题]]"
   - "[[Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]]"
   - "[[Agent-评测与-Benchmark|Agent 评测与 Benchmark]]"
@@ -474,5 +474,5 @@ $$\text{评估分层} = \begin{cases} \text{Task-level} & \text{整体任务成�
 - [[AWM-Agent-World-Model-Synthetic-Environments|AWM-Agent-World-Model-Synthetic-Environments]] — 合成环境方法论
 - [[Tool-Use-RL-训练专题|Tool-Use-RL-训练专题]] — Reward 设计详细展开
 - [[Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]] — 长任务 credit assignment 算法
-- [[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong-Extremely-Long-Horizon-Agent]] — KLong 单独深读
+- [[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong-Extremely-Long-Horizon-Agent]] — KLong 单独深读
 - [[Agent-评测与-Benchmark|Agent 评测与 Benchmark]] — 评估体系

@@ -14,9 +14,9 @@ tags:
   - inference
 brief: MLA（Multi-Head Latent Attention）手撕实操：从标准 MHA 出发，逐步推导低秩联合压缩（KV Cache 约压缩 16x）、矩阵吸收优化和 RoPE 分离，是 DeepSeek V2/V3 KV Cache 压缩的核心工程实现。
 related:
-  - "[[AI/LLM/Architecture/DeepSeek-V3-手撕实操]]"
-  - "[[AI/LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写]]"
-  - "[[AI/LLM/MA-RLHF课程/lc5-DeepSeek-V3-MOC]]"
+  - "[[AI/3-LLM/Architecture/DeepSeek-V3-手撕实操]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc5-DeepSeek-V3-MOC]]"
   - "[[AI/3-LLM/Inference/KV Cache|KV Cache]]"
   - "[[Attention 变体综述]]"
 ---
@@ -268,8 +268,8 @@ A: 低秩 Q（wq_down + wq_up）减少 Q 的激活显存（中间的 c_q 维度�
 
 ## See Also
 
-- [[AI/LLM/Architecture/DeepSeek-V3-手撕实操]] — DeepSeek V3 完整架构手撕（MLA + MoE 组合），本笔记 MLA 部分的扩展
-- [[AI/LLM/Inference/vLLM-PageKVCache-手撕实操]] — KV Cache 分配机制（PagedKVCache），与 MLA 低秩压缩正交
-- [[AI/LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写]] — TPA（张量积低秩分解）+ YaRN，另一种 KV 压缩 + 长度外推组合
+- [[AI/3-LLM/Architecture/DeepSeek-V3-手撕实操]] — DeepSeek V3 完整架构手撕（MLA + MoE 组合），本笔记 MLA 部分的扩展
+- [[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操]] — KV Cache 分配机制（PagedKVCache），与 MLA 低秩压缩正交
+- [[AI/3-LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写]] — TPA（张量积低秩分解）+ YaRN，另一种 KV 压缩 + 长度外推组合
 - [[Attention 变体综述]] — MLA/MQA/GQA/MHA 全谱系对比，理论定位
 - [[AI/3-LLM/Inference/KV Cache|KV Cache]] — KV Cache 优化全景，MLA 的工程背景

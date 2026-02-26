@@ -187,6 +187,6 @@ R1-Zero 是论文中最令人兴奋的实验——直接在 base model 上做 RL
 - [[TRL 概述|TRL 概述]]
 
 **代码手撕（理论 → 代码）：**
-- [[AI/LLM/Architecture/DeepSeek-V3-手撕实操|DeepSeek-V3-手撕实操]] ⭐⭐⭐⭐⭐ — MLA（KV cache 降 16x）+ MoE + mHC 架构从零实现，面试高频考点
-- [[AI/LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]] ⭐⭐⭐⭐⭐ — R1 核心训练算法从零实现
-- [[AI/LLM/RL/PPO/MA-RLHF-核心代码注解|MA-RLHF 核心代码注解]] — PPO/GRPO 在 LLM RLHF 中的完整训练框架
+- [[AI/3-LLM/Architecture/DeepSeek-V3-手撕实操|DeepSeek-V3-手撕实操]] ⭐⭐⭐⭐⭐ — MLA（KV cache 降 16x）+ MoE + mHC 架构从零实现，面试高频考点
+- [[AI/3-LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]] ⭐⭐⭐⭐⭐ — R1 核心训练算法从零实现
+- [[AI/3-LLM/RL/PPO/MA-RLHF-核心代码注解|MA-RLHF 核心代码注解]] — PPO/GRPO 在 LLM RLHF 中的完整训练框架

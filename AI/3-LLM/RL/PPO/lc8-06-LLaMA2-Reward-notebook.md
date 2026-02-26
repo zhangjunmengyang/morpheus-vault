@@ -14,10 +14,10 @@ tags:
   - bradley-terry
   - lc8
 related:
-  - "[[AI/LLM/RL/PPO/LLaMA2-Reward-Model实现]]"
-  - "[[AI/LLM/RL/PPO/RLHF-PPO-完整Pytorch实现]]"
-  - "[[AI/LLM/MA-RLHF课程/lc8-RLHF-PPO-Pytorch从零手写]]"
-  - "[[AI/LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"
+  - "[[AI/3-LLM/RL/PPO/LLaMA2-Reward-Model实现]]"
+  - "[[AI/3-LLM/RL/PPO/RLHF-PPO-完整Pytorch实现]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-RLHF-PPO-Pytorch从零手写]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"
   - "[[RLHF-DPO-2026-技术全景]]"
 ---
 
@@ -243,8 +243,8 @@ A: 从 SFT checkpoint 初始化，把 lm_head（`Linear(hidden, vocab_size)`）�
 
 ## See Also
 
-- [[AI/LLM/RL/PPO/LLaMA2-Reward-Model实现]] — 同内容 Batch A 版
-- [[AI/LLM/MA-RLHF课程/lc8-RLHF-PPO-Pytorch从零手写]] — 同系列：PPO 四模型完整训练
-- [[AI/LLM/MA-RLHF课程/lc8-DPO-IPO-BT-偏好优化从零手写]] — 同系列：BT 模型理论基础
+- [[AI/3-LLM/RL/PPO/LLaMA2-Reward-Model实现]] — 同内容 Batch A 版
+- [[AI/3-LLM/MA-RLHF课程/lc8-RLHF-PPO-Pytorch从零手写]] — 同系列：PPO 四模型完整训练
+- [[AI/3-LLM/MA-RLHF课程/lc8-DPO-IPO-BT-偏好优化从零手写]] — 同系列：BT 模型理论基础
 - [[PPO 原理]] — PPO 算法理论（RM 是 RLHF 的前置模块）
 - [[RLHF-DPO-2026-技术全景]] — RLHF 全链路：RM 在四模型体系中的位置

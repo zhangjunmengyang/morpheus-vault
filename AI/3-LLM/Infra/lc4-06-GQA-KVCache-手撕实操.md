@@ -14,10 +14,10 @@ tags:
   - inference
 brief: GQA（Grouped Query Attention）从 MHA→MQA→GQA 推导：KV 头复用 repeat_kv 机制 + 参数量对比；KV Cache 增量解码完整实现：past_key_values 缓存、position 追踪、动态扩容，是 Llama3/Mistral/DeepSeek V3 推理加速的核心组件。
 related:
-  - "[[AI/LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]]"
-  - "[[AI/LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写]]"
-  - "[[AI/LLM/Inference/vLLM-PageKVCache-手撕实操]]"
-  - "[[AI/LLM/Infra/xtrain-lc4-张量并行从零手写]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写]]"
+  - "[[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操]]"
+  - "[[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写]]"
   - "[[Attention 变体综述]]"
 ---
 
@@ -307,8 +307,8 @@ MLA 可以看作 GQA 的深化：GQA 在"头数"维度压缩，MLA 在"低秩"�
 
 ## See Also
 
-- [[AI/LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]] — MLA 低秩分解 + 矩阵吸收（GQA 的深化：头数压缩→低秩压缩）
-- [[AI/LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写]] — TPA 的 head-specific 低秩 KV（另一维度压缩）
-- [[AI/LLM/Inference/vLLM-PageKVCache-手撕实操]] — KV Cache 的物理内存管理（PagedAttention），工程层扩展
-- [[AI/LLM/Infra/xtrain-lc4-张量并行从零手写]] — TP 下 GQA 权重切分细节（分布式场景）
+- [[AI/3-LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]] — MLA 低秩分解 + 矩阵吸收（GQA 的深化：头数压缩→低秩压缩）
+- [[AI/3-LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写]] — TPA 的 head-specific 低秩 KV（另一维度压缩）
+- [[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操]] — KV Cache 的物理内存管理（PagedAttention），工程层扩展
+- [[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写]] — TP 下 GQA 权重切分细节（分布式场景）
 - [[Attention 变体综述]] — MHA/MQA/GQA/MLA 全谱系理论对比

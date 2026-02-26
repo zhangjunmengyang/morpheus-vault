@@ -6,9 +6,9 @@ type: code-practice
 source: "https://github.com/dhcode-cpp/MA-RLHF"
 tags: [code-practice, llm-engineering, ma-rlhf, rl, kto, notebook-implementation, preference-learning]
 related:
-  - "[[AI/LLM/RL/KTO/KTO-手撕实操]]"
-  - "[[AI/LLM/RL/DPO/DPO-完整Notebook实现]]"
-  - "[[AI/LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"
+  - "[[AI/3-LLM/RL/KTO/KTO-手撕实操]]"
+  - "[[AI/3-LLM/RL/DPO/DPO-完整Notebook实现]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"
 ---
 
 # KTO 完整 Notebook 实现

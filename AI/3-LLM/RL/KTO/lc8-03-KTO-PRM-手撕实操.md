@@ -14,10 +14,10 @@ tags:
   - o1-search
   - lc8
 related:
-  - "[[AI/LLM/RL/KTO/KTO-手撕实操]]"
-  - "[[AI/LLM/RL/KTO/KTO-完整Notebook实现]]"
-  - "[[AI/LLM/RL/PPO/PRM-O1-Search-手撕实操]]"
-  - "[[AI/LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"
+  - "[[AI/3-LLM/RL/KTO/KTO-手撕实操]]"
+  - "[[AI/3-LLM/RL/KTO/KTO-完整Notebook实现]]"
+  - "[[AI/3-LLM/RL/PPO/PRM-O1-Search-手撕实操]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"
   - "[[RLHF-DPO-2026-技术全景]]"
 ---
 
@@ -376,8 +376,8 @@ A: PRM Search 是贪心版（每步接受/拒绝，不回退多步）。MCTS 更
 
 ## See Also
 
-- [[AI/LLM/RL/KTO/KTO-手撕实操]] — 同算法手撕实操版（MA-RLHF lc8 Batch A）
-- [[AI/LLM/RL/KTO/KTO-完整Notebook实现]] — 同算法 Notebook 端到端版
-- [[AI/LLM/RL/PPO/PRM-O1-Search-手撕实操]] — PRM 搜索 Batch A 版
-- [[AI/LLM/MA-RLHF课程/lc8-DPO-IPO-BT-偏好优化从零手写]] — 同系列：DPO/IPO 实现
-- [[AI/LLM/MA-RLHF课程/lc8-RLHF-PPO-Pytorch从零手写]] — 同系列：PPO 完整实现
+- [[AI/3-LLM/RL/KTO/KTO-手撕实操]] — 同算法手撕实操版（MA-RLHF lc8 Batch A）
+- [[AI/3-LLM/RL/KTO/KTO-完整Notebook实现]] — 同算法 Notebook 端到端版
+- [[AI/3-LLM/RL/PPO/PRM-O1-Search-手撕实操]] — PRM 搜索 Batch A 版
+- [[AI/3-LLM/MA-RLHF课程/lc8-DPO-IPO-BT-偏好优化从零手写]] — 同系列：DPO/IPO 实现
+- [[AI/3-LLM/MA-RLHF课程/lc8-RLHF-PPO-Pytorch从零手写]] — 同系列：PPO 完整实现

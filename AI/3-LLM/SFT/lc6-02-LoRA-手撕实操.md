@@ -14,10 +14,10 @@ tags:
 brief: LoRA 从零完整推导与实现：冻结预训练权重 W，旁路低秩分解 ΔW=W_A·W_B（r≪d）；初始化原则（W_A 高斯随机初始化而非全零，保证 W_B 梯度不消失）；rank/alpha/dropout 三超参调优；与 QLoRA/DoRA/LoRA+ 的对比；在 SFT/RLHF/DPO 流程中的应用位置。
 related:
   - "[[LoRA]]"
-  - "[[AI/LLM/SFT/SFT-手撕实操]]"
-  - "[[AI/LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]]"
-  - "[[AI/LLM/MA-RLHF课程/lc8-GPTLoss-Muon优化器-手撕实操]]"
-  - "[[AI/LLM/MA-RLHF课程/lc6-SFT全链路-MOC]]"
+  - "[[AI/3-LLM/SFT/SFT-手撕实操]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-GPTLoss-Muon优化器-手撕实操]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc6-SFT全链路-MOC]]"
 ---
 
 # LoRA 手撕实操（MA-RLHF Batch E）
@@ -338,7 +338,7 @@ QLoRA = 量化 + LoRA，面向边缘/低资源场景
 ## See Also
 
 - [[LoRA]] — LoRA 理论精读（本笔记的代码实现对应的理论背景，含 rank 选择实验）
-- [[AI/LLM/SFT/SFT-手撕实操]] — SFT 手撕实操（LoRA 在 SFT 流程中的完整应用）
-- [[AI/LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]] — MLA 的低秩 KV 压缩（同一低秩分解思路在 Attention 上的应用）
-- [[AI/LLM/MA-RLHF课程/lc8-GPTLoss-Muon优化器-手撕实操]] — Muon 梯度正交化（低秩梯度的另一种工程利用）
-- [[AI/LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]] — ZeRO 显存优化（LoRA + ZeRO 组合是常见的显存节省方案）
+- [[AI/3-LLM/SFT/SFT-手撕实操]] — SFT 手撕实操（LoRA 在 SFT 流程中的完整应用）
+- [[AI/3-LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]] — MLA 的低秩 KV 压缩（同一低秩分解思路在 Attention 上的应用）
+- [[AI/3-LLM/MA-RLHF课程/lc8-GPTLoss-Muon优化器-手撕实操]] — Muon 梯度正交化（低秩梯度的另一种工程利用）
+- [[AI/3-LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]] — ZeRO 显存优化（LoRA + ZeRO 组合是常见的显存节省方案）

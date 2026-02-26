@@ -60,7 +60,7 @@ Step 8  DeepSeek V3 完整集成       ← 全组件组装
 
 ### Step 3：DeepSeek MoE
 
-**[[AI/LLM/Architecture/DeepSeek-V3-手撕实操|DeepSeek-V3 手撕实操]]**（MoE 部分）
+**[[AI/3-LLM/Architecture/DeepSeek-V3-手撕实操|DeepSeek-V3 手撕实操]]**（MoE 部分）
 
 vs 标准 MoE 的关键差异：
 - **Shared Expert**：1-2 个 Expert 被所有 token 共享（不经过 Router）→ 保证基础知识不丢失
@@ -74,7 +74,7 @@ vs 标准 MoE 的关键差异：
 
 ### Step 4：MLA 多头潜在注意力（🌟核心）
 
-**[[Multi-Head Latent Attention|MLA 理论精读]]** · **[[AI/LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写|MLA 从零手写 ✅]]**
+**[[Multi-Head Latent Attention|MLA 理论精读]]** · **[[AI/3-LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写|MLA 从零手写 ✅]]**
 
 - **核心思想**：不直接缓存 K/V（d_model 维度），而是缓存低秩压缩后的潜在向量 c（d_c 维度，d_c ≪ d_model）
 - **压缩过程**：`c = W_DKV · x`（down-projection），推理时 `K = W_UK · c`, `V = W_UV · c`（up-projection）
@@ -85,13 +85,13 @@ vs 标准 MoE 的关键差异：
 
 课程代码：`Multi_Latent_Attention.ipynb`（🌟 压缩 / 解压缩 / 位置编码分离 / 权重吸收 / 完整前向）
 
-**扩展**：**[[AI/LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写|TPA 手撕 ✅]]** — TPA 用张量积低秩分解压缩 KV，与 MLA 的正交比较
+**扩展**：**[[AI/3-LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写|TPA 手撕 ✅]]** — TPA 用张量积低秩分解压缩 KV，与 MLA 的正交比较
 
 ---
 
 ### Step 5：YaRN 上下文扩展
 
-**[[AI/LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写|TPA + YaRN 从零手写 ✅]]**
+**[[AI/3-LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写|TPA + YaRN 从零手写 ✅]]**
 
 - **NTK-RoPE 的问题**：高频保持「不够严格」，部分高频维度仍被压缩
 - **YaRN 方案**：**分段处理**，按频率将维度分为三段：
@@ -131,7 +131,7 @@ vs 标准 MoE 的关键差异：
 
 ### Step 8：DeepSeek V3 完整集成
 
-**[[AI/LLM/Architecture/DeepSeek-V3-手撕实操|DeepSeek-V3 手撕实操]]**
+**[[AI/3-LLM/Architecture/DeepSeek-V3-手撕实操|DeepSeek-V3 手撕实操]]**
 
 ```
 Token Embedding
@@ -163,7 +163,7 @@ A：MLA 压缩 KV Cache → 降低推理显存和带宽；MoE 激活参数远小
 
 ### mHC 流形超连接（残差连接重设计）
 
-**[[AI/LLM/MA-RLHF课程/lc8-mHC-流形超连接从零手写|mHC 从零手写 ✅]]** · **[[mHC-Manifold-Constrained-Hyper-Connections-DeepSeek|mHC 论文精读]]**
+**[[AI/3-LLM/MA-RLHF课程/lc8-mHC-流形超连接从零手写|mHC 从零手写 ✅]]** · **[[mHC-Manifold-Constrained-Hyper-Connections-DeepSeek|mHC 论文精读]]**
 
 mHC 是 DeepSeek V4 预研方向之一，对标准残差连接做系统性重设计：
 

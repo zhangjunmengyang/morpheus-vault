@@ -18,10 +18,10 @@ tags:
   - math
   - code
 related:
-  - "[[AI/LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操]]"
-  - "[[AI/LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]]"
+  - "[[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]]"
   - "[[REBEL-Regret-Based-RL-LLM-Alignment|REBEL]]"
-  - "[[AI/LLM/RL/GRPO/GRPO-Improvement-Panorama-2026|GRPO-Improvement-Panorama-2026]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO-Improvement-Panorama-2026|GRPO-Improvement-Panorama-2026]]"
   - "[[GRPO 深度理解|GRPO深度理解]]"
   - "[[MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]]"
 ---
@@ -255,9 +255,9 @@ OAPL 是 off-policy 方向中**理论最干净**的方案：没有 heuristic（�
 - [[SAPO-Soft-Adaptive-Policy-Optimization|SAPO]] — **正交可叠加**：OAPL 改 IS ratio（squared loss），SAPO 改 clip 函数（sigmoid 软衰减）；解决不同维度，理论上可组合
 
 **代码实操（理解 off-policy 的工程含义）：**
-- [[AI/LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]] — GRPO on-policy 实现对照
-- [[AI/LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操]] — IS ratio 在 PPO 中的具体位置
-- [[AI/LLM/Infra/Ray-分布式RL训练实操|Ray分布式RL训练实操]] — 异步训练架构，OAPL 解决的工程问题来源
+- [[AI/3-LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]] — GRPO on-policy 实现对照
+- [[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操]] — IS ratio 在 PPO 中的具体位置
+- [[AI/3-LLM/Infra/Ray-分布式RL训练实操|Ray分布式RL训练实操]] — 异步训练架构，OAPL 解决的工程问题来源
 
 **理论相关：**
 - [[GRPO 深度理解|GRPO深度理解]] — 理解 GRPO 局限是理解 OAPL 动机的前提
@@ -268,5 +268,5 @@ OAPL 是 off-policy 方向中**理论最干净**的方案：没有 heuristic（�
 
 1. **原文**：[arXiv:2602.19362](https://arxiv.org/abs/2602.19362) — OAPL: LLMs Can Learn to Reason Via Off-Policy RL
 2. **前置阅读**：[[GRPO 深度理解|GRPO深度理解]] — 理解 OAPL 在改进什么
-3. **工程对照**：[[AI/LLM/Infra/Ray-分布式RL训练实操|Ray分布式RL训练实操]] — 异步架构中 OAPL 的应用场景
+3. **工程对照**：[[AI/3-LLM/Infra/Ray-分布式RL训练实操|Ray分布式RL训练实操]] — 异步架构中 OAPL 的应用场景
 4. **姊妹论文**：[[SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO]] — 同期从不同角度批判 GRPO 收敛性

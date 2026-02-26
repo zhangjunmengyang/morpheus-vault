@@ -6,10 +6,10 @@ type: code-practice
 source: "https://github.com/dhcode-cpp/MA-RLHF"
 tags: [code-practice, llm-engineering, ma-rlhf, distributed-training, data-parallel, ddp, xtrain]
 related:
-  - "[[AI/LLM/Infra/xtrain-lc1-分布式通信原语从零手写]]"
-  - "[[AI/LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]]"
-  - "[[AI/LLM/Infra/ZeRO-手撕实操]]"
-  - "[[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]"
+  - "[[AI/3-LLM/Infra/xtrain-lc1-分布式通信原语从零手写]]"
+  - "[[AI/3-LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]]"
+  - "[[AI/3-LLM/Infra/ZeRO-手撕实操]]"
+  - "[[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]"
 ---
 
 # xtrain lc2 — 数据并行从零手写

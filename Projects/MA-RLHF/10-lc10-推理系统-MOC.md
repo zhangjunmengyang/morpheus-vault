@@ -39,7 +39,7 @@ Step 8  集群级架构         PD Disaggregation          ← Prefill/Decode �
 
 ### ✅ Step 1：Continue Batching — LLM推理服务永动机
 
-**[[AI/LLM/Inference/Continue-Batching-手撕实操|Continue Batching 手撕实操]]**
+**[[AI/3-LLM/Inference/Continue-Batching-手撕实操|Continue Batching 手撕实操]]**
 
 - **问题**：Static Batching 里一条请求生成完，整个 Batch 都在等 → GPU 利用率极低
 - **解法**：请求完成即离队，新请求随时插入，Batch 动态变化
@@ -51,7 +51,7 @@ Step 8  集群级架构         PD Disaggregation          ← Prefill/Decode �
 
 ### ✅ Step 2：PageKVCache — 解决显存碎片
 
-**[[AI/LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM PageKVCache 手撕实操]]** ✅ 2026-02-25完成
+**[[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM PageKVCache 手撕实操]]** ✅ 2026-02-25完成
 
 - **问题**：Continue Batching 里 KV Cache 按最大长度预分配 → 内部碎片严重，Cache 利用率 <40%
 - **解法**：借鉴 OS 虚拟内存分页：`BlockTable` 维护 `request_id → [page_id]` 映射，KV Cache 结构从 `[L, slot, seq, H, D]` 变为 `[L, page_id, page_size, H, D]`
@@ -63,20 +63,20 @@ Step 8  集群级架构         PD Disaggregation          ← Prefill/Decode �
 
 ### ✅ Step 3：PageAttention — 不连续块上的 Attention
 
-**[[AI/LLM/Inference/vLLM-PageAttention-手撕实操|vLLM PageAttention 手撕实操]]** ✅ 2026-02-25完成
+**[[AI/3-LLM/Inference/vLLM-PageAttention-手撕实操|vLLM PageAttention 手撕实操]]** ✅ 2026-02-25完成
 
 - **问题**：物理 page 不连续，标准 Attention 需要先 gather 聚合（O(L) 内存拷贝）→ 专用 Kernel 直接在 pages 上计算
 - **解法**：Prefill 用 request-wise 切片；Decoding 用 `repeat_interleave` 分发 q + Online Softmax combine 聚合跨 page 结果
 - **代码**：`forward_prefill` / `forward_decoding` / `combine_result` + `FlashAttention` Backend 完整实现（含 Online Softmax 公式推导）
 - **关键发现**：`repeat_interleave(q, num_pages)` 把 per-request loop 变成并行矩阵乘；`combine_result` 用 (O, M, L) 三元组跨 page Online Softmax 合并
 - **与 FlashAttention 的关系**：FA 解决**计算效率**（IO 复杂度），PA 解决**内存管理**（不连续 pages），两者正交叠加
-- 深入阅读：[[AI/LLM/Inference/FlashAttention-手撕实操|FlashAttention 手撕实操]]
+- 深入阅读：[[AI/3-LLM/Inference/FlashAttention-手撕实操|FlashAttention 手撕实操]]
 
 ---
 
 ### ✅ Step 4 & Step 6：vLLM V0 / V1 — 完整系统
 
-**[[AI/LLM/Inference/vLLM-V0-V1-完整系统实操|vLLM V0/V1 完整系统实操]]** ✅ 2026-02-25完成
+**[[AI/3-LLM/Inference/vLLM-V0-V1-完整系统实操|vLLM V0/V1 完整系统实操]]** ✅ 2026-02-25完成
 
 - **V0**：PageKVCache + PageAttention 的完整集成；Prefill page-level 输入转换（`prompt → [num_pages, page_size]` tensor）；page-level logits → request-level last-token 提取
 - **V1**：`SchedulerInfo` 统一 PD 混合调度；`merge_prompt` 把所有 token 拼成一串统一前向；`KV.split(chunk_len, dim=2)` 精确拆分 KV 写回各 request 的 pages
@@ -88,7 +88,7 @@ Step 8  集群级架构         PD Disaggregation          ← Prefill/Decode �
 
 ### ✅ Step 5：Chunked Prefill — 平衡延迟与吞吐
 
-**[[AI/LLM/Inference/Chunked-Prefill-手撕实操|Chunked Prefill 手撕实操]]** ✅ 2026-02-25完成
+**[[AI/3-LLM/Inference/Chunked-Prefill-手撕实操|Chunked Prefill 手撕实操]]** ✅ 2026-02-25完成
 
 - **问题**：长 prompt Prefill 独占 GPU 数百ms → Decode 请求 TPOT 变高（卡顿）
 - **解法**：三阶段 Proj 搭便车（Decoding 免费附在 Prefill 的 GEMM 上）；Chunk-Prefill Attention 需要传历史 KV（第三种 attention 模式）
@@ -102,7 +102,7 @@ Step 8  集群级架构         PD Disaggregation          ← Prefill/Decode �
 
 ### ✅ Step 7：Speculative Decoding — 推测加速
 
-**[[AI/LLM/Inference/Speculative-Decoding-手撕实操|Speculative Decoding 手撕实操]]** ✅ 2026-02-25完成
+**[[AI/3-LLM/Inference/Speculative-Decoding-手撕实操|Speculative Decoding 手撕实操]]** ✅ 2026-02-25完成
 
 - **原理**：小模型（Draft）串行生成 k 个 token → 大模型（Target）一次并行处理 L+k tokens → rejection sampling 验证
 - **两种变体**：Greedy（argmax 比较，简单但分布不保证）vs Sampling（rejection sampling，数学保证 = Target 分布）
@@ -115,7 +115,7 @@ Step 8  集群级架构         PD Disaggregation          ← Prefill/Decode �
 
 ### ✅ Step 8：PD Disaggregation — 集群级架构
 
-**[[AI/LLM/Inference/PD-Disaggregation-手撕实操|PD Disaggregation 手撕实操]]** ✅ 2026-02-25完成
+**[[AI/3-LLM/Inference/PD-Disaggregation-手撕实操|PD Disaggregation 手撕实操]]** ✅ 2026-02-25完成
 
 - **动机**：Prefill（compute-bound）和 Decode（memory-bound）对硬件需求截然不同 → 同节点是资源错配
 - **架构**：`PrefillActor` + `DecodingActor` + `DistributedKVCacheEngine`（@ray.remote），三方通过 Ray 协调
@@ -144,7 +144,7 @@ Step 8  集群级架构         PD Disaggregation          ← Prefill/Decode �
 FlashAttention 是推理系统的**底层 Kernel**，不是系统架构组件：
 - Continue Batching / PageAttention / Chunked Prefill 都**依赖** FA 做实际的矩阵计算
 - FA 解决的是：如何在 IO 受限的 GPU 上高效计算 Attention（在 SRAM 内完成，不落 HBM）
-- 专题笔记：[[AI/LLM/Inference/FlashAttention-手撕实操|FlashAttention 系列手撕实操]]
+- 专题笔记：[[AI/3-LLM/Inference/FlashAttention-手撕实操|FlashAttention 系列手撕实操]]
 
 ---
 

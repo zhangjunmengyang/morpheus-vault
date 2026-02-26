@@ -125,7 +125,7 @@ loss = -advantage * log_prob                 # 去掉 length normalization
 - [[GRPO 深度理解|GRPO 深度理解]] — 理论基础：理解 Dr. GRPO 修复的前提是理解原版 GRPO 的 advantage 计算缺陷
 
 ### 相关偏差问题
-- [[AI/LLM/RL/Other-Algorithms/DAPO-Decoupled-Clip-Dynamic-Sampling|DAPO]] — 同为 GRPO 稳定性修复，DAPO 解决 entropy collapse 和 clip 不对称；Dr. GRPO 解决 length/difficulty bias；两者互补（熵稳定 + 梯度去偏）
+- [[AI/3-LLM/RL/Other-Algorithms/DAPO-Decoupled-Clip-Dynamic-Sampling|DAPO]] — 同为 GRPO 稳定性修复，DAPO 解决 entropy collapse 和 clip 不对称；Dr. GRPO 解决 length/difficulty bias；两者互补（熵稳定 + 梯度去偏）
 - [[SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO]] — ⚠️ 理论边界：GRPO（含 Dr. GRPO）的修复在单轮场景有效；multi-turn agent 训练需要 SeeUPO 逆序更新框架
 
 ### 跨域实证（difficulty bias 的通用性验证）

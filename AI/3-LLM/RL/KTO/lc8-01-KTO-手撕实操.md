@@ -6,9 +6,9 @@ type: code-practice
 source: "MA-RLHF (https://github.com/dhcode-cpp/MA-RLHF)"
 tags: [code-practice, kto, preference-optimization, kahneman-tversky, pytorch]
 related:
-  - "[[AI/LLM/RL/DPO/DPO-手撕实操|DPO-手撕实操]]"
-  - "[[AI/LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操-MA-RLHF]]"
-  - "[[AI/LLM/RL/Fundamentals/RL基础算法手撕实操|RL基础算法手撕实操]]"
+  - "[[AI/3-LLM/RL/DPO/DPO-手撕实操|DPO-手撕实操]]"
+  - "[[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操-MA-RLHF]]"
+  - "[[AI/3-LLM/RL/Fundamentals/RL基础算法手撕实操|RL基础算法手撕实操]]"
 ---
 
 # KTO 手撕实操 —— MA-RLHF
@@ -138,10 +138,10 @@ from trl import KTOTrainer, KTOConfig
 
 ## See Also
 
-- [[AI/LLM/RL/KTO/KTO-完整Notebook实现|KTO 完整 Notebook 实现]] — 端到端完整实现（前景理论偏好建模 + loss asymmetry + z_ref 参考期望），与本文互补：本文讲核心原理，Notebook 讲完整训练流程
-- [[AI/LLM/RL/DPO/DPO-手撕实操|DPO 手撕实操]] — KTO 的前置算法：理解 BT 偏好模型和 DPO loss 后再看 KTO 的数据效率优势更清晰
-- [[AI/LLM/RL/DPO/DPO-完整Notebook实现|DPO 完整 Notebook 实现]] — 与 KTO-Notebook 对比：DPO 需要 paired data vs KTO 只需单条 + 标签
-- [[AI/LLM/MA-RLHF课程/lc8-RL×LLM-MOC|lc8 RL×LLM 专题地图]] — 课程 MOC 入口，KTO 在偏好优化章节（Step 4）
+- [[AI/3-LLM/RL/KTO/KTO-完整Notebook实现|KTO 完整 Notebook 实现]] — 端到端完整实现（前景理论偏好建模 + loss asymmetry + z_ref 参考期望），与本文互补：本文讲核心原理，Notebook 讲完整训练流程
+- [[AI/3-LLM/RL/DPO/DPO-手撕实操|DPO 手撕实操]] — KTO 的前置算法：理解 BT 偏好模型和 DPO loss 后再看 KTO 的数据效率优势更清晰
+- [[AI/3-LLM/RL/DPO/DPO-完整Notebook实现|DPO 完整 Notebook 实现]] — 与 KTO-Notebook 对比：DPO 需要 paired data vs KTO 只需单条 + 标签
+- [[AI/3-LLM/MA-RLHF课程/lc8-RL×LLM-MOC|lc8 RL×LLM 专题地图]] — 课程 MOC 入口，KTO 在偏好优化章节（Step 4）
 
 ## 推荐阅读
 

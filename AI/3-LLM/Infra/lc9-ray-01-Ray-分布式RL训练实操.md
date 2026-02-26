@@ -6,10 +6,10 @@ type: code-practice
 source: "MA-RLHF (https://github.com/dhcode-cpp/MA-RLHF)"
 tags: [code-practice, ray, distributed-rl, rlhf, grpo, training-infra]
 related:
-  - "[[AI/LLM/Infra/Ray-推理系统实操|Ray-推理系统实操]]"
-  - "[[AI/LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]]"
-  - "[[AI/LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操-MA-RLHF]]"
-  - "[[AI/LLM/Infra/ZeRO-手撕实操|ZeRO-手撕实操]]"
+  - "[[AI/3-LLM/Infra/Ray-推理系统实操|Ray-推理系统实操]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]]"
+  - "[[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操-MA-RLHF]]"
+  - "[[AI/3-LLM/Infra/ZeRO-手撕实操|ZeRO-手撕实操]]"
 ---
 
 # Ray 分布式 RL 训练系统手撕实操

@@ -348,6 +348,6 @@ AWM 代表的不仅是「一个生成 1,000 个环境的 pipeline」，而是一
 ## See Also
 
 - [[Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — World Model 在 Agentic RL 中的角色：环境模型 vs 世界模型
-- [[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]] — 极长 horizon Agent 如何使用内隐 world model
+- [[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]] — 极长 horizon Agent 如何使用内隐 world model
 - [[AI/2-Agent/目录|Agent MOC]] — Agent 知识全图谱
 - [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — World Model 与 RL 探索策略的关系

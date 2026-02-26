@@ -1348,6 +1348,6 @@ PABU代表了LLM Agent效率优化的一个重要里程碑，其创新性不仅�
 ## See Also
 
 - [[Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — PABU 在 credit assignment 问题框架中的位置
-- [[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]] — 同为长程 Agent 效率问题，KLong 解决训练 horizon，PABU 解决推理 state tracking
+- [[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]] — 同为长程 Agent 效率问题，KLong 解决训练 horizon，PABU 解决推理 state tracking
 - [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — PABU 的 RL 算法上游
 - [[AI/2-Agent/目录|Agent MOC]] — Agent 知识全图谱

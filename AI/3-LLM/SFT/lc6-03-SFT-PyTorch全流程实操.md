@@ -18,10 +18,10 @@ tags:
 rating: ★★★★★
 related:
   - "[[LoRA|LoRA]]"
-  - "[[AI/LLM/MA-RLHF课程/lc8-DPO-IPO-BT-偏好优化从零手写|lc8-DPO-IPO-BT]]"
-  - "[[AI/LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操]]"
-  - "[[AI/LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]]"
-  - "[[AI/LLM/SFT/SFT-手撕实操|SFT-手撕实操]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-DPO-IPO-BT-偏好优化从零手写|lc8-DPO-IPO-BT]]"
+  - "[[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]]"
+  - "[[AI/3-LLM/SFT/SFT-手撕实操|SFT-手撕实操]]"
 ---
 
 # SFT 全链路 PyTorch 手撕实操
@@ -354,15 +354,15 @@ SFT → DPO（偏好对比）→ PPO/GRPO（RL）：能力边界逐渐拓宽，�
 
 ## See Also
 
-- [[AI/LLM/MA-RLHF课程/lc6-LoRA-手撕实操|lc6-LoRA 手撕实操]] — SFT 全链路之后的 LoRA 低秩微调完整实现（本笔记 Step 2 → 该笔记 Step 4）
-- [[AI/LLM/MA-RLHF课程/lc6-SFT全链路-MOC|lc6 SFT 全链路专题地图]] — 本笔记所属的课程 MOC，含 Step 1-8 完整学习路径
+- [[AI/3-LLM/MA-RLHF课程/lc6-LoRA-手撕实操|lc6-LoRA 手撕实操]] — SFT 全链路之后的 LoRA 低秩微调完整实现（本笔记 Step 2 → 该笔记 Step 4）
+- [[AI/3-LLM/MA-RLHF课程/lc6-SFT全链路-MOC|lc6 SFT 全链路专题地图]] — 本笔记所属的课程 MOC，含 Step 1-8 完整学习路径
 - [[LoRA|LoRA 深度理解]] — LoRA 原理 + 数学推导 + rank 选择理论依据（本实操的理论对应）
 - [[SFT-实战指南|SFT 实战指南]] — 工程最佳实践（超参 / 数据质量 / 过拟合诊断）
-- [[AI/LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO 手撕实操]] — SFT 之后的 RLHF 阶段手撕（Loss Mask 概念延续到 advantage mask）
+- [[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO 手撕实操]] — SFT 之后的 RLHF 阶段手撕（Loss Mask 概念延续到 advantage mask）
 - [[MA-RLHF-手撕实操-系列索引|MA-RLHF 手撕实操系列索引]] — 完整系列入口
 
 ## 推荐阅读
 
 - 原课程代码：[MA-RLHF/lecture/lc6_sft](https://github.com/dhcode-cpp/MA-RLHF/tree/main/lecture/lc6_sft)
 - [[SFT 原理|SFT 原理]] — Chat Template / Loss Mask 的理论背景
-- [[AI/LLM/Frameworks/TRL/SFT实践|TRL SFT 实践]] — HuggingFace TRL SFTTrainer 生产用法
+- [[AI/3-LLM/Frameworks/TRL/SFT实践|TRL SFT 实践]] — HuggingFace TRL SFTTrainer 生产用法

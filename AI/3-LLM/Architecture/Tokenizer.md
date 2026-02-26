@@ -999,5 +999,5 @@ def adapt_tokenizer_for_domain(base_tokenizer, domain_corpus):
 - [[GPT|GPT]] — 使用 Byte-level BPE (tiktoken)，字节级 BPE
 - [[LLaMA|LLaMA]] — 使用 SentencePiece BPE，多语言支持
 - [[Qwen|Qwen]] — 使用 SentencePiece，多语言优化，中文 token 效率高
-- [[AI/LLM/Architecture/Tokenizer深度理解]] — 同主题深度版（BPE/WordPiece/SentencePiece 原理对比 + 面试题）
-- [[AI/LLM/Architecture/Tokenizer-Embedding-手撕实操]] — 手撕实操版（BPE 算法 + Embedding 完整实现）
+- [[AI/3-LLM/Architecture/Tokenizer深度理解]] — 同主题深度版（BPE/WordPiece/SentencePiece 原理对比 + 面试题）
+- [[AI/3-LLM/Architecture/Tokenizer-Embedding-手撕实操]] — 手撕实操版（BPE 算法 + Embedding 完整实现）

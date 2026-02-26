@@ -14,10 +14,10 @@ tags:
   - notebook-implementation
 related:
   - "[[PPO 原理]]"
-  - "[[AI/LLM/RL/PPO/PPO-手撕实操-MA-RLHF]]"
-  - "[[AI/LLM/RL/PPO/MA-RLHF-核心代码注解]]"
-  - "[[AI/LLM/RL/GRPO/GRPO-完整Notebook实现]]"
-  - "[[AI/LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"
+  - "[[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF]]"
+  - "[[AI/3-LLM/RL/PPO/MA-RLHF-核心代码注解]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO-完整Notebook实现]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"
 ---
 
 # RLHF-PPO 完整 PyTorch 实现

@@ -37,7 +37,7 @@ Actor-Critic / A2C / GAE    ← PPO 的直接前置
 
 ## 核心笔记
 
-### [[AI/LLM/RL/Fundamentals/RL基础算法手撕实操|RL 基础算法手撕实操]]
+### [[AI/3-LLM/RL/Fundamentals/RL基础算法手撕实操|RL 基础算法手撕实操]]
 覆盖：Cross Entropy / 蒙特卡洛 / Bellman / GPI / MC V/Q / Q-Learning / SARSA / DQN / Policy Gradient
 
 ---

@@ -12,9 +12,9 @@ tags:
   - 手撕实操
   - MA-RLHF-lc8
 related:
-  - [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
-  - [[AI/LLM/RL/RLHF-DPO-2026-技术全景|RLHF-DPO-2026-技术全景]]
-  - [[AI/LLM/MA-RLHF-手撕实操-系列索引|MA-RLHF 手撕实操系列索引]]
+  - [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+  - [[AI/3-LLM/RL/RLHF-DPO-2026-技术全景|RLHF-DPO-2026-技术全景]]
+  - [[AI/3-LLM/MA-RLHF-手撕实操-系列索引|MA-RLHF 手撕实操系列索引]]
 ---
 
 # GRPO KL 散度三种近似手撕（MA-RLHF lc8）
@@ -22,7 +22,7 @@ related:
 **来源**：MA-RLHF `notebook/GRPO/GRPO_KL.ipynb`  
 **参考**：Schulman 博客 http://joschu.net/blog/kl-approx.html  
 **难度**：★★★★☆（数学基础，理解 GRPO/PPO KL 惩罚的正确实现）  
-**关联**：[[AI/LLM/MA-RLHF课程/lc8-GRPO-手撕实操|lc8-GRPO-手撕实操]] | [[AI/LLM/MA-RLHF课程/lc8-RLHF-PPO-手撕实操|lc8-RLHF-PPO-手撕实操]]
+**关联**：[[AI/3-LLM/MA-RLHF课程/lc8-GRPO-手撕实操|lc8-GRPO-手撕实操]] | [[AI/3-LLM/MA-RLHF课程/lc8-RLHF-PPO-手撕实操|lc8-RLHF-PPO-手撕实操]]
 
 ---
 

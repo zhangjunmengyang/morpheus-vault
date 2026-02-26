@@ -12,7 +12,7 @@ tags:
   - pd-disaggregation
   - lc10
 related:
-  - "[[AI/LLM/MA-RLHF课程/lc10-推理系统-MOC]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc10-推理系统-MOC]]"
   - "[[LLM-推理优化-2026-全景]]"
   - "[[vLLM]]"
 ---
@@ -20,8 +20,8 @@ related:
 # PD Disaggregation 手撕实操
 
 > **来源**: MA-RLHF lc10_inference / PD-Disaggreation.ipynb + pd-inference/
-> **系列**: [[AI/LLM/MA-RLHF课程/lc10-推理系统-MOC|lc10-推理系统-MOC]]
-> **关联**: [[AI/LLM/Inference/Chunked-Prefill-手撕实操|Chunked-Prefill-手撕实操]] | [[AI/LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]] | [[AI/LLM/Infra/Ray-分布式RL训练实操|Ray-分布式RL训练实操]]
+> **系列**: [[AI/3-LLM/MA-RLHF课程/lc10-推理系统-MOC|lc10-推理系统-MOC]]
+> **关联**: [[AI/3-LLM/Inference/Chunked-Prefill-手撕实操|Chunked-Prefill-手撕实操]] | [[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]] | [[AI/3-LLM/Infra/Ray-分布式RL训练实操|Ray-分布式RL训练实操]]
 > **日期**: 2026-02-25
 
 ---
@@ -285,9 +285,9 @@ A: Agentic RL 中的 rollout/training 分离：rollout 进程（生成轨迹，�
 
 ## 延伸阅读
 
-- [[AI/LLM/Inference/Chunked-Prefill-手撕实操|Chunked-Prefill-手撕实操]] — PD 融合方案，与 PD 分离互补
-- [[AI/LLM/Infra/Ray-分布式RL训练实操|Ray-分布式RL训练实操]] — Ray Actor Group 的训练侧应用
-- [[AI/LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]] — PD 分离中 KV 的存储管理
+- [[AI/3-LLM/Inference/Chunked-Prefill-手撕实操|Chunked-Prefill-手撕实操]] — PD 融合方案，与 PD 分离互补
+- [[AI/3-LLM/Infra/Ray-分布式RL训练实操|Ray-分布式RL训练实操]] — Ray Actor Group 的训练侧应用
+- [[AI/3-LLM/Inference/vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]] — PD 分离中 KV 的存储管理
 - DistServe (OSDI 2024)：PD 分离的系统设计论文，SLO-aware P:D 比例优化
 - Mooncake (2024, 月之暗面)：KV 中心化缓存 + 跨 P/D 节点共享的工程实践
 - AReal / Slime / verl：训练侧的"计算分离"（rollout ↔ train）

@@ -6,10 +6,10 @@ type: code-practice
 source: "MA-RLHF (https://github.com/dhcode-cpp/MA-RLHF)"
 tags: [code-practice, llama, gqa, rope, rmsnorm, pytorch]
 related:
-  - "[[AI/LLM/Architecture/GPT2-手撕实操|GPT2-手撕实操]]"
-  - "[[AI/LLM/Architecture/DeepSeek-V3-手撕实操|DeepSeek-V3-手撕实操]]"
-  - "[[AI/LLM/Architecture/Tokenizer-Embedding-手撕实操|Tokenizer-Embedding-手撕实操]]"
-  - "[[AI/LLM/Architecture/基础数学组件手撕|基础数学组件手撕]]"
+  - "[[AI/3-LLM/Architecture/GPT2-手撕实操|GPT2-手撕实操]]"
+  - "[[AI/3-LLM/Architecture/DeepSeek-V3-手撕实操|DeepSeek-V3-手撕实操]]"
+  - "[[AI/3-LLM/Architecture/Tokenizer-Embedding-手撕实操|Tokenizer-Embedding-手撕实操]]"
+  - "[[AI/3-LLM/Architecture/基础数学组件手撕|基础数学组件手撕]]"
 ---
 
 # Llama 手撕实操

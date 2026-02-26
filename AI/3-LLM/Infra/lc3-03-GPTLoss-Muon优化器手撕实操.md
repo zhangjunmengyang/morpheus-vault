@@ -6,11 +6,11 @@ source: "https://github.com/dhcode-cpp/MA-RLHF"
 tags: [code-practice, ma-rlhf, lc8, gpt, loss, muon, optimizer, newton-schulz]
 brief: "GPT Next-Token-Prediction Loss 正确格式（logits.transpose(1,2)→[B,V,L]）+ Muon 优化器从零实现：Newton-Schulz 5次矩阵乘法近似正交化，解决 Adam 在大 batch 语言模型训练中的动量方向偏差问题，GLM-5 已在生产中使用 Muon Split 变体。"
 related:
-  - "[[AI/LLM/MA-RLHF课程/lc8-GQA-KVCache-手撕实操]]"
-  - "[[AI/LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]]"
-  - "[[AI/LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]]"
-  - "[[AI/LLM/Architecture/GPT2-手撕实操]]"
-  - "[[AI/LLM/MA-RLHF课程/lc5-DeepSeek-V3-MOC]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-GQA-KVCache-手撕实操]]"
+  - "[[AI/3-LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]]"
+  - "[[AI/3-LLM/Architecture/GPT2-手撕实操]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc5-DeepSeek-V3-MOC]]"
 ---
 
 # GPT Loss + Muon 优化器手撕实操（MA-RLHF Batch D）
@@ -314,8 +314,8 @@ Adam → ZeRO 分片（见 xtrain-lc3-ZeRO）
 
 ## See Also
 
-- [[AI/LLM/MA-RLHF课程/lc8-GQA-KVCache-手撕实操]] — Batch D 同批次：KV Cache 完整推理实现（GQA + 增量解码）
-- [[AI/LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]] — ZeRO 分片与 Adam 工程实现（Muon 的对比基准）
-- [[AI/LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]] — MLA 架构（GLM-5 Muon Split 为解决 MLA+Muon 不兼容而设计）
-- [[AI/LLM/Architecture/GPT2-手撕实操]] — GPT-2 完整训练流程（GPT Loss 的应用场景）
-- [[AI/LLM/MA-RLHF课程/lc5-DeepSeek-V3-MOC]] — lc5 DeepSeek V3 课程地图（Muon 在架构创新中的位置）
+- [[AI/3-LLM/MA-RLHF课程/lc8-GQA-KVCache-手撕实操]] — Batch D 同批次：KV Cache 完整推理实现（GQA + 增量解码）
+- [[AI/3-LLM/Infra/xtrain-lc3-ZeRO优化器从零手写]] — ZeRO 分片与 Adam 工程实现（Muon 的对比基准）
+- [[AI/3-LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写]] — MLA 架构（GLM-5 Muon Split 为解决 MLA+Muon 不兼容而设计）
+- [[AI/3-LLM/Architecture/GPT2-手撕实操]] — GPT-2 完整训练流程（GPT Loss 的应用场景）
+- [[AI/3-LLM/MA-RLHF课程/lc5-DeepSeek-V3-MOC]] — lc5 DeepSeek V3 课程地图（Muon 在架构创新中的位置）

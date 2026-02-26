@@ -1554,7 +1554,7 @@ related:
 - [[AI/3-LLM/目录|LLM MOC]] — LLM 知识域全索引
 - [[RLHF-DPO-2026-技术全景|RLHF DPO 2026 技术全景]] — 对齐技术深度版（RLHF/DPO/宪法AI）
 - [[GRPO-Improvement-Panorama-2026|GRPO 改进全景]] — GRPO 七大维度深度分析
-- [[AI/LLM/Inference/模型量化综述|模型量化综述]] — 推理优化方向深度
+- [[AI/3-LLM/Inference/模型量化综述|模型量化综述]] — 推理优化方向深度
 - [[知识蒸馏与模型压缩-2026技术全景|知识蒸馏与模型压缩 2026]] — 效率方向深度
 
 ### Safety 方向

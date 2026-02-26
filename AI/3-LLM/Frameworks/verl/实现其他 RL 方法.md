@@ -149,5 +149,5 @@ def dapo_loss(ratio, advantages, clip_low=0.2, clip_high=0.28):
 - [[算法概述|算法概述]]
 - [[HybridFlow|HybridFlow]]
 - [[AI/3-LLM/RL/目录|RL 算法总览]]
-- [[AI/LLM/RL/DPO/DPO|DPO]]
-- [[AI/LLM/RL/GRPO/GRPO|GRPO]]
+- [[AI/3-LLM/RL/DPO/DPO|DPO]]
+- [[AI/3-LLM/RL/GRPO/GRPO|GRPO]]

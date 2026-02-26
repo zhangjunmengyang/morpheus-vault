@@ -12,10 +12,10 @@ tags:
   - multi-adapter
   - code-walkthrough
 related:
-  - "[[AI/LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操-MA-RLHF]]"
-  - "[[AI/LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]]"
+  - "[[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操-MA-RLHF]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]]"
   - "[[LoRA|LoRA]]"
-  - "[[AI/LLM/Infra/Ray-分布式RL训练实操|Ray-分布式RL训练实操]]"
+  - "[[AI/3-LLM/Infra/Ray-分布式RL训练实操|Ray-分布式RL训练实操]]"
 ---
 
 # MA-RLHF 核心训练代码注解

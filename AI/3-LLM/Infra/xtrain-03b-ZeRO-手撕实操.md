@@ -6,10 +6,10 @@ type: code-practice
 source: "MA-RLHF (https://github.com/dhcode-cpp/MA-RLHF)"
 tags: [code-practice, zero, distributed-training, memory-optimization, pytorch]
 related:
-  - "[[AI/LLM/Infra/Tensor-Parallel-手撕实操|Tensor-Parallel-手撕实操]]"
-  - "[[AI/LLM/Infra/分布式训练通信原语-手撕实操|分布式训练通信原语-手撕实操]]"
-  - "[[AI/LLM/Infra/Pipeline-Parallel-手撕实操|Pipeline-Parallel-手撕实操]]"
-  - "[[AI/LLM/Infra/Ray-分布式RL训练实操|Ray-分布式RL训练实操]]"
+  - "[[AI/3-LLM/Infra/Tensor-Parallel-手撕实操|Tensor-Parallel-手撕实操]]"
+  - "[[AI/3-LLM/Infra/分布式训练通信原语-手撕实操|分布式训练通信原语-手撕实操]]"
+  - "[[AI/3-LLM/Infra/Pipeline-Parallel-手撕实操|Pipeline-Parallel-手撕实操]]"
+  - "[[AI/3-LLM/Infra/Ray-分布式RL训练实操|Ray-分布式RL训练实操]]"
 ---
 
 # ZeRO 手撕实操
@@ -702,10 +702,10 @@ if __name__ == '__main__':
 ## See Also
 
 **分布式训练四维并行谱系**
-- [[AI/LLM/Infra/分布式训练通信原语-手撕实操|分布式训练通信原语手撕]] — ZeRO 的底层：AllReduce/ReduceScatter/AllGather 的 ring 实现
-- [[AI/LLM/Infra/Tensor-Parallel-手撕实操|Tensor-Parallel-手撕实操]] — TP（列/行切分 Linear，通信模式与 ZeRO 正交）
-- [[AI/LLM/Infra/Pipeline-Parallel-手撕实操|Pipeline-Parallel-手撕实操]] — PP（层间切分，与 ZeRO-3 可叠加）
-- [[AI/LLM/Infra/Ray-分布式RL训练实操|Ray-分布式RL训练实操]] — verl 工程实践层（ZeRO 作为 actor 后端）
+- [[AI/3-LLM/Infra/分布式训练通信原语-手撕实操|分布式训练通信原语手撕]] — ZeRO 的底层：AllReduce/ReduceScatter/AllGather 的 ring 实现
+- [[AI/3-LLM/Infra/Tensor-Parallel-手撕实操|Tensor-Parallel-手撕实操]] — TP（列/行切分 Linear，通信模式与 ZeRO 正交）
+- [[AI/3-LLM/Infra/Pipeline-Parallel-手撕实操|Pipeline-Parallel-手撕实操]] — PP（层间切分，与 ZeRO-3 可叠加）
+- [[AI/3-LLM/Infra/Ray-分布式RL训练实操|Ray-分布式RL训练实操]] — verl 工程实践层（ZeRO 作为 actor 后端）
 
 **理论对应**
 - [[训练后端|verl 训练后端]] — ZeRO（FSDP）在 verl 中的工程集成

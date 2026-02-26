@@ -6,9 +6,9 @@ type: code-practice
 source: "MA-RLHF (https://github.com/dhcode-cpp/MA-RLHF)"
 tags: [code-practice, flashattention, inference, gpu, triton, pytorch]
 related:
-  - "[[AI/LLM/Architecture/Transformer-手撕实操|Transformer-手撕实操]]"
-  - "[[AI/LLM/Inference/vLLM-手撕实操|vLLM-手撕实操]]"
-  - "[[AI/LLM/Architecture/基础数学组件手撕|基础数学组件手撕]]"
+  - "[[AI/3-LLM/Architecture/Transformer-手撕实操|Transformer-手撕实操]]"
+  - "[[AI/3-LLM/Inference/vLLM-手撕实操|vLLM-手撕实操]]"
+  - "[[AI/3-LLM/Architecture/基础数学组件手撕|基础数学组件手撕]]"
 ---
 
 # FlashAttention 手撕实操

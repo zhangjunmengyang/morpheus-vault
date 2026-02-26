@@ -369,8 +369,8 @@ RoPE 对 Q 和 K 施加旋转变换（位置相关），这会**破坏低秩结�
 - [vLLM](https://github.com/vllm-project/vllm) — GQA + PagedAttention 的工业级推理框架
 
 ### 代码手撕（理论 → 代码）
-- [[AI/LLM/Inference/FlashAttention-手撕实操|FlashAttention-手撕实操]] — **必看**：从 Tiling/SRAM 管理到 CUDA kernel 的 IO-aware 完整实现，MA-RLHF 项目配套 ⭐⭐⭐⭐⭐
-- [[AI/LLM/Architecture/Transformer-手撕实操|Transformer-手撕实操]] — 包含 MHA 的完整 Transformer 从零实现（含 Self-Attention/Cross-Attention）
+- [[AI/3-LLM/Inference/FlashAttention-手撕实操|FlashAttention-手撕实操]] — **必看**：从 Tiling/SRAM 管理到 CUDA kernel 的 IO-aware 完整实现，MA-RLHF 项目配套 ⭐⭐⭐⭐⭐
+- [[AI/3-LLM/Architecture/Transformer-手撕实操|Transformer-手撕实操]] — 包含 MHA 的完整 Transformer 从零实现（含 Self-Attention/Cross-Attention）
 
 ---
 

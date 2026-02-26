@@ -6,9 +6,9 @@ type: code-practice
 source: "https://github.com/dhcode-cpp/MA-RLHF"
 tags: [code-practice, llm-engineering, ma-rlhf, rl, prm, mcts, test-time-compute, o1]
 related:
-  - "[[AI/LLM/RL/PPO/PRM-O1-Search-手撕实操]]"
-  - "[[AI/LLM/RL/PPO/RLHF-PPO-完整Pytorch实现]]"
-  - "[[AI/LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"
+  - "[[AI/3-LLM/RL/PPO/PRM-O1-Search-手撕实操]]"
+  - "[[AI/3-LLM/RL/PPO/RLHF-PPO-完整Pytorch实现]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"
 ---
 
 # O1 PRM 搜索完整实现

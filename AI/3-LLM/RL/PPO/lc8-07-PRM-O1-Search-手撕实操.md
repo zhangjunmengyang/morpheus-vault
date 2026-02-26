@@ -13,10 +13,10 @@ tags:
   - test-time-compute
   - pytorch
 related:
-  - "[[AI/LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操-MA-RLHF]]"
-  - "[[AI/LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]]"
+  - "[[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操-MA-RLHF]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO-手撕实操|GRPO-手撕实操]]"
   - "[[GiGPO-Group-in-Group-Policy-Optimization|GiGPO]]"
-  - "[[AI/Agent/Agentic-RL/Long-Horizon-Credit-Assignment-专题综述|Long-Horizon CA专题]]"
+  - "[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment-专题综述|Long-Horizon CA专题]]"
 ---
 
 # PRM + O1 推理搜索 手撕实操 —— MA-RLHF

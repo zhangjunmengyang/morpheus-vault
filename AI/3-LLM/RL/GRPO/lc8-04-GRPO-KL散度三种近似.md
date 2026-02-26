@@ -14,9 +14,9 @@ tags:
   - policy-gradient
 related:
   - "[[GRPO 深度理解]]"
-  - "[[AI/LLM/RL/GRPO/GRPO-手撕实操]]"
-  - "[[AI/LLM/RL/GRPO/GRPO-完整Notebook实现]]"
-  - "[[AI/LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO-手撕实操]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO-完整Notebook实现]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"
 ---
 
 # GRPO KL 散度：三种 Schulman 近似

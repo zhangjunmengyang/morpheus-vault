@@ -46,19 +46,19 @@ Step 8  O1 搜索实现（MCTS/PRM）   ← Test-time compute scaling
 
 ### Step 1：Reward Model 训练
 
-**[[AI/LLM/RL/PPO/MA-RLHF-核心代码注解|MA-RLHF 核心代码注解]]** — 含 `reward_model.py` 完整注解
+**[[AI/3-LLM/RL/PPO/MA-RLHF-核心代码注解|MA-RLHF 核心代码注解]]** — 含 `reward_model.py` 完整注解
 
 关键点：
 - Reward Model = SFT 模型 + Value Head（输出标量奖励）
 - 训练目标：chosen response 得分 > rejected response（Bradley-Terry Loss）
-- **[[AI/LLM/RL/PPO/LLaMA2-Reward-Model实现|LLaMA2 RM 完整实现]]** ✅ — LLaMA2 + Bradley-Terry Loss 完整 Notebook
-- **[[AI/LLM/RL/DPO/Bradley-Terry模型实现|Bradley-Terry 模型实现]]** ✅ — BT 偏好建模理论入口（DPO 数学基础）
+- **[[AI/3-LLM/RL/PPO/LLaMA2-Reward-Model实现|LLaMA2 RM 完整实现]]** ✅ — LLaMA2 + Bradley-Terry Loss 完整 Notebook
+- **[[AI/3-LLM/RL/DPO/Bradley-Terry模型实现|Bradley-Terry 模型实现]]** ✅ — BT 偏好建模理论入口（DPO 数学基础）
 
 ---
 
 ### Step 2：RLHF-PPO 完整实现
 
-**[[AI/LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO 手撕实操（MA-RLHF 版）]]**
+**[[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO 手撕实操（MA-RLHF 版）]]**
 
 四模型架构：
 ```
@@ -75,7 +75,7 @@ Reward Model（RM冻结）← 给出奖励信号
 
 MA-PPO（Multi-Adapter PPO）：Actor + Critic 共享一个 backbone，双 LoRA adapter → 节省 3x 显存
 
-**[[AI/LLM/RL/PPO/RLHF-PPO-完整Pytorch实现|RLHF-PPO 完整 Pytorch 实现]]** ✅ — 56-cell 四模型架构完整实现
+**[[AI/3-LLM/RL/PPO/RLHF-PPO-完整Pytorch实现|RLHF-PPO 完整 Pytorch 实现]]** ✅ — 56-cell 四模型架构完整实现
 
 深入阅读：[[PPO 原理|PPO 原理]] · [[RLHF 全链路|RLHF 全链路]]
 
@@ -83,9 +83,9 @@ MA-PPO（Multi-Adapter PPO）：Actor + Critic 共享一个 backbone，双 LoRA 
 
 ### Step 3-4：Bradley-Terry + DPO
 
-**[[AI/LLM/RL/DPO/DPO-手撕实操|DPO 手撕实操]]**
+**[[AI/3-LLM/RL/DPO/DPO-手撕实操|DPO 手撕实操]]**
 
-**[[AI/LLM/RL/DPO/Bradley-Terry模型实现|Bradley-Terry 模型实现]]** ✅ · **[[AI/LLM/RL/DPO/DPO-完整Notebook实现|DPO 完整 Notebook]]** ✅
+**[[AI/3-LLM/RL/DPO/Bradley-Terry模型实现|Bradley-Terry 模型实现]]** ✅ · **[[AI/3-LLM/RL/DPO/DPO-完整Notebook实现|DPO 完整 Notebook]]** ✅
 - `P(y_w > y_l | x) = σ(r(x,y_w) - r(x,y_l))`
 - DPO 的推导：把 r(x,y) 用 KL-reg RL 的最优解代入 BT → 得到 DPO Loss
 
@@ -102,19 +102,19 @@ loss = -log_sigmoid(β * (log_ratio_chosen - log_ratio_rejected))
 
 ### Step 5：KTO
 
-**[[AI/LLM/RL/KTO/KTO-手撕实操|KTO 手撕实操]]**
+**[[AI/3-LLM/RL/KTO/KTO-手撕实操|KTO 手撕实操]]**
 
 前景理论视角：人类对损失的厌恶 > 对收益的喜爱  
 不需要 paired data，只需要单样本 + binary label（好/坏）  
 KTO Loss：分别用 desirable 和 undesirable response 各自训练
 
-**[[AI/LLM/RL/KTO/KTO-完整Notebook实现|KTO 完整 Notebook]]** ✅ — 前景理论偏好建模完整实现
+**[[AI/3-LLM/RL/KTO/KTO-完整Notebook实现|KTO 完整 Notebook]]** ✅ — 前景理论偏好建模完整实现
 
 ---
 
 ### Step 6：GRPO
 
-**[[AI/LLM/RL/GRPO/GRPO-手撕实操|GRPO 手撕实操]]**
+**[[AI/3-LLM/RL/GRPO/GRPO-手撕实操|GRPO 手撕实操]]**
 
 vs PPO 的关键差异：
 - 无 Critic → 节省一个模型的显存和计算
@@ -130,7 +130,7 @@ loss = -(advantages * log_probs).mean() + β * kl_penalty
 
 为什么有效：Group 归一化相当于自动构建了相对奖励基准，无需 critic 就有低方差的 advantage 估计
 
-**[[AI/LLM/RL/GRPO/GRPO-完整Notebook实现|GRPO 完整 Notebook]]** ✅ · **[[AI/LLM/RL/GRPO/GRPO-KL散度三种近似|GRPO KL 三种近似]]** ✅
+**[[AI/3-LLM/RL/GRPO/GRPO-完整Notebook实现|GRPO 完整 Notebook]]** ✅ · **[[AI/3-LLM/RL/GRPO/GRPO-KL散度三种近似|GRPO KL 三种近似]]** ✅
 
 深入阅读：[[GRPO 深度理解|GRPO 深度理解]] · [[GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]]
 
@@ -138,13 +138,13 @@ loss = -(advantages * log_probs).mean() + β * kl_penalty
 
 ### Step 7-8：PRM + O1 搜索
 
-**[[AI/LLM/RL/PPO/PRM-O1-Search-手撕实操|PRM + O1 搜索手撕实操]]**
+**[[AI/3-LLM/RL/PPO/PRM-O1-Search-手撕实操|PRM + O1 搜索手撕实操]]**
 
 Process Reward Model（步骤级奖励）：
 - Outcome RM：只给最终结果打分（稀疏）
 - Process RM：每个推理步骤打分（密集）→ 更好的 credit assignment
 
-**[[AI/LLM/RL/PPO/O1-PRM搜索完整实现|O1 PRM 搜索完整实现]]** ✅ — Beam Search + MCTS 完整实现
+**[[AI/3-LLM/RL/PPO/O1-PRM搜索完整实现|O1 PRM 搜索完整实现]]** ✅ — Beam Search + MCTS 完整实现
 
 Notebook 覆盖：
 - `o1_prm_search.ipynb`：Beam Search + PRM 打分
@@ -189,10 +189,10 @@ A：ORM 只在最终结果给 reward（稀疏），信用分配困难；PRM 在�
 
 | 步骤 | Batch B 笔记 | 对应 Batch A |
 |------|-------------|-------------|
-| RM 训练 | [[lc8-LLaMA2-Reward-Model手撕\|lc8-LLaMA2 RM]] | [[AI/LLM/RL/PPO/LLaMA2-Reward-Model实现\|Batch A RM]] |
-| RLHF-PPO | [[AI/LLM/MA-RLHF课程/lc8-RLHF-PPO-手撕实操\|lc8-RLHF-PPO]] | [[AI/LLM/RL/PPO/RLHF-PPO-完整Pytorch实现\|Batch A PPO]] |
-| BT + DPO + IPO | [[lc8-DPO-IPO-手撕实操\|lc8-DPO/IPO/BT]] | [[AI/LLM/RL/DPO/DPO-完整Notebook实现\|Batch A DPO]] |
-| Bradley-Terry 偏好建模 | [[AI/LLM/MA-RLHF课程/lc8-Bradley-Terry-偏好建模手撕\|lc8-BT偏好建模]] | — |
-| KTO + PRM Search | [[lc8-KTO-手撕实操\|lc8-KTO/PRM]] | [[AI/LLM/RL/KTO/KTO-完整Notebook实现\|Batch A KTO]] |
-| GRPO Pytorch | [[AI/LLM/MA-RLHF课程/lc8-GRPO-notebook-Pytorch从零手写\|lc8-GRPO]] | [[AI/LLM/RL/GRPO/GRPO-完整Notebook实现\|Batch A GRPO]] |
+| RM 训练 | [[lc8-LLaMA2-Reward-Model手撕\|lc8-LLaMA2 RM]] | [[AI/3-LLM/RL/PPO/LLaMA2-Reward-Model实现\|Batch A RM]] |
+| RLHF-PPO | [[AI/3-LLM/MA-RLHF课程/lc8-RLHF-PPO-手撕实操\|lc8-RLHF-PPO]] | [[AI/3-LLM/RL/PPO/RLHF-PPO-完整Pytorch实现\|Batch A PPO]] |
+| BT + DPO + IPO | [[lc8-DPO-IPO-手撕实操\|lc8-DPO/IPO/BT]] | [[AI/3-LLM/RL/DPO/DPO-完整Notebook实现\|Batch A DPO]] |
+| Bradley-Terry 偏好建模 | [[AI/3-LLM/MA-RLHF课程/lc8-Bradley-Terry-偏好建模手撕\|lc8-BT偏好建模]] | — |
+| KTO + PRM Search | [[lc8-KTO-手撕实操\|lc8-KTO/PRM]] | [[AI/3-LLM/RL/KTO/KTO-完整Notebook实现\|Batch A KTO]] |
+| GRPO Pytorch | [[AI/3-LLM/MA-RLHF课程/lc8-GRPO-notebook-Pytorch从零手写\|lc8-GRPO]] | [[AI/3-LLM/RL/GRPO/GRPO-完整Notebook实现\|Batch A GRPO]] |
 | GRPO KL 散度三种近似 | [[lc8-GRPO-KL-三种近似手撕\|lc8-GRPO-KL]] | — |

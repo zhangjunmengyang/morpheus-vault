@@ -12,17 +12,17 @@ tags:
   - zero
   - xtrain
 related:
-  - "[[AI/LLM/Infra/xtrain-lc2-数据并行从零手写]]"
-  - "[[AI/LLM/Infra/xtrain-lc4-张量并行从零手写]]"
-  - "[[AI/LLM/Infra/ZeRO-手撕实操]]"
-  - "[[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]"
+  - "[[AI/3-LLM/Infra/xtrain-lc2-数据并行从零手写]]"
+  - "[[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写]]"
+  - "[[AI/3-LLM/Infra/ZeRO-手撕实操]]"
+  - "[[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]"
   - "[[分布式训练]]"
 ---
 
 # xtrain lc3 — ZeRO 优化器从零手写
 
 > 来源：`/Users/peterzhang/project/ma-rlhf/xtrain/lecture/lc3_ZeRO/`
-> 系列：[[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]
+> 系列：[[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]
 > 难度：★★★★★（面试必考，手写 ZeRO1/2/3 完整流程）
 > 更新：2026-02-25
 
@@ -437,20 +437,20 @@ A：`tmp_param = deepcopy(param.grad)` 是为了在 scatter 之前保存完整�
 
 ## 十、知识关联
 
-- **前置**：[[AI/LLM/Infra/xtrain-lc2-数据并行从零手写]] — DDP AllReduce 基础
-- **后置**：[[AI/LLM/Infra/xtrain-lc4-张量并行从零手写]] — TP 切计算不切存储
-- **横向**：[[AI/LLM/Infra/ZeRO-手撕实操]] — 更早的 ZeRO 原理笔记（更偏理论）
+- **前置**：[[AI/3-LLM/Infra/xtrain-lc2-数据并行从零手写]] — DDP AllReduce 基础
+- **后置**：[[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写]] — TP 切计算不切存储
+- **横向**：[[AI/3-LLM/Infra/ZeRO-手撕实操]] — 更早的 ZeRO 原理笔记（更偏理论）
 - **深化**：DeepSpeed ZeRO-Infinity — 把 ZeRO-3 扩展到 CPU/NVMe offload
 - **生产对照**：PyTorch FSDP（Fully Sharded Data Parallel）= ZeRO-3 的 PyTorch 原生实现
-- **MA-RLHF 系列**：[[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]
+- **MA-RLHF 系列**：[[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]
 
 ## See Also
 
-- [[AI/LLM/Infra/xtrain-lc2-数据并行从零手写]] — 前置：DDP 数据并行基础
-- [[AI/LLM/Infra/xtrain-lc4-张量并行从零手写]] — 后置：TP 切计算不切存储（vs ZeRO 切存储）
-- [[AI/LLM/Infra/ZeRO-手撕实操]] — 横向：ZeRO 原理版（MA-RLHF lc9 版）
+- [[AI/3-LLM/Infra/xtrain-lc2-数据并行从零手写]] — 前置：DDP 数据并行基础
+- [[AI/3-LLM/Infra/xtrain-lc4-张量并行从零手写]] — 后置：TP 切计算不切存储（vs ZeRO 切存储）
+- [[AI/3-LLM/Infra/ZeRO-手撕实操]] — 横向：ZeRO 原理版（MA-RLHF lc9 版）
 - [[分布式训练]] — 分布式训练理论全景
-- [[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]] — xtrain 课程地图
+- [[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]] — xtrain 课程地图
 
 ---
 

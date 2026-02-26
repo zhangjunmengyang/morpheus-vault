@@ -227,4 +227,4 @@ DeepSynth 揭示的核心能力缺口：
 1. **arXiv:2602.21143** — DeepSynth 原文，重点看 RQ2（提供步骤+170%）和 RQ4（导航/综合错误各占 50%）
 2. **GAIA benchmark**（arXiv:2311.12983）— 对比：GAIA vs DeepSynth 在多源综合深度上的差异
 3. **[[Agentic-RL-2026前沿综合分析]]** — Reward 设计挑战章节（DeepSynth 提供了新的真实 verifiable reward 来源）
-4. **[[AI/LLM/Evaluation/LLM评估与Benchmark-2026技术全景]]** — Benchmark 生态全景，DeepSynth 填补信息综合维度缺口
+4. **[[AI/3-LLM/Evaluation/LLM评估与Benchmark-2026技术全景]]** — Benchmark 生态全景，DeepSynth 填补信息综合维度缺口

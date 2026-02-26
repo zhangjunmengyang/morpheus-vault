@@ -67,7 +67,7 @@ for prompt in dataset:
 
 ### Step 2：Ray 三角架构
 
-**[[AI/LLM/Infra/Ray-分布式RL训练实操|Ray 分布式 RL 训练实操]]**
+**[[AI/3-LLM/Infra/Ray-分布式RL训练实操|Ray 分布式 RL 训练实操]]**
 
 ```
                   Coordinator
@@ -127,7 +127,7 @@ for prompt in dataset:
 
 ### Step 5：R1 复现 — 推理能力涌现
 
-**[[AI/LLM/Infra/Ray-分布式RL训练实操|Ray 分布式 RL 训练实操]]**（R1 部分）
+**[[AI/3-LLM/Infra/Ray-分布式RL训练实操|Ray 分布式 RL 训练实操]]**（R1 部分）
 
 R1 训练流程：
 ```

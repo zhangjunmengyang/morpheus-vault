@@ -6,9 +6,9 @@ type: code-practice
 source: "MA-RLHF (https://github.com/dhcode-cpp/MA-RLHF)"
 tags: [code-practice, pipeline-parallel, gpipe, 1f1b, distributed-training, pytorch]
 related:
-  - "[[AI/LLM/Infra/Tensor-Parallel-手撕实操|Tensor-Parallel-手撕实操]]"
-  - "[[AI/LLM/Infra/ZeRO-手撕实操|ZeRO-手撕实操]]"
-  - "[[AI/LLM/Infra/分布式训练通信原语-手撕实操|分布式训练通信原语-手撕实操]]"
+  - "[[AI/3-LLM/Infra/Tensor-Parallel-手撕实操|Tensor-Parallel-手撕实操]]"
+  - "[[AI/3-LLM/Infra/ZeRO-手撕实操|ZeRO-手撕实操]]"
+  - "[[AI/3-LLM/Infra/分布式训练通信原语-手撕实操|分布式训练通信原语-手撕实操]]"
 ---
 
 # 流水线并行（Pipeline Parallelism）手撕实操

@@ -13,10 +13,10 @@ tags:
   - communication-primitives
   - xtrain
 related:
-  - "[[AI/LLM/Infra/分布式训练通信原语-手撕实操]]"
-  - "[[AI/LLM/Infra/xtrain-lc2-数据并行从零手写]]"
+  - "[[AI/3-LLM/Infra/分布式训练通信原语-手撕实操]]"
+  - "[[AI/3-LLM/Infra/xtrain-lc2-数据并行从零手写]]"
   - "[[分布式训练]]"
-  - "[[AI/LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]"
+  - "[[AI/3-LLM/MA-RLHF课程/xtrain-分布式并行手写-MOC]]"
 ---
 
 # xtrain lc1 — 分布式通信原语从零手写

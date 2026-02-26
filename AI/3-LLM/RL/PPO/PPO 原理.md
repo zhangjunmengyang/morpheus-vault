@@ -168,12 +168,12 @@ $$R_{\text{RLHF}}(s, a) = R_{\text{RM}}(s, a) - \beta \cdot D_{\text{KL}}(\pi_\t
 - [[verl 概述|verl 概述]] — 高性能 RLHF 框架
 - [[OpenRLHF|OpenRLHF]] — 支持 PPO 的开源 RLHF 框架
 - [[DeepSeek-R1|DeepSeek-R1]] — 使用 GRPO 替代 PPO 的实例
-- [[AI/LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操（MA-RLHF）]] — **代码路径**：从零实现 PPO actor-critic，含 GAE/clip/KL 惩罚完整代码注解 ⭐⭐⭐⭐⭐
-- [[AI/LLM/RL/PPO/RLHF-PPO-完整Pytorch实现|RLHF-PPO 完整 Pytorch 实现]] — **端到端 56-cell Notebook**：四模型架构 + GAE + KL 约束完整链路，配合手撕实操查工程细节 ⭐⭐⭐⭐⭐
-- [[AI/LLM/RL/PPO/LLaMA2-Reward-Model实现|LLaMA2 Reward Model 实现]] — **RM 工程**：Bradley-Terry Loss + LLaMA2 RM Head，RLHF 第一步的代码参考
-- [[AI/LLM/RL/PPO/MA-RLHF-核心代码注解|MA-RLHF 核心代码注解]] — PPO 在 LLM RLHF 场景的完整训练框架注解
-- [[AI/LLM/RL/PPO/PRM-O1-Search-手撕实操|PRM-O1-Search 手撕实操]] — PPO 结合 Process Reward Model 的 O1 风格搜索实现
-- [[AI/LLM/RL/PPO/O1-PRM搜索完整实现|O1-PRM 搜索完整实现]] — **MCTS Notebook**：UCT + 树回溯 + PRM 打分完整 MCTS 实现
+- [[AI/3-LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO-手撕实操（MA-RLHF）]] — **代码路径**：从零实现 PPO actor-critic，含 GAE/clip/KL 惩罚完整代码注解 ⭐⭐⭐⭐⭐
+- [[AI/3-LLM/RL/PPO/RLHF-PPO-完整Pytorch实现|RLHF-PPO 完整 Pytorch 实现]] — **端到端 56-cell Notebook**：四模型架构 + GAE + KL 约束完整链路，配合手撕实操查工程细节 ⭐⭐⭐⭐⭐
+- [[AI/3-LLM/RL/PPO/LLaMA2-Reward-Model实现|LLaMA2 Reward Model 实现]] — **RM 工程**：Bradley-Terry Loss + LLaMA2 RM Head，RLHF 第一步的代码参考
+- [[AI/3-LLM/RL/PPO/MA-RLHF-核心代码注解|MA-RLHF 核心代码注解]] — PPO 在 LLM RLHF 场景的完整训练框架注解
+- [[AI/3-LLM/RL/PPO/PRM-O1-Search-手撕实操|PRM-O1-Search 手撕实操]] — PPO 结合 Process Reward Model 的 O1 风格搜索实现
+- [[AI/3-LLM/RL/PPO/O1-PRM搜索完整实现|O1-PRM 搜索完整实现]] — **MCTS Notebook**：UCT + 树回溯 + PRM 打分完整 MCTS 实现
 
 > 🤖 **PPO 在 Agent 场景的变体**（Critic-free 化方向）：
 > - [[LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL|LOOP（Apple Research）]] — Leave-One-Out PPO：去掉 Critic（单倍 LLM 显存），用同组其他 rollout 的 outcome 估计 baseline；长 horizon IDA 任务；32B 超 o1 +9pp

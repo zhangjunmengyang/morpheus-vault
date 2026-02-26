@@ -810,7 +810,7 @@ def skill_quality_score(skill, validation_trajectories):
 
 ## See Also
 
-- [[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]] — 同为长期 Agent RL，KLong 聚焦极长 horizon，SkillRL 聚焦技能层级化
+- [[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]] — 同为长期 Agent RL，KLong 聚焦极长 horizon，SkillRL 聚焦技能层级化
 - [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — SkillRL 的 RL 算法基础
 - [[AI/3-LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱
 - [[AI/2-Agent/目录|Agent MOC]] — SkillRL 是 Agent RL 方向的子课题

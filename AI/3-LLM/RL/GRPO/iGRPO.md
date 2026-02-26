@@ -533,4 +533,4 @@ iGRPO 通过约束 `N + G = G_GRPO` 来保持相同的 rollout 预算。例如�
 - [[GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] — iGRPO 在七大维度框架中的位置（迭代自反馈维度）
 - [[ProGRPO-Probabilistic-Advantage-Reweighting|ProGRPO]] — 同方向 GRPO 改进，改 advantage 计算方式
 - [[MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 同期 GRPO 改进，改 trust region 适应性
-- [[AI/LLM/RL/Frameworks/Slime-RL-Framework|Slime-RL]] — GRPO 系列的工程化框架参考
+- [[AI/3-LLM/RL/Frameworks/Slime-RL-Framework|Slime-RL]] — GRPO 系列的工程化框架参考

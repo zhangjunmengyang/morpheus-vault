@@ -12,10 +12,10 @@ tags:
   - 手撕实操
   - MA-RLHF-lc8
 related:
-  - [[AI/LLM/MA-RLHF课程/lc8-DPO-IPO-手撕实操|lc8-DPO-IPO-手撕实操]]
-  - [[AI/LLM/MA-RLHF课程/lc8-KTO-手撕实操|lc8-KTO-手撕实操]]
-  - [[AI/LLM/RL/RLHF-DPO-2026-技术全景|RLHF-DPO-2026-技术全景]]
-  - [[AI/LLM/MA-RLHF-手撕实操-系列索引|MA-RLHF 手撕实操系列索引]]
+  - [[AI/3-LLM/MA-RLHF课程/lc8-DPO-IPO-手撕实操|lc8-DPO-IPO-手撕实操]]
+  - [[AI/3-LLM/MA-RLHF课程/lc8-KTO-手撕实操|lc8-KTO-手撕实操]]
+  - [[AI/3-LLM/RL/RLHF-DPO-2026-技术全景|RLHF-DPO-2026-技术全景]]
+  - [[AI/3-LLM/MA-RLHF-手撕实操-系列索引|MA-RLHF 手撕实操系列索引]]
 ---
 
 # LLaMA2 Reward Model 手撕（MA-RLHF lc8）
@@ -23,7 +23,7 @@ related:
 **来源**：MA-RLHF `notebook/reward/LLaMA2-reward.ipynb`  
 **参考**：LLaMA 2: Open Foundation and Fine-Tuned Chat Models (Touvron et al. 2023)  
 **难度**：★★★★☆（工业级 RM 设计，理解 RLHF 生产细节）  
-**关联**：[[AI/LLM/MA-RLHF课程/lc8-RLHF-PPO-手撕实操|lc8-RLHF-PPO-手撕实操]] | [[AI/LLM/MA-RLHF课程/lc8-Bradley-Terry-偏好建模手撕|lc8-Bradley-Terry-偏好建模手撕]]
+**关联**：[[AI/3-LLM/MA-RLHF课程/lc8-RLHF-PPO-手撕实操|lc8-RLHF-PPO-手撕实操]] | [[AI/3-LLM/MA-RLHF课程/lc8-Bradley-Terry-偏好建模手撕|lc8-Bradley-Terry-偏好建模手撕]]
 
 ---
 

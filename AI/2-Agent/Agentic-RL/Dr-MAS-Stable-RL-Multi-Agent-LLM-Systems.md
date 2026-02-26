@@ -180,10 +180,10 @@ Multi-Agent RL 训练
 - [[Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]] — AT-GRPO/MAGRPO/MARS2 全图谱；Dr. MAS 补稳定性维度
 
 **性能 Scaling 对比**
-- [[AI/LLM/RL/Other-Algorithms/MARS2-Multi-Agent-Reasoning-Scaling|MARS2]] — 多 agent 性能 scaling（异构组合 > 单体大模型）；Dr. MAS 解决训练稳定性，MARS2 研究 scaling 规律，两者都关注多 agent 系统的优越性来源
+- [[AI/3-LLM/RL/Other-Algorithms/MARS2-Multi-Agent-Reasoning-Scaling|MARS2]] — 多 agent 性能 scaling（异构组合 > 单体大模型）；Dr. MAS 解决训练稳定性，MARS2 研究 scaling 规律，两者都关注多 agent 系统的优越性来源
 
 **同名系列（Normalization 问题）**
-- [[AI/LLM/RL/GRPO/Dr-GRPO-Duplicate-Query-Reward-Normalization|Dr. GRPO]] — 单 agent 场景的 GRPO normalization 问题（重复 query bias）；Dr. MAS 是多 agent 扩展版本，命名对应
+- [[AI/3-LLM/RL/GRPO/Dr-GRPO-Duplicate-Query-Reward-Normalization|Dr. GRPO]] — 单 agent 场景的 GRPO normalization 问题（重复 query bias）；Dr. MAS 是多 agent 扩展版本，命名对应
 
 **训练拓扑与编排**
 - [[PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]] — agent 内部 phase-level expert routing；Dr. MAS 解决跨 agent reward 归一化

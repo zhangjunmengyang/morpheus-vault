@@ -12,10 +12,10 @@ tags:
   - distributed-training
   - pytorch
 related:
-  - "[[AI/LLM/Infra/Tensor-Parallel-手撕实操|Tensor-Parallel-手撕实操]]"
-  - "[[AI/LLM/Architecture/DeepSeek-V3-手撕实操|DeepSeek-V3-手撕实操]]"
+  - "[[AI/3-LLM/Infra/Tensor-Parallel-手撕实操|Tensor-Parallel-手撕实操]]"
+  - "[[AI/3-LLM/Architecture/DeepSeek-V3-手撕实操|DeepSeek-V3-手撕实操]]"
   - "[[MoE 深度解析|MoE深度解析]]"
-  - "[[AI/LLM/Infra/分布式训练通信原语-手撕实操|分布式训练通信原语-手撕实操]]"
+  - "[[AI/3-LLM/Infra/分布式训练通信原语-手撕实操|分布式训练通信原语-手撕实操]]"
 ---
 
 # MoE / Context Parallel 手撕实操

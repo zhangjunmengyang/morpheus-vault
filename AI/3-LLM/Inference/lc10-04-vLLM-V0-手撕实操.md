@@ -6,9 +6,9 @@ type: code-practice
 source: "MA-RLHF (https://github.com/dhcode-cpp/MA-RLHF)"
 tags: [code-practice, vllm, paged-attention, inference, serving, pytorch]
 related:
-  - "[[AI/LLM/Inference/FlashAttention-手撕实操|FlashAttention-手撕实操]]"
-  - "[[AI/LLM/Infra/Tensor-Parallel-手撕实操|Tensor-Parallel-手撕实操]]"
-  - "[[AI/LLM/Infra/Ray-推理系统实操|Ray-推理系统实操]]"
+  - "[[AI/3-LLM/Inference/FlashAttention-手撕实操|FlashAttention-手撕实操]]"
+  - "[[AI/3-LLM/Infra/Tensor-Parallel-手撕实操|Tensor-Parallel-手撕实操]]"
+  - "[[AI/3-LLM/Infra/Ray-推理系统实操|Ray-推理系统实操]]"
 ---
 
 # vLLM 推理系统手撕实操

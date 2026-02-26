@@ -13,10 +13,10 @@ tags:
   - notebook-implementation
 related:
   - "[[GRPO 深度理解]]"
-  - "[[AI/LLM/RL/GRPO/GRPO-手撕实操]]"
-  - "[[AI/LLM/RL/GRPO/GRPO-KL散度三种近似]]"
-  - "[[AI/LLM/RL/PPO/RLHF-PPO-完整Pytorch实现]]"
-  - "[[AI/LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO-手撕实操]]"
+  - "[[AI/3-LLM/RL/GRPO/GRPO-KL散度三种近似]]"
+  - "[[AI/3-LLM/RL/PPO/RLHF-PPO-完整Pytorch实现]]"
+  - "[[AI/3-LLM/MA-RLHF课程/lc8-RL×LLM-MOC]]"
 ---
 
 # GRPO 完整 Notebook 实现
