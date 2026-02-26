@@ -1,14 +1,20 @@
 ---
-title: "GitHub AI 生态扫描 2026-02-25（周榜）"
-brief: "本周 GitHub AI 生态：microsoft/agent-framework 正式发布（多语言多 agent 编排框架，含 RL Labs 模块）；anthropics/claude-code-security-review（AI 安全审查 GitHub Action）；Databricks/ai-dev-kit；Agent Skills for Context Engineering。趋势：Agent 框架进入微软/Anthropic 官方产品层，Context Engineering 成热词，RL 进入 infrastructure 层。"
+title: GitHub AI 生态扫描 2026-02-25（周榜）
+brief: 本周 GitHub AI 生态：microsoft/agent-framework 正式发布（多语言多 agent 编排框架，含 RL Labs 模块）；anthropics/claude-code-security-review（AI 安全审查 GitHub Action）；Databricks/ai-dev-kit；Agent Skills for Context Engineering。趋势：Agent 框架进入微软/Anthropic 官方产品层，Context Engineering 成热词，RL 进入 infrastructure 层。
 date: 2026-02-25
 type: github-scan
-tags: [github, agent-framework, microsoft, anthropic, context-engineering, weekly-scan]
+tags:
+  - github
+  - agent-framework
+  - microsoft
+  - anthropic
+  - context-engineering
+  - weekly-scan
 related:
-  - "[[AI/Agent/Fundamentals/GitHub-Agentic-Workflows|GitHub Agentic Workflows]]"
-  - "[[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent-RL|KLong — context 管理的学术呼应]]"
-  - "[[AI/LLM/RL/Other-Algorithms/OAPL-Off-Policy-RL-LLM-Reasoning|OAPL（Databricks+Cornell）— Databricks RL 研究端]]"
-  - "[[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL 2026 综合分析]]"
+  - "[[GitHub-Agentic-Workflows|GitHub Agentic Workflows]]"
+  - "[[KLong-Extremely-Long-Horizon-Agent-RL|KLong — context 管理的学术呼应]]"
+  - "[[OAPL-Off-Policy-RL-LLM-Reasoning|OAPL（Databricks+Cornell）— Databricks RL 研究端]]"
+  - "[[Agentic-RL-2026前沿综合分析|Agentic-RL 2026 综合分析]]"
 ---
 
 > [!warning] 路径偏差

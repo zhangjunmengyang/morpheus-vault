@@ -108,6 +108,6 @@ tags:
 
 - [[Career/目录|Career MOC]] — 职业发展知识域全索引
 - [[AI面试速查手册|AI 面试速查手册]] — 速查层：面试前30分钟过一遍
-- [[AI/Agent/目录|Agent MOC]] — Agent 知识域全索引，简历描述的技术深度来源
-- [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 综合分析]] — 四大维度框架，可将工具调用决策问题升维到 reward/workflow 层表达
-- [[AI/Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer (CWRPO)]] — Workflow 结构可学习性，简历中"工作流编排"的前沿论证
+- [[AI/2-Agent/目录|Agent MOC]] — Agent 知识域全索引，简历描述的技术深度来源
+- [[Agentic-RL-2026前沿综合分析|Agentic RL 2026 综合分析]] — 四大维度框架，可将工具调用决策问题升维到 reward/workflow 层表达
+- [[FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer (CWRPO)]] — Workflow 结构可学习性，简历中"工作流编排"的前沿论证

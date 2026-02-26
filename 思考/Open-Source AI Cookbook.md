@@ -147,13 +147,13 @@ model = AutoModelForCausalLM.from_pretrained(
 
 ## 相关
 
-- [[AI/Agent/Fundamentals/HF Agent Course|HF Agent Course]]
-- [[AI/Agent/Fundamentals/HF-MCP-Course|HF MCP Course]]
-- [[AI/Agent/Fundamentals/HF LLM + Agent|HF LLM + Agent]]
+- [[HF Agent Course|HF Agent Course]]
+- [[HF-MCP-Course|HF MCP Course]]
+- [[HF LLM + Agent|HF LLM + Agent]]
 - [[KP 大神亲授课]]
-- [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]]
-- [[AI/LLM/SFT/LoRA|LoRA]]
-- [[AI/LLM/SFT/SFT 原理|SFT 原理]]
-- [[AI/LLM/Application/Embedding/Embedding|Embedding]]
+- [[TRL 概述|TRL 概述]]
+- [[LoRA|LoRA]]
+- [[SFT 原理|SFT 原理]]
+- [[Embedding|Embedding]]
 - [[Projects/RAG-System/企业 RAG 系统|企业 RAG 系统]]
-- [[AI/LLM/Frameworks/Unsloth/notebook 合集|notebook 合集]]
+- [[notebook 合集|notebook 合集]]

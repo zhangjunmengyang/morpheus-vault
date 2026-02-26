@@ -193,7 +193,7 @@ state.backend.rocksdb.metrics.num-running-compactions=true
 ## 相关
 
 - [[Flink CheckPoint]]
-- [[AI/LLM/Frameworks/Unsloth/Checkpoint|Checkpoint]]
+- [[Checkpoint|Checkpoint]]
 - [[Flink 内存机制|Flink 内存机制]]
 - [[Flink 调优|Flink 调优]]
 - [[Flink 生产|Flink 生产]]

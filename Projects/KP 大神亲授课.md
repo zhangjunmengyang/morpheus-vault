@@ -120,11 +120,11 @@ Week 7-8: GPT-2 复现
 
 ## 相关
 
-- [[AI/Foundations/DL-Basics/Transformer|Transformer]]
-- [[AI/Foundations/DL-Basics/Transformer 通识|Transformer 通识]]
-- [[AI/LLM/Architecture/GPT|GPT]]
-- [[AI/LLM/Architecture/Attention 变体综述|Attention 详解]]
-- [[AI/LLM/SFT/SFT 原理|SFT 原理]]
+- [[Transformer|Transformer]]
+- [[Transformer 通识|Transformer 通识]]
+- [[GPT|GPT]]
+- [[Attention 变体综述|Attention 详解]]
+- [[SFT 原理|SFT 原理]]
 - [[Projects/Training-Experiments/实现一个 LLM|实现一个 LLM]]
-- [[AI/Foundations/DL-Basics/深度学习|深度学习]]
-- [[AI/LLM/RL/Fundamentals/RL & LLMs 入门|RL & LLMs 入门]]
+- [[深度学习|深度学习]]
+- [[RL & LLMs 入门|RL & LLMs 入门]]

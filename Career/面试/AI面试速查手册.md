@@ -1,16 +1,20 @@
 ---
-title: "AI 面试速查手册"
-brief: "面试前 30 分钟速查版（1500+ 行）：以关键词提示形式覆盖 Agent/LLM架构/Safety/RL/RAG/推理优化/多模态/分布式训练 全方向核心面试题；每题只保留关键词级提示，配合各方向深度全景笔记使用。附各方向扩展阅读索引。"
+title: AI 面试速查手册
+brief: 面试前 30 分钟速查版（1500+ 行）：以关键词提示形式覆盖 Agent/LLM架构/Safety/RL/RAG/推理优化/多模态/分布式训练 全方向核心面试题；每题只保留关键词级提示，配合各方向深度全景笔记使用。附各方向扩展阅读索引。
 date: 2026-02-20
 updated: 2026-02-22
 domain: career
-tags: [面试, 速查, AI, career]
+tags:
+  - 面试
+  - 速查
+  - AI
+  - career
 sources:
-  - "综合自 Morpheus Vault AI 知识域各全景笔记（Scholar Agent 整理）"
+  - 综合自 Morpheus Vault AI 知识域各全景笔记（Scholar Agent 整理）
 related:
-  - "[[AI/Agent/AI-Agent-2026-技术全景]]"
-  - "[[AI/LLM/RL/RLHF-DPO-2026-技术全景]]"
-  - "[[AI/Safety/AI安全与对齐-2026技术全景]]"
+  - "[[AI-Agent-2026-技术全景]]"
+  - "[[RLHF-DPO-2026-技术全景]]"
+  - "[[AI安全与对齐-2026技术全景]]"
   - "[[Career/目录]]"
 ---
 
@@ -1542,52 +1546,52 @@ related:
 > 本手册是速查层（K→W），以下为各方向的完整深度版，面试前根据岗位方向选择精读。
 
 ### Agent 方向
-- [[AI/Agent/目录|Agent MOC]] — Agent 知识域全索引
-- [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 四大维度分析]] — 四大维度框架（环境/Reward/Workflow/算法），面试必备 ⭐
-- [[AI/Agent/Agentic-RL/Agent-RL-训练实战指南|Agent RL 训练实战指南]] — 现象·坑·解法，1001行 ★★★★★
+- [[AI/2-Agent/目录|Agent MOC]] — Agent 知识域全索引
+- [[Agentic-RL-2026前沿综合分析|Agentic RL 2026 四大维度分析]] — 四大维度框架（环境/Reward/Workflow/算法），面试必备 ⭐
+- [[Agent-RL-训练实战指南|Agent RL 训练实战指南]] — 现象·坑·解法，1001行 ★★★★★
 
 ### LLM 技术方向
-- [[AI/LLM/目录|LLM MOC]] — LLM 知识域全索引
-- [[AI/LLM/RL/RLHF-DPO-2026-技术全景|RLHF DPO 2026 技术全景]] — 对齐技术深度版（RLHF/DPO/宪法AI）
-- [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 改进全景]] — GRPO 七大维度深度分析
+- [[AI/3-LLM/目录|LLM MOC]] — LLM 知识域全索引
+- [[RLHF-DPO-2026-技术全景|RLHF DPO 2026 技术全景]] — 对齐技术深度版（RLHF/DPO/宪法AI）
+- [[GRPO-Improvement-Panorama-2026|GRPO 改进全景]] — GRPO 七大维度深度分析
 - [[AI/LLM/Inference/模型量化综述|模型量化综述]] — 推理优化方向深度
-- [[AI/LLM/Efficiency/知识蒸馏与模型压缩-2026技术全景|知识蒸馏与模型压缩 2026]] — 效率方向深度
+- [[知识蒸馏与模型压缩-2026技术全景|知识蒸馏与模型压缩 2026]] — 效率方向深度
 
 ### Safety 方向
-- [[AI/Safety/目录|Safety MOC]] — AI 安全全索引
-- [[AI/Safety/AI安全与对齐-2026技术全景|AI 安全与对齐 2026 全景]] — Safety 面试深度版
-- [[AI/Safety/Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization]] — 2026 最新：hidden state 安全检测 AUROC>0.9
+- [[AI/5-AI 安全/目录|Safety MOC]] — AI 安全全索引
+- [[AI安全与对齐-2026技术全景|AI 安全与对齐 2026 全景]] — Safety 面试深度版
+- [[Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization]] — 2026 最新：hidden state 安全检测 AUROC>0.9
 
 ### RL 方向
-- [[AI/LLM/RL/目录|RL MOC]] — 强化学习知识域全索引
-- [[AI/LLM/RL/Fundamentals/强化学习的数学原理|强化学习数学原理]] — MDP/Bellman/GAE 数学基础
-- [[AI/LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — 2026 Reward Modeling 前沿（Fisher信息驱动）
+- [[AI/3-LLM/RL/目录|RL MOC]] — 强化学习知识域全索引
+- [[强化学习的数学原理|强化学习数学原理]] — MDP/Bellman/GAE 数学基础
+- [[MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — 2026 Reward Modeling 前沿（Fisher信息驱动）
 
 ### RAG 方向
-- [[AI/RAG/_MOC|RAG MOC]] — RAG 知识域全索引
-- [[AI/RAG/Advanced RAG|Advanced RAG]] — Self-RAG/GraphRAG 进阶技术
-- [[AI/RAG/向量数据库选型|向量数据库选型]] — FAISS/Milvus/Chroma 对比
+- [[AI/6-应用/RAG/_MOC|RAG MOC]] — RAG 知识域全索引
+- [[AI/6-应用/RAG/Advanced RAG|Advanced RAG]] — Self-RAG/GraphRAG 进阶技术
+- [[向量数据库选型|向量数据库选型]] — FAISS/Milvus/Chroma 对比
 
 ### Transformer 架构方向
-- [[AI/LLM/Architecture/Transformer架构深度解析-2026技术全景|Transformer 架构深度解析 2026]] — 注意力/位置编码/MoE/SSM/推理优化全栈，18 道面试题 + 42 篇文献 ⭐
+- [[Transformer架构深度解析-2026技术全景|Transformer 架构深度解析 2026]] — 注意力/位置编码/MoE/SSM/推理优化全栈，18 道面试题 + 42 篇文献 ⭐
 
 ### 计算机视觉方向
 - [[计算机视觉基础与前沿-2026技术全景|CV 2026 技术全景]] — CNN/ViT/检测/分割/生成/3D/Agent，12+ 面试题 + 39 篇文献 ⭐
 
 ### LLM 微调方向
-- [[AI/LLM/SFT/LLM微调实战-2026技术全景|LLM 微调实战 2026 全景]] — LoRA/QLoRA/DoRA/SFT/DPO/分布式微调全栈，18 道面试题 + 32 篇文献 ⭐
+- [[LLM微调实战-2026技术全景|LLM 微调实战 2026 全景]] — LoRA/QLoRA/DoRA/SFT/DPO/分布式微调全栈，18 道面试题 + 32 篇文献 ⭐
 
 ### 合成数据与数据飞轮方向
-- [[AI/LLM/Application/Synthetic-Data/合成数据与数据飞轮-2026技术全景|合成数据与数据飞轮 2026 全景]] — 生成方法论/数据飞轮/质量控制/RLAIF/领域应用全栈，14 道面试题 + 35 篇文献 ⭐
+- [[合成数据与数据飞轮-2026技术全景|合成数据与数据飞轮 2026 全景]] — 生成方法论/数据飞轮/质量控制/RLAIF/领域应用全栈，14 道面试题 + 35 篇文献 ⭐
 
 ### LLM工具调用与Function Calling方向
-- [[AI/Agent/Fundamentals/LLM工具调用与Function-Calling-2026技术全景|LLM 工具调用与 Function Calling 2026 全景]] — FC原理/MCP协议/安全攻防/训练方法/多工具编排全栈，14 道面试题 + 35 篇文献 ⭐
+- [[LLM工具调用与Function-Calling-2026技术全景|LLM 工具调用与 Function Calling 2026 全景]] — FC原理/MCP协议/安全攻防/训练方法/多工具编排全栈，14 道面试题 + 35 篇文献 ⭐
 
 ### 多智能体系统方向
-- [[AI/Agent/Multi-Agent/多智能体系统与协作框架-2026技术全景|多智能体系统与协作框架 2026 全景]] — 架构范式/通信协议/框架对比/安全信任/涌现行为/工业案例全栈，15 道面试题 + 40 篇文献 ⭐
+- [[多智能体系统与协作框架-2026技术全景|多智能体系统与协作框架 2026 全景]] — 架构范式/通信协议/框架对比/安全信任/涌现行为/工业案例全栈，15 道面试题 + 40 篇文献 ⭐
 
 ### 自监督学习与对比学习方向
-- [[AI/LLM/Pretraining/自监督学习与对比学习-2026技术全景|自监督学习与对比学习 2026 全景]] — SSL四大范式/对比学习理论/视觉SSL进化/MIM/DINO/多模态CLIP全栈，15 道面试题 + 38 篇文献 ⭐
+- [[自监督学习与对比学习-2026技术全景|自监督学习与对比学习 2026 全景]] — SSL四大范式/对比学习理论/视觉SSL进化/MIM/DINO/多模态CLIP全栈，15 道面试题 + 38 篇文献 ⭐
 
 ### 职业方向
 - [[Career/目录|Career MOC]] — 求职知识域全索引

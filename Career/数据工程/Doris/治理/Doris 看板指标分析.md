@@ -205,5 +205,5 @@ alerts:
 - [[Doris 架构|Doris 架构]]
 - [[Doris 底层存储|Doris 底层存储]]
 - [[Doris 生产|Doris 生产]]
-- [[AI/LLM/Frameworks/verl/grafana 看板|grafana 看板]]
+- [[grafana 看板|grafana 看板]]
 - [[监控指标|监控指标]]

@@ -14,13 +14,13 @@ tags:
 
 ### 🤖 AI — 人工智能
 - [[AI/目录]] — AI 总览
-  - [[AI/Foundations/目录]] — 数学基础 / ML / DL
-  - [[AI/LLM/目录]] — 大语言模型（核心领域）⭐
-    - [[AI/LLM/RL/目录]] — ⭐ 强化学习 for LLM（重点方向）
-  - [[AI/MLLM/目录]] — 多模态大模型
-  - [[AI/Agent/目录]] — Agent 智能体
-  - [[AI/RAG/_MOC]] — 检索增强生成（RAG）
-  - [[AI/Safety/目录]] — AI 安全与对齐
+  - [[AI/1-Foundations/目录]] — 数学基础 / ML / DL
+  - [[AI/3-LLM/目录]] — 大语言模型（核心领域）⭐
+    - [[AI/3-LLM/RL/目录]] — ⭐ 强化学习 for LLM（重点方向）
+  - [[AI/3-LLM/MLLM/目录]] — 多模态大模型
+  - [[AI/2-Agent/目录]] — Agent 智能体
+  - [[AI/6-应用/RAG/_MOC]] — 检索增强生成（RAG）
+  - [[AI/5-AI 安全/目录]] — AI 安全与对齐
   - [[AI/Frontiers/目录]] — 前沿方向（Embodied AI / World Models）
   - [[AI/CV/_MOC]] — 计算机视觉
 
