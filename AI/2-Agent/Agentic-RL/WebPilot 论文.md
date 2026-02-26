@@ -60,4 +60,4 @@ tags:
 - [[Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — WebPilot 在 Web Automation RL 方向的位置
 - [[Multi-Agent 概述|Multi-Agent 概述]] — WebPilot 是 Multi-Agent 系统的 Web 特化版
 - [[Tool Use|Tool Use]] — Web 导航依赖的 tool use 能力
-- [[AI/2-Agent/目录|Agent MOC]] — Agent 知识全图谱
+-  — Agent 知识全图谱

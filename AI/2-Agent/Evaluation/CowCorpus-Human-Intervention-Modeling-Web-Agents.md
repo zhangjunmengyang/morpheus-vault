@@ -197,7 +197,7 @@ PTS = (1/Z) · σ(𝕀_correct - Σ_{i∈E} α · d_i²)
 
 ## See Also
 
-- [[AI/2-Agent/目录|Agent MOC]] — Agent 知识域全索引
+-  — Agent 知识域全索引
 - [[AgentConductor-Topology-Evolution|AgentConductor]] — 同样研究 multi-agent 协调，但 agent↔agent；本文是 human↔agent（互补视角）
 - [[SquRL-Dynamic-Workflow-Text-to-SQL|SquRL]] — 动态 workflow 选择，尚未考虑 human-in-the-loop——本文填补此缺口
 - [[Calibrate-Then-Act-Cost-Aware-Exploration|Calibrate-Then-Act]] — cost-aware exploration："不确定时停下来问"的成本建模，与 CowCorpus intervention timing 形成理论互补

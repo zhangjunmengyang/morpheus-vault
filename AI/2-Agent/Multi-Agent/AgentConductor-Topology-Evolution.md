@@ -220,7 +220,7 @@ AgentConductor 的密度函数更 principled，FlowSteer 的 operator 抽象更�
 - [[IMAGINE-多Agent蒸馏到单模型|IMAGINE]] — MAS 反方向：把多 Agent 集体能力蒸馏进单模型（能力集中）vs AgentConductor（动态组合）
 - [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — AgentConductor 使用 GRPO 训练 orchestrator 的算法基础
 - [[LLM代码生成-2026技术全景|LLM 代码生成 2026 全景]] — 代码生成赛道全局视图，AgentConductor 在竞赛级代码的位置
-- [[AI/2-Agent/目录|Agent MOC]] — Agent 研究全图谱
+-  — Agent 研究全图谱
 
 ## 连接
 

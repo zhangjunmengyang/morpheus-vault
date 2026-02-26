@@ -1271,8 +1271,8 @@ DAPO（ByteDance, NeurIPS 2025）做了四个关键改进：
 - [[MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — Reward Model 训练的新方向
 - [[GRPO 深度理解|GRPO 深度理解]] — GRPO 算法的数学推导与实现细节
 - [[LoRA|LoRA]] — Parameter-efficient fine-tuning，对齐训练的显存优化手段
-- [[AI/3-LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱
-- [[AI/3-LLM/目录|LLM MOC]] — 大语言模型知识全图谱
+-  — LLM 强化学习全图谱
+-  — 大语言模型知识全图谱
 
 **偏好优化变体（各有独立深度笔记）：**
 - [[SimPO-Simple-Preference-Optimization-Reference-Free|SimPO]] — Reference-free DPO，length-normalized（NeurIPS 2024）

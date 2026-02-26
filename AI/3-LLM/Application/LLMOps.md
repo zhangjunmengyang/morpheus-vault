@@ -9,7 +9,7 @@ status: draft
 
 ## 概述
 
-LLMOps（Large Language Model Operations）是专门针对大语言模型的运维和生产管理体系。相比传统 [[MLOps]]，LLMOps 面临着独特的挑战：模型规模巨大、推理成本高、输出不确定性、多模态能力等，需要专门的工具链和方法论来支撑 [[AI/3-LLM/目录|LLM]] 的全生命周期管理。
+LLMOps（Large Language Model Operations）是专门针对大语言模型的运维和生产管理体系。相比传统 [[MLOps]]，LLMOps 面临着独特的挑战：模型规模巨大、推理成本高、输出不确定性、多模态能力等，需要专门的工具链和方法论来支撑  的全生命周期管理。
 
 ## LLMOps vs MLOps 核心区别
 

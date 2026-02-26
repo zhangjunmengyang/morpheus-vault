@@ -190,7 +190,7 @@ Theorem 4.1 存在一个重要的"存在性"陷阱——它说"存在某个 rewa
 
 ## See Also
 
-- [[AI/3-LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱
+-  — LLM 强化学习全图谱
 - [[GRPO-Improvement-Panorama-2026|GRPO 改进全景]] — GRPO 也是 critic-free advantage 估计，RICOL 提供了完全不同的路径（reflection-based vs sampling-based）
 - [[Agent-RL-训练实战指南|Agent RL 训练实战指南]] — Temporal credit assignment 是 agentic RL 的核心难题，本文提供了 ICL-based 解法
 - [[REMuL-CoT-Faithfulness-Multi-Listener-RL|REMuL]] — 同样利用 LLM 内部表征来改善训练信号（CoT faithfulness），与本文 ICL 作为 advantage 信号形成方法论互补

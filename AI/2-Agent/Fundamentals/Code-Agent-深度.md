@@ -14,7 +14,7 @@ status: evergreen
 
 ## 1. Code Agent 定义
 
-Code Agent 是一类以 **LLM 为核心推理引擎**，能够自主完成软件工程任务的 [[AI/2-Agent/目录|AI Agent]]。与传统代码补全（Copilot 行级补全）不同，Code Agent 具备：
+Code Agent 是一类以 **LLM 为核心推理引擎**，能够自主完成软件工程任务的 。与传统代码补全（Copilot 行级补全）不同，Code Agent 具备：
 
 - **端到端任务执行**：从需求理解 → 代码定位 → 编辑 → 测试 → 修复的完整闭环
 - **工具使用**：调用文件系统、终端、搜索、浏览器等外部工具

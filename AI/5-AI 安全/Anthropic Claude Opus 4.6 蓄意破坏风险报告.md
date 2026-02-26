@@ -113,7 +113,7 @@ updated: 2026-02-22
 
 ## See Also
 
-- [[AI/5-AI 安全/目录|Safety MOC]] — AI 安全全景索引
+-  — AI 安全全景索引
 - [[AI安全与对齐-2026技术全景|AI安全与对齐 2026 全景]] — 宏观技术综述
 - [[对齐技术总结|对齐技术总结]] — RLHF/宪法 AI 技术路线
 - [[Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization]] — hidden state 安全探测研究

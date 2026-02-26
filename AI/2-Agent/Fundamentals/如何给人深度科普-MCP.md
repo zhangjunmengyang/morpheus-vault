@@ -339,7 +339,6 @@ def parse_tool_use(*response*):
 - **推理与规划能力：action chain，这个也依赖于 Agent RL**
 - **指令遵循与格式生成能力、结构化输出能力**
 - **参数生成准确性：**即便选对工具，能否从用户模糊的对话（如“查一下web主服务的日志”）中准确提取并生成符合Schema的参数（如 {"pod_name": "webapp-main-7f9c8d...", "namespace": "production"}），是决定工具调用成败的“最后一公里”，直接依赖模型对上下文和Schema的理解能力。
-- 
 第六章：现实的权衡：MCP方案的固有挑战与成本
 
 ---
@@ -390,5 +389,5 @@ MCP的真正贡献，在于它通过“**关注点分离**”这一经典的工�
 
 - [[HF-MCP-Course|HF MCP Course]] — MCP 的课程版（实践）
 - [[Tool Use|Tool Use]] — Tool Use 是 MCP 的底层能力
-- [[AI/2-Agent/目录|Agent MOC]] — Agent 知识全图谱
-- [[AI/3-LLM/目录|LLM MOC]] — MCP 在 LLM 生态中的位置
+-  — Agent 知识全图谱
+-  — MCP 在 LLM 生态中的位置

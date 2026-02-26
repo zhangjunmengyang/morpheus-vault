@@ -13,7 +13,6 @@ tags:
 
 https://km.sankuai.com/collabpage/2554271335
 
-
 🤖 **DB-GPT 是一个开源 AI 原生数据应用程序开发框架，带有 AWEL（代理工作流表达式语言）和代理**。
 
 目的是构建大模型领域的基础设施，通过发展多模型管理（SMMF）、Text2SQL效果优化、RAG框架及优化、Multi-Agents框架协作、AWEL（代理工作流编排）等多项技术能力）等，使得数据的大型模型应用更加简单方便。
@@ -51,6 +50,6 @@ Miniforge：
 ## See Also
 
 - [[Agent-框架对比-2026|Agent 框架对比 2026]] — dbgpt 在主流框架中的对比分析
-- [[AI/2-Agent/目录|Agent MOC]] — Agent 知识全图谱
+-  — Agent 知识全图谱
 - [[RAG 原理与架构|RAG 原理与架构]] — dbgpt 的核心应用场景
-- [[AI/6-应用/RAG/_MOC|RAG MOC]] — 检索增强生成知识图谱
+-  — 检索增强生成知识图谱

@@ -12,8 +12,8 @@ tags:
   - pytorch
   - llm-engineering
 related:
-  - "[[AI/3-LLM/目录|LLM MOC]]"
-  - "[[AI/3-LLM/RL/目录|RL MOC]]"
+  - ""
+  - ""
 ---
 
 # MA-RLHF 手撕实操系列索引

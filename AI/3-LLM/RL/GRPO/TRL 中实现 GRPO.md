@@ -37,12 +37,10 @@ from datasets import load_dataset
 # 1. Load your dataset
 dataset = load_dataset("your_dataset", split="train")
 
-
 # 2. Define a simple reward function
 def reward_func(completions, **kwargs):
     """Example: Reward longer completions"""
     return [float(len(completion)) for completion in completions]
-
 
 # 3. Configure training
 training_args = GRPOConfig(
@@ -76,10 +74,8 @@ trainer.train()
 def reward_length(completions, **kwargs):
     return [float(len(completion)) for completion in completions]
 
-
 # Example 2: Reward based on matching a pattern
 import re
-
 
 def reward_format(completions, **kwargs):
     pattern = r"^<think>.*?</think><answer>.*?</answer>$"
@@ -202,4 +198,4 @@ training_args = GRPOConfig(
 - [[GRPO 深度理解|GRPO 深度理解]] — 算法原理，实现的数学基础
 - [[GRPO-demo|GRPO Demo]] — Demo 实践，与本篇互补
 - [[TRL 概述|TRL 概述]] — TRL 框架全貌
-- [[AI/3-LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱
+-  — LLM 强化学习全图谱

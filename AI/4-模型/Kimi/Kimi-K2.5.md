@@ -141,7 +141,7 @@ Kimi K2.5 的差异化：**Agent Swarm 原生支持 + 视觉 + 开权重**，三
 - [[GLM-5]] — 同级竞品（744B MoE，开权重）
 - [[Agent-World-Model]] — Agentic RL 背景
 - [[Test-Time-Compute]] — Thinking 模式的 TTC 背景
-- [[AI/3-LLM/RL/目录]] — PARL 所属的 RL 方法论
+-  — PARL 所属的 RL 方法论
 - [[Kimi-K2.5-PARL]] — PARL 深度精读版（Scholar 写，含 credit assignment / training instability 细节）
 
 ---

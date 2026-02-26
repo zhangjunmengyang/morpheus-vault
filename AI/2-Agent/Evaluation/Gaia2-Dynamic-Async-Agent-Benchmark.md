@@ -116,7 +116,7 @@ Agent 在 Gaia2 中面对：
 - [[EnterpriseGym-Corecraft|EnterpriseGym Corecraft]] — 企业 RL 环境，与 Gaia2 ARE 平台同类思路
 - [[Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿]] — Gaia2 的训练价值需要在 Agentic RL 框架下理解
 - [[ICLR-2026-趋势分析|ICLR 2026 趋势]] — 2026 年 Agent benchmark 整体趋势
-- [[AI/2-Agent/目录]] — Agent MOC
+-  — Agent MOC
 
 ---
 

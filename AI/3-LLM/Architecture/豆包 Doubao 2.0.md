@@ -226,8 +226,8 @@ Seed 团队明确的核心发展路线：
 
 ## See Also
 
-- [[AI/Frontiers/目录|Frontiers MOC]] — 前沿模型追踪索引
+-  — 前沿模型追踪索引
 - [[Doubao-Seed-2.0|Doubao Seed 2.0 技术分析]] — 本笔记的深度技术版（馆长炼化版）
-- [[AI/目录|AI MOC]] — AI 知识域全索引
-- [[AI/3-LLM/目录|LLM MOC]] — LLM 技术基础
+-  — AI 知识域全索引
+-  — LLM 技术基础
 - [[GLM-5|GLM-5]] — 同期竞品参考

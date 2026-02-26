@@ -40,4 +40,4 @@ tags:
 - [[Embedding 选型|Embedding 选型]] — 线上问题的根源：选型决策
 - [[Embedding|Embedding 原理]] — 问题诊断的理论基础
 - [[AI/3-LLM/Inference/KV Cache|KV Cache 优化]] — 线上推理常见性能问题
-- [[AI/3-LLM/目录|LLM MOC]] — 大语言模型知识全图谱
+-  — 大语言模型知识全图谱

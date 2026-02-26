@@ -28,4 +28,4 @@ PPL的计算基于语言模型对测试集的概率估计。给定一个测试�
 - [[AI/3-LLM/Evaluation/LLM 评测体系|LLM 评测体系]] — PPL 作为语言模型评估指标的位置
 - [[损失函数|损失函数]] — 交叉熵损失与 PPL 的关系：PPL = exp(cross-entropy)
 - [[AI/1-Foundations/Training/Scaling Laws|Scaling Laws]] — PPL 与模型规模/数据量的幂律关系
-- [[AI/1-Foundations/目录|Foundations MOC]] — ML 基础全图谱
+-  — ML 基础全图谱

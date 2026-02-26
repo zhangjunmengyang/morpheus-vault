@@ -80,5 +80,5 @@ RL for LLM post-training 的 reward 信号太稀疏（1 bit per rollout），dis
 
 - [[RLRR-Reference-Guided-Alignment-Non-Verifiable|RLRR]] — 同为 non-verifiable 对齐方向：RLTF 用文本反馈，RLRR 用 reference + judge
 - [[MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — reward model 训练的前置：更好的 RM 意味着更好的 text feedback
-- [[AI/3-LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱
+-  — LLM 强化学习全图谱
 - [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — RLTF 中 reward shaping 与 GRPO reward 设计的关系

@@ -662,7 +662,7 @@ $$T^{(1)} < T^{(2)} < \cdots < T^{(M)} \quad (2h \to 4h \to 6h)$$
 - [[Agentic-RL-元问题-瓶颈与突破方向|🧠 Agentic RL 元问题：瓶颈与突破方向]] ⭐ — **本综述的元层批判与升维**：基于37+篇论文的Wisdom层判断；指出算法层已够用，真正瓶颈是Reward Signal Quality；本综述是"是什么"，元问题笔记是"为什么不够/下一步在哪"
 - [[iStar-Implicit-Step-Rewards-Agentic-RL|iStar（2509.19199，Tongyi Lab，★★★★★）]] — trajectory DPO ≡ step-wise BT model，唯一支持 unverifiable reward 的 step-level CA，SOTOPIA +48%，2x 样本效率
 - [[Search-R1-Reasoning-Search-Engine-RL|Search-R1（前驱，arXiv:2503.09516）]] — Search-R1++ (2602.19526) 的前身：把搜索引擎集成进 RL rollout，token masking 稳定训练；Search-R1++ 在此基础上系统消融 reward/optimizer/prompt 三维度（vault_gap：Search-R1++ 独立笔记待 Scholar 补写）
-- [[AI/2-Agent/目录|Agent MOC]] — Agentic RL 在 Agent 知识域的位置
+-  — Agentic RL 在 Agent 知识域的位置
 - [[FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer (CWRPO)]] — 维度 4：Operator 级 workflow 设计（Workflow/Topology 解法 A）
 - [[AgentConductor-Topology-Evolution|AgentConductor]] — 维度 4：Agent 通信 Topology 级（解法 B，difficulty-aware density）
 - [[SquRL-Dynamic-Workflow-Text-to-SQL|SquRL]] — 维度 4：Workflow 选择级（解法 C，Theorem 3.1 形式化证明）

@@ -14,7 +14,7 @@ sources:
 related:
   - "[[AI 思考|AI 思考]]"
   - "[[关于 AI 学习提效思考|关于 AI 学习提效思考]]"
-  - "[[AI/3-LLM/目录|LLM MOC]]"
+  - ""
 ---
 # AI 综合
 
@@ -85,6 +85,5 @@ graph LR
 
 - [[AI 思考|AI 思考]]
 - [[关于 AI 学习提效思考|关于 AI 学习提效思考]]
-- [[AI/3-LLM/目录|LLM MOC]]
-- [[AI/3-LLM/MLLM/目录|MLLM MOC]]
+- 
 - [[零碎的点|Multi-Agent 思考]]

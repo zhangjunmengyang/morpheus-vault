@@ -78,4 +78,4 @@ source: "arXiv:2602.11761"
 - [[Attention 变体综述|Attention 变体综述]] — SALA 是 Attention 变体的一种
 - [[SLA2-Learnable-Router|SLA2 Learnable Router]] — 同期 MiniCPM 架构论文，互补
 - [[Transformer|Transformer 通识]] — SALA 的架构基础
-- [[AI/3-LLM/目录|LLM MOC]] — 大语言模型知识全图谱
+-  — 大语言模型知识全图谱

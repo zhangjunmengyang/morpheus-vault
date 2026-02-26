@@ -16,8 +16,8 @@ sources:
 domain: ai/agent/safety
 related:
   - "[[Colosseum-Multi-Agent-Collusion-Audit-2026]]"
-  - "[[AI/2-Agent/目录]]"
-  - "[[AI/5-AI 安全/目录]]"
+  - ""
+  - ""
 ---
 
 # Evaluating Collective Behaviour of Hundreds of LLM Agents

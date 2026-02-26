@@ -244,4 +244,4 @@ RL on dLLM:
 - [[Attention 变体综述|Attention 变体综述]] — Diffusion LLM 与 AR 模型的架构对比
 - [[Sparrow-Video-LLM-Speculative-Decoding|Sparrow 推测解码]] — 推理加速的另一路线
 - [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — R1 reasoning 训练方法，LaViDa-R1 名字中的 R1 来源
-- [[AI/3-LLM/目录|LLM MOC]] — 大语言模型知识全图谱
+-  — 大语言模型知识全图谱

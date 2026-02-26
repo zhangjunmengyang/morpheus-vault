@@ -169,7 +169,7 @@ Bash 权限是这次攻击的关键放大器。最小权限原则对 AI agent �
 
 - [[Agent 安全威胁全景 2026-02]] — AI Agent 安全威胁全景，含 prompt injection 综述
 - [[Agent-Skills-Security]] — Agent Skills 安全治理（26.1% 社区 skill 含漏洞）
-- [[AI/5-AI 安全/目录]] — AI Safety MOC
+-  — AI Safety MOC
 
 ---
 

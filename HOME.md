@@ -4,99 +4,71 @@ type: moc
 domain: home
 tags:
   - type/reference
+updated: 2026-02-26
 ---
 
-# 🏠 Morpheus Vault
+# Morpheus Vault
 
-> 个人知识体系中枢 — 按知识主题组织，而非内容类型
+> 个人知识体系中枢。按知识主题组织，文件结构即索引。
 
-## 核心知识域
+---
 
-### 🤖 AI — 人工智能
-- [[AI/目录]] — AI 总览
-  - [[AI/1-Foundations/目录]] — 数学基础 / ML / DL
-  - [[AI/3-LLM/目录]] — 大语言模型（核心领域）⭐
-    - [[AI/3-LLM/RL/目录]] — ⭐ 强化学习 for LLM（重点方向）
-  - [[AI/3-LLM/MLLM/目录]] — 多模态大模型
-  - [[AI/2-Agent/目录]] — Agent 智能体
-  - [[AI/6-应用/RAG/_MOC]] — 检索增强生成（RAG）
-  - [[AI/5-AI 安全/目录]] — AI 安全与对齐
-  - [[AI/Frontiers/目录]] — 前沿方向（Embodied AI / World Models）
-  - [[AI/CV/_MOC]] — 计算机视觉
+## AI — 人工智能
 
-### 🔧 Engineering — 数据工程
-- [[Career/数据工程/目录]] — 工程总览（Flink / Spark / Doris）
+`AI/1-Foundations/` — 数学基础 / 传统 ML / DL 通用组件（面试速查层）
 
-### 📈 Quant — 量化研究
-- Quant/ — Crypto 量化交易 2026 全景（待建 MOC，1篇）
+`AI/2-Agent/` — 智能体：规划 / 工具调用 / 多 Agent / Agentic RL
 
-### ✍️ Output — 输出与发布
-- [[思考/目录]] — 发布文章 & 社区分享
+`AI/3-LLM/` — 大语言模型（核心）⭐
+- `3-LLM/Architecture/` — Transformer / Attention 变体 / 位置编码
+- `3-LLM/Pretraining/` — 预训练原理 / 数据工程 / 分布式训练
+- `3-LLM/SFT/` — 微调 / LoRA / 数据构建
+- `3-LLM/RL/` — RLHF / DPO / GRPO / PPO ⭐
+- `3-LLM/Inference/` — KV Cache / 量化 / 推测解码 / 手撕实操
+- `3-LLM/Efficiency/` — 蒸馏 / 剪枝 / 压缩
+- `3-LLM/Application/` — RAG / 代码生成 / 幻觉 / Prompt
+- `3-LLM/Evaluation/` — Benchmark / 评测体系
+- `3-LLM/MLLM/` — 多模态
+- `3-LLM/Infra/` — 分布式训练框架（verl / Unsloth / xtrain 手撕）
 
-### 🔍 外部资源
-- [[观猹-Watcha-AI产品聚合平台|观猹（Watcha）]] — 中文 AI 产品发现与点评，Product Hunt 平替
+`AI/4-模型/` — 具体模型技术报告（DeepSeek / Qwen / Claude 等）
 
-### 💼 Career — 职业发展
-- [[Career/目录]] — 述职 / 求职 / PMO / 方法论
+`AI/5-AI 安全/` — 对齐 / 红队 / Agent 安全
 
-### 🚀 Projects — 项目实战
-- [[Projects/0-目录]] — 企业级项目 + 实验
+`AI/6-应用/` — RAG 工程 / 搜索推荐 / 量化交易
 
-### 📚 Resources — 学习资源
-- [[Resources/0-目录]] — 课程索引 / 论文列表
+---
 
-### 📰 Newsloom — 每日情报
-- Newsloom/ — Sentinel 每日 AI 情报归档（无 MOC，按日期检索）
+## Career — 职业发展
 
-## 工作区入口
+`Career/面试/` — AI 面试速查手册 / 八股
 
-- [[00-Home/Inbox|📥 Inbox]] — 新内容临时收集箱，整理后归入知识域
+`Career/产品/` — 产品方法论 / PMO / AI 产品
 
-## 快速查询
+`Career/数据工程/` — Flink / Spark / Doris / Kafka
 
-```dataview
-TABLE type, domain, file.mtime as "更新时间"
-FROM ""
-WHERE type = "paper"
-SORT file.mtime DESC
-LIMIT 10
-```
+---
 
-## 最近更新
+## Projects — 项目
 
-```dataview
-TABLE type, domain
-FROM "" AND -"Templates" AND -"00-Home"
-SORT file.mtime DESC
-LIMIT 15
-```
+`Projects/MA-RLHF/` — MA-RLHF 课程（lc6/lc8 手撕实操）⭐
 
+`Projects/MMAN-CAD-MPI/` — 3D 生成研究项目
 
-# 论文待学习列表
+---
 
-李沐：https://github.com/Tramac/paper-reading-note?tab=readme-ov-file
+## 思考 — 输出与发布
 
-选读列表：https://github.com/km1994/llms_paper
+`思考/` — 个人洞察 / 发布文章 / 方法论
 
-https://github.com/mli/paper-reading
+---
 
-仓库 top papers：https://github.com/dair-ai/ML-Papers-of-the-Week?tab=readme-ov-file
+## 日报
 
-LLM 思想
+`日报/` — Sentinel 每日 AI 情报归档（按日期检索）
 
-- [LLMs Get Lost In Multi-Turn Conversation](https%3A%2F%2Farxiv.org%2Fabs%2F2505.06120)
- RL
+---
 
-- REINFORCE++： [REINFORCE++: An Efficient RLHF Algorithm with Robustness to Both Prompt and Reward Models](https%3A%2F%2Farxiv.org%2Fabs%2F2501.03262)
-- GPRO（deepseekmath）：[DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models](https%3A%2F%2Farxiv.org%2Fabs%2F2402.03300)
-- [zhuanlan.zhihu.com](https%3A%2F%2Fzhuanlan.zhihu.com%2Fp%2F20021693569)
-- https://zhuanlan.zhihu.com/p/21046265072
-- https://swift.readthedocs.io/zh-cn/latest/BestPractices/GRPO%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B.html
-- [IOPO: Empowering LLMs with Complex Instruction Following via Input-Output Preference Optimizatio](https%3A%2F%2Farxiv.org%2Fabs%2F2411.06208)
-Prompt
-*https://arxiv.org/abs/2201.11903*
-*https://arxiv.org/abs/2205.11916*
-*https://arxiv.org/abs/2203.11171*
-*https://arxiv.org/abs/2210.03493*
-*https://arxiv.org/abs/2305.10601*
-*https://arxiv.org/pdf/2303.11366.pdf*
+## 📥 INBOX
+
+[[INBOX]] — 待读论文 / 知识缺口 / 待炼化内容

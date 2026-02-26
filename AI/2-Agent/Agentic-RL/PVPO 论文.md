@@ -37,4 +37,4 @@ PVPO通过引入参考模型作为优势参考锚点，并结合数据预采样�
 - [[Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — PVPO 的宏观定位
 - [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — PVPO 与 GRPO 的异同：PVPO 引入预估价值
 - [[Agent-RL-训练实战指南|Agent RL 训练实战指南]] — value estimation 的工程实践
-- [[AI/2-Agent/目录|Agent MOC]] — Agent 知识全图谱
+-  — Agent 知识全图谱

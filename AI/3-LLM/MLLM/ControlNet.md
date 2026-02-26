@@ -125,4 +125,3 @@ ControlNet 之所以成功，在于它找到了一个绝佳的平衡点：不修
 
 - [[AI/CV/ViT|ViT]] — Transformer 在视觉领域的基础架构
 - [[AI/CV/MAE|MAE]] — 自监督视觉预训练
-- [[AI/CV/_MOC|计算机视觉 MOC]]

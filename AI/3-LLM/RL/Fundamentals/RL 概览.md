@@ -99,5 +99,5 @@ https://github.com/chunhuizhang/llm_rl/blob/main/tutorials/objectives_adv/core_a
 
 - [[强化学习的数学原理|强化学习数学原理]] — RL 概览的数学深化版
 - [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — 概览之后的前沿：GRPO 七维改进体系
-- [[AI/3-LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱
+-  — LLM 强化学习全图谱
 - [[机器学习|机器学习]] — 监督学习到 RL 的演化

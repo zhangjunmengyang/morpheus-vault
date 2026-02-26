@@ -181,5 +181,5 @@ Z.AI 提供订阅制编码方案，支持 Claude Code、Cursor、Cline、OpenCla
 
 - [[GLM-5|GLM-5 技术报告精读]] — GLM-5 完整技术分析（正式版）
 - [[Slime-RL-Framework|Slime RL Framework]] — GLM-5 使用的 RL 训练框架
-- [[AI/2-Agent/目录|Agent MOC]] — Agentic Engineering 全图谱
-- [[AI/3-LLM/目录|LLM MOC]] — 大语言模型知识全图谱
+-  — Agentic Engineering 全图谱
+-  — 大语言模型知识全图谱

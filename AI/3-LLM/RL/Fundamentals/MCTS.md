@@ -46,5 +46,5 @@ https://zhuanlan.zhihu.com/p/9644482549
 
 - [[RL 概览|RL 概览]] — MCTS 在 RL 框架中的位置（树搜索 vs 梯度策略）
 - [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — Exploration 维度：MCTS 与 GRPO 探索策略对比
-- [[AI/3-LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱
-- [[AI/2-Agent/目录|Agent MOC]] — MCTS 在 Agent planning 中的应用
+-  — LLM 强化学习全图谱
+-  — MCTS 在 Agent planning 中的应用

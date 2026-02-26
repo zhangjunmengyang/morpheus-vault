@@ -15,7 +15,7 @@ related:
   - "[[AI-Agent-2026-技术全景]]"
   - "[[RLHF-DPO-2026-技术全景]]"
   - "[[AI安全与对齐-2026技术全景]]"
-  - "[[Career/目录]]"
+  - ""
 ---
 
 # AI 面试速查手册
@@ -1546,29 +1546,29 @@ related:
 > 本手册是速查层（K→W），以下为各方向的完整深度版，面试前根据岗位方向选择精读。
 
 ### Agent 方向
-- [[AI/2-Agent/目录|Agent MOC]] — Agent 知识域全索引
+-  — Agent 知识域全索引
 - [[Agentic-RL-2026前沿综合分析|Agentic RL 2026 四大维度分析]] — 四大维度框架（环境/Reward/Workflow/算法），面试必备 ⭐
 - [[Agent-RL-训练实战指南|Agent RL 训练实战指南]] — 现象·坑·解法，1001行 ★★★★★
 
 ### LLM 技术方向
-- [[AI/3-LLM/目录|LLM MOC]] — LLM 知识域全索引
+-  — LLM 知识域全索引
 - [[RLHF-DPO-2026-技术全景|RLHF DPO 2026 技术全景]] — 对齐技术深度版（RLHF/DPO/宪法AI）
 - [[GRPO-Improvement-Panorama-2026|GRPO 改进全景]] — GRPO 七大维度深度分析
 - [[AI/3-LLM/Inference/模型量化综述|模型量化综述]] — 推理优化方向深度
 - [[知识蒸馏与模型压缩-2026技术全景|知识蒸馏与模型压缩 2026]] — 效率方向深度
 
 ### Safety 方向
-- [[AI/5-AI 安全/目录|Safety MOC]] — AI 安全全索引
+-  — AI 安全全索引
 - [[AI安全与对齐-2026技术全景|AI 安全与对齐 2026 全景]] — Safety 面试深度版
 - [[Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization]] — 2026 最新：hidden state 安全检测 AUROC>0.9
 
 ### RL 方向
-- [[AI/3-LLM/RL/目录|RL MOC]] — 强化学习知识域全索引
+-  — 强化学习知识域全索引
 - [[强化学习的数学原理|强化学习数学原理]] — MDP/Bellman/GAE 数学基础
 - [[MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — 2026 Reward Modeling 前沿（Fisher信息驱动）
 
 ### RAG 方向
-- [[AI/6-应用/RAG/_MOC|RAG MOC]] — RAG 知识域全索引
+-  — RAG 知识域全索引
 - [[AI/6-应用/RAG/Advanced RAG|Advanced RAG]] — Self-RAG/GraphRAG 进阶技术
 - [[向量数据库选型|向量数据库选型]] — FAISS/Milvus/Chroma 对比
 
@@ -1594,5 +1594,5 @@ related:
 - [[自监督学习与对比学习-2026技术全景|自监督学习与对比学习 2026 全景]] — SSL四大范式/对比学习理论/视觉SSL进化/MIM/DINO/多模态CLIP全栈，15 道面试题 + 38 篇文献 ⭐
 
 ### 职业方向
-- [[Career/目录|Career MOC]] — 求职知识域全索引
+-  — 求职知识域全索引
 - [[Career/Job-Board/_求职看板|求职看板]] — 当前投递状态追踪

@@ -18,8 +18,8 @@ sources:
   - "PaLM: Chowdhery et al. arXiv:2204.02311 (2022)"
 related:
   - "[[Transformer架构深度解析-2026技术全景|Transformer 架构深度解析]]"
-  - "[[AI/1-Foundations/目录|Foundations MOC]]"
-  - "[[AI/3-LLM/目录|LLM MOC]]"
+  - ""
+  - ""
 ---
 
 # SwiGLU 激活函数

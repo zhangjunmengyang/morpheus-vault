@@ -205,8 +205,8 @@ Ming-Omni 隶属蚂蚁集团 **Ling（百灵）** 开源模型家族，包含三
 
 ## See Also
 
-- [[AI/3-LLM/MLLM/目录|MLLM MOC]] — 多模态大模型全景索引
-- [[AI/目录|AI MOC]] — AI 知识域全索引
-- [[AI/Frontiers/目录|Frontiers MOC]] — 前沿模型追踪
+-  — 多模态大模型全景索引
+-  — AI 知识域全索引
+-  — 前沿模型追踪
 - [[Seed1.5-VL|Seed1.5-VL]] — 同类 Omni 方向竞品（字节）
 - [[GLM-5|GLM-5]] — 同期前沿模型对比参考

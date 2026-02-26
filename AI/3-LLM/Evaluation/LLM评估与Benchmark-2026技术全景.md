@@ -21,7 +21,7 @@ sources:
   - AlpacaEval (Li et al.) arXiv:2404.04475
   - ARC-AGI (Chollet, 2019) arXiv:1911.01547
 related:
-  - "[[AI/3-LLM/目录|LLM MOC]]"
+  - ""
   - "[[Prompt-Engineering-2026实战全景|Prompt Engineering 2026 全景]]"
   - "[[RLHF-DPO-2026-技术全景|RLHF/DPO 2026 全景]]"
   - "[[AI安全与对齐-2026技术全景|AI 安全与对齐]]"

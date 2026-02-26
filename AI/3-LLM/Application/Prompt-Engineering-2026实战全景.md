@@ -20,7 +20,7 @@ sources:
   - DSPy (Khattab et al.) arXiv:2310.03714
   - What learning algorithm is in-context learning? (Akyürek et al.) arXiv:2211.15661
 related:
-  - "[[AI/3-LLM/目录|LLM MOC]]"
+  - ""
   - "[[LLM评估与Benchmark-2026技术全景|LLM 评估与 Benchmark 2026]]"
   - "[[AI-Agent-2026-技术全景|AI Agent 2026 全景]]"
   - "[[AI安全与对齐-2026技术全景|AI 安全与对齐]]"
@@ -2880,7 +2880,7 @@ You are a banking compliance assistant.
 
 ## See Also
 
-- [[AI/3-LLM/目录|LLM MOC]] — 大语言模型知识全图谱
+-  — 大语言模型知识全图谱
 - [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — 自动 prompt 优化的 RL 方向：从手动 PE 到 E-SPL/GEPA 自动进化
 - [[Agent-RL-训练实战指南|Agent RL 训练实战指南]] — System prompt 在 Agentic RL 中的角色
 - [[AI安全与对齐-2026技术全景|AI 安全与对齐 2026 全景]] — Prompt injection 攻击的防御视角

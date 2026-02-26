@@ -27,5 +27,5 @@ tags:
 
 - [[PPL 困惑度|PPL 困惑度]] — PPL 的基础概念版
 - [[RL & LLMs 入门|RL & LLMs 入门]] — PPL 在 RL training 中作为 KL 参考项
-- [[AI/3-LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱
+-  — LLM 强化学习全图谱
 - [[损失函数|损失函数]] — 交叉熵 loss 的通用框架

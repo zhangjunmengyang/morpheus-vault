@@ -210,5 +210,5 @@ https://huggingface.co/learn/agents-course/zh-CN/bonus-unit1/fine-tuning
 
 - [[HF Agent Course|HF Agent Course]] — HF Agent 学习系列的另一篇
 - [[Tool Use|Tool Use]] — HF LLM+Agent 的核心能力：tool use
-- [[AI/2-Agent/目录|Agent MOC]] — Agent 知识全图谱
+-  — Agent 知识全图谱
 - [[机器学习|机器学习]] — LLM 的 ML 基础

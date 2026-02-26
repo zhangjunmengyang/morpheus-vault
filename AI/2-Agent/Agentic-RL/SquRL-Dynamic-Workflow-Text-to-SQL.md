@@ -185,4 +185,4 @@ R_t       = 0.5 × (timeout - time) / timeout  （效率奖励，仅在正确时
 - [[FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer CWRPO]] — workflow 编排 RL 的另一视角：FlowSteer 编排 operator 步骤，SquRL 选工具链组合；同为 DAG-based Agentic RL
 - [[Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — 全景参考，SquRL 属于 Tool-Use RL 分支
 - [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — SquRL 使用 GRPO 变体训练 selector policy
-- [[AI/2-Agent/目录|Agent MOC]] — 智能体研究全图谱
+-  — 智能体研究全图谱

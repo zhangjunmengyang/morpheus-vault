@@ -59,4 +59,4 @@ tags:
 ## 关联笔记
 
 - [[ControlNet]] — ControlNet 是 ComfyUI 最常用的条件控制方案
-- [[AI/CV/_MOC]] — 计算机视觉总览
+-  — 计算机视觉总览

@@ -239,4 +239,3 @@ VLM 比纯文本模型显存大得多，因为图片 token 很多：
 - [[MLLM 概述|MLLM 概述]]
 - [[Unsloth 概述|Unsloth 概述]]
 - [[GRPO 深度理解|GRPO 深度理解]]
-- [[AI/3-LLM/MLLM/目录|MLLM MOC]]

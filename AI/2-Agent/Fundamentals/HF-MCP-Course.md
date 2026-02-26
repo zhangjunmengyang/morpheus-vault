@@ -121,5 +121,5 @@ Streamable HTTP 是 MCP 协议的一次重要升级，通过引入按需流式�
 
 - [[如何给人深度科普-MCP|如何深度科普 MCP]] — MCP 的概念深度版
 - [[Tool Use|Tool Use]] — MCP 是 Tool Use 的标准化协议
-- [[AI/2-Agent/目录|Agent MOC]] — Agent 知识全图谱
-- [[AI/3-LLM/目录|LLM MOC]] — MCP 在 LLM 生态中的位置
+-  — Agent 知识全图谱
+-  — MCP 在 LLM 生态中的位置

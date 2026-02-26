@@ -18,7 +18,7 @@ domain: ai/agent/safety
 related:
   - "[[Collective-Behaviour-Hundreds-LLM-Agents-2026]]"
   - "[[Agent-Skills-Security]]"
-  - "[[AI/5-AI 安全/目录]]"
+  - ""
 ---
 
 # Colosseum: Auditing Collusion in Cooperative Multi-Agent Systems

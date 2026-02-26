@@ -192,4 +192,4 @@ plt.show()
 
 - [[激活函数|激活函数]] — GELU 所属的激活函数家族：ReLU/GELU/SiLU 对比
 - [[Transformer|Transformer 通识]] — GELU 在 Transformer FFN 层的应用
-- [[AI/1-Foundations/目录|Foundations MOC]] — ML 基础全图谱
+-  — ML 基础全图谱

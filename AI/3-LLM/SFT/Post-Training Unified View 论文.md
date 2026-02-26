@@ -50,9 +50,9 @@ PaperScope.ai 解读：https://paperscope.ai/hf/2509.04419
 ## See Also
 
 - [[GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — Post-Training RL 方向的前沿改进全景
-- [[AI/3-LLM/RL/目录|RL MOC]] — LLM 强化学习（Post-Training 核心范式）全图谱
+-  — LLM 强化学习（Post-Training 核心范式）全图谱
 - [[PEFT 方法对比|PEFT 方法对比]] — Post-Training 中 SFT 的参数高效方法
-- [[AI/3-LLM/目录|LLM MOC]] — 大语言模型知识全图谱
+-  — 大语言模型知识全图谱
 - [[RLHF-DPO-2026-技术全景|RLHF-DPO 2026 技术全景]] — Post-Training 的 RLHF/DPO 流派，是 HPT 的背景框架
 - [[SFT-实战指南|SFT 实战指南]] — SFT 工程实践，HPT 的 SFT 分支对应
 
