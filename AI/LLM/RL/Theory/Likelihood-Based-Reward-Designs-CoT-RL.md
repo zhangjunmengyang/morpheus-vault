@@ -1,4 +1,5 @@
 ---
+brief: "Likelihood-Based Reward Design——用模型自身的 log-probability 作为 CoT 推理的奖励信号，无需 verifier；实验显示在开放域推理上优于 outcome-only reward，是 non-verifiable 任务的奖励设计新方向。"
 title: "Likelihood-Based Reward Designs for General LLM Reasoning"
 date: 2026-02-22
 tags:

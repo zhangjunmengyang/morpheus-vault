@@ -1,4 +1,5 @@
 ---
+brief: "Unsloth Gemma 3 训练——Google Gemma 3 系列模型的 Unsloth 专项配置；模型加载/LoRA 设置/训练稳定性调参；Gemma 3 特有的 tokenizer 和位置编码适配注意事项。"
 title: "Gemma 3"
 type: project
 domain: ai/llm/frameworks/unsloth

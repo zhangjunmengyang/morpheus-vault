@@ -1,4 +1,5 @@
 ---
+brief: "Unsloth notebook 合集——官方 Colab/Kaggle notebook 汇总；覆盖 Llama/Qwen/Gemma/Mistral 等主流模型的 SFT/DPO/GRPO 训练模板；快速上手不同任务的参考入口。"
 title: "notebook 合集"
 type: concept
 domain: ai/llm/frameworks/unsloth

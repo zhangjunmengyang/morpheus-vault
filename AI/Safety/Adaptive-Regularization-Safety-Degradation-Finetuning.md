@@ -1,6 +1,8 @@
 ---
 title: "Learning to Stay Safe: Adaptive Regularization Against Safety Degradation during Fine-Tuning"
+brief: "Harmful intent 在 pre-generation hidden state 中线性可分（AUROC>0.9）；基于此用 safety critic 动态调整 KL 正则强度（s_t 高→KL 主导，s_t 低→NLL 主导），将 harmful fine-tuning ASR 从 97% 压回 1-9%，同时不损失任务性能。"
 date: 2026-02-19
+updated: "2026-02-22"
 arxiv: "2602.17546"
 domain: AI/Safety
 tags:
@@ -12,6 +14,13 @@ tags:
   - type/paper
 rating: 4
 status: permanent
+sources:
+  - "arXiv:2602.17546 (Jyotin et al., 2026-02-19, cs.CL+cs.LG)"
+  - "GitHub: gjyotin305/adaptive-ai-safety-align"
+related:
+  - "AI/LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement"
+  - "AI/LLM/RL/Theory/RLRR-Reference-Guided-Alignment-Non-Verifiable"
+  - "AI/Safety/AI安全与对齐-2026技术全景"
 ---
 
 # Learning to Stay Safe: Adaptive Regularization Against Safety Degradation during Fine-Tuning
@@ -187,5 +196,6 @@ $$\text{如果这个 batch 是 benign} \Rightarrow \text{松开 KL，自由学�
 - [[AI/LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — 同样是 adaptive, model-aware 训练策略：MARS 按 reward margin 分配增强 budget，本文按 harmful intent score 分配 KL 强度；共同思想：model-aware 资源分配
 - [[AI/LLM/RL/Theory/RLRR-Reference-Guided-Alignment-Non-Verifiable|RLRR]] — 对齐的另一个维度：RLRR 解决 non-verifiable 对齐，本文解决 fine-tuning 对对齐的破坏；互补形成安全对齐双线
 - [[AI/Safety/AI安全与对齐-2026技术全景|AI 安全与对齐 2026 全景]] — 有害微调攻击在安全全景中的位置
-- [[AI/Safety/_MOC|Safety MOC]] — AI 安全知识图谱
-- [[AI/LLM/RL/_MOC|RL MOC]] — KL 正则、trust region 在 RL 训练中的理论基础
+- [[AI/Safety/目录|Safety MOC]] — AI 安全知识图谱
+- [[AI/LLM/RL/目录|RL MOC]] — KL 正则、trust region 在 RL 训练中的理论基础
+- [[AI/Safety/PI-Landscape-SoK-Prompt-Injection-Taxonomy-Defense|PI-Landscape SoK]] — 防御不可能三角的跨域印证：SoK 发现 agent 防御无法同时达到高可信+高可用+低延迟；本文发现 fine-tuning 防御无法同时达到 safety+utility+adaptability——两个方向的结构性权衡收敛到同一哲学

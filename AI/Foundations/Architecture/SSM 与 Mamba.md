@@ -1,4 +1,5 @@
 ---
+brief: "SSM/Mamba——状态空间模型作为 Transformer 替代架构；线性时间复杂度 vs Attention 二次方复杂度；Mamba 的选择性 SSM 机制（S6）使其在长序列任务上超越同量级 Transformer；面试被问非 Transformer 架构的首要参考。"
 title: "SSM/Mamba: 非 Transformer 架构"
 date: 2026-02-14
 tags: [architecture, ssm, mamba, state-space, interview]
@@ -352,4 +353,4 @@ S4 (2021) → S5 → H3 → Hyena
 - [[AI/Foundations/Architecture/Decoder-Only vs Encoder-Decoder|Decoder-Only vs Encoder-Decoder]] — Mamba 作为 Transformer 替代的背景
 - [[AI/Foundations/DL-Basics/Transformer|Transformer 通识]] — SSM 希望替代的架构
 - [[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]] — Linear Attention 与 SSM 的收敛趋势
-- [[AI/Foundations/_MOC|Foundations MOC]] — 架构基础全图谱
+- [[AI/Foundations/目录|Foundations MOC]] — 架构基础全图谱

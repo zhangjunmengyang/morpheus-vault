@@ -1,5 +1,6 @@
 ---
 title: "From Growing to Looping: A Unified View of Iterative Computation in LLMs"
+brief: "TU Munich + Google（arXiv:2602.16490）从统一视角重新理解 LLM 迭代计算：Growing（深度扩展，层间信息向上流动）vs Looping（循环复用，同一层反复执行）是同一 computation-depth 图谱上的两端。理论上证明两类架构的等价条件，对 Universal Transformer/Looped Transformer 等混合设计有指导意义。"
 date: 2026-02-20
 type: paper
 domain: ai/llm/architecture
@@ -143,8 +144,8 @@ Looped 和 depth-grown 模型在两种适应场景下都比标准 baseline 更�
 
 ## 与 Vault 其他笔记的连接
 
-- → [[Test-Time-Compute]] (looping 是 latent TTC 的一种)
-- → [[Deep-Thinking-Ratio-DTR]] (late layer indispensability 共同主题)
-- → [[ReFINE-Fast-Weight-RL-Next-Sequence-Prediction]] (迭代计算的另一视角：fast weight 在线更新)
-- → [[GEPA-Reflective-Prompt-Evolution]] (外部迭代 vs 内部迭代)
-- → [[Agentic-RL-2026前沿综合分析]] (agent 层面的迭代)
+- → [[AI/LLM/Inference/Test-Time-Compute|Test-Time-Compute]] (looping 是 latent TTC 的一种)
+- → [[AI/LLM/Inference/Deep-Thinking-Ratio-DTR|Deep-Thinking-Ratio-DTR]] (late layer indispensability 共同主题)
+- → [[AI/LLM/Architecture/ReFINE-Fast-Weight-RL-Next-Sequence-Prediction|ReFINE-Fast-Weight-RL-Next-Sequence-Prediction]] (迭代计算的另一视角：fast weight 在线更新)
+- → [[AI/LLM/RL/Other-Algorithms/GEPA-Reflective-Prompt-Evolution|GEPA-Reflective-Prompt-Evolution]] (外部迭代 vs 内部迭代)
+- → [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]] (agent 层面的迭代)

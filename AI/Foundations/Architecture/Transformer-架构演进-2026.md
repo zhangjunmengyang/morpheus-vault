@@ -1,4 +1,5 @@
 ---
+brief: "Transformer 架构演进 2026（面试武器版）——从原始 Attention is All You Need 到现代变体（MQA/GQA/RoPE/SSM/MoE）的完整演化图谱；面试 rating 5 标注，Transformer 设计决策的深度参考。"
 title: "Transformer 架构演进 2026（面试武器版）"
 date: 2026-02-20
 domain: AI/Foundations/Architecture
@@ -800,4 +801,4 @@ DeepSeek V3 的方案最优雅——完全消除了 auxiliary loss 和主损失�
 - [[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]] — 同主题深度版，覆盖 MQA/GQA/FlashAttention 等
 - [[AI/Foundations/DL-Basics/Transformer|Transformer 通识]] — 基础原理版
 - [[AI/Foundations/Architecture/SSM 与 Mamba|SSM 与 Mamba]] — 2026 架构演进的另一条线
-- [[AI/Foundations/_MOC|Foundations MOC]] — 架构基础全图谱
+- [[AI/Foundations/目录|Foundations MOC]] — 架构基础全图谱

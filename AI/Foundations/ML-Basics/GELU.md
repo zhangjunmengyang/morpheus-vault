@@ -1,4 +1,5 @@
 ---
+brief: "GELU（Gaussian Error Linear Unit）——平滑近似 ReLU 的激活函数；BERT/GPT 系列的标准激活函数选择；SwiGLU（Swish+GLU）是现代 LLM 的进一步改进，FFN 参数减少 2/3 但性能持平；激活函数选型的面试参考。"
 title: "GELU"
 type: concept
 domain: ai/foundations/ml-basics
@@ -191,4 +192,4 @@ plt.show()
 
 - [[AI/Foundations/ML-Basics/激活函数|激活函数]] — GELU 所属的激活函数家族：ReLU/GELU/SiLU 对比
 - [[AI/Foundations/DL-Basics/Transformer|Transformer 通识]] — GELU 在 Transformer FFN 层的应用
-- [[AI/Foundations/_MOC|Foundations MOC]] — ML 基础全图谱
+- [[AI/Foundations/目录|Foundations MOC]] — ML 基础全图谱

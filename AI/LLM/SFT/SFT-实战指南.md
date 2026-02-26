@@ -1,4 +1,5 @@
 ---
+brief: "SFT 实战指南——从数据工程到模型部署的 SFT 完整操作手册；数据质量评估/超参选择/过拟合判断/评估指标的工程经验；interview/hot，SFT 工程师面试的核心参考材料。"
 title: "SFT 实战指南：从数据到部署"
 date: 2026-02-13
 tags:
@@ -27,7 +28,7 @@ SFT 的目标不是教模型新知识（那是 pre-training/CPT 的事），而�
 - 激活模型的**指令遵循**能力
 - 建立**风格和安全边界**
 
-参见 [[SFT 原理]] 了解理论基础，本文聚焦工程实践。
+参见 [[AI/LLM/SFT/SFT 原理]] 了解理论基础，本文聚焦工程实践。
 
 ## 2. 数据准备——质量 > 数量
 
@@ -310,4 +311,4 @@ LoRA 合并后效果下降             检查 merge 时的 dtype（避免精度�
 
 ---
 
-**相关笔记**：[[SFT 原理]] | [[LoRA]] | [[SFT-TRL实践]] | [[Post-Training Unified View 论文]]
+**相关笔记**：[[AI/LLM/SFT/SFT 原理]] | [[AI/LLM/SFT/LoRA]] | [[AI/LLM/SFT/SFT-TRL实践]] | [[AI/LLM/SFT/Post-Training Unified View 论文]]

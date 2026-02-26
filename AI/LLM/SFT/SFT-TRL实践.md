@@ -1,4 +1,5 @@
 ---
+brief: "SFT TRL 实践——HuggingFace TRL SFTTrainer 的工程指南；数据格式（ChatML/Alpaca/ShareGPT）/DataCollator/packing/gradient checkpointing 配置；从数据到模型的 SFT 完整工程流程。"
 title: "SFT"
 type: project
 domain: ai/llm/sft
@@ -267,8 +268,8 @@ print(result[0]["generated_text"])
 
 ## 相关
 
-- [[SFT 原理]] — SFT 的理论基础
-- [[LoRA]] — LoRA 技术详解
+- [[AI/LLM/SFT/SFT 原理]] — SFT 的理论基础
+- [[AI/LLM/SFT/LoRA]] — LoRA 技术详解
 - [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]] — TRL 框架总览
 - [[AI/LLM/RL/DPO/DPO-TRL实践|DPO-TRL实践]] — SFT 之后的 DPO 对齐
 - [[AI/LLM/RL/GRPO/GRPO-TRL实践|GRPO-TRL实践]] — SFT 之后的 GRPO 训练

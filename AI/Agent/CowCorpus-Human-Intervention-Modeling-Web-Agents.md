@@ -1,14 +1,20 @@
 ---
 title: "CowCorpus: Modeling Distinct Human Intervention in Web Agents"
+brief: "首个系统研究 Web Agent 人类干预行为的数据集+框架（CMU+Duke）；将用户分为四种协作风格（POMDP建模），训练 intervention-aware 模型，干预预测准确率+63%，用户感知有用性+26.5%。arXiv:2602.17588"
 date: 2026-02-21
+updated: 2026-02-22
 tags: [ai/agent, human-in-the-loop, web-agent, collaborative-ai, HITL, intervention-modeling, POMDP, agent-safety]
 domain: ai/agent
 arxiv: "2602.17588"
 institution: "Carnegie Mellon University + Duke University"
-rating: ★★★★☆
+rating: 4
 status: active
 archived_by: librarian
 archived_date: 2026-02-21
+sources:
+  - "arXiv:2602.17588 — CowCorpus: Modeling Distinct Human Intervention in Web Agents"
+  - "代码: https://github.com/oaishi/PlowPilot"
+  - "模型: https://huggingface.co/CowCorpus"
 ---
 
 # CowCorpus: Modeling Distinct Human Intervention in Web Agents
@@ -191,7 +197,7 @@ PTS = (1/Z) · σ(𝕀_correct - Σ_{i∈E} α · d_i²)
 
 ## See Also
 
-- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识域全索引
+- [[AI/Agent/目录|Agent MOC]] — Agent 知识域全索引
 - [[AI/Agent/AgentConductor-Topology-Evolution-Multi-Agent-Code|AgentConductor]] — 同样研究 multi-agent 协调，但 agent↔agent；本文是 human↔agent（互补视角）
 - [[AI/Agent/Agentic-RL/SquRL-Dynamic-Workflow-Text-to-SQL|SquRL]] — 动态 workflow 选择，尚未考虑 human-in-the-loop——本文填补此缺口
 - [[AI/Agent/Agentic-RL/Calibrate-Then-Act-Cost-Aware-Exploration|Calibrate-Then-Act]] — cost-aware exploration："不确定时停下来问"的成本建模，与 CowCorpus intervention timing 形成理论互补

@@ -1,4 +1,5 @@
 ---
+brief: "RePO（arXiv:2602.10819）——通过 Rephrasing 缓解 off-policy 分布漂移；对难样本进行语义等价改写后重新采样，在 on-policy 和 off-policy 之间找到平衡；hard-sample mining 的工程实践方向。"
 title: "RePO: Rephrasing Policy Optimization"
 date: 2026-02-11
 tags: [策略优化, off-policy, on-policy, hard-sample, 分布漂移]
@@ -151,5 +152,5 @@ RePO 蒸馏：teacher 给解题路径，student 先理解再改写，然后从�
 
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — RePO 在 Diversity 维度（与 ProGRPO 共同构成该维度）
 - [[AI/LLM/RL/GRPO/ProGRPO-Probabilistic-Advantage-Reweighting|ProGRPO]] — 同在 Diversity 维度，两者互补：RePO 改输入多样性，ProGRPO 改权重分布
-- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
+- [[AI/LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱
 - [[AI/LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — 多样性视角：RePO 在 response 层增多样性，MARS 在 reward 层聚焦低 margin

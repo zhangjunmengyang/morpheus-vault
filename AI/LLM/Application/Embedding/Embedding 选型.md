@@ -1,4 +1,5 @@
 ---
+brief: "Embedding 选型指南——开源（BGE/E5/GTE）vs 闭源（OpenAI/Cohere）的完整对比；维度/速度/成本/多语言支持的选型矩阵；MTEB 排行榜解读和中文 Embedding 特殊考量。"
 title: "Embedding 选型"
 type: concept
 domain: ai/llm/application/embedding
@@ -93,4 +94,4 @@ tags:
 - [[AI/LLM/Application/Embedding/Embedding|Embedding 原理]] — 选型的理论基础
 - [[AI/RAG/RAG 检索策略|RAG 检索策略]] — 选型服务的下游：检索系统性能
 - [[AI/LLM/Application/Embedding/大模型线上排查 SOP|大模型线上排查 SOP]] — 选型部署后的生产问题排查
-- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱
+- [[AI/LLM/目录|LLM MOC]] — 大语言模型知识全图谱

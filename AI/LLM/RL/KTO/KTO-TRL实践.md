@@ -1,4 +1,5 @@
 ---
+brief: "KTO TRL 实践——Kahneman-Tversky Optimization 的 TRL 工程指南；不需要成对偏好数据（只需 chosen 或 rejected 之一），KTOTrainer 配置/数据格式；适合偏好数据采集困难场景的对齐方案。"
 title: "KTO"
 type: project
 domain: ai/llm/rl/kto

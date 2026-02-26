@@ -1,4 +1,5 @@
 ---
+brief: "DEEP-GRPO——通过 Pivot-Driven Resampling 解决 GRPO 探索塌缩；识别高质量 pivot 轨迹后进行密集重采样，避免 root saturation（模型趋向同一起点）；在 RLVR 数学任务上覆盖更广推理路径。"
 title: "DEEP-GRPO: Deep Dense Exploration via Pivot-Driven Resampling"
 type: paper
 domain: ai/llm/rl
@@ -242,5 +243,5 @@ DEEP-GRPO 最接近 tree-based 方法，但关键创新是把 "dense local resam
 
 - **前序工作**：Yiran Guo 同组有 **Segment Policy Optimization (SPO)**（2025-05-29），处理 segment-level credit assignment——这篇 DEEP-GRPO 是更新的探索方向延伸
 - **与 HEARTBEAT 追踪的论文群**：STAPO（token级）+ Goldilocks（sample级）+ DEEP-GRPO（exploration）+ MASPO（trust region）构成了 GRPO 改进的四条独立路线
-- **统一框架**：[[RL-Training-Stability-2026-Unified-Analysis]]（v3 已纳入 DEEP-GRPO 探索维度）
-- **同族**：[[STAPO-Spurious-Token-Aware-Policy-Optimization]]、[[Goldilocks-RL-Task-Difficulty-Curriculum]]、[[Stable-Asynchrony-VCPO-Off-Policy-RL]]、[[MASPO-Mass-Adaptive-Soft-Policy-Optimization]]
+- **统一框架**：[[AI/LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL-Training-Stability-2026-Unified-Analysis]]（v3 已纳入 DEEP-GRPO 探索维度）
+- **同族**：[[AI/LLM/RL/Other-Algorithms/STAPO-Spurious-Token-Aware-Policy-Optimization|STAPO-Spurious-Token-Aware-Policy-Optimization]]、[[AI/LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks-RL-Task-Difficulty-Curriculum]]、[[AI/LLM/RL/Other-Algorithms/Stable-Asynchrony-VCPO-Off-Policy-RL|Stable-Asynchrony-VCPO-Off-Policy-RL]]、[[AI/LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO-Mass-Adaptive-Soft-Policy-Optimization]]

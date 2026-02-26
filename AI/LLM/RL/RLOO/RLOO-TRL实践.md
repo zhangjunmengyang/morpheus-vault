@@ -1,4 +1,5 @@
 ---
+brief: "RLOO TRL 实践——REINFORCE Leave-One-Out 的 TRL 工程指南；比 GRPO 实现更简单，无需独立 Critic，相比 PPO 显存需求降低 50%；适合资源受限下的在线 RL 快速实验。"
 title: "RLOO"
 type: project
 domain: ai/llm/rl/rloo

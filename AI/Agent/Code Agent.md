@@ -1,6 +1,8 @@
 ---
 title: "Code Agent 与 Computer Use"
+brief: "Code Agent 深度指南：端到端软件工程任务闭环（需求→定位→编辑→测试→修复）；SWE-bench 评测体系；Computer Use 与 Code Agent 的边界；主流框架（Devin/Claude Code/OpenHands）对比；面试热点"
 date: 2026-02-14
+updated: 2026-02-23
 tags: [agent, coding, computer-use, interview]
 type: note
 domain: AI/Agent
@@ -12,7 +14,7 @@ status: evergreen
 
 ## 1. Code Agent 定义
 
-Code Agent 是一类以 **LLM 为核心推理引擎**，能够自主完成软件工程任务的 [[AI/Agent/_MOC|AI Agent]]。与传统代码补全（Copilot 行级补全）不同，Code Agent 具备：
+Code Agent 是一类以 **LLM 为核心推理引擎**，能够自主完成软件工程任务的 [[AI/Agent/目录|AI Agent]]。与传统代码补全（Copilot 行级补全）不同，Code Agent 具备：
 
 - **端到端任务执行**：从需求理解 → 代码定位 → 编辑 → 测试 → 修复的完整闭环
 - **工具使用**：调用文件系统、终端、搜索、浏览器等外部工具

@@ -1,4 +1,5 @@
 ---
+brief: "Claude Sonnet 4.6 完整技术规格——Sonnet 4.6 的官方 API 参数/价格/上下文窗口/能力边界的完整规格整理；与 Opus 4.6/GPT-4o 的能力对比；生产部署选型时的参考文档（完整版）。"
 tags:
   - claude
   - anthropic

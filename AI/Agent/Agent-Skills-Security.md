@@ -1,10 +1,15 @@
 ---
+title: "Agent Skills for LLMs: 架构、获取、安全与前路"
+brief: "Agent Skill 生态全景（arXiv:2602.12430）：Skill 的四层架构（感知/规划/执行/记忆）；获取路径（训练/检索/合成）；安全威胁（技能供应链攻击/注入/权限滥用）；与 MCP 的关系"
 tags:
   - agent-security
   - skill-architecture
   - supply-chain-attack
   - llm-agent
+  - type/paper
 date: 2026-02-19
+updated: 2026-02-23
+arxiv: "2602.12430"
 paper_url: https://arxiv.org/abs/2602.12430
 ---
 
@@ -522,5 +527,5 @@ OpenClaw/ClawHub 生态相比论文描述的通用 skill marketplace 有一些�
 
 - [[AI/Safety/Clinejection-AI-Coding-Agent-Supply-Chain-Attack|Clinejection]] — Agent 安全的真实案例：Cline prompt injection 供应链攻击
 - [[AI/Safety/Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive Regularization]] — 防止安全对齐被 fine-tuning 破坏
-- [[AI/Safety/_MOC|Safety MOC]] — AI 安全知识全图谱
-- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱
+- [[AI/Safety/目录|Safety MOC]] — AI 安全知识全图谱
+- [[AI/Agent/目录|Agent MOC]] — Agent 知识全图谱

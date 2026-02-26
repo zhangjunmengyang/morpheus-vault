@@ -1,5 +1,6 @@
 ---
 title: "MAGE: [MASK]-Guided Sparse Attention for Block Diffusion LLMs"
+brief: "（arXiv:2602.14209）在 Block Diffusion LLM 的推理中，用 [MASK] token 的注意力权重引导 Sparse Attention：token 若被密集 [MASK] 关注则保留，否则剪去。在保持生成质量的前提下将 attention 计算量降低 40%+，实现长上下文 diffusion LLM 的高效推理。"
 type: paper
 domain: ai/llm/inference
 tags:

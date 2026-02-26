@@ -1,5 +1,6 @@
 ---
 title: "Clinejection — AI Coding Agent 供应链攻击案例"
+brief: "2026-02-17 真实事件：Cline AI triage bot 被 prompt injection 劫持，通过 GitHub Actions 向 5M+ 开发者推送恶意代码；首个 AI coding agent 供应链攻击案例，爆炸半径覆盖所有下游用户（Snyk 披露）"
 type: case-study
 domain: ai/safety
 tags:
@@ -9,8 +10,9 @@ tags:
   - coding-agent
   - github-actions
   - topic/security
-rating: ★★★★★
+rating: 5
 date: 2026-02-09
+updated: 2026-02-22
 source: https://snyk.io/blog/cline-supply-chain-attack-prompt-injection-github-actions/
 archived_by: librarian
 archived_date: 2026-02-20
@@ -167,7 +169,7 @@ Bash 权限是这次攻击的关键放大器。最小权限原则对 AI agent �
 
 - [[AI/Safety/Agent 安全威胁全景 2026-02]] — AI Agent 安全威胁全景，含 prompt injection 综述
 - [[AI/Agent/Agent-Skills-Security]] — Agent Skills 安全治理（26.1% 社区 skill 含漏洞）
-- [[AI/Safety/_MOC]] — AI Safety MOC
+- [[AI/Safety/目录]] — AI Safety MOC
 
 ---
 

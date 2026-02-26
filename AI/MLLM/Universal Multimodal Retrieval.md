@@ -1,4 +1,5 @@
 ---
+brief: "Universal Multimodal Retrieval——跨图文音视频的统一多模态检索框架；单一 embedding 空间覆盖多种模态；对多模态 RAG（RAG-Anything）的底层检索能力的基础支撑。"
 title: "Universal Multimodal Retrieval"
 type: paper
 domain: ai/mllm

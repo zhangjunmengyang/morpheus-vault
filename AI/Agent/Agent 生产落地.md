@@ -1,6 +1,8 @@
 ---
 title: "AI Agent 生产落地经验"
+brief: "Demo→Production 的核心鸿沟：可靠性/成本/延迟/错误恢复；工程经验总结：幂等设计/人工兜底/成本控制/监控体系；面试热点——生产级 Agent 与 Demo 的本质差异"
 date: 2026-02-14
+updated: 2026-02-23
 tags: [agent, production, engineering, interview]
 type: note
 ---
@@ -423,4 +425,4 @@ else:
 - [[AI/Agent/Fundamentals/Agent 生产实践|Agent 生产实践]] — 同方向互补笔记
 - [[AI/Agent/Agent-Skills-Security|Agent Skills Security]] — 生产落地中的安全威胁
 - [[AI/Agent/Agentic-RL/Agent-RL-训练实战指南|Agent RL 训练实战指南]] — 生产级 RL 训练的坑与解法
-- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱
+- [[AI/Agent/目录|Agent MOC]] — Agent 知识全图谱

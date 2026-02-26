@@ -1,4 +1,5 @@
 ---
+brief: "Reward Design 2026 全景——密度/推理质量/边界三维框架；覆盖稀疏 vs 密集奖励、过程奖励 vs 结果奖励、verifiable vs non-verifiable 三条主线；是 RL alignment 奖励工程的综合参考。"
 title: "Reward Design 2026 全景：密度、推理质量、边界三维框架"
 date: 2026-02-22
 tags:

@@ -1,4 +1,5 @@
 ---
+brief: "ai16z 竞品分析——ai16z/elizaOS 生态的竞争格局研判；主要竞争者（Virtuals/Fetch.ai/SingularityNET）的技术路线和市值对比；量化视角下 AI Agent Token 的估值逻辑和风险因子。"
 title: "ai16z 竞品分析"
 date: "2026-02-13"
 tags:
@@ -24,7 +25,7 @@ status: active
 
 ### 核心能力
 1. **社交情绪实时分析** — Provider 系统从 X/Discord 抓取非结构化数据，注入 agent 推理循环
-2. **Trust Scoring** — 去中心化信誉层，追踪社区推荐的历史准确率和盈利性（参考 [[ERC-8004 Trustless Agents]] 的信誉注册表设计）
+2. **Trust Scoring** — 去中心化信誉层，追踪社区推荐的历史准确率和盈利性（参考 [[AI/Agent/Agent-Economy/ERC-8004 Trustless Agents|ERC-8004 Trustless Agents]] 的信誉注册表设计）
 3. **自主链上交易** — 持久记忆 + 自主签名区块链交易
 4. **旗舰 agent "Marc AIndreessen"** — 每秒处理数千条社交信号，识别趋势
 
@@ -40,8 +41,8 @@ status: active
 | 链 | Solana | Base (Ethereum L2) |
 | 策略 | 社交情绪驱动的风投 | 均值回归量化 |
 | 数据源 | X/Discord 社交信号 | 价格/链上数据 |
-| 框架 | elizaOS (TypeScript) | [[Coinbase AgentKit 技术评估\|AgentKit]] (Python) |
-| 信誉 | Trust Scoring | [[ERC-8004 Trustless Agents\|ERC-8004]] |
+| 框架 | elizaOS (TypeScript) | [[AI/Agent/Agent-Economy/Coinbase AgentKit 技术评估\|AgentKit]] (Python) |
+| 信誉 | Trust Scoring | [[AI/Agent/Agent-Economy/ERC-8004 Trustless Agents\|ERC-8004]] |
 | 阶段 | 已运行，管理数千万$ | POC 阶段 |
 
 ## 值得学习的
@@ -58,20 +59,20 @@ status: active
 
 ## 行业影响
 
-- Coinbase 已在将 Eliza 风格框架整合进 Base Agent 工具（→ [[Coinbase AgentKit 技术评估]]）
+- Coinbase 已在将 Eliza 风格框架整合进 Base Agent 工具（→ [[AI/Agent/Agent-Economy/Coinbase AgentKit 技术评估|Coinbase AgentKit 技术评估]]）
 - Akash Network 成为 elizaOS agent 的主要算力后端
 - 传统 VC 被迫应对：24/7、零费用、秒级调仓的 AI 竞争者
-- Agent 经济的又一里程碑（→ [[Agent 经济基础设施]]、[[Virtuals Protocol]]）
+- Agent 经济的又一里程碑（→ [[AI/Agent/Agent-Economy/Agent 经济基础设施|Agent 经济基础设施]]、[[AI/Agent/Agent-Economy/Virtuals Protocol|Virtuals Protocol]]）
 
 ## 判断
 
 ai16z 证明了自主 AI 交易基金**技术上可行、商业上有吸引力**。但它走的是"社交情绪驱动"路线，我们走"纯量化"路线——不矛盾，可以互补。
 
-**下一步**：研究 elizaOS 的 Trust Scoring 源码，看能否移植到我们的策略框架中。→ ✅ 已完成：[[elizaOS Trust Scoring 源码研究]]
+**下一步**：研究 elizaOS 的 Trust Scoring 源码，看能否移植到我们的策略框架中。→ ✅ 已完成：[[AI/Agent/Agent-Economy/elizaOS Trust Scoring 源码研究|elizaOS Trust Scoring 源码研究]]
 
 ## 相关
-- [[Agent 经济基础设施]] — 全景综述
-- [[Coinbase AgentKit 技术评估]] — 我们的技术栈
-- [[ERC-8004 Trustless Agents]] — 链上身份与信誉
-- [[Virtuals Protocol]] — Agent 商业网络
-- [[Agentic Spring]] — 市场趋势背景
+- [[AI/Agent/Agent-Economy/Agent 经济基础设施|Agent 经济基础设施]] — 全景综述
+- [[AI/Agent/Agent-Economy/Coinbase AgentKit 技术评估|Coinbase AgentKit 技术评估]] — 我们的技术栈
+- [[AI/Agent/Agent-Economy/ERC-8004 Trustless Agents|ERC-8004 Trustless Agents]] — 链上身份与信誉
+- [[AI/Agent/Agent-Economy/Virtuals Protocol|Virtuals Protocol]] — Agent 商业网络
+- [[AI/Agent/Agent-Economy/Agentic Spring|Agentic Spring]] — 市场趋势背景

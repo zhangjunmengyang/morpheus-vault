@@ -1,4 +1,5 @@
 ---
+brief: "CLIP（OpenAI，2021）——对比学习训练图文对齐的里程碑模型；Image Encoder + Text Encoder 对比预训练；Zero-shot 图像分类的首个成功实现；几乎所有现代 VLM 的视觉 encoder 基础，理解多模态对齐的起点。"
 title: "CLIP"
 date: 2021-01-05
 type: paper

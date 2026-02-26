@@ -1,4 +1,5 @@
 ---
+brief: "Transformer 位置编码详解——绝对位置编码（Sinusoidal/Learned）→ 相对位置编码（ALiBi/T5-RPE）→ 旋转位置编码（RoPE）的演进；RoPE 为何成为现代 LLM 标配（外推性好+计算高效）；长上下文处理的位置编码基础。"
 title: "Transformer 位置编码详解"
 type: concept
 domain: ai/foundations/dl-basics

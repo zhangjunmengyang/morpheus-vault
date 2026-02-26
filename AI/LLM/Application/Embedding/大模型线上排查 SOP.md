@@ -1,4 +1,5 @@
 ---
+brief: "大模型线上排查 SOP——生产环境 LLM 服务异常的标准排查流程；覆盖模型输出异常/延迟突增/Token 消耗异常/幻觉频率上升等场景；从监控告警到根因定位的 Checklist 式操作手册。"
 title: "大模型线上排查 SOP"
 type: concept
 domain: ai/llm/application/embedding
@@ -38,5 +39,5 @@ tags:
 
 - [[AI/LLM/Application/Embedding/Embedding 选型|Embedding 选型]] — 线上问题的根源：选型决策
 - [[AI/LLM/Application/Embedding/Embedding|Embedding 原理]] — 问题诊断的理论基础
-- [[AI/LLM/Inference/KV Cache 优化|KV Cache 优化]] — 线上推理常见性能问题
-- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱
+- [[AI/LLM/Inference/KV Cache|KV Cache 优化]] — 线上推理常见性能问题
+- [[AI/LLM/目录|LLM MOC]] — 大语言模型知识全图谱

@@ -1,5 +1,6 @@
 ---
 title: "Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents"
+brief: "Agent 探索策略：先校准不确定性（Calibration），再决策是否采取代价高的探索行动（Cost-Aware Action）；解决高层策略不能靠 RL 直接学的问题；与 E-SPL/GEPA 形成知识三角（arXiv:2602.16699）"
 type: paper
 domain: ai/agent/agentic-rl
 tags:
@@ -10,6 +11,7 @@ tags:
   - type/paper
 arxiv: "2602.16699"
 created: 2026-02-20
+updated: 2026-02-23
 see-also:
   - "[[AI/LLM/RL/Other-Algorithms/E-SPL-Evolutionary-System-Prompt-Learning]]"
   - "[[AI/LLM/RL/Other-Algorithms/GEPA-Reflective-Prompt-Evolution]]"

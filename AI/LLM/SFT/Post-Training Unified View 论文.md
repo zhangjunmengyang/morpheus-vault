@@ -1,12 +1,25 @@
 ---
 title: "Towards a Unified View of Large Language Model Post-Training"
+brief: "Towards a Unified View of LLM Post-Training——将 SFT/RLHF/DPO 等 post-training 方法统一到同一理论框架；发现不同方法本质上都是在优化相同的目标函数的不同近似，差异来自稳定性掩码/参考策略分母/优势估计/似然梯度四组件的偏差-方差权衡；提出 HPT 动态切换 SFT↔RL，AIME 2024 Pass@1=33.0，超最强基线+6.9分。"
 type: paper
 domain: ai/llm/sft
 created: "2026-02-13"
-updated: "2026-02-13"
+updated: "2026-02-25"
+rating: ★★★★☆
 tags:
   - ai/llm/sft
   - type/paper
+  - post-training
+  - unified-view
+  - hybrid-training
+sources:
+  - "arXiv:2509.04419 — 清华大学 / 上海人工智能实验室 / 微信 AI"
+  - "论文链接：https://hf.co/papers/2509.04419"
+  - "PaperScope 解读：https://paperscope.ai/hf/2509.04419"
+related:
+  - "[[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]]"
+  - "[[AI/LLM/SFT/SFT-实战指南|SFT 实战指南]]"
+  - "[[AI/LLM/RL/RLHF-DPO-2026-技术全景|RLHF-DPO 2026 技术全景]]"
 ---
 # Towards a Unified View of Large Language Model Post-Training
 
@@ -28,9 +41,23 @@ PaperScope.ai 解读：https://paperscope.ai/hf/2509.04419
 
 ---
 
+## 启发思考
+
+**So What**：这篇论文最重要的贡献是把"SFT 与 RL 是两种不同路线"的工程直觉替换成数学精确的陈述——它们是同一策略梯度估计器的特例，区别在于四个组件的偏差-方差选择。HPT 的实用意义：不再需要手动决定"先 SFT 多少步再切 GRPO"，而是让 per-question 验证准确率自动驱动切换。**铁匠比喻精准**：横敲（SFT，确定方向）和竖敲（RL，强化路径），同一工具。
+
+**与 GRPO-Improvement-Panorama 的联系**：HPT 解决的是 SFT↔RL 边界问题，GRPO-Panorama 解决的是 RL 内部方法对比。两者都以"统一框架"为方法论，但层次不同：HPT 在 SFT/RL 边界，GRPO-Panorama 在 RL 各流派内部。
+
 ## See Also
 
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — Post-Training RL 方向的前沿改进全景
-- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习（Post-Training 核心范式）全图谱
+- [[AI/LLM/RL/目录|RL MOC]] — LLM 强化学习（Post-Training 核心范式）全图谱
 - [[AI/LLM/SFT/PEFT 方法对比|PEFT 方法对比]] — Post-Training 中 SFT 的参数高效方法
-- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱
+- [[AI/LLM/目录|LLM MOC]] — 大语言模型知识全图谱
+- [[AI/LLM/RL/RLHF-DPO-2026-技术全景|RLHF-DPO 2026 技术全景]] — Post-Training 的 RLHF/DPO 流派，是 HPT 的背景框架
+- [[AI/LLM/SFT/SFT-实战指南|SFT 实战指南]] — SFT 工程实践，HPT 的 SFT 分支对应
+
+## 推荐阅读
+
+1. **原文**：[arXiv:2509.04419](https://arxiv.org/abs/2509.04419) — Towards a Unified View of LLM Post-Training
+2. **PaperScope 解读**：https://paperscope.ai/hf/2509.04419
+3. **理论延伸**：[[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — HPT 框架下 RL 分支的内部分化

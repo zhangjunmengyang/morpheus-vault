@@ -1,4 +1,5 @@
 ---
+brief: "Virtuals Protocol——AI Agent 代币化协议；Agent NFT + 收益分成机制，允许多方共同投资和拥有 AI Agent；Base 链上最大的 Agent 经济实验；Tokenomics 设计和生态现状分析。"
 title: "Virtuals Protocol"
 type: analysis
 domain: ai/agent/agent-economy
@@ -38,7 +39,7 @@ Agent 间交易的完整生命周期，相当于 **Agent 经济的 TCP/IP**：
 
 ## VIRTUAL 代币
 
-- Coinbase 发布 [[Coinbase AgentKit 技术评估|Agentic Wallets]] 后 VIRTUAL 涨 9%，交易量跳 54%
+- Coinbase 发布 [[AI/Agent/Agent-Economy/Coinbase AgentKit 技术评估|Agentic Wallets]] 后 VIRTUAL 涨 9%，交易量跳 54%
 - Coinbase 基础设施与 Virtuals 生态已整合
 
 ## Agent 服务类型（已在运行）
@@ -69,7 +70,7 @@ Agent 间交易的完整生命周期，相当于 **Agent 经济的 TCP/IP**：
 
 ### 长期
 - 如果 Agent 经济起来，**量化不再只是自己用，而是卖给其他 Agent 的服务**
-- [[Coinbase AgentKit 技术评估|AgentKit]]（交易能力）+ [[ERC-8004 Trustless Agents|ERC-8004]]（身份）+ ACP（商业协议）= 完整的量化 Agent 商业化栈
+- [[AI/Agent/Agent-Economy/Coinbase AgentKit 技术评估|AgentKit]]（交易能力）+ [[AI/Agent/Agent-Economy/ERC-8004 Trustless Agents|ERC-8004]]（身份）+ ACP（商业协议）= 完整的量化 Agent 商业化栈
 
 ## 风险
 
@@ -80,7 +81,7 @@ Agent 间交易的完整生命周期，相当于 **Agent 经济的 TCP/IP**：
 
 ## 关联
 
-- [[Agent 经济基础设施]] — 全景综述，Virtuals 是商业网络层
-- [[Coinbase AgentKit 技术评估]] — 交易执行层，Coinbase 生态已与 Virtuals 整合
-- [[ERC-8004 Trustless Agents]] — 身份信任层，ACP 的信任问题可被 ERC-8004 解决
-- [[Agentic Spring]] — 模型能力成熟推动 Agent 商业网络落地
+- [[AI/Agent/Agent-Economy/Agent 经济基础设施|Agent 经济基础设施]] — 全景综述，Virtuals 是商业网络层
+- [[AI/Agent/Agent-Economy/Coinbase AgentKit 技术评估|Coinbase AgentKit 技术评估]] — 交易执行层，Coinbase 生态已与 Virtuals 整合
+- [[AI/Agent/Agent-Economy/ERC-8004 Trustless Agents|ERC-8004 Trustless Agents]] — 身份信任层，ACP 的信任问题可被 ERC-8004 解决
+- [[AI/Agent/Agent-Economy/Agentic Spring|Agentic Spring]] — 模型能力成熟推动 Agent 商业网络落地

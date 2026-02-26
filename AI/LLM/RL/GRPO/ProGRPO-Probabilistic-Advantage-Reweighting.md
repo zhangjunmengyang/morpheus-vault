@@ -1,4 +1,5 @@
 ---
+brief: "ProGRPO（arXiv:2602.05281）——用概率论重加权替代 GRPO 的硬 clip，缓解 entropy collapse；引入温度参数控制策略多样性，在 RLVR 数学推理任务上提升推理多样性 15%+，同时保持准确率。"
 title: "ProGRPO: Probabilistic Advantage Reweighting for GRPO"
 date: 2026-02-05
 tags: [GRPO改进, 策略优化, entropy-collapse, RLVR, 推理多样性]
@@ -185,4 +186,4 @@ ProGRPO 的优势：直接在 advantage 层面手术，不改变整体 objective
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — ProGRPO 在七维框架的 Diversity 维度
 - [[AI/LLM/RL/Other-Algorithms/RePO-Rephrasing-Policy-Optimization|RePO]] — 同在 Diversity 维度，两者互补
 - [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — ProGRPO 的算法基础
-- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
+- [[AI/LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱

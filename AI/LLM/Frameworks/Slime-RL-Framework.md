@@ -1,11 +1,12 @@
 ---
+brief: "Slime RL Framework——轻量级 LLM 强化学习框架，专注低资源场景的 RLVR 实验；比 verl 更简单的部署模型，适合单机或小集群的快速算法验证；与 verl 互补，研究原型 → 生产迁移路径。"
 title: "Slime: 异步 RL Post-Training 框架"
 date: 2026-02-16
 tags: [RL框架, 异步RL, PostTraining, THUDM, 智谱, GLM]
 domain: AI/LLM/Frameworks
 source: "https://github.com/THUDM/slime"
 status: permanent
-see-also: ["[[GLM-5-技术报告精读]]"]
+see-also: ["[[AI/Frontiers/GLM-5-技术报告精读]]"]
 ---
 
 # Slime: 异步 RL Post-Training 框架
@@ -27,12 +28,12 @@ see-also: ["[[GLM-5-技术报告精读]]"]
 
 **三模块异步解耦架构：**
 
-```
-┌─────────────┐     ┌──────────────┐     ┌─────────────────┐
-│   Training   │ ←── │  Data Buffer  │ ←── │    Rollout       │
-│ (Megatron-LM)│ ──→ │  (中央调度)    │ ──→ │ (SGLang + Router)│
-└─────────────┘     └──────────────┘     └─────────────────┘
-      ↑ 参数同步                                ↑ 高吞吐生成
+```mermaid
+graph LR
+    A["Training\n(Megatron-LM)"] -->|参数同步| B["Data Buffer\n(中央调度)"]
+    B -->|读取数据| A
+    C["Rollout\n(SGLang + Router)\n高吞吐生成"] -->|写入轨迹| B
+    B -->|调度请求| C
 ```
 
 ### 1. Training Module (Megatron-LM)
@@ -133,10 +134,10 @@ GLM-5 的 Agent 能力（SWE-bench 77.8、Vending Bench #1 开源）直接受益
 
 ## 相关笔记
 
-- [[OpenRLHF]] — 对比框架
-- [[verl]] — 对比框架
-- [[GRPO]] — Slime 支持的 RL 算法之一
-- [[2026年2月模型潮]] — GLM-5 所在的模型发布背景
+- [[AI/LLM/Frameworks/OpenRLHF/OpenRLHF]] — 对比框架
+- [[AI/LLM/Frameworks/verl/verl 概述]] — 对比框架
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO]] — Slime 支持的 RL 算法之一
+- [[AI/Frontiers/2026年2月模型潮]] — GLM-5 所在的模型发布背景
 
 ---
 *Created: 2026-02-16 | Source: GitHub README + VentureBeat + TechBuddies 交叉验证*

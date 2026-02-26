@@ -1,4 +1,5 @@
 ---
+brief: "MAE（Masked Autoencoder，He et al.，2022）——75% 图像遮盖+重建的自监督视觉预训练；比 MoCo/DINO 更简单有效；ViT 的最佳预训练方式；是现代 VLM 视觉 encoder 预训练的核心范式之一。"
 title: "MAE"
 type: paper
 domain: ai/cv

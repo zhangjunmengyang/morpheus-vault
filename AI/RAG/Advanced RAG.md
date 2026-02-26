@@ -1,4 +1,5 @@
 ---
+brief: "Advanced RAG 进阶技术（RAG 域）——GraphRAG/Self-RAG/CRAG/HyDE 进阶检索策略；多跳推理/动态知识更新/RAG+RL 的前沿方向；Interview 标注，RAG 工程师进阶面试的深度参考。"
 title: "Advanced RAG 进阶技术"
 date: 2026-02-14
 tags: [rag, graphrag, self-rag, advanced, interview]
@@ -332,7 +333,7 @@ result = evaluate(
 
 ## See Also
 
-- [[AI/RAG/_MOC|RAG MOC]] — 检索增强生成全景索引
+- [[AI/RAG/目录|RAG MOC]] — 检索增强生成全景索引
 - [[AI/RAG/RAG-2026-技术全景|RAG 2026 技术全景]] — 宏观综述
 - [[AI/RAG/RAG 检索策略|RAG 检索策略]] — 本文进阶技术的基础层
 - [[AI/RAG/向量数据库选型|向量数据库选型]] — 稠密检索的基础设施选型

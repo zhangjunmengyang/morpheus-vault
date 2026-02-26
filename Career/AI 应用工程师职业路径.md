@@ -1,12 +1,16 @@
 ---
 title: "AI 应用工程师职业路径"
+brief: "AI应用工程师是连接前沿模型与业务需求的桥梁，职责偏向系统集成与部署而非模型研究；核心竞争力在于 LLM/Agent 工程化落地、RAG/微调/部署全链路能力，以及在大厂中推动 AI 产品创新与内部运营优化。"
 type: thought
 domain: career
 created: "2026-02-13"
-updated: "2026-02-13"
+updated: "2026-02-22"
 tags:
   - career
   - type/thought
+related:
+  - "Career/AI面试速查手册"
+  - "Career/AI 岗位机会追踪"
 ---
 # AI 应用工程师职业路径
 
@@ -175,8 +179,8 @@ AI应用工程师的核心工作内容和职责范围广泛，主要围绕AI技�
 
 ## See Also
 
-- [[Career/_MOC|Career MOC]] — 职业发展知识域全索引
+- [[Career/目录|Career MOC]] — 职业发展知识域全索引
 - [[Career/AI面试速查手册|AI 面试速查手册]] — 同系列速查版，面试题直接参考
 - [[Career/Agent 简历描述重点|Agent 简历描述重点]] — 具体简历描述策略，本文路径方向的落地版
-- [[AI/Agent/_MOC|Agent MOC]] — AI 应用工程师核心技能域
+- [[AI/Agent/目录|Agent MOC]] — AI 应用工程师核心技能域
 - [[Career/AI 岗位机会追踪|AI 岗位机会追踪]] — 当前市场 HC 实况，与本文职业路径对照

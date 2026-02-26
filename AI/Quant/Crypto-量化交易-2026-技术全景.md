@@ -1,4 +1,5 @@
 ---
+brief: "Crypto 量化交易 2026 技术全景（798行）——从传统 CTA 到 AI 驱动量化的完整技术栈；资金费率套利/链上数据信号/DeFi LP 策略；老板量化研究方向的核心知识库，CME 基差/永续合约定价的系统参考。"
 title: "Crypto 量化交易 2026 技术全景"
 type: landscape
 domain: ai/quant

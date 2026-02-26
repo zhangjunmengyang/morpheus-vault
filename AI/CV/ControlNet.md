@@ -1,4 +1,5 @@
 ---
+brief: "ControlNet——条件可控图像生成：在 Diffusion Model 基础上增加空间控制（边缘/姿态/深度/法线）；零卷积层保护预训练权重不被破坏；SDXL-ControlNet 是工程应用主流；理解可控生成的架构基础。"
 title: "ControlNet"
 type: paper
 domain: ai/cv
@@ -124,4 +125,4 @@ ControlNet 之所以成功，在于它找到了一个绝佳的平衡点：不修
 
 - [[AI/CV/ViT|ViT]] — Transformer 在视觉领域的基础架构
 - [[AI/CV/MAE|MAE]] — 自监督视觉预训练
-- [[AI/CV/_MOC|计算机视觉 MOC]]
+- [[AI/CV/目录|计算机视觉 MOC]]

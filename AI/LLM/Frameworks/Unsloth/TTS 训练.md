@@ -1,4 +1,5 @@
 ---
+brief: "Unsloth TTS 训练——Text-to-Speech 模型的 Unsloth 微调指南；语音合成模型（如 CSM/Kokoro）的训练数据格式、audio tokenizer 集成、多模态训练的 Unsloth 配置。"
 title: "TTS"
 type: project
 domain: ai/llm/frameworks/unsloth
@@ -165,8 +166,8 @@ torchaudio.save("output.wav", audio, 24000)
 
 ## 相关
 
-- [[Unsloth 概述]] — Unsloth 框架总览
-- [[量化]] — QLoRA 量化技术
+- [[AI/LLM/Frameworks/Unsloth/Unsloth 概述]] — Unsloth 框架总览
+- [[AI/LLM/Frameworks/Unsloth/量化]] — QLoRA 量化技术
 - [[AI/LLM/SFT/LoRA|LoRA]] — LoRA 技术详解
 - [[AI/LLM/SFT/SFT-TRL实践|SFT-TRL实践]] — SFT 训练实践
 - [[AI/MLLM/非文本的模态对齐|非文本的模态对齐]] — 多模态对齐

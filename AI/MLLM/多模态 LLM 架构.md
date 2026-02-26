@@ -1,13 +1,28 @@
 ---
 title: "多模态 LLM 架构全景"
+brief: "VLM 的三大设计选择——Vision Encoder（CLIP/SigLIP/InternViT）、Projector（Linear/MLP/Q-Former/Perceiver）、训练策略（三阶段 Pretrain→SFT→RLHF）的深度对比，含 LLaVA/Qwen-VL/InternVL 三大系列的架构差异分析和动态分辨率/Token 压缩等关键技术。"
 date: 2026-02-13
+updated: "2026-02-22"
 tags:
   - ai/mllm
   - ai/vision-language
   - ai/llm/architecture
   - type/survey
   - interview/hot
-status: active
+status: complete
+sources:
+  - "Radford et al. 'Learning Transferable Visual Models From Natural Language Supervision (CLIP)' arXiv:2103.00020"
+  - "Alayrac et al. 'Flamingo: a Visual Language Model for Few-Shot Learning' arXiv:2204.14198"
+  - "Liu et al. 'Visual Instruction Tuning (LLaVA)' arXiv:2304.08485"
+  - "Liu et al. 'Improved Baselines with Visual Instruction Tuning (LLaVA-1.5)' arXiv:2310.03744"
+  - "Li et al. 'BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models' arXiv:2301.12597"
+  - "Chen et al. 'InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks' arXiv:2312.14238"
+related:
+  - "[[AI/MLLM/MLLM 概述]]"
+  - "[[AI/MLLM/CLIP|CLIP]]"
+  - "[[AI/MLLM/BLIP-2|BLIP-2]]"
+  - "[[AI/MLLM/InternVL3|InternVL3]]"
+  - "[[AI/MLLM/Qwen-VL|Qwen-VL]]"
 ---
 
 # 多模态 LLM 架构全景
@@ -16,23 +31,13 @@ status: active
 
 ## 1. 通用架构
 
-```
-                    ┌───────────────┐
-                    │  Vision       │
-     Image ───────→ │  Encoder      │ ──→ Visual Tokens
-                    │  (ViT/SigLIP) │
-                    └───────────────┘
-                            │
-                    ┌───────────────┐
-                    │  Projector    │
-                    │  (Linear/MLP/ │ ──→ Aligned Tokens
-                    │   Q-Former)   │
-                    └───────────────┘
-                            │
-                    ┌───────────────┐
-  Text Tokens ────→ │    LLM       │ ──→ Output Tokens
-                    │  (LLaMA/Qwen) │
-                    └───────────────┘
+```mermaid
+flowchart TD
+    IMG["🖼️ Image"] --> VE["Vision Encoder<br/>(ViT / SigLIP)"]
+    VE -->|"Visual Tokens"| PROJ["Projector<br/>(Linear / MLP / Q-Former)"]
+    PROJ -->|"Aligned Tokens"| LLM["LLM<br/>(LLaMA / Qwen)"]
+    TXT["📝 Text Tokens"] --> LLM
+    LLM --> OUT["Output Tokens"]
 ```
 
 **三大设计选择**：
@@ -46,7 +51,7 @@ status: active
 
 | Encoder | 参数量 | 分辨率 | 训练数据 | 特点 | 使用模型 |
 |---------|--------|--------|---------|------|---------|
-| CLIP ViT-L/14 | 304M | 224→336 | 400M image-text | 最经典，对齐好 | LLaVA-1.5 |
+| CLIP ViT-L/14 (arXiv:2103.00020) | 304M | 224→336 | 400M image-text | 最经典，对齐好 | LLaVA-1.5 |
 | SigLIP SO400M | 400M | 384 | 4B pairs | Sigmoid loss，无需负样本 | LLaVA-1.6, PaliGemma |
 | InternViT-6B | 6B | 448 | 专有数据 | 最大开源 ViT | InternVL 2/2.5 |
 | EVA-02-E | 4.4B | 224 | LAION | CLIP 改进版 | — |
@@ -145,9 +150,9 @@ class QFormer(nn.Module):
 **优点**：大幅减少 visual token 数（576→32），节省 LLM 上下文。
 **缺点**：信息压缩可能丢失细节，训练不稳定，OCR 等细粒度任务表现差。
 
-### Perceiver Resampler (Flamingo)
+### Perceiver Resampler (Flamingo, arXiv:2204.14198)
 
-类似 Q-Former，但用 Perceiver 架构：
+类似 Q-Former，但用 Perceiver 架构（Alayrac et al., 2022）：
 
 ```
 可学习 latent tokens × visual features → cross attention × 6 layers
@@ -312,7 +317,9 @@ Perceiver Resampler    ~10:1     中等
 
 ### Q2: 为什么 2025 年大多数 VLM 用 MLP 而非 Q-Former 作为 Projector？
 
-Q-Former 通过可学习 queries 将视觉 token 压缩到固定数量（如 32 个），但存在三个问题：(1) **信息丢失**——OCR、细粒度识别等任务需要保留像素级细节，32 个 token 不够；(2) **训练不稳定**——cross attention 的收敛依赖精心设计的预训练策略；(3) **工程复杂**——额外引入 ~100M 参数。MLP 直接投影保留所有 token，配合 pixel shuffle 等轻量压缩即可平衡效率和细节。LLaVA-1.5 的实验证明，简单的 2 层 MLP 在几乎所有 benchmark 上优于 Q-Former。
+> 来源：Liu et al. "Improved Baselines with Visual Instruction Tuning (LLaVA-1.5)" arXiv:2310.03744
+
+Q-Former 通过可学习 queries 将视觉 token 压缩到固定数量（如 32 个），但存在三个问题：(1) **信息丢失**——OCR、细粒度识别等任务需要保留像素级细节，32 个 token 不够；(2) **训练不稳定**——cross attention 的收敛依赖精心设计的预训练策略；(3) **工程复杂**——额外引入 ~100M 参数。MLP 直接投影保留所有 token，配合 pixel shuffle 等轻量压缩即可平衡效率和细节。LLaVA-1.5 的实验证明（arXiv:2310.03744），简单的 2 层 MLP 在几乎所有 benchmark 上优于 Q-Former。
 
 ### Q3: Qwen2-VL 的 2D RoPE 和传统 tile 切分有什么区别？
 
@@ -325,3 +332,59 @@ Q-Former 通过可学习 queries 将视觉 token 压缩到固定数量（如 32 
 ### Q5: 如何缓解多模态 LLM 的视觉幻觉问题？
 
 视觉幻觉（描述图中不存在的对象/错误属性）是 MLLM 最大的问题之一。缓解方法：(1) **提高分辨率**——AnyRes/动态分辨率让模型看到更多细节，减少靠"猜"的情况；(2) **RLHF-V**——用细粒度人类标注（指出幻觉位置）做 DPO 训练；(3) **Grounding 训练**——要求模型给出 bbox 坐标，增强空间定位；(4) **对比训练**——构造正确描述 vs 故意加入对象的错误描述作为偏好对；(5) **推理时策略**——多次采样取共识（self-consistency），或用 vision encoder 二次验证。
+
+---
+
+## 📚 推荐阅读
+
+### 原始论文
+- [Learning Transferable Visual Models From Natural Language Supervision (CLIP)](https://arxiv.org/abs/2103.00020) — Radford et al. 2021，视觉-语言对齐的里程碑，必读
+- [Flamingo: a Visual Language Model for Few-Shot Learning](https://arxiv.org/abs/2204.14198) — Alayrac et al. 2022，Perceiver Resampler + Cross-Attention 注入 LLM
+- [Visual Instruction Tuning (LLaVA)](https://arxiv.org/abs/2304.08485) — Liu et al. 2023，简洁的 VLM 范式，Linear Projector + SFT
+- [Improved Baselines with Visual Instruction Tuning (LLaVA-1.5)](https://arxiv.org/abs/2310.03744) — 证明 2 层 MLP 优于 Q-Former ⭐⭐⭐⭐⭐
+- [BLIP-2: Bootstrapping Language-Image Pre-training](https://arxiv.org/abs/2301.12597) — Q-Former 的原始设计
+- [InternVL: Scaling up Vision Foundation Models](https://arxiv.org/abs/2312.14238) — 最大开源 ViT (6B) + Pixel Shuffle 压缩
+
+### 实践资源
+- [LLaVA GitHub](https://github.com/haotian-liu/LLaVA) — 最简洁的 MLLM 实现
+- [InternVL GitHub](https://github.com/OpenGVLab/InternVL) — 最强开源 MLLM 系列
+- [Qwen-VL 系列](https://github.com/QwenLM/Qwen-VL) — 中文最强 MLLM
+
+## 🔧 落地应用
+
+### 直接可用场景
+- **多模态 RAG**：用 Vision Encoder 将图片/表格向量化，与文本统一检索（参见 [[AI/RAG/RAG-2026-技术全景|RAG 2026 全景]] 的多模态 RAG 部分）
+- **文档理解/OCR**：动态分辨率 + MLP Projector 的 VLM 可直接理解 PDF 截图，替代传统 OCR 管线
+- **视觉问答与描述**：产品图片分析、医疗影像初筛、建筑图纸理解
+
+### 工程实现要点
+- **Vision Encoder 选型**：通用场景 CLIP ViT-L / SigLIP；需要最强中文能力 InternViT-6B；追求轻量 ViT-B/16
+- **Projector 选型**：2025 年选 2 层 MLP 就对了——简单、有效、训练稳定
+- **分辨率策略**：简单任务用固定 336×336；OCR/文档用动态分辨率（AnyRes 或 Qwen2-VL 2D RoPE）
+- **Token 压缩**：Pixel Shuffle（InternVL）4:1 压缩是当前最优解，质量损失极小
+
+### 面试高频问法
+- Q: 三大组件各自的作用？
+  A: Vision Encoder 提取视觉特征（眼睛）；Projector 对齐视觉-语言空间（桥梁）；LLM 做多模态推理（大脑）
+- Q: 为什么训练时先冻结 ViT 和 LLM？
+  A: 随机初始化的 Projector 产生噪声梯度，同时解冻 LLM 会破坏预训练知识——先让 Projector 学会对齐
+
+## 💡 启发与思考
+
+### So What？对老板意味着什么
+- VLM 架构的核心 trade-off 是 Projector 复杂度——理解这个 trade-off 就理解了 LLaVA vs BLIP-2 vs Flamingo 的本质区别
+- 动态分辨率 + Token 压缩是 2025-2026 的技术主线，掌握这个方向可以在面试中展示前沿认知
+
+### 未解问题与局限
+- **视觉幻觉未根治**：高分辨率 + RLHF-V 缓解但未解决，描述图中不存在对象的问题仍普遍
+- **视频理解效率**：长视频的 visual token 暴增，当前压缩方案（Pixel Shuffle/ToMe）对视频的效果不如图像
+- **统一 Any-to-Any 模型**：图文→视频→音频的统一生成仍在早期阶段
+
+### 脑暴：如果往下延伸
+- Qwen2-VL 的 2D RoPE 思路可以推广到 3D（视频的时空位置编码）——这是视频理解的潜在突破点
+- 结合 [[AI/MLLM/MLLM 概述|MLLM 概述]] 的 Any-to-Any 架构，统一的 Modality Generator 可能替代当前的"外挂扩散模型"
+- InternViT-6B 证明了大 ViT 的价值——6 个月后可能出现 10B+ 的视觉编码器
+
+> 🔗 See also: [[AI/MLLM/MLLM 概述]] — MLLM 整体概述与发展历程
+> 🔗 See also: [[AI/MLLM/CLIP|CLIP]] — Vision Encoder 的基石
+> 🔗 See also: [[AI/MLLM/BLIP-2|BLIP-2]] — Q-Former 的原始设计

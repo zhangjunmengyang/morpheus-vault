@@ -1,4 +1,5 @@
 ---
+brief: "Qwen3.5-Plus / Qwen3.5-397B-A17B——Linear Attention + MoE 的最新一代 Qwen；GSPO 训练+多模态能力+Agent 场景优化；397B 参数/17B 激活的超大 MoE 规模；与 GPT-4o/Gemini 对标的国产旗舰。"
 title: "Qwen3.5-Plus / Qwen3.5-397B-A17B"
 date: 2026-02-18
 release_date: 2026-02-16

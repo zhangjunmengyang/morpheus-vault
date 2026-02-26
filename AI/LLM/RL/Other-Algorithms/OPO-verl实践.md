@@ -1,4 +1,5 @@
 ---
+brief: "OPO verl 实践——Online Preference Optimization 的 verl 工程实现；在线采样+实时偏好标注流水线，比 offline DPO 更快响应模型能力变化；适合需要持续对齐更新的生产场景。"
 title: "OPO"
 type: project
 domain: ai/llm/rl/other-algorithms

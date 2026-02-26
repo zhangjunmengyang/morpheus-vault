@@ -1,4 +1,5 @@
 ---
+brief: "DataFlow——数据合成流水线设计；从 seed data 到高质量 instruction dataset 的完整生成链路；质量评分/去重/多样性保证的工程实现；LLM 数据工程的核心流水线框架。"
 title: "DataFlow"
 type: concept
 domain: ai/llm/application/synthetic-data

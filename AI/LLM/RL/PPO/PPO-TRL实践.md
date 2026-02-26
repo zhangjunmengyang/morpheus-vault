@@ -1,5 +1,6 @@
 ---
-title: "PPO"
+brief: "PPO TRL 实践——HuggingFace TRL PPOTrainer 的工程指南；四模型（Actor/Critic/RM/Ref）显存管理/reward pipeline 接入/KL penalty 调参/训练曲线深度解读；RLHF 全链路的工程参考。"
+title: "PPO-TRL实践"
 type: project
 domain: ai/llm/rl/ppo
 created: "2026-02-13"
@@ -66,9 +67,17 @@ tags:
 1. `**train/val/num_eos_tokens**` (EOS符数量): 生成的序列中止符（End-of-Sequence）的数量。它在400到700之间波动，这与具体任务（如摘要长度）有关，没有出现极端情况（如从不停止或立即停止），属于正常范围。
 1. `**train/lr**` (学习率): 训练中使用的学习率。它从3.0e-6线性衰减至接近0，这是一种标准的训练策略，有助于模型在训练后期更好地收敛。
 
-## 相关
+## See Also
 
-- [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]]
-- [[AI/LLM/RL/GRPO/GRPO-TRL实践|GRPO-TRL实践]]
-- [[AI/LLM/RL/DPO/DPO-TRL实践|DPO-TRL实践]]
-- [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]]
+- [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]] — PPO 算法理论基础（Actor/Critic/clip loss 数学推导）
+- [[AI/LLM/RL/PPO/PPO-手撕实操-MA-RLHF|PPO 手撕实操]] — 手写 PPO 核心流程（从零实现）
+- [[AI/LLM/RL/GRPO/GRPO-TRL实践|GRPO-TRL 实践]] — GRPO 工程指南，无需 Critic，更轻量
+- [[AI/LLM/RL/DPO/DPO-TRL实践|DPO-TRL 实践]] — DPO 工程指南，离线偏好优化
+- [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 框架概述]] — TRL 全框架能力总览
+- [[AI/LLM/RL/RLHF-DPO-2026-技术全景|RLHF-DPO 2026 全景]] — 对齐算法全图谱，本篇是 PPO 工程实现参考
+
+## 推荐阅读
+
+- [TRL PPOTrainer 文档](https://huggingface.co/docs/trl/ppo_trainer)
+- [Deep RLHF (Anthropic) 原理解析](https://arxiv.org/abs/2204.05862)
+- [PPO 原始论文](https://arxiv.org/abs/1707.06347)

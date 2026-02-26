@@ -1,9 +1,10 @@
 ---
 title: "Agent vs MAS"
+brief: "单 Agent+多MCP 工具 vs 多 Agent 系统的决策框架：何时需要 MAS？判断维度（复杂度/并行性/专业度/故障隔离）；工程权衡—— MAS 的协调成本 vs 单 Agent 的能力上限"
 type: concept
 domain: ai/agent/multi-agent
 created: "2026-02-13"
-updated: "2026-02-13"
+updated: "2026-02-23"
 tags:
   - ai/agent/multi-agent
   - type/concept
@@ -90,4 +91,4 @@ tags:
 - [[AI/Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]] — MAS 的基础概念
 - [[AI/Agent/IMAGINE — 多Agent蒸馏到单模型|IMAGINE]] — Agent vs MAS 的新视角：MAS 能力蒸馏进单 Agent
 - [[AI/Agent/AgentConductor-Topology-Evolution-Multi-Agent-Code|AgentConductor]] — MAS 拓扑优化论文
-- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱
+- [[AI/Agent/目录|Agent MOC]] — Agent 知识全图谱

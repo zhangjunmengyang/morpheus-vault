@@ -1,4 +1,5 @@
 ---
+brief: "IntroLLM（arXiv:2602.13035）——分层 RL 自适应调节采样温度；上层策略根据当前状态动态控制探索温度，解决 GRPO 固定温度导致 entropy collapse 或过度随机的问题；在多样性与 accuracy 之间自动平衡。"
 title: "IntroLLM: Introspective Temperature Policy via Hierarchical RL"
 date: 2026-02-21
 arxiv: "2602.13035"
@@ -193,3 +194,4 @@ log πϕ(τₜ | hₜ) = log P(cₜ) + cₜ · log p(zₜ | α, β)
 - [[AI/Safety/AutoInject-RL-Prompt-Injection-Attack|AutoInject（RL自动化Prompt Injection）]] ⭐ — 同一技术假设的正反两面：IntroLLM 用 hₜ 预测最优采样温度（生成质量提升），盾卫 Phase 3 用 hₜ 检测注入攻击（安全防御）——hₜ 包含比表面 token 更丰富信息这一命题，IntroLLM 是正向验证
 - [[AI/LLM/RL/Theory/REMuL-CoT-Faithfulness-Multi-Listener-RL|REMuL（CoT Faithfulness多听众RL）]] — 同为 GRPO 框架的精细化：REMuL 在 reward 信号上精细化（faithfulness），IntroLLM 在采样策略上精细化（adaptive temperature）——两者合用=更可信的推理链 + 更有效的探索
 - [[AI/LLM/RL/GRPO/ProGRPO-Probabilistic-Advantage-Reweighting|ProGRPO（概率优势重加权）]] — Diversity 维度的另一路：ProGRPO 重加权 advantage 估计（从 reward 信号层面增加探索），IntroLLM 从采样温度层面增加探索——同目标，前者改 training，后者改 inference-time sampling
+- [[AI/LLM/RL/Other-Algorithms/LACONIC-Length-Constrained-RL|LACONIC（Primal-Dual长度约束RL）]] — 约束 RL 的互补维度：IntroLLM 约束采样**温度**（控探索多样性），LACONIC 约束输出**长度**（控推理成本）——两者从不同维度对 RL 生成过程施加结构性控制，可互补叠加

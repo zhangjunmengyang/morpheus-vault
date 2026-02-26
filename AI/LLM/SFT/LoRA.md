@@ -18,7 +18,7 @@ sources:
 related:
   - "[[AI/LLM/Frameworks/Unsloth/Unsloth 概述]]"
   - "[[AI/LLM/Architecture/LLaMA]]"
-  - "[[SFT-TRL实践]]"
+  - "[[AI/LLM/SFT/SFT-TRL实践]]"
   - "[[AI/LLM/Infra/分布式训练]]"
   - "[[AI/LLM/Frameworks/Unsloth/量化]]"
   - "[[AI/LLM/SFT/SFT 原理]]"

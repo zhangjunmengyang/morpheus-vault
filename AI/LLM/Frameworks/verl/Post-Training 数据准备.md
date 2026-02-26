@@ -1,4 +1,5 @@
 ---
+brief: "verl Post-Training 数据准备——RL 训练前的数据工程：prompt 格式规范/reward function 数据协议/parquet 格式要求；包含数学推理/代码/对话等不同任务类型的数据准备 checklist。"
 title: "Post-Training 数据准备"
 type: concept
 domain: ai/llm/frameworks/verl

@@ -1,4 +1,5 @@
 ---
+brief: "Transformer 通识——Encoder/Decoder/Encoder-Decoder 三种架构的设计原理和适用场景；Self-Attention/Cross-Attention 的区别；GPT（Decoder-only）vs BERT（Encoder-only）vs T5（Seq2Seq）的对比；LLM 入门基础。"
 title: "Transformer 通识"
 type: concept
 domain: ai/foundations/dl-basics
@@ -125,4 +126,4 @@ Transformers 大致时间线
 - [[AI/LLM/Architecture/GPT|GPT]]
 - [[AI/LLM/Architecture/T5|T5]]
 - [[AI/LLM/Architecture/LLaMA|LLaMA]]
-- [[AI/Foundations/DL-Basics/Attention 详解|Attention 详解]]
+- [[AI/LLM/Architecture/Attention 变体综述|Attention 详解]]

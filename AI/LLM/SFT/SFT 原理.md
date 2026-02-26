@@ -403,3 +403,7 @@ LIMA 的"表面对齐假说"进一步说明：**对齐不是一个知识问题�
 - [HuggingFace TRL SFTTrainer](https://huggingface.co/docs/trl/sft_trainer) — 最易用的 SFT 训练框架，支持 Packing/NEFTune/LoRA ⭐⭐⭐⭐⭐
 - [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) — 国产全流程 LLM 微调框架，中文支持极好 ⭐⭐⭐⭐⭐
 - [Axolotl](https://github.com/OpenAccess-AI-Collective/axolotl) — 灵活的 SFT 训练配置框架 ⭐⭐⭐⭐
+
+### 代码手撕（理论 → 代码）
+- [[AI/LLM/SFT/SFT-手撕实操|SFT-手撕实操]] — **必看**：从零实现 SFT 训练循环（数据格式化/loss mask/LoRA 集成），MA-RLHF 项目配套 ⭐⭐⭐⭐⭐
+- [[AI/LLM/MA-RLHF-手撕实操-系列索引|MA-RLHF 手撕实操系列索引]] — SFT → PPO → GRPO → DPO 完整对齐链路代码总索引

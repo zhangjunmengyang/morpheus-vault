@@ -1,4 +1,5 @@
 ---
+brief: "DeepSeek R1 论文学习笔记——聚焦 R1 的 Aha Moment（RL 自发涌现自我反思推理）和 Cold Start 训练策略；GRPO 如何驱动 R1 的推理能力突破，以及 R1-Zero vs R1 训练流程对比。"
 title: "2. DeepSeek R1 Paper"
 type: tutorial
 domain: ai/llm/rl/grpo

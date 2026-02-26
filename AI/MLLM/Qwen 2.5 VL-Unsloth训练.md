@@ -1,4 +1,5 @@
 ---
+brief: "Qwen2.5-VL Unsloth 训练——Qwen2.5 视觉语言模型的 Unsloth 微调工程指南；动态分辨率图像的 token 处理/多模态指令数据格式/QLoRA 显存配置；开源 VLM 微调的主流工程实践。"
 title: "Qwen 2.5 VL"
 type: project
 domain: ai/mllm

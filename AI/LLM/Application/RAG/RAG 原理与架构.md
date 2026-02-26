@@ -1,12 +1,31 @@
 ---
-tags: [RAG, LLM, Retrieval, Architecture, NLP, Application]
+title: "RAG 原理与架构"
+brief: "RAG（检索增强生成）的核心流程、代码实现和三代架构演进（Naive→Advanced→Modular），含文档处理、检索引擎、生成模块的完整代码示例和企业/代码问答应用场景。"
+type: tutorial
+domain: ai/rag
+tags:
+  - ai/rag
+  - ai/llm/application
+  - ai/retrieval
+  - type/tutorial
 created: 2026-02-14
-status: draft
+updated: "2026-02-22"
+status: complete
+sources:
+  - "Lewis et al. 'Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks' arXiv:2005.11401"
+  - "Facebook AI Research. 'FAISS: A Library for Efficient Similarity Search' https://github.com/facebookresearch/faiss"
+  - "LlamaIndex Documentation https://docs.llamaindex.ai/"
+  - "LangChain Documentation https://python.langchain.com/"
+related:
+  - "[[AI/RAG/RAG-2026-技术全景|RAG 2026 全景]]"
+  - "[[AI/LLM/Application/RAG/检索策略]]"
+  - "[[AI/LLM/Application/RAG/文档解析]]"
+  - "[[AI/LLM/Application/Embedding 与向量检索]]"
 ---
 
 # RAG 原理与架构
 
-RAG (Retrieval-Augmented Generation) 通过检索外部知识增强大语言模型的生成能力，是解决 LLM 知识局限性、幻觉问题的核心技术架构。
+RAG (Retrieval-Augmented Generation) 通过检索外部知识增强大语言模型的生成能力，是解决 LLM 知识局限性、幻觉问题的核心技术架构。该概念由 Lewis et al. 在 2020 年提出（arXiv:2005.11401），核心思路是将信息检索与 LLM 生成相结合。
 
 ## RAG 核心流程
 
@@ -503,7 +522,53 @@ class CodeRAG:
 **A**: RAG 评估包括多个维度：1）检索质量：Recall@K、Precision@K、MRR；2）生成质量：BLEU、ROUGE、BERTScore；3）端到端性能：Answer Accuracy、F1 Score；4）用户体验：响应时间、相关性评分；5）可信度：事实准确性、来源可靠性。需要结合自动化指标和人工评估。
 
 ### Q4: RAG 中的检索策略有哪些？
-**A**: 主要包括：1）稠密检索：基于向量相似度（BERT、Sentence-BERT）；2）稀疏检索：基于关键词匹配（BM25、TF-IDF）；3）混合检索：结合稠密和稀疏方法；4）分阶段检索：粗排+精排；5）[[检索策略]]：HyDE、Query Expansion、Multi-vector等高级策略。
+**A**: 主要包括：1）稠密检索：基于向量相似度（BERT、Sentence-BERT）；2）稀疏检索：基于关键词匹配（BM25、TF-IDF）；3）混合检索：结合稠密和稀疏方法；4）分阶段检索：粗排+精排；5）[[AI/LLM/Application/RAG/检索策略|检索策略]]：HyDE、Query Expansion、Multi-vector等高级策略。
 
 ### Q5: RAG 系统在生产环境中的主要挑战是什么？
 **A**: 主要挑战包括：1）延迟控制：检索和生成的平衡；2）成本优化：向量数据库和 LLM 调用成本；3）数据更新：实时性与一致性；4）质量保证：检索精度和生成质量；5）规模扩展：大规模知识库的索引和查询效率；6）安全隐私：敏感信息的访问控制和数据泄露防护。
+
+---
+
+## 📚 推荐阅读
+
+### 原始论文
+- [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401) — Lewis et al. 2020，RAG 的奠基论文，必读
+- [Dense Passage Retrieval for Open-Domain QA (DPR)](https://arxiv.org/abs/2004.04906) — Karpukhin et al. 2020，稠密检索的里程碑
+
+### 实践资源
+- [FAISS: A Library for Efficient Similarity Search](https://github.com/facebookresearch/faiss) — Meta 出品，向量检索的基础设施
+- [LlamaIndex Documentation](https://docs.llamaindex.ai/) — RAG 专用框架 ⭐⭐⭐⭐⭐
+- [LangChain RAG Tutorial](https://python.langchain.com/docs/tutorials/rag/) — 入门首选
+
+## 🔧 落地应用
+
+### 直接可用场景
+- **企业知识库**：将内部文档（PDF/Word/Confluence）索引后支持自然语言问答
+- **代码问答**：对仓库建索引，支持"这个函数做什么""哪里处理了超时逻辑"等查询
+- **客服系统**：基于 FAQ + 产品文档的自动问答，可附带 citation 提升可信度
+
+### 工程实现要点
+- **向量数据库快速选型**：原型用 Chroma（pip install 即用）；生产用 Qdrant/Milvus；已有 PG 用 pgvector
+- **Chunking 基线**：Recursive Splitting + chunk_size=512 + overlap=15%
+- **必加 Reranking**：Cross-Encoder Reranker 通常提升 Hit Rate@5 约 5-15%
+
+### 面试高频问法
+- Q: RAG 相比直接用 LLM 的优势？
+  A: 知识实时更新 + 减少幻觉（基于检索文档） + 领域知识注入 + 可引用溯源 + 无需重训模型
+
+## 💡 启发与思考
+
+### So What？对老板意味着什么
+- RAG 是"让 LLM 访问私有数据"的最成熟路径，几乎所有企业 AI 应用都需要
+- 理解 Naive→Advanced→Modular 的架构演进，能在面试中展示系统设计能力
+
+### 未解问题与局限
+- 文档解析质量仍是瓶颈——PDF 表格、扫描件的解析准确率差距悬殊
+- 评估体系不完善——RAGAS 的 LLM-as-Judge 存在评估器偏差
+
+### 脑暴：如果往下延伸
+- 结合 [[AI/LLM/Application/RAG/检索策略|检索策略]] 的 HyDE/Query Decomposition 可显著提升复杂查询的效果
+- Agentic RAG（参见 [[AI/RAG/RAG-2026-技术全景|RAG 2026 全景]]）让检索从固定管线变成动态决策
+
+> 🔗 See also: [[AI/LLM/Application/Embedding 与向量检索]] — Embedding 选型和向量数据库是 RAG 检索质量的基座
+> 🔗 See also: [[AI/LLM/Application/RAG/文档解析]] — 文档解析是 RAG 管线的起点，质量直接决定检索上限

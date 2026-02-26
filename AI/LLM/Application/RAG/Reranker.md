@@ -1,4 +1,5 @@
 ---
+brief: "Reranker 与重排序——Cross-Encoder vs Bi-Encoder 的精度/速度权衡；BGE-Reranker/Cohere Rerank/LLM-as-Reranker 选型对比；RAG 召回后精排的关键组件，对最终准确率提升 15-30%。"
 tags: [RAG, Reranker, Information-Retrieval, NLP, Cross-Encoder, Bi-Encoder]
 created: 2026-02-14
 status: draft
@@ -6,7 +7,7 @@ status: draft
 
 # Reranker 与重排序
 
-Reranker 是 [[RAG]] 系统中的关键组件，用于对初步检索结果进行精准重排序，显著提升检索质量和最终生成效果。与传统的单一检索不同，Reranker 引入了二次排序机制，在召回阶段之后进一步优化候选文档的排序。
+Reranker 是 [[AI/RAG/RAG-2026-技术全景|RAG]] 系统中的关键组件，用于对初步检索结果进行精准重排序，显著提升检索质量和最终生成效果。与传统的单一检索不同，Reranker 引入了二次排序机制，在召回阶段之后进一步优化候选文档的排序。
 
 ## 核心概念
 
@@ -222,6 +223,6 @@ A：提升最明显的场景：1）**语义复杂查询**：含有否定、条�
 
 **Q5：如何评估 Reranker 的效果？**
 
-A：常用指标包括：1）**MRR（Mean Reciprocal Rank）**：衡量第一个相关结果的排序位置；2）**NDCG@K**：考虑位置权重的累积增益；3）**Precision@K/Recall@K**：前 K 个结果的精确率和召回率；4）**端到端指标**：最终 RAG 系统的回答准确性、相关性评分。建议同时使用 [[LLM 评测体系]] 中的自动评测和人工评估方法。
+A：常用指标包括：1）**MRR（Mean Reciprocal Rank）**：衡量第一个相关结果的排序位置；2）**NDCG@K**：考虑位置权重的累积增益；3）**Precision@K/Recall@K**：前 K 个结果的精确率和召回率；4）**端到端指标**：最终 RAG 系统的回答准确性、相关性评分。建议同时使用 [[AI/LLM/LLM 评测体系|LLM 评测体系]] 中的自动评测和人工评估方法。
 
-相关链接：[[RAG]], [[向量数据库]], [[文本分块策略]], [[Advanced RAG]], [[LLM 评测体系]]
+相关链接：[[AI/RAG/RAG-2026-技术全景|RAG]], [[AI/RAG/向量数据库选型|向量数据库]], [[AI/LLM/Application/RAG/文本分块策略|文本分块策略]], [[AI/RAG/Advanced RAG|Advanced RAG]], [[AI/LLM/LLM 评测体系|LLM 评测体系]]

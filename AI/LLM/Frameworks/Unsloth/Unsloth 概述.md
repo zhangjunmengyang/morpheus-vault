@@ -1,4 +1,5 @@
 ---
+brief: "Unsloth——通过手写 CUDA kernel 实现 2-5x 训练加速 + 70% 显存减少的轻量 LLM 训练库；支持 QLoRA/LoRA/全量微调，兼容 HuggingFace 生态；单卡跑大模型 SFT/RL 训练的首选加速方案。"
 title: "unsloth"
 type: reference
 domain: ai/llm/frameworks/unsloth
@@ -127,12 +128,12 @@ Unsloth 是个人开发者和小团队的利器 —— 一张 4090 就能微调 
 
 ## 相关
 
-- [[量化]]
-- [[Chat Templates]]
-- [[Checkpoint]]
-- [[运行 & 保存模型]]
-- [[多卡并行]]
-- [[训练示例概述]]
+- [[AI/LLM/Frameworks/Unsloth/量化]]
+- [[AI/LLM/Frameworks/Unsloth/Chat Templates]]
+- [[AI/LLM/Frameworks/Unsloth/Checkpoint]]
+- [[AI/LLM/Frameworks/Unsloth/运行 & 保存模型]]
+- [[AI/LLM/Frameworks/Unsloth/多卡并行]]
+- [[AI/LLM/Frameworks/Unsloth/训练示例概述]]
 - [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]]
 - [[AI/LLM/SFT/LoRA|LoRA]]
 - [[AI/LLM/SFT/SFT 原理|SFT 原理]]

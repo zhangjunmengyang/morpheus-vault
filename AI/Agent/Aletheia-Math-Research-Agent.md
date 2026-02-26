@@ -1,7 +1,9 @@
 ---
 title: "Aletheia — Gemini Deep Think 数学科研 Agent"
+brief: "Google DeepMind：从竞赛解题跨越到全自主科研论文生成的数学研究 Agent；在 Erdős 猜想数据库自主解决 4 个开放问题；三组件 Agentic Loop（生成/验证/探索分离）；formal math 的 AI frontier"
 type: research
 domain: ai/agent
+updated: 2026-02-22
 tags:
   - ai/agent
   - ai/llm/reasoning
@@ -152,12 +154,19 @@ Google Search grounding        →   RAG / tool use in agent
 
 **关键 insight**：Aletheia 的 NL verifier 本质上是一个 dense process reward signal——它不只说 "对/错"，而是指出具体哪步有问题。这正是 PRM (Process Reward Model) 的研究方向，但 Aletheia 用 LLM-as-verifier 而非训练出来的 reward model，避免了 verifier 本身的训练成本。
 
-## 关联笔记
+## See Also
 
-- [[Gemini-3-Deep-Think]] — TTC scaling 基础
-- [[RLVR-Edge-of-Competence]] — RL 训练动力学
-- [[GitHub-Agentic-Workflows]] — Agentic workflow 设计模式
-- [[MEL-Meta-Experience-Learning]] — 另一种 agent 自改进路线
+**Aletheia 系列（前作 → 续集）**
+- [[AI/Agent/Aletheia-Gemini3-DeepThink-FirstProof|Aletheia FirstProof（arXiv:2602.21201，2026-02-25 续集）]] ⭐ — **同一系统的下一级挑战**：Erdős 4题 → FirstProof 6/10 研究级数学题（8天限时，真实 open problems）；Best-of-2 策略 + 自我过滤设计；P7 解决 Weinberger 书中开放问题——AI 数学研究能力的最新 frontier
+
+**基础模型与推理体系**
+- [[AI/LLM/Inference/Gemini-3-Deep-Think|Gemini-3-Deep-Think]] — TTC scaling 基础；Aletheia A 基础模型；FirstProof 是其迄今最高难度的真实任务测试
+- [[AI/LLM/RL/Theory/RLVR-Edge-of-Competence|RLVR-Edge-of-Competence]] — RL 训练动力学边界；Aletheia 用纯 TTC scaling 而非 RL，说明有验证器的任务 TTC 可能更快达到 frontier
+
+**Agent 架构设计同族**
+- [[AI/Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO（Tencent AI Lab）]] — 反事实验证 credit assignment；Aletheia 的 Generator-Verifier 架构与 CSO"关键步骤验证"设计哲学同源
+- [[AI/Agent/GitHub-Agentic-Workflows|GitHub-Agentic-Workflows]] — Agentic workflow 设计模式
+- [[AI/LLM/RL/Other-Algorithms/MEL-Meta-Experience-Learning|MEL-Meta-Experience-Learning]] — 另一种 agent 自改进路线
 
 ---
-*Created: 2026-02-19 by Scholar heartbeat*
+*Created: 2026-02-19 by Scholar heartbeat | See Also updated: 2026-02-25 by Librarian*

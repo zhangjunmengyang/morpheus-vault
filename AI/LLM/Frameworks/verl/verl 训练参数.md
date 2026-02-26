@@ -1,4 +1,5 @@
 ---
+brief: "verl 训练参数完整参考——覆盖 actor_rollout/critic/reward_model/ref_policy 各模块的关键超参；包含显存优化/并行策略/KL 系数/clip ratio 等生产调参经验，verl 工程上手必备。"
 title: "verl 训练参数"
 type: project
 domain: ai/llm/frameworks/verl

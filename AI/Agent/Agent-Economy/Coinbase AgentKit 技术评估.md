@@ -1,4 +1,5 @@
 ---
+brief: "Coinbase AgentKit 技术评估——Coinbase 官方 Agent 开发套件的技术深度分析；链上操作 API/钱包集成/DeFi 协议调用的设计；评估 AgentKit 作为 Web3 Agent 基础设施的成熟度和局限性。"
 title: "Coinbase AgentKit 技术评估"
 type: technical-evaluation
 domain: ai/agent/agent-economy
@@ -170,7 +171,7 @@ Strategy Engine (Python, 策略逻辑)
 
 ## 关联
 
-- [[Agent 经济基础设施]] — 全景综述
-- [[ERC-8004 Trustless Agents]] — Agent 身份标准，AgentKit 钱包可注册 ERC-8004 身份
-- [[Virtuals Protocol]] — Agent 商业网络，AgentKit 提供交易执行层
-- [[Agentic Spring]] — 模型能力成熟推动 Agent 经济落地
+- [[AI/Agent/Agent-Economy/Agent 经济基础设施|Agent 经济基础设施]] — 全景综述
+- [[AI/Agent/Agent-Economy/ERC-8004 Trustless Agents|ERC-8004 Trustless Agents]] — Agent 身份标准，AgentKit 钱包可注册 ERC-8004 身份
+- [[AI/Agent/Agent-Economy/Virtuals Protocol|Virtuals Protocol]] — Agent 商业网络，AgentKit 提供交易执行层
+- [[AI/Agent/Agent-Economy/Agentic Spring|Agentic Spring]] — 模型能力成熟推动 Agent 经济落地

@@ -1,4 +1,5 @@
 ---
+brief: "RAG 检索策略详解——Sparse（BM25）vs Dense（Embedding）vs Hybrid 三类检索策略对比；QueryExpansion/HyDE/Step-back Prompting 的 query 变换技巧；Interview 标注，RAG 检索优化的完整方法论。"
 title: "RAG 检索策略详解"
 date: 2026-02-14
 tags: [rag, retrieval, embedding, reranker, interview]
@@ -442,7 +443,7 @@ Parent Chunk（大块，如 2000 tokens）
 
 ## See Also
 
-- [[AI/RAG/_MOC|RAG MOC]] — 检索增强生成全景索引
+- [[AI/RAG/目录|RAG MOC]] — 检索增强生成全景索引
 - [[AI/RAG/Advanced RAG|Advanced RAG]] — 本文检索策略的进阶应用
 - [[AI/RAG/向量数据库选型|向量数据库选型]] — 实现稠密检索的基础设施
 - [[AI/RAG/RAG-2026-技术全景|RAG 2026 技术全景]] — 宏观综述，包含检索策略在完整系统中的位置

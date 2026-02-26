@@ -1,4 +1,5 @@
 ---
+brief: "Qwen 系列架构详解——Qwen 1/2/2.5/3 的架构演进：GQA/SwiGLU/RoPE/Tie-Embedding/YaRN 等技术的逐版本引入；MoE 版本（Qwen3-MoE）的 Expert 设计；面试被问国内主流开源 LLM 架构的参考。"
 title: "Qwen 系列架构详解"
 date: 2026-02-14
 tags: [llm, qwen, architecture, interview]
@@ -17,7 +18,7 @@ type: note
 | **Qwen2.5** | 2024-09 | 全系列开源旗舰：0.5B–72B Dense + 3B-A3B MoE，预训练 18T tokens，代码/数学专项模型 |
 | **Qwen3** | 2025-04 | 混合思维模式（thinking/non-thinking 动态切换）、MoE 旗舰 235B-A22B、支持 119 种语言和方言 |
 | **Qwen3-Next** | 2025-09 | 架构验证版（80B-A3B），首次引入 Gated DeltaNet 混合线性注意力 |
-| **Qwen3.5** | 2026-02 | [[Qwen3.5-Plus\|详细笔记]]。Qwen3-Next 架构放大版：397B-A17B MoE（512 专家），Gated DeltaNet + Gated Attention 3:1 混合，原生多模态 Early Fusion，201 种语言，256K/1M 上下文，吞吐 19× 提升 |
+| **Qwen3.5** | 2026-02 | [[AI/Models/Qwen3.5-Plus\|详细笔记]]。Qwen3-Next 架构放大版：397B-A17B MoE（512 专家），Gated DeltaNet + Gated Attention 3:1 混合，原生多模态 Early Fusion，201 种语言，256K/1M 上下文，吞吐 19× 提升 |
 
 ### 核心趋势
 
@@ -181,3 +182,16 @@ Qwen 系列基于 **Transformer decoder-only** 架构，核心组件：
 5. **Speculative Decoding**：用 Qwen2.5-0.5B 做 draft model 加速 2-3x
 6. **前缀缓存**：系统 prompt 较长时用 prefix caching 避免重复计算
 7. **监控**：关注 TTFT（首 token 延迟）、TPS（token/s 吞吐）、GPU 利用率、KV cache 命中率
+
+## See Also
+
+- [[AI/LLM/Architecture/MoE 深度解析]] — MoE 架构深度（Qwen3-MoE 的 shared expert + routing 原理）
+- [[AI/LLM/Architecture/Attention 变体综述]] — GQA/MQA/MLA 详细对比（Qwen 从 MHA→GQA 的理论基础）
+- [[AI/LLM/Inference/LLM-推理优化-2026-全景]] — Qwen2.5-72B 生产部署优化全图（量化/TP/prefix cache）
+- [[AI/LLM/Architecture/Transformer架构深度解析-2026技术全景]] — Qwen 所基于的 Decoder-Only Transformer 架构全景
+- [[AI/LLM/Architecture/DeepSeek-R1]] — 同期国内主流开源 LLM 对比（架构选择差异：MoE规模/稀疏度/共享专家数）
+
+## 推荐阅读
+
+- [Qwen2.5 技术报告](https://arxiv.org/abs/2412.15115) — arXiv:2412.15115
+- [Qwen3 技术博客](https://qwenlm.github.io/blog/qwen3/) — 混合思维模式设计细节

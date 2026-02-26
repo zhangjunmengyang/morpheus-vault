@@ -1,4 +1,5 @@
 ---
+brief: "GSPO（Group Sequence Policy Optimization）——将 importance sampling 从 token 级提升到 sequence 级，解决 GRPO/PPO token 级 IS ratio 噪声问题；Qwen3 MoE 训练采用，序列级约束更适合长链推理的策略更新。"
 title: "GSPO: Group Sequence Policy Optimization"
 type: paper
 domain: ai/llm/rl
@@ -163,5 +164,5 @@ VESPO（变分推导 optimal IS kernel，1/T 归一化被证伪为 length bias �
 ## 元数据
 
 - **Tags**: #GRPO #importance-sampling #sequence-level #MoE #Qwen3 #off-policy
-- **关联笔记**: [[AI/LLM/RL/Other-Algorithms/VESPO-Variational-Sequence-Policy-Optimization|VESPO]] ⭐ — VESPO 是 GSPO 的理论上界：GSPO 发现 1/T 归一化的 length bias 问题，VESPO 变分推导给出最优 IS kernel，证明为什么 GSPO 在高 staleness 时 collapse | [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] | [[AI/LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]]
+- **关联笔记**: [[AI/LLM/RL/Other-Algorithms/VESPO-Variational-Sequence-Policy-Optimization|VESPO]] ⭐ — VESPO 是 GSPO 的理论上界：GSPO 发现 1/T 归一化的 length bias 问题，VESPO 变分推导给出最优 IS kernel，证明为什么 GSPO 在高 staleness 时 collapse | [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] | [[AI/LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] | [[AI/LLM/RL/Other-Algorithms/SAPO-Soft-Adaptive-Policy-Optimization|SAPO]] — **GSPO 的软门控继承版**：Qwen 团队同一路线上的后续工作，把 sequence-level hard clip 替换为 token-level sigmoid 软衰减；理论证明在 A1+A2 假设下 SAPO ≡ GSPO（连续版），在 MoE 异构 token 场景更鲁棒
 - **写于**: 2026-02-21

@@ -1,4 +1,5 @@
 ---
+brief: "CollabLLM——多 LLM 协同训练的 RL 方法，verl 官方支持的实验性功能；多个模型相互作为 opponent/collaborator 生成更高质量训练信号，适用于对话/博弈/协作推理场景。"
 title: "CollabLLM"
 type: project
 domain: ai/llm/rl/other-algorithms

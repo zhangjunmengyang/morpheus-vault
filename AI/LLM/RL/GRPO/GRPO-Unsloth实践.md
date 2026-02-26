@@ -1,4 +1,5 @@
 ---
+brief: "GRPO Unsloth 实践——Unsloth 加速 GRPO 训练的工程指南；QLoRA + GRPO 组合降低显存需求，24GB 单卡可跑 7B 模型的 GRPO；配置参数/notebook 模板/保存量化模型的完整流程。"
 title: "GRPO"
 type: project
 domain: ai/llm/rl/grpo

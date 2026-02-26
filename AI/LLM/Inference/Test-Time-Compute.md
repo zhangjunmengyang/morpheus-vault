@@ -23,11 +23,11 @@ related:
   - "[[AI/LLM/Inference/推理优化|推理优化]]"
   - "[[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO]]"
   - "[[AI/LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]"
-  - "[[Gemini-3-Deep-Think]]"
-  - "[[ICLR-2026-趋势分析]]"
-  - "[[RLVR-Edge-of-Competence]]"
-  - "[[Deep-Thinking-Ratio-DTR]]"
-  - "[[采样策略]]"
+  - "[[AI/LLM/Inference/Gemini-3-Deep-Think|Gemini-3-Deep-Think]]"
+  - "[[AI/LLM/Evaluation/ICLR-2026-趋势分析|ICLR-2026-趋势分析]]"
+  - "[[AI/LLM/RL/Theory/RLVR-Edge-of-Competence|RLVR-Edge-of-Competence]]"
+  - "[[AI/LLM/Inference/Deep-Thinking-Ratio-DTR|Deep-Thinking-Ratio-DTR]]"
+  - "[[AI/LLM/Inference/采样策略|采样策略]]"
 ---
 
 # Test-Time Compute (TTC) — 推理时扩展综述
@@ -134,7 +134,7 @@ Gemini 3 Deep Think（2026）的路线：
 | 2025-01 | Stanford s1 | Budget forcing on 1B model | 超越 o1 on AIME |
 | 2026-02 | Gemini 3 Deep Think | TTC + internal verification | ARC-AGI-2: 84.6% (超人类均值) |
 
-> 参考：[[Gemini-3-Deep-Think]] [[ICLR-2026-趋势分析]]
+> 参考：[[AI/LLM/Inference/Gemini-3-Deep-Think|Gemini-3-Deep-Think]] [[AI/LLM/Evaluation/ICLR-2026-趋势分析|ICLR-2026-趋势分析]]
 
 ---
 
@@ -178,7 +178,7 @@ Gemini 3 Deep Think（2026）的路线：
    - PRM 提供 guidance，避免盲目搜索
 
 2. **与 RLVR 的关系**
-   - RLVR（[[RLVR-Edge-of-Competence]]）训练出能做长 CoT 的模型
+   - RLVR（[[AI/LLM/RL/Theory/RLVR-Edge-of-Competence|RLVR-Edge-of-Competence]]）训练出能做长 CoT 的模型
    - TTC 是这些模型在推理时的 deployment 策略
    - 两者协同：RL 训练赋予能力，TTC 在推理时激发
 
@@ -208,7 +208,7 @@ Gemini 3 Deep Think（2026）的路线：
 
 **Think@n**：基于 DTR 的 test-time scaling 策略，用 DTR 早期筛选 + 拒绝低质量生成，在匹配 SC@n 准确率的同时降低约 50% 计算成本。
 
-详见：[[Deep-Thinking-Ratio-DTR]]
+详见：[[AI/LLM/Inference/Deep-Thinking-Ratio-DTR|Deep-Thinking-Ratio-DTR]]
 
 **对 TTC 的启示**：TTC 的目标不应该是"更多 token"，而是"更多深层推理 token"。Budget forcing 只约束数量，未来的改进方向可能是约束 DTR，鼓励模型用有限 token 进行更深度的思考。
 
@@ -226,13 +226,13 @@ Gemini 3 Deep Think（2026）的路线：
 
 ## 关联笔记
 
-- [[Gemini-3-Deep-Think]] — TTC 前沿落地案例
-- [[推理优化]] — 工程层面的 inference 优化
-- [[Speculative Decoding]] — 另一种推理加速方向（减少 latency，与 TTC 目标相反）
-- [[ICLR-2026-趋势分析]] — TTC 是 ICLR 2026 最大热点（257篇）
-- [[RLVR-Edge-of-Competence]] — RL 训练如何赋予模型 TTC 能力
-- [[采样策略]] — Best-of-N、Beam Search 实现细节
-- [[Deep-Thinking-Ratio-DTR]] — 推理质量新指标，超越 token 长度
+- [[AI/LLM/Inference/Gemini-3-Deep-Think|Gemini-3-Deep-Think]] — TTC 前沿落地案例
+- [[AI/LLM/Inference/推理优化|推理优化]] — 工程层面的 inference 优化
+- [[AI/LLM/Inference/Speculative Decoding|Speculative Decoding]] — 另一种推理加速方向（减少 latency，与 TTC 目标相反）
+- [[AI/LLM/Evaluation/ICLR-2026-趋势分析|ICLR-2026-趋势分析]] — TTC 是 ICLR 2026 最大热点（257篇）
+- [[AI/LLM/RL/Theory/RLVR-Edge-of-Competence|RLVR-Edge-of-Competence]] — RL 训练如何赋予模型 TTC 能力
+- [[AI/LLM/Inference/采样策略|采样策略]] — Best-of-N、Beam Search 实现细节
+- [[AI/LLM/Inference/Deep-Thinking-Ratio-DTR|Deep-Thinking-Ratio-DTR]] — 推理质量新指标，超越 token 长度
 
 ---
 
@@ -297,7 +297,7 @@ TTC 揭示了一个深刻的范式转变：**推理能力不仅可以通过训�
 > - [[AI/LLM/Inference/推理优化|推理优化]] — 工程层面的 inference 优化（减少 latency）
 > - [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO]] — RL 训练赋予模型 TTC 能力
 > - [[AI/LLM/Architecture/DeepSeek-R1|DeepSeek-R1]] — GRPO + long CoT 的实践
-> - [[Deep-Thinking-Ratio-DTR]] — 推理质量新指标，思考深度 > 思考长度
+> - [[AI/LLM/Inference/Deep-Thinking-Ratio-DTR|Deep-Thinking-Ratio-DTR]] — 推理质量新指标，思考深度 > 思考长度
 
 ---
 

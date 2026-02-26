@@ -1,4 +1,5 @@
 ---
+brief: "SkillRL——经验驱动技能蒸馏的递归 Agent 演化；从历史轨迹抽象为层次化技能库，RL 训练中递归演化技能与策略，实现从 raw experience 到 policy improvement 的有效桥接；持续学习 Agent 方向。"
 tags: [RL, Agent, Skill-Learning, Continual-Learning]
 aliases: ["SkillRL", "技能增强强化学习", "递归技能演化"]
 created: 2026-02-15
@@ -811,5 +812,5 @@ def skill_quality_score(skill, validation_trajectories):
 
 - [[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]] — 同为长期 Agent RL，KLong 聚焦极长 horizon，SkillRL 聚焦技能层级化
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — SkillRL 的 RL 算法基础
-- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
-- [[AI/Agent/_MOC|Agent MOC]] — SkillRL 是 Agent RL 方向的子课题
+- [[AI/LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱
+- [[AI/Agent/目录|Agent MOC]] — SkillRL 是 Agent RL 方向的子课题

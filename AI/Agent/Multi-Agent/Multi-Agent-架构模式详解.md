@@ -1,13 +1,14 @@
 ---
 title: "Multi-Agent 架构模式详解"
+brief: "三种 Multi-Agent 架构深度解析含代码：Supervisor（中央调度）/Pipeline（顺序流水）/Debate（辩论共识）；各自适用场景/优劣权衡/实现模板；是 Multi-Agent 概述的深化版"
 type: concept
 domain: ai/agent/multi-agent
 created: "2026-02-13"
-updated: "2026-02-22"
+updated: "2026-02-23"
 tags:
   - ai/agent/multi-agent
   - type/concept
-rating: ★★★★☆
+rating: 4
 status: active
 ---
 

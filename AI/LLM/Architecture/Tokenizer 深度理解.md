@@ -1,5 +1,6 @@
 ---
 title: "Tokenizer 深度理解：BPE / WordPiece / SentencePiece / Tiktoken"
+brief: "深度拆解主流 Tokenizer 算法：BPE（GPT系列，频率驱动合并）/ WordPiece（BERT，最大化序列概率）/ SentencePiece（语言无关，字符级预分词）/ Tiktoken（GPT-4高效实现）。面试热点：词表大小对模型的影响、多语言 tokenizer 设计、OOV 处理策略。"
 date: 2026-02-13
 tags:
   - ai/llm/architecture
@@ -301,4 +302,4 @@ model.resize_token_embeddings(len(tokenizer))
 
 ---
 
-**相关笔记**：[[Transformer 位置编码]] | [[BERT]] | [[GPT]] | [[LLaMA]]
+**相关笔记**：[[AI/LLM/Architecture/Transformer 位置编码|Transformer 位置编码]] | [[AI/LLM/Architecture/BERT|BERT]] | [[AI/LLM/Architecture/GPT|GPT]] | [[AI/LLM/Architecture/LLaMA|LLaMA]] | [[AI/LLM/Architecture/Tokenizer-Embedding-手撕实操|Tokenizer-Embedding-手撕实操]] — 手写 BPE 合并 + token embedding lookup 完整实现

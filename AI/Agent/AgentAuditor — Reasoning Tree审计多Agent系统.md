@@ -1,8 +1,12 @@
 ---
 title: "AgentAuditor: Reasoning Tree 审计多Agent系统"
-tags: [Agent, Multi-Agent, Reasoning, Auditing, Preference-Optimization]
+brief: "用 Reasoning Tree 结构化表示多 Agent 推理分歧；ACPO（Anti-Consensus Preference Optimization）训练审计员识别正确少数派、抗迎合多数偏好；局部化审计比全局投票更精准（arXiv:2602.09341）"
+tags: [Agent, Multi-Agent, Reasoning, Auditing, Preference-Optimization, type/paper]
 created: 2026-02-15
+updated: 2026-02-23
 arxiv: "2602.09341"
+sources:
+  - "arXiv:2602.09341"
 ---
 
 # AgentAuditor: Auditing Multi-Agent LLM Reasoning Trees
@@ -274,4 +278,4 @@ L_ACPO = -E_D_trap[log σ(β log π_θ(y_w|x)/π_ref(y_w|x)
 - [[AI/Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]] — 被审计的系统架构
 - [[AI/Safety/AI安全与对齐-2026技术全景|AI 安全与对齐 2026 全景]] — Agent 安全在对齐全景中的位置
 - [[AI/Agent/IMAGINE — 多Agent蒸馏到单模型|IMAGINE]] — 多 Agent 系统的另一视角：蒸馏进单模型
-- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱
+- [[AI/Agent/目录|Agent MOC]] — Agent 知识全图谱

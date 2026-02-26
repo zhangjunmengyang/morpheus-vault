@@ -1,9 +1,10 @@
 ---
-title: "planner"
+title: "Planner：Multi-Agent 系统的任务分解核心"
+brief: "Planner 角色深度解析：高层意图→可执行子任务序列；设计模式（静态规划/动态重规划/Hierarchical）；与 Executor/Critic 协作；好的 Planner 是 MAS 智能上限的天花板"
 type: concept
 domain: ai/agent/multi-agent
 created: "2026-02-13"
-updated: "2026-02-13"
+updated: "2026-02-23"
 tags:
   - ai/agent/multi-agent
   - type/concept
@@ -107,7 +108,7 @@ Planner 的质量严重依赖底层 LLM 的推理能力。用 GPT-4 级别的模
 
 ## 相关
 
-- [[Multi-Agent 概述]]
+- [[AI/Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]]
 - [[AI/Agent/Frameworks/AutoGen|AutoGen]]
 - [[AI/Agent/Fundamentals/Tool Use|Tool Use]]
 - [[AI/Agent/Fundamentals/记忆模块|记忆模块]]

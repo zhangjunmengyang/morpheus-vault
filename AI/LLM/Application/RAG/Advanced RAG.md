@@ -1,4 +1,5 @@
 ---
+brief: "Advanced RAG 进阶技术——GraphRAG/Self-RAG/CRAG/Adaptive-RAG 的核心机制对比；多跳推理和动态知识场景的检索增强方案；RAG 工程师进阶面试的深度参考。"
 tags: [RAG, GraphRAG, Self-RAG, CRAG, Adaptive-RAG, Advanced-Retrieval]
 created: 2026-02-14
 status: draft
@@ -6,7 +7,7 @@ status: draft
 
 # Advanced RAG
 
-传统 [[RAG]] 系统在面对复杂推理、多跳查询和动态知识时存在局限性。Advanced RAG 技术通过引入自适应机制、知识图谱增强、质量评估和路由策略等方法，显著提升了检索增强生成的鲁棒性和准确性。
+传统 [[AI/RAG/RAG-2026-技术全景|RAG]] 系统在面对复杂推理、多跳查询和动态知识时存在局限性。Advanced RAG 技术通过引入自适应机制、知识图谱增强、质量评估和路由策略等方法，显著提升了检索增强生成的鲁棒性和准确性。
 
 ## Self-RAG：自适应检索与自我反思
 
@@ -435,4 +436,4 @@ A：Adaptive RAG 的查询分类通常包含：1）**复杂度判断**：基于�
 
 A：主要工程问题包括：1）**延迟控制**：复杂策略增加计算开销，需要合理设置超时和并发；2）**缓存策略**：缓存图查询结果、评估分数等中间结果；3）**降级方案**：当高级策略失败时，回退到简单 RAG；4）**成本管理**：平衡策略复杂度和计算资源；5）**监控体系**：跟踪各策略的成功率、延迟、准确性等指标；6）**A/B 测试**：对比不同策略在真实场景中的表现。建议采用微服务架构，将不同策略模块化，支持独立扩缩容和版本管理。
 
-相关链接：[[RAG]], [[Reranker]], [[文本分块策略]], [[LLM 评测体系]], [[知识图谱]], [[向量数据库]]
+相关链接：[[AI/RAG/RAG-2026-技术全景|RAG]], [[AI/LLM/Application/RAG/Reranker|Reranker]], [[AI/LLM/Application/RAG/文本分块策略|文本分块策略]], [[AI/LLM/LLM 评测体系|LLM 评测体系]], [[AI/LLM/Application/RAG/Advanced RAG|Advanced RAG — 知识图谱部分]], [[AI/RAG/向量数据库选型|向量数据库]]

@@ -1,7 +1,25 @@
 ---
-tags: [NLP, Tokenization, BPE, WordPiece, SentencePiece, 分词]
-created: 2026-02-14
-status: draft
+title: "Tokenizer 与分词：现代 LLM 的语言切分艺术"
+brief: "分词是 NLP 的第一步也是最被低估的环节。三大主流算法：BPE（贪心合并最频繁字符对，GPT/LLaMA 采用）、WordPiece（基于语言模型概率选择合并，BERT 采用）、Unigram（概率模型全局最优，SentencePiece 默认）。词表大小的黄金法则：英文 30-50K，多语言 50-100K。Byte-level BPE 彻底解决 OOV 问题，是现代 LLM 的主流选择。"
+type: concept
+domain: ai/llm/architecture
+created: "2026-02-14"
+updated: "2026-02-22"
+tags:
+  - ai/llm/tokenizer
+  - ai/llm/architecture
+  - type/concept
+status: complete
+sources:
+  - "Sennrich et al. *Neural Machine Translation of Rare Words with Subword Units (BPE)* arXiv:1508.07909"
+  - "Kudo & Richardson. *SentencePiece: A simple and language independent subword tokenizer and detokenizer for Neural Text Processing* arXiv:1808.06226"
+  - "Kudo. *Subword Regularization: Improving Neural Network Translation Models with Multiple Subword Candidates* arXiv:1804.10959 (Unigram LM)"
+  - "OpenAI tiktoken 文档 — https://github.com/openai/tiktoken"
+related:
+  - "[[AI/LLM/Architecture/BERT|BERT]]"
+  - "[[AI/LLM/Architecture/GPT|GPT]]"
+  - "[[AI/LLM/Architecture/Qwen|Qwen]]"
+  - "[[AI/LLM/Architecture/LLaMA|LLaMA]]"
 ---
 
 # Tokenizer 与分词：现代 LLM 的语言切分艺术
@@ -41,7 +59,7 @@ print(simple_split)
 
 ### 1. BPE (Byte Pair Encoding)
 
-BPE 是最广泛使用的子词算法，核心思想是贪心地合并最频繁的字符对。
+BPE（arXiv:1508.07909）是最广泛使用的子词算法，核心思想是贪心地合并最频繁的字符对。
 
 #### 算法原理
 
@@ -338,7 +356,7 @@ print(f"WordPiece分词: {tokens}")
 
 ### 3. Unigram Language Model
 
-SentencePiece 的默认算法，使用概率模型。
+SentencePiece 的默认算法（Kudo. *Subword Regularization* arXiv:1804.10959），使用概率模型。
 
 ```python
 import math
@@ -458,7 +476,7 @@ print(f"Unigram分词: {tokens}")
 
 ### 4. SentencePiece：统一框架
 
-Google 的 SentencePiece 提供了统一的接口：
+Google 的 SentencePiece（arXiv:1808.06226）提供了统一的接口：
 
 ```python
 # 安装: pip install sentencepiece
@@ -926,11 +944,60 @@ def adapt_tokenizer_for_domain(base_tokenizer, domain_corpus):
 - 版本管理（分词器版本与模型绑定）
 - 向后兼容（新版本兼容旧数据）
 
+## 📚 推荐阅读
+
+### 原始论文
+- [Neural Machine Translation of Rare Words with Subword Units (BPE)](https://arxiv.org/abs/1508.07909) — BPE 原文，子词分词的开山之作
+- [SentencePiece: A simple and language independent subword tokenizer](https://arxiv.org/abs/1808.06226) — 统一分词框架，支持 BPE/Unigram
+- [Subword Regularization (Unigram LM)](https://arxiv.org/abs/1804.10959) — Unigram 分词算法，概率模型方法
+
+### 深度解读
+- [HuggingFace Tokenizers 教程](https://huggingface.co/docs/tokenizers/) — 分词器训练和使用的最佳实践 ⭐⭐⭐⭐⭐
+- [Let's build the GPT Tokenizer (Karpathy)](https://www.youtube.com/watch?v=zduSFxRajkE) — Karpathy 从零实现 BPE 的视频教程 ⭐⭐⭐⭐⭐
+
+### 实践资源
+- [tiktoken](https://github.com/openai/tiktoken) — OpenAI 的高性能 BPE 实现，GPT-4 使用
+- [sentencepiece](https://github.com/google/sentencepiece) — Google 官方实现，LLaMA/T5/Qwen 使用
+- [tokenizers](https://github.com/huggingface/tokenizers) — HuggingFace 的 Rust 高性能分词库
+
+## 🔧 落地应用
+
+### 直接可用场景
+- **模型选型时的 Tokenizer 评估**：中文场景下，tiktoken（GPT-4）平均每个汉字 ~1.5 token，而 LLaMA 的 SentencePiece 每个汉字 ~2.5 token——直接影响有效上下文长度
+- **领域自定义 Tokenizer**：医学/法律等专业领域的术语如果被过度分割，会浪费上下文窗口。用领域语料训练自定义 BPE 可提升 15-30% 的压缩率
+- **多语言部署**：选择 Byte-level BPE 或 SentencePiece Unigram，确保零 OOV
+
+### 工程实现要点
+- **词表大小经验值**：英文 30-50K，多语言 50-100K，代码场景 50-100K
+- **Byte-level BPE 的代价**：中文每字符需要 3 个 UTF-8 字节，压缩前序列更长，需要更大词表补偿
+- **版本绑定**：Tokenizer 版本必须与模型版本严格绑定，更换分词器等于换了模型
+
+### 面试高频问法
+- Q: 为什么现代 LLM 不用字符级或词级分词？
+  A: 字符级序列太长（$O(5\times)$），词级有 OOV 问题且无法泛化到新词。子词分词是最优平衡——词表可控、无 OOV、保留形态学信息。BPE/Unigram 的压缩率在 3-5 characters/token 之间。
+
+## 💡 启发与思考
+
+### So What？对老板意味着什么
+- **Tokenizer 决定了模型的"视力"**：分词不好，模型看到的就是碎片化的字符而非有意义的语义单元。选模型时不只看参数量，还要看它的 tokenizer 对目标语言的效率
+- **中文场景的隐藏成本**：很多英文优先的模型（如早期 LLaMA）对中文分词效率低，同样 4K 上下文窗口的"有效中文容量"可能只有 GPT-4 的 60%
+
+### 未解问题与局限
+- 子词分词是否已经是最优方案？最近有 byte-level 模型（如 ByT5）直接在字节上建模，跳过分词步骤，但训练成本更高
+- 分词对下游任务的影响量化研究仍不充分——同一个模型，换分词器会造成多大的性能差异？
+- 代码分词的特殊挑战：缩进、括号、运算符的处理没有统一最优方案
+
+### 脑暴：如果往下延伸
+- 如果 [[AI/LLM/Architecture/Mamba-SSM|Mamba]] 的线性复杂度让超长序列变得廉价，字符级/字节级模型是否会卷土重来？（不再需要压缩序列长度）
+- [[AI/LLM/Architecture/Qwen|Qwen]] 的多语言分词策略 vs [[AI/LLM/Architecture/GPT|GPT-4]] 的 tiktoken：哪种对中文更友好？量化对比是一个有价值的实验
+
 ---
 
-**相关链接**：
-- [[BPE 算法详解]]
-- [[WordPiece 实现]]
-- [[SentencePiece 使用指南]]
-- [[多语言NLP]]
-- [[LLM预训练]]
+## See Also
+
+- [[AI/LLM/Architecture/BERT|BERT]] — 使用 WordPiece 分词（子词级）
+- [[AI/LLM/Architecture/GPT|GPT]] — 使用 Byte-level BPE (tiktoken)，字节级 BPE
+- [[AI/LLM/Architecture/LLaMA|LLaMA]] — 使用 SentencePiece BPE，多语言支持
+- [[AI/LLM/Architecture/Qwen|Qwen]] — 使用 SentencePiece，多语言优化，中文 token 效率高
+- [[AI/LLM/Architecture/Tokenizer深度理解]] — 同主题深度版（BPE/WordPiece/SentencePiece 原理对比 + 面试题）
+- [[AI/LLM/Architecture/Tokenizer-Embedding-手撕实操]] — 手撕实操版（BPE 算法 + Embedding 完整实现）

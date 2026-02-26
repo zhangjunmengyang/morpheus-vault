@@ -1,4 +1,5 @@
 ---
+brief: "DeepSeek-OCR Unsloth 实践——DeepSeek-VL OCR 能力的 Unsloth 微调工程指南；OCR 数据格式/标注规范/自定义 OCR 任务微调的完整流程；面向文档理解场景的 VLM 工程实践。"
 title: "DeepSeek-OCR"
 type: project
 domain: ai/mllm

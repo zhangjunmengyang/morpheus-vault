@@ -1,4 +1,5 @@
 ---
+brief: "如何深度科普 MCP——Model Context Protocol 的通俗解释框架；从「为什么需要标准化工具协议」到「MCP vs Function Calling vs REST API」的比较；适合对技术人员和非技术人员分层解释 MCP 价值的参考。"
 title: "如何给人深度科普 MCP"
 type: concept
 domain: ai/agent/mcp
@@ -389,5 +390,5 @@ MCP的真正贡献，在于它通过“**关注点分离**”这一经典的工�
 
 - [[AI/Agent/MCP/HF MCP Course|HF MCP Course]] — MCP 的课程版（实践）
 - [[AI/Agent/Fundamentals/Tool Use|Tool Use]] — Tool Use 是 MCP 的底层能力
-- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱
-- [[AI/LLM/_MOC|LLM MOC]] — MCP 在 LLM 生态中的位置
+- [[AI/Agent/目录|Agent MOC]] — Agent 知识全图谱
+- [[AI/LLM/目录|LLM MOC]] — MCP 在 LLM 生态中的位置

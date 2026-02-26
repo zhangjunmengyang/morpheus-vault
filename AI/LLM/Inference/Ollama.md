@@ -1,5 +1,6 @@
 ---
 title: "Ollama"
+brief: "本地运行 LLM 的轻量工具：一行命令拉取 Llama/Qwen/Mistral 等模型并在 CPU/GPU 上推理。支持 REST API（OpenAI 兼容）、Modelfile 自定义、多模型并发。是个人开发者和快速原型阶段的事实标准本地推理工具。"
 type: concept
 domain: ai/llm/inference
 created: "2026-02-13"
@@ -166,9 +167,18 @@ embedding = ollama.embeddings(model='nomic-embed-text', prompt='your text')
 3. **功能较简单**：没有 speculative decoding、prefix caching 等高级优化
 4. **自定义模型繁琐**：需要先转成 GGUF 格式
 
-## 相关
+## See Also
 
-- [[vLLM]] — 生产级推理引擎对比
-- [[AI/LLM/Frameworks/Unsloth/量化|量化]] — 量化技术详解
+**本地推理生态**
+- [[AI/LLM/Inference/vLLM|vLLM]] — 生产级推理引擎对比（Ollama 的进阶替代）
+- [[AI/LLM/Inference/vLLM-手撕实操|vLLM-手撕实操]] — vLLM 核心机制手撕（Continuous Batching / PagedKVCache）
+- [[AI/LLM/Inference/LLM-推理优化-2026-全景|LLM推理优化2026全景]] — 推理优化技术全貌
+
+**量化与模型格式**
+- [[AI/LLM/Frameworks/Unsloth/量化|量化]] — GGUF 量化技术详解
 - [[AI/LLM/Application/Embedding/Embedding|Embedding]] — Ollama 的 embedding 功能
-- [[AI/LLM/Application/Embedding/Embedding 选型|Embedding 选型]] — 本地 embedding 模型选择
+
+## 推荐阅读
+
+1. **官方文档**：[ollama.ai](https://ollama.ai) — 模型库 + API 参考
+2. **对比测试**：Ollama vs vLLM throughput benchmarks — 理解使用场景边界

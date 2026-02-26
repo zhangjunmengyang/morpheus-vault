@@ -1,4 +1,5 @@
 ---
+brief: "Training Loss 分析——LLM 训练中 Loss 曲线的正常模式和异常诊断；Loss spike/不收敛/过拟合的根因分析方法；梯度范数/学习率/batch size 对 loss 的影响；生产级 LLM 训练的调试参考手册。"
 title: "训练 Loss 曲线分析与调参"
 date: 2026-02-14
 tags: [training, debugging, loss, interview]
@@ -103,4 +104,4 @@ type: note
 - [[AI/Foundations/Training/Scaling Laws|Scaling Laws]] — loss 曲线宏观规律：参数量/数据量/计算量的幂律
 - [[AI/Foundations/Math/向量微积分|向量微积分]] — 梯度下降、反向传播的数学基础
 - [[AI/LLM/Frameworks/verl/verl 概述|verl 框架]] — 分布式 RL 训练中的 loss 监控
-- [[AI/Foundations/_MOC|Foundations MOC]] — 训练基础全图谱
+- [[AI/Foundations/目录|Foundations MOC]] — 训练基础全图谱

@@ -1,4 +1,5 @@
 ---
+brief: "Qwen3-VL Unsloth 训练——Qwen3 视觉语言模型的 Unsloth 微调工程指南；多模态数据格式/图像 token 处理/显存优化配置；低显存环境下微调 VLM 的实践参考。"
 title: "Qwen3-VL"
 type: project
 domain: ai/mllm
@@ -238,4 +239,4 @@ VLM 比纯文本模型显存大得多，因为图片 token 很多：
 - [[AI/MLLM/MLLM 概述|MLLM 概述]]
 - [[AI/LLM/Frameworks/Unsloth/Unsloth 概述|Unsloth 概述]]
 - [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
-- [[AI/MLLM/_MOC|MLLM MOC]]
+- [[AI/MLLM/目录|MLLM MOC]]

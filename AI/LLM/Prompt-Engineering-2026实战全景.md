@@ -1,7 +1,29 @@
 ---
 title: "Prompt Engineering 2026 实战全景"
+brief: "系统梳理 Prompt Engineering 从基础原理到 2026 前沿的完整技术栈，涵盖 ICL/CoT/ToT/ReAct/DSPy 等核心范式及安全攻防。核心洞察：PE 正从手工技巧走向工程化（DSPy 编译式优化）和极简化（Thinking Models 让'少即是多'成为新范式）。对构建生产级 LLM 应用和面试准备都是高价值武器。"
 date: 2026-02-20
-tags: [Prompt Engineering, LLM, 面试]
+updated: 2026-02-22
+tags:
+  - ai/llm/prompt-engineering
+  - type/survey
+  - status/complete
+status: complete
+type: survey
+domain: ai/llm
+sources:
+  - "Chain-of-Thought Prompting (Wei et al.) arXiv:2201.11903"
+  - "Few-Shot Learners / GPT-3 (Brown et al.) arXiv:2005.14165"
+  - "Self-Consistency (Wang et al.) arXiv:2203.11171"
+  - "Tree of Thoughts (Yao et al.) arXiv:2305.10601"
+  - "ReAct (Yao et al.) arXiv:2210.03629"
+  - "APE / Automatic Prompt Engineer (Zhou et al.) arXiv:2211.01910"
+  - "DSPy (Khattab et al.) arXiv:2310.03714"
+  - "What learning algorithm is in-context learning? (Akyürek et al.) arXiv:2211.15661"
+related:
+  - "[[AI/LLM/目录|LLM MOC]]"
+  - "[[AI/LLM/LLM评估与Benchmark-2026技术全景|LLM 评估与 Benchmark 2026]]"
+  - "[[AI/Agent/AI-Agent-2026-技术全景|AI Agent 2026 全景]]"
+  - "[[AI/Safety/AI安全与对齐-2026技术全景|AI 安全与对齐]]"
 ---
 
 # Prompt Engineering 2026 实战全景
@@ -30,7 +52,7 @@ tags: [Prompt Engineering, LLM, 面试]
 
 In-Context Learning 是 LLM 最令人惊讶的 emergent ability 之一。模型在 pre-training 阶段通过海量文本学到了一种"隐式的学习算法"——当你在 prompt 中给出几个 input-output pair 时，模型并不是在"记住"这些例子，而是在 forward pass 中通过 attention 机制**动态构建一个临时的任务解决器**。
 
-从数学上理解：Transformer 的 self-attention 层本质上可以实现一种形式的 gradient descent。2022 年 Akyürek et al. 的研究（"What learning algorithm is in-context learning?"）证明，Transformer 在 ICL 过程中隐式地执行了类似于线性回归的最小二乘优化。后续研究进一步表明，更大的模型能在 context 中实现更复杂的学习算法。
+从数学上理解：Transformer 的 self-attention 层本质上可以实现一种形式的 gradient descent。2022 年 Akyürek et al. 的研究（"What learning algorithm is in-context learning?", [arXiv:2211.15661](https://arxiv.org/abs/2211.15661)）证明，Transformer 在 ICL 过程中隐式地执行了类似于线性回归的最小二乘优化。后续研究进一步表明，更大的模型能在 context 中实现更复杂的学习算法。
 
 关键洞察：
 - **ICL ≠ Fine-tuning**：ICL 不改变模型权重，只改变 attention pattern
@@ -213,7 +235,7 @@ for the client.
 
 #### 原理
 
-Chain-of-Thought Prompting（Wei et al., 2022）是 Prompt Engineering 历史上最重要的突破之一。核心思想极其简单：**让模型在给出最终答案之前，先输出中间推理步骤**。
+Chain-of-Thought Prompting（Wei et al., 2022, [arXiv:2201.11903](https://arxiv.org/abs/2201.11903)）是 Prompt Engineering 历史上最重要的突破之一。核心思想极其简单：**让模型在给出最终答案之前，先输出中间推理步骤**。
 
 为什么 CoT 有效？
 1. **分解复杂性**：将一个需要多步推理的问题拆解为多个简单步骤，每一步的错误率更低
@@ -301,7 +323,7 @@ Identify the bug and fix it.
 
 #### 原理
 
-Tree-of-Thought（Yao et al., 2023）将 CoT 的线性推理链扩展为树状搜索结构。核心思想：
+Tree-of-Thought（Yao et al., 2023, [arXiv:2305.10601](https://arxiv.org/abs/2305.10601)）将 CoT 的线性推理链扩展为树状搜索结构。核心思想：
 
 1. **分解（Decomposition）**：将问题分解为多个推理步骤
 2. **生成（Generation）**：在每个步骤生成多个候选思路
@@ -381,7 +403,7 @@ def tree_of_thought(problem, breadth=3, max_depth=5):
 
 #### 原理
 
-Self-Consistency（Wang et al., 2022）基于一个直觉：**对于同一个问题，正确的推理路径可能有多条，但它们应该收敛到相同的答案**。
+Self-Consistency（Wang et al., 2022, [arXiv:2203.11171](https://arxiv.org/abs/2203.11171)）基于一个直觉：**对于同一个问题，正确的推理路径可能有多条，但它们应该收敛到相同的答案**。
 
 工作流程：
 1. 对同一问题用 CoT 生成 N 条独立的推理路径（通过 temperature > 0 引入随机性）
@@ -441,7 +463,7 @@ def self_consistent_code_gen(task_description, test_cases, n=5):
 
 #### 原理
 
-ReAct（Yao et al., 2022）将**推理（Reasoning）**和**行动（Action）**交织在一起，让模型能够：
+ReAct（Yao et al., 2022, [arXiv:2210.03629](https://arxiv.org/abs/2210.03629)）将**推理（Reasoning）**和**行动（Action）**交织在一起，让模型能够：
 
 1. **Thought**：推理当前情况，决定下一步做什么
 2. **Action**：调用外部工具（搜索、计算器、API 等）
@@ -958,7 +980,7 @@ Performance findings: {step_3_output}
 
 #### 原理
 
-DSPy（Khattab et al., Stanford, 2023-2024）是一个革命性的框架，它将 Prompt Engineering 从**手工艺**变成了**工程学科**。核心理念：
+DSPy（Khattab et al., Stanford, 2023-2024, [arXiv:2310.03714](https://arxiv.org/abs/2310.03714)）是一个革命性的框架，它将 Prompt Engineering 从**手工艺**变成了**工程学科**。核心理念：
 
 **不要写 prompt，写程序。让编译器去优化 prompt。**
 
@@ -2786,9 +2808,79 @@ You are a banking compliance assistant.
 
 ---
 
+---
+
+## 📚 推荐阅读
+
+### 原始论文
+- [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903) (Wei et al., 2022) — CoT 奠基之作，PE 历史上最重要的突破
+- [Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/abs/2305.10601) (Yao et al., 2023) — 从线性推理到树状搜索，开创性地引入规划能力
+- [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629) (Yao et al., 2022) — Agent 系统的理论基石，推理+行动融合
+- [DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines](https://arxiv.org/abs/2310.03714) (Khattab et al., 2023) — PE 从手工艺走向工程化的标志性工作
+- [Self-Consistency Improves Chain of Thought Reasoning](https://arxiv.org/abs/2203.11171) (Wang et al., 2022) — 多数投票简单有效，成本-效果最优的可靠性提升方法
+- [Large Language Models are Zero-Shot Reasoners](https://arxiv.org/abs/2205.11916) (Kojima et al., 2022) — "Let's think step by step" 的发现
+- [Automatic Prompt Engineer (APE)](https://arxiv.org/abs/2211.01910) (Zhou et al., 2022) — 自动 prompt 优化的先驱
+
+### 深度解读
+- [Prompt Engineering Guide](https://www.promptingguide.ai/) — 最全面的 PE 开源指南，持续更新 ⭐⭐⭐⭐⭐
+- [Anthropic Prompt Engineering Best Practices](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering) — Claude 官方 PE 指南，工业级实践 ⭐⭐⭐⭐⭐
+- [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering) — GPT 系列的官方最佳实践 ⭐⭐⭐⭐
+
+### 实践资源
+- [DSPy GitHub](https://github.com/stanfordnlp/dspy) — 声明式 prompt 编程框架，生产级工具
+- [LangChain](https://github.com/langchain-ai/langchain) — 基于 ReAct 范式的 Agent 开发框架
+- [NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails) — NVIDIA 的 LLM 安全护栏框架
+
+---
+
+## 🔧 落地应用
+
+### 直接可用场景
+- **RAG 系统优化**：用 CoT + Structured Output 让 LLM 基于检索文档生成有引用的回答，few-shot 示例定义输出格式，Self-Consistency 多次采样选最佳
+- **客服/内部助手**：System Prompt 定义角色边界 + Guard Rails 防注入 + Prompt Chaining 分阶段处理复杂工单
+- **代码审查自动化**：ReAct 模式让 LLM 读代码→发现问题→建议修复，Prompt Chaining 分安全/性能/风格多维度审查
+- **数据提取 Pipeline**：Structured Output + JSON Schema 强制约束，Few-Shot 定义提取模式，适合合同/简历/财报等结构化提取
+
+### 工程实现要点
+- **温度参数选择**：事实性任务 temperature=0；创意任务 0.7-1.0；Self-Consistency 采样 0.5-0.7
+- **Few-Shot 数量甜区**：3-5 个示例通常最优，超过 8 个边际递减且浪费 context
+- **成本控制**：Prompt Chaining 中简单步骤用小模型（Haiku/GPT-4o-mini），复杂步骤用强模型（Opus/GPT-4）
+- **System Prompt 长度**：控制在 500-1500 tokens，过长会稀释模型注意力
+- **常见坑**：JSON 输出时 LLM 偶尔生成 markdown 代码块包裹的 JSON → 后处理需 strip；Few-Shot 顺序影响大 → 把最相关的放最后
+
+### 面试高频问法
+- Q: CoT 和 ToT 的本质区别是什么？什么场景用哪个？
+  A: CoT 是线性推理链，适合步骤明确的问题；ToT 是树状搜索，适合需要回溯和多路径探索的问题（如 Game of 24、创意写作）。ToT 成本是 CoT 的 N×B 倍。
+- Q: 如何设计一个防 Prompt Injection 的系统？
+  A: 纵深防御五层——输入过滤（正则+关键词）→ System Prompt 加固 → LLM 分类器检测注入 → 输出过滤 → 权限最小化。没有 100% 防御，但可大幅提高攻击成本。
+- Q: DSPy 和手写 prompt 的本质区别？
+  A: 手写 prompt 是 static string，DSPy 是 compiled program。DSPy 通过 Signature + Module + Optimizer 自动搜索最优 prompt 组合，可复现、可版本管理、模型切换时自动重优化。
+
+---
+
+## 💡 启发与思考
+
+### So What？对老板意味着什么
+- **PE 是 LLM 应用的第一杠杆**：在不改模型、不加数据的前提下，好的 PE 可以让效果提升 20-50%。对任何 LLM 项目，PE 优化的 ROI 都远高于微调
+- **从技巧到工程**：DSPy 的出现标志着 PE 从"艺术"走向"科学"。未来的竞争力不在于记住多少 PE 技巧，而在于能否搭建自动化 PE 优化 pipeline
+- **Thinking Models 改变游戏规则**：o1/o3/Claude Extended Thinking 等模型让"少即是多"成为新范式——简洁的目标描述比冗长的步骤指令效果更好
+
+### 未解问题与局限
+- **Unfaithful Reasoning**：CoT 生成的推理步骤可能与模型内部计算不一致，目前无可靠检测方法
+- **Prompt Injection 的根本性缺陷**：LLM 架构上没有指令和数据的硬隔离，注入防御永远是猫鼠游戏
+- **跨模型迁移性差**：为 GPT-4 精心优化的 prompt 换到 Claude 可能效果大幅下降，DSPy 的自动重编译是部分解法
+- **评估难题**：PE 效果的评估本身依赖好的评估指标，而开放式生成的评估至今没有完美方案
+
+### 脑暴：如果往下延伸
+- **PE + RL 的融合**：如果把 prompt 优化建模为 RL 问题（DSPy/OPRO 的方向），结合 [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO]] 的思想，能否实现全自动的 prompt 进化？
+- **多模态 PE 的标准化**：图文混合 prompt 目前没有 DSPy 级别的自动优化工具，这是一个空白市场
+- **System Prompt 作为产品护城河**：Claude Artifacts、Cursor、Replit 等产品的核心差异化越来越依赖 System Prompt 设计，这可能成为一种新的 IP 形式
+
+---
+
 ## See Also
 
-- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱
+- [[AI/LLM/目录|LLM MOC]] — 大语言模型知识全图谱
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — 自动 prompt 优化的 RL 方向：从手动 PE 到 E-SPL/GEPA 自动进化
 - [[AI/Agent/Agentic-RL/Agent-RL-训练实战指南|Agent RL 训练实战指南]] — System prompt 在 Agentic RL 中的角色
 - [[AI/Safety/AI安全与对齐-2026技术全景|AI 安全与对齐 2026 全景]] — Prompt injection 攻击的防御视角

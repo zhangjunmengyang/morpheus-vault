@@ -1,4 +1,6 @@
 ---
+title: "Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models"
+brief: "DeepSeek-AI + PKU（arXiv:2601.07372）提出 Engram：用现代化 N-gram 嵌入表实现'记忆稀疏'，作为与 MoE 计算稀疏互补的第二轴。100B 参数表推理时卸载到主机内存开销<3%，在同等参数/FLOPs下全面优于纯 MoE 基线。预计纳入 DeepSeek V4。"
 tags:
   - architecture
   - sparsity
@@ -11,7 +13,6 @@ tags:
 date: 2026-02-20
 arxiv: "2601.07372"
 github: "deepseek-ai/Engram"
-title: "Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models"
 rating: ★★★★★
 institution: DeepSeek-AI + Peking University
 expected_in: DeepSeek V4
@@ -209,9 +210,9 @@ GLM-5 用的是 DeepSeek Sparse Attention（content-aware dynamic sparsity），
 
 ## 与 Vault 其他笔记的连接
 
-- → [[GLM-5-技术报告精读]] (DSA attention 稀疏化，同类思路)
-- → [[Slime-RL-Framework]] (DeepSeek post-training 框架)
-- → [[ReFINE-Fast-Weight-RL-Next-Sequence-Prediction]] (Fast weight 的记忆轴，不同实现)
-- → [[MAGE-Block-Diffusion-LLM-Sparse-Attention]] (稀疏注意力，同日读)
-- → [[KV Cache 优化]] (记忆 vs 计算的权衡)
-- → [[MoE 架构]] (Engram 的互补轴)
+- → [[AI/Frontiers/GLM-5-技术报告精读|GLM-5-技术报告精读]] (DSA attention 稀疏化，同类思路)
+- → [[AI/LLM/Frameworks/Slime-RL-Framework|Slime-RL-Framework]] (DeepSeek post-training 框架)
+- → [[AI/LLM/Architecture/ReFINE-Fast-Weight-RL-Next-Sequence-Prediction|ReFINE-Fast-Weight-RL-Next-Sequence-Prediction]] (Fast weight 的记忆轴，不同实现)
+- → [[AI/LLM/Inference/MAGE-Block-Diffusion-LLM-Sparse-Attention|MAGE-Block-Diffusion-LLM-Sparse-Attention]] (稀疏注意力，同日读)
+- → [[AI/LLM/Inference/KV Cache|KV Cache 优化]] (记忆 vs 计算的权衡)
+- → [[AI/LLM/Architecture/MoE 深度解析|MoE 架构]] (Engram 的互补轴)

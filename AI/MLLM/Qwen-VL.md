@@ -1,4 +1,5 @@
 ---
+brief: "Qwen-VL——阿里 Qwen 多模态系列（Qwen-VL → Qwen2.5-VL → Qwen3-VL）；视觉 token 压缩/动态分辨率/文档理解特化的技术演进；国内最强开源 VLM 系列，在 OCR 和文档理解上表现突出。"
 title: "Qwen-VL"
 type: paper
 domain: ai/mllm

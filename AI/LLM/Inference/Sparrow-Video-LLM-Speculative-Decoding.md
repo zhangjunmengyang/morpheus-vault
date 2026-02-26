@@ -1,5 +1,6 @@
 ---
 title: "Sparrow: Video LLM Speculative Decoding via Visual Semantic Offloading"
+brief: "（arXiv:2602.15318）将 Speculative Decoding 扩展到 Video LLM：用轻量 Visual Semantic Draft Model 预测跨帧视觉 token，大模型并行验证；针对视频帧间冗余高的特性设计 Visual Offloading，减少主模型处理量。在视频 QA 上实现 2-3× 加速，视频质量无损。"
 type: paper
 domain: ai/llm/inference
 tags:

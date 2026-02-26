@@ -1,6 +1,8 @@
 ---
 title: "OMNI-LEAK: Orchestrator Multi-Agent Network Induced Data Leakage"
+brief: "Oxford/Torr+Gal lab，ICML 2026：单次 prompt injection 通过 orchestrator 链式传播污染整个多 Agent 网络（数据外泄）；4/5 frontier 模型可被攻陷，15,000次实验；Claude Sonnet 4 唯一幸存；完整 promptware kill chain 实例（arXiv:2602.13477）"
 date: 2026-02-21
+updated: 2026-02-22
 tags:
   - ai/safety
   - multi-agent
@@ -11,7 +13,7 @@ tags:
   - icml2026
 domain: ai/safety
 arxiv: "2602.13477"
-rating: ★★★★★
+rating: 5
 status: active
 ---
 
@@ -199,6 +201,12 @@ OMNI-LEAK 的 clever 在于它**没有试图直接攻破任何单个 agent 的�
 **Phase 2.3 规划应当包含**：对外部工具返回内容的 injection scan，不仅仅是对 MEMORY.md 的写入扫描。
 
 ---
+
+## See Also
+
+- [[AI/Safety/PI-Landscape-SoK-Prompt-Injection-Taxonomy-Defense|PI-Landscape SoK]] ⭐ — OMNI-LEAK 是 SoK "indirect injection → context-dependent"盲区的核心实例；SoK 的不可能三角框架解释了为何防御OMNI-LEAK类攻击在高可用场景下极难实现
+- [[AI/Safety/Multi-Agent-Defense-Pipeline-Prompt-Injection|Multi-Agent Defense Pipeline]] — OMNI-LEAK 暴露了攻击链，Multi-Agent Defense 提供了应对多Agent场景injection的防御框架（Chain + Coordinator双层架构）
+- [[AI/Safety/Promptware-Kill-Chain-LLM-Malware|Promptware Kill Chain]] ⭐ — OMNI-LEAK 是七阶段 kill chain 的完整实例（Initial Access → Persistence(SQL DB注入) → Lateral Movement(orchestrator链) → Actions(数据外泄)）；Kill Chain 框架提供了 OMNI-LEAK 的理论归类（arXiv:2601.09625，Schneier联署）
 
 ## Tags
 #MultiAgent #OrchestratorPattern #PromptInjection #DataLeakage #RedTeaming #AgentSecurity #ICML2026 #盾卫 #信息流控制 #MultiAgentSafety

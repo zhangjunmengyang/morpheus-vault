@@ -1,4 +1,5 @@
 ---
+brief: "verl 实现其他 RL 方法——在 verl 框架中扩展非标准 RL 算法的工程指南；自定义 advantage 计算/loss function/采样策略的接口；DAPO/GRPO 变种在 verl 中的实现参考。"
 title: "实现其他 RL 方法"
 type: concept
 domain: ai/llm/frameworks/verl
@@ -147,6 +148,6 @@ def dapo_loss(ratio, advantages, clip_low=0.2, clip_high=0.28):
 - [[AI/LLM/Frameworks/verl/verl 概述|verl 概述]]
 - [[AI/LLM/Frameworks/verl/算法概述|算法概述]]
 - [[AI/LLM/Frameworks/verl/HybridFlow|HybridFlow]]
-- [[AI/LLM/RL/_MOC|RL 算法总览]]
+- [[AI/LLM/RL/目录|RL 算法总览]]
 - [[AI/LLM/RL/DPO/DPO|DPO]]
 - [[AI/LLM/RL/GRPO/GRPO|GRPO]]

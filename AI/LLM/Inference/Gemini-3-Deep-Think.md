@@ -1,5 +1,6 @@
 ---
 title: "Gemini 3 Deep Think"
+brief: "Google DeepMind 2026-02-12 发布 Gemini 3 Deep Think：具备 Extended Thinking（链式推理扩展）能力的旗舰推理模型，在 AIME 2025/Codeforces 等高难度 benchmark 超越 o3；分析 Deep Think 模式的 token 使用特征和推理效率。"
 type: model
 domain: ai/llm/inference
 tags:
@@ -90,12 +91,16 @@ ARC-AGI 不测记忆，测的是 **novel task generalization**：
    - 测 novel task generalization，不是 memorization
    - 但仍是受限的视觉推理域，不代表 full AGI
 
-## 关联笔记
+## See Also
 
-- [[推理优化]]
-- [[Speculative Decoding]]
-- [[KV Cache 优化]]
-- [[ICLR-2026-趋势分析]]
+**Aletheia 系列（Gemini 3 Deep Think 作为基础模型的最高难度实测）**
+- [[AI/Agent/Aletheia-Gemini3-DeepThink-FirstProof|Aletheia FirstProof（arXiv:2602.21201，2026-02-25）]] ⭐ — **Gemini 3 Deep Think 迄今最强能力展示**：基于本模型的 Aletheia agent 在 FirstProof 挑战赛自主解决 6/10 研究级数学题，包括 Weinberger 书中的开放问题；P7 推理计算量比以往观测高一个数量级，验证 TTC scaling 对真正困难问题有质的影响
+- [[AI/Agent/Aletheia-Math-Research-Agent|Aletheia（前作：Erdős 数据库）]] — 同一基础模型的前一阶段挑战
+
+**推理体系**
+- [[AI/LLM/Inference/LLM-推理优化-2026-全景|LLM 推理优化 2026 全景]] — TTC scaling 在推理优化整体框架中的位置
+- [[AI/LLM/Inference/SpeculativeDecoding|Speculative Decoding]] — 推理加速体系
+- [[AI/LLM/Inference/KV-Cache优化|KV Cache 优化]] — 推理内存优化
 
 ---
-*Created: 2026-02-16 by Scholar heartbeat*
+*Created: 2026-02-16 by Scholar heartbeat | See Also updated: 2026-02-25 by Librarian*

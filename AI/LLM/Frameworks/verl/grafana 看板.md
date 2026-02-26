@@ -1,4 +1,5 @@
 ---
+brief: "verl Grafana 监控看板——RL 训练过程的关键指标可视化；reward/KL/entropy/clip fraction 等训练健康度指标的监控配置；识别 reward hacking 和 entropy collapse 的早期预警指标。"
 title: "grafana 看板"
 type: concept
 domain: ai/llm/frameworks/verl

@@ -1,4 +1,5 @@
 ---
+brief: "BLIP-2（Salesforce，2023）——用 Q-Former 桥接冻结视觉 encoder 和 LLM；两阶段预训练（视觉语言对齐→语言生成）；参数高效的多模态预训练范式；LLaVA 等后续工作的重要参照基线。"
 title: "BLIP-2"
 type: paper
 domain: ai/mllm

@@ -1,4 +1,5 @@
 ---
+brief: "Unsloth CPT（Continued Pre-Training）——继续预训练的 Unsloth 工程指南；大规模文本数据的高效预训练配置，打包策略（packing）提升 GPU 利用率；领域适应预训练的 Unsloth 实践。"
 title: "CPT（continual pretraining）"
 type: concept
 domain: ai/llm/frameworks/unsloth

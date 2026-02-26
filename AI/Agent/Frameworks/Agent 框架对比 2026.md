@@ -1,4 +1,5 @@
 ---
+brief: "Agent 框架对比 2026——LangGraph/CrewAI/AutoGen/DSPy/LlamaIndex 五大框架的完整对比；状态管理/多 Agent 协作/工具集成/调试能力的横向评估；Interview-prep 标注，框架选型的面试标准答案。"
 tags: [agent, framework, langgraph, crewai, autogen, dspy, interview-prep]
 created: 2026-02-14
 status: draft

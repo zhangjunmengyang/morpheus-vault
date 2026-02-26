@@ -1,4 +1,5 @@
 ---
+brief: "RLVR at the Edge of Competence——揭示 RLVR 只在模型能力边界附近有效（可以解但不稳定的任务）；太难 or 太简单均无法产生学习信号；对课程学习和任务难度调度有直接指导意义。"
 title: "RLVR at the Edge of Competence"
 type: paper
 domain: ai/llm/rl
@@ -94,4 +95,4 @@ RLVR 的有效性与数据课程设计强相关。**设计一个覆盖连续难�
 - [[AI/LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] — 能力边界上的 curriculum：Goldilocks 选"刚好难"的任务，RLVR Edge 研究有效训练区间
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — Exploration 维度：能力边界与探索策略的关系
 - [[AI/LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — 同为 difficulty-aware：MARS 在 reward model 层，RLVR Edge 在 policy 层
-- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
+- [[AI/LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱

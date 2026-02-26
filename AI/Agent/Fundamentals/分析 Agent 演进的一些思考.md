@@ -1,4 +1,5 @@
 ---
+brief: "Agent 演进思考——从 ReAct 到 Agentic RL 的演化路径分析；Planning/Memory/Tool Use/Learning 四个维度的历史演进；作者对未来 Agent 能力突破方向的判断（推理能力 > 工具数量）。"
 title: "分析 Agent 演进的一些思考"
 type: thought
 domain: ai/agent/fundamentals
@@ -186,5 +187,5 @@ Human node
 
 - [[AI/Agent/Fundamentals/Agent or Workflow？|Agent or Workflow？]] — 演进分析中的核心问题
 - [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — 演进的最新前沿：Agentic RL
-- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱
+- [[AI/Agent/目录|Agent MOC]] — Agent 知识全图谱
 - [[AI/Frontiers/Kimi-K2.5-技术分析|Kimi K2.5]] — Agent 演进的工业标杆

@@ -1,4 +1,5 @@
 ---
+brief: "GPG verl 实践——Group Policy Gradient 的 verl 工程实现；GPG 是 GRPO 的早期变体，组内策略梯度的基础形式；verl 中的训练配置参考和与 GRPO 的算法差异对比。"
 title: "GPG"
 type: project
 domain: ai/llm/rl/other-algorithms

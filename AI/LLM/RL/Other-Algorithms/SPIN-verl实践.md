@@ -1,4 +1,5 @@
 ---
+brief: "SPIN verl 实践——Self-Play Fine-Tuning 的 verl 工程实现；模型自对弈生成训练数据替代人工标注偏好对，无监督对齐方向；verl 实现细节和自对弈数据生成流程。"
 title: "SPIN"
 type: project
 domain: ai/llm/rl/other-algorithms

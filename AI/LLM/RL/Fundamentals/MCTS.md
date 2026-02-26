@@ -1,5 +1,6 @@
 ---
 title: "蒙特卡洛树搜索 MCTS"
+brief: "蒙特卡洛树搜索（MCTS）——选择+扩展+模拟+反向传播四步循环，通过 UCB 公式平衡探索与利用；AlphaGo 核心算法，在 LLM reasoning/search 中作为 tree-of-thought 的底层搜索机制重新受到关注。"
 type: concept
 domain: ai/llm/rl/fundamentals
 created: "2026-02-13"
@@ -45,5 +46,5 @@ https://zhuanlan.zhihu.com/p/9644482549
 
 - [[AI/LLM/RL/Fundamentals/RL 概览|RL 概览]] — MCTS 在 RL 框架中的位置（树搜索 vs 梯度策略）
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — Exploration 维度：MCTS 与 GRPO 探索策略对比
-- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
-- [[AI/Agent/_MOC|Agent MOC]] — MCTS 在 Agent planning 中的应用
+- [[AI/LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱
+- [[AI/Agent/目录|Agent MOC]] — MCTS 在 Agent planning 中的应用

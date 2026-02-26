@@ -1,9 +1,10 @@
 ---
 title: "AI 伦理和治理"
+brief: "AI 伦理与治理概览：偏见/公平/透明/可问责/隐私五大维度；全球监管框架对比（EU AI Act/美国/中国）；对齐与治理的边界划分"
 type: concept
 domain: ai/safety
 created: "2026-02-13"
-updated: "2026-02-13"
+updated: "2026-02-22"
 tags:
   - ai/safety
   - type/concept
@@ -87,6 +88,6 @@ AI 伦理最大的挑战不是技术问题，而是**激励不对齐** —— �
 
 ## 相关
 
-- [[AI 安全及隐私保护]]
+- [[AI/Safety/AI 安全及隐私保护|AI 安全及隐私保护]]
 - [[AI/LLM/Application/Prompt-攻击|prompt 攻击]]
 - [[AI/AI 思考|AI 思考]]

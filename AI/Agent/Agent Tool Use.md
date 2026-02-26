@@ -1,6 +1,8 @@
 ---
 title: "Agent Tool Use：Function Calling、ReAct 与工具选择策略"
+brief: "Agent 工具调用深度指南：Function Calling 标准格式、ReAct 推理-行动循环、工具选择策略（路由/级联/并行）、错误处理与重试机制；面试热点——工具调用 vs 代码生成"
 date: 2026-02-13
+updated: 2026-02-23
 tags:
   - ai/agent
   - ai/agent/tool-use
@@ -99,7 +101,7 @@ tool_call = response.choices[0].message.tool_calls[0]
 
 ## 3. ReAct 模式
 
-[[ReAct]]（Reasoning + Acting）是最经典的 Agent 推理框架，由 Yao et al. (2022) 提出：
+[[AI/Agent/Fundamentals/ReAct 与 CoT|ReAct]]（Reasoning + Acting）是最经典的 Agent 推理框架，由 Yao et al. (2022) 提出：
 
 ### 3.1 核心循环
 
@@ -165,7 +167,7 @@ tc_agent = create_tool_calling_agent(llm, tools, tc_prompt)
 | **全量注入** | 所有工具定义直接放入 system prompt | 工具数 < 20 |
 | **语义检索** | 将工具描述 embedding，按 query 语义检索 top-K | 工具数 20-200 |
 | **分类路由** | 先用小模型/classifier 判断意图类别，再加载该类工具 | 工具数 > 200 |
-| **MCP 动态发现** | 通过 [[MCP]] 协议按需从 Tool Server 获取工具 | 分布式系统 |
+| **MCP 动态发现** | 通过 [[AI/Agent/MCP/如何给人深度科普 MCP|MCP]] 协议按需从 Tool Server 获取工具 | 分布式系统 |
 | **工具推荐模型** | 专门训练一个 tool selection model | 超大规模 |
 
 ```python
@@ -267,7 +269,7 @@ follow_up = client.messages.create(
 
 ## 6. MCP：工具生态的标准化
 
-[[MCP]]（Model Context Protocol）由 Anthropic 提出，旨在标准化 Agent 与工具的交互协议：
+[[AI/Agent/MCP/如何给人深度科普 MCP|MCP]]（Model Context Protocol）由 Anthropic 提出，旨在标准化 Agent 与工具的交互协议：
 
 - **Server 端**：暴露 tools、resources、prompts
 - **Client 端**：LLM 应用通过 MCP Client 连接 Server

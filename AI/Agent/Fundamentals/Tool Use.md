@@ -1,4 +1,5 @@
 ---
+brief: "Tool Use——LLM 工具调用的基础原理：Function Calling 协议/JSON Schema 定义/tool selection 机制；ReAct（推理+行动）和 ToolFormer 的对比；是 Agent 能力的基础组件，RAG/搜索/计算工具的接入方式。"
 title: "Tools"
 type: concept
 domain: ai/agent/fundamentals

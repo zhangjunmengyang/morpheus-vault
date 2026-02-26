@@ -1,4 +1,5 @@
 ---
+brief: "Tokenizer 分词——BPE/WordPiece/SentencePiece 三大分词算法对比；tokenization 对模型能力的影响（中文 token 效率/数学符号覆盖）；自定义词表扩充的工程实践；面试被问 tokenization 的标准参考。"
 title: "Tokenizer 与分词"
 date: 2026-02-14
 tags:
@@ -310,4 +311,4 @@ tokens = tokenizer.encode("Hello, 世界!")
 - [[AI/LLM/Architecture/Tokenizer 深度理解|Tokenizer 深度理解]] — 深度版：BPE/WordPiece/SentencePiece 内部机制
 - [[AI/Foundations/DL-Basics/Transformer|Transformer 通识]] — Tokenizer 在 Transformer pipeline 中的位置
 - [[AI/Foundations/ML-Basics/数据预处理|数据预处理]] — Tokenization 是文本数据预处理的核心步骤
-- [[AI/Foundations/_MOC|Foundations MOC]] — NLP 基础全图谱
+- [[AI/Foundations/目录|Foundations MOC]] — NLP 基础全图谱

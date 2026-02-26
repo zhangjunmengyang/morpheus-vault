@@ -1,5 +1,6 @@
 ---
 title: "Accordion-Thinking: Self-Regulated Step Summaries"
+brief: "（arXiv:2602.03249，ICML 2026）训练 LLM 在推理中途自动将已完成步骤压缩为摘要，释放 KV Cache 空间用于后续深度推理。在保持准确率的同时减少 40-60% 的推理 token 开销；比 Budget Forcing 更自适应（模型自决何时压缩）。"
 date: 2026-02-04
 tags: [推理效率, CoT压缩, RL训练, ICML2026, 长推理]
 domain: AI/LLM/Inference
@@ -190,6 +191,7 @@ Accordion-Thinking 提供了一个新路径：**压缩推理链，而非截断�
 - [[AI/LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 系统效率（量化）vs 算法效率（压缩），可组合
 - [[AI/LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL训练稳定性分析]] — 归属 Exploration/Efficiency 维度
 - [[AI/LLM/Inference/TTC-Test-Time-Compute-Efficiency-2026-综合分析|TTC效率2026综合分析]] — Accordion 是四大路线之"选择性遗忘（压缩版）"的代表工作；ICLR 2026 最大热点方向
+- [[AI/LLM/Inference/SIA-Sparse-Inference-time-Alignment|SIA（ICML 2026，NTU）]] — **同族正交工作**：SIA 用 entropy 识别 Junction 节点做稀疏对齐，Accordion 用 RL 主动压缩中间步骤——两者都基于"不是每个 token 同等重要"的核心信念，解决不同问题（对齐效率 vs 推理效率）
 
 ---
 

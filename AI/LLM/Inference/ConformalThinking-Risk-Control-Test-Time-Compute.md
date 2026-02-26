@@ -1,5 +1,6 @@
 ---
 title: "ConformalThinking: Risk Control for Test-Time Compute"
+brief: "JHU + Google DeepMind（arXiv:2602.03814，ICML 2026）用 Conformal Prediction 给 Test-Time Compute 加风险控制：在指定错误率上界（如 10%）下最小化推理 token 开销，自适应提前停止。相比固定 budget 策略，可节省 40-60% token 同时保持覆盖率保证（统计意义上的 PAC 保证）。"
 date: 2026-02-21
 tags:
   - ai/llm/inference

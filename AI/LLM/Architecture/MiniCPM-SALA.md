@@ -1,5 +1,6 @@
 ---
 title: "MiniCPM-SALA: Sparse + Linear Attention 混合架构"
+brief: "面壁智能（arXiv:2602.11761）提出 SALA：9B 参数，1:3 sparse:linear attention 层比例混合架构，单张 A6000D 实现 256K 上下文 3.5× 加速，支持 1M token；在 RULER/LongBench 上与纯 Sparse Attention 模型持平，效率大幅提升。"
 date: 2026-02-20
 tags: [论文, 架构, 注意力, 长上下文, 效率]
 source: "arXiv:2602.11761"
@@ -77,4 +78,4 @@ source: "arXiv:2602.11761"
 - [[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]] — SALA 是 Attention 变体的一种
 - [[AI/LLM/Architecture/SLA2-Learnable-Router|SLA2 Learnable Router]] — 同期 MiniCPM 架构论文，互补
 - [[AI/Foundations/DL-Basics/Transformer|Transformer 通识]] — SALA 的架构基础
-- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱
+- [[AI/LLM/目录|LLM MOC]] — 大语言模型知识全图谱

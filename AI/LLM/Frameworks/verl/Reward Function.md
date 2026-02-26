@@ -1,4 +1,5 @@
 ---
+brief: "verl Reward Function 设计——自定义奖励函数的接口规范和工程实践；rule-based reward（可验证任务）vs LLM-as-judge（开放任务）的接入方式；奖励归一化/clip 的工程细节。"
 title: "Reward Function"
 type: concept
 domain: ai/llm/frameworks/verl

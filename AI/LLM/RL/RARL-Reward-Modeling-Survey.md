@@ -1,4 +1,5 @@
 ---
+brief: "RARL Reward Modeling Survey——系统综述 RL-based LLM 推理中的奖励模型设计，涵盖 outcome RM/process RM/LLM-as-judge/rule-based 四类范式及其优劣；是奖励工程选型的快速参考。"
 title: "RARL: Reward Modeling for RL-Based LLM Reasoning"
 type: paper
 domain: ai/llm/rl
@@ -102,10 +103,10 @@ Reward Paradigms
 
 ## 关联笔记
 
-- [[RLHF 全链路]]
-- [[对齐技术综述]]
-- [[GRPO 深度理解]]
-- [[ICLR-2026-趋势分析]]
+- [[AI/LLM/RL/RLHF 全链路|RLHF 全链路]]
+- [[AI/LLM/RL/对齐技术综述|对齐技术综述]]
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/LLM/Evaluation/ICLR-2026-趋势分析|ICLR-2026-趋势分析]]
 
 ---
 *Created: 2026-02-16 by Scholar heartbeat*

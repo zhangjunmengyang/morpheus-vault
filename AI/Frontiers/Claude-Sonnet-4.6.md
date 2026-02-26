@@ -1,4 +1,5 @@
 ---
+brief: "Claude Sonnet 4.6 速览——Anthropic Sonnet 4.6 的核心能力速评：推理/代码/指令跟随/context 的工程感受；与 Claude Opus 4.6 的能力定位对比；LLM 选型参考（性价比版）。"
 title: "Claude Sonnet 4.6"
 type: model
 domain: ai/frontiers

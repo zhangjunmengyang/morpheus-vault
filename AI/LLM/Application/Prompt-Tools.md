@@ -1,4 +1,5 @@
 ---
+brief: "Prompt 工具生态——结构化 Prompt 构建工具（LangChain/DSPy/PromptFlow）和测试工具（PromptBench/Promptfoo）对比；自动化 prompt 优化（APE/OPRO）的原理和工程集成方案。"
 title: "Tools"
 type: concept
 domain: ai/llm/prompt-engineering

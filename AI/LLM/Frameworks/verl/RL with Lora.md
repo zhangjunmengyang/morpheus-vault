@@ -1,4 +1,5 @@
 ---
+brief: "verl RL with LoRA——在 verl 框架中结合 LoRA 做 RLHF 微调；大幅降低 Actor 模型的显存需求，使 70B+ 模型的 RL 训练成为可能；LoRA rank/alpha 在 RL 场景的特殊调参建议。"
 title: "RL with Lora"
 type: concept
 domain: ai/llm/frameworks/verl

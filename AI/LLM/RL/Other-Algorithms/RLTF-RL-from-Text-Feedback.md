@@ -1,4 +1,5 @@
 ---
+brief: "RLTF（arXiv:2602.02482）——从自然语言文本反馈中提取 reward signal，无需打分模型；LLM 直接消费 human/AI 的文字评价生成密集奖励，适用于 non-verifiable 域（创意写作/开放问答）的 RL 对齐。"
 title: "RLTF: RL from Text Feedback"
 type: paper
 domain: ai/llm/rl
@@ -79,5 +80,5 @@ RL for LLM post-training 的 reward 信号太稀疏（1 bit per rollout），dis
 
 - [[AI/LLM/RL/Theory/RLRR-Reference-Guided-Alignment-Non-Verifiable|RLRR]] — 同为 non-verifiable 对齐方向：RLTF 用文本反馈，RLRR 用 reference + judge
 - [[AI/LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — reward model 训练的前置：更好的 RM 意味着更好的 text feedback
-- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
+- [[AI/LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — RLTF 中 reward shaping 与 GRPO reward 设计的关系

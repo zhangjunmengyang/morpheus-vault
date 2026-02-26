@@ -1,4 +1,5 @@
 ---
+brief: "PEFT 方法对比——LoRA/Prefix Tuning/Prompt Tuning/Adapter 四大流派的原理、显存占用、性能和适用场景完整对比表；面试被问参数高效微调选型时的标准参考，直接给出决策矩阵。"
 title: "PEFT 方法对比：LoRA / Prefix / Prompt / Adapter"
 date: 2026-02-14
 domain: AI/LLM/SFT
@@ -529,3 +530,5 @@ print(f"推荐方法: {method}, 理由: {reason}")
 - [[AI/LLM/SFT/LLM微调实战-2026技术全景|LLM微调实战2026全景]] ⭐ — PEFT方法的工程落地指南；哪个场景用LoRA、QLoRA、DoRA，本文理论 + 微调实战提供实践配方
 - [[AI/LLM/Inference/Progressive-Thought-Encoding-Cache-Efficient-RL|PTE（渐进式思维编码）]] — PEFT思想向推理阶段的迁移：PTE在KV cache被压缩时用LoRA ΔW在线蒸馏保存evicted token，本质是LoRA作为"记忆压缩器"的创新用法
 - [[AI/LLM/SFT/Post-Training Unified View 论文|Post-Training 统一视角]] — PEFT是post-training工程的核心工具；统一视角论文提供了SFT/RLHF/DPO在PEFT框架下的系统性理解
+
+> 📁 **版本说明**：`AI/LLM/SFT/PEFT-方法综述.md` 为早期简化版（343行，deprecated），本文为完整正式版（530行）。

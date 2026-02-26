@@ -1,6 +1,8 @@
 ---
 title: "FlowSteer: Interactive Agentic Workflow Orchestration via End-to-End RL"
+brief: "FlowSteer：用端到端 RL（CWRPO 变体）训练 Compound AI 工作流编排；用户可通过自然语言交互式调整 Agent workflow 拓扑；解决硬编码工作流缺乏适应性的问题（arXiv:2602.01664）"
 date: 2026-02-17
+updated: 2026-02-22
 tags: [agentic-rl, workflow, compound-ai, GRPO, CWRPO, multi-turn-rl, tool-use]
 domain: AI/Agent/Agentic-RL
 arxiv: "2602.01664"
@@ -8,7 +10,7 @@ rating: 3
 status: permanent
 see-also:
   - "[[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]]"
-  - "[[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]]"
+  - "[[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent-RL|KLong]]"
   - "[[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]]"
   - "[[AI/Agent/Agentic-RL/Agent-RL-训练实战指南|Agent RL 训练实战指南]]"
 ---
@@ -217,12 +219,13 @@ FlowSteer 的角度不同：**自动化 workflow 结构本身**，不是在已�
 ## see-also
 
 - [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — FlowSteer 的宏观定位在此
-- [[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]] — 同为 multi-turn RL agent，KLong 解决 horizon 极长，FlowSteer 解决 workflow 结构自动化
+- [[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent-RL|KLong]] — 同为 multi-turn RL agent，KLong 解决 horizon 极长，FlowSteer 解决 workflow 结构自动化
 - [[AI/Agent/Agentic-RL/Agent-RL-训练实战指南|Agent RL 训练实战指南]] — CWRPO 的 conditional release reward 是 sparse reward 解法的典型案例，可补入训练指南
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] — CWRPO 是 GRPO 在 workflow 场景的领域适配（mask + composite reward + conditional gate）
 - [[AI/Agent/EnterpriseGym-Corecraft|EnterpriseGym Corecraft]] — 同为 Agentic RL 环境设计，Corecraft 做 OOD 泛化，FlowSteer 做 workflow 结构学习
 - [[AI/LLM/RL/Theory/REMuL-CoT-Faithfulness-Multi-Listener-RL|REMuL]] — 设计哲学同构：FlowSteer 用 structure quality 门控 answer reward（先保过程再保结果），REMuL 用 faithfulness RL 再加 masked SFT correctness（先保推理忠实再保正确）——两者都在用"过程质量"约束"结果优化"
 - [[AI/Agent/AgentConductor-Topology-Evolution-Multi-Agent-Code|AgentConductor]] — 同为 GRPO + multi-turn workflow RL，但 AgentConductor 做 MAS 动态拓扑（agent 间通信图），FlowSteer 做 operator DAG；AgentConductor 有 difficulty-aware 密度函数更 principled，FlowSteer 更通用
+- [[AI/Agent/AdaptOrch-Task-Adaptive-Multi-Agent-Orchestration|AdaptOrch]] — 互补视角：FlowSteer 用 RL **训练** workflow 编排 policy，AdaptOrch 用 rule-based 框架**推理时**路由拓扑；一个学习如何构建 DAG，一个学习如何选择最优 topology；两者都关注"workflow 结构选择"但在不同优化阶段（训练 vs 推理）
 
 ## Tags
 `#agentic-rl` `#workflow` `#compound-ai` `#GRPO` `#CWRPO` `#multi-turn-rl` `#tool-use` `#2026-02`

@@ -1,7 +1,10 @@
 ---
-tags: [Agent, Efficiency, Belief-State, LLM-Agent]
+title: "PABU: Progress-Aware Belief Update for Efficient LLM Agents"
+brief: "PABU 通过进度感知的信念状态压缩，让 Agent 摆脱冗余历史依赖：显式建模任务进度 + 选择性保留关键历史；81% 任务完成率 + 26.9% 效率提升；比 Full History Conditioning 显著更高效"
+tags: [Agent, Efficiency, Belief-State, LLM-Agent, type/paper]
 aliases: [PABU, Progress-Aware Belief Update, 进度感知信念更新, 高效Agent]
 created: 2026-02-15
+updated: 2026-02-23
 ---
 
 # PABU: Progress-Aware Belief Update for Efficient LLM Agents
@@ -1347,4 +1350,4 @@ PABU代表了LLM Agent效率优化的一个重要里程碑，其创新性不仅�
 - [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — PABU 在 credit assignment 问题框架中的位置
 - [[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]] — 同为长程 Agent 效率问题，KLong 解决训练 horizon，PABU 解决推理 state tracking
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — PABU 的 RL 算法上游
-- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱
+- [[AI/Agent/目录|Agent MOC]] — Agent 知识全图谱

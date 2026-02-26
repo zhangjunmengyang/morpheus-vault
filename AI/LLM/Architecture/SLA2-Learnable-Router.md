@@ -1,5 +1,6 @@
 ---
 title: "SLA2: Learnable Router for Sparse-Linear Attention"
+brief: "（arXiv:2602.12675）在 Sparse-Linear Attention 框架中引入可学习路由器，动态决定每次 attention 走 sparse 还是 linear 分支；在视频 diffusion 模型上实现 97% 稀疏度、18.6× attention 加速，与原始 SLA 相比质量无损。"
 date: 2026-02-20
 tags: [论文, 架构, 注意力, 效率, diffusion]
 source: "arXiv:2602.12675"
@@ -76,4 +77,4 @@ SLA (Sparse-Linear Attention) 的原始想法：attention map P 可以分解为�
 - [[AI/LLM/Architecture/MiniCPM-SALA|MiniCPM SALA]] — 同期 MiniCPM 架构论文，互补
 - [[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]] — SLA2 在 Attention 变体谱系中的位置
 - [[AI/Foundations/DL-Basics/Transformer|Transformer 通识]] — Learnable Router 的架构基础
-- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱
+- [[AI/LLM/目录|LLM MOC]] — 大语言模型知识全图谱

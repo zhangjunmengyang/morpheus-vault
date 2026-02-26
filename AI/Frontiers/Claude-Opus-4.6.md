@@ -1,4 +1,5 @@
 ---
+brief: "Claude Opus 4.6——Anthropic 最 Agentic 的旗舰模型；超大 context window + RL 对齐的 Agent 能力；首次证明 AI Agent 可在高复杂度代码任务（ARC-AGI-2）超越人类；★★★★★，标志性 Agent 能力里程碑。"
 title: "Claude Opus 4.6 — Anthropic 最 Agentic 的 Frontier 模型"
 date: 2026-02-05
 source: "https://philippdubach.com/posts/claude-opus-4.6-anthropics-new-flagship-ai-model-for-agentic-coding/"

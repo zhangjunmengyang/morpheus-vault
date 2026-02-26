@@ -1,12 +1,23 @@
 ---
-title: "FSDP"
+title: "FSDP (Fully Sharded Data Parallel)"
+brief: "PyTorch 原生的分布式训练方案，本质是 ZeRO-3 的官方实现——将参数/梯度/优化器状态全部分片到 N 张 GPU，通信量增加 50% 换取 N 倍显存节省；FSDP2 进一步支持 torch.compile 和 FP8。"
 type: concept
 domain: ai/llm/infra
 created: "2026-02-13"
-updated: "2026-02-13"
+updated: "2026-02-22"
 tags:
   - ai/llm/infra
   - type/concept
+  - interview/hot
+status: complete
+sources:
+  - "PyTorch FSDP: Experiences on Scaling Fully Sharded Data Parallel — arXiv:2304.11277"
+  - "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models — arXiv:1910.02054"
+  - "https://pytorch.org/docs/stable/fsdp.html"
+related:
+  - "[[AI/LLM/Infra/DeepSpeed|DeepSpeed]]"
+  - "[[AI/LLM/Infra/Megatron-LM|Megatron-LM]]"
+  - "[[AI/LLM/Infra/模型并行策略|模型并行策略]]"
 ---
 # FSDP
 
@@ -14,7 +25,9 @@ tags:
 
 FSDP（Fully Sharded Data Parallel）是 PyTorch 原生的分布式训练方案，核心思想是**将模型参数、梯度和优化器状态在所有 GPU 之间分片（shard）**，每个 GPU 只持有完整模型的 1/N。
 
-FSDP 本质上是 Microsoft ZeRO（Zero Redundancy Optimizer）的 PyTorch 原生实现，对标 DeepSpeed ZeRO Stage 3。但因为是 PyTorch 官方维护，与 PyTorch 生态（torch.compile、FSDP2 等）的集成更好。
+FSDP 本质上是 Microsoft ZeRO（Zero Redundancy Optimizer）的 PyTorch 原生实现，对标 [[DeepSpeed]] ZeRO Stage 3。但因为是 PyTorch 官方维护，与 PyTorch 生态（torch.compile、FSDP2 等）的集成更好。
+
+> 来源：Zhao et al., "PyTorch FSDP: Experiences on Scaling Fully Sharded Data Parallel" arXiv:2304.11277
 
 ## 为什么需要 FSDP
 
@@ -74,9 +87,11 @@ FSDP 的两个核心通信原语：
 - **Reduce-Scatter**：先 reduce（求和）再 scatter（分片）
 
 通信量分析（相比 DDP）：
-- DDP：一次 All-Reduce = 2 × model_size
-- FSDP：每层 All-Gather（前向 + 反向各一次）+ Reduce-Scatter = 约 3 × model_size
+- DDP：一次 All-Reduce = $2 \times \text{model\_size}$
+- FSDP：每层 All-Gather（前向 + 反向各一次）+ Reduce-Scatter = 约 $3 \times \text{model\_size}$
 - FSDP 通信量增加约 50%，但**换来了 N 倍的显存节省**
+
+> 来源：arXiv:2304.11277, Sec. 3 — 通信量 vs 显存的 trade-off 分析；ZeRO arXiv:1910.02054, Sec. 3.2
 
 ## PyTorch FSDP 使用
 
@@ -113,6 +128,8 @@ model = FSDP(
 ```
 
 `HYBRID_SHARD` 在多节点训练时特别有用——节点内 NVLink 带宽高（600 GB/s），分片开销小；节点间网络带宽低（100-400 Gbps），减少跨节点通信。
+
+> 来源：arXiv:2304.11277, Sec. 4.2 — HYBRID_SHARD 在多节点场景的性能对比
 
 ### Auto Wrap Policy
 
@@ -186,11 +203,58 @@ accelerate launch --config_file fsdp_config.yaml train.py
 - 需要 CPU/NVMe offload、更多调优选项 → DeepSpeed
 - 两者都行时 → 看团队熟悉度
 
+## 📚 推荐阅读
+
+### 原始论文
+- [PyTorch FSDP: Experiences on Scaling Fully Sharded Data Parallel](https://arxiv.org/abs/2304.11277) — Meta 团队的工业级经验总结
+- [ZeRO: Memory Optimizations Toward Training Trillion Parameter Models](https://arxiv.org/abs/1910.02054) — FSDP 背后的理论基础
+
+### 深度解读
+- [PyTorch FSDP 官方教程](https://pytorch.org/tutorials/intermediate/FSDP_tutorial.html) — 最权威的入门指南 ⭐⭐⭐⭐
+- [FSDP vs DeepSpeed 详细对比（知乎）](https://zhuanlan.zhihu.com/p/667455728) — 中文社区实测对比
+
+### 实践资源
+- [PyTorch FSDP2 RFC](https://github.com/pytorch/pytorch/issues/114299) — FSDP2 设计讨论和进展
+- [HuggingFace Accelerate FSDP 文档](https://huggingface.co/docs/accelerate/usage_guides/fsdp) — 实际项目首选集成方式
+
+## 🔧 落地应用
+
+### 直接可用场景
+- **7B-70B 模型微调/SFT**：FSDP FULL_SHARD + Accelerate 是最主流的方案
+- **verl RL 训练**：[[AI/LLM/Frameworks/verl/verl 概述|verl]] 同时支持 FSDP 和 Megatron 后端，FSDP 更易调试
+- **需要 torch.compile 加速**：FSDP2 是目前唯一与 compile 良好兼容的分布式方案
+
+### 工程实现要点
+- **auto_wrap_policy**：按 `TransformerDecoderLayer` 粒度分片最常用，粒度太细反而增加通信
+- **HYBRID_SHARD**：多节点必开——节点内 NVLink 分片，跨节点复制，性价比最优
+- **Checkpoint 保存**：用 `SHARDED_STATE_DICT` 避免 OOM（比 `FULL_STATE_DICT` 安全得多）
+- **常见坑**：FSDP 包装后不能直接 `model.module` 访问原始模型；用 `FSDP.summon_full_params()` 临时聚合
+
+### 面试高频问法
+- Q: FSDP 和 DeepSpeed ZeRO-3 本质区别是什么？
+  A: 算法层面等价（都是参数+梯度+优化器全分片）。差异在工程实现：FSDP 是 PyTorch 原生（torch.compile 兼容、DTensor 支持）；DeepSpeed 更成熟（CPU/NVMe offload、更多调优旋钮）。选择取决于生态：需要 compile → FSDP，需要 offload → DeepSpeed。
+
+## 💡 启发与思考
+
+### So What？对老板意味着什么
+- FSDP 是"PyTorch 亲儿子"——长期来看会成为默认分布式训练方案，投入学习的 ROI 最高
+- FSDP2 + DTensor + torch.compile 的组合可能统一 DP/TP/PP 的编程模型，是 2026 年最值得关注的基础设施演进
+
+### 未解问题与局限
+- FSDP1 不支持 NVMe Offload，极端资源受限场景仍需 DeepSpeed
+- FSDP2 尚未完全稳定（截至 PyTorch 2.5），生产环境需谨慎
+
+### 脑暴：如果往下延伸
+- FSDP2 的 per-parameter sharding + [[AI/LLM/Infra/Megatron-LM|Megatron-Core]] 的 TP 能否在同一模型上自由组合？
+- 如果 PyTorch 原生支持 ZeRO-1/2（不仅仅是 3），DeepSpeed 的存在意义是否会被侵蚀？
+
 ## 相关
 
-- [[DeepSpeed]] — FSDP 的主要竞品
+> 🔗 See also: [[DeepSpeed]] — FSDP 的主要竞品，ZeRO 系列的原始实现
+> 🔗 See also: [[Megatron-LM]] — TP/PP 并行方案，与 FSDP 的 DP 方向互补
+> 🔗 See also: [[AI/LLM/Infra/模型并行策略|模型并行策略]] — 从 DP 到 5D 并行的全景选型
+
 - [[分布式训练]] — 分布式训练概览
-- [[Megatron-LM]] — 另一种并行策略（Tensor/Pipeline Parallel）
 - [[Ray]] — 分布式计算框架
 - [[AI/LLM/Frameworks/verl/verl 概述|verl 概述]] — verl 对 FSDP 的集成
 - [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]]

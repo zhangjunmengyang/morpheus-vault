@@ -1,10 +1,15 @@
 ---
+title: "Agent World Model: Infinity Synthetic Environments for Agentic RL"
+brief: "用 World Model 生成无限合成训练环境解决 Agentic RL 数据瓶颈；LLM 作为环境模拟器生成 state/reward；在 WebArena 等 benchmark 大幅提升样本效率（arXiv:2602.10090）"
 tags:
   - agentic-rl
   - world-model
   - synthetic-environment
   - reinforcement-learning
+  - type/paper
 date: 2026-02-19
+updated: 2026-02-23
+arxiv: "2602.10090"
 paper_url: https://arxiv.org/abs/2602.10090
 ---
 
@@ -344,5 +349,5 @@ AWM 代表的不仅是「一个生成 1,000 个环境的 pipeline」，而是一
 
 - [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — World Model 在 Agentic RL 中的角色：环境模型 vs 世界模型
 - [[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]] — 极长 horizon Agent 如何使用内隐 world model
-- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱
+- [[AI/Agent/目录|Agent MOC]] — Agent 知识全图谱
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — World Model 与 RL 探索策略的关系

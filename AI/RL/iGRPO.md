@@ -1,4 +1,5 @@
 ---
+brief: "iGRPO（迭代式自反馈 GRPO）——在标准 GRPO 基础上引入迭代自反馈机制；模型在 RL 训练中对自己的推理过程进行评判并修正；Interview 标注，GRPO 变种的面试参考；与 AI/LLM/RL 正式版互补。"
 title: "iGRPO: 迭代式自反馈 GRPO"
 date: 2026-02-15
 tags: [RL, GRPO, reasoning, self-feedback, interview]
@@ -528,7 +529,7 @@ iGRPO 通过约束 `N + G = G_GRPO` 来保持相同的 rollout 预算。例如�
 
 ## See Also
 
-- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
+- [[AI/LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] — iGRPO 在七大维度框架中的位置（迭代自反馈维度）
 - [[AI/LLM/RL/GRPO/ProGRPO-Probabilistic-Advantage-Reweighting|ProGRPO]] — 同方向 GRPO 改进，改 advantage 计算方式
 - [[AI/LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 同期 GRPO 改进，改 trust region 适应性

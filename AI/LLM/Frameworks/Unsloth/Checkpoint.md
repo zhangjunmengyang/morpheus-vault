@@ -1,4 +1,5 @@
 ---
+brief: "Unsloth Checkpoint 管理——训练中断恢复和模型保存策略；LoRA adapter 的保存格式（.safetensors）、合并导出（merge_to_16bit）、GGUF 量化导出的完整流程。"
 title: "Checkpoint"
 type: concept
 domain: ai/llm/frameworks/unsloth

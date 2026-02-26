@@ -1,4 +1,5 @@
 ---
+brief: "Unsloth gpt-oss 训练——OpenAI GPT 系列开源替代模型（gpt-oss）的 Unsloth 微调；对话格式/损失计算/评估指标的工程配置；兼容 OpenAI API 格式的开源模型训练实践。"
 title: "gpt-oss"
 type: project
 domain: ai/llm/frameworks/unsloth

@@ -1,5 +1,6 @@
 ---
 title: "On-Policy vs. Off-Policy"
+brief: "On-Policy vs Off-Policy 的核心区分：采样策略与更新策略是否为同一个；On-Policy（PPO）数据利用率低但稳定，Off-Policy（SAC/Q-Learning）可复用数据但有分布偏移风险；直接影响 LLM RL 训练效率。"
 type: concept
 domain: ai/llm/rl/fundamentals
 created: "2026-02-13"

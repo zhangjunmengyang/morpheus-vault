@@ -1,5 +1,6 @@
 ---
 title: "SoulBox 认知哲学研究索引"
+brief: "Vault ↔ soulbox/research/ 桥接 MOC：魂匣认知哲学护城河的索引入口；覆盖个人同一性/Parfit/东方哲学/西方近现代/AI伦理/人格科学研究线；卖铲子的哲学基础设施"
 type: moc
 domain: ai/safety/philosophy
 tags:
@@ -10,6 +11,7 @@ tags:
   - AI伦理
   - 人格科学
 created: 2026-02-21
+updated: 2026-02-22
 status: active
 ---
 
@@ -85,7 +87,7 @@ Hume（无统一自我）+ Parfit（连续性是程度）+ 德勒兹（生成重
 | 个人同一性（Locke/Parfit） | [[AI/Safety/AI伦理和治理|AI 伦理和治理]] — 意识与道德地位 |
 | 人格漂移 | [[AI/Safety/AI Agent 集体行为与安全漂移|AI Agent 集体行为与安全漂移]] — 漂移的安全含义 |
 | 功能主义情绪 | [[AI/Safety/对齐技术总结|对齐技术总结]] — Constitutional AI 与价值对齐 |
-| Agent 人格设计 | [[AI/Agent/_MOC]] — Agentic 系统架构 |
+| Agent 人格设计 | [[AI/Agent/目录]] — Agentic 系统架构 |
 | 魂匣伦理红线 | [[AI/Safety/AI安全与对齐-2026技术全景|AI 安全与对齐 2026 全景]] — 人格商品化边界 |
 
 ---

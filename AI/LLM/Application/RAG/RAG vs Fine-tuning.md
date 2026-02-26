@@ -1,4 +1,5 @@
 ---
+brief: "RAG vs Fine-tuning 选择策略——知识注入场景的技术选型框架；静态 vs 动态知识/成本/延迟/幻觉风险的四维对比；RAFT（RAG+Fine-tuning 混合）方案；interview 场景设计题必答逻辑。"
 tags: [AI, LLM, RAG, Fine-tuning, Strategy, RAFT, Interview]
 created: 2026-02-14
 status: draft
@@ -8,7 +9,7 @@ status: draft
 
 ## 概述
 
-在大语言模型的实际应用中，如何让模型具备特定领域的知识是一个核心问题。[[RAG (Retrieval-Augmented Generation)]] 和 [[Fine-tuning]] 是两种主要的解决方案，各自有不同的适用场景和权衡考虑。本文将深入分析这两种方法的特点、适用场景，以及如何在实际项目中做出合适的选择。
+在大语言模型的实际应用中，如何让模型具备特定领域的知识是一个核心问题。[[AI/RAG/RAG-2026-技术全景|RAG 2026 技术全景]] 和 [[Fine-tuning]] 是两种主要的解决方案，各自有不同的适用场景和权衡考虑。本文将深入分析这两种方法的特点、适用场景，以及如何在实际项目中做出合适的选择。
 
 ## RAG vs Fine-tuning 基础对比
 

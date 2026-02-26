@@ -1,4 +1,5 @@
 ---
+brief: "RAG 评测体系——RAGAS 框架（Faithfulness/Answer Relevancy/Context Precision/Recall）的完整指标体系；端到端评测 vs 组件级评测的方法论；生产 RAG 系统 QA 的落地实践。"
 tags: [RAG, 模型评测, RAGAS, Faithfulness, Relevancy, LLM评测, RAG质量评估]
 created: 2026-02-14
 status: draft
@@ -6,7 +7,7 @@ status: draft
 
 # RAG 评测
 
-[[RAG]] 系统评测是确保生产质量的关键环节。与传统 NLP 任务不同，RAG 涉及检索和生成两个阶段，需要多维度、端到端的评估体系。
+[[AI/RAG/RAG-2026-技术全景|RAG]] 系统评测是确保生产质量的关键环节。与传统 NLP 任务不同，RAG 涉及检索和生成两个阶段，需要多维度、端到端的评估体系。
 
 ## RAG 评测三个维度
 
@@ -468,4 +469,4 @@ def anonymize_evaluation_data(raw_data):
 
 ---
 
-相关笔记：[[RAG 系统架构设计]] | [[向量数据库选型]] | [[LLM 评测方法论]]
+相关笔记：[[AI/LLM/Application/RAG/RAG 原理与架构|RAG 系统架构设计]] | [[AI/LLM/Application/RAG/向量数据库选型|向量数据库选型]] | [[AI/LLM/Evaluation/LLM 评测体系|LLM 评测体系]]

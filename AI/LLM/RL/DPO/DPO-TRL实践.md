@@ -1,4 +1,5 @@
 ---
+brief: "DPO TRL 实践——HuggingFace TRL DPOTrainer 工程指南；偏好数据格式（chosen/rejected）/损失函数参数（beta）/常见收敛问题；无需 RM 的轻量对齐方案工程上手。"
 title: "DPO"
 type: project
 domain: ai/llm/rl/dpo

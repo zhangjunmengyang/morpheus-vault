@@ -1,4 +1,5 @@
 ---
+brief: "CM2（Checklist Rewards）——用结构化 checklist 作为多轮 Tool Use 的密集奖励信号；将 Agent 任务拆解为子目标清单，每完成一项即时奖励，解决 multi-turn/multi-step Agent RL 的稀疏奖励问题。"
 tags: 
   - RL
   - Agent 
@@ -362,5 +363,8 @@ Future: Multi-modal Agentic RL
 
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — CM2 的 reward 设计属于 GRPO 七维中的 Reward 维度
 - [[AI/Agent/Agentic-RL/VerlTool 论文|VerlTool]] — 同为 Tool Use RL 方向
-- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
+- [[AI/LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱
 - [[AI/Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer]] — Checklist reward 与 conditional release reward 的设计比较
+
+> ⚠️ **版本说明**：本文为 Scholar 早期版（侧重方法分类框架），更完整的深度版在 Agent 域：
+> [[AI/Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2（Agent 深度版）]] — 含完整实验数据、Rollout↔Reward 双支柱分析、工程要点，面试可用版本

@@ -1,5 +1,6 @@
 ---
 title: "GLM-5: 从 Vibe Coding 到 Agentic Engineering"
+brief: "智谱 AI（Z.AI）2026-02-11 发布 GLM-5，744B 参数 Sparse MoE（256专家，激活40B），预训练 28.5T tokens，200K 上下文，MIT 开源。定位 Agentic Engineering：强调长周期任务、多工具协作、复杂系统工程；在工具调用和代码生成方向显著超越前代。"
 date: 2026-02-14
 tags: [llm, open-source, glm, agentic]
 type: note
@@ -180,5 +181,5 @@ Z.AI 提供订阅制编码方案，支持 Claude Code、Cursor、Cline、OpenCla
 
 - [[AI/Frontiers/GLM-5-技术报告精读|GLM-5 技术报告精读]] — GLM-5 完整技术分析（正式版）
 - [[AI/LLM/Frameworks/Slime-RL-Framework|Slime RL Framework]] — GLM-5 使用的 RL 训练框架
-- [[AI/Agent/_MOC|Agent MOC]] — Agentic Engineering 全图谱
-- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱
+- [[AI/Agent/目录|Agent MOC]] — Agentic Engineering 全图谱
+- [[AI/LLM/目录|LLM MOC]] — 大语言模型知识全图谱

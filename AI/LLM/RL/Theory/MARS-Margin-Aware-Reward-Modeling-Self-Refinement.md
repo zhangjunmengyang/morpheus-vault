@@ -1,4 +1,5 @@
 ---
+brief: "MARS（arXiv:2602.17658）——Margin-Aware Reward Modeling with Self-Refinement；引入 margin 概念使 RM 关注决策边界附近的困难样本，Self-Refinement 迭代提升奖励模型精度，ICML 2026 投稿。"
 title: "MARS: Margin-Aware Reward Modeling with Self-Refinement"
 date: 2026-02-20
 arxiv: "2602.17658"
@@ -186,6 +187,6 @@ MARS 的 margin-aware 思想与 RL 领域的 **curriculum learning** 高度相�
 - [[AI/LLM/RL/Theory/RLRR-Reference-Guided-Alignment-Non-Verifiable|RLRR]] — 另一种 non-verifiable alignment 方法：reference-guided RL vs MARS 的 margin-aware augmentation，同为 RLHF 边界扩展
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — MARS 的 reward model 是 GRPO pipeline 的上游输入；margin calibration 影响 RL 训练质量
 - [[AI/LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] — curriculum learning 视角：Goldilocks 选"刚好合适"难度任务，MARS 选 low-margin 困难样本——同为 difficulty-aware 训练
-- [[AI/LLM/RL/_MOC|RL MOC]] — RLHF/Reward Modeling 全图谱
+- [[AI/LLM/RL/目录|RL MOC]] — RLHF/Reward Modeling 全图谱
 - [[AI/LLM/SFT/EWC-LoRA-Continual-Learning-Low-Rank|EWC-LoRA（持续学习Fisher正则）]] — Fisher information 双面：MARS最大化Fisher找困难样本（主动利用曲率），EWC-LoRA正则化Fisher保护重要参数（防止曲率崩塌）——同一理论框架，"攻"与"守"两种用法
 - [[AI/LLM/RL/Other-Algorithms/RLRR-Reference-Guided-Alignment-Non-Verifiable|RLRR]] — 见上方链接

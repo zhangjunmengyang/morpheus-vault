@@ -1,4 +1,5 @@
 ---
+brief: "EWC-LoRA（arXiv:2602.17559）——将 Elastic Weight Consolidation（Fisher 信息矩阵约束）引入 LoRA 持续学习，解决 catastrophic forgetting；低秩参数空间的权重正则化比全参数 EWC 更高效；PECL benchmark 验证。"
 title: "EWC-LoRA: Revisiting Weight Regularization for Low-Rank Continual Learning"
 date: 2026-02-21
 arxiv: "2602.17559"

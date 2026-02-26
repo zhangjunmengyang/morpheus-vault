@@ -1,5 +1,6 @@
 ---
 title: "Agent 简历描述重点"
+brief: "Agent 方向简历描述重点：AI Agent 相关项目经历的简历撰写要点，突出可量化成果和技术深度的表达方式。"
 type: thought
 domain: career
 created: "2026-02-13"
@@ -105,8 +106,8 @@ tags:
 - **性能与响应时延**：借助异步IO与缓存策略，将每次工具调用的平均耗时控制在 **1.8s**；相较初版系统，综合延迟减少 **40%**。
 ## See Also
 
-- [[Career/_MOC|Career MOC]] — 职业发展知识域全索引
+- [[Career/目录|Career MOC]] — 职业发展知识域全索引
 - [[Career/AI面试速查手册|AI 面试速查手册]] — 速查层：面试前30分钟过一遍
-- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识域全索引，简历描述的技术深度来源
+- [[AI/Agent/目录|Agent MOC]] — Agent 知识域全索引，简历描述的技术深度来源
 - [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 综合分析]] — 四大维度框架，可将工具调用决策问题升维到 reward/workflow 层表达
 - [[AI/Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer (CWRPO)]] — Workflow 结构可学习性，简历中"工作流编排"的前沿论证

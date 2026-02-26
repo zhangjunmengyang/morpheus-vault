@@ -1,6 +1,8 @@
 ---
 title: "AutoInject: Automated Prompt Injection via Reinforcement Learning"
+brief: "ICML 2026：用 GRPO 训练 1.5B 攻击模型自动化 prompt injection；77%+ ASR 破 Gemini-2.5-Flash；通用 suffix 可迁移通杀 70 个任务；首个 RL 驱动的 PI 红队工具——盾卫项目必读（arXiv:2602.05746）"
 date: 2026-02-21
+updated: 2026-02-22
 arxiv: "2602.05746"
 domain: AI/Safety
 tags:
@@ -214,3 +216,4 @@ GRPO adv:     Â_i = (R_i - mean(R)) / std(R)
 - [[AI/Safety/Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization（安全退化防御）]] — 攻防对称：Adaptive-Reg防止fine-tuning破坏safety alignment（防御方视角），AutoInject用RL生成突破防御的injection suffix（攻击方视角）；SecAlign-70B对AutoInject仍有21.88%ASR说明单靠对齐fine-tuning不够
 - [[AI/LLM/RL/GRPO/ProGRPO-Probabilistic-Advantage-Reweighting|ProGRPO]] — 方法论联系：AutoInject用GRPO训练攻击policy，ProGRPO优化GRPO本身的概率优势估计——同一RL算法在完全不同应用域的两种创新（安全攻击 vs 语言对齐）
 - [[AI/Safety/AI安全与对齐-2026技术全景|AI安全与对齐2026全景]] ⭐ — AutoInject代表的RL-powered自动化攻击是2026年AI安全威胁升级的标志性案例；universal transferable suffixes的出现意味着防御复杂度阶跃
+- [[AI/Safety/PI-Landscape-SoK-Prompt-Injection-Taxonomy-Defense|PI-Landscape SoK]] ⭐ — AutoInject 是 SoK 分类中"optimization-based PI"的典型案例；SoK 的不可能三角框架解释了为何 AutoInject 的 universal suffix 对多数防御有效

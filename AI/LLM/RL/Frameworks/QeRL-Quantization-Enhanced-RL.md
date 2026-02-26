@@ -1,4 +1,5 @@
 ---
+brief: "QeRL——量化增强 RL 训练框架；核心反直觉发现：适度量化（如 INT8）有助于 RL 训练的正则化效果，防止策略过拟合；与 Jet-RL（量化须一致）形成理论对立，两篇形成重要交叉链接。"
 title: "QeRL: Quantization-Enhanced Reinforcement Learning"
 type: note
 domain: ai/llm/rl

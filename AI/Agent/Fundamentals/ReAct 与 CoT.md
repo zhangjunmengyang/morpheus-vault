@@ -1,7 +1,28 @@
 ---
+title: "ReAct 与 CoT 推理模式：从思维链到行动循环"
+brief: "系统梳理LLM推理范式：Chain-of-Thought(Few-shot/Zero-shot)让模型'思考出声'提升推理能力、Self-Consistency多路径投票提高可靠性、ReAct将推理与工具交互结合实现Agent闭环、Tree-of-Thought树形搜索探索最优解、Reflexion自我反思迭代改进。核心洞察：CoT解决'怎么想'，ReAct解决'怎么做'，ToT解决'想多条路'，Reflexion解决'从错误中学'。"
 tags: [Agent, 推理, CoT, ReAct, 思维链, 推理模式]
+type: survey
+domain: ai/agent/reasoning
 created: 2026-02-14
-status: draft
+updated: "2026-02-22"
+status: review
+dikw: K
+sources:
+  - "Chain-of-Thought Prompting — Wei et al. arXiv:2201.11903"
+  - "ReAct: Synergizing Reasoning and Acting — Yao et al. arXiv:2210.03629"
+  - "Self-Ask — Press et al. arXiv:2210.03350"
+  - "Reflexion — Shinn et al. arXiv:2303.11366"
+  - "Zero-shot CoT ('Let's think step by step') — Kojima et al. arXiv:2205.01068"
+  - "Self-Consistency — Wang et al. arXiv:2203.11171"
+  - "Tree of Thoughts — Yao et al. arXiv:2305.10601"
+  - "Plan-and-Solve — Wang et al. arXiv:2305.04091"
+related:
+  - "[[AI/Agent/Fundamentals/Agent 生产实践|Agent 生产实践]]"
+  - "[[AI/Agent/Fundamentals/Tool Use|Tool Use]]"
+  - "[[AI/Agent/AI-Agent-2026-技术全景|AI Agent 技术全景]]"
+  - "[[AI/LLM/Application/幻觉问题|幻觉问题]]"
+  - "[[AI/Safety/AI安全与对齐-2026技术全景|AI 安全与对齐]]"
 ---
 
 # ReAct 与 CoT 推理模式：从思维链到行动循环
@@ -11,6 +32,8 @@ status: draft
 ## Chain-of-Thought (CoT) 基础
 
 ### 核心概念
+
+> 来源：Wei et al. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models" arXiv:2201.11903
 
 CoT 是通过显式展示推理步骤来提升LLM推理能力的方法。核心思想是"让模型思考出声"。
 
@@ -66,6 +89,8 @@ print(prompt)
 ```
 
 ### Zero-shot CoT
+
+> 来源：Kojima et al. "Large Language Models are Zero-Shot Reasoners" arXiv:2205.01068 — 仅需一句 "Let's think step by step" 即可激活推理能力
 
 ```python
 class ZeroShotCoT:
@@ -130,6 +155,8 @@ print(f"提取的答案: {answer}")
 ```
 
 ### Self-Consistency
+
+> 来源：Wang et al. "Self-Consistency Improves Chain of Thought Reasoning in Language Models" arXiv:2203.11171
 
 提升 CoT 可靠性的重要技术：
 
@@ -217,6 +244,8 @@ print(f"最终答案: {result['answer']}, 置信度: {result['confidence']:.2f}"
 ```
 
 ## ReAct：Reasoning + Acting
+
+> 来源：Yao et al. "ReAct: Synergizing Reasoning and Acting in Language Models" arXiv:2210.03629
 
 ### 核心架构
 
@@ -657,6 +686,8 @@ for i, step in enumerate(path):
 ```
 
 ## Reflexion：自我反思
+
+> 来源：Shinn et al. "Reflexion: Language Agents with Verbal Reinforcement Learning" arXiv:2303.11366
 
 ```python
 class ReflexionAgent:
@@ -1194,9 +1225,86 @@ class ReliableAgent:
 
 ---
 
+## 📚 推荐阅读
+
+### 原始论文
+- [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903) — Wei et al., CoT 开山之作，在 GSM8K 上将 PaLM-540B 准确率从 17.9% 提升到 56.9%
+- [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629) — Yao et al., 推理+行动交替循环范式，Agent 时代的基础框架
+- [Large Language Models are Zero-Shot Reasoners](https://arxiv.org/abs/2205.01068) — Kojima et al., "Let's think step by step" 一句话激活推理能力
+- [Self-Consistency Improves Chain of Thought Reasoning](https://arxiv.org/abs/2203.11171) — Wang et al., 多路径采样 + 多数投票提升推理可靠性
+- [Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/abs/2305.10601) — Yao et al., 树形搜索推理空间
+- [Reflexion: Language Agents with Verbal Reinforcement Learning](https://arxiv.org/abs/2303.11366) — Shinn et al., 语言化自我反思，失败驱动的改进
+
+### 深度解读
+- [Reasoning Survey: A Survey of Reasoning with Foundation Models](https://arxiv.org/abs/2312.11562) — 推理能力综述 ⭐⭐⭐⭐
+- [LangChain 官方推理模式文档](https://python.langchain.com/docs/concepts/agents/) — 工程实现参考 ⭐⭐⭐⭐
+
+### 实践资源
+- [LangGraph](https://langchain-ai.github.io/langgraph/) — ReAct Agent 的生产级实现框架
+- [DSPy](https://github.com/stanfordnlp/dspy) — 编程化的 prompt 优化框架，自动化 CoT/ReAct pipeline
+
+---
+
+## 🔧 落地应用
+
+### 直接可用场景
+- **数学/逻辑推理任务**：Few-shot CoT 或 Zero-shot CoT（"Let's think step by step"），GSM8K 类问题准确率提升 2-3 倍
+- **知识问答+工具调用**：ReAct 模式，Thought→Action→Observation 循环接入搜索/计算器/数据库
+- **创意/开放性问题**：Tree-of-Thought 探索多条路径，beam search 式选最优
+- **迭代优化任务**：Reflexion 自我反思，代码生成/调试场景尤其有效（HumanEval pass@1 从 80% → 91%）
+
+### 工程实现要点
+- **CoT Few-shot 示例质量**：示例的推理步骤必须清晰正确，错误示例会误导模型；3-5 个示例通常最优
+- **ReAct 循环防护**：设置 `max_iterations`（推荐 5-10）+ 动作历史去重检测 + 单工具调用次数上限
+- **Self-Consistency 成本控制**：采样 5-10 条路径通常足够，边际收益递减；用 temperature=0.7 增加多样性
+- **推理方法选择公式**：
+
+$$\text{最优方法} = \begin{cases} \text{Zero-shot CoT} & \text{if 无示例 \& 低预算} \\ \text{Few-shot CoT} & \text{if 有示例 \& 中预算} \\ \text{ReAct} & \text{if 需要工具交互} \\ \text{ToT} & \text{if 高精度 \& 高预算} \\ \text{Reflexion} & \text{if 允许多轮迭代} \end{cases}$$
+
+### 面试高频问法
+- Q: CoT、ReAct、Tree-of-Thought 核心区别？
+  A: CoT = 线性思维链（一条路）；ReAct = 推理+行动交替（与环境交互）；ToT = 树形搜索（多条路+评估+回溯）
+- Q: 什么时候用 Zero-shot CoT vs Few-shot CoT？
+  A: Zero-shot 适合缺乏示例/快速原型/强模型（GPT-4+）；Few-shot 适合复杂任务/需要领域示例/弱模型
+
+---
+
+## 💡 启发与思考
+
+### So What？对老板意味着什么
+- **CoT 是最低成本的推理增强**：一句 "Let's think step by step" 就能显著提升推理准确率，是所有 LLM 应用的默认最佳实践
+- **ReAct 是 Agent 的认知架构基石**：几乎所有生产级 Agent（LangChain/AutoGPT/OpenClaw）都基于 ReAct 范式构建，理解 ReAct 就理解了 Agent 的核心循环
+- **推理方法的选择是工程决策**：不同方法在准确率/延迟/成本之间有明确的 tradeoff，应根据场景选型而非"最新=最好"
+
+### 未解问题与局限
+- **CoT 推理链本身可能包含幻觉**：模型可能生成看似逻辑正确但前提错误的推理链（"幻觉推理链"），参见 [[AI/LLM/Application/幻觉问题|幻觉问题]]
+- **ReAct 的工具依赖**：如果工具返回错误信息，ReAct 会基于错误 Observation 继续推理，错误放大
+- **ToT 的计算成本**：树形搜索的节点评估需要大量 LLM 调用，复杂问题可能需要数百次推理
+
+### 脑暴：如果往下延伸
+- 将 Reflexion 的自我反思与 [[AI/Agent/Fundamentals/Agent 生产实践|Agent 生产实践]] 中的错误处理结合：Agent 不只是重试，而是基于失败原因生成反思 → 修改策略 → 重新执行
+- CoT + [[AI/Safety/AI安全与对齐-2026技术全景|安全对齐]]：如果强制模型在回答前展示 CoT，是否能让安全审查更精准？（检查推理链是否试图绕过安全原则）
+- 6 个月预判：o1/o3 的"内隐 CoT"（hidden chain-of-thought）将成为主流范式——模型内部自动 CoT 而非用户显式提示
+
+```mermaid
+flowchart TD
+    subgraph 推理范式演进
+        A[Standard Prompting] --> B[Few-shot CoT<br/>2022]
+        A --> C[Zero-shot CoT<br/>2022]
+        B --> D[Self-Consistency<br/>2022]
+        B --> E[ReAct<br/>2022]
+        D --> F[Tree-of-Thought<br/>2023]
+        E --> G[Reflexion<br/>2023]
+        F --> H[o1/o3 内隐推理<br/>2024-2025]
+        G --> H
+    end
+```
+
+---
+
 **相关链接**：
-- [[Agent 框架对比 2026]]
-- [[LLM推理优化]]
-- [[工具调用最佳实践]]
-- [[Agent安全性]]
-- [[推理链优化]]
+- [[AI/Agent/Fundamentals/Agent 生产实践|Agent 生产实践]] — Agent 推理模式的生产落地经验
+- [[AI/Agent/Fundamentals/Tool Use|Tool Use]] — ReAct 中的工具调用最佳实践
+- [[AI/Agent/AI-Agent-2026-技术全景|AI Agent 技术全景]] — Agent 推理在全景中的位置
+- [[AI/LLM/Application/幻觉问题|幻觉问题]] — CoT 推理链中的幻觉风险
+- [[AI/Safety/AI安全与对齐-2026技术全景|AI 安全与对齐]] — 推理透明度对安全审查的价值

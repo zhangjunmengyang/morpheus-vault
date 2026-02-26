@@ -1,4 +1,5 @@
 ---
+brief: "RAG-Anything（Multi-modal RAG）——支持文本/图像/表格/音频/视频的统一多模态 RAG 框架；跨模态 chunk 对齐和检索的技术路线；是 Universal Multimodal Retrieval 的工程实现参考，多模态知识库的 RAG 解决方案。"
 title: "RAG-Anything: All-in-One Multimodal RAG Framework"
 type: paper
 domain: ai/rag

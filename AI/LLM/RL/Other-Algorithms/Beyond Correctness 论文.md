@@ -1,4 +1,5 @@
 ---
+brief: "Beyond Correctness——将过程奖励（process reward）与结果奖励（outcome reward）统一到同一 RL 框架；实验证明两者互补而非对立，过程 reward 提升中间步骤质量，outcome reward 维持最终准确率。"
 title: "Beyond Correctness: Harmonizing Process and Outcome Rewards through RL   Training"
 type: paper
 domain: ai/llm/rl/other-algorithms

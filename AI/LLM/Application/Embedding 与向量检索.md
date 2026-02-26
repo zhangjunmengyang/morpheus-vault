@@ -1,6 +1,8 @@
 ---
 title: "Embedding 与向量检索：从模型选型到工程落地"
+brief: "文本 Embedding 从 Word2Vec 到指令感知模型的演进、2024-2025 主流模型选型（BGE-M3/E5-Mistral/GTE-Qwen2/Cohere/OpenAI）、ANN 算法深度解析（HNSW/IVF/PQ）、向量数据库对比（Milvus/Qdrant/Chroma/pgvector）和维度优化。RAG 的基石组件。"
 date: 2026-02-13
+updated: "2026-02-22"
 tags:
   - ai/llm/application
   - ai/embedding
@@ -8,7 +10,17 @@ tags:
   - ai/rag
   - type/practice
   - interview/hot
-status: active
+status: complete
+sources:
+  - "OpenAI. 'text-embedding-ada-002 / text-embedding-3-large' API Documentation"
+  - "Xiao et al. 'C-Pack: Packaged Resources To Advance General Chinese Embedding (BGE)' arXiv:2309.07597"
+  - "Wang et al. 'Text Embeddings by Weakly-Supervised Contrastive Pre-training (E5)' arXiv:2212.03533"
+  - "Chen et al. 'BGE M3-Embedding: Multi-Lingual, Multi-Functionality, Multi-Granularity' arXiv:2402.03216"
+  - "Johnson et al. 'Billion-scale similarity search with GPUs (FAISS)' arXiv:1702.08734"
+related:
+  - "[[AI/LLM/Application/RAG/RAG 原理与架构]]"
+  - "[[AI/LLM/Application/RAG/检索策略]]"
+  - "[[AI/RAG/RAG-2026-技术全景|RAG 2026 全景]]"
 ---
 
 # Embedding 与向量检索：从模型选型到工程落地
@@ -335,4 +347,53 @@ embedding_small /= np.linalg.norm(embedding_small)  # 重新归一化
 
 ---
 
-**相关笔记**：[[RAG 工程实践]] | [[Advanced RAG]] | [[Prompt Engineering 高级]]
+---
+
+## 📚 推荐阅读
+
+### 原始论文
+- [C-Pack: Packaged Resources To Advance General Chinese Embedding (BGE)](https://arxiv.org/abs/2309.07597) — Xiao et al. 2023，中文 Embedding 的标杆
+- [Text Embeddings by Weakly-Supervised Contrastive Pre-training (E5)](https://arxiv.org/abs/2212.03533) — Wang et al. 2022，对比学习 Embedding 的里程碑
+- [BGE M3-Embedding: Multi-Lingual, Multi-Functionality, Multi-Granularity](https://arxiv.org/abs/2402.03216) — 三模态检索（Dense+Sparse+ColBERT）
+- [Billion-scale similarity search with GPUs (FAISS)](https://arxiv.org/abs/1702.08734) — Johnson et al. 2017，ANN 搜索的基础设施
+
+### 实践资源
+- [MTEB Leaderboard](https://huggingface.co/spaces/mteb/leaderboard) — Embedding 模型效果排行榜 ⭐⭐⭐⭐⭐
+- [Sentence-Transformers](https://www.sbert.net/) — Embedding 模型的标准使用接口
+- [FAISS GitHub](https://github.com/facebookresearch/faiss) — Meta 出品，向量搜索的基础库
+
+## 🔧 落地应用
+
+### 直接可用场景
+- **RAG 检索基座**：Embedding + 向量数据库是 RAG 系统的核心组件
+- **语义搜索引擎**：替代关键词搜索，支持"意思相近"的模糊查询
+- **相似度推荐**：文档/商品/用户画像的向量化 + 近邻搜索
+
+### 工程实现要点
+- **模型选型速查**：中文 → BGE-M3 / BGE-large-zh；英文 → BGE-large-en；长文档 → E5-Mistral-7B / GTE-Qwen2；API → Cohere embed-v3
+- **向量数据库速查**：原型 → Chroma；生产 <10M → Qdrant/pgvector；>10M → Milvus
+- **内存优化**：Matryoshka 截断（3072→256 维）可减 12 倍存储，效果损失 <5%
+
+### 面试高频问法
+- Q: 为什么不直接用 BERT CLS token？
+  A: CLS 是为 NSP 训练的，未优化句子相似度；需要对比学习训练（SimCSE/BGE）才能用于检索
+- Q: HNSW 和 IVF 怎么选？
+  A: 内存充足 + <10M → HNSW；大规模/内存受限 → IVF+PQ
+
+## 💡 启发与思考
+
+### So What？对老板意味着什么
+- Embedding 模型选型直接决定 RAG 检索质量上限——选错模型，后面优化都白费
+- BGE-M3 的 Dense+Sparse+ColBERT 三模态检索是当前最强开源方案
+
+### 未解问题与局限
+- 领域适应性：通用模型在专业领域（生物医药/法律）可能表现不佳，需要 Fine-tune
+- 高维空间的"维度灾难"：维度越高，向量间距离区分度越低
+
+### 脑暴：如果往下延伸
+- 结合 [[AI/LLM/Application/RAG/检索策略|检索策略]] 的 Hybrid Search，BGE-M3 同时输出 Dense+Sparse 是天然的混合检索方案
+- Matryoshka Embedding 让"效果-成本"可以连续调节——这对大规模系统意义重大
+
+> 🔗 See also: [[AI/LLM/Application/RAG/检索策略]] — 检索策略是 Embedding 选型的下游应用
+> 🔗 See also: [[AI/RAG/RAG-2026-技术全景|RAG 2026 全景]] — Embedding 在完整 RAG 架构中的位置
+> 🔗 See also: [[AI/LLM/Application/RAG/RAG 原理与架构]] — RAG 基础架构

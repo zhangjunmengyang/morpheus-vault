@@ -1,12 +1,20 @@
 ---
 title: "AI"
+brief: "AI 三波浪潮宏观认知（CNN感知→Transformer语言→LLM+Agent多模态）；Scaling Law 新维度（test-time compute/post-training scaling/数据质量）；开源 vs 闭源格局；工程师 AI 学习路径速查图。"
 type: concept
 domain: ai
 created: "2026-02-13"
-updated: "2026-02-13"
+updated: "2026-02-22"
 tags:
   - ai
   - type/concept
+sources:
+  - "作者原创思考整理（非论文）"
+  - "参考：https://muhammadsajwani.medium.com/changer-is-the-only-constant-dca1e0d95982"
+related:
+  - "[[AI/AI 思考|AI 思考]]"
+  - "[[AI/关于 AI 学习提效思考|关于 AI 学习提效思考]]"
+  - "[[AI/LLM/目录|LLM MOC]]"
 ---
 # AI 综合
 
@@ -54,18 +62,21 @@ tags:
 
 ## 工程师视角的 AI 学习路径
 
-```
-基础 ────────────────────────────────────────
-  Transformer 架构 → Attention 机制 → 位置编码
-
-应用 ────────────────────────────────────────
-  Prompt Engineering → RAG → Fine-tuning → Agent
-
-深入 ────────────────────────────────────────
-  SFT → RLHF/DPO → 分布式训练 → 推理优化
-
-前沿 ────────────────────────────────────────
-  多模态 → Test-time Compute → 世界模型
+```mermaid
+graph LR
+    subgraph 基础
+        A1[Transformer 架构] --> A2[Attention 机制] --> A3[位置编码]
+    end
+    subgraph 应用
+        B1[Prompt Engineering] --> B2[RAG] --> B3[Fine-tuning] --> B4[Agent]
+    end
+    subgraph 深入
+        C1[SFT] --> C2[RLHF/DPO] --> C3[分布式训练] --> C4[推理优化]
+    end
+    subgraph 前沿
+        D1[多模态] --> D2[Test-time Compute] --> D3[世界模型]
+    end
+    基础 --> 应用 --> 深入 --> 前沿
 ```
 
 对于数据工程师转 AI：最快的路径是从 **Prompt Engineering + RAG** 入手，然后深入 **Fine-tuning**，再看 **RL 对齐**。不需要从头学深度学习理论——直接从应用层切入，需要什么补什么。
@@ -74,6 +85,6 @@ tags:
 
 - [[AI/AI 思考|AI 思考]]
 - [[AI/关于 AI 学习提效思考|关于 AI 学习提效思考]]
-- [[AI/LLM/_MOC|LLM MOC]]
-- [[AI/MLLM/_MOC|MLLM MOC]]
+- [[AI/LLM/目录|LLM MOC]]
+- [[AI/MLLM/目录|MLLM MOC]]
 - [[AI/Agent/Multi-Agent/零碎的点|Multi-Agent 思考]]

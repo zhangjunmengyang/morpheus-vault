@@ -1,4 +1,5 @@
 ---
+brief: "verl 多轮 RL 训练交互——多轮对话/Tool Use/Agent 任务的 RL 训练架构；环境交互 API 设计、多轮 rollout 的奖励累积、长时域信用分配的 verl 实现方案。"
 title: "多轮 RL 训练交互"
 type: project
 domain: ai/llm/frameworks/verl

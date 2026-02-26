@@ -1,5 +1,6 @@
 ---
 title: "Test-Time Compute (TTC) 效率 2026：综合分析与分类框架"
+brief: "2026 TTC 效率综合综述：系统分类 Test-Time Compute 优化策略（Budget Forcing / Early Stopping / Adaptive Allocation / Parallel Sampling）及其 trade-off；涵盖 ConformalThinking / DTR / Accordion-Thinking / PTE 等前沿方法，面试武器级综合笔记。"
 date: 2026-02-21
 tags:
   - ai/llm/inference

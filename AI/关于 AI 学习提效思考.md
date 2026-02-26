@@ -1,4 +1,5 @@
 ---
+brief: "AI 学习提效思考——如何高效学习和跟踪 AI 前沿的方法论；论文阅读策略/笔记系统设计/知识图谱构建的个人实践；与 Morpheus Vault 知识管理体系直接相关的元认知笔记。"
 title: "关于 AI 学习提效思考"
 type: tutorial
 domain: ai
@@ -131,8 +132,8 @@ https://github.com/CNFeffery/DataScienceStudyNotes
 
 ## See Also
 
-- [[AI/_MOC|AI MOC]] — AI 知识域全索引
-- [[AI/LLM/_MOC|LLM MOC]] — AI 学习的核心技术域
-- [[AI/Foundations/_MOC|Foundations MOC]] — 数学/DL 基础：AI 学习的地基
+- [[AI/目录|AI MOC]] — AI 知识域全索引
+- [[AI/LLM/目录|LLM MOC]] — AI 学习的核心技术域
+- [[AI/Foundations/目录|Foundations MOC]] — 数学/DL 基础：AI 学习的地基
 - [[Career/AI 应用工程师职业路径|AI 应用工程师职业路径]] — 学习方向与职业路径的对齐
 - [[Career/AI面试速查手册|AI 面试速查手册]] — 将学习成果转化为面试武器

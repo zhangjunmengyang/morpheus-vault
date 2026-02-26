@@ -276,3 +276,7 @@ MetaJudge 可靠性：
 
 ## Tags
 #RewardModel #GenRM #LLMasJudge #DeceptiveAlignment #RationaleConsistency #GRPO #RLHF #MetaJudge #RM-Bench #JudgeBench #QwenTeam #推理过程对齐
+
+---
+
+> 📁 **版本说明**：`AI/LLM/Evaluation/MetaJudge-Rationale-Consistency-GenRM-Deceptive-Alignment.md` 为 Scholar 早期简化版（deprecated），本文为完整正式版。

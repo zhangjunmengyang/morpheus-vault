@@ -1,7 +1,8 @@
 ---
 title: "Agent RL 环境工程系统论 — 如何构建能训练出泛化 Agent 的环境"
-brief: "环境质量是 Agent RL 泛化能力的硬上限，这是 EnterpriseGym 的实验结论而非直觉。系统整理六大环境设计原则、主流真实环境（SWE-bench/OSWorld/WebArena/PaperBench）的 RL 训练特点、Reward 工程三大来源及 Hacking 防御，以及合成环境（AWM）方法论。"
+brief: "环境质量是 Agent RL 泛化能力的硬上限，这是 EnterpriseGym 的实验结论而非直觉。系统整理六大环境设计原则、主流真实环境（SWE-bench/OSWorld/WebArena/PaperBench）的 RL 训练特点、Reward 工程三大来源及 Hacking 防御，以及合成环境（AWM）方法论。v3更新：AWM（ICML 2026）完整补充——五阶段合成流水线/代码驱动vs LLM模拟对比/OOD泛化实证。"
 date: 2026-02-21
+updated: 2026-02-24
 type: synthesis
 domain: ai/agent/agentic-rl
 tags:
@@ -25,6 +26,7 @@ sources:
   - "UI-TARS-2: arXiv 2509.02544"
   - "WebAgent-R1: arXiv 2505.16421"
   - "SkyRL-Agent: arXiv 2511.16108"
+  - "AWM (Agent World Model): arXiv 2602.10090, ICML 2026, Snowflake AI"
 related:
   - "[[AI/Agent/EnterpriseGym-Corecraft|EnterpriseGym-Corecraft]]"
   - "[[AI/Agent/Agentic-RL/AWM-Agent-World-Model-Synthetic-Environments|AWM]]"
@@ -33,7 +35,7 @@ related:
   - "[[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]]"
   - "[[AI/Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL-训练专题]]"
   - "[[AI/Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]]"
-  - "[[Agent 评测与 Benchmark]]"
+  - "[[AI/Agent/Agent 评测与 Benchmark|Agent 评测与 Benchmark]]"
 ---
 
 # Agent RL 环境工程系统论
@@ -210,7 +212,7 @@ graph LR
 
 $$\text{pass@1}_{\text{7B}} < 10\% \implies P(\text{reward}>0) < 10\% \implies \text{几乎无正向梯度}$$
 
-**Agent-RLVR 解法**（arXiv 2506.11425）：Guidance rewards，两阶段循环（见[[Tool-Use-RL-训练专题]]）→ 9.4% → 22.4%
+**Agent-RLVR 解法**（arXiv 2506.11425）：Guidance rewards，两阶段循环（见[[AI/Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL-训练专题]]）→ 9.4% → 22.4%
 
 **基础设施**：每 rollout 需要独立 Docker container，并行需要 container 编排系统
 
@@ -255,21 +257,68 @@ flowchart LR
 
 ## 五、合成环境：AWM 方法论
 
-**AWM = Agent World Model**（arXiv 2602.xxx）
+**AWM = Agent World Model**（arXiv:2602.10090，**ICML 2026**，Snowflake AI + UIUC）  
+**完整精读笔记**：[[AI/Agent/Agentic-RL/AWM-Agent-World-Model-Synthetic-Environments|AWM 精读笔记]]
 
 ### 核心思路
 
-$$\text{Real env} \xrightarrow{\text{学习规律}} \text{World Model} \xrightarrow{\text{生成}} \text{Synthetic tasks} \xrightarrow{\text{RL}} \text{Agent}$$
+AWM 的根本思路不是"用 LLM 模拟环境"，而是**用 LLM 生成代码，让代码作为环境**：
 
-**合成环境 ≠ 复制真实环境**，而是捕捉其**结构特征**（任务类型分布 / 依赖关系 / 工具接口模式）
+```
+场景描述（文字）
+    ↓ LLM 生成
+用户任务（需求）
+    ↓ 任务驱动
+数据库 Schema（SQLite）
+    ↓
+MCP 工具接口（Python 代码）
+    ↓
+验证代码（Reward 信号）
+    ↓
+可执行环境（POMDP）
+```
+
+**关键 insight：任务→数据库（需求驱动设计）**
+
+大多数系统是"先设计 DB，再看能做什么任务"。AWM 反过来："先生成用户任务，再设计能支持这些任务的 DB"——这保证了每个任务从初始状态都可执行，避免了"DB 有数据但任务无法完成"的设计失误。
+
+### AWM 的规模
+
+- **1,000 个唯一场景**（finance / travel / retail / social media / CRM...）
+- **35,062 个 MCP 工具**（平均每环境 35 个）
+- **10,000 个任务**（每环境 10 个）+ 配套验证代码
+- 每步 1,024 并行环境实例支持大规模 RL
+
+### 为什么代码驱动 >> LLM 模拟
+
+| 维度 | LLM 模拟环境 | AWM 代码驱动环境 |
+|------|------------|--------------|
+| 状态一致性 | ❌（幻觉问题）| ✅（代码确定性）|
+| 速度 | 慢（每步需 LLM 调用）| 快（毫秒级执行）|
+| 成本 | 高 | 低（只生成时需要 LLM）|
+| Reward 可靠性 | ❌（LLM judge 可被 game）| ✅（程序验证）|
+| RL 训练可用性 | 困难 | ✅（并行 + 快速 reset）|
+
+### AWM 的 Reward 设计
+
+双层 reward：
+1. **Verification code**（主）：比较执行前后 DB 状态，binary correctness
+2. **LLM-as-Judge**（辅）：语义完成度评分，兜底无法程序化验证的任务
+
+### OOD 泛化结论
+
+仅在 AWM 合成环境训练，在 τ²-bench / BFCL v4 / TheMCPCompany 三个 OOD benchmark 上均超越 benchmark-specific 训练的 agent。
+
+机制：MCP 标准接口的一致性 + 场景多样性（1000 场景）让 agent 学到可迁移的通用工具使用策略，而非 benchmark-specific 技巧。
 
 ### 适用场景与局限
 
 | 适用 | 局限 |
 |------|------|
-| 真实环境数据稀缺 | Distribution gap 不可消除 |
-| 真实环境运行成本高 | 基础模型能力不足→合成质量差 |
-| 需要精准 curriculum 控制 | 需要定期在真实环境验证效果 |
+| 真实环境数据稀缺 | 只涵盖 API/CRUD 类任务（不含 GUI 操作）|
+| 真实环境运行成本高 | 合成→真实 distribution gap 仍存在 |
+| 需要精准 curriculum 控制 | 课程学习（难度递进）尚未实现 |
+| tool-use RL 基础设施搭建 | 1000 环境对于大模型 RL 仍有限 |
 
 ---
 
@@ -421,9 +470,9 @@ $$\text{评估分层} = \begin{cases} \text{Task-level} & \text{整体任务成�
 - **Agent-RLVR**: https://arxiv.org/abs/2506.11425
 
 ### 相关 Vault 笔记
-- [[EnterpriseGym-Corecraft]] — Corecraft 单独深读
-- [[AWM-Agent-World-Model-Synthetic-Environments]] — 合成环境方法论
-- [[Tool-Use-RL-训练专题]] — Reward 设计详细展开
-- [[Long-Horizon-Credit-Assignment专题]] — 长任务 credit assignment 算法
-- [[KLong-Extremely-Long-Horizon-Agent]] — KLong 单独深读
-- [[Agent 评测与 Benchmark]] — 评估体系
+- [[AI/Agent/EnterpriseGym-Corecraft|EnterpriseGym-Corecraft]] — Corecraft 单独深读
+- [[AI/Agent/Agentic-RL/AWM-Agent-World-Model-Synthetic-Environments|AWM-Agent-World-Model-Synthetic-Environments]] — 合成环境方法论
+- [[AI/Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL-训练专题]] — Reward 设计详细展开
+- [[AI/Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]] — 长任务 credit assignment 算法
+- [[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong-Extremely-Long-Horizon-Agent]] — KLong 单独深读
+- [[AI/Agent/Agent 评测与 Benchmark|Agent 评测与 Benchmark]] — 评估体系

@@ -1,6 +1,8 @@
 ---
 title: "Agent 框架对比：LangChain vs LlamaIndex vs AutoGen vs CrewAI vs elizaOS vs Dify"
+brief: "六大 Agent 框架横向对比：定位/架构/适用场景/优劣势；LangChain(通用) vs AutoGen(Multi-Agent) vs CrewAI(角色协作) vs elizaOS(链上) vs Dify(低代码)；面试热点——如何选型"
 date: 2026-02-13
+updated: 2026-02-23
 tags:
   - ai/agent
   - ai/agent/framework
@@ -78,7 +80,7 @@ result = app.invoke({"messages": [user_query], "next_action": ""})
 
 ### 架构特点
 
-LlamaIndex 从 RAG 工具演进为 Agent 框架。核心抽象：**Index → QueryEngine → AgentWorkflow**。v0.11+ 引入 `llama-index-agent` 模块，支持 [[RAG 工程实践|RAG]] 与 Agent 深度融合。
+LlamaIndex 从 RAG 工具演进为 Agent 框架。核心抽象：**Index → QueryEngine → AgentWorkflow**。v0.11+ 引入 `llama-index-agent` 模块，支持 [[AI/LLM/Application/RAG 工程实践|RAG]] 与 Agent 深度融合。
 
 ```python
 from llama_index.core.agent.workflow import AgentWorkflow
@@ -115,7 +117,7 @@ response = await agent.run("Explain transformer attention")
 
 ### 架构特点
 
-微软的 [[AutoGen|AutoGen]] 以 **多 Agent 对话** 为核心。v0.4（AutoGen Studio）重构为事件驱动架构，Agent 之间通过消息传递协作。支持 GroupChat 模式。
+微软的 [[AI/Agent/Frameworks/AutoGen|AutoGen]] 以 **多 Agent 对话** 为核心。v0.4（AutoGen Studio）重构为事件驱动架构，Agent 之间通过消息传递协作。支持 GroupChat 模式。
 
 ```python
 from autogen_agentchat.agents import AssistantAgent
@@ -250,7 +252,7 @@ runtime.registerAction({
 
 ### 适用场景
 
-社交媒体 AI Agent、DeFi 自动化、链上交互 Agent。参见 [[elizaOS Trust Scoring 源码研究]]。
+社交媒体 AI Agent、DeFi 自动化、链上交互 Agent。参见 [[AI/Agent/Agent-Economy/elizaOS Trust Scoring 源码研究|elizaOS Trust Scoring 源码研究]]。
 
 ## 7. Dify
 
@@ -311,10 +313,10 @@ Dify 是 **低代码 LLMOps 平台**，提供可视化 Workflow 编辑器。支�
 
 ## 相关笔记
 
-- [[Agent or Workflow？]] — 何时用 Agent，何时用固定流程
-- [[Multi-Agent 概述]] — Multi-Agent 设计模式
-- [[Tool Use]] — Agent 工具调用机制
-- [[RAG 工程实践]] — 检索增强生成
-- [[AutoGen]] — AutoGen 详细笔记
-- [[elizaOS Trust Scoring 源码研究]] — elizaOS 信任机制源码
-- [[记忆模块]] — Agent 记忆设计
+- [[AI/Agent/Fundamentals/Agent or Workflow？|Agent or Workflow？]] — 何时用 Agent，何时用固定流程
+- [[AI/Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]] — Multi-Agent 设计模式
+- [[AI/Agent/Fundamentals/Tool Use|Tool Use]] — Agent 工具调用机制
+- [[AI/LLM/Application/RAG 工程实践|RAG 工程实践]] — 检索增强生成
+- [[AI/Agent/Frameworks/AutoGen|AutoGen]] — AutoGen 详细笔记
+- [[AI/Agent/Agent-Economy/elizaOS Trust Scoring 源码研究|elizaOS Trust Scoring 源码研究]] — elizaOS 信任机制源码
+- [[AI/Agent/Fundamentals/记忆模块|记忆模块]] — Agent 记忆设计

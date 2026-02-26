@@ -1,4 +1,5 @@
 ---
+brief: "HuggingFace MCP 课程——Model Context Protocol 官方入门课程；MCP Server/Client 设计原理、工具注册机制、context 传递协议；Anthropic 标准化 AI 工具接口的学习入口，Claude/smolagents 生态的关键协议。"
 title: "MCP Course"
 type: tutorial
 domain: ai/agent/mcp
@@ -120,5 +121,5 @@ Streamable HTTP 是 MCP 协议的一次重要升级，通过引入按需流式�
 
 - [[AI/Agent/MCP/如何给人深度科普 MCP|如何深度科普 MCP]] — MCP 的概念深度版
 - [[AI/Agent/Fundamentals/Tool Use|Tool Use]] — MCP 是 Tool Use 的标准化协议
-- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱
-- [[AI/LLM/_MOC|LLM MOC]] — MCP 在 LLM 生态中的位置
+- [[AI/Agent/目录|Agent MOC]] — Agent 知识全图谱
+- [[AI/LLM/目录|LLM MOC]] — MCP 在 LLM 生态中的位置

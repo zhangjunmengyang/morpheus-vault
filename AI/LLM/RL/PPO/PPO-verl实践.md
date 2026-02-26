@@ -1,4 +1,5 @@
 ---
+brief: "PPO verl 实践——基于 verl 框架的 PPO 分布式 RLHF 工程指南；HybridFlow 架构下四模型并行/reward model 服务化/生产级稳定性调参；大规模 RLHF 的基础设施参考。"
 title: "PPO"
 type: project
 domain: ai/llm/rl/ppo

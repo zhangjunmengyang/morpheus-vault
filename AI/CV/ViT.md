@@ -1,4 +1,5 @@
 ---
+brief: "ViT（Vision Transformer，Dosovitskiy 2021）——将图像分割为 patch 序列用 Transformer 处理；打破 CNN 在视觉的垄断；DeiT/BEiT/MAE 的基础架构；现代 VLM（CLIP/LLaVA/InternVL）的视觉 encoder 标配。"
 title: "Vit"
 type: paper
 domain: ai/cv
@@ -95,4 +96,4 @@ ViT 的影响远超图像分类本身：
 - [[AI/Foundations/DL-Basics/深度学习|深度学习]]
 - [[ControlNet]]
 - [[AI/Foundations/DL-Basics/Transformer 通识|Transformer 通识]]
-- [[AI/Foundations/DL-Basics/Attention 详解|Attention 详解]]
+- [[AI/LLM/Architecture/Attention 变体综述|Attention 详解]]

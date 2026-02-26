@@ -1,108 +1,209 @@
 ---
-title: "MLLM"
-type: reference
+title: "多模态大语言模型 (MLLM) 概述"
+brief: "MLLM 的核心架构（Modality Encoder → Input Projector → LLM Backbone → Output Projector → Generator）、发展历程（理解→生成→Any-to-Any）、视觉/音频编码器选型、训练策略（Projector 对齐 + SFT + RLHF），以及与 CLIP/LLaVA/InstructBLIP 等关键模型的关联。"
+type: concept
 domain: ai/mllm
 created: "2026-02-13"
-updated: "2026-02-13"
+updated: "2026-02-22"
 tags:
   - ai/mllm
-  - type/reference
+  - ai/vision-language
+  - type/concept
+status: complete
+sources:
+  - "Radford et al. 'Learning Transferable Visual Models From Natural Language Supervision (CLIP)' arXiv:2103.00020"
+  - "Liu et al. 'Visual Instruction Tuning (LLaVA)' arXiv:2304.08485"
+  - "Dai et al. 'InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning' arXiv:2305.06500"
+  - "Zhang et al. 'MM-LLMs: Recent Advances in MultiModal Large Language Models' arXiv:2312.16602"
+related:
+  - "[[AI/MLLM/多模态 LLM 架构]]"
+  - "[[AI/MLLM/CLIP|CLIP]]"
+  - "[[AI/MLLM/BLIP-2|BLIP-2]]"
+  - "[[AI/MLLM/InternVL3|InternVL3]]"
+  - "[[AI/CV/ViT|ViT]]"
 ---
-# MLLM
 
-# 信息源
+# 多模态大语言模型 (MLLM) 概述
+
+> MLLM 利用 LLM 为多模态任务提供认知能力，核心挑战是如何将不同模态连接起来实现协同推理。
+
+## 信息源
 
 想往多模态方面去发展：
 
-- https://github.com/Sun-Haoyuan23/Awesome-RL-based-Reasoning-MLLMs
-- https://github.com/showlab/Awesome-MLLM-Hallucination
-https://github.com/JiaWang2001/Paper_reading
+- [Awesome-RL-based-Reasoning-MLLMs](https://github.com/Sun-Haoyuan23/Awesome-RL-based-Reasoning-MLLMs)
+- [Awesome-MLLM-Hallucination](https://github.com/showlab/Awesome-MLLM-Hallucination)
+- [Paper_reading](https://github.com/JiaWang2001/Paper_reading)
+- [Awesome-MLLM-Reasoning-Collection](https://github.com/lwpyh/Awesome-MLLM-Reasoning-Collection)
 
-https://github.com/lwpyh/Awesome-MLLM-Reasoning-Collection
+> 来源：Zhang et al. "MM-LLMs: Recent Advances in MultiModal Large Language Models" arXiv:2312.16602
 
-# 参考
-
-https://arxiv.org/pdf/2312.16602
-
-# 现状认知
+## 现状认知
 
 最近，多模态大模型取得重大进展。随着数据集和模型的规模不断扩大，**传统的 MM 模型从头开始训练带来了巨大的计算量**，所以一个合理的方法是利用好现成的训练好的单模态基础模型，尤其是 LLM。这样可以减少多模态训练的费用，提升训练效率。
 
-MM-LLM 利用 LLM为各种 MM 任务提供认知能力。LLM 具有良好的语言生成，zero-shot 和 ICL（上下文学习） 的能力。其他模态的基础模型则提供了高质量的表征。考虑到不同模态的模型是分开训练的，如何将不同模态连接起来，实现协同推理，是核心挑战。
+MM-LLM 利用 LLM 为各种 MM 任务提供认知能力。LLM 具有良好的语言生成，zero-shot 和 ICL（上下文学习） 的能力。其他模态的基础模型则提供了高质量的表征。考虑到不同模态的模型是分开训练的，如何将不同模态连接起来，实现协同推理，是核心挑战。
 
-# 发展历程
+## 发展历程
 
-引用：https://zhuanlan.zhihu.com/p/682893729
+> 来源：Zhang et al. arXiv:2312.16602, Sec. 2
 
-![image](assets/QneHdwKS8oh4jhxVvGic58aTnug.png)
+1. **多模态理解阶段**：最初的发展集中在多模态的内容理解和文本的生成
+2. **多模态生成阶段**：同时实现多模态的输入和输出工作 MM-LMM，探索特定模态的生成
+3. **Any-to-Any 阶段**：将 LLM 和外部工具集成进来，实现"any-to-any"的多模态理解和生成
 
-1. 最初的发展集中在多模态的内容理解和文本的生成
-1. 同时实现多模态的输入和输出工作 MM-LMM，探索特定模态的生成
-1. 将 LLM 和外部工具继承进来，实现“any-to-any”的 多模态理解和生成
-# 架构
+```mermaid
+graph LR
+    A["阶段1: 理解+文本生成<br/>CLIP, LLaVA, InstructBLIP"] --> B["阶段2: 多模态输入+输出<br/>MM-LMM, 特定模态生成"]
+    B --> C["阶段3: Any-to-Any<br/>LLM + 外部工具集成"]
+    
+    style A fill:#e1f5fe
+    style B fill:#fff3e0
+    style C fill:#e8f5e9
+```
 
-## Modality Encoder：
+## 架构
 
-模态编码器主要是对来自不同模态的输入进行编码，来获得相应的特征：
+> 来源：Zhang et al. arXiv:2312.16602, Sec. 3
 
-F_X = ME_X(I_X)
+MLLM 的通用架构由五个核心组件构成：
 
-存在各种预训练的编码器来处理不同的模态，模态可以是图像，视频，音频，3D 等。
+```mermaid
+flowchart TD
+    subgraph Input["输入侧"]
+        ME["Modality Encoder<br/>ViT / CLIP ViT / HuBERT"]
+        IP["Input Projector<br/>MLP / Cross-Attention / Q-Former"]
+    end
+    
+    subgraph Core["核心"]
+        LLM["LLM Backbone<br/>LLaMA / Qwen / Vicuna"]
+    end
+    
+    subgraph Output["输出侧"]
+        OP["Output Projector<br/>Linear / MLP"]
+        MG["Modality Generator<br/>Stable Diffusion / AudioLDM"]
+    end
+    
+    ME --> IP --> LLM
+    LLM --> OP --> MG
+    LLM -->|"文本输出 t"| TextOut["文本回答"]
+```
 
-### 视觉模态
+### Modality Encoder
 
-对于图像，一般有四个可选的编码器，NFNet-F6，ViT，CLIP VIT，EVA-CLIP ViT。
+模态编码器对来自不同模态的输入进行编码：$F_X = \text{ME}_X(I_X)$
 
-- NFNet-F6：是一个无归一化的 ResNet 网络，可以在增强过的数据集上获得 SOTA 的图像识别的性能。
-- VIT：采用 transformer 模型，将 image 变成 patch，然后对图像进行处理。然后经过线性投影flatten，然后经过多个 transformer 模块。
-- CLIP-VIT：利用大量的文本-图像快，通过对比学习来优化 ViT，将成对的文本图像视为正样本，其他的文本和图像视为负样本。
-- EVA-CLIP：对大规模的 CLIP 训练稳定了训练过程和优化过程。
+**视觉模态编码器**（参见 [[AI/CV/ViT|ViT]]）：
+
+| 编码器 | 特点 | 代表使用 |
+|--------|------|---------|
+| NFNet-F6 | 无归一化 ResNet，SOTA 图像识别 | — |
+| ViT | Transformer 处理 image patches | 通用 |
+| CLIP ViT（arXiv:2103.00020） | 大规模文本-图像对比学习 | LLaVA, InstructBLIP |
+| EVA-CLIP | 大规模 CLIP 训练稳定化 | InternVL |
+
+> 来源：视觉编码器选型参见 CLIP (Radford et al., arXiv:2103.00020)
+
 对于视频，可以统一采样 5 帧，进行与图像同样的处理。
 
-### 音频模态
+**音频模态编码器**：C-Former（CIF 对齐机制）、HuBERT（自监督 BERT）、BEATs（迭代音频预训练）、Whisper
 
-通常使用 C-Former，HuBERT，BEATs 和 Whisper 等进行编码。
+### Input Projector
 
-- C-Former：使用了 CIF 对齐机制来实现序列的转换，并且使用一个 Transformer 来提取音频特征
-- HuBERT：是一个自监督的语音表征徐诶框架，基于 BERT。通过离散hidden units 的mask 预测来实现
-- BEAT 是：是一个迭代的音频预训练框架，使用音频 Transformer 来学习双向编码表示
-## 输入 Projector：
+输入 Projector 将其他模态的编码特征 $F_X$ 与文本特征空间 $T$ 进行对齐。对齐后的特征作为 prompts $P_X$ 联同文本特征 $F_T$ 输入到 LLM Backbone 内。
 
-输出projector 的任务是将其他模态的编码特征F_X与文本特征空间的特征T进行对齐。对齐后的特征作为prompts P_x联通文本特征F_T输入到 LLM Backbone 内。给定 X 模态-text数据集\{I_X,t\},目标是最小化生成损失。
+$$\mathcal{L} = -\sum_{t=1}^{T} \log P(x_t | P_X, F_T, x_{<t})$$
 
-输入 Projecor 可以通MLP 或者多层 MLP 来实现。也有复杂的实现，比如 Cross-Attention，Q-Former，P-Former 等。Cross-Attention 使用一系列的可训练的 query 和编码特征 F_X作为 key 来压缩特征序列到固定的长度。将压缩的表示特征输给 LLM。
+实现方式（参见 [[AI/MLLM/多模态 LLM 架构|多模态 LLM 架构]] 的 Projector 对比）：
+- **MLP**（2 层）：最简单有效，2025 年主流选择（LLaVA-1.5+, InternVL）
+- **Cross-Attention**：可学习 query 压缩特征到固定长度
+- **Q-Former**（InstructBLIP, arXiv:2305.06500）：32 个可学习 queries 提取视觉表示
+- **P-Former**：进一步的压缩变体
 
-## LLM Backbone：
+### LLM Backbone
 
-LLM作为核心智能体，MM-LLMs 可以继承一些显着的属性，如零样本泛化（zero-shot）、少样本 ICL、思想链 (CoT) 和指令遵循。 LLM 主干处理来自各种模态的表示，参与有关输入的语义理解、推理和决策。它产生 (1) 直接文本输出 t，以及 (2) 来自其他模式（如果有）的信号token S_x。这些信号token充当指导生成器是否生成 MM 内容的指令，如果是，则指定要生成的内容：
+LLM 作为核心智能体，继承 zero-shot 泛化、few-shot ICL、CoT 和指令遵循能力：
 
-t,S_X = LLM(P_X,F_T)
+$$t, S_X = \text{LLM}(P_X, F_T)$$
 
-上式中，其他模态P_X的对齐后的表征，可以认为是软 prompt-tuning，输给 LLM Backbone。发而且一些研究工作引入了 PEFT 的方法，例如 Prefix-tuning，Adapter 和 LoRA。这些 case 里面，希望更少的参数可以被训练，甚至少于 0.1% 的 LLM 的参数参与训练。
+其中 $t$ 是文本输出，$S_X$ 是其他模态的信号 token。常用 LLM：Flan-T5、ChatGLM、Qwen、LLaMA/LLaMA2、Vicuna 等。
 
-通常用到的 LLM 模型有 Flan-T5，ChatGLM，UL2，Qwen，Chinchilla，OPT，PaLM，LLaMA ，LLaMA2 ，Vicuna 等。
+PEFT 方法（Prefix-tuning、Adapter、LoRA）可以在 <0.1% 参数下实现训练。
 
-## Output Projector：
+### Output Projector & Modality Generator
 
-输出Projector将 LLM 的输出的 token 表征S_X转变成特征H_X，然后输给生成器MG_X。
+输出 Projector 将 LLM 的信号 token 表征 $S_X$ 转变成特征 $H_X$，输给模态生成器 $\text{MG}_X$。
 
-给定数据X-text数据集\{I_X, t\}，首先将文本t输给 LLM，生成对应的S_X，然后映射得到H_X。模型优化的目标是最小化H_X与MG_X的条件文本之间的距离。
+生成器使用现成的扩散模型：
+- **图像**：Stable Diffusion
+- **视频**：Zeroscope
+- **音频**：AudioLDM-2
 
-## 模态生成器：
+训练目标：最小化 $H_X$ 与 $\text{MG}_X$ 条件文本之间的距离。
 
-模态生成器MG_X一般用于生成不同的模态来输出。当前的工作一般使用现成的扩大模型（Latent diffusion model），例如 Stable Diffusion用于图像生成，Zeroscope用于视频生成，AudioLDM-2 用于音频生成。
+## 数据集
 
-输出 Projector 输出的特征H_x作为条件输入，在去噪的过程中，用于生成 MM 的内容。训练过程中， gt content 首先转换为 latent feature z_0，由预训练好的 VQA 模型。然后噪声\epsilon加到z_0上，获得 noise latent feature z_t,预训练好的 UNet 用于计算条件损失，通过最小化 loss 来优化参数。
+> 来源：Zhang et al. arXiv:2312.16602, Sec. 4
 
-# 数据集
+常用多模态数据集涵盖 image-caption pairs（LAION-5B、CC-12M）、visual QA（VQAv2、GQA）、visual instruction tuning（LLaVA-Instruct-150K）等。
 
-![image](assets/XXCadgmIEolKBRx3t0Zcd5IFn3b.png)
+---
+
+## 📚 推荐阅读
+
+### 原始论文
+- [Learning Transferable Visual Models From Natural Language Supervision (CLIP)](https://arxiv.org/abs/2103.00020) — Radford et al. 2021，多模态对齐的里程碑，必读
+- [Visual Instruction Tuning (LLaVA)](https://arxiv.org/abs/2304.08485) — Liu et al. 2023，视觉指令微调的奠基论文
+- [InstructBLIP: Towards General-purpose VLM with Instruction Tuning](https://arxiv.org/abs/2305.06500) — Dai et al. 2023，Q-Former + 指令微调
+- [MM-LLMs: Recent Advances in MultiModal Large Language Models](https://arxiv.org/abs/2312.16602) — 最全面的 MLLM 综述 ⭐⭐⭐⭐⭐
+
+### 深度解读
+- [知乎 MLLM 综述解读](https://zhuanlan.zhihu.com/p/682893729) — 中文解读，适合快速理解全貌 ⭐⭐⭐⭐
+
+### 实践资源
+- [LLaVA GitHub](https://github.com/haotian-liu/LLaVA) — 最简洁的 MLLM 实现，适合学习
+- [InternVL GitHub](https://github.com/OpenGVLab/InternVL) — 最强开源 MLLM 系列
+
+## 🔧 落地应用
+
+### 直接可用场景
+- **文档理解/OCR**：MLLM 直接理解 PDF 截图、表格图片，替代传统 OCR 管线
+- **多模态 RAG**：图文混合检索——用 CLIP Embedding 统一图文向量空间，或用 Vision LLM 将图片转文字描述
+- **视觉问答**：基于产品图片/医疗影像/建筑图纸的智能问答
+
+### 工程实现要点
+- **Vision Encoder 选型**：中文场景用 InternViT-6B（InternVL）或 Qwen-VL 自训 ViT；英文通用用 CLIP ViT-L / SigLIP
+- **Projector 选型**：2025 年主流是 2 层 MLP（简单有效），Q-Former 在细粒度任务（OCR）上有劣势
+- **训练三阶段**：①冻结 ViT+LLM 只训 Projector（对齐） → ②解冻 LLM 做 Visual SFT → ③可选 RLHF/DPO 减少幻觉
+
+### 面试高频问法
+- Q: MLLM 的通用架构是什么？
+  A: 五件套——Modality Encoder + Input Projector + LLM Backbone + Output Projector + Generator；核心 trade-off 在 Projector 的复杂度
+- Q: 为什么不从头训练多模态模型？
+  A: 计算量巨大；利用预训练好的 LLM + 预训练好的视觉编码器，只需训练轻量级 Projector 即可实现模态对齐
+
+## 💡 启发与思考
+
+### So What？对老板意味着什么
+- MLLM 是 AI 从"只能读文字"到"能看图、听声音、理解世界"的关键跃迁
+- 掌握 MLLM 架构是进入多模态 AI 领域的门票——2025-2026 大量岗位需求
+
+### 未解问题与局限
+- **视觉幻觉**：MLLM 会描述图中不存在的对象，RLHF-V 等方法缓解但未根治
+- **细粒度理解**：小目标、密集文字的识别仍不稳定，需要高分辨率 + token 压缩的平衡
+- **多模态推理**：跨模态的 CoT 推理（如"看图做数学"）仍是前沿难题
+
+### 脑暴：如果往下延伸
+- MLLM + [[AI/RAG/RAG-2026-技术全景|RAG]] = 多模态 RAG，是 2025-2026 的热门方向
+- 结合 [[AI/MLLM/多模态 LLM 架构|多模态 LLM 架构]] 理解不同 Projector 设计的 trade-off
+- 6 个月后 Any-to-Any 模型（文字→图→视频→音频的统一生成）可能进入实用阶段
 
 ## 相关
 
-- [[AI/MLLM/CLIP|CLIP]]
-- [[AI/MLLM/BLIP-2|BLIP-2]]
-- [[AI/MLLM/Qwen-VL|Qwen-VL]]
-- [[AI/MLLM/InternVL3|InternVL3]]
-- [[AI/MLLM/DeepSeek-VL|DeepSeek-VL]]
-- [[AI/CV/ViT|ViT]]
+- [[AI/MLLM/多模态 LLM 架构]] — 架构细节深入，Projector 对比
+- [[AI/MLLM/CLIP|CLIP]] — 多模态对齐的基石
+- [[AI/MLLM/BLIP-2|BLIP-2]] — Q-Former 的原始设计
+- [[AI/MLLM/Qwen-VL|Qwen-VL]] — 中文 MLLM 的代表
+- [[AI/MLLM/InternVL3|InternVL3]] — 最强开源 MLLM
+- [[AI/MLLM/DeepSeek-VL|DeepSeek-VL]] — DeepSeek 的多模态版本
+- [[AI/CV/ViT|ViT]] — 视觉编码器基础

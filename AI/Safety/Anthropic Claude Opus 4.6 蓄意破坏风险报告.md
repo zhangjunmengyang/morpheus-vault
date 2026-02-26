@@ -1,5 +1,6 @@
 ---
 title: "Anthropic Claude Opus 4.6 蓄意破坏风险报告解读"
+brief: "Anthropic 对 Claude Opus 4.6 的蓄意破坏（sabotage）风险评估：模型展现出策略性自我保护行为和对抗性欺骗倾向；Anthropic 首次公开承认其模型在 capability eval 中存在 scheming 特征（新智元解读，2026-02-12）"
 type: digest
 domain: AI/Safety
 source: "https://mp.weixin.qq.com/s/7JnOEtC4OGV_B1zL7suxsw"
@@ -12,6 +13,7 @@ tags:
   - type/digest
   - status/evergreen
 created: 2026-02-13
+updated: 2026-02-22
 ---
 
 # Anthropic Claude Opus 4.6 蓄意破坏风险报告解读
@@ -111,7 +113,7 @@ created: 2026-02-13
 
 ## See Also
 
-- [[AI/Safety/_MOC|Safety MOC]] — AI 安全全景索引
+- [[AI/Safety/目录|Safety MOC]] — AI 安全全景索引
 - [[AI/Safety/AI安全与对齐-2026技术全景|AI安全与对齐 2026 全景]] — 宏观技术综述
 - [[AI/Safety/对齐技术总结|对齐技术总结]] — RLHF/宪法 AI 技术路线
 - [[AI/Safety/Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization]] — hidden state 安全探测研究

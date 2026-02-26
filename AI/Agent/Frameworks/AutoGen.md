@@ -1,4 +1,5 @@
 ---
+brief: "AutoGen（Microsoft Research）——多 Agent 对话框架；UserProxy/AssistantAgent 双 Agent 对话模式，支持人机混合决策；AutoGen Studio 可视化；适合需要多角色协作（代码生成+审查+执行）的 Agent 任务。"
 title: "AutoGen"
 type: concept
 domain: ai/agent/frameworks

@@ -1,6 +1,8 @@
 ---
 title: "LLM 工具调用与 Function Calling — 2026 技术全景（面试武器版）"
+brief: "Tool Use 终极深度笔记（1758行）：原理/训练/MCP协议/多工具编排/安全/评估/生产实践一站覆盖；信息源覆盖 Toolformer/Gorilla/BFCL v3/ToolBench/Agent Skills；面试武器级"
 date: 2026-02-21
+updated: 2026-02-23
 tags:
   - ai/agent/tool-use
   - ai/llm/function-calling

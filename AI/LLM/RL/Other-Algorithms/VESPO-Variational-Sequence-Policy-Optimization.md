@@ -1,4 +1,5 @@
 ---
+brief: "VESPO——变分推断框架下的序列级软策略优化；用变分下界替代 importance sampling 修正，从信息论角度稳定 off-policy LLM 训练；序列级约束比 token 级更匹配自然语言生成的结构。"
 title: "VESPO: Variational Sequence-Level Soft Policy Optimization"
 type: note
 domain: ai/llm/rl
@@ -249,6 +250,7 @@ VESPO 提供了**统一视角**：把 GRPO/GSPO/SAPO/DAPO 所有的 clip/norm �
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] — VESPO 归属 Off-Policy 稳定性维度，是该维度理论最强一篇
 - [[AI/LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 都在解决 fixed ε 的局限，token 级 vs sequence 级
 - [[AI/LLM/RL/Other-Algorithms/GSPO-Group-Sequence-Policy-Optimization|GSPO（Qwen3正式版）]] ⭐ — **理论验证关系**：GSPO 发现 1/T 归一化引入 length bias（序列级IS），VESPO 从变分推导严格证明并给出最优 kernel——VESPO 是 GSPO 的理论上界；两篇合读理解序列级 IS 的完整故事
+- [[AI/LLM/RL/Other-Algorithms/SAPO-Soft-Adaptive-Policy-Optimization|SAPO（Qwen3-VL生产版）]] — **理论对立面**：SAPO 用 sigmoid 软门控作为 heuristic 设计，实验中 N≥8 时 collapse；VESPO 从变分原理证明为什么 SAPO 的设计次优（对 W<1 负优势 token 抑制不足），两篇合读理解"启发式设计 vs 理论最优设计"的差距
 
 ---
 

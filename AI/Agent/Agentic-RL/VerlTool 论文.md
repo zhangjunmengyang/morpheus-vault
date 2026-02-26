@@ -1,12 +1,16 @@
 ---
 title: "VerlTool: Towards Holistic Agentic Reinforcement Learning with Tool Use"
+brief: "Sea AI：基于 verl 框架的 holistic Agentic RL with Tool Use；统一单步/多步工具调用的 RL 训练流程；工具调用 reward 与任务 reward 联合优化（arXiv:2509.01055）"
 type: paper
 domain: ai/agent/agentic-rl
 created: "2026-02-13"
-updated: "2026-02-13"
+updated: "2026-02-22"
 tags:
   - ai/agent/agentic-rl
   - type/paper
+sources:
+  - "arXiv:2509.01055 | Sea AI Lab"
+  - "https://hf.co/papers/2509.01055"
 ---
 # VerlTool: Towards Holistic Agentic Reinforcement Learning with Tool Use
 

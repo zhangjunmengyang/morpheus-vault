@@ -1,4 +1,5 @@
 ---
+brief: "Synthetic Data——合成数据基础概念和主流生成方法；Self-Play/Backtranslation/Persona-based 生成策略；质量 vs 多样性的核心权衡；LLM 训练数据工程的基础参考。"
 title: "Synthetic Data"
 type: concept
 domain: ai/llm/application/synthetic-data

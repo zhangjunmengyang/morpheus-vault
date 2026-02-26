@@ -1,4 +1,5 @@
 ---
+brief: "Prompt Engineering 概述——官方/主流资源汇总入口；OpenAI/Anthropic/Google 的 Prompting Guide 导航；快速定位最新 best practices 的参考索引。"
 title: "Prompt engineering"
 type: reference
 domain: ai/llm/prompt-engineering

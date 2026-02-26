@@ -1,5 +1,6 @@
 ---
 title: "vLLM"
+brief: "UC Berkeley 开源高吞吐 LLM 推理引擎，核心创新 PagedAttention：将 KV Cache 分页管理（类操作系统虚拟内存），消除内存碎片，吞吐量比 HuggingFace Transformers 高 24×。支持 Continuous Batching、前缀缓存、多 GPU 张量并行，是工业 LLM 服务的事实标准。"
 type: concept
 domain: ai/llm/inference
 created: "2026-02-13"
@@ -194,10 +195,13 @@ LLM(
 
 ## 相关
 
-- [[Ollama]] — 本地推理的另一个选择（面向个人用户）
+- [[AI/LLM/Inference/Ollama|Ollama]] — 本地推理的另一个选择（面向个人用户）
 - [[AI/LLM/Architecture/DeepSeek-R1|DeepSeek-R1]] — vLLM 用于 R1 的推理部署
 - [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — vLLM 在 RL 训练中的角色
 - [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]] — 集成 vLLM 的训练框架
 - [[AI/LLM/Frameworks/verl/verl 概述|verl 概述]] — 另一个集成 vLLM 的框架
 - [[AI/LLM/Infra/分布式训练|分布式训练]] — Tensor Parallel 基础
 - [[AI/LLM/Architecture/LLaMA|LLaMA]]
+- [[AI/LLM/Inference/vLLM-手撕实操|vLLM-手撕实操]] — **代码路径**：从零实现 PagedAttention + Continuous Batching 完整代码注解，理解 vLLM 内部机制 ⭐⭐⭐⭐⭐
+- [[AI/LLM/Inference/vLLM-V0-V1-完整系统实操|vLLM V0/V1 完整系统实操]] — **系统级深度**：V0 page-level Prefill 转换 + last-token 提取；V1 SchedulerInfo + merge_prompt + KV.split 统一调度；完整 10 文件代码结构 ⭐⭐⭐⭐⭐
+- [[AI/LLM/Inference/LLM-推理优化-2026-全景|LLM 推理优化 2026 全景]] — vLLM 在整个推理优化生态中的位置

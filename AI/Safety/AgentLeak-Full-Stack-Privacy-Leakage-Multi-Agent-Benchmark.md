@@ -1,6 +1,8 @@
 ---
 title: "AgentLeak: A Full-Stack Benchmark for Privacy Leakage in Multi-Agent LLM Systems"
+brief: "Polytechnique Montréal：首个全栈 multi-agent 隐私泄漏 benchmark；inter-agent 内部通信泄漏率 68.8%（比用户可见输出高 2.5×）；output-only 审计漏掉 41.7% 隐私违规——多 Agent 系统不能只审计最终输出（arXiv:2602.11510）"
 date: 2026-02-21
+updated: 2026-02-22
 tags:
   - ai/safety
   - multi-agent
@@ -11,7 +13,7 @@ tags:
   - information-flow-control
 domain: ai/safety
 arxiv: "2602.11510"
-rating: ★★★★☆
+rating: 4
 status: active
 ---
 
@@ -245,6 +247,11 @@ Claude 3.5 Sonnet 内部:   28.1%（最佳，但仍然很高）
 两篇都得出了同一个结论，用的是完全不同的方法。这种"殊途同归"的收敛是高置信度的信号。
 
 ---
+
+## See Also
+
+- [[AI/Safety/PI-Landscape-SoK-Prompt-Injection-Taxonomy-Defense|PI-Landscape SoK]] ⭐ — SoK 将 AgentPI benchmark 定位为专门覆盖 context-dependent 场景的评测；AgentLeak 从隐私泄漏角度互补，两篇共同描绘多Agent安全评测的全景
+- [[AI/Safety/OMNI-LEAK-Multi-Agent-Orchestrator-Data-Exfiltration|OMNI-LEAK]] — 殊途同归：两篇均发现"output-only 审计是系统性盲区"，但方法完全不同——OMNI-LEAK 是攻击演示，AgentLeak 是量化测量
 
 ## Tags
 #MultiAgent #PrivacyLeakage #InternalChannels #InterAgentCommunication #Benchmark #DataMinimization #FullStack #AgentSafety #InformationFlowControl #盾卫 #GDPR

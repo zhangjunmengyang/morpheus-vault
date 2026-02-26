@@ -1,4 +1,5 @@
 ---
+brief: "LLM 评测体系（LLM 域）——与 Evaluation 子目录互补的评测综述；主流 benchmark 的设计原理和局限性分析；LLM 评测的 Goodhart 定律（优化指标≠提升能力）；老板 AI 选型和研究定位的判断依据。"
 title: "LLM 评测体系"
 date: 2026-02-13
 tags:

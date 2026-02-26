@@ -1,4 +1,5 @@
 ---
+brief: "TRL（Transformer Reinforcement Learning）——HuggingFace 官方 RL 训练库；支持 PPOTrainer/GRPOTrainer/DPOTrainer/KTOTrainer 等全套对齐算法，与 Accelerate/PEFT 深度集成；学术实验和工程原型的标准工具链。"
 title: "trl"
 type: reference
 domain: ai/llm/frameworks/trl

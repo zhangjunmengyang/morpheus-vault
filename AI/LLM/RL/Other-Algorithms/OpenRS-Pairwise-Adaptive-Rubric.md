@@ -1,4 +1,5 @@
 ---
+brief: "OpenRS——基于 Pairwise Adaptive Rubric 的 RL 对齐；用自适应评分标准替代固定 outcome verifier，通过成对比较训练 RM 产生鲁棒奖励信号；针对 constitutional-ai 场景的 reward hacking 防御。"
 title: "OpenRS — 基于 Pairwise Adaptive Rubric 的 RL 对齐"
 type: research
 domain: ai/llm/rl
@@ -141,11 +142,11 @@ Math research agent   Aletheia NL       2602.10177
 
 ## 关联笔记
 
-- [[CM2-checklist-rewards]] — 同方向：non-verifiable reward 的替代方案（checklist 而非 rubric）
-- [[Aletheia-Math-Research-Agent]] — NL Verifier 作为 dense reward signal
-- [[RLTF-RL-from-Text-Feedback]] — text feedback 内化路线
-- [[RARL-Reward-Modeling-Survey]] — reward modeling 综述背景
-- [[Kimi-K2.5-PARL]] — multi-agent reward 设计
+- [[AI/Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2-checklist-rewards]] — 同方向：non-verifiable reward 的替代方案（checklist 而非 rubric）
+- [[AI/Agent/Aletheia-Math-Research-Agent|Aletheia-Math-Research-Agent]] — NL Verifier 作为 dense reward signal
+- [[AI/LLM/RL/Other-Algorithms/RLTF-RL-from-Text-Feedback|RLTF-RL-from-Text-Feedback]] — text feedback 内化路线
+- [[AI/LLM/RL/RARL-Reward-Modeling-Survey|RARL-Reward-Modeling-Survey]] — reward modeling 综述背景
+- [[AI/Agent/Kimi-K2.5-PARL|Kimi-K2.5-PARL]] — multi-agent reward 设计
 
 ---
 *Created: 2026-02-19 by Scholar heartbeat*

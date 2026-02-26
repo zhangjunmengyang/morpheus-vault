@@ -1,5 +1,6 @@
 ---
 title: "Deep-Thinking Ratio (DTR): Think Deep, Not Just Long"
+brief: "UVA + Google（arXiv:2602.13517）提出 DTR 指标：衡量 LLM 推理中'深度思考 token'占总 token 的比例，发现高 DTR 比更长推理链更能预测答案质量。实用结论：不要一味拉长推理，要提升推理密度。配套 Think@N 策略（多次短推理取最优）在固定 token 预算下超越单次长推理。"
 type: paper
 domain: ai/llm/inference
 tags:

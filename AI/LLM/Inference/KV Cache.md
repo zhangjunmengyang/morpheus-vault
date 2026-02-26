@@ -1,8 +1,30 @@
 ---
 title: "KV Cache 原理与优化"
+brief: "KV Cache 是 LLM 自回归推理的核心优化：缓存已计算的 Key/Value 避免重复计算，将生成复杂度从 O(T³d) 降至 O(T²d)。本文覆盖 KV Cache 原理、显存计算、MQA/GQA/MLA 架构级优化、PagedAttention 内存管理、量化（FP8/INT8/INT4）、驱逐策略（StreamingLLM/H2O）、Prefix Caching 以及 Prefill-Decode 解耦等完整技术栈。面试深度参考。"
 date: 2026-02-14
-tags: [inference, kv-cache, optimization, interview]
-type: note
+updated: 2026-02-22
+tags:
+  - ai/llm/inference
+  - ai/kv-cache
+  - ai/optimization
+  - type/survey
+  - interview/hot
+type: survey
+status: complete
+sources:
+  - "Vaswani et al. Attention Is All You Need. arXiv:1706.03762"
+  - "Kwon et al. Efficient Memory Management for LLM Serving with PagedAttention (vLLM). arXiv:2309.06180"
+  - "Ainslie et al. GQA: Training Generalized Multi-Query Attention. arXiv:2305.13245"
+  - "Liu et al. DeepSeek-V2 (MLA). arXiv:2405.04434"
+  - "Xiao et al. Efficient Streaming Language Models with Attention Sinks (StreamingLLM). arXiv:2309.17453"
+  - "Shazeer. Fast Transformer Decoding: One Write-Head is All You Need (MQA). arXiv:1911.02150"
+  - "Zhang et al. H2O: Heavy-Hitter Oracle for Efficient Generative Inference. NeurIPS 2023"
+related:
+  - "[[AI/LLM/Architecture/GQA-MQA|GQA/MQA]]"
+  - "[[AI/LLM/Architecture/FlashAttention|FlashAttention]]"
+  - "[[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]]"
+  - "[[AI/LLM/Inference/量化综述|量化综述]]"
+  - "[[AI/LLM/Inference/Continuous Batching|Continuous Batching]]"
 ---
 
 > [!info] 另有面试版
@@ -141,7 +163,7 @@ KV Cache 需要存储每个头独立的 K 和 V，大小与 $n_{\text{heads}}$ �
 
 ### 3.2 Multi-Query Attention (MQA)
 
-**论文**：*Fast Transformer Decoding: One Write-Head is All You Need*（Noam Shazeer, 2019）
+> 来源：Shazeer, "Fast Transformer Decoding: One Write-Head is All You Need", arXiv:1911.02150
 
 **核心思想**：所有注意力头共享同一组 $K$ 和 $V$，只有 $Q$ 保持多头。
 
@@ -161,7 +183,7 @@ $$\text{head}_i = \text{Attention}(Q_i, K, V)$$
 
 ### 3.3 Grouped-Query Attention (GQA)
 
-**论文**：*GQA: Training Generalized Multi-Query Attention from Multi-Head Checkpoints*（Ainslie et al., 2023）
+> 来源：Ainslie et al., "GQA: Training Generalized Multi-Query Attention from Multi-Head Checkpoints", arXiv:2305.13245, EMNLP 2023
 
 **核心思想**：将 $n_{\text{heads}}$ 个 query 头分成 $g$ 组，每组共享一组 K/V 头。
 
@@ -191,6 +213,8 @@ $$\text{group}_j = \{Q_i\}_{i \in \text{group } j}, \quad K_j, V_j$$
 | 代表模型 | GPT-3, LLaMA-1 | LLaMA-2 70B, LLaMA-3, Mistral | PaLM, Falcon |
 
 ### 3.5 额外优化：Multi-Head Latent Attention (MLA)
+
+> 来源：Liu et al., "DeepSeek-V2: A Strong, Economical, and Efficient MoE Language Model", arXiv:2405.04434
 
 DeepSeek-V2 提出的 MLA 是另一种路线：
 
@@ -223,7 +247,7 @@ Request 3: [__________KV Cache (max_seq_len)__________]
 
 ### 4.2 PagedAttention 的核心思想
 
-**论文**：*Efficient Memory Management for Large Language Model Serving with PagedAttention*（Kwon et al., 2023）
+> 来源：Kwon et al., "Efficient Memory Management for Large Language Model Serving with PagedAttention", arXiv:2309.06180, SOSP 2023
 
 PagedAttention 借鉴操作系统的**虚拟内存与分页**机制：
 
@@ -281,20 +305,11 @@ Sequence 2 Block Table:
 
 ### 4.5 vLLM 的整体架构
 
-```
-┌─────────────────────────────────────┐
-│           vLLM Scheduler            │
-│  (请求调度、抢占、优先级管理)          │
-├─────────────────────────────────────┤
-│         Block Manager               │
-│  (物理 block 分配/释放/共享/CoW)      │
-├─────────────────────────────────────┤
-│       PagedAttention Kernel          │
-│  (分块 attention 计算)               │
-├─────────────────────────────────────┤
-│          GPU Memory                  │
-│  [Block 0][Block 1]...[Block N]      │
-└─────────────────────────────────────┘
+```mermaid
+flowchart TD
+    A["vLLM Scheduler\n请求调度·抢占·优先级管理"] --> B["Block Manager\n物理 block 分配/释放/共享/CoW"]
+    B --> C["PagedAttention Kernel\n分块 attention 计算"]
+    C --> D["GPU Memory\n[Block 0] [Block 1] ... [Block N]"]
 ```
 
 **调度策略**：
@@ -393,7 +408,7 @@ FP8 格式（E4M3 或 E5M2）的优势：
 
 ### 6.2 StreamingLLM
 
-**论文**：*Efficient Streaming Language Models with Attention Sinks*（Xiao et al., 2023, MIT）
+> 来源：Xiao et al., "Efficient Streaming Language Models with Attention Sinks", arXiv:2309.17453, ICLR 2024
 
 **核心发现**：
 - 注意力分数中，前几个 token（尤其是第一个 token）总是获得异常高的注意力权重
@@ -615,12 +630,9 @@ $$\text{数据读取时间} = \frac{14 \text{ GB}}{2 \text{ TB/s}} = 7 \text{ ms
 
 由于 prefill 和 decode 的计算特性完全不同，可以用不同的硬件分别处理：
 
-```
-┌─────────────────┐      ┌─────────────────┐
-│  Prefill Cluster │      │  Decode Cluster  │
-│  (计算密集型)     │─KV──▶│  (带宽密集型)     │
-│  高算力 GPU       │ Cache│  高带宽 GPU/内存   │
-└─────────────────┘      └─────────────────┘
+```mermaid
+flowchart LR
+    A["Prefill Cluster\n计算密集型\n高算力 GPU"] -->|"KV Cache 传输\n(NVLink/InfiniBand)"| B["Decode Cluster\n带宽密集型\n高带宽 GPU/内存"]
 ```
 
 - **Prefill 节点**：选择算力强的 GPU，最大化 TTFT
@@ -816,6 +828,62 @@ $$\text{数据读取时间} = \frac{14 \text{ GB}}{2 \text{ TB/s}} = 7 \text{ ms
 
 ---
 
+## 🔧 落地应用
+
+### 直接可用场景
+- **推理服务容量规划**：公式 $\text{max\_batch} = \frac{\text{GPU\_mem} - \text{model\_size} - \text{overhead}}{2 \times n_{kv} \times d_k \times L \times s \times \text{bytes}}$，直接计算最大并发数
+- **KV Cache 量化上线**：vLLM 和 TensorRT-LLM 均已支持 FP8/INT8 KV Cache 量化，显存减半且精度损失 <0.5%
+- **多轮对话优化**：启用 Prefix Caching（vLLM 的 `--enable-prefix-caching`），同一 system prompt 的多轮对话自动复用 KV Cache
+
+### 工程实现要点
+- PagedAttention 的 block size 通常选 16 tokens，太大浪费（内部碎片），太小管理开销高
+- Prefix Caching 的 hash 计算基于 token ids + 前置 block hash，确保因果一致性
+- Disaggregated Serving 的 KV Cache 传输需要高速网络（NVLink/IB），传输量 = KV Cache 大小（几百 MB~几 GB）
+
+### 面试高频问法
+- Q: KV Cache 为什么只缓存 K 和 V 不缓存 Q？
+  A: Q 只在当前 token 用一次，历史 Q 不会被后续 token 引用（causal attention）；K/V 需要被所有后续 token 的 query 访问
+- Q: PagedAttention 如何解决显存碎片？
+  A: 借鉴 OS 虚拟内存分页：固定大小 block + block table 映射 + 按需分配 + CoW 共享
+
+---
+
+## 💡 启发与思考
+
+### So What？对老板意味着什么
+- **KV Cache 是推理成本的决定性因素**——它直接决定了最大并发数和每 token 成本。优化 KV Cache = 直接降低推理成本
+- **PagedAttention 的 OS 思想迁移是经典设计模式**：虚拟内存、分页、CoW 这些 40 年前的 OS 概念在 GPU 显存管理中焕发新生
+
+### 未解问题与局限
+- 驱逐策略（StreamingLLM/H2O）在需要精确引用中间内容的任务（如长文档 QA）上仍会丢失信息
+- Disaggregated Serving 的 KV Cache 网络传输延迟可能成为新瓶颈
+- KV Cache INT4/INT2 量化的精度损失在数学推理等高精度任务上仍需验证
+
+### 脑暴：如果往下延伸
+- 如果把 [[AI/LLM/Architecture/GQA-MQA|GQA]] + [[AI/LLM/Inference/量化综述|FP8 量化]] + [[AI/LLM/Inference/KV Cache|PagedAttention]] 三者叠加，KV Cache 可压缩到原始的 ~6%（87.5% × 50%），使 128K 上下文长 batch 推理成为可能
+- Prefix Caching + CacheBlend 的方向可能催生"KV Cache as a Service"——跨请求、跨用户的 KV Cache 共享池
+
+---
+
+## 📚 推荐阅读
+
+### 原始论文
+- [PagedAttention (vLLM)](https://arxiv.org/abs/2309.06180) — 推理服务内存管理的里程碑论文，SOSP 2023
+- [StreamingLLM](https://arxiv.org/abs/2309.17453) — Attention Sinks 发现 + 无限长度流式推理
+- [GQA](https://arxiv.org/abs/2305.13245) — KV Cache 架构级优化的事实标准
+- [DeepSeek-V2 (MLA)](https://arxiv.org/abs/2405.04434) — 最激进的 KV 压缩方案
+- [H2O](https://arxiv.org/abs/2310.15916) — Heavy-Hitter 驱逐策略
+
+### 深度解读
+- [vLLM Blog: PagedAttention](https://blog.vllm.ai/2023/06/20/vllm.html) — vLLM 团队亲自解读 PagedAttention ⭐⭐⭐⭐⭐
+- [Lilian Weng: "Large Transformer Model Inference Optimization"](https://lilianweng.github.io/posts/2023-01-10-inference-optimization/) — 推理优化综述 ⭐⭐⭐⭐⭐
+
+### 实践资源
+- [vLLM GitHub](https://github.com/vllm-project/vllm) — PagedAttention + Prefix Caching 的工业级实现
+- [SGLang GitHub](https://github.com/sgl-project/sglang) — Radix Tree 式 Prefix Caching 的高效实现
+
+---
+
 ## 参考文献
 
 1. Shazeer, N. (2019). *Fast Transformer Decoding: One Write-Head is All You Need*. arXiv:1911.02150
@@ -828,3 +896,13 @@ $$\text{数据读取时间} = \frac{14 \text{ GB}}{2 \text{ TB/s}} = 7 \text{ ms
 8. Hooper, C. et al. (2024). *KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization*. arXiv:2401.18079
 9. Liu, Z. et al. (2024). *KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache*. arXiv:2402.02750
 10. Zheng, L. et al. (2024). *SGLang: Efficient Execution of Structured Language Model Programs*. arXiv:2312.07104
+
+---
+
+## See Also
+
+> 🔗 See also: [[AI/LLM/Architecture/GQA-MQA|GQA/MQA]] — KV Cache 架构级优化的核心方案
+> 🔗 See also: [[AI/LLM/Architecture/FlashAttention|FlashAttention]] — Attention 计算加速，与 PagedAttention（内存管理）互补
+> 🔗 See also: [[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]] — 从 MHA→MLA 的演进直接决定 KV Cache 大小
+> 🔗 See also: [[AI/LLM/Inference/量化综述|量化综述]] — KV Cache 量化（FP8/INT8/INT4）的技术细节
+> 🔗 See also: [[AI/LLM/Inference/Continuous Batching|Continuous Batching]] — KV Cache 管理与请求调度的协同

@@ -1,4 +1,5 @@
 ---
+brief: "GRPO Demo——最小可运行的 GRPO 训练示例；包含完整的 reward function 定义/tokenization/训练循环；适合快速验证 GRPO 流程和调试奖励设计，新手入门首选。"
 title: "GRPO-demo"
 type: project
 domain: ai/llm/rl/grpo
@@ -436,4 +437,4 @@ trainer.train()
 - [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — GRPO 算法原理
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — GRPO 的七维改进框架
 - [[AI/LLM/RL/GRPO/TRL 中实现 GRPO|TRL 中实现 GRPO]] — 实现细节
-- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
+- [[AI/LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱

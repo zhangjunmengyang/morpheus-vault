@@ -1,4 +1,5 @@
 ---
+brief: "Kimi K2.5 技术分析——Moonshot PARL（并行 RL）框架驱动的新一代推理模型；超长 context 压缩+推理扩展的 Kimi 技术路线；在数学和代码推理上与 o1/R1 的对比分析；中国 AI 前沿格局的重要参考。"
 title: "Kimi K2.5 技术分析"
 type: model
 domain: ai/frontiers
@@ -140,7 +141,7 @@ Kimi K2.5 的差异化：**Agent Swarm 原生支持 + 视觉 + 开权重**，三
 - [[AI/Frontiers/GLM-5-技术报告精读]] — 同级竞品（744B MoE，开权重）
 - [[AI/Agent/Agent World Model]] — Agentic RL 背景
 - [[AI/LLM/Inference/Test-Time-Compute]] — Thinking 模式的 TTC 背景
-- [[AI/LLM/RL/_MOC]] — PARL 所属的 RL 方法论
+- [[AI/LLM/RL/目录]] — PARL 所属的 RL 方法论
 - [[AI/Agent/Kimi-K2.5-PARL]] — PARL 深度精读版（Scholar 写，含 credit assignment / training instability 细节）
 
 ---

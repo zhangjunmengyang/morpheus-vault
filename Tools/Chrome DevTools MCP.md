@@ -2,6 +2,7 @@
 title: Chrome DevTools MCP
 date: 2026-02-14
 tags: [mcp, browser-automation, devtools, tools]
+brief: "Chrome DevTools MCP Server：通过 MCP 协议让 AI Agent 控制 Chrome 浏览器（导航/点击/截图）；用于浏览器自动化和调试工作流集成。"
 type: note
 status: brief
 ---

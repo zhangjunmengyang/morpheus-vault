@@ -1,4 +1,5 @@
 ---
+brief: "PERSIST（arXiv:2508.04826）——LLM 人格稳定性 benchmark；测试 LLM 在不同上下文/攻击下是否保持一致的人格特征；对 Agent 设计（人格商品化边界/情感依赖风险）有直接参考价值，与魂匣认知哲学研究相关。"
 title: "PERSIST: LLM Personality Stability Benchmark"
 date: 2026-02-21
 arxiv: "2508.04826"

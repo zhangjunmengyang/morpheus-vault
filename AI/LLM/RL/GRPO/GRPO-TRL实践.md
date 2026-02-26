@@ -1,4 +1,5 @@
 ---
+brief: "GRPO TRL 实践——基于 HuggingFace TRL 库的 GRPO 训练工程指南；GRPOTrainer 配置/reward function 设计/数据格式规范/常见报错；单卡/多卡训练参数参考，面向实际工程上手。"
 title: "GRPO"
 type: project
 domain: ai/llm/rl/grpo

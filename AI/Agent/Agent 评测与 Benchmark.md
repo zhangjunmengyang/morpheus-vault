@@ -1,6 +1,8 @@
 ---
 title: "AI Agent 评测方法与 Benchmark"
+brief: "Agent 评测难点（多步/非确定性/无 ground truth）；主流 benchmark 对比（WebArena/SWE-Bench/GAIA/AgentBench/AgentEval）；评测维度：任务完成率/效率/鲁棒性/安全性；面试热点"
 date: 2026-02-14
+updated: 2026-02-23
 tags: [agent, evaluation, benchmark, interview]
 type: note
 ---
@@ -241,4 +243,4 @@ type: note
 - [[AI/Agent/Gaia2-Dynamic-Async-Agent-Benchmark|Gaia2]] — 2026 最新动态异步 Agent benchmark
 - [[AI/Agent/Fundamentals/Agent 评测|Agent 评测]] — 评测基础方法论
 - [[AI/LLM/Evaluation/LLM 评测体系|LLM 评测体系]] — 从 LLM 评测到 Agent 评测的演化
-- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱
+- [[AI/Agent/目录|Agent MOC]] — Agent 知识全图谱

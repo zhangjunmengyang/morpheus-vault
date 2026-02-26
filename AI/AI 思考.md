@@ -1,4 +1,5 @@
 ---
+brief: "AI 思考——关于 AI 发展、能力边界、AGI 进展的碎片化思考笔记；记录对 AI 能力突破事件的即时感悟和长期观察；非结构化，是老板 AI 认知演化的原始思维轨迹。"
 title: "AI 思考"
 type: thought
 domain: ai
@@ -65,4 +66,4 @@ tags:
 - [[AI/AI 综合|AI 综合]]
 - [[AI/关于 AI 学习提效思考|关于 AI 学习提效思考]]
 - [[AI/AI 时代 业务这么做？|AI 时代的业务思考]]
-- [[AI/LLM/_MOC|LLM MOC]]
+- [[AI/LLM/目录|LLM MOC]]

@@ -1,4 +1,5 @@
 ---
+brief: "HF LLM + Agent——HuggingFace 生态中 LLM 与 Agent 结合的工程实践；transformers Agents API/smolagents/huggingface_hub 工具链的使用方式；HF 框架下构建 Agent 应用的参考入口。"
 title: "LLM + Agent"
 type: concept
 domain: ai/agent/fundamentals
@@ -209,5 +210,5 @@ https://huggingface.co/learn/agents-course/zh-CN/bonus-unit1/fine-tuning
 
 - [[AI/Agent/Fundamentals/HF Agent Course|HF Agent Course]] — HF Agent 学习系列的另一篇
 - [[AI/Agent/Fundamentals/Tool Use|Tool Use]] — HF LLM+Agent 的核心能力：tool use
-- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱
+- [[AI/Agent/目录|Agent MOC]] — Agent 知识全图谱
 - [[AI/Foundations/ML-Basics/机器学习|机器学习]] — LLM 的 ML 基础

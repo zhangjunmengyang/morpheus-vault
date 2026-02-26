@@ -1,4 +1,5 @@
 ---
+brief: "Code Agent / Computer Use Agent——SWE-Agent/Devin/OpenHands/Claude Code 的架构对比；代码生成→执行→调试循环的实现机制；SWE-Bench 评测标准；Interview 标注，代码 Agent 系统设计的面试参考。"
 tags: [AI, Agent, CodeAgent, ComputerUse, SWE-Agent, Devin, OpenHands, ClaudeCode, Interview]
 created: 2026-02-14
 status: draft
@@ -8,7 +9,7 @@ status: draft
 
 ## 概述
 
-[[Code Agent]] 和 [[Computer Use Agent]] 代表了 AI Agent 技术的重要发展方向。Code Agent 专注于软件开发任务，如代码生成、bug 修复、代码审查等；Computer Use Agent 则更进一步，能够直接操作计算机界面，模拟人类的屏幕操作行为。本文将深入探讨这两类 Agent 的技术架构、代表性产品以及当前的局限性和发展方向。
+[[AI/Agent/Code Agent|Code Agent]] 和 [[Computer Use Agent]] 代表了 AI Agent 技术的重要发展方向。Code Agent 专注于软件开发任务，如代码生成、bug 修复、代码审查等；Computer Use Agent 则更进一步，能够直接操作计算机界面，模拟人类的屏幕操作行为。本文将深入探讨这两类 Agent 的技术架构、代表性产品以及当前的局限性和发展方向。
 
 ## Code Agent
 

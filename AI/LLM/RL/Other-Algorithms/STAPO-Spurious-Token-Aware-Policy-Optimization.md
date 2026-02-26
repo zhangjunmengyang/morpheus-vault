@@ -1,4 +1,5 @@
 ---
+brief: "STAPO（Spurious-Token-Aware PO）——识别并屏蔽 RL 训练中产生的 spurious token（高频无意义填充词），通过梯度掩码防止模型因奖励信号被这些噪声 token 放大而 entropy collapse；训练稳定性显著提升。"
 title: "STAPO: Spurious-Token-Aware Policy Optimization"
 type: paper
 domain: ai/llm/rl
@@ -153,11 +154,11 @@ RL 训练稳定性是目前 LLM post-training 的真实痛点（GLM-5、Qwen3、
 
 ## 连接
 
-- 相关：[[GRPO]]、[[DAPO]]、[[Blockwise-Advantage-Estimation]]（同样是 credit assignment 问题）
-- 对比：[[LACONIC-Length-Constrained-RL]]（也是 token 级别干预）
-- 框架：在 [[Slime-RL-Framework]] 的 async 设置下，S2T mask 计算开销接近零
-- 同族：[[Stable-Asynchrony-VCPO-Off-Policy-RL]]（系统级稳定，与 STAPO token 级正交）、[[Goldilocks-RL-Task-Difficulty-Curriculum]]（样本级稳定）
-- 统一框架：[[RL-Training-Stability-2026-Unified-Analysis]]（Token/样本/系统三分法，覆盖 STAPO）
+- 相关：[[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO]]、[[AI/LLM/RL/DAPO/DAPO-verl实践|DAPO]]、[[AI/LLM/RL/GRPO/Blockwise-Advantage-Estimation|Blockwise-Advantage-Estimation]]（同样是 credit assignment 问题）
+- 对比：[[AI/LLM/RL/Other-Algorithms/LACONIC-Length-Constrained-RL|LACONIC-Length-Constrained-RL]]（也是 token 级别干预）
+- 框架：在 [[AI/LLM/Frameworks/Slime-RL-Framework|Slime-RL-Framework]] 的 async 设置下，S2T mask 计算开销接近零
+- 同族：[[AI/LLM/RL/Other-Algorithms/Stable-Asynchrony-VCPO-Off-Policy-RL|Stable-Asynchrony-VCPO-Off-Policy-RL]]（系统级稳定，与 STAPO token 级正交）、[[AI/LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks-RL-Task-Difficulty-Curriculum]]（样本级稳定）
+- 统一框架：[[AI/LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL-Training-Stability-2026-Unified-Analysis]]（Token/样本/系统三分法，覆盖 STAPO）
 
 ---
 

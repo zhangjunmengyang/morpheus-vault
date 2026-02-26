@@ -1,4 +1,5 @@
 ---
+brief: "SPPO verl 实践——Self-Play Preference Optimization 的 verl 工程实现；通过 self-play 迭代生成更难的对比样本，逐步提升模型能力上限；适合偏好学习的持续自改进训练流水线。"
 title: "SPPO"
 type: project
 domain: ai/llm/rl/other-algorithms

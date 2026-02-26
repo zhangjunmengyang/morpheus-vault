@@ -1,5 +1,6 @@
 ---
 title: "PPL 计算 交叉熵损失与 ignore_index"
+brief: "Perplexity（PPL）的代码级实现：CrossEntropyLoss + ignore_index=-100 过滤 padding token；理解 PPL 计算细节是调试 LLM 训练 loss 和 KL 参考项的必要基础。"
 type: concept
 domain: ai/llm/rl/fundamentals
 created: "2026-02-13"
@@ -26,5 +27,5 @@ tags:
 
 - [[AI/Foundations/ML-Basics/PPL 困惑度|PPL 困惑度]] — PPL 的基础概念版
 - [[AI/LLM/RL/Fundamentals/RL & LLMs 入门|RL & LLMs 入门]] — PPL 在 RL training 中作为 KL 参考项
-- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
+- [[AI/LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱
 - [[AI/Foundations/ML-Basics/损失函数|损失函数]] — 交叉熵 loss 的通用框架

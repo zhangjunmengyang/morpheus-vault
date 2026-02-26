@@ -1,9 +1,10 @@
 ---
 title: "Multi-Agent"
+brief: "Multi-Agent System 概述：为何单 Agent 有瓶颈/MAS 的核心优势；协调模式（Hub-and-Spoke/Peer-to-Peer/Hierarchical）；通信协议与共享状态设计；面试速查"
 type: reference
 domain: ai/agent/multi-agent
 created: "2026-02-13"
-updated: "2026-02-13"
+updated: "2026-02-23"
 tags:
   - ai/agent/multi-agent
   - type/reference
@@ -111,8 +112,8 @@ Multi-Agent 目前更偏「研究/探索」阶段，真正生产级的应用还�
 
 ## 相关
 
-- [[Planner]]
+- [[AI/Agent/Multi-Agent/Planner|Planner]]
 - [[AI/Agent/Frameworks/AutoGen|AutoGen]]
 - [[AI/Agent/Fundamentals/Tool Use|Tool Use]]
 - [[AI/Agent/Fundamentals/记忆模块|记忆模块]]
-- [[零碎的点]]
+- [[AI/Agent/Multi-Agent/零碎的点|零碎的点]]

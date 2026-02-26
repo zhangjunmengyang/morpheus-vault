@@ -1,4 +1,5 @@
 ---
+brief: "MoE 基础（Mixture of Experts）——稀疏激活机制：每次前向传播只激活部分 Expert；Top-K routing/Load balancing loss/Expert Capacity 的基础原理；是理解 Mixtral/Qwen3-MoE/DeepSeek-MoE 的前置知识。"
 title: "MOE 基础（一）"
 type: concept
 domain: ai/foundations/dl-basics

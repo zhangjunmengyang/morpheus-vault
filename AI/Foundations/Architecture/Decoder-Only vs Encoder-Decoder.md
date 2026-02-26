@@ -13,7 +13,7 @@ sources:
   - "LLaMA arXiv:2302.13971 (Touvron et al., 2023)"
   - "Wang et al. (2022) Decoder-Only vs Prefix LM 对比研究"
 related:
-  - "[[AI/Foundations/DL-Basics/Attention 详解]]"
+  - "[[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]]"
   - "[[AI/LLM/Architecture/Attention 变体综述]]"
   - "[[AI/Foundations/Architecture/SSM 与 Mamba]]"
 ---
@@ -355,4 +355,4 @@ Prefix LM:
 - [[AI/Foundations/DL-Basics/Transformer|Transformer 通识]] — Decoder-Only 的架构基础
 - [[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]] — 不同架构下的 Attention 变体
 - [[AI/Foundations/Architecture/SSM 与 Mamba|SSM 与 Mamba]] — 非 Transformer 架构的替代路线
-- [[AI/Foundations/_MOC|Foundations MOC]] — 架构基础全图谱
+- [[AI/Foundations/目录|Foundations MOC]] — 架构基础全图谱

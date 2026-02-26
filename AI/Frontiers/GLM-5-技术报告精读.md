@@ -1,4 +1,5 @@
 ---
+brief: "GLM-5（arXiv:2602.15763，智谱AI）——MoE 架构+异步 RL 训练的新一代 GLM；OpenWeights 发布；DSA（动态稀疏 Attention）降低推理成本；在推理/代码/Agent 任务上与 GPT-4o 对标；评分 4★。"
 title: "GLM-5 技术报告精读"
 date: 2026-02-17
 tags: [GLM, 智谱AI, MoE, 异步RL, OpenWeights, SOTA, DSA]
@@ -239,7 +240,7 @@ Base Model → SFT → Reasoning RL → Agentic RL → General RL
 ## 相关笔记
 
 - [[Slime-RL-Framework]] — 智谱异步 RL 框架
-- [[GRPO]] — GLM-5 使用的 RL 算法族
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO]] — GLM-5 使用的 RL 算法族
 - [[2026年2月模型潮]] — 竞争背景
 - [[ICLR-2026-趋势分析]] — 学术趋势背景
 

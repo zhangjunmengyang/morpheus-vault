@@ -1,4 +1,5 @@
 ---
+brief: "GRPO verl 实践——基于 verl 框架的 GRPO 分布式训练工程指南；HybridFlow 架构下的 GRPO 配置/reward function 接入/多节点扩展；面向大规模 RLVR 训练的生产级参考。"
 title: "GRPO"
 type: project
 domain: ai/llm/rl/grpo

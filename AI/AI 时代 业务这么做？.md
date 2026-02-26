@@ -1,4 +1,5 @@
 ---
+brief: "AI 时代业务策略——在 AI 重塑各行业背景下，企业和个人如何定位和执行的战略思考；AI 工具化 vs AI 原生的路径选择；对老板职业规划和商业判断有直接参考价值。"
 title: "AI 时代 业务这么做？"
 type: concept
 domain: ai
@@ -14,8 +15,8 @@ tags:
 
 ## See Also
 
-- [[AI/_MOC|AI MOC]] — AI 知识域全索引
-- [[AI/Agent/_MOC|Agent MOC]] — AI 落地业务的核心技术方向
-- [[AI/RAG/_MOC|RAG MOC]] — 业务 AI 化的核心基础设施（知识库+检索）
+- [[AI/目录|AI MOC]] — AI 知识域全索引
+- [[AI/Agent/目录|Agent MOC]] — AI 落地业务的核心技术方向
+- [[AI/RAG/目录|RAG MOC]] — 业务 AI 化的核心基础设施（知识库+检索）
 - [[Career/AI 应用工程师职业路径|AI 应用工程师职业路径]] — AI 应用工程师如何承接业务 AI 化需求
-- [[AI/LLM/_MOC|LLM MOC]] — 支撑业务 AI 化的底层能力
+- [[AI/LLM/目录|LLM MOC]] — 支撑业务 AI 化的底层能力

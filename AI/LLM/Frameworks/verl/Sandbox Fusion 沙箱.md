@@ -1,4 +1,5 @@
 ---
+brief: "verl Sandbox Fusion 沙箱——代码执行类任务的安全沙箱集成；在 RLVR 代码生成任务中安全执行模型输出的代码并返回 pass/fail 奖励；隔离环境配置和超时处理的工程实践。"
 title: "Sandbox Fusion 沙箱"
 type: concept
 domain: ai/llm/frameworks/verl

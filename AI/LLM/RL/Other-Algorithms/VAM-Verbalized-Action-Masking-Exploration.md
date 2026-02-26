@@ -1,4 +1,5 @@
 ---
+brief: "VAM（Verbalized Action Masking）——通过文本级动作掩码控制 RLVR 探索空间；在棋类等规则清晰的任务中用自然语言表达有效动作集合，从源头消除 within-state collapse（模型反复产生无效动作）。"
 title: "VAM: Verbalized Action Masking for Controllable Exploration"
 type: paper
 domain: ai/llm/rl
@@ -179,5 +180,5 @@ VAM 属于 **Exploration 维度**，但与 DEEP-GRPO 正交：
 ## 元数据
 
 - **Tags**: #exploration #GRPO #action-masking #chess #RLVR
-- **关联笔记**: [[DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling]] [[GRPO-Improvement-Panorama-2026]] [[PACED-RL-Partition-Function-Difficulty-Scheduler]]
+- **关联笔记**: [[AI/LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling]] [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO-Improvement-Panorama-2026]] [[AI/LLM/RL/Other-Algorithms/PACED-RL-Partition-Function-Difficulty-Scheduler|PACED-RL-Partition-Function-Difficulty-Scheduler]]
 - **写于**: 2026-02-21

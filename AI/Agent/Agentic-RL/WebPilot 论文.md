@@ -1,9 +1,10 @@
 ---
 title: "WebPilot: A Versatile and Autonomous Multi-Agent System for Web Task Execution with Strategic Exploration"
+brief: "多 Agent 系统用于 web 任务执行，结合 MCTS 战略探索；Planner+Executor 分工架构；在 WebArena/Mind2Web 等 benchmark 上验证自主 web 导航能力"
 type: paper
 domain: ai/agent/agentic-rl
 created: "2026-02-13"
-updated: "2026-02-13"
+updated: "2026-02-22"
 tags:
   - ai/agent/agentic-rl
   - type/paper
@@ -59,4 +60,4 @@ tags:
 - [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — WebPilot 在 Web Automation RL 方向的位置
 - [[AI/Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]] — WebPilot 是 Multi-Agent 系统的 Web 特化版
 - [[AI/Agent/Fundamentals/Tool Use|Tool Use]] — Web 导航依赖的 tool use 能力
-- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱
+- [[AI/Agent/目录|Agent MOC]] — Agent 知识全图谱

@@ -1,6 +1,8 @@
 ---
 title: "SquRL: Beyond Static Pipelines — 动态 Workflow 构建 RL for Text-to-SQL"
+brief: "ICML 2026 投稿：用 RL 动态构建 Text-to-SQL workflow（非静态预定义 pipeline）；Actor Masking 限制 action space；在 Spider/BIRD 上 vs 静态 workflow 显著提升（arXiv:2602.15564）"
 date: 2026-02-17
+updated: 2026-02-22
 arxiv: "2602.15564"
 venue: "ICML 2026 (投稿)"
 domain: AI/Agent
@@ -183,4 +185,4 @@ R_t       = 0.5 × (timeout - time) / timeout  （效率奖励，仅在正确时
 - [[AI/Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer CWRPO]] — workflow 编排 RL 的另一视角：FlowSteer 编排 operator 步骤，SquRL 选工具链组合；同为 DAG-based Agentic RL
 - [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — 全景参考，SquRL 属于 Tool-Use RL 分支
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — SquRL 使用 GRPO 变体训练 selector policy
-- [[AI/Agent/_MOC|Agent MOC]] — 智能体研究全图谱
+- [[AI/Agent/目录|Agent MOC]] — 智能体研究全图谱

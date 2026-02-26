@@ -1,4 +1,5 @@
 ---
+brief: "verl Off-Policy 异步训练器——解耦采样与更新的异步架构；Actor 持续生成 rollout，Trainer 并行更新模型权重，消除同步等待；提升 GPU 利用率 30-50%，适合大 batch RLHF 生产场景。"
 title: "Off Policy 异步训练器"
 type: project
 domain: ai/llm/frameworks/verl

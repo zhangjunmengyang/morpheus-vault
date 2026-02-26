@@ -1,7 +1,10 @@
 ---
 title: "PA-MoE: Phase-Aware Mixture of Experts for Agentic RL"
+brief: "PA-MoE：在 GiGPO 基础上加 Phase-Aware MoE，用不同 LoRA Expert 处理不同 Agent 任务阶段；解决 Simplicity Bias（模型总走最短路径）；ALFWorld +7.7%、WebShop +14.9%（在 GiGPO 基础上）（arXiv:2602.17038）"
 type: paper
 domain: ai/agent/agentic-rl
+created: 2026-02-20
+updated: 2026-02-22
 tags:
   - Agentic-RL
   - MoE
@@ -9,7 +12,6 @@ tags:
   - credit-assignment
   - routing-granularity
   - simplicity-bias
-created: 2026-02-20
 status: v1
 ---
 
@@ -208,5 +210,5 @@ L_total = L_RL + L_div + L_bal + L_switch
 ## 元数据
 
 - **Tags**: #Agentic-RL #MoE #LoRA #credit-assignment #routing-granularity
-- **关联笔记**: [[HiPER-Hierarchical-RL-Credit-Assignment]] [[Goldilocks-RL-Task-Difficulty-Curriculum]] [[GRPO-Improvement-Panorama-2026]]
+- **关联笔记**: [[AI/Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment]] [[AI/LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks-RL-Task-Difficulty-Curriculum]] [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO-Improvement-Panorama-2026]]
 - **写于**: 2026-02-20

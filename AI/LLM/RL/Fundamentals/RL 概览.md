@@ -1,4 +1,5 @@
 ---
+brief: "RL 概览——B站 Reasoning Model 系列课程入口笔记；从基础 RL 概念过渡到 LLM 推理模型（o1/R1 类）的训练原理，是理解 RLVR 如何驱动推理能力涌现的视频学习入口。"
 title: "001"
 type: concept
 domain: ai/llm/rl/fundamentals
@@ -98,5 +99,5 @@ https://github.com/chunhuizhang/llm_rl/blob/main/tutorials/objectives_adv/core_a
 
 - [[AI/LLM/RL/Fundamentals/强化学习的数学原理|强化学习数学原理]] — RL 概览的数学深化版
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — 概览之后的前沿：GRPO 七维改进体系
-- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
+- [[AI/LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱
 - [[AI/Foundations/ML-Basics/机器学习|机器学习]] — 监督学习到 RL 的演化

@@ -1,13 +1,28 @@
 ---
 title: "Attention 变体综述：从 MHA 到 Linear Attention"
+brief: "注意力机制从 MHA → MQA → GQA → MLA → Linear Attention 的完整演进综述。核心矛盾是表达能力与计算/显存效率的平衡。2025 年 GQA 成为事实标准，MLA 代表更激进压缩方向，混合架构（softmax + linear）是超长序列的趋势。"
 date: 2026-02-13
+updated: 2026-02-22
 tags:
   - ai/llm/architecture
   - ai/attention
   - ai/llm/inference
   - type/survey
   - interview/hot
-status: active
+status: complete
+sources:
+  - "Vaswani et al. Attention Is All You Need. arXiv:1706.03762"
+  - "Shazeer. Fast Transformer Decoding: One Write-Head is All You Need (MQA). arXiv:1911.02150"
+  - "Ainslie et al. GQA: Training Generalized Multi-Query Attention from Multi-Head Checkpoints. arXiv:2305.13245"
+  - "Dao et al. FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness. arXiv:2205.14135"
+  - "Beltagy et al. Longformer: The Long-Document Transformer (Sliding Window). arXiv:2004.05150"
+  - "Liu et al. DeepSeek-V2: A Strong, Economical, and Efficient MoE LM (MLA). arXiv:2405.04434"
+related:
+  - "[[AI/LLM/Architecture/GQA-MQA|GQA/MQA 深度解析]]"
+  - "[[AI/LLM/Architecture/FlashAttention|FlashAttention 深度解析]]"
+  - "[[AI/LLM/Architecture/Multi-Head Latent Attention|MLA 详解]]"
+  - "[[AI/LLM/Architecture/Mamba-SSM|Mamba/SSM]]"
+  - "[[AI/LLM/Inference/KV Cache|KV Cache 原理与优化]]"
 ---
 
 # Attention 变体综述：从 MHA 到 Linear Attention
@@ -16,18 +31,21 @@ status: active
 
 ## 1. 演进脉络总览
 
-```
-MHA (2017)    MQA (2019)    GQA (2023)     MLA (2024)      Linear Attention
-   │             │             │              │                  │
-全量 KV heads → 1 个 KV head → G 组 KV heads → 低秩潜在 KV → O(n) 复杂度
-表达力最强    极端压缩      质量/效率平衡   更激进压缩      突破二次瓶颈
-   │             │             │              │                  │
-GPT-3        PaLM/Falcon   LLaMA 2/3     DeepSeek-V2/V3    Mamba/GLA/RWKV
+```mermaid
+flowchart LR
+    A["MHA (2017)\nh 个 KV heads\nGPT-3"] -->|"极端压缩\n1个KV head"| B["MQA (2019)\n1 个 KV head\nPaLM/Falcon"]
+    A -->|"分组折中\nG组KV heads"| C["GQA (2023)\nG 组 KV heads\nLLaMA 2/3"]
+    C -->|"低秩压缩\nlatent KV"| D["MLA (2024)\n低秩潜在 KV\nDeepSeek-V2/V3"]
+    A -->|"突破O(n²)"| E["Linear Attention\nO(n) 复杂度\nMamba/RWKV"]
+    D -.->|"2025混合趋势"| F["混合架构\nSoftmax+Linear\nJamba/MiniMax"]
+    E -.-> F
 ```
 
 **核心矛盾**：标准 Attention 的 $O(n^2)$ 复杂度在序列长度增长时成为瓶颈；KV Cache 在推理时线性增长，限制 batch size 和吞吐。
 
 ## 2. Multi-Head Attention (MHA)
+
+> 来源：Vaswani et al., "Attention Is All You Need", arXiv:1706.03762, Sec. 3.2
 
 ### 标准定义
 
@@ -54,6 +72,8 @@ V = x @ W_v  # 同上
 **问题**：LLaMA-1 65B 在 4096 长度下 KV Cache 就需要 ~10.5 GB。
 
 ## 3. Multi-Query Attention (MQA)
+
+> 来源：Shazeer, "Fast Transformer Decoding: One Write-Head is All You Need", arXiv:1911.02150
 
 ### 核心改进
 
@@ -90,7 +110,9 @@ class MultiQueryAttention(nn.Module):
 
 ## 4. Grouped Query Attention (GQA)
 
-详见 [[GQA-MQA|GQA/MQA 深度解析]]。
+> 来源：Ainslie et al., "GQA: Training Generalized Multi-Query Attention from Multi-Head Checkpoints", arXiv:2305.13245
+
+详见 [[AI/LLM/Architecture/GQA-MQA|GQA/MQA 深度解析]]。
 
 ### 核心思想
 
@@ -106,6 +128,8 @@ GQA (h=32, G=8):
 **2025 年事实标准**：LLaMA 2/3、Mistral、Qwen 2.5 系列全部采用 GQA (G=8)。
 
 ## 5. Multi-head Latent Attention (MLA)
+
+> 来源：Liu et al., "DeepSeek-V2: A Strong, Economical, and Efficient MoE Language Model", arXiv:2405.04434, Sec. 3.1
 
 ### DeepSeek-V2/V3 的核心创新
 
@@ -161,7 +185,7 @@ class MultiHeadLatentAttention(nn.Module):
 
 ### Decoupled RoPE
 
-MLA 的低秩分解与 [[Transformer 位置编码|RoPE]] 不兼容（RoPE 改变了矩阵的秩），因此 DeepSeek 提出 **Decoupled RoPE**：
+MLA 的低秩分解与 [[AI/LLM/Architecture/Transformer 位置编码|RoPE]] 不兼容（RoPE 改变了矩阵的秩），因此 DeepSeek 提出 **Decoupled RoPE**：
 
 ```
 K = concat([K_nope, K_rope])
@@ -294,3 +318,66 @@ RoPE 对 Q 和 K 施加旋转变换（位置相关），这会**破坏低秩结�
 ### Q5: 实际部署中 GQA 的 G 值如何选择？有什么约束？
 
 经验最优区间是 **G = h/8 ~ h/4**。主流选择 G=8（LLaMA 2/3 70B、Qwen 2.5 72B）。选择 G 时需要满足：(1) G 能被 Tensor Parallel degree 整除（否则 KV heads 无法均匀切分）；(2) h 能被 G 整除（每组 Q head 数相等）；(3) 更大模型可用更大 G/h 比（如 70B 用 8:1 而 7B 用 4:1），因为大模型有更多冗余。过小的 G 质量损失明显，过大则节省不够。
+
+---
+
+## 🔧 落地应用
+
+### 直接可用场景
+- **新模型设计**：2025 年新训 LLM 默认选 GQA (G=8)，无需讨论。MLA 仅在有能力修改 attention kernel 的团队（如 DeepSeek）适用
+- **推理服务选型**：根据 KV Cache 预算倒推可服务的最大 batch size，公式 $\text{max\_batch} = \frac{\text{GPU\_mem} - \text{model\_size}}{2 \times G \times d_k \times L \times \text{seq\_len} \times \text{bytes}}$
+- **长上下文部署**：128K+ 场景优先考虑混合架构（Jamba 风格）或 MLA + Ring Attention
+
+### 工程实现要点
+- GQA 的 G 必须能被 TP degree 整除，否则 KV heads 无法均匀切分
+- MLA 的 Decoupled RoPE 实现需要额外缓存 $d_{\text{rope}}$ 维向量，实际压缩比需计入此项
+- Linear Attention 推理时可退化为 RNN 形式（无 KV Cache），适合流式场景
+
+---
+
+## 💡 启发与思考
+
+### So What？对老板意味着什么
+- **MLA 的低秩压缩思想与 LoRA 同源**：都是利用参数矩阵的内在低秩性。这个 insight 可以迁移到其他需要压缩的场景（如 [[AI/LLM/SFT/LoRA|LoRA 微调]]）
+- **混合架构是工程妥协的典范**：纯 linear attention 质量不够，纯 softmax attention 序列长度受限。最终落地的总是折中方案
+
+### 未解问题与局限
+- Linear Attention 的 in-context retrieval 能力弱是根本性的——kernel 分解丢失了 softmax 的锐利聚焦能力，目前无优雅解法
+- MLA 目前仅 DeepSeek 使用，生态支持（推理框架、量化工具）不如 GQA 成熟
+
+### 脑暴：如果往下延伸
+- 如果把 [[AI/LLM/Architecture/Mamba-SSM|Mamba]] 的选择性 SSM 和 Transformer 的 MLA 在同一模型中混合，可能在超长上下文（>1M tokens）场景取得突破
+- 6 个月后预测：会出现自动化的 attention 架构搜索——哪些层用 softmax、哪些用 linear，由 NAS 自动决定
+
+---
+
+## 📚 推荐阅读
+
+### 原始论文
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762) — Transformer 和 MHA 的奠基论文
+- [Fast Transformer Decoding (MQA)](https://arxiv.org/abs/1911.02150) — 第一个提出 KV head 共享的工作
+- [GQA: Training Generalized Multi-Query Attention](https://arxiv.org/abs/2305.13245) — GQA 原论文，含 MHA→GQA 的 uptraining 方法
+- [FlashAttention](https://arxiv.org/abs/2205.14135) — IO-aware attention 计算，与本文 Sec. 6 的 linear attention 形成对比
+- [Longformer (Sliding Window Attention)](https://arxiv.org/abs/2004.05150) — 长文档 Attention 的经典方案
+- [DeepSeek-V2 (MLA)](https://arxiv.org/abs/2405.04434) — MLA 和 Decoupled RoPE 的原始设计
+
+### 深度解读
+- [Jay Alammar: The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) — MHA 可视化最佳入门 ⭐⭐⭐⭐⭐
+
+### 实践资源
+- [FlashAttention GitHub](https://github.com/Dao-AILab/flash-attention) — FlashAttention 的高效实现，支持 GQA/MQA
+- [vLLM](https://github.com/vllm-project/vllm) — GQA + PagedAttention 的工业级推理框架
+
+### 代码手撕（理论 → 代码）
+- [[AI/LLM/Inference/FlashAttention-手撕实操|FlashAttention-手撕实操]] — **必看**：从 Tiling/SRAM 管理到 CUDA kernel 的 IO-aware 完整实现，MA-RLHF 项目配套 ⭐⭐⭐⭐⭐
+- [[AI/LLM/Architecture/Transformer-手撕实操|Transformer-手撕实操]] — 包含 MHA 的完整 Transformer 从零实现（含 Self-Attention/Cross-Attention）
+
+---
+
+## See Also
+
+> 🔗 See also: [[AI/LLM/Architecture/GQA-MQA|GQA/MQA 深度解析]] — KV head 共享机制的详细实现和性能对比
+> 🔗 See also: [[AI/LLM/Architecture/FlashAttention|FlashAttention]] — Attention 计算加速，与本文架构优化互补
+> 🔗 See also: [[AI/LLM/Inference/KV Cache|KV Cache]] — Attention 变体直接影响 KV Cache 大小，推理优化的核心关联
+> 🔗 See also: [[AI/LLM/Architecture/Multi-Head Latent Attention|MLA 详解]] — DeepSeek MLA 的完整技术细节
+> 🔗 See also: [[AI/LLM/Architecture/Mamba-SSM|Mamba/SSM]] — Linear Attention 的替代路线：选择性状态空间模型

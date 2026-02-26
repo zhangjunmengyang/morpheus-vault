@@ -1,4 +1,5 @@
 ---
+brief: "HybridFlow——verl 的核心架构设计；将 Actor（生成采样）和 Critic/RM（奖励计算）解耦到不同计算节点，支持异构资源调度；解决 RLHF 四模型同时运行的显存和通信瓶颈，实现训练吞吐量 3-4x 提升。"
 title: "HybridFlow"
 type: concept
 domain: ai/llm/frameworks/verl

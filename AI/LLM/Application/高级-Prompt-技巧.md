@@ -1,4 +1,5 @@
 ---
+brief: "高级 Prompt 技巧汇总——CoT/ToT/Self-Consistency/ReAct/Scratchpad/Least-to-Most 完整对比；各技巧适用场景矩阵；interview-prep 标注，面试被问推理能力如何提升时的标准作答。"
 tags: [llm, prompt-engineering, cot, tot, interview-prep]
 created: 2026-02-14
 status: draft
@@ -216,7 +217,7 @@ def sanitize_input(user_input):
 - **Zero-shot**：模型无需任何示例，仅通过任务描述执行新任务。如"将以下文本翻译成法语"
 - **Few-shot**：提供少量示例（通常1-10个）帮助模型理解任务模式。Few-shot 通常表现更稳定，但消耗更多 tokens
 
-**技术点**：[[In-Context Learning]]、[[Meta-Learning]]
+**技术点**：[[AI/LLM/Prompt-Engineering-2026实战全景#1.1 In-Context Learning（ICL）：为什么 Prompt 能工作|In-Context Learning]]、[[Meta-Learning]]
 
 ### Q2：如何评估 Prompt 的质量？
 **答案**：
@@ -240,7 +241,7 @@ def sanitize_input(user_input):
 1. **分层摘要**：将长文档分段摘要，再整合
 2. **关键信息提取**：识别并保留最相关的部分
 3. **滑动窗口**：分批处理，保持重叠区域
-4. **外部检索**：结合 [[RAG]] (Retrieval-Augmented Generation)
+4. **外部检索**：结合 [[AI/RAG/RAG-2026-技术全景|RAG]] (Retrieval-Augmented Generation)
 5. **prompt压缩**：使用专门的压缩技术如 LLMLingua
 
 ### Q5：Self-Consistency 的实现细节和适用场景？
@@ -261,8 +262,8 @@ def sanitize_input(user_input):
 
 ## 参考链接
 
-- [[Prompt-Engineering-基础]]
-- [[Prompt-攻击]]
-- [[Prompt-Tools]]
-- [[LLM 评测体系]]
-- [[幻觉问题与缓解]]
+- [[AI/LLM/Application/Prompt-Engineering-基础|Prompt-Engineering-基础]]
+- [[AI/LLM/Application/Prompt-攻击|Prompt-攻击]]
+- [[AI/LLM/Application/Prompt-Tools|Prompt-Tools]]
+- [[AI/LLM/LLM 评测体系|LLM 评测体系]]
+- [[AI/LLM/幻觉问题与缓解|幻觉问题与缓解]]

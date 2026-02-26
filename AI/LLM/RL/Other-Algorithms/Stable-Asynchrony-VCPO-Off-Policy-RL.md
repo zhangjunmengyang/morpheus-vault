@@ -1,4 +1,5 @@
 ---
+brief: "VCPO（arXiv 待确认，MIT HAN Lab）——Variance-Controlled Off-Policy RL；异步采样+方差控制机制消除 off-policy 分布偏移的不稳定性；相比 on-policy PPO，吞吐量提升 2-3x，同时保持收敛质量。"
 title: "Stable Asynchrony: VCPO Off-Policy RL for LLMs"
 date: 2026-02-19
 tags: [异步RL, off-policy, 方差控制, MIT-HAN-Lab, 系统优化]
@@ -6,7 +7,7 @@ domain: AI/LLM/RL/Other-Algorithms
 arxiv: "2602.xxxxx"
 rating: 4
 status: permanent
-see-also: ["[[Jet-RL-FP8-On-Policy-RL-Training]]", "[[QeRL-Quantization-Efficient-RL]]"]
+see-also: ["[[AI/LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL-FP8-On-Policy-RL-Training]]", "[[AI/LLM/RL/Frameworks/QeRL-Quantization-Enhanced-RL|QeRL-Quantization-Efficient-RL]]"]
 ---
 
 # Stable Asynchrony: Variance-Controlled Off-Policy RL for LLMs (VCPO)
@@ -170,10 +171,10 @@ GLM-5 技术报告没有详细分析 staleness 对梯度质量的影响——他
 
 ## 连接
 
-- 直接相关：[[Slime-RL-Framework]]（async RL infra，VCPO 的应用场景）
-- 同类稳定性问题：[[STAPO-Spurious-Token-Aware-Policy-Optimization]]（token级）、[[Goldilocks-RL-Task-Difficulty-Curriculum]]（样本级）
-- 统一框架：[[RL-Training-Stability-2026-Unified-Analysis]]
-- 算法基础：[[GRPO]]
+- 直接相关：[[AI/LLM/Frameworks/Slime-RL-Framework|Slime-RL-Framework]]（async RL infra，VCPO 的应用场景）
+- 同类稳定性问题：[[AI/LLM/RL/Other-Algorithms/STAPO-Spurious-Token-Aware-Policy-Optimization|STAPO-Spurious-Token-Aware-Policy-Optimization]]（token级）、[[AI/LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks-RL-Task-Difficulty-Curriculum]]（样本级）
+- 统一框架：[[AI/LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL-Training-Stability-2026-Unified-Analysis]]
+- 算法基础：[[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO]]
 
 ---
 

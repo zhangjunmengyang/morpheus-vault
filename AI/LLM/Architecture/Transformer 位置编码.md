@@ -1,6 +1,10 @@
 ---
 title: "Transformer 位置编码：从 Sinusoidal 到 YaRN"
+brief: "位置编码演进全景——从固定正弦到旋转嵌入 RoPE 再到 YaRN 长上下文外推。RoPE 已成为 LLM 主流方案（LLaMA/Qwen/DeepSeek 均采用），理解其数学原理和外推方法是面试核心题。"
+type: concept
+domain: ai/llm/architecture
 date: 2026-02-13
+updated: 2026-02-22
 tags:
   - ai/llm/architecture
   - ai/attention
@@ -8,6 +12,16 @@ tags:
   - type/concept
   - interview/hot
 status: active
+sources:
+  - "Attention Is All You Need (Sinusoidal PE) — arXiv:1706.03762 (Vaswani et al., 2017)"
+  - "RoFormer: Enhanced Transformer with Rotary Position Embedding — arXiv:2104.09864 (Su et al., 2021)"
+  - "ALiBi: Train Short, Test Long — arXiv:2108.12409 (Press et al., 2022)"
+  - "YaRN: Efficient Context Window Extension of LLMs — arXiv:2309.00071 (Peng et al., 2023)"
+  - "NTK-Aware Scaled RoPE — Reddit/Kaiokendev 2023"
+related:
+  - "[[AI/LLM/Architecture/长上下文技术|长上下文技术]]"
+  - "[[AI/LLM/Architecture/FlashAttention|FlashAttention]]"
+  - "[[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]]"
 ---
 
 # Transformer 位置编码：从 Sinusoidal 到 YaRN
@@ -46,10 +60,9 @@ def sinusoidal_pe(max_len: int, d_model: int) -> torch.Tensor:
 
 核心公式：
 
-```
-PE(pos, 2i)   = sin(pos / 10000^(2i/d_model))
-PE(pos, 2i+1) = cos(pos / 10000^(2i/d_model))
-```
+> 来源：Vaswani et al. arXiv:1706.03762, Sec. 3.5
+
+$$PE_{(pos, 2i)} = \sin\left(\frac{pos}{10000^{2i/d_{model}}}\right), \quad PE_{(pos, 2i+1)} = \cos\left(\frac{pos}{10000^{2i/d_{model}}}\right)$$
 
 **设计直觉**：
 - 不同维度使用不同频率的正弦/余弦函数，形成"频率谱"
@@ -92,47 +105,39 @@ def get_alibi_slopes(num_heads: int):
 **优点**：
 - 零参数，无需学习
 - 天然外推——线性偏置对未见距离自动生效
-- 实现极简，与 [[FlashAttention]] 完美兼容
+- 实现极简，与 [[AI/LLM/Architecture/FlashAttention|FlashAttention]] 完美兼容
 
 **缺点**：
 - 单调线性衰减假设过于简单，不适合所有任务
-- 效果不如 [[RoPE]] 在长上下文场景
+- 效果不如 [[AI/LLM/Architecture/Transformer 位置编码|RoPE]] 在长上下文场景
 
 代表模型：BLOOM、MPT
 
 ### 3.2 RoPE（Rotary Position Embedding）— 核心重点 ⭐
 
-Su et al., 2021 提出，现已成为 **LLM 主流位置编码方案**（[[LLaMA]]、Qwen、[[DeepSeek-R1|DeepSeek]]、Mistral 均采用）。
+Su et al., 2021 提出，现已成为 **LLM 主流位置编码方案**（[[AI/LLM/Architecture/LLaMA|LLaMA]]、Qwen、[[AI/LLM/Architecture/DeepSeek-R1|DeepSeek]]、Mistral 均采用）。
 
 #### 核心思想
 
+> 来源：RoFormer arXiv:2104.09864 (Su et al., 2021)
+
 **将位置信息编码为旋转角度**，对 Q/K 向量应用旋转矩阵：
 
-```
-f(x, m) = x · e^{imθ}  (复数形式)
-```
+$$f(\mathbf{x}, m) = \mathbf{x} \cdot e^{im\theta} \quad \text{(复数形式)}$$
 
-对于 d 维向量，将其视为 d/2 个二维子空间，每个子空间独立旋转：
+对于 $d$ 维向量，将其视为 $d/2$ 个二维子空间，每个子空间独立旋转：
 
-```
-              ┌ cosθ₁  -sinθ₁   0     0    ...  ┐   ┌ q₁ ┐
-              │ sinθ₁   cosθ₁   0     0    ...  │   │ q₂ │
-R(m) · q  =  │  0       0    cosθ₂  -sinθ₂ ... │ · │ q₃ │
-              │  0       0    sinθ₂   cosθ₂ ... │   │ q₄ │
-              └ ...     ...    ...    ...    ... ┘   └ ...┘
+$$R_m \mathbf{q} = \begin{pmatrix} \cos m\theta_1 & -\sin m\theta_1 & & \\ \sin m\theta_1 & \cos m\theta_1 & & \\ & & \cos m\theta_2 & -\sin m\theta_2 \\ & & \sin m\theta_2 & \cos m\theta_2 \\ & & & & \ddots \end{pmatrix} \begin{pmatrix} q_1 \\ q_2 \\ q_3 \\ q_4 \\ \vdots \end{pmatrix}$$
 
-其中 θᵢ = m / 10000^(2i/d)，m 为位置索引
-```
+其中 $\theta_i = 10000^{-2i/d}$，$m$ 为位置索引。
 
 #### 关键性质
 
 **内积只依赖相对位置**：
 
-```
-<f(q, m), f(k, n)> = <R(m)q, R(n)k> = q^T R(n-m)^T k = g(q, k, n-m)
-```
+$$\langle f(\mathbf{q}, m), f(\mathbf{k}, n) \rangle = \langle R_m \mathbf{q}, R_n \mathbf{k} \rangle = \mathbf{q}^T R_{n-m} \mathbf{k} = g(\mathbf{q}, \mathbf{k}, n-m)$$
 
-→ RoPE 在**绝对位置编码**的形式下实现了**相对位置编码**的效果！
+→ RoPE 在**绝对位置编码**的形式下实现了**相对位置编码**的效果！（利用旋转矩阵正交性：$R_m^T R_n = R_{n-m}$）
 
 #### 高效实现
 
@@ -161,13 +166,13 @@ def apply_rotary_emb(xq: torch.Tensor, xk: torch.Tensor, freqs_cis: torch.Tensor
 
 #### 频率分布的直觉
 
-```
-维度 i=0:    θ₀ = 1/10000^0 = 1.0        → 高频，捕捉局部位置
-维度 i=16:   θ₁₆ = 1/10000^(32/128)      → 中频
-维度 i=62:   θ₆₂ = 1/10000^(124/128) ≈ 0 → 低频，捕捉全局位置
+| 维度 | 频率 $\theta_i$ | 波长 $\lambda_i = 2\pi / \theta_i$ | 作用 |
+|------|-----------------|-------------------------------------|------|
+| $i=0$ | $\theta_0 = 1.0$ | $\lambda_0 \approx 6.3$ | 高频，捕捉局部位置 |
+| $i=16$ | $\theta_{16} = 10000^{-32/128}$ | $\lambda_{16} \approx 63$ | 中频 |
+| $i=62$ | $\theta_{62} \approx 0.0001$ | $\lambda_{62} \approx 62832$ | 低频，捕捉全局位置 |
 
-"低维高频、高维低频" → 类似傅里叶变换的频域分解
-```
+**"低维高频、高维低频"** → 类似傅里叶变换的频域分解。这也是外推问题的根源——高频维度先"用完"角度范围。
 
 ## 4. RoPE 的长上下文外推
 
@@ -267,18 +272,31 @@ def yarn_rope(dim, max_seq_len, original_max=4096, target_max=128000,
 
 ## 5. 演进对比总结
 
-```
-方法          类型     参数量   外推能力   计算开销   代表模型
-─────────────────────────────────────────────────────────
-Sinusoidal    绝对     0       弱        O(1)      原始 Transformer
-Learned PE    绝对     N×d     无        O(1)      GPT-2, BERT
-ALiBi         相对偏置  0       强        O(1)      BLOOM, MPT
-RoPE          旋转     0       中等*     O(n·d)    LLaMA, Qwen, Mistral
-+ PI          外推     0       中        O(1)      -
-+ NTK-aware   外推     0       强        O(1)      CodeLlama
-+ YaRN        外推     0       最强      O(1)      LLaMA-YaRN
-─────────────────────────────────────────────────────────
-* RoPE 原生外推有限，但配合插值方法可达 128K+
+| 方法 | 类型 | 参数量 | 外推能力 | 计算开销 | 代表模型 |
+|------|------|--------|----------|----------|----------|
+| Sinusoidal | 绝对 | 0 | 弱 | $O(1)$ | 原始 Transformer |
+| Learned PE | 绝对 | $N \times d$ | 无 | $O(1)$ | GPT-2, BERT |
+| ALiBi | 相对偏置 | 0 | 强 | $O(1)$ | BLOOM, MPT |
+| **RoPE** | 旋转 | 0 | 中等* | $O(n \cdot d)$ | LLaMA, Qwen, Mistral |
+| + PI | 外推 | 0 | 中 | $O(1)$ | Meta 内部 |
+| + NTK-aware | 外推 | 0 | 强 | $O(1)$ | CodeLlama |
+| **+ YaRN** | 外推 | 0 | **最强** | $O(1)$ | LLaMA-YaRN, Qwen2.5 |
+
+> \* RoPE 原生外推有限，但配合插值方法可达 128K+
+
+```mermaid
+graph LR
+    A[Sinusoidal PE<br/>2017] --> B[Learned PE<br/>GPT-2]
+    A --> C[ALiBi<br/>2022]
+    A --> D[RoPE<br/>2021]
+    D --> E[PI<br/>2023]
+    D --> F[NTK-aware<br/>2023]
+    F --> G[YaRN<br/>2023]
+    F --> H[Dynamic NTK<br/>2023]
+    G --> I[LongRoPE<br/>2024]
+    
+    style D fill:#f96,stroke:#333,stroke-width:2px
+    style G fill:#9f6,stroke:#333,stroke-width:2px
 ```
 
 ## 6. 面试高频题
@@ -300,4 +318,59 @@ RoPE          旋转     0       中等*     O(n·d)    LLaMA, Qwen, Mistral
 
 ---
 
-**相关笔记**：[[FlashAttention]] | [[GQA-MQA]] | [[LLaMA]] | [[DeepSeek-R1]]
+## 🔧 落地应用
+
+### 直接可用场景
+- **模型微调时选择 RoPE base**：基于 NTK-aware 公式 $\theta' = \theta \cdot s^{d/(d-2)}$，根据目标上下文长度计算合适的 base
+- **长上下文推理**：使用 Dynamic NTK 或 YaRN 无需微调即可将 4K 模型外推到 16-32K
+- **自定义模型训练**：选择 RoPE + 合理 base（500K-8M）作为默认位置编码
+
+### 工程实现要点
+- **RoPE base 选择**：LLaMA 3 用 500K，Qwen2.5 用 1M，base 越大原生支持越长
+- **YaRN 微调**：仅需 ~400 steps 即可适配新长度，远少于 PI 的 ~10K steps
+- **兼容性**：RoPE 与 [[AI/LLM/Architecture/FlashAttention|FlashAttention]]、GQA 完美兼容
+
+### 面试高频问法
+- **Q: 为什么现在所有主流 LLM 都用 RoPE？**
+  A: 三个关键优势——(1) 零参数，不增加模型大小；(2) 绝对形式实现相对编码；(3) 配合 YaRN 等方法可高效外推到 128K+。ALiBi 的线性衰减假设太简单，Learned PE 无法泛化。
+
+## 💡 启发与思考
+
+### So What？对老板意味着什么
+- 位置编码是 LLM "理解顺序"的唯一手段——选错方案直接决定模型能不能处理长文档
+- YaRN 证明了**不均匀频率处理**的威力：高频保持、低频插值，这种"差异化对待"的思想在其他领域也有借鉴价值
+
+### 未解问题与局限
+- RoPE 的旋转假设是否最优？是否存在比旋转更好的位置编码方式？
+- 超长上下文（1M+）场景下，RoPE 外推仍有 PPL 退化，MiniMax-01 选择了线性注意力路线
+- [[AI/LLM/Architecture/Multi-Head Latent Attention|MLA]] 中的解耦 RoPE 增加了额外维度，是否有更优雅的方案？
+
+### 脑暴：如果往下延伸
+- 位置编码和 [[AI/LLM/Architecture/长上下文技术|长上下文技术]] 是同一枚硬币的两面——外推能力直接决定上下文窗口天花板
+- 如果把 RoPE 的频率分解思想应用到**多模态**（图像 patch 的 2D 位置编码），会怎样？
+
+## 📚 推荐阅读
+
+### 原始论文
+- [RoFormer: Enhanced Transformer with Rotary Position Embedding](https://arxiv.org/abs/2104.09864) — RoPE 原始论文，数学推导优雅
+- [ALiBi: Train Short, Test Long](https://arxiv.org/abs/2108.12409) — 极简位置编码方案，零参数外推
+- [YaRN: Efficient Context Window Extension](https://arxiv.org/abs/2309.00071) — 当前最优外推方案，ICLR 2024
+- [LongRoPE: Extending LLM Context Window Beyond 2M Tokens](https://arxiv.org/abs/2402.13753) — 搜索式非均匀缩放，ICML 2024
+
+### 深度解读
+- [Rotary Embeddings: A Relative Revolution](https://blog.eleuther.ai/rotary-embeddings/) — EleutherAI 出品，⭐⭐⭐⭐⭐，RoPE 直觉解释最佳
+- [NTK-Aware Scaled RoPE](https://www.reddit.com/r/LocalLLaMA/comments/14lz7j5/ntkaware_scaled_rope_allows_llama_models_to_have/) — Kaiokendev 的 Reddit 原帖 ⭐⭐⭐⭐
+
+### 实践资源
+- [HuggingFace RoPE 实现](https://github.com/huggingface/transformers/blob/main/src/transformers/models/llama/modeling_llama.py) — LLaMA 模型中的 RoPE 代码
+- [LLaMA 3 长上下文训练](https://arxiv.org/abs/2407.21783) — RoPE base 从 500K → 8M 的渐进扩展实践
+
+---
+
+## See Also
+
+- [[AI/LLM/Architecture/长上下文技术|长上下文技术]] — RoPE 外推是长上下文的核心技术路线之一；YaRN/LongRoPE 在此文有更深入的工程实践讨论
+- [[AI/LLM/Architecture/FlashAttention|FlashAttention]] — RoPE 的旋转操作与 FlashAttention 完美兼容；IO 感知计算不影响位置编码效果
+- [[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]] — 位置编码和注意力变体共同定义 Transformer 的信息处理方式
+- [[AI/LLM/Architecture/Multi-Head Latent Attention|MLA]] — MLA 中的解耦 RoPE 是位置编码与 KV 压缩结合的典型案例
+- [[AI/LLM/Architecture/LLaMA|LLaMA]] — RoPE 的最重要工业应用，LLaMA 系列推动了 RoPE 成为事实标准

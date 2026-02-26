@@ -1,10 +1,12 @@
 ---
 title: "EnterpriseGym Corecraft — 用高保真 RL 环境训练可泛化 Agent"
+brief: "Surge AI：高保真企业级 RL 训练环境（Corecraft），模拟真实 SaaS 应用（CRM/ERP）；GRPO 训练后 Agent OOD 泛化能力显著提升；强调环境保真度是 Agentic RL 泛化的关键（arXiv:2602.16179）"
 date: 2026-02-18
+updated: 2026-02-23
 arxiv: "2602.16179"
 affiliation: "Surge AI"
 tags: [agentic-RL, RL-environment, enterprise-agent, GRPO, OOD-generalization, benchmark]
-rating: ★★★★
+rating: 4
 ---
 
 # EnterpriseGym Corecraft — 用高保真 RL 环境训练可泛化 Agent
@@ -92,8 +94,10 @@ GLM 4.6 在 Corecraft 上训练了**一个 epoch** 就在 3 个 OOD benchmark �
 
 ## 关联
 
-- [[CM2]] — Checklist reward 设计
-- [[OpenRS-Pairwise-Adaptive-Rubric]] — Expert-authored rubric 的学术版
-- [[Kimi-K2.5-PARL]] — Parallel multi-agent RL 算法
-- [[Gaia2]] — 异步 agent benchmark（行动级别 verifier）
-- [[Claude-Opus-4.6]] — Corecraft 基准中的 frontier 模型之一，<30% pass rate
+- [[AI/Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2]] — Checklist reward 设计
+- [[AI/Agent/OpenRS-Pairwise-Adaptive-Rubric|OpenRS-Pairwise-Adaptive-Rubric]] — Expert-authored rubric 的学术版
+- [[AI/Agent/Kimi-K2.5-PARL|Kimi-K2.5-PARL]] — Parallel multi-agent RL 算法
+- [[AI/Agent/Gaia2-Dynamic-Async-Agent-Benchmark|Gaia2]] — 异步 agent benchmark（行动级别 verifier）
+- [[AI/LLM/Claude Sonnet 4.6|Claude-Opus-4.6]] — Corecraft 基准中的 frontier 模型之一，<30% pass rate
+
+> **see-also**：[[AI/Agent/Agent评估体系批判-Goodhart法则与Benchmark陷阱|Agent评估体系批判：Goodhart's Law]] — 本论文的实验数据（Agent迁移到真实企业代码库性能下降30-50%）被用于理论论证，互补关系：实验证据（EnterpriseGym）↔ 理论框架（Goodhart批判）

@@ -1,4 +1,5 @@
 ---
+brief: "豆包大模型 2.0（Doubao-Seed-2.0）——字节跳动大模型旗舰；融合 Seed1.5 多模态能力+高效推理架构；在中文理解/代码/Agent 任务上的能力分析；国内 AI 产品格局中字节的技术底座评估。"
 title: 豆包大模型 2.0 (Doubao-Seed-2.0)
 aliases:
   - Seed 2.0
@@ -225,8 +226,8 @@ Seed 团队明确的核心发展路线：
 
 ## See Also
 
-- [[AI/Frontiers/_MOC|Frontiers MOC]] — 前沿模型追踪索引
+- [[AI/Frontiers/目录|Frontiers MOC]] — 前沿模型追踪索引
 - [[AI/Frontiers/Doubao-Seed-2.0-技术分析|Doubao Seed 2.0 技术分析]] — 本笔记的深度技术版（馆长炼化版）
-- [[AI/_MOC|AI MOC]] — AI 知识域全索引
-- [[AI/LLM/_MOC|LLM MOC]] — LLM 技术基础
+- [[AI/目录|AI MOC]] — AI 知识域全索引
+- [[AI/LLM/目录|LLM MOC]] — LLM 技术基础
 - [[AI/Frontiers/GLM-5-技术报告精读|GLM-5]] — 同期竞品参考

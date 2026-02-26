@@ -1,12 +1,16 @@
 ---
 title: "The Landscape of Agentic Reinforcement Learning for LLMs: A Survey"
+brief: "Oxford+上海AI Lab+NUS：Agentic RL 系统性综述，将 MDP 扩展为 POMDP 多步框架；双维度分类（能力视角：规划/工具/记忆/自我改进）；覆盖 GRPO/ASPO 算法变体、WebEnv/ToolEmu 环境、SWE-Bench/GAIA 基准（arXiv:2509.02547）"
 type: paper
 domain: ai/agent/agentic-rl
 created: "2026-02-13"
-updated: "2026-02-13"
+updated: "2026-02-22"
 tags:
   - ai/agent/agentic-rl
   - type/paper
+sources:
+  - "arXiv:2509.02547 | Oxford + 上海AI Lab + NUS"
+  - "https://hf.co/papers/2509.02547"
 ---
 # The Landscape of Agentic Reinforcement Learning for LLMs: A Survey
 

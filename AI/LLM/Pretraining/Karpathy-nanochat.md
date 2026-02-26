@@ -1,4 +1,5 @@
 ---
+brief: "Karpathy nanochat——$72 在 8×H100 节点 3 小时训练出 GPT-2 级别模型（~1000 行代码）；展示现代预训练基础设施的极致精简；逆向验证大模型训练的核心要素（tokenizer/数据pipeline/attention/优化器）。"
 title: "Karpathy nanochat: $72 训练 GPT-2"
 date: 2026-02-14
 tags: [llm, training, efficiency, karpathy, open-source]
@@ -50,4 +51,4 @@ Karpathy 的 nanochat 用 ~1000 行代码，在单个 8×H100 节点上 3 小时
 - [[AI/LLM/Pretraining/LLM预训练与分布式训练2026全景|LLM 预训练 2026 全景]] — nanochat 实验与工业级预训练的对比
 - [[AI/Foundations/Training/预训练流程|预训练流程]] — 预训练的基础概念
 - [[AI/LLM/Frameworks/verl/verl 概述|verl 框架]] — 对照：verl 是工业级 RL 训练框架
-- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱
+- [[AI/LLM/目录|LLM MOC]] — 大语言模型知识全图谱

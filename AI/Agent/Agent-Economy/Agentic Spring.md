@@ -1,4 +1,5 @@
 ---
+brief: "Agentic Spring——Claude 主导的 Agent 经济新范式预测分析；预测市场/自主决策/Agent 间协作的涌现场景；对 AI Agent 从工具到经济主体的演化时间线的判断。"
 title: "Agentic Spring"
 type: analysis
 domain: ai/agent/agent-economy
@@ -42,14 +43,14 @@ status: active
 
 预测市场揭示的关键转折：**从 passive chatbot 到 autonomous agent 的范式转移正在被定价**。
 
-这与 [[Agent 经济基础设施]] 的发现完全吻合——四层同时成熟：
+这与 [[AI/Agent/Agent-Economy/Agent 经济基础设施|Agent 经济基础设施]] 的发现完全吻合——四层同时成熟：
 
 | 层级 | 组件 | 状态 |
 |------|------|------|
 | 模型层 | Claude 5 Sonnet / GPT-5.3 Codex | ✅ Agent 级推理能力 |
-| 支付层 | x402 / L402 / [[Coinbase AgentKit 技术评估\|Agentic Wallets]] | ✅ 交易能力 |
-| 身份层 | [[ERC-8004 Trustless Agents]] | ✅ 链上身份 |
-| 网络层 | [[Virtuals Protocol\|Virtuals ACP]] | ✅ Agent-to-Agent 交互 |
+| 支付层 | x402 / L402 / [[AI/Agent/Agent-Economy/Coinbase AgentKit 技术评估\|Agentic Wallets]] | ✅ 交易能力 |
+| 身份层 | [[AI/Agent/Agent-Economy/ERC-8004 Trustless Agents|ERC-8004 Trustless Agents]] | ✅ 链上身份 |
+| 网络层 | [[AI/Agent/Agent-Economy/Virtuals Protocol\|Virtuals ACP]] | ✅ Agent-to-Agent 交互 |
 
 ## 实际意义
 
@@ -59,7 +60,7 @@ status: active
 
 ## 关联
 
-- [[Agent 经济基础设施]] — 与模型层成熟形成完整拼图
-- [[Coinbase AgentKit 技术评估]] — 支付/交易层
-- [[ERC-8004 Trustless Agents]] — 身份层
-- [[Virtuals Protocol]] — 商业网络层
+- [[AI/Agent/Agent-Economy/Agent 经济基础设施|Agent 经济基础设施]] — 与模型层成熟形成完整拼图
+- [[AI/Agent/Agent-Economy/Coinbase AgentKit 技术评估|Coinbase AgentKit 技术评估]] — 支付/交易层
+- [[AI/Agent/Agent-Economy/ERC-8004 Trustless Agents|ERC-8004 Trustless Agents]] — 身份层
+- [[AI/Agent/Agent-Economy/Virtuals Protocol|Virtuals Protocol]] — 商业网络层

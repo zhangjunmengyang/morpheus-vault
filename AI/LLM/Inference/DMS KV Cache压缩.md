@@ -1,5 +1,6 @@
 ---
 title: "DMS: 动态内存稀疏化 KV Cache 压缩"
+brief: "NVIDIA + Edinburgh（arXiv:2506.05345，NeurIPS 2025）提出 DMS：~1K 步轻量 post-training 让 LLM 获得 8× KV Cache 压缩能力，reasoning 任务几乎无精度损失；在固定显存预算下允许运行更多更长推理链，实测反而提升准确率。"
 date: 2026-02-15
 tags: [inference, kv-cache, compression, sparsification, interview]
 type: note
@@ -484,7 +485,7 @@ DMS 训练效率高的根本原因在于三个设计选择：
 
 ## See Also
 
-- [[AI/LLM/Inference/KV Cache 优化|KV Cache 优化]] — KV Cache 优化全貌
+- [[AI/LLM/Inference/KV Cache|KV Cache 优化]] — KV Cache 优化全貌
 - [[AI/LLM/Inference/Sparrow-Video-LLM-Speculative-Decoding|Sparrow 推测解码]] — 推理加速的另一路线
 - [[AI/Foundations/Inference/模型量化综述|模型量化综述]] — 量化与 KV Cache 压缩的结合
-- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱
+- [[AI/LLM/目录|LLM MOC]] — 大语言模型知识全图谱

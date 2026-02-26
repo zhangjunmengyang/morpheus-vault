@@ -1,4 +1,5 @@
 ---
+brief: "Gemini 3.1 Pro 速评——Google 2026 旗舰多模态模型；原生多模态推理+超长 context（2M token）；在 ARC-AGI-2 和数学竞赛上的表现分析；与 Claude Opus 4.6 的格局对比；★★★★★。"
 title: "Gemini 3.1 Pro 速评"
 date: 2026-02-20
 type: frontier

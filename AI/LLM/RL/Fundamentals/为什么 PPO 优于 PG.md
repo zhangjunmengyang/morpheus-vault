@@ -1,5 +1,6 @@
 ---
 title: "为什么 PPO 优于 PG(Policy Gradient)"
+brief: "从 REINFORCE 到 PPO 的演进路径：PG 高方差+数据利用率低的问题，通过 baseline/GAE/clip ratio 逐步解决；理解 PPO 优于朴素 PG 的根本原因是 LLM alignment 面试必备知识点。"
 type: concept
 domain: ai/llm/rl/fundamentals
 created: "2026-02-13"

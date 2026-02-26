@@ -1,4 +1,5 @@
 ---
+brief: "DPO Unsloth 实践——Unsloth 加速 DPO 训练；QLoRA + DPO 在低显存环境下的偏好对齐；相比 PPO 减少 4 个模型为 2 个，单卡可运行 7B-13B 的 DPO 全流程。"
 title: "DPO"
 type: project
 domain: ai/llm/rl/dpo

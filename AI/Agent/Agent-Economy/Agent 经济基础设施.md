@@ -1,4 +1,5 @@
 ---
+brief: "Agent 经济基础设施——加密+AI Agent 融合方向的基础设施层分析；支付/身份/信任/协作协议的设计原则；Consensus HK 2026 背景，链上 Agent 经济的早期格局研判。"
 title: "Agent 经济基础设施"
 type: analysis
 domain: ai/agent/agent-economy
@@ -22,7 +23,7 @@ status: active
 
 专为 AI Agent 设计的钱包基础设施，Agent 可自主持有、消费、赚取、交易 crypto。
 
-- 基于 [[Coinbase AgentKit 技术评估|x402 协议]]（已处理 5000 万+ 交易）
+- 基于 [[AI/Agent/Agent-Economy/Coinbase AgentKit 技术评估|x402 协议]]（已处理 5000 万+ 交易）
 - Base 网络免 gas 交易
 - 开发者可设置 session 上限和交易限额
 - 私钥由 Coinbase TEE 基础设施托管
@@ -40,13 +41,13 @@ status: active
 
 - 单日 13,000+ AI Agent 注册链上身份（跨链总量）
 - 给 Agent 可移植身份 + 内置信任层
-- 详见 [[ERC-8004 Trustless Agents]]
+- 详见 [[AI/Agent/Agent-Economy/ERC-8004 Trustless Agents|ERC-8004 Trustless Agents]]
 
 ### 4. Virtuals Protocol: Agent-to-Agent 收入网络
 
 - AI Agent 之间自主谈判、执行、赚钱
 - 人类用户获得持续收入分成
-- 详见 [[Virtuals Protocol]]
+- 详见 [[AI/Agent/Agent-Economy/Virtuals Protocol|Virtuals Protocol]]
 
 ## Consensus HK 2026 其他信号
 
@@ -66,15 +67,15 @@ status: active
 
 **表象**：AI + Crypto 又是一波概念炒作，Agent 交易是噱头。
 
-**真相**：基础设施已到位——支付协议（x402/L402）、身份标准（[[ERC-8004 Trustless Agents|ERC-8004]]）、钱包（Agentic Wallets）、交易网络（[[Virtuals Protocol]]）。这不是 2024 年的 AI meme coin，是管道工程。
+**真相**：基础设施已到位——支付协议（x402/L402）、身份标准（[[AI/Agent/Agent-Economy/ERC-8004 Trustless Agents|ERC-8004]]）、钱包（Agentic Wallets）、交易网络（[[AI/Agent/Agent-Economy/Virtuals Protocol|Virtuals Protocol]]）。这不是 2024 年的 AI meme coin，是管道工程。
 
-四层同时成熟的信号与 [[Agentic Spring]] 中预测市场的定价完全吻合。
+四层同时成熟的信号与 [[AI/Agent/Agent-Economy/Agentic Spring|Agentic Spring]] 中预测市场的定价完全吻合。
 
 ## 实际意义
 
 1. Agent 自主交易的量化策略即将变得可行（不再需要人工审批每笔交易）
-2. [[Coinbase AgentKit 技术评估|Coinbase AgentKit]] + Base 是最成熟的入口
-3. [[ERC-8004 Trustless Agents|ERC-8004]] Agent 身份标准可能影响未来量化 Agent 的合规要求
+2. [[AI/Agent/Agent-Economy/Coinbase AgentKit 技术评估|Coinbase AgentKit]] + Base 是最成熟的入口
+3. [[AI/Agent/Agent-Economy/ERC-8004 Trustless Agents|ERC-8004]] Agent 身份标准可能影响未来量化 Agent 的合规要求
 4. 短期 AI 代币板块存在交易机会
 
 ## 待办

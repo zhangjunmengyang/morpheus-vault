@@ -1,4 +1,5 @@
 ---
+brief: "RLHF 全链路深度笔记——从 Reward Model 训练到 PPO/GRPO/DPO 对齐算法的完整工程链；覆盖数据收集/RM 训练/policy 优化/稳定性调参全阶段；interview/hot 标注，面试深度参考。"
 title: "RLHF 全链路 — 从 Reward Model 到 PPO/GRPO/DPO"
 date: 2026-02-13
 tags:

@@ -1,4 +1,5 @@
 ---
+brief: "HuggingFace Agent 课程——官方 Agent 入门到进阶课程入口；覆盖 ReAct/Tool Use/Multi-Agent/代码执行等核心模块，配套 Colab 实践；从工程视角入门 LLM Agent 开发的推荐学习路径。"
 title: "Agent Course"
 type: tutorial
 domain: ai/agent/fundamentals

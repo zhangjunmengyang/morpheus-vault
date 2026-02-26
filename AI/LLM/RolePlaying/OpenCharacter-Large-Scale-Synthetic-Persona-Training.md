@@ -1,4 +1,5 @@
 ---
+brief: "OpenCharacter（arXiv:2501.15427）——大规模合成 Persona 数据训练可定制角色扮演 LLM；通过 LLM 生成多样化 persona 描述+对话数据，无需人工标注；对魂匣 Agent 人格设计和定制化 SFT 有直接参考价值。"
 title: "OpenCharacter: Large-Scale Synthetic Persona Training for Customizable Role-Playing LLM"
 date: 2026-02-21
 arxiv: "2501.15427"

@@ -1,5 +1,6 @@
 ---
 title: "Continuous Batching 深度解析"
+brief: "LLM 推理服务核心优化：Continuous Batching（动态批处理）将传统静态批（等最长序列结束）改为 token 级别的流式调度，GPU 利用率从<30%提升至80%+。是 vLLM/TRT-LLM/SGLang 等推理引擎的基础架构，面试必考。"
 date: 2026-02-13
 tags:
   - ai/llm/inference
@@ -146,9 +147,9 @@ Decode:  生成 1 个 token → 计算量很小
 
 | 框架 | 批处理策略 | Prefill 处理 | 内存管理 | 特色 |
 |------|-----------|-------------|---------|------|
-| **[[vLLM]]** | Continuous Batching | Chunked Prefill | [[KV Cache 优化\|PagedAttention]] | 最成熟的开源方案 |
+| **[[AI/LLM/Inference/vLLM|vLLM]]** | Continuous Batching | Chunked Prefill | [[AI/LLM/Inference/KV Cache|PagedAttention]] | 最成熟的开源方案 |
 | **TGI** (HuggingFace) | Continuous Batching | Token streaming | 连续内存 + Flash | 生产级 API |
-| **[[TensorRT-LLM]]** | In-flight Batching | Chunked + Pipelined | Paged KV Cache | NVIDIA 极致优化 |
+| **[[AI/LLM/Inference/TensorRT-LLM|TensorRT-LLM]]** | In-flight Batching | Chunked + Pipelined | Paged KV Cache | NVIDIA 极致优化 |
 | **SGLang** | Continuous Batching | Chunked Prefill | RadixAttention | Prefix Caching 强 |
 | **DeepSpeed-MII** | Dynamic SplitFuse | Split-and-Fuse | — | 长短请求拆分融合 |
 
@@ -232,11 +233,11 @@ vLLM 默认策略: Recomputation（开销更可预测）
 
 ## 8. 与其他优化技术的关系
 
-- **[[KV Cache 优化|PagedAttention]]**：Continuous Batching 的基础设施——分页内存管理使动态增减请求成为可能
-- **[[FlashAttention]]**：加速每一步的 Attention 计算，与 Continuous Batching 正交互补
-- **[[Speculative Decoding]]**：在 Continuous Batching 中实现 SD 需要特殊处理（验证 token 的动态 batch 大小变化）
-- **[[推理优化]]**：Continuous Batching 是推理优化 stack 的调度层核心
-- **[[量化综述|量化]]**：量化减小模型和 KV Cache 大小 → 相同显存下 batch size 更大 → 吞吐更高
+- **[[AI/LLM/Inference/KV Cache|PagedAttention]]**：Continuous Batching 的基础设施——分页内存管理使动态增减请求成为可能
+- **[[AI/LLM/Architecture/FlashAttention|FlashAttention]]**：加速每一步的 Attention 计算，与 Continuous Batching 正交互补
+- **[[AI/LLM/Inference/Speculative Decoding|Speculative Decoding]]**：在 Continuous Batching 中实现 SD 需要特殊处理（验证 token 的动态 batch 大小变化）
+- **[[AI/LLM/Inference/推理优化|推理优化]]**：Continuous Batching 是推理优化 stack 的调度层核心
+- **[[AI/LLM/Inference/量化综述|量化]]**：量化减小模型和 KV Cache 大小 → 相同显存下 batch size 更大 → 吞吐更高
 
 ## 面试常见问题
 

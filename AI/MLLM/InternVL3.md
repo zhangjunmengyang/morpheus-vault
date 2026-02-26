@@ -1,4 +1,5 @@
 ---
+brief: "InternVL3——上海 AI Lab 的多模态大模型系列；InternViT 视觉 encoder + InternLM2 语言模型；在 OCR/图表理解/多图推理等任务上保持开源 SOTA；高分辨率动态切分策略处理细粒度视觉任务。"
 title: "InternVL3"
 type: paper
 domain: ai/mllm

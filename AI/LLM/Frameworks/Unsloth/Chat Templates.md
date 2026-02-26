@@ -1,4 +1,5 @@
 ---
+brief: "Unsloth Chat Templates——聊天模板配置指南；Llama/Qwen/Gemma 等不同模型的对话格式规范，tokenizer 的 apply_chat_template 用法；错误的 chat template 是 SFT/RL 训练常见坑点。"
 title: "Chat Templates"
 type: concept
 domain: ai/llm/frameworks/unsloth
@@ -7,6 +8,10 @@ updated: "2026-02-13"
 tags:
   - ai/llm/frameworks/unsloth
   - type/concept
+rating: ★★★☆
+sources:
+  - "Unsloth Chat Templates 官方文档: https://docs.unsloth.ai/basics/chat-templates"
+  - "HuggingFace apply_chat_template: https://huggingface.co/docs/transformers/chat_templating"
 ---
 # Chat Templates
 

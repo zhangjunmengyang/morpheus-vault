@@ -1,4 +1,5 @@
 ---
+brief: "DCPO（Dynamic Clipping Policy Optimization）——动态调节 PPO clip ratio 替代固定阈值；根据训练进展和策略差异自适应设置截断边界，避免早期训练欠更新和后期过更新的问题。"
 title: "DCPO: Dynamic Clipping Policy Optimization"
 type: paper
 domain: ai/llm/rl/other-algorithms

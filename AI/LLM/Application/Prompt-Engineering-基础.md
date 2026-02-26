@@ -1,4 +1,5 @@
 ---
+brief: "Prompt Engineering 基础——零样本/少样本/角色提示/输出格式控制等基础技巧；理解 LLM 对 prompt 敏感的内在原因（token 概率/上下文窗口）；是高级 Prompt 技巧的前置知识。"
 title: "Prompt Engineering"
 type: concept
 domain: ai/llm/prompt-engineering
@@ -175,4 +176,4 @@ ReAct 框架允许 LLMs 与外部工具交互来获取额外信息，从而给�
 - [[AI/LLM/Prompt-Engineering/Prompt Engineering 高级|高级 Prompt 技巧]] — 进阶篇
 - [[AI/LLM/Prompt-Engineering-2026实战全景|Prompt Engineering 2026 实战全景]] — 2026 年完整全景版（2784行）
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — 自动 PE 方向：E-SPL/GEPA 用 RL 进化 prompt
-- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱
+- [[AI/LLM/目录|LLM MOC]] — 大语言模型知识全图谱

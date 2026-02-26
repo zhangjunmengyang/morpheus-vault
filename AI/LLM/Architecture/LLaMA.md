@@ -1,5 +1,6 @@
 ---
 title: "LLaMA"
+brief: "Meta 2023 年发布的开源 LLM 基础系列（LLaMA 1/2/3），奠定了现代开源 LLM 的架构基准：Pre-RMSNorm + SwiGLU + RoPE + GQA。证明'给定计算预算下用更多数据训练更小模型'比训练更大模型更高效（对标 Chinchilla）。几乎所有主流开源模型（Qwen/DeepSeek/Mistral）的架构直接继承自 LLaMA。"
 type: paper
 domain: ai/llm/architecture
 created: "2026-02-13"
@@ -103,8 +104,8 @@ LLaMA 的成功给我最大的启发是：**架构创新远不如数据和工程
 
 ## 相关
 
-- [[GPT]]
-- [[BERT]]
+- [[AI/LLM/Architecture/GPT|GPT]]
+- [[AI/LLM/Architecture/BERT|BERT]]
 - [[AI/LLM/SFT/LoRA|LoRA]]
 - [[AI/LLM/Inference/vLLM|vLLM]]
 - [[AI/LLM/Inference/Ollama|Ollama]]
@@ -115,4 +116,4 @@ LLaMA 的成功给我最大的启发是：**架构创新远不如数据和工程
 - [[AI/Foundations/DL-Basics/Transformer 通识|Transformer 通识]]
 - [[AI/Foundations/DL-Basics/Transformer 位置编码详解|Transformer 位置编码详解]]
 - [[AI/LLM/SFT/SFT 原理|SFT 原理]]
-- [[AI/Foundations/DL-Basics/Attention 详解|Attention 详解]]
+- [[AI/LLM/Architecture/Attention 变体综述|Attention 详解]]

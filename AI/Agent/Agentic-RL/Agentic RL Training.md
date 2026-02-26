@@ -1,12 +1,15 @@
 ---
 title: "Agentic RL Training"
+brief: "用 RL 训练 Agent 多步交互能力（工具调用/环境反馈/任务规划）的工程笔记；基于 verl 框架（agentic_rl/agent_loop/reward_loop）；对比单轮 GRPO vs 多轮 Agentic RL 的核心差异与实现要点"
 type: concept
 domain: ai/agent/agentic-rl
 created: "2026-02-13"
-updated: "2026-02-13"
+updated: "2026-02-22"
 tags:
   - ai/agent/agentic-rl
   - type/concept
+sources:
+  - "verl 文档: https://verl.readthedocs.io/en/latest/start/agentic_rl.html"
 ---
 # Agentic RL Training
 

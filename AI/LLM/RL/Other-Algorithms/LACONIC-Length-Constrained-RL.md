@@ -1,4 +1,5 @@
 ---
+brief: "LACONIC（arXiv:2602.14468，ICML）——用 Primal-Dual RL 做 LLM 输出长度约束；将长度限制建模为约束优化问题，Lagrangian 对偶自适应调整惩罚系数；在保持 accuracy 的前提下压缩 CoT 长度 40%+。"
 title: "LACONIC — 用 Primal-Dual RL 控制 LLM 输出长度"
 date: 2026-02-16
 arxiv: "2602.14468"
@@ -104,6 +105,12 @@ subject to E[length(response)] ≤ B   (B = target token budget)
 
 ## 关联
 
-- [[RLVR-Edge-of-Competence]] — 难度分布对 RLVR 有效性的理论分析，LACONIC 的 primal-dual 框架与其互补
-- [[Blockwise-Advantage-Estimation]] — GRPO credit assignment 改进，LACONIC 可以在 GRPO 上应用
+- [[AI/LLM/RL/Theory/RLVR-Edge-of-Competence|RLVR-Edge-of-Competence]] — 难度分布对 RLVR 有效性的理论分析，LACONIC 的 primal-dual 框架与其互补
+- [[AI/LLM/RL/GRPO/Blockwise-Advantage-Estimation|Blockwise-Advantage-Estimation]] — GRPO credit assignment 改进，LACONIC 可以在 GRPO 上应用
 - CoT Compression 方向的其他工作（concurrent）：Constraint-Rectified Training (2602.1xxxx), Extreme-Ratio CoT Compression (2602.xxx)
+
+## See Also
+
+- [[AI/LLM/RL/Other-Algorithms/IntroLLM-Introspective-Temperature-Policy-Hierarchical-RL|IntroLLM（分层RL自适应温度控制）]] — 约束 RL 的互补维度：LACONIC 约束输出**长度**（primal-dual 硬约束），IntroLLM 约束采样**温度**（分层 RL 软约束）——两者合用可同时控制探索强度和输出成本
+- [[AI/LLM/RL/Other-Algorithms/STAPO-Spurious-Token-Aware-Policy-Optimization|STAPO（虚假Token感知策略优化）]] — token 级干预的不同方向：STAPO 屏蔽低质量 spurious token（质量约束），LACONIC 约束总长度（效率约束）——都是在 RL 训练中对 token 流施加结构性干预
+- [[AI/LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL 训练稳定性统一分析]] — 宏观框架：LACONIC 属于"输出质量约束"层，与 STAPO/DEEP-GRPO 一起构成 token 级稳定化方法族

@@ -1,5 +1,6 @@
 ---
 title: "TensorRT-LLM 深度解析"
+brief: "NVIDIA 官方 LLM 推理优化库，基于 TensorRT 8/9：自动算子融合、INT8/FP8 量化、KV Cache 优化、Inflight Batching。在 NVIDIA GPU 上可达理论吞吐量极限。与 Triton Inference Server 配合构成 NVIDIA LLM 服务完整栈，适合企业级大规模部署。"
 date: 2026-02-13
 tags:
   - ai/llm/inference
@@ -109,7 +110,7 @@ sq_config = QuantConfig(
 
 ### (3) In-flight Batching
 
-TensorRT-LLM 的 [[Continuous Batching]] 实现：
+TensorRT-LLM 的 [[AI/LLM/Inference/Continuous Batching|Continuous Batching]] 实现：
 
 ```
 In-flight Batching 特点:
@@ -213,7 +214,7 @@ for output in outputs:
 
 ## 4. TensorRT-LLM vs vLLM 对比
 
-| 维度 | TensorRT-LLM | [[vLLM]] |
+| 维度 | TensorRT-LLM | [[AI/LLM/Inference/vLLM|vLLM]] |
 |------|-------------|---------|
 | **厂商** | NVIDIA 官方 | UC Berkeley → 社区 |
 | **硬件** | 仅 NVIDIA GPU | NVIDIA + AMD ROCm + CPU |
@@ -295,7 +296,7 @@ kv_cache_config = {
   │   └── Yes → vLLM
   │
   ├── 单机简单推理?
-  │   └── Yes → [[Ollama]] / llama.cpp
+  │   └── Yes → [[AI/LLM/Inference/Ollama|Ollama]] / llama.cpp
   │
   └── 前沿功能 (RadixAttention, 结构化输出)?
       └── SGLang
@@ -320,12 +321,12 @@ trtllm-build \
 
 ## 7. 与其他优化技术的关系
 
-- **[[FlashAttention]]**：TRT-LLM 使用 FlashAttention 的思想实现 fused attention kernel
-- **[[Continuous Batching]]**：TRT-LLM 的 in-flight batching 是 continuous batching 的 C++ 高性能实现
-- **[[量化综述|量化]]**：TRT-LLM 提供最完整的量化支持，尤其是 FP8 量化
-- **[[KV Cache 优化]]**：Paged KV Cache + KV Cache 量化
-- **[[Speculative Decoding]]**：TRT-LLM 原生支持 draft model speculative decoding
-- **[[推理优化]]**：TRT-LLM 是推理优化技术的集大成者
+- **[[AI/LLM/Architecture/FlashAttention|FlashAttention]]**：TRT-LLM 使用 FlashAttention 的思想实现 fused attention kernel
+- **[[AI/LLM/Inference/Continuous Batching|Continuous Batching]]**：TRT-LLM 的 in-flight batching 是 continuous batching 的 C++ 高性能实现
+- **[[AI/LLM/Inference/量化综述|量化]]**：TRT-LLM 提供最完整的量化支持，尤其是 FP8 量化
+- **[[AI/LLM/Inference/KV Cache|KV Cache 优化]]**：Paged KV Cache + KV Cache 量化
+- **[[AI/LLM/Inference/Speculative Decoding|Speculative Decoding]]**：TRT-LLM 原生支持 draft model speculative decoding
+- **[[AI/LLM/Inference/推理优化|推理优化]]**：TRT-LLM 是推理优化技术的集大成者
 
 ## 面试常见问题
 

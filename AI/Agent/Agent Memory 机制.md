@@ -1,6 +1,8 @@
 ---
 title: "Agent Memory 机制：从短期缓冲到长期记忆的全栈设计"
+brief: "Agent 记忆全栈设计：四层架构（In-Context 短期/External Vector 语义/Episodic 情节/Procedural 技能）；RAG 整合、记忆压缩、遗忘策略；面试热点——工程实现与设计权衡"
 date: 2026-02-13
+updated: 2026-02-23
 tags:
   - ai/agent
   - ai/agent/memory
@@ -100,7 +102,7 @@ relevant = memory.load_memory_variables({"input": "帮我推荐一道菜"})
 
 ## 3. MemGPT / Letta：操作系统式记忆管理
 
-[[MemGPT]]（现已发展为 [[Letta]] 框架）的核心洞察：**把 LLM 当 CPU，Context Window 当 RAM，外部存储当 Disk——让 LLM 自己管理内存的分页调度**。
+MemGPT（现已发展为 Letta 框架，暂无独立笔记）的核心洞察：**把 LLM 当 CPU，Context Window 当 RAM，外部存储当 Disk——让 LLM 自己管理内存的分页调度**。
 
 ### 3.1 架构设计
 
@@ -249,3 +251,22 @@ class HybridMemory:
 
 ### Q5: Generative Agents 的记忆架构是怎样的？Reflection 机制如何工作？
 **答**：Stanford Generative Agents 使用三层记忆架构：Memory Stream（所有观察的时间流）→ Retrieval（基于 recency × importance × relevance 的加权检索）→ Reflection（周期性对记忆做高阶总结，如"我和 Alice 是好朋友"）。Reflection 触发条件是累积的 importance 分数超过阈值，生成的反思结果本身也存入 Memory Stream，形成递归的认知层次。
+
+---
+
+## See Also
+
+- [[AI/Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN（StarPO）]] — Echo Trap 的核心原因之一：多轮 Agent 记忆管理不当导致 reward 同质化
+- [[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent-RL|KLong]] — 超长 horizon Agent 的 Context Overflow 处理（轨迹切割策略）
+- [[AI/Agent/Fundamentals/ReAct与CoT|ReAct 与 CoT]] — Agent 工作记忆的使用方式（scratchpad 机制）
+- [[AI/LLM/Application/RAG/RAG 原理与架构|RAG 原理]] — 向量数据库实现长期记忆检索的技术基础
+- [[AI/Agent/目录|Agent MOC]] — Agent 整体知识导航
+- [[AI/LLM/Architecture/Engram-Conditional-Memory-DeepSeek-V4|Engram：条件记忆（DeepSeek V4）]] — LLM 架构层面的记忆机制创新（参数化 vs 外部记忆对比视角）
+
+## 推荐阅读
+
+- [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 综合分析]] — 记忆在 Agentic RL 训练中的角色
+- MemGPT 论文：arXiv:2310.08560 — 虚拟内存 OS 类比的完整技术方案
+- Generative Agents：arXiv:2304.03442 — 三层记忆架构（Stream/Retrieval/Reflection）
+
+*笔记覆盖：短期/长期/情景/语义记忆四类 + MemGPT/Generative Agents 实现 + 面试5题*

@@ -1,6 +1,6 @@
 ---
 title: "Tool Use RL 训练专题 — 用 RL 教模型学会使用工具"
-brief: "用 RL（而非 SFT）训练 LLM 使用工具的系统方法论。核心结论：Reward 粒度是最关键变量（ToolRL），细粒度分项打分比 binary reward 高 15%；SFT 教格式，RL 教策略。覆盖 ToolRL/ToRL/ARTIST/VerlTool/Search-R1/WebAgent-R1/Agent-RLVR 共 8 个代表性框架，含 reward 设计、训练流程、工程实现全图谱。"
+brief: "用 RL（而非 SFT）训练 LLM 使用工具的系统方法论。核心结论：Reward 粒度是最关键变量（ToolRL），细粒度分项打分比 binary reward 高 15%；SFT 教格式，RL 教策略。覆盖 ToolRL/ToRL/ARTIST/VerlTool/Search-R1/WebAgent-R1/Agent-RLVR 共 9 个代表性框架，含 reward 设计、训练流程、工程实现全图谱。v3 新增 WebAgent-R1 深度节：M-GRPO 三层归一化 + Dynamic Context Compression + BC 热启动 + off-policy 盲区论证（logout-then-edit），Llama-8B 8.5%→44.8% 超 o3。"
 date: 2026-02-21
 type: synthesis
 domain: ai/agent/agentic-rl
@@ -12,7 +12,7 @@ tags:
   - function-calling
   - synthesis
   - interview-prep
-status: v2
+status: v3
 sources:
   - "ToolRL: Qian et al., NeurIPS 2025, OpenReview eOLdGbXT6t"
   - "ToRL: Li et al., arXiv 2503.23383"
@@ -113,6 +113,7 @@ $$r_{total} = r_{\text{tool\_name}} + r_{\text{param\_count}} + r_{\text{param\_
 ## 四、ToRL — Tool-Integrated RL（数学+代码工具）
 
 **arXiv 2503.23383 | GAIR-NLP**
+**完整笔记**：[[AI/Agent/Agentic-RL/ToRL-Tool-Integrated-Reinforcement-Learning|ToRL 深度精读]]
 
 ### 核心设计
 
@@ -148,6 +149,7 @@ Reward 仍是 binary（最终答案对错），但模型在 RL 探索中自然�
 ## 五、ARTIST — 多工具 + 多轮 Agent RL
 
 **arXiv 2505.01441 | Microsoft Research, MSR-TR-042025-V1**
+**完整笔记**：[[AI/Agent/Agentic-RL/ARTIST-Agentic-Reasoning-Tool-Integration-RL|ARTIST 深度精读]]
 
 ### 核心问题
 
@@ -223,7 +225,77 @@ sequenceDiagram
 
 ---
 
-## 八、Agent-RLVR — SWE-bench 9.4% → 22.4%
+## 八、WebAgent-R1 — 端到端多轮 RL for Web Agent
+
+**arXiv 2505.16421 | Amazon + UVA + Georgia Tech**
+**完整笔记**：[[AI/Agent/Agentic-RL/WebAgent-R1-Multi-Turn-RL-Web-Agent|WebAgent-R1 深度精读]]
+
+### 问题：Web Agent 的 RL 训练三大难点
+
+1. **Multi-turn 归一化**：GRPO 假设 single-turn，Web 任务有 10-30+ 个 action step，advantage 怎么估计？
+2. **Context 爆炸**：每个 step 新增大量 HTML（完整页面可达 100K+ tokens），context window 撑不住
+3. **稀疏 reward + cold start**：Web 任务成功率极低（7B 模型 WebArena ~8%），RL 无法启动
+
+### 核心设计：M-GRPO + Dynamic Context Compression + BC 热启动
+
+**M-GRPO（Multi-Turn GRPO）**：
+
+把 GRPO 的 advantage normalization 扩展到多轮，三层归一化：
+
+1. **Group normalization**：同一任务的 N 条 trajectory 间标准化（原始 GRPO）
+2. **Step normalization**：同一 trajectory 内各 step 的 advantage 按步数标准化（防止长 trajectory 梯度过大）
+3. **Token normalization**：同一 step 内各 token 的贡献按 step 长度归一（防止长 action 主导梯度）
+
+三层独立但协同，确保无论 trajectory 长短、step 长短，梯度量纲一致。这是 HiPER HAE 的简化版（不需要单独 critic）。
+
+**Dynamic Context Compression（DCC）**：
+
+每个 step 前，对历史 HTML observation 进行压缩：
+- 保留与当前任务最相关的 DOM 元素（基于 task embedding 相似度）
+- 去除已完成步骤的冗余细节（只保留 summary）
+- 压缩后 context 维持在 8K-16K tokens 可控范围
+
+关键：压缩是 **deterministic rule-based**，不依赖另一个 LLM，零额外推理开销。
+
+**BC 热启动（Behavior Cloning Warm-up）**：
+
+直接从零 RL 训练 Web agent 几乎不可能（成功率 < 5%，梯度趋零）。流程：
+1. 先收集人类专家/强模型（GPT-4o）的轨迹 → SFT/BC 热启动
+2. 确保 rollout 成功率 > 10% 后 → 切换到 RL 训练
+
+**Ablation 验证**：去掉 BC 热启动，RL 无法收敛（成功率始终 < 5%，梯度方差爆炸）。BC 热启动是 WebAgent-R1 最关键的 prerequisite。
+
+### Off-Policy 盲区 — RL 必须覆盖的 case
+
+**核心论证**：存在一类 task 只有 on-policy RL 才能学好。
+
+例：logout → edit → login 序列（先退出，再编辑，再登录）。SFT 数据里几乎没有人类主动 logout 然后编辑再 login 的示例（human label 会直接编辑），但这是某些任务的最优路径。
+
+On-policy RL rollout 会自然探索到这条路径，发现它能拿到高 reward → 加强该策略。SFT 永远学不到这个，因为没有 demonstration。
+
+这个例子证明了 RL 相对于 SFT 的**不可替代性**——不只是数量问题，是**覆盖不同策略空间**。
+
+### 效果
+
+| 模型 | 方法 | WebArena score |
+|------|------|----------------|
+| Llama-8B | SFT only | 8.5% |
+| Llama-8B | WebAgent-R1 | **44.8%** |
+| Qwen-3B | WebAgent-R1 | 33.9% |
+| OpenAI o3 | - | ~41% |
+| **Llama-8B WebAgent-R1** | **vs o3** | **+3.8%** |
+
+8B 模型 8.5% → 44.8%，**+36.3 绝对值**，超 o3。
+
+### 关键洞察：三层归一化的设计哲学
+
+M-GRPO 三层归一化背后是同一个原则：**梯度应该只来自「这个 action 相对其他 action 好坏多少」，而不受 trajectory 长度、step 长度、token 数量的数值影响**。
+
+这和 Dr. MAS 的 per-agent normalization、RAGEN 的 decoupled clipping 是同一主旋律——normalization 是 RL for LLM 的核心工程问题。
+
+---
+
+## 九、Agent-RLVR — SWE-bench 9.4% → 22.4%
 
 **arXiv 2506.11425**
 
@@ -259,7 +331,7 @@ flowchart LR
 
 ---
 
-## 九、Turn-Level Reward — 逐步 Credit Assignment
+## 十、Turn-Level Reward — 逐步 Credit Assignment
 
 **arXiv 2505.11821 | Morgan Stanley + UMN**
 
@@ -288,7 +360,7 @@ $$V_t = r_t^{\text{turn}} + \gamma \cdot r_{t+1}^{\text{turn}} + \gamma^2 \cdot 
 
 ---
 
-## 十、综合设计空间
+## 十一、综合设计空间
 
 ### Reward 设计谱系
 
@@ -324,7 +396,7 @@ graph LR
 
 ---
 
-## 十一、启发思考
+## 十二、启发思考
 
 ### So What
 
@@ -345,7 +417,7 @@ Tool Use RL 的根本意义：LLM 从"知识检索机"进化为"策略性问题�
 
 ---
 
-## 十二、落地应用
+## 十三、落地应用
 
 ### 可用场景
 
@@ -386,19 +458,20 @@ Tool Use RL 的根本意义：LLM 从"知识检索机"进化为"策略性问题�
 
 ### 原始论文
 - **ToolRL** (NeurIPS 2025): https://openreview.net/forum?id=eOLdGbXT6t
-- **ToRL**: https://arxiv.org/abs/2503.23383 | 代码: https://github.com/GAIR-NLP/ToRL
+- **ToRL**: https://arxiv.org/abs/2503.23383 | 代码: https://github.com/GAIR-NLP/ToRL | 深度笔记: [[AI/Agent/Agentic-RL/ToRL-Tool-Integrated-Reinforcement-Learning|ToRL 深度精读笔记（涌现行为三类型 + 工程四决策）]]
 - **ARTIST**: https://arxiv.org/abs/2505.01441
 - **VerlTool**: https://arxiv.org/abs/2509.01055
 - **Search-R1**: https://arxiv.org/abs/2503.09516 | 代码: https://github.com/PeterGriffinJin/Search-R1
-- **WebAgent-R1**: https://arxiv.org/abs/2505.16421
+- **WebAgent-R1**: https://arxiv.org/abs/2505.16421 | [[AI/Agent/Agentic-RL/WebAgent-R1-Multi-Turn-RL-Web-Agent|独立精读笔记]] — BC热启动+M-GRPO+Dynamic Context Compression
 - **Agent-RLVR**: https://arxiv.org/abs/2506.11425
 - **Turn-Level Reward**: https://arxiv.org/abs/2505.11821
 - [[AI/Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training|**ASTRA**]] (2026-01): https://arxiv.org/abs/2601.21558 | 代码: https://github.com/LianjiaTech/astra — 全自动 SFT+RL 流水线，MCP 工具图合成轨迹 + verifiable 环境，32B 超过 o3
 - [[AI/Agent/Agentic-RL/RC-GRPO-Reward-Conditioned-Tool-Calling-RL|**RC-GRPO**]] (2026-02): https://arxiv.org/abs/2602.03025 — reward token conditioning 解决 multi-turn GRPO reward 同质化，7B 超闭源
+- [[AI/Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|**CM2**]] (2026-02): https://arxiv.org/abs/2602.12268 — **Unverifiable reward 路线**：Checklist Rewards（binary criteria decomposition），Sparse assign + Dense criteria 设计，LLM-simulated 工具环境；tau-Bench +8，BFCL-V4 +10，ToolSandbox +12
 
 ### 相关 Vault 笔记
-- [[LLM工具调用与Function-Calling-2026技术全景]] — 工具调用原理/MCP/生产实践
-- [[Agent-RL-环境工程系统论]] — 训练环境设计 + Reward 工程
-- [[Long-Horizon-Credit-Assignment专题]] — Credit Assignment 全图谱
-- [[VerlTool 论文]] — VerlTool 单独深读
-- [[Agentic-RL-2026前沿综合分析]] — 四大维度综合框架
+- [[AI/Agent/LLM工具调用与Function-Calling-2026技术全景|LLM工具调用与Function-Calling-2026技术全景]] — 工具调用原理/MCP/生产实践
+- [[AI/Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent-RL-环境工程系统论]] — 训练环境设计 + Reward 工程
+- [[AI/Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]] — Credit Assignment 全图谱
+- [[AI/Agent/Agentic-RL/VerlTool 论文|VerlTool 论文]] — VerlTool 单独深读
+- [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]] — 四大维度综合框架

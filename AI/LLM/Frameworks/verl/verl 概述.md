@@ -1,4 +1,5 @@
 ---
+brief: "verl（Volcano Engine Reinforcement Learning）——字节跳动开源的分布式 RL 训练框架，基于 HybridFlow 架构；支持 PPO/GRPO/DAPO 等主流算法，Actor/Critic 解耦设计，生产级大规模 RLHF 首选框架。"
 title: "verl"
 type: reference
 domain: ai/llm/frameworks/verl
@@ -202,8 +203,8 @@ reward = sandbox_execute(generated_code, test_cases)
 
 ## 相关
 
-- [[算法概述]] — verl 支持的算法详解
-- [[HybridFlow]] — verl 的核心架构
+- [[AI/LLM/Frameworks/verl/算法概述]] — verl 支持的算法详解
+- [[AI/LLM/Frameworks/verl/HybridFlow]] — verl 的核心架构
 - [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]] — 对比框架
 - [[AI/LLM/Frameworks/OpenRLHF/OpenRLHF|OpenRLHF]] — 另一个大规模 RL 框架
 - [[AI/LLM/RL/GRPO/GRPO-verl实践|GRPO-verl实践]] — verl 中 GRPO 实践
@@ -212,10 +213,10 @@ reward = sandbox_execute(generated_code, test_cases)
 - [[AI/LLM/Infra/FSDP|FSDP]] — verl 的训练后端
 - [[AI/LLM/Inference/vLLM|vLLM]] — verl 的推理后端
 - [[AI/LLM/Infra/Ray|Ray]] — verl 的资源编排
-- [[Reward Function]] — 自定义 reward 设计
-- [[verl 训练参数]] — 详细参数配置
-- [[性能调优]] — 性能优化技巧
-- [[硬件资源预估]] — 资源规划
+- [[AI/LLM/Frameworks/verl/Reward Function]] — 自定义 reward 设计
+- [[AI/LLM/Frameworks/verl/verl 训练参数]] — 详细参数配置
+- [[AI/LLM/Frameworks/verl/性能调优]] — 性能优化技巧
+- [[AI/LLM/Frameworks/verl/硬件资源预估]] — 资源规划
 - [[AI/LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]
 - [[AI/LLM/Infra/DeepSpeed|DeepSpeed]]
 - [[AI/LLM/Infra/Megatron-LM|Megatron-LM]]

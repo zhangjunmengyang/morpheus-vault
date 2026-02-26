@@ -1,4 +1,5 @@
 ---
+brief: "Layer Normalization 详解——LayerNorm vs BatchNorm vs RMSNorm 的对比；Pre-Norm vs Post-Norm 对训练稳定性的影响；现代 LLM 为何选 RMSNorm（无均值计算，计算量减少 7%）；面试架构细节必备。"
 title: "Layer Normalization 详解"
 date: 2026-02-14
 tags:
@@ -180,4 +181,4 @@ $\alpha$ 和 $\beta$ 的值由网络深度 $N$ 决定：
 - [[AI/Foundations/DL-Basics/Transformer|Transformer 通识]] — LayerNorm 在 Transformer 架构中的位置（Pre-Norm vs Post-Norm）
 - [[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]] — RMSNorm 在各模型架构中的应用比较
 - [[AI/Foundations/Training/Training Loss 分析|Training Loss 分析]] — 归一化层对训练稳定性的影响
-- [[AI/Foundations/_MOC|Foundations MOC]] — 深度学习基础全图谱
+- [[AI/Foundations/目录|Foundations MOC]] — 深度学习基础全图谱

@@ -1,4 +1,5 @@
 ---
+brief: "DeepSeek-Math（arXiv:2402.03300）——GRPO 算法的原始论文，首次提出用组内相对优势替代 Critic 网络；在数学推理任务上证明 GRPO 效果媲美 PPO 但计算成本降低 50%；是 GRPO 族算法的起点。"
 title: "Deepseek-Math"
 type: paper
 domain: ai/llm/rl/grpo
@@ -157,11 +158,11 @@ for batch in training_data:
 
 ## 相关
 
-- [[GRPO 深度理解]] — GRPO 算法的深入分析
+- [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — GRPO 算法的深入分析
 - [[AI/LLM/Architecture/DeepSeek-R1|DeepSeek-R1]] — GRPO 的大规模应用
 - [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]] — GRPO 的对比基线
 - [[AI/LLM/RL/Fundamentals/策略梯度方法|策略梯度方法]] — RL 基础
 - [[AI/LLM/RL/Fundamentals/KL散度|KL散度]] — GRPO 中的 KL 正则化
 - [[AI/LLM/RL/Fundamentals/为什么 PPO 优于 PG|为什么 PPO 优于 PG]] — 从 PG 到 PPO 到 GRPO 的演进
-- [[GRPO-TRL实践]] — TRL 中的 GRPO 实现
-- [[GRPO-verl实践]] — verl 中的 GRPO 实现
+- [[AI/LLM/RL/GRPO/GRPO-TRL实践|GRPO-TRL实践]] — TRL 中的 GRPO 实现
+- [[AI/LLM/RL/GRPO/GRPO-verl实践|GRPO-verl实践]] — verl 中的 GRPO 实现

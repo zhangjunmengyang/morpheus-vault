@@ -1,4 +1,5 @@
 ---
+brief: "Goldilocks RL——课程学习：任务难度既不能太易（无学习信号）也不能太难（全失败）；自适应调度任务难度分布，始终保持在 RLVR 能产生有效梯度的 competence 边界；与 RLVR-Edge-of-Competence 互补印证。"
 title: "Goldilocks RL: Tuning Task Difficulty to Escape Sparse Rewards"
 type: paper
 domain: ai/llm/rl
@@ -167,12 +168,12 @@ Goldilocks 在 generalization 维度上是真正的创新——不需要重访�
 
 ## 连接
 
-- 数学基础同源：[[RLVR-Edge-of-Competence]]（边界 vs 梯度视角，互补）
-- 同类 RL 稳定性：[[STAPO-Spurious-Token-Aware-Policy-Optimization]]（token 级稳定 vs batch 级 curriculum，正交）
-- 同族：[[Stable-Asynchrony-VCPO-Off-Policy-RL]]（系统级稳定，与 Goldilocks 样本级正交）
-- 统一框架：[[RL-Training-Stability-2026-Unified-Analysis]]（Token/样本/系统三分法，覆盖 Goldilocks）
-- 相关算法：[[GRPO]]、[[DAPO]]
-- Credit Assignment：[[Blockwise-Advantage-Estimation]]（同样是"哪些信号更有价值"的问题）
+- 数学基础同源：[[AI/LLM/RL/Theory/RLVR-Edge-of-Competence|RLVR-Edge-of-Competence]]（边界 vs 梯度视角，互补）
+- 同类 RL 稳定性：[[AI/LLM/RL/Other-Algorithms/STAPO-Spurious-Token-Aware-Policy-Optimization|STAPO-Spurious-Token-Aware-Policy-Optimization]]（token 级稳定 vs batch 级 curriculum，正交）
+- 同族：[[AI/LLM/RL/Other-Algorithms/Stable-Asynchrony-VCPO-Off-Policy-RL|Stable-Asynchrony-VCPO-Off-Policy-RL]]（系统级稳定，与 Goldilocks 样本级正交）
+- 统一框架：[[AI/LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL-Training-Stability-2026-Unified-Analysis]]（Token/样本/系统三分法，覆盖 Goldilocks）
+- 相关算法：[[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO]]、[[AI/LLM/RL/DAPO/DAPO-verl实践|DAPO]]
+- Credit Assignment：[[AI/LLM/RL/GRPO/Blockwise-Advantage-Estimation|Blockwise-Advantage-Estimation]]（同样是"哪些信号更有价值"的问题）
 - [[AI/LLM/RL/Other-Algorithms/PACED-RL-Partition-Function-Difficulty-Scheduler|PACED-RL]] ⭐ — **独立多路验证**：PACED-RL 用 GFlowNet Z_φ 估计准确率做难度调度，与 Goldilocks 的 Teacher LM 路径完全不同，但收敛到同一规律（中间难度最优）；两篇合读让这个规律从 empirical 升级为 robust finding
 
 ---

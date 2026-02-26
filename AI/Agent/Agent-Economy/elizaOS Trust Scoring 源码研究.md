@@ -1,4 +1,5 @@
 ---
+brief: "elizaOS Trust Scoring 源码研究——elizaOS 的信任评分系统深度代码分析；Agent 间信任关系的量化建模（历史交互/角色权重/动态更新）；链上 Multi-Agent 协作的信任机制的工程实现参考。"
 title: "elizaOS Trust Scoring 源码研究"
 type: research
 domain: ai/agent/agent-economy
@@ -16,7 +17,7 @@ source: "elizaOS/eliza 0.x branch, v0.1.7-alpha.2"
 
 # elizaOS Trust Scoring 源码研究
 
-> elizaOS 的去中心化信誉评分系统源码分析。承接 [[ai16z 竞品分析]] 中的"下一步"，为量化 Agent 策略框架移植信任评分机制提供技术依据。
+> elizaOS 的去中心化信誉评分系统源码分析。承接 [[AI/Agent/Agent-Economy/ai16z 竞品分析|ai16z 竞品分析]] 中的"下一步"，为量化 Agent 策略框架移植信任评分机制提供技术依据。
 
 ## 代码版本
 
@@ -50,7 +51,7 @@ source: "elizaOS/eliza 0.x branch, v0.1.7-alpha.2"
 
 ### Recommender（推荐人）
 
-多渠道身份绑定——同一推荐人可通过 Telegram/Discord/Twitter/钱包地址识别。与 [[ERC-8004 Trustless Agents]] 的 Identity Registry 设计异曲同工，但 elizaOS 的实现是中心化 SQLite，非链上注册表。
+多渠道身份绑定——同一推荐人可通过 Telegram/Discord/Twitter/钱包地址识别。与 [[AI/Agent/Agent-Economy/ERC-8004 Trustless Agents|ERC-8004 Trustless Agents]] 的 Identity Registry 设计异曲同工，但 elizaOS 的实现是中心化 SQLite，非链上注册表。
 
 ### RecommenderMetrics（推荐人指标）
 
@@ -100,7 +101,7 @@ MAX_DECAY_DAYS = 30
 
 ### Validation Trust
 
-所有推荐过该 token 的推荐人的平均信任分。类似 [[Virtuals Protocol]] ACP 中的 Agent 信誉聚合思路。
+所有推荐过该 token 的推荐人的平均信任分。类似 [[AI/Agent/Agent-Economy/Virtuals Protocol|Virtuals Protocol]] ACP 中的 Agent 信誉聚合思路。
 
 ### Virtual Confidence (Skin in the Game)
 
@@ -138,7 +139,7 @@ MAX_DECAY_DAYS = 30
 
 ### 可行性：✅ 高
 
-核心算法极简（加法/除法/指数衰减），SQLite 数据库 Python 原生支持，不依赖 Solana 链上操作。参考 [[Coinbase AgentKit 技术评估]] 中的 Python 栈，可直接集成。
+核心算法极简（加法/除法/指数衰减），SQLite 数据库 Python 原生支持，不依赖 Solana 链上操作。参考 [[AI/Agent/Agent-Economy/Coinbase AgentKit 技术评估|Coinbase AgentKit 技术评估]] 中的 Python 栈，可直接集成。
 
 ### 改进建议
 
@@ -147,7 +148,7 @@ MAX_DECAY_DAYS = 30
 3. **归一化处理**——riskScore 和 consistencyScore 量纲不同，应归一化到 [0,1]
 4. **共谋检测**——推荐人网络关系分析，防止协同操纵
 5. **数据源适配**——替换 DexScreener/Birdeye 为 CoinGecko API / CEX API
-6. **与 ERC-8004 集成**——链上信誉注册表替代中心化 SQLite（→ [[ERC-8004 Trustless Agents]]）
+6. **与 ERC-8004 集成**——链上信誉注册表替代中心化 SQLite（→ [[AI/Agent/Agent-Economy/ERC-8004 Trustless Agents|ERC-8004 Trustless Agents]]）
 
 ## 关键洞察
 
@@ -169,9 +170,9 @@ MAX_DECAY_DAYS = 30
 
 ## 相关
 
-- [[ai16z 竞品分析]] — 本笔记的上游，elizaOS 全貌分析
-- [[ERC-8004 Trustless Agents]] — 链上信誉标准，与 Trust Scoring 互补
-- [[Coinbase AgentKit 技术评估]] — 我们的 Python 技术栈，移植目标
-- [[Virtuals Protocol]] — Agent 信誉聚合的另一实现路径
-- [[Agent 经济基础设施]] — 全景综述
-- [[Agentic Spring]] — 市场趋势背景
+- [[AI/Agent/Agent-Economy/ai16z 竞品分析|ai16z 竞品分析]] — 本笔记的上游，elizaOS 全貌分析
+- [[AI/Agent/Agent-Economy/ERC-8004 Trustless Agents|ERC-8004 Trustless Agents]] — 链上信誉标准，与 Trust Scoring 互补
+- [[AI/Agent/Agent-Economy/Coinbase AgentKit 技术评估|Coinbase AgentKit 技术评估]] — 我们的 Python 技术栈，移植目标
+- [[AI/Agent/Agent-Economy/Virtuals Protocol|Virtuals Protocol]] — Agent 信誉聚合的另一实现路径
+- [[AI/Agent/Agent-Economy/Agent 经济基础设施|Agent 经济基础设施]] — 全景综述
+- [[AI/Agent/Agent-Economy/Agentic Spring|Agentic Spring]] — 市场趋势背景

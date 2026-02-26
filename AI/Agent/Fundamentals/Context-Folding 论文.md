@@ -1,4 +1,5 @@
 ---
+brief: "Context-Folding——通过压缩/折叠上下文扩展 LLM Agent 的有效 context window；将历史交互摘要为紧凑表示，使长 horizon Agent 任务在有限 context 下仍能保持关键信息；长时域 Agent 的工程方案之一。"
 title: "Scaling Long-Horizon LLM Agent via Context-Folding"
 type: paper
 domain: ai/agent/fundamentals
@@ -93,6 +94,6 @@ Whether the folding agent can benefit from parallel branching — i.e., creating
 ## See Also
 
 - [[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]] — 极长 horizon 下 context 压缩的另一路线
-- [[AI/LLM/Inference/KV Cache 优化|KV Cache 优化]] — Context 压缩的底层机制
-- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱
-- [[AI/LLM/_MOC|LLM MOC]] — Context 管理在 LLM 层面的全景
+- [[AI/LLM/Inference/KV Cache|KV Cache 优化]] — Context 压缩的底层机制
+- [[AI/Agent/目录|Agent MOC]] — Agent 知识全图谱
+- [[AI/LLM/目录|LLM MOC]] — Context 管理在 LLM 层面的全景

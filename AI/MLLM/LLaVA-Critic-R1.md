@@ -1,4 +1,5 @@
 ---
+brief: "LLaVA-Critic-R1——Critic 模型可以同时是 Policy 模型的实证研究；通过 RL 训练评判模型兼具批判能力和生成能力，无需维护独立 Critic；多模态 RL 对齐中 Critic-as-Policy 的实验验证。"
 title: "LLaVA-Critic-R1: Your Critic Model is Secretly a Strong Policy Model"
 type: paper
 domain: ai/mllm
@@ -26,7 +27,7 @@ by：马里兰大学、俄亥俄州立大学和新加坡国立大学
 
 ## See Also
 
-- [[AI/MLLM/_MOC|MLLM MOC]] — 多模态大模型全景索引
+- [[AI/MLLM/目录|MLLM MOC]] — 多模态大模型全景索引
 - [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO]] — LLaVA-Critic-R1 核心训练算法
 - [[AI/MLLM/多模态大模型-2026-技术全景|多模态大模型 2026 全景]] — MLLM 宏观综述
 - [[AI/LLM/RL/Theory/REMuL-CoT-Faithfulness-Multi-Listener-RL|REMuL]] — 同样研究"critic能力与policy性能正相关"（多模态版 vs 纯文本版）

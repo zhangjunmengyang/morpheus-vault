@@ -1,4 +1,5 @@
 ---
+brief: "KV Cache——Transformer 推理中缓存 Key/Value 矩阵避免重复计算的核心优化；KV Cache 显存占用计算公式；Paged KV Cache（vLLM）/流式 KV Cache 的工程实现；面试被问推理优化必答的核心技术。"
 title: "KV Cache 原理与优化"
 date: 2026-02-14
 tags:
@@ -9,9 +10,8 @@ tags:
 type: note
 ---
 
-> [!warning] 重复笔记
-> 同名深入版：[[AI/LLM/Inference/KV Cache]]
-> 本篇为 Foundations 面试准备版，建议以 LLM 版为主
+> [!info] 📖 版本说明
+> 本篇为**面试速查版**（简洁直接）。深度工程版：[[AI/LLM/Inference/KV Cache|KV Cache 工程深度版]]
 
 # KV Cache 原理与优化
 

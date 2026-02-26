@@ -1,4 +1,5 @@
 ---
+brief: "Advanced RAG 技术全景——超越 Naive RAG 的高级检索增强技术综述；覆盖 Query Transform/Hybrid Search/HyDE/Self-RAG/GraphRAG 等主流方案；interview/hot，RAG 工程师面试必备。"
 title: "Advanced RAG 技术全景"
 date: 2026-02-13
 tags:
@@ -17,7 +18,7 @@ status: active
 
 ### Naive RAG 的局限性
 
-基础 [[RAG 工程实践|RAG]] 流程（Query → Retrieve → Generate）存在多个痛点：
+基础 [[AI/LLM/Application/RAG 工程实践|RAG]] 流程（Query → Retrieve → Generate）存在多个痛点：
 
 ```
 Naive RAG 的典型失败场景:
@@ -498,11 +499,11 @@ class MultiHopRAG:
 
 ## 8. 与其他主题的关系
 
-- **[[RAG 工程实践]]**：本文是 RAG 工程实践的进阶，Naive RAG 的基础知识参见该文
-- **[[Embedding]]**：检索质量依赖 Embedding 模型，Advanced RAG 通过查询变换减少对 Embedding 的依赖
-- **[[FlashAttention]]**：长上下文 Attention 优化使 RAG 可以传入更多检索结果
-- **[[LLMOps]]**：Advanced RAG 的监控和评估是 LLMOps 的重要组成部分
-- **[[Prompt Engineering 高级]]**：Step-back prompting、CoT 等 prompt 技术在 Advanced RAG 中广泛使用
+- **[[AI/LLM/Application/RAG 工程实践|RAG 工程实践]]**：本文是 RAG 工程实践的进阶，Naive RAG 的基础知识参见该文
+- **[[AI/LLM/Application/Embedding/Embedding|Embedding]]**：检索质量依赖 Embedding 模型，Advanced RAG 通过查询变换减少对 Embedding 的依赖
+- **[[AI/LLM/Architecture/FlashAttention|FlashAttention]]**：长上下文 Attention 优化使 RAG 可以传入更多检索结果
+- **[[AI/LLM/Application/LLMOps|LLMOps]]**：Advanced RAG 的监控和评估是 LLMOps 的重要组成部分
+- **[[AI/LLM/Application/Prompt Engineering 高级|Prompt Engineering 高级]]**：Step-back prompting、CoT 等 prompt 技术在 Advanced RAG 中广泛使用
 
 ## 面试常见问题
 

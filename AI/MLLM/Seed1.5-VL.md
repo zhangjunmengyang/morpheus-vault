@@ -1,4 +1,5 @@
 ---
+brief: "Seed1.5-VL（字节）——字节跳动多模态大模型；专注长视频理解/GUI 交互/细粒度视觉推理；HybridVision encoder 混合分辨率处理；在长视频理解 benchmark 上达到 SOTA，与 Gemini 1.5 Pro 竞争。"
 title: "Seed1.5-VL"
 type: concept
 domain: ai/mllm
@@ -101,5 +102,5 @@ Seed1.5-VL 代表了 MLLM 发展的一个方向：**从「看图说话」走向�
 
 - [[AI/MLLM/DeepSeek-VL|DeepSeek-VL]] — DeepSeek 的开源多模态方案
 - [[AI/MLLM/InternVL3|InternVL3]] — 另一个强力开源 MLLM
-- [[AI/MLLM/Qwen 2.5 VL-Unsloth训练|Qwen 2.5 VL]] — Qwen 的多模态方案
+- [[AI/MLLM/Qwen 2.5 VL-Unsloth训练|Qwen 2.5 VL]] — Qwen 的多模态方案（Unsloth 训练实战）
 - [[AI/MLLM/玩玩多模态大模型|多模态大模型实践]]

@@ -1,4 +1,5 @@
 ---
+brief: "GEPA（ICLR 2026 Oral）——反思性 Prompt 进化通过自我评估-改写循环优化 prompt，在多项任务上超越 RL 微调；关键证据：post-training 的方法论分界线（Prompt 优化 vs 权重更新）；与 E-SPL/CTA 三向双向链接。"
 title: "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning"
 type: paper
 domain: ai/llm/rl

@@ -1,12 +1,16 @@
 ---
-title: "R-4B: Incentivizing General-Purpose Auto-Thinking Capability in MLLMs   via Bi-Mode Annealing and Reinforce Learning"
+title: "R-4B: Incentivizing General-Purpose Auto-Thinking Capability in MLLMs via Bi-Mode Annealing and RL"
+brief: "腾讯混元+中科院：双模退火RL让MLLM根据问题复杂度动态切换思考/直接回答模式；BPO算法解决'思考萎缩'；25项基准超 Qwen2.5-VL-7B，推理效率+40%（arXiv:2508.21113）"
 type: paper
 domain: ai/agent/agentic-rl
 created: "2026-02-13"
-updated: "2026-02-13"
+updated: "2026-02-22"
 tags:
   - ai/agent/agentic-rl
   - type/paper
+sources:
+  - "arXiv:2508.21113 | 腾讯混元 + 中科院自动化所"
+  - "https://hf.co/papers/2508.21113"
 ---
 # R-4B: Incentivizing General-Purpose Auto-Thinking Capability in MLLMs   via Bi-Mode Annealing and Reinforce Learning
 
@@ -29,4 +33,4 @@ PaperScope.ai 解读：https://paperscope.ai/hf/2508.21113
 - [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — R-4B 的宏观定位：MLLM Auto-Thinking
 - [[AI/MLLM/MLLM 概述|MLLM 概述]] — 多模态 LLM 的基础框架
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — Bi-Mode Annealing 与 GRPO 探索维度的关系
-- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱
+- [[AI/Agent/目录|Agent MOC]] — Agent 知识全图谱

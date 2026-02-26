@@ -1,4 +1,5 @@
 ---
+brief: "Speculative Decoding——用小草稿模型预测多个 token，大模型批量验证；理论加速比 = 接受率/(1-接受率×每步加速比)；Self-Speculative/Medusa/EAGLE 等变体；推理吞吐量 2-3x 提升的关键技术。"
 title: "Speculative Decoding 投机采样"
 date: 2026-02-14
 tags:
@@ -9,9 +10,8 @@ tags:
 type: note
 ---
 
-> [!warning] 重复笔记
-> 同名深入版：[[AI/LLM/Inference/Speculative Decoding]]
-> 本篇为 Foundations 面试准备版，建议以 LLM 版为主
+> [!info] 📖 版本说明
+> 本篇为**面试速查版**（简洁直接）。深度工程版：[[AI/LLM/Inference/Speculative Decoding|Speculative Decoding 工程深度版]]
 
 # Speculative Decoding 投机采样
 

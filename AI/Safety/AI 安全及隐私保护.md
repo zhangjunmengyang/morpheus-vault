@@ -1,9 +1,10 @@
 ---
 title: "AI 安全及隐私保护"
+brief: "AI 安全综述：威胁分类（对抗攻击/数据投毒/模型窃取/隐私推断）；防御实践（对抗训练/差分隐私/联邦学习）；隐私保护技术栈；面试基础概念速查"
 type: concept
 domain: ai/safety
 created: "2026-02-13"
-updated: "2026-02-13"
+updated: "2026-02-22"
 tags:
   - ai/safety
   - type/concept

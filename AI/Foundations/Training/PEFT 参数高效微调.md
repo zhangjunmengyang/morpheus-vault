@@ -1,9 +1,13 @@
 ---
+brief: "PEFT 参数高效微调方法（面试版）——LoRA/QLoRA/Prefix Tuning/Adapter 的原理、显存占用、训练速度对比；何时选 LoRA vs 全量微调的决策框架；面试 AI 工程师必问的微调方法论。"
 title: "PEFT 参数高效微调方法"
 date: 2026-02-14
 tags: [training, peft, lora, qlora, interview]
 type: note
 ---
+
+> [!info] 📖 版本说明
+> 本篇为**面试速查版**（简洁直接）。深度工程版：[[AI/LLM/SFT/PEFT 方法对比|PEFT 方法综述工程深度版]]
 
 # PEFT 参数高效微调方法
 
@@ -351,4 +355,4 @@ $$W' = m \cdot \frac{V + \Delta V}{||V + \Delta V||_c} \quad \text{其中} \quad
 - [[AI/LLM/RL/Fundamentals/强化学习的数学原理|强化学习数学原理]] — PEFT 与 RL 结合：LoRA + GRPO 的参数高效 post-training
 - [[AI/LLM/Frameworks/Unsloth/Unsloth 概述|Unsloth]] — PEFT 实践工具：LoRA/QLoRA 的高效训练框架
 - [[AI/Foundations/Training/Scaling Laws|Scaling Laws]] — PEFT 的动机：为什么小参数微调能保留大模型能力
-- [[AI/Foundations/_MOC|Foundations MOC]] — 训练基础全图谱
+- [[AI/Foundations/目录|Foundations MOC]] — 训练基础全图谱

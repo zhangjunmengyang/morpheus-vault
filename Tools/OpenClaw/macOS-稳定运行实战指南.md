@@ -3,6 +3,7 @@ title: OpenClaw macOS 稳定运行实战指南
 tags: [openclaw, macos, devops, launchd, stability]
 created: 2026-02-15
 updated: 2026-02-15
+brief: "OpenClaw macOS 稳定运行实战指南：launchd 服务配置让 OpenClaw 7×24 不间断运行；覆盖崩溃恢复、日志监控、自动重启；适用 macOS 14+ Apple Silicon。"
 status: published
 ---
 

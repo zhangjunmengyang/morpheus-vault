@@ -1,4 +1,5 @@
 ---
+brief: "RICOL（arXiv:2602.17497，NeurIPS 2025）——Retrospective In-Context Online Learning for Temporal Credit Assignment；利用 ICL 的回顾性特性解决稀疏奖励下的时序信用分配，将过去成功轨迹作为上下文示例指导在线更新。"
 title: "RICOL: Retrospective In-Context Online Learning for Temporal Credit Assignment"
 date: 2026-02-21
 arxiv: "2602.17497"
@@ -189,8 +190,9 @@ Theorem 4.1 存在一个重要的"存在性"陷阱——它说"存在某个 rewa
 
 ## See Also
 
-- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
+- [[AI/LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 改进全景]] — GRPO 也是 critic-free advantage 估计，RICOL 提供了完全不同的路径（reflection-based vs sampling-based）
 - [[AI/Agent/Agentic-RL/Agent-RL-训练实战指南|Agent RL 训练实战指南]] — Temporal credit assignment 是 agentic RL 的核心难题，本文提供了 ICL-based 解法
 - [[AI/LLM/RL/Theory/REMuL-CoT-Faithfulness-Multi-Listener-RL|REMuL]] — 同样利用 LLM 内部表征来改善训练信号（CoT faithfulness），与本文 ICL 作为 advantage 信号形成方法论互补
 - [[AI/LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 同期 RL 改进，方向是 trust region 自适应；RICOL 是 credit assignment；两者在 RL 改进的不同维度作战
+- [[AI/Agent/Agentic-RL/MIG-Step-Marginal-Information-Gain-Credit-Assignment|MIG（arXiv:2602.01034）]] — 同为 Credit Assignment 谱系，但方案完全不同：RICOL 用 ICL 回顾估计 advantage（无 value network），MIG 用信息论量化每步边际信息增益（Monotonic Watermark 防 hacking）；互为方法论对照

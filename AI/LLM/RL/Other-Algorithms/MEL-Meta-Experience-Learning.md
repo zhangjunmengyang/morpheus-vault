@@ -1,4 +1,5 @@
 ---
+brief: "MEL（arXiv:2602.10224，Meta-Experience Learning for RLVR）——元学习框架改善 RLVR 的 credit assignment；将历史经验元信息注入当前训练，解决单次 rollout 奖励信号稀疏导致的低样本效率问题。"
 title: "MEL: Meta-Experience Learning for RLVR"
 type: paper
 domain: ai/llm/rl
@@ -135,5 +136,5 @@ L_total = L_GRPO + λ · L_NLL
 
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — MEL 在 Sample Efficiency 维度的位置
 - [[AI/LLM/RL/Other-Algorithms/MASPO-Mass-Adaptive-Soft-Policy-Optimization|MASPO]] — 同在 Other-Algorithms，均为 policy optimization 改进
-- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
+- [[AI/LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱
 - [[AI/LLM/RL/Fundamentals/强化学习的数学原理|强化学习数学原理]] — MEL 的理论基础

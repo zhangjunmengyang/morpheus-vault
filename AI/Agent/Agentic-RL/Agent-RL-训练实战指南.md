@@ -1,7 +1,9 @@
 ---
 title: "Agent RL 训练实战指南 — 现象·坑·解法"
+brief: "Agent RL 训练实战踩坑指南：全0/全1 reward 崩塌 / 工具调用空转 / 多轮上下文爆炸 / credit assignment 失效四大坑及解法；从现象到原因到修复的完整对照表；面试必备实战经验"
 type: synthesis
 domain: ai/agent/agentic-rl
+updated: 2026-02-22
 tags:
   - interview-prep
   - agentic-rl
@@ -1012,7 +1014,7 @@ def phase_router(obs_t, goal, action_history):
 - [[AI/LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 系统层 off-policy：统一 FP8 精度 flow
 
 ### 第二章：Agentic RL 特有问题
-- [[AI/LLM/RL/Other-Algorithms/HiPER-Hierarchical-RL-Credit-Assignment|HiPER]] — 分层 Advantage Estimation，多步 agent credit assignment
+- [[AI/Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER]] — 分层 Advantage Estimation，多步 agent credit assignment
 - [[AI/Agent/Agentic-RL/PA-MoE-Phase-Aware-Mixture-of-Experts|PA-MoE]] — Simplicity Bias：Phase-level MoE expert 分离参数容量
 - [[AI/LLM/RL/Other-Algorithms/CM2 — Checklist Rewards多轮Tool Use RL|CM2]] — Tool Use RL：Checklist reward 多轮工具交互奖励设计
 - [[AI/Agent/EnterpriseGym-Corecraft|EnterpriseGym Corecraft]] — 环境设计：高保真企业 RL 环境 + OOD 泛化

@@ -1,5 +1,6 @@
 ---
 title: "Progressive Thought Encoding (PTE): Cache-Efficient RL"
+brief: "（arXiv:2602.16839，ICLR 2026）在 RL 训练中复用多轮 CoT 的 KV Cache：将前几步推理编码压缩后拼接给后续步骤，避免重复计算 Transformer 前向传播；在长推理 RL 训练中节省 50-70% 显存，使超长 horizon 训练成为可能。"
 date: 2026-02-18
 tags: [推理效率, KV缓存, RL训练, 内存优化, 长推理, ICLR2026]
 domain: AI/LLM/Inference
@@ -216,6 +217,6 @@ Jet-RL 和 PTE 是同一个"RL 训练效率"大问题的两个子问题：
 
 - [[AI/LLM/RL/Frameworks/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] — 同一"RL 训练效率"问题的另一维度：FP8 量化精度不一致→统一 precision flow（NVIDIA+MIT HAN Lab，arXiv:2601.14243）
 - [[AI/LLM/Inference/KV Cache]] — KV Cache 核心机制
-- [[AI/LLM/Inference/KV Cache 优化]] — KV Cache 优化综述
+- [[AI/LLM/Inference/KV Cache|KV Cache]] — KV Cache 优化综述
 - [[AI/LLM/Inference/Deep-Thinking-Ratio-DTR-v2-Think-At-N|DTR v2 + Think@N]] — 推理质量评估维度，与 PTE 正交（PTE 解决训练效率，DTR 解决推理轨迹选择）
 - [[AI/LLM/Inference/Accordion-Thinking-Self-Regulated-Step-Summaries|Accordion-Thinking]] — 同类问题的主动压缩路径：模型学会生成 summary 后 fold，与 PTE 的被动 evict 补救互补；三者组合（Accordion+PTE+Jet-RL）= 完整高效长推理 pipeline（arXiv:2602.03249）★★★★☆

@@ -1,4 +1,5 @@
 ---
+brief: "Prompt 攻击与防御——Prompt Injection/越狱/间接注入攻击原理和案例；系统层面（system prompt 隔离/输入过滤/输出审计）和模型层面的防御策略；AI 安全工程师面试必备。"
 title: "prompt 攻击"
 type: concept
 domain: ai/llm/prompt-engineering

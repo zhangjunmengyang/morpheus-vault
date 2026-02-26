@@ -1,4 +1,6 @@
 ---
+title: "Manifold-Constrained Hyper-Connections 早期版"
+brief: "mHC 面试速查版（2026-02-14）。深度分析见 mHC-Manifold-Constrained-Hyper-Connections-DeepSeek（arXiv:2512.24880）。核心：将残差连接矩阵约束到双随机矩阵流形，解决 Hyper-Connections 深度网络训练不稳定问题。"
 tags:
   - LLM
   - architecture
@@ -7,7 +9,7 @@ tags:
   - deepseek
   - interview-prep
 created: 2026-02-14
-status: complete
+status: supplementary
 ---
 
 > [!note] 版本说明
@@ -219,8 +221,8 @@ class mHCResidual(nn.Module):
 ## 在 DeepSeek V4 中的应用
 
 ### 与其他技术的协同
-- **mHC + [[DeepSeek Engram]]**: 训练稳定性 + 内存效率
-- **mHC + [[Multi-Head Latent Attention]]**: 稳定训练 + 推理优化
+- **mHC + [[AI/LLM/Architecture/DeepSeek Engram|DeepSeek Engram]]**: 训练稳定性 + 内存效率
+- **mHC + [[AI/LLM/Architecture/Multi-Head Latent Attention|Multi-Head Latent Attention]]**: 稳定训练 + 推理优化
 - **mHC + MoE**: 大规模稀疏模型的稳定训练
 
 ### 架构演进路径
@@ -303,7 +305,7 @@ A: 1）与条件记忆（Engram）等技术结合；2）更智能的流数量和
 
 ## 相关技术
 
-- [[DeepSeek Engram]]：条件记忆架构
-- [[Multi-Head Latent Attention]]：KV 缓存优化
-- [[ResNet]]：残差连接基础
-- [[Highway Networks]]：早期门控连接尝试
+- [[AI/LLM/Architecture/DeepSeek Engram|DeepSeek Engram]]：条件记忆架构
+- [[AI/LLM/Architecture/Multi-Head Latent Attention|Multi-Head Latent Attention]]：KV 缓存优化
+- ResNet：残差连接基础
+- Highway Networks：早期门控连接尝试

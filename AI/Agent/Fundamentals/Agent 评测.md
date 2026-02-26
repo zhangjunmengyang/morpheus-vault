@@ -1,4 +1,5 @@
 ---
+brief: "Agent 评测方法——主流 Agent benchmark 全景：WebArena/SWE-Bench/GAIA/OSWorld 的任务设计和评分标准；静态评估 vs 交互评估的方法论差异；Interview 标注，Agent 系统评测的面试参考。"
 tags: [AI, Agent, Evaluation, Benchmark, WebArena, SWE-Bench, GAIA, Interview]
 created: 2026-02-14
 status: draft
@@ -8,7 +9,7 @@ status: draft
 
 ## 概述
 
-[[AI Agent]] 的评测是一个复杂而重要的问题。与传统的 NLP 任务不同，Agent 需要在动态环境中执行多步骤的复杂任务，这给评测方法的设计带来了诸多挑战。本文将深入探讨当前主流的 Agent 评测基准、评测维度，以及评测过程中面临的挑战和解决方案。
+[[AI/Agent/AI-Agent-2026-技术全景|AI Agent]] 的评测是一个复杂而重要的问题。与传统的 NLP 任务不同，Agent 需要在动态环境中执行多步骤的复杂任务，这给评测方法的设计带来了诸多挑战。本文将深入探讨当前主流的 Agent 评测基准、评测维度，以及评测过程中面临的挑战和解决方案。
 
 ## 主流评测基准 (Benchmark)
 

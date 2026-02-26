@@ -1,4 +1,5 @@
 ---
+brief: "Unsloth Qwen3 训练——Qwen3 系列模型（包括 MoE）的 Unsloth 专项配置；QLoRA 显存配置/MoE 的 expert 并行设置/Qwen3 tokenizer 特殊 token 处理；实测显存和速度数据。"
 title: "Qwen3"
 type: project
 domain: ai/llm/frameworks/unsloth

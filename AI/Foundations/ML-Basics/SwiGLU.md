@@ -1,14 +1,32 @@
 ---
-tags: [AI, deep-learning, activation-function, transformer, GLU]
+title: "SwiGLU 激活函数"
+brief: "SwiGLU（Swish Gated Linear Units）是现代 LLM 的标准 FFN 激活函数，在 LLaMA/PaLM/DeepSeek 等主流模型中替代 ReLU/GELU。核心：Swish 激活 × 线性门控，相比传统 ReLU 困惑度降低 2-4%，参数量不变但需调整 FFN 维度到 8/3·d_model（而非传统 4·d_model）。"
+type: concept
+domain: ai/foundations/ml-basics
 created: 2026-02-14
-status: draft
+updated: "2026-02-22"
+tags:
+  - activation-function
+  - transformer
+  - GLU
+  - deep-learning
+  - ai/foundations
+status: complete
+sources:
+  - "Noam Shazeer, GLU Variants Improve Transformer arXiv:2002.05202 (2020)"
+  - "LLaMA: Touvron et al. arXiv:2302.13971 (2023)"
+  - "PaLM: Chowdhery et al. arXiv:2204.02311 (2022)"
+related:
+  - "[[AI/LLM/Architecture/Transformer架构深度解析-2026技术全景|Transformer 架构深度解析]]"
+  - "[[AI/Foundations/目录|Foundations MOC]]"
+  - "[[AI/LLM/目录|LLM MOC]]"
 ---
 
 # SwiGLU 激活函数
 
 ## 概述
 
-SwiGLU（Swish Gated Linear Units）是一种基于门控机制的激活函数，在现代大语言模型中被广泛采用。它是 [[GLU]] 门控线性单元家族的重要成员，将 [[Swish 激活函数]]与线性门控相结合，在 LLaMA、PaLM、DeepSeek 等主流模型中成为 [[FFN]] 层的标准选择。
+SwiGLU（Swish Gated Linear Units）是一种基于门控机制的激活函数，在现代大语言模型中被广泛采用。它是 GLU 门控线性单元家族的重要成员，将 Swish 激活函数与线性门控相结合，在 LLaMA、PaLM、DeepSeek 等主流模型中成为 FFN 层的标准选择。
 
 ## GLU 门控线性单元家族
 
@@ -37,7 +55,7 @@ SwiGLU（Swish Gated Linear Units）是一种基于门控机制的激活函数�
 
 ## FFN 维度调整策略
 
-使用 SwiGLU 时需要调整 [[FFN]] 的维度配置以保持参数量不变：
+使用 SwiGLU 时需要调整 FFN 的维度配置以保持参数量不变：
 
 ### 传统 FFN 配置
 ```
@@ -149,8 +167,12 @@ class SwiGLU(nn.Module):
 
 ## 相关概念
 
-- [[Transformer 架构]]
-- [[Feed-Forward Networks]]
-- [[激活函数对比]]
-- [[LLaMA 模型架构]]
-- [[模型优化技术]]
+- [[AI/LLM/Architecture/Transformer架构深度解析-2026技术全景|Transformer 架构深度解析]]
+- [[AI/LLM/Architecture/MoE 深度解析|MoE 架构深度解析]]（FFN 层设计的演进方向）
+- [[AI/LLM/Pretraining/LLM-预训练与分布式训练-2026-全景|预训练与分布式训练]]
+
+## 推荐阅读
+
+1. **原始论文**：[arXiv:2002.05202](https://arxiv.org/abs/2002.05202) — Noam Shazeer, "GLU Variants Improve Transformer"（SwiGLU 来源论文）
+2. **LLaMA 实现参考**：[arXiv:2302.13971](https://arxiv.org/abs/2302.13971) — Meta LLaMA，大规模验证 SwiGLU 效果
+3. **激活函数综述**：[Swish arXiv:1710.05941](https://arxiv.org/abs/1710.05941) — Ramachandran et al., Swish 原始论文

@@ -1,4 +1,5 @@
 ---
+brief: "Scaling Laws——Kaplan/Chinchilla Scaling Laws 的核心公式：Loss ∝ N^α × D^β；Chinchilla 最优：compute budget 的 50% 给模型，50% 给数据；Test-Time Compute Scaling（o1/R1）作为新维度的延伸；LLM 路线图判断的理论基础。"
 title: "Scaling Laws：从 Chinchilla 到 Inference-time Compute Scaling"
 date: 2026-02-13
 tags:
@@ -151,7 +152,7 @@ $$\text{Quality}(x) = f(\text{train compute}) + g(\text{test-time compute}(x))$$
 
 **DeepSeek-R1**：
 - 开源证明了 inference-time scaling 的可行性
-- 使用 [[GRPO]]（Group Relative Policy Optimization）训练
+- 使用 [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO]]（Group Relative Policy Optimization）训练
 - 关键发现：**纯 RL 训练（不需要 SFT 冷启动）也能涌现出 long CoT 能力**
 - R1-Zero 展示了自发的思考行为：回溯、验证、自我纠错
 

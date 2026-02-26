@@ -1,4 +1,5 @@
 ---
+brief: "DeepSeek-VL——DeepSeek 的视觉语言模型系列；hybrid vision encoder（高低分辨率并行）+ DeepSeek LLM；特别强化文档/图表/代码截图的理解能力；DeepSeek-VL2 引入 MoE 架构大幅提升效率。"
 title: "DeepSeek-VL"
 type: paper
 domain: ai/mllm

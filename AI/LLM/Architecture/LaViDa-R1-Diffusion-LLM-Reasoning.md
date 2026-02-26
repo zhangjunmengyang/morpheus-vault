@@ -1,5 +1,6 @@
 ---
 title: "LaViDa-R1: Diffusion LLM Reasoning"
+brief: "Adobe Research + UCLA + Georgia Tech（arXiv:2602.14147）在统一多模态 Diffusion LLM 框架中引入 Chain-of-Thought 推理（LaViDa-R1）。首次证明 diffusion 生成范式可以有效学习推理过程；在 MMStar/MathVista 等多模态推理 benchmark 上与 AR 模型持平或超越。"
 type: paper
 domain: ai/llm/architecture
 tags:
@@ -243,4 +244,4 @@ RL on dLLM:
 - [[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]] — Diffusion LLM 与 AR 模型的架构对比
 - [[AI/LLM/Inference/Sparrow-Video-LLM-Speculative-Decoding|Sparrow 推测解码]] — 推理加速的另一路线
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — R1 reasoning 训练方法，LaViDa-R1 名字中的 R1 来源
-- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱
+- [[AI/LLM/目录|LLM MOC]] — 大语言模型知识全图谱

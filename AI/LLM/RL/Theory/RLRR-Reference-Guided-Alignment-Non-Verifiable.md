@@ -1,4 +1,5 @@
 ---
+brief: "RLRR（arXiv:2602.16802，ICLR 2026）——Reference-Guided RL for Non-Verifiable Domains；用高质量参考答案作为对齐信号替代 outcome verifier，解决创意写作/开放问答等无法自动评分任务的 RLHF 问题。"
 title: "RLRR: Reference-Guided RL Alignment for Non-Verifiable Domains"
 date: 2026-02-18
 tags: [alignment, RLHF, LLM-as-judge, non-verifiable, reference-guided, self-improvement, DPO, ICLR2026]

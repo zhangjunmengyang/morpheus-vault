@@ -1,4 +1,5 @@
 ---
+brief: "PPL（Perplexity）困惑度——语言模型质量的核心评估指标；PPL = exp(CrossEntropyLoss)；为什么 PPL 下降不等于下游任务提升；量化模型 PPL vs 全精度 PPL 的对比意义；LLM 训练调参的常用诊断指标。"
 title: "PPL 困惑度"
 type: concept
 domain: ai/foundations/ml-basics
@@ -27,4 +28,4 @@ PPL的计算基于语言模型对测试集的概率估计。给定一个测试�
 - [[AI/LLM/Evaluation/LLM 评测体系|LLM 评测体系]] — PPL 作为语言模型评估指标的位置
 - [[AI/Foundations/ML-Basics/损失函数|损失函数]] — 交叉熵损失与 PPL 的关系：PPL = exp(cross-entropy)
 - [[AI/Foundations/Training/Scaling Laws|Scaling Laws]] — PPL 与模型规模/数据量的幂律关系
-- [[AI/Foundations/_MOC|Foundations MOC]] — ML 基础全图谱
+- [[AI/Foundations/目录|Foundations MOC]] — ML 基础全图谱

@@ -1,4 +1,5 @@
 ---
+brief: "TRL 中实现 GRPO——详解 TRL GRPOTrainer 内部实现机制；group rollout/advantage 计算/KL 约束的代码级解析；理解 TRL GRPO 与原始 DeepSeek-Math 实现的差异，排查训练异常的参考。"
 title: "4. TRL 中实现 GRPO"
 type: concept
 domain: ai/llm/rl/grpo
@@ -201,4 +202,4 @@ training_args = GRPOConfig(
 - [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — 算法原理，实现的数学基础
 - [[AI/LLM/RL/GRPO/GRPO-demo|GRPO Demo]] — Demo 实践，与本篇互补
 - [[AI/LLM/Frameworks/TRL/TRL 概述|TRL 概述]] — TRL 框架全貌
-- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
+- [[AI/LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱

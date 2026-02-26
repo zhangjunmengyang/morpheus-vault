@@ -1,6 +1,8 @@
 ---
 title: "ReAct 及 LLM 推理模式"
+brief: "ReAct（Reason+Act）推理模式深度解析：CoT/ToT/GoT/ReAct 演化；交替推理与行动的优势；与 Plan-then-Execute 的对比；面试热点——ReAct 失效场景及改进方向"
 date: 2026-02-14
+updated: 2026-02-23
 tags: [agent, reasoning, react, cot, interview]
 type: note
 ---
@@ -351,4 +353,4 @@ Reflexion            → LangGraph 的循环 + 记忆节点
 - [[AI/Agent/Fundamentals/ReAct 与 CoT|ReAct 与 CoT]] — ReAct 的基础原理版（互补）
 - [[AI/Agent/Fundamentals/Tool Use|Tool Use]] — ReAct 的核心工具：tool use 能力
 - [[AI/LLM/RL/Fundamentals/RL & LLMs 入门|RL & LLMs 入门]] — ReAct 向 Agentic RL 的演化路径
-- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱
+- [[AI/Agent/目录|Agent MOC]] — Agent 知识全图谱

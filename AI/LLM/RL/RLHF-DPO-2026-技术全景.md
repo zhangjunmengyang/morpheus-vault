@@ -1264,9 +1264,28 @@ DAPO（ByteDance, NeurIPS 2025）做了四个关键改进：
 
 ## See Also
 
+**面试入门（本文深度版的简洁导读）：**
+- [[AI/LLM/RL/对齐技术综述|对齐技术综述]] — RLHF→DPO→ORPO→KTO→CAI 六方法对比表，含完整推导与面试 Q&A；本全景的精华入门版（如果时间有限，先读这篇）
+
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — RLHF 之后的前沿方法七维全景
 - [[AI/LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — Reward Model 训练的新方向
 - [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — GRPO 算法的数学推导与实现细节
 - [[AI/LLM/SFT/LoRA|LoRA]] — Parameter-efficient fine-tuning，对齐训练的显存优化手段
-- [[AI/LLM/RL/_MOC|RL MOC]] — LLM 强化学习全图谱
-- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱
+- [[AI/LLM/RL/目录|RL MOC]] — LLM 强化学习全图谱
+- [[AI/LLM/目录|LLM MOC]] — 大语言模型知识全图谱
+
+**偏好优化变体（各有独立深度笔记）：**
+- [[AI/LLM/RL/DPO/SimPO-Simple-Preference-Optimization-Reference-Free|SimPO]] — Reference-free DPO，length-normalized（NeurIPS 2024）
+- [[AI/LLM/RL/Preference-Optimization/IPO-Identity-Preference-Optimization|IPO]] — 绕过 Bradley-Terry 假设，ΨPO 理论框架（DeepMind，AISTATS 2024）
+- [[AI/LLM/RL/Preference-Optimization/ORPO-Odds-Ratio-Preference-Optimization|ORPO]] — 一阶段 alignment（SFT+preference 合一）
+
+**Critic-free 训练谱系（各有独立深度笔记）：**
+- [[AI/LLM/RL/Other-Algorithms/REINFORCE-Plus-Plus-Global-Advantage-Normalization|REINFORCE++]] — 全局 batch advantage normalization（arXiv:2501.03262）
+- [[AI/LLM/RL/Other-Algorithms/ReMax-RL-Alignment-REINFORCE-Max-Baseline|ReMax]] — greedy rollout baseline，省 46% 内存（ICML 2024）
+- [[AI/LLM/RL/Other-Algorithms/REBEL-Regret-Based-RL-LLM-Alignment|REBEL]] — Regret-based RL，处理 intransitive preference
+- [[AI/LLM/RL/GRPO/Dr-GRPO-Unbiased-Optimization|Dr. GRPO]] — GRPO 去偏修复：length bias + difficulty bias（COLM 2025）
+- [[AI/LLM/RL/Other-Algorithms/PRIME-Process-Reward-Implicit-MLE|PRIME]] ⭐ — 在线 PRM，无需 step-level 标注，token-level implicit reward（THU）
+
+> **see-also（Agent RL 延伸）**：RLHF 的核心范式（reward signal + policy update）在 Agent 场景下有根本性的扩展：
+> - [[AI/Agent/Agentic-RL/SCoRe-Self-Correction-via-Reinforcement-Learning|SCoRe（NeurIPS 2024）]] — RLHF 的 multi-turn 延伸：用双阶段 RL 训练 LLM 自我纠错（无需人工 preference 标注，用任务可验证性替代），MATH +15.6%；互补关系：RLHF 解决 single-turn 对齐，SCoRe 解决 multi-turn 自我修正
+> - [[AI/Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — RLHF 范式扩展到 Agent 长序列决策的系统性分析

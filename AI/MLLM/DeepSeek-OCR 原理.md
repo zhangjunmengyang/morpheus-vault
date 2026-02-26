@@ -1,4 +1,5 @@
 ---
+brief: "DeepSeek-OCR 原理——DeepSeek 视觉模型在 OCR 任务上的技术路线；高分辨率输入处理/文字区域感知/多语言 OCR 能力；理解为什么 DeepSeek-VL 在文档/发票/截图理解上表现优异的技术原因。"
 title: "DeepSeek-OCR"
 type: concept
 domain: ai/mllm

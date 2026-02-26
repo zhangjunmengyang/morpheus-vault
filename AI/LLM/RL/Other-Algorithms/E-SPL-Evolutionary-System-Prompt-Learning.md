@@ -1,4 +1,5 @@
 ---
+brief: "E-SPL（Evolutionary System Prompt Learning）——进化算法优化 system prompt 替代 RL 微调；核心洞察：RL 难以学到高层策略指令，进化搜索在 system prompt 空间更高效；与 GEPA/CTA 构成三角链接。"
 title: "E-SPL: Evolutionary System Prompt Learning for RL"
 type: paper
 domain: ai/llm/rl

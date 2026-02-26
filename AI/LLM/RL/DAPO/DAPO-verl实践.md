@@ -1,4 +1,5 @@
 ---
+brief: "DAPO verl 实践——基于 verl 框架的 DAPO（Dynamic sAmpling Policy Optimization）训练指南；DAPO 去掉 KL clip 改用动态采样，verl 实现细节和超参配置；比 GRPO 更激进的探索策略工程落地。"
 title: "DAPO"
 type: project
 domain: ai/llm/rl/dapo
@@ -143,3 +144,7 @@ DAPO 是 GRPO 的工程改进版——原理上没有本质突破，但在实践
 - [[AI/LLM/Frameworks/verl/硬件资源预估|硬件资源预估]]
 - [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]]
 - [[AI/LLM/Frameworks/verl/verl 概述|verl 概述]]
+
+> **see-also（Agent 训练场景）**：DAPO 的 clip-higher（非对称 clip）和动态采样是 Agent RL 训练最常用的稳定性工具，在以下 Agent 场景中频繁被引用：
+> - [[AI/Agent/Agentic-RL/Agent-RL-训练实战指南|Agent RL 训练实战指南]] — DAPO clip-higher 在 Agent 场景的完整实践指南，含 entropy collapse 的诊断和修复配方
+> - [[AI/Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong（极长 horizon Agent）]] — 极长任务场景下 DAPO 思路的延伸：如何在 100+ step 的训练中维持探索熵

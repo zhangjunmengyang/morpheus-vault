@@ -1,4 +1,5 @@
 ---
+brief: "DB-GPT——数据库+LLM 结合的 Agent 框架；Text-to-SQL/知识库问答/数据分析自动化；私有化部署友好，适合企业内部数据智能化场景；国产开源 Agent 框架代表性选手。"
 title: "dbgpt 文档"
 type: concept
 domain: ai/agent/frameworks
@@ -50,6 +51,6 @@ Miniforge：
 ## See Also
 
 - [[AI/Agent/Frameworks/Agent 框架对比 2026|Agent 框架对比 2026]] — dbgpt 在主流框架中的对比分析
-- [[AI/Agent/_MOC|Agent MOC]] — Agent 知识全图谱
+- [[AI/Agent/目录|Agent MOC]] — Agent 知识全图谱
 - [[AI/LLM/Application/RAG/RAG 原理与架构|RAG 原理与架构]] — dbgpt 的核心应用场景
-- [[AI/RAG/_MOC|RAG MOC]] — 检索增强生成知识图谱
+- [[AI/RAG/目录|RAG MOC]] — 检索增强生成知识图谱

@@ -1,4 +1,6 @@
 ---
+title: "mHC: Manifold-Constrained Hyper-Connections"
+brief: "DeepSeek-AI（arXiv:2512.24880）将 Hyper-Connections（n个并行 residual stream）的更新矩阵 H_res 约束到双随机矩阵流形（Birkhoff polytope），用 Sinkhorn-Knopp 算法投影，恢复 identity mapping 性质；大规模训练开销仅+6.7%，解决 HC 训练不稳定问题。预计纳入 DeepSeek V4。"
 tags:
   - architecture
   - residual-connection
@@ -9,7 +11,6 @@ tags:
   - multi-stream
 date: 2026-02-20
 arxiv: "2512.24880"
-title: "mHC: Manifold-Constrained Hyper-Connections"
 rating: ★★★★☆
 institution: DeepSeek-AI
 expected_in: DeepSeek V4
@@ -210,8 +211,9 @@ DeepSeek V4 =
 
 ## 与 Vault 其他笔记的连接
 
-- → [[Engram-Conditional-Memory-DeepSeek-V4]] (mHC 是 Engram 的 backbone)
-- → [[GLM-5-技术报告精读]] (Muon Split 等类似宏观架构创新)
-- → [[Growing-to-Looping-Iterative-Computation-Unification]] (residual stream 的另一视角：迭代计算)
-- → [[KV Cache 优化]] (micro vs macro design 的区分)
-- → [[Slime-RL-Framework]] (DeepSeek 基础设施背景)
+- → [[AI/LLM/Architecture/Engram-Conditional-Memory-DeepSeek-V4|Engram-Conditional-Memory-DeepSeek-V4]] (mHC 是 Engram 的 backbone)
+- → [[AI/Frontiers/GLM-5-技术报告精读|GLM-5-技术报告精读]] (Muon Split 等类似宏观架构创新)
+- → [[AI/LLM/Architecture/Growing-to-Looping-Iterative-Computation-Unification|Growing-to-Looping-Iterative-Computation-Unification]] (residual stream 的另一视角：迭代计算)
+- → [[AI/LLM/Inference/KV Cache|KV Cache 优化]] (micro vs macro design 的区分)
+- → [[AI/LLM/Frameworks/Slime-RL-Framework|Slime-RL-Framework]] (DeepSeek 基础设施背景)
+- → [[AI/LLM/MA-RLHF课程/lc8-mHC-流形超连接从零手写|mHC 从零手写（MA-RLHF lc8）]] (Sinkhorn-Knopp 迭代 + doubly stochastic 约束的完整 PyTorch 实现)

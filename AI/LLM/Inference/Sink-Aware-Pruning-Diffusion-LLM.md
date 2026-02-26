@@ -1,5 +1,6 @@
 ---
 title: "Sink-Aware Pruning for Diffusion Language Models"
+brief: "MBZUAI VILA Lab（arXiv:2602.17664）在 Diffusion LLM 剪枝中识别并保留 Attention Sink token（接受大量注意力的特殊位置），其他位置正常剪枝；与 StreamingLLM 中 sink 保留策略相对应，但应用于 masked diffusion 范式。可在 50% 参数下保持 90%+ 生成质量。"
 date: 2026-02-20
 type: paper
 domain: ai/llm/inference
@@ -156,8 +157,8 @@ DLM 的推理加速是 2026 年最活跃的方向之一。已有：MAGE（注意
 
 ## 与 Vault 其他笔记的连接
 
-- → [[MAGE-Block-Diffusion-LLM-Sparse-Attention]] (DLM 稀疏优化，互补视角)
-- → [[LaViDa-R1-Diffusion-LLM-Reasoning]] (DLM 能力边界)
-- → [[Sparrow-Video-LLM-Speculative-Decoding]] (DLM 推理加速，不同工具)
-- → [[LLM-推理优化-2026-全景]] (全局视角)
-- → [[剪枝与蒸馏]] (权重压缩背景)
+- → [[AI/LLM/Inference/MAGE-Block-Diffusion-LLM-Sparse-Attention|MAGE (DLM 稀疏优化，互补视角)]]
+- → [[AI/LLM/Inference/LaViDa-R1-Diffusion-LLM-Reasoning|LaViDa-R1 (DLM 能力边界)]]
+- → [[AI/LLM/Inference/Sparrow-Video-LLM-Speculative-Decoding|Sparrow (DLM 推理加速，不同工具)]]
+- → [[AI/LLM/Inference/LLM-推理优化-2026-全景|LLM 推理优化 2026 全景 (全局视角)]]
+- → [[AI/LLM/Inference/剪枝与蒸馏|剪枝与蒸馏 (权重压缩背景)]]

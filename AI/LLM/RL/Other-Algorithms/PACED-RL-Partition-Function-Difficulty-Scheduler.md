@@ -1,4 +1,5 @@
 ---
+brief: "PACED-RL——用 GFlowNet 配分函数作为课程学习的难度调度器；将任务难度分布建模为能量函数，自适应采样训练边界任务；在 RLVR 任务上样本效率提升 2x，比固定难度课程学习更鲁棒。"
 title: "PACED-RL: 配分函数作为难度调度器"
 type: paper
 domain: ai/llm/rl
@@ -198,5 +199,20 @@ Sample 维度
 ## 元数据
 
 - **Tags**: #GFlowNet #curriculum-learning #sample-efficiency #RLVR #difficulty-scheduling #partition-function
-- **关联笔记**: [[AI/LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] ⭐ — **独立多路验证同一规律**：两者都发现中间难度（accuracy≈0.5）最优，但工具完全不同——Goldilocks 用 Teacher LM 预测难度，PACED-RL 用 GFlowNet Z_φ 估计准确率；两篇合读让这个规律从 empirical 升级为 robust finding | [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] | [[AI/LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]]
+- **关联笔记**: [[AI/LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] ⭐ — **独立多路验证同一规律**：两者都发现中间难度（accuracy≈0.5）最优，但工具完全不同——Goldilocks 用 Teacher LM 预测难度，PACED-RL 用 GFlowNet Z_φ 估计准确率；两篇合读让这个规律从 empirical 升级为 robust finding | [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 改进全景 2026]] | [[AI/LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO]] | [[AI/Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR]] — TSR 提升 rollout 质量，PACED-RL 提升 batch 质量，两者正交
 - **写于**: 2026-02-21
+
+---
+
+## Curriculum Learning 谱系对照（从新版合并，2026-02-23）
+
+PACED-RL、Goldilocks、Dynamic Sampling、LILO 都在实现同一个核心 idea——在 RLVR 训练中优先选择中等难度样本：
+
+| 方法 | 难度估计方式 | 额外开销 | 框架 |
+|------|------------|---------|------|
+| Dynamic Sampling | 实际 oversample | 2x rollout | GRPO |
+| LILO | 实际 oversample | 4x rollout | GRPO |
+| Goldilocks | reward 分布统计量分析 | 无额外 rollout | GRPO |
+| **PACED-RL** | **Z_φ 配分函数（已有）** | **零额外开销** | **GFlowNet** |
+
+**结论**：PACED-RL 在 GFlowNet 框架内是目前最优雅的 curriculum 方案——零额外开销 + 有理论保证。

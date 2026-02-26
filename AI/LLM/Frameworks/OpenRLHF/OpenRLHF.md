@@ -1,4 +1,5 @@
 ---
+brief: "OpenRLHF——基于 Ray 的分布式 RLHF 训练框架，支持 70B+ 模型的 PPO/GRPO 训练；Actor/Critic/RM/Ref 四模型跨节点调度，专注大规模 RLHF 生产场景；是 verl 之外的主流开源 RLHF 框架。"
 title: "OpenRLHF"
 type: concept
 domain: ai/llm/frameworks/openrlhf

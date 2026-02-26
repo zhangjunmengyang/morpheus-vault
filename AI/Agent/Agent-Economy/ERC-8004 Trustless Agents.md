@@ -1,4 +1,5 @@
 ---
+brief: "ERC-8004 Trustless Agents——以太坊 Agent 信任协议提案；无需信任第三方的 AI Agent 链上执行机制；智能合约验证 + 零知识证明的技术路径；链上 Agent 治理标准化的早期探索。"
 title: "ERC-8004 Trustless Agents"
 type: analysis
 domain: ai/agent/agent-economy
@@ -128,7 +129,7 @@ status: active
 
 ## 关联
 
-- [[Agent 经济基础设施]] — 全景综述，ERC-8004 是身份层
-- [[Coinbase AgentKit 技术评估]] — AgentKit 钱包可注册 ERC-8004 身份
-- [[Virtuals Protocol]] — 商业网络层，ACP 的信任问题可被 ERC-8004 解决
-- [[Agentic Spring]] — 模型能力成熟 + 身份标准 = Agent 经济闭环
+- [[AI/Agent/Agent-Economy/Agent 经济基础设施|Agent 经济基础设施]] — 全景综述，ERC-8004 是身份层
+- [[AI/Agent/Agent-Economy/Coinbase AgentKit 技术评估|Coinbase AgentKit 技术评估]] — AgentKit 钱包可注册 ERC-8004 身份
+- [[AI/Agent/Agent-Economy/Virtuals Protocol|Virtuals Protocol]] — 商业网络层，ACP 的信任问题可被 ERC-8004 解决
+- [[AI/Agent/Agent-Economy/Agentic Spring|Agentic Spring]] — 模型能力成熟 + 身份标准 = Agent 经济闭环

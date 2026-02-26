@@ -1,4 +1,5 @@
 ---
+brief: "LLMOps 全生命周期——LLM 从研发到生产的运维体系；覆盖 Prompt 版本管理/A-B 测试/监控/成本控制/安全审计全链路；对比传统 MLOps 的特殊挑战：不确定输出/提示注入/幻觉监控。"
 tags: [LLMOps, MLOps, production, lifecycle, monitoring]
 created: 2026-02-14
 status: draft
@@ -8,7 +9,7 @@ status: draft
 
 ## 概述
 
-LLMOps（Large Language Model Operations）是专门针对大语言模型的运维和生产管理体系。相比传统 [[MLOps]]，LLMOps 面临着独特的挑战：模型规模巨大、推理成本高、输出不确定性、多模态能力等，需要专门的工具链和方法论来支撑 [[LLM]] 的全生命周期管理。
+LLMOps（Large Language Model Operations）是专门针对大语言模型的运维和生产管理体系。相比传统 [[MLOps]]，LLMOps 面临着独特的挑战：模型规模巨大、推理成本高、输出不确定性、多模态能力等，需要专门的工具链和方法论来支撑 [[AI/LLM/目录|LLM]] 的全生命周期管理。
 
 ## LLMOps vs MLOps 核心区别
 
@@ -61,7 +62,7 @@ stability: [gradient_norm, learning_rate_schedule]
 ```
 
 **微调策略**
-- **[[LoRA]]**: 低秩适应，参数效率高
+- **[[AI/LLM/SFT/LoRA|LoRA]]**: 低秩适应，参数效率高
 - **[[QLoRA]]**: 量化 + LoRA，内存友好
 - **[[PEFT]]**: 参数效率微调方法族
 
@@ -87,9 +88,9 @@ Load Balancer → API Gateway → Model Server → GPU Cluster
 ```
 
 **推理优化**
-- **[[KV Cache]]**: 减少重复计算
+- **[[AI/LLM/Inference/KV Cache|KV Cache]]**: 减少重复计算
 - **[[Dynamic Batching]]**: 提高 GPU 利用率
-- **[[Speculative Decoding]]**: 加速生成过程
+- **[[AI/LLM/Inference/Speculative Decoding|Speculative Decoding]]**: 加速生成过程
 
 ### 5. 监控阶段
 
@@ -107,8 +108,8 @@ Load Balancer → API Gateway → Model Server → GPU Cluster
 
 **模型更新**
 - **增量训练**：基于新数据持续优化
-- **[[Prompt-Engineering-基础]]**: 优化系统提示词
-- **[[RAG]] 知识更新**：向量库更新和索引优化
+- **[[AI/LLM/Application/Prompt-Engineering-基础|Prompt-Engineering-基础]]**: 优化系统提示词
+- **[[AI/RAG/RAG-2026-技术全景|RAG]] 知识更新**：向量库更新和索引优化
 
 ## 关键工具链
 
@@ -291,6 +292,6 @@ def route_request(query):
 
 - [[MLOps 基础]]
 - [[LLM 部署架构]]
-- [[Prompt-Engineering-基础]]
+- [[AI/LLM/Application/Prompt-Engineering-基础|Prompt-Engineering-基础]]
 - [[模型评估方法]]
 - [[生产环境监控]]

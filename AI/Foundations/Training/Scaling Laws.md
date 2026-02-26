@@ -1,4 +1,5 @@
 ---
+brief: "Scaling Laws（训练视角）——从 Kaplan 到 Chinchilla 的 Compute-Optimal 训练公式；固定 FLOPs 预算下模型大小 vs 数据量的最优比例（1:20）；2026 年 Test-Time Compute Scaling 对传统 Scaling Law 的挑战。"
 title: "Scaling Laws"
 date: 2026-02-14
 tags:
@@ -198,4 +199,4 @@ nanochat 项目复现了 GPT-2 级别模型，训练成本从 2019 年的约 $43
 - [[AI/Foundations/Training/Training Loss 分析|Training Loss 分析]] — Scaling Law 中 loss 曲线的微观解读
 - [[AI/LLM/Pretraining/LLM预训练与分布式训练2026全景|LLM 预训练 2026 全景]] — Scaling Law 在工程实践中的落地：Chinchilla 最优 vs Over-train
 - [[AI/Foundations/Math/向量微积分|向量微积分]] — 幂律拟合的数学直觉
-- [[AI/Foundations/_MOC|Foundations MOC]] — 训练基础全图谱
+- [[AI/Foundations/目录|Foundations MOC]] — 训练基础全图谱

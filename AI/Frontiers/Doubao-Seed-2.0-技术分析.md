@@ -10,7 +10,7 @@ sources:
   - "Doubao-Seed-2.0 官网：https://seed.bytedance.com/zh/seed2"
   - "Model Card：79 页 LaTeX 技术文档（2026-02-14）"
 related:
-  - "[[AI/Frontiers/_MOC]]"
+  - "[[AI/Frontiers/目录]]"
   - "[[AI/Frontiers/2026年2月模型潮]]"
 ---
 
@@ -129,7 +129,7 @@ related:
 - [[AI/Frontiers/2026年2月模型潮|2026年2月模型潮]] — 7 款 frontier model 同月发布的整体分析
 - [[AI/Frontiers/GLM-5-技术报告精读|GLM-5]] — 同期发布的另一款国产旗舰，744B MoE + Slime 异步 RL
 - [[AI/LLM/Frameworks/Slime-RL-Framework|Slime RL Framework]] — GLM-5/Doubao 系共用异步 RL 基础设施对比
-- [[AI/Agent/_MOC|Agent MOC]] — Doubao-Seed-2.0 定位 Agent-first，参见 Agent 全图谱
+- [[AI/Agent/目录|Agent MOC]] — Doubao-Seed-2.0 定位 Agent-first，参见 Agent 全图谱
 
 ---
 *Created: 2026-02-16 | Source: ByteDance 官方 Model Card + 多方报道交叉验证*

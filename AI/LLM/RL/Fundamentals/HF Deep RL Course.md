@@ -1,4 +1,5 @@
 ---
+brief: "HuggingFace 官方深度强化学习课程——系统覆盖基础 RL 到高级 RLHF，配套 Colab 实践；是从工程角度入门 LLM 强化学习的推荐路径，兼顾理论与 HF transformers 生态实践。"
 title: "Deep RL Course"
 type: tutorial
 domain: ai/llm/rl/fundamentals

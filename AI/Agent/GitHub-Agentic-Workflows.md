@@ -1,6 +1,8 @@
 ---
 title: "GitHub Agentic Workflows: Continuous AI in SDLC"
+brief: "GitHub 官方 Agentic Workflow 技术预览：AI agent 深度集成进 SDLC（CI/CD）；自动化 PR review/issue triage/测试生成；与传统 GitHub Actions 的边界划分（Tech Preview, 2026-02-13）"
 date: 2026-02-16
+updated: 2026-02-23
 tags: [Agent, CI-CD, GitHub, Automation, Coding-Agent, DevOps]
 domain: AI/Agent
 source: "https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/"
@@ -108,7 +110,7 @@ tools:
 
 ## 关联笔记
 
-- [[Agent Tool Use]]
-- [[Agent 框架对比]]
-- [[Code Agent]]
-- [[Agent 生产落地]]
+- [[AI/Agent/Agent Tool Use|Agent Tool Use]]
+- [[AI/Agent/Agent 框架对比|Agent 框架对比]]
+- [[AI/Agent/Fundamentals/Code Agent|Code Agent]]
+- [[AI/Agent/Agent 生产落地|Agent 生产落地]]

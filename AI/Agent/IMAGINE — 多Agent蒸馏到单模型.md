@@ -1,7 +1,9 @@
 ---
 title: "IMAGINE: 多Agent系统蒸馏到单模型"
+brief: "将多 Agent 系统的协作能力蒸馏进单一模型：Planner/Executor/Critic 分角色生成训练数据 → 单模型习得复杂规划能力；在复杂推理任务超越同等规模多 Agent 系统（arXiv:2510.14406）"
 tags: [Agent, Multi-Agent, Distillation, Reasoning, Training, Complex-Planning]
 created: 2026-02-15
+updated: 2026-02-23
 arxiv: "2510.14406"
 authors: ["Xikai Zhang", "Bo Wang", "Likang Xiao", "Yongzhi Li", "Quan Chen", "Wenjun Wu", "Liu Liu"]
 venue: "arXiv"
@@ -360,7 +362,7 @@ $$R = \begin{cases}
 - [[AI/Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]] — 多Agent系统架构基础
 - [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO 2026 全景]] — IMAGINE 使用的 RL 算法七维全景
 - [[AI/LLM/Efficiency/知识蒸馏与模型压缩-2026技术全景|知识蒸馏 2026 全景]] — 传统知识蒸馏 vs IMAGINE 的行为模式蒸馏
-- [[AI/Agent/_MOC|Agent MOC]] — Agent 研究全图谱
+- [[AI/Agent/目录|Agent MOC]] — Agent 研究全图谱
 - [[AI/Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer CWRPO]] — 同为 GRPO 扩展，workflow orchestration 方向
 
 ## 相关论文

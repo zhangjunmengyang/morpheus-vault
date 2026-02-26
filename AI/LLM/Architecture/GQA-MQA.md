@@ -1,13 +1,25 @@
 ---
 title: "GQA / MQA 深度解析"
+brief: "Grouped Query Attention 和 Multi-Query Attention 的原理、实现与性能对比。GQA 是 MHA 和 MQA 的泛化，通过将 Q heads 分组共享 KV 实现 75-87.5% 的 KV Cache 节省且质量损失 <0.5%。2025 年 GQA (G=8) 已成为开源 LLM 的事实标准。"
 date: 2026-02-13
+updated: 2026-02-22
 tags:
   - ai/llm/architecture
   - ai/attention
   - ai/llm/inference
   - type/concept
   - interview/hot
-status: active
+status: complete
+sources:
+  - "Ainslie et al. GQA: Training Generalized Multi-Query Attention from Multi-Head Checkpoints. arXiv:2305.13245"
+  - "Shazeer. Fast Transformer Decoding: One Write-Head is All You Need (MQA). arXiv:1911.02150"
+  - "Vaswani et al. Attention Is All You Need (MHA). arXiv:1706.03762"
+related:
+  - "[[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]]"
+  - "[[AI/LLM/Architecture/FlashAttention|FlashAttention]]"
+  - "[[AI/LLM/Inference/KV Cache|KV Cache 原理与优化]]"
+  - "[[AI/LLM/Architecture/Multi-Head Latent Attention|MLA 详解]]"
+  - "[[AI/LLM/Architecture/LLaMA|LLaMA]]"
 ---
 
 # GQA / MQA 深度解析
@@ -38,6 +50,8 @@ MHA (Multi-Head Attention):
 **问题**：推理时 KV Cache 随序列长度线性增长，长上下文场景下 KV Cache 甚至超过模型权重本身的显存占用。
 
 ## 2. Multi-Query Attention (MQA)
+
+> 来源：Shazeer, "Fast Transformer Decoding: One Write-Head is All You Need", arXiv:1911.02150
 
 ### 核心思想
 
@@ -107,6 +121,8 @@ class MultiQueryAttention(nn.Module):
 
 ## 3. Grouped Query Attention (GQA)
 
+> 来源：Ainslie et al., "GQA: Training Generalized Multi-Query Attention from Multi-Head Checkpoints", arXiv:2305.13245
+
 ### 核心思想
 
 MQA 太激进（1 组 KV），MHA 太浪费（h 组 KV）。GQA 取折中：**将 h 个 Q head 分成 G 组，每组共享一组 KV**：
@@ -127,18 +143,37 @@ GQA (G 组):
 
 ### 直观理解
 
+```mermaid
+flowchart LR
+    subgraph MHA["MHA (G=h=8)"]
+        direction TB
+        MHA_Q["Q: q1..q8\n8 独立 Q heads"]
+        MHA_KV["K: k1..k8\nV: v1..v8\n8 独立 KV heads"]
+        MHA_C["KV Cache: 100%"]
+    end
+    subgraph GQA4["GQA (h=8, G=4)"]
+        direction TB
+        G4_Q["Q: q1..q8\n8 Q heads, 4 组"]
+        G4_KV["K: k1 k2 k3 k4\nV: v1 v2 v3 v4\n每组 2Q 共享 1KV"]
+        G4_C["KV Cache: 50%"]
+    end
+    subgraph MQA["MQA (G=1)"]
+        direction TB
+        MQA_Q["Q: q1..q8\n8 Q heads"]
+        MQA_KV["K: k1\nV: v1\n全部共享 1 KV"]
+        MQA_C["KV Cache: 12.5%"]
+    end
+    MHA -->|"减少KV heads"| GQA4 -->|"极端压缩"| MQA
 ```
-MHA (h=8, G=8):     GQA (h=8, G=4):     GQA (h=8, G=2):     MQA (h=8, G=1):
-Q: q1 q2 q3 q4      Q: q1 q2 q3 q4      Q: q1 q2 q3 q4      Q: q1 q2 q3 q4
-   q5 q6 q7 q8         q5 q6 q7 q8         q5 q6 q7 q8         q5 q6 q7 q8
-K: k1 k2 k3 k4      K: k1 k1 k2 k2      K: k1 k1 k1 k1      K: k1 k1 k1 k1
-   k5 k6 k7 k8         k3 k3 k4 k4         k2 k2 k2 k2         k1 k1 k1 k1
-V: v1 v2 v3 v4      V: v1 v1 v2 v2      V: v1 v1 v1 v1      V: v1 v1 v1 v1
-   v5 v6 v7 v8         v3 v3 v4 v4         v2 v2 v2 v2         v1 v1 v1 v1
 
-KV heads: 8          KV heads: 4          KV heads: 2          KV heads: 1
-Cache: 100%          Cache: 50%           Cache: 25%           Cache: 12.5%
-```
+**文本对照**：
+
+| 配置 | Q heads | KV heads | 每组 Q 共享数 | KV Cache 占比 |
+|------|---------|----------|-------------|-------------|
+| MHA (G=8) | 8 独立 | 8 独立 | 1:1 | 100% |
+| GQA (G=4) | 8, 分 4 组 | 4 | 2:1 | 50% |
+| GQA (G=2) | 8, 分 2 组 | 2 | 4:1 | 25% |
+| MQA (G=1) | 8 | 1 共享 | 8:1 | 12.5% |
 
 ### 代码实现
 
@@ -182,7 +217,7 @@ class GroupedQueryAttention(nn.Module):
 | GPT-3 175B | MHA | 96 | 96 | 1:1 | 0% |
 | PaLM 540B | MQA | 48 | 1 | 48:1 | 97.9% |
 | Falcon 40B | MQA | 64 | 1 | 64:1 | 98.4% |
-| [[LLaMA]] 2 70B | GQA | 64 | 8 | 8:1 | **87.5%** |
+| [[AI/LLM/Architecture/LLaMA|LLaMA]] 2 70B | GQA | 64 | 8 | 8:1 | **87.5%** |
 | LLaMA 3 8B | GQA | 32 | 8 | 4:1 | **75%** |
 | LLaMA 3 70B | GQA | 64 | 8 | 8:1 | **87.5%** |
 | Mistral 7B | GQA | 32 | 8 | 4:1 | **75%** |
@@ -210,7 +245,7 @@ KV Cache 大小 = 2 × n_kv_heads × d_k × n_layers × seq_len × batch_size ×
 GQA 节省: 274.88 - 34.36 = 240.52 GB (87.5%)
 ```
 
-### 与 [[KV Cache 优化|PagedAttention]] 的协同
+### 与 [[AI/LLM/Inference/KV Cache|PagedAttention]] 的协同
 
 GQA 减少 KV heads 数量 → 每个 page 更小 → PagedAttention 管理更高效 → 相同显存可服务更多并发请求。
 
@@ -260,11 +295,11 @@ GQA 几乎无损，MQA 下降明显
 
 ## 8. 与其他优化的关系
 
-- **[[FlashAttention]]**：GQA 减少 KV head → 每个 head 的 KV 序列不变，但总 KV 少 → FlashAttention 计算更快
-- **[[KV Cache 优化]]**：GQA 是 KV Cache 优化的 **架构层** 方案，与 PagedAttention（系统层）互补
-- **[[推理优化]]**：GQA 是推理优化中最重要的架构设计选择之一
-- **[[Continuous Batching]]**：KV Cache 小 → 相同显存可容纳更多并发请求 → Continuous Batching 效率更高
-- **[[量化综述|量化]]**：GQA + INT4 量化 = KV Cache 双重压缩
+- **[[AI/LLM/Architecture/FlashAttention|FlashAttention]]**：GQA 减少 KV head → 每个 head 的 KV 序列不变，但总 KV 少 → FlashAttention 计算更快
+- **[[AI/LLM/Inference/KV Cache|KV Cache 优化]]**：GQA 是 KV Cache 优化的 **架构层** 方案，与 PagedAttention（系统层）互补
+- **[[AI/LLM/Inference/推理优化|推理优化]]**：GQA 是推理优化中最重要的架构设计选择之一
+- **[[AI/LLM/Inference/Continuous Batching|Continuous Batching]]**：KV Cache 小 → 相同显存可容纳更多并发请求 → Continuous Batching 效率更高
+- **[[AI/LLM/Inference/量化综述|量化]]**：GQA + INT4 量化 = KV Cache 双重压缩
 
 ## 面试常见问题
 
@@ -287,3 +322,62 @@ MLA (Multi-head Latent Attention) 比 GQA 更激进：不是简单减少 KV head
 ### Q5: GQA 的 G 值如何选择？
 
 经验法则：**G = h/8 到 h/4** 是最佳区间。太小（接近 MQA）质量下降明显；太大（接近 MHA）节省不够。主流选择是 G=8：LLaMA 2/3 70B、Qwen 2.5 72B、Mistral 系列都用 G=8。对小模型（7B-13B），G=4（如 n_heads=32, n_kv_heads=8）也很常见。选择还需考虑 TP 并行——G 应该能被 TP degree 整除。
+
+---
+
+## 🔧 落地应用
+
+### 直接可用场景
+- **推理服务容量规划**：KV Cache 公式 $\text{size} = 2 \times G \times d_k \times L \times s \times b \times \text{bytes}$，直接计算最大 batch size
+- **模型选型**：同等规模下优先选 GQA 模型（LLaMA 3 > LLaMA 1），推理吞吐可差 4x
+- **MHA→GQA 迁移**：对已有 MHA 模型，用 Google 的 uptraining 方法只需原训练量 5% 即可转换
+
+### 工程实现要点
+- GQA 实现的关键是 `repeat_interleave`：将 G 个 KV heads 扩展到 h 个 Q heads 对齐
+- TP 并行时 G 必须能被 TP degree 整除，否则需要 KV heads replication
+- GQA + [[AI/LLM/Architecture/FlashAttention|FlashAttention]] + [[AI/LLM/Inference/KV Cache|PagedAttention]] 三者协同是 2025 年推理优化的标准 stack
+
+### 面试高频问法
+- Q: GQA 和 MQA 的数学关系是什么？
+  A: GQA 是泛化——G=h 时退化为 MHA，G=1 时退化为 MQA。KV Cache 节省比例 = $(h-G)/h$
+
+---
+
+## 💡 启发与思考
+
+### So What？对老板意味着什么
+- GQA 是"免费的午餐"——几乎不损失质量就能大幅提高推理效率。任何新项目选模型时，GQA 支持是硬性要求
+- **KV Cache 大小直接决定了你的推理成本**：GQA 让同样的 GPU 集群多服务 4-8 倍用户
+
+### 未解问题与局限
+- GQA 的 uptraining 只适用于同架构的 MHA→GQA 转换，跨架构（如 MHA→MLA）没有成熟方案
+- G 值的最优选择仍靠经验，没有理论指导（取决于任务、模型规模、硬件配置的交互）
+
+### 脑暴：如果往下延伸
+- 如果 G 值可以 per-layer 不同（浅层用小 G，深层用大 G），是否能进一步优化质量/效率 tradeoff？类似 [[AI/LLM/Architecture/MoE 深度解析|MoE]] 的 per-layer expert 数量调整
+- MLA 的成功说明 KV 的低秩压缩比简单的 head 共享更优——未来可能出现自适应的 per-head 压缩率
+
+---
+
+## 📚 推荐阅读
+
+### 原始论文
+- [GQA: Training Generalized Multi-Query Attention from Multi-Head Checkpoints](https://arxiv.org/abs/2305.13245) — GQA 原论文，含 uptraining 方法和详细消融实验
+- [Fast Transformer Decoding: One Write-Head is All You Need](https://arxiv.org/abs/1911.02150) — MQA 原论文，Noam Shazeer 的经典之作
+
+### 深度解读
+- [Efficient Transformers: A Survey](https://arxiv.org/abs/2009.06732) — Attention 效率优化的系统性综述 ⭐⭐⭐⭐
+
+### 实践资源
+- [LLaMA 3 Technical Report](https://arxiv.org/abs/2407.21783) — GQA 在 LLaMA 3 中的实际应用
+- [vLLM GitHub](https://github.com/vllm-project/vllm) — GQA + PagedAttention 的工业级推理框架
+
+---
+
+## See Also
+
+> 🔗 See also: [[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]] — 本文是其 GQA/MQA 章节的深度展开
+> 🔗 See also: [[AI/LLM/Architecture/FlashAttention|FlashAttention]] — GQA 减少 KV 总量，FlashAttention 加速 Attention 计算，二者协同
+> 🔗 See also: [[AI/LLM/Inference/KV Cache|KV Cache]] — GQA 是 KV Cache 架构层优化的核心，与 PagedAttention（系统层）互补
+> 🔗 See also: [[AI/LLM/Architecture/Multi-Head Latent Attention|MLA 详解]] — 比 GQA 更激进的 KV 压缩路线
+> 🔗 See also: [[AI/LLM/Architecture/LLaMA|LLaMA]] — GQA 在 LLaMA 2/3 系列中的实际部署

@@ -1,4 +1,5 @@
 ---
+brief: "REMuL（arXiv:2602.16154，ICML 2026）——通过多 Listener RL 提升 CoT 忠实度；核心问题：模型推理过程与最终答案不一致（deceptive reasoning），多 listener 投票机制强制 CoT 与 outcome 对齐。"
 title: "REMuL: CoT Faithfulness via Multi-Listener RL"
 date: 2026-02-18
 tags: [faithfulness, CoT, interpretability, RL, GRPO, multi-agent, reasoning, ICML2026]

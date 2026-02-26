@@ -1,5 +1,6 @@
 ---
 title: "AI Models Collapse when Trained on Recursively Generated Data"
+brief: "Nature 2024 论文证明：LLM 在自身合成数据上递归训练会导致不可逆的模型崩溃（Model Collapse）——输出分布退化，低频尾部信息丢失，性能持续下降。对数据飞轮依赖合成数据的工程团队有重要警示意义。"
 type: paper
 domain: ai/llm/architecture
 created: "2026-02-13"
@@ -43,4 +44,4 @@ Model Collapse refers to a degenerative learning process where models start forg
 - [[AI/LLM/Architecture/Attention 变体综述|Attention 变体综述]] — 模型架构与 model collapse 风险的关系
 - [[AI/Foundations/Training/预训练流程|预训练流程]] — 合成数据在预训练中的影响
 - [[AI/LLM/Pretraining/LLM预训练与分布式训练2026全景|LLM 预训练 2026 全景]] — 数据工程：合成数据与 model collapse 的工业实践
-- [[AI/LLM/_MOC|LLM MOC]] — 大语言模型知识全图谱
+- [[AI/LLM/目录|LLM MOC]] — 大语言模型知识全图谱

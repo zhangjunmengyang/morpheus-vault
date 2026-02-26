@@ -1,4 +1,5 @@
 ---
+brief: "GSPO Unsloth 实践——Group Sequence Policy Optimization 的 Unsloth 工程实现；低显存环境下跑序列级 IS ratio 约束的 RL 训练；配置和 Qwen3 MoE 的 GSPO 训练参数参考。"
 title: "GSPO"
 type: project
 domain: ai/llm/rl/other-algorithms
@@ -179,6 +180,6 @@ GSPO (group_size=8, beta=0.1):
 - [[AI/LLM/RL/DPO/DPO|DPO]]
 - [[AI/LLM/Frameworks/Unsloth/Unsloth 概述|Unsloth 概述]]
 - [[AI/LLM/Frameworks/Unsloth/训练示例概述|Unsloth 训练示例]]
-- [[AI/LLM/RL/_MOC|RL 算法总览]]
+- [[AI/LLM/RL/目录|RL 算法总览]]
 - [[AI/LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]
 - [[AI/LLM/RL/PPO/PPO 原理|PPO 原理]]

@@ -1,6 +1,7 @@
 ---
-title: "GRPO 改进全景分析：2026 年六维框架"
-type: note
+brief: "GRPO 改进全景：七维框架（优势估计/奖励塑形/KL约束/长度规范/熵控制/多目标/Diversity）系统梳理 2026 年 GRPO 衍生算法；DAPO/VAPO/Dr. GRPO/ProGRPO/MASPO/SAPO/GSPO 等 15+ 变种的核心改进方向对比分析。关键边界：GRPO 在 multi-turn 场景无收敛保证（SeeUPO 不可能定理），单轮推理仍是首选。"
+title: "GRPO 改进全景分析：2026 年七维框架"
+type: synthesis
 domain: ai/llm/rl
 tags:
   - ai/llm/rl
@@ -9,6 +10,21 @@ tags:
   - interview-prep
   - type/synthesis
 date: 2026-02-20
+updated: 2026-02-24
+sources:
+  - "GRPO/DeepSeekMath: arXiv:2402.03300"
+  - "DAPO: arXiv:2503.14476 (ByteDance/清华，NeurIPS 2025)"
+  - "MASPO: arXiv:2602.17550 (Meituan+Fudan等)"
+  - "SAPO: arXiv:2511.20347 (Qwen团队，Qwen3-VL生产)"
+  - "GSPO: arXiv:2507.18071 (Qwen3团队)"
+  - "STAPO: arXiv:2602.15620 (清华+滴滴)"
+  - "DEEP-GRPO: arXiv:2602.14169 (ICML投稿)"
+  - "Goldilocks RL: arXiv:2602.14868 (Apple+EPFL)"
+  - "Jet-RL: arXiv:2601.14243 (MIT HAN Lab)"
+  - "SeeUPO: arXiv:2602.06554 (Tongyi Lab) — multi-turn收敛边界定理"
+  - "IntroLLM: arXiv:2602.13035 (Diversity维度，hierarchical温度policy)"
+  - "ProGRPO: arXiv:2602.05281"
+  - "RePO: arXiv:2602.10819"
 ---
 
 # GRPO 改进全景分析：2026 年六维框架
@@ -228,10 +244,17 @@ Closed-form minimum-variance baseline 进一步稳定训练
 | VCPO (est.) | 稳定 | 稳定 |
 | VESPO | ~58% | **~58.5%（稳定）** |
 
-**三种路径正交，可叠加**：
+**OAPL**（arXiv 2602.19362，2/25，Cornell+Databricks+Harvard）：**放弃 IS，从理论出发**
+核心洞察：与其用 IS 把 off-policy 数据伪装成 on-policy，不如直接从 KL-regularized RL closed-form 解推导一个原生 off-policy 算法。
+推导：$\max_\pi E[r] - \beta \text{KL}(\pi \| \pi_{vllm})$ → closed-form $\pi^* \propto \pi_{vllm} \cdot e^{r/\beta}$ → 最优化目标等价 squared regression loss
+效果：允许 400 步 policy lag；AIME25/HMMT25/BRUMO25 超越 GRPO+IS；LiveCodeBench v5 用 1/3 生成量匹配 DeepCoder
+参见：[[AI/LLM/RL/Other-Algorithms/OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]] ★★★★★
+
+**四种路径正交，可组合**：
 - Jet-RL（系统层：消除来源）
 - VCPO（优化层：动态适应 LR）
 - VESPO（算法层：软纠正 IS）
+- OAPL（算法层：放弃 IS，closed-form squared loss）
 - SAPO（Token-level 软衰减，适合 on-policy/近 on-policy 场景）
 
 **共同洞察**：off-policy 是 RL 实现中最隐蔽的 bug。很多工程团队不知道他们的"on-policy"系统实际上已经悄悄变成了 off-policy。量化、异步、重用 rollout、mini-batch 分割都是来源。GSPO 的长度归一化实际上引入了长度偏差（更长的序列更难被 clip → 正反馈 → collapse）。
@@ -315,6 +338,39 @@ A: 比大多数人意识到的严重。任何 rollout 和 evaluation 精度不�
 
 ---
 
+## 维度八（补充）：Difficulty Debiasing — std 归一化的隐患
+
+> **2026-02-25 补充**：NoRD (CVPR 2026) 在自动驾驶 VLA 领域首次实证了 difficulty bias 对弱 SFT 策略的系统性破坏，并验证了 Dr. GRPO 的有效性。
+
+**问题**：GRPO 的 advantage 计算中 `std(r)` 归一化引入了隐性的难度偏差：
+- 高方差 group（中等难度样本）→ std 大 → advantage 被压缩 → **有效梯度几乎为零**
+- 低方差 group（极简单或极难样本）→ std 小 → advantage 被放大 → **梯度集中在无价值的样本上**
+
+后果：GRPO 实际只从"简单样本"（全对 or 全错）中学习，忽视了能力边界处最有价值的"中等难度样本"。
+
+**Dr. GRPO**（Liu et al., 2029，原发表于 LLM 数学推理）  
+解法极其简单：**去掉 std 归一化**。  
+`A_i = r(o_i|x) - mean_j(r(o_j|x))` （就这一行改动）  
+加上 DAPO 风格非对称 clipping + 无 KL 正则，保持训练稳定。
+
+**NoRD (2602.21172, CVPR 2026) — 跨域实证验证**  
+- 任务：自动驾驶 VLA（Qwen-2.5VL-3B，Waymo/NAVSIM benchmark）  
+- 发现：弱 SFT 策略（80k 样本，无推理标注）在 PDM score [0.2, 0.65] 范围内产生高 intra-group variance 的 majority 样本  
+- GRPO：+0.67% PDM（无效）；Dr. GRPO：**+11.68% PDM**  
+- 结论：difficulty bias **不只是 LLM 推理问题**，而是任何 reward 分布极化 + 弱 SFT 策略组合的普遍现象
+
+**适用判断**：当出现以下情况时，Dr. GRPO > GRPO：
+1. SFT 策略相对弱（数据少、无推理标注、cold start）
+2. Reward 分布极化（bimodal：简单全对 + 困难全错）
+3. 中等难度样本占多数（majority 落在高方差区间）
+
+**与 Goldilocks/Sample 层的关系**：  
+Goldilocks = 筛选掉 std=0 的极端样本（数据层）  
+Dr. GRPO = 对 std 大的样本不惩罚（算法层）  
+两者互补：一个前置过滤，一个后置不歧视。
+
+---
+
 ## 开放问题
 
 1. **Token 级别密集奖励**：能否设计轻量级的 per-token reward model，而不需要完整的 critic？
@@ -340,6 +396,8 @@ A: 比大多数人意识到的严重。任何 rollout 和 evaluation 精度不�
 - SAPO: arXiv 2511.20347 (Qwen 团队，sech² 软门控，Qwen3-VL 生产使用)
 - GSPO: arXiv 2507.18071 (Qwen 团队，sequence-level IS ratio，SAPO 前驱)
 - AT-RL: arXiv 2602.11455 (多模态视觉锚点 credit assignment)
+- Dr. GRPO: (Liu et al., 2029，原文见 GRPO/Dr-GRPO-Unbiased-Optimization.md) — difficulty bias 去 std 归一化
+- NoRD: arXiv 2602.21172 (Applied Intuition + UC Berkeley, CVPR 2026) — 自动驾驶 VLA，首次在非 LLM 推理领域验证 Dr. GRPO，弱 SFT + Dr. GRPO 无推理数据达到 SOTA
 
 ---
 
@@ -355,7 +413,38 @@ A: 比大多数人意识到的严重。任何 rollout 和 evaluation 精度不�
 - [[AI/LLM/RL/Other-Algorithms/VESPO-Variational-Sequence-Policy-Optimization|VESPO]] — 变分 off-policy 修正，理论最严格
 - [[AI/LLM/RL/Other-Algorithms/SAPO-Soft-Adaptive-Policy-Optimization|SAPO]] — sech² 软门控，Qwen3-VL 生产
 - [[AI/LLM/RL/Other-Algorithms/GSPO-Group-Sequence-Policy-Optimization|GSPO]] — 序列级 IS ratio（SAPO 前驱）
+- [[AI/LLM/RL/GRPO/Dr-GRPO-Unbiased-Optimization|Dr. GRPO]] — 去 std 归一化，difficulty debiasing
+- [[AI/LLM/RL/Other-Algorithms/NoRD-Dr-GRPO-Reasoning-Free-VLA-Autonomous-Driving|NoRD]] — 自动驾驶 VLA，Dr. GRPO 跨域实证 (CVPR 2026)
 - [[AI/LLM/RL/Other-Algorithms/AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL]] — 多模态维度 credit assignment
 - [[AI/LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL 训练稳定性 2026 统一分析]] — 与本文互补，聚焦稳定性而非分类框架
+- [[AI/LLM/RL/Other-Algorithms/OAPL-Off-Policy-RL-LLM-Reasoning|OAPL]] — 目标函数范式转移：KL-regularized closed-form → squared regression，放弃 IS
+- [[AI/LLM/RL/Other-Algorithms/LAD-Learning-Advantage-Distribution|LAD]] — 目标函数范式转移：advantage 诱导分布匹配（f-divergence），自然保留多模式轨迹；与 OAPL 正交可组合
+- [[AI/Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]] — GRPO 的 Agent 扩展方向：StarPO → multi-turn trajectory-level GRPO → HiPER 的 segment-level HAE（三步演进）
+- [[AI/Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO]] — GRPO 在 multi-turn agent 场景的稳定性挑战（Echo Trap），及 StarPO 框架
 - [[AI/LLM/RL/GRPO/ProGRPO-Probabilistic-Advantage-Reweighting|ProGRPO]] — Diversity 维度：ARM 概率信号重调 advantage
 - [[AI/LLM/RL/Other-Algorithms/RePO-Rephrasing-Policy-Optimization|RePO]] — Diversity 维度：off-policy 知识内化到 on-policy 兼容轨迹
+- [[AI/Agent/Agentic-RL/SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO（arXiv:2602.06554）]] ⚠️ — **GRPO 的理论边界**：不可能定理证明 GRAE+PPU（GRPO主体）在 multi-turn contextual bandit 中无收敛保证；单轮推理 GRPO 仍有效，多轮 Agent 训练需换 SeeUPO 逆序更新
+
+---
+
+## 🔧 落地应用
+
+- **单轮推理 RLVR（数学/代码）**：GRPO 是标准起点 → 遇到 entropy collapse 加 DAPO 的 clip-higher + entropy bonus → trust region 过硬加 MASPO/SAPO 软化 → 探索死加 DEEP-GRPO pivot resampling → 课程学习加 Goldilocks RL 选 p≈0.5 题
+- **大规模异步训练（70B+）**：generation/training 解耦后用 VCPO 方差控制 + Jet-RL FP8 精度一致性，防 off-policy drift
+- **多轮 Agent 训练**：⚠️ 不要用 GRPO！variance normalization 破坏 multi-turn 收敛（SeeUPO 定理）→ 切换 SeeUPO 逆序更新
+- **选哪个改进**：只有一个问题用 DAPO（生产验证最充分）；想统一修三个问题用 MASPO；生产环境用 Qwen 团队 SAPO/GSPO（Qwen3-VL 在跑）
+- **面试话术**：七维框架是回答"GRPO 有什么问题/怎么改进"的标准结构，先分维度再说具体论文，比直接背论文名字清晰10倍
+
+## 💡 启发与思考
+
+- **"改进 GRPO"的论文已经多到需要元分析**：每篇都声称解决了"GRPO 的问题"，但实际上修的是不同层次的缺陷——七维框架的价值就在于此，让你一眼看清每篇论文的真正贡献在哪个维度
+- **SeeUPO 定理改变了讨论框架**：之前说 GRPO 在 multi-turn 不稳定是经验观察，现在有了数学证明。这意味着七维框架的所有改进都是针对**单轮 GRPO**的——multi-turn 场景需要完全不同的算法族
+- **Qwen 团队生产验证的算法是最值得相信的**：SAPO（sech² 软门控，Qwen3-VL）/ GSPO（序列级 IS，Qwen3）都是被大规模生产训练验证过的——学术论文好但没有工业级规模验证的算法，在实际部署时要谨慎
+- **Diversity 维度是最被低估的**：大家都在改 trust region / KL 约束，但 rollout 多样性崩塌（within-state 探索死亡）才是 hard exploration 的根因。VAM/QeRL/IntroLLM 这条线在 2026 下半年可能会爆发
+
+## 📚 推荐阅读
+
+1. **DAPO**（arXiv:2503.14476）— GRPO 最重要的工业级改进，四项改进都有充分的 ablation，NeurIPS 2025
+2. **MASPO**（arXiv:2602.17550）— 三维统一改进框架，是理解"trust region 改进全家桶"的好教材
+3. **SAPO**（arXiv:2511.20347）— Qwen 团队，sech² 软门控，生产验证；与 GSPO 一起读理解 Qwen RL 栈
+4. **SeeUPO**（arXiv:2602.06554）— 必读：理解 GRPO 的理论边界（multi-turn 无收敛保证），正确定位本全景的适用范围

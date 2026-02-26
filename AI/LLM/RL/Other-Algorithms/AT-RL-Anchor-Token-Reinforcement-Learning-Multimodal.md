@@ -1,4 +1,5 @@
 ---
+brief: "AT-RL（Anchor Token RL）——识别跨模态连接的关键锚点 token 并集中信用分配；解决多模态 RLVR 中视觉 token 贡献被平均淡化的问题；相比 GRPO 均匀分配，anchor token 获得更高梯度权重，推理准确率提升。"
 title: "AT-RL: Anchor Token Reinforcement Learning for Multimodal"
 type: note
 domain: ai/llm/rl
@@ -139,9 +140,9 @@ AT-RL 用注意力图提供了一个方向，但更根本的解决方案可能�
 
 ## 关键词连接
 
-- [[GRPO-Improvement-Panorama-2026]] — Token 维度的多模态扩展
-- [[STAPO-Spurious-Token-Aware-Policy-Optimization]] — 纯语言场景下的 token 级 credit 问题
-- [[DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling]] — 探索维度的 credit 问题
+- [[AI/LLM/RL/Theory/GRPO-Improvement-Panorama-2026|GRPO-Improvement-Panorama-2026]] — Token 维度的多模态扩展
+- [[AI/LLM/RL/Other-Algorithms/STAPO-Spurious-Token-Aware-Policy-Optimization|STAPO-Spurious-Token-Aware-Policy-Optimization]] — 纯语言场景下的 token 级 credit 问题
+- [[AI/LLM/RL/Other-Algorithms/DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling|DEEP-GRPO-Deep-Dense-Exploration-Pivot-Resampling]] — 探索维度的 credit 问题
 
 ---
 
@@ -152,3 +153,7 @@ AT-RL 是 GRPO 全景综述"token 级 credit assignment"开放问题在多模态
 关键结论：**推理质量由跨模态锚定的精确度决定，而非 token 数量**。这和 GRPO 全景综述的核心论点完美呼应——序列级奖励让所有 token 等权重，而实际上 credit 极度不均匀。
 
 AT-RL 提供的是多模态版本的答案。纯语言的 token 级 dense reward 仍然是未解的核心问题。
+
+---
+
+**See also**：[[AI/LLM/RL/Other-Algorithms/VPPO-Visually-Perceptive-Policy-Optimization|VPPO]] — 同样识别"关键感知 token"，但用 KL 散度（有无图像）定义视觉依赖度，而非图聚类；AT-RL 关注跨模态锚定点，VPPO 关注视觉依赖度稀疏分布，互补视角
