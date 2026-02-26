@@ -30,9 +30,11 @@ tags:
 ### 📈 Quant — 量化研究
 - Quant/ — Crypto 量化交易 2026 全景（待建 MOC，1篇）
 
-### 🛠️ Tools — 工具与系统
-- [[Tools/OpenClaw/目录]] — OpenClaw / MCP / DevTools
-- [[Tools/观猹-Watcha-AI产品聚合平台|观猹（Watcha）]] — 中文 AI 产品发现与点评，Product Hunt 平替
+### ✍️ Output — 输出与发布
+- [[Output/目录]] — 发布文章 & 社区分享
+
+### 🔍 外部资源
+- [[Resources/观猹-Watcha-AI产品聚合平台|观猹（Watcha）]] — 中文 AI 产品发现与点评，Product Hunt 平替
 
 ### 💼 Career — 职业发展
 - [[Career/目录]] — 述职 / 求职 / PMO / 方法论

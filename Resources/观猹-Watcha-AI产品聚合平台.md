@@ -14,7 +14,7 @@ status: active
 url: "https://watcha.cn/products?order_by=hot_score"
 related:
   - "[[AI/Agent/AI-Agent-2026-技术全景|AI Agent 2026 技术全景]]"
-  - "[[Tools/OpenClaw/目录|OpenClaw]]"
+  - "[[Output/OpenClaw-目录|OpenClaw]]"
 ---
 
 # 观猹（Watcha）—— AI 产品聚合与点评平台
@@ -78,4 +78,4 @@ related:
 ## See Also
 
 - [[AI/Agent/AI-Agent-2026-技术全景|AI Agent 2026 技术全景]] — Agent 产品的技术底层
-- [[Tools/OpenClaw/目录|OpenClaw]] — 本知识库的核心工具
+- [[Output/OpenClaw-目录|OpenClaw]] — 本知识库的核心工具
