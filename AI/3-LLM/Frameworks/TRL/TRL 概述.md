@@ -226,16 +226,16 @@ accelerate launch --multi_gpu --num_processes 16 train.py
 ## 相关
 
 - [[AI/3-LLM/SFT/SFT-TRL实践|SFT-TRL实践]] — TRL SFT 实践
-- [[AI/3-LLM/RL/DPO/DPO-TRL实践|DPO-TRL实践]] — TRL DPO 实践
-- [[AI/3-LLM/RL/GRPO/GRPO-TRL实践|GRPO-TRL实践]] — TRL GRPO 实践
-- [[AI/3-LLM/RL/PPO/PPO-TRL实践|PPO-TRL实践]] — TRL PPO 实践
-- [[AI/3-LLM/RL/KTO/KTO-TRL实践|KTO-TRL实践]] — TRL KTO 实践
-- [[AI/3-LLM/RL/RLOO/RLOO-TRL实践|RLOO-TRL实践]] — TRL RLOO 实践
+- [[AI/3-LLM/RL/实践/DPO-TRL实践|DPO-TRL实践]] — TRL DPO 实践
+- [[AI/3-LLM/RL/实践/GRPO-TRL实践|GRPO-TRL实践]] — TRL GRPO 实践
+- [[AI/3-LLM/RL/实践/PPO-TRL实践|PPO-TRL实践]] — TRL PPO 实践
+- [[AI/3-LLM/RL/实践/KTO-TRL实践|KTO-TRL实践]] — TRL KTO 实践
+- [[AI/3-LLM/RL/实践/RLOO-TRL实践|RLOO-TRL实践]] — TRL RLOO 实践
 - [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]] — 对比框架
 - [[AI/3-LLM/Frameworks/OpenRLHF/OpenRLHF|OpenRLHF]] — 对比框架
-- [[vLLM|vLLM]] — TRL 集成的推理引擎
+- [[AI/3-LLM/Inference/vLLM|vLLM]] — TRL 集成的推理引擎
 - [[AI/3-LLM/SFT/LoRA|LoRA]] — 参数高效训练
-- [[AI/3-LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]
+- [[AI/4-模型/DeepSeek/DeepSeek-R1|DeepSeek-R1]]
 - [[AI/3-LLM/Frameworks/Unsloth/Unsloth 概述|Unsloth 概述]]
 - [[AI/3-LLM/Infra/FSDP|FSDP]]
 - [[AI/3-LLM/Infra/DeepSpeed|DeepSpeed]]

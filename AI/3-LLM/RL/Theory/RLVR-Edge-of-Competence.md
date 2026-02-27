@@ -92,7 +92,7 @@ RLVR 的有效性与数据课程设计强相关。**设计一个覆盖连续难�
 
 ## See Also
 
-- [[AI/3-LLM/RL/Other-Algorithms/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] — 能力边界上的 curriculum：Goldilocks 选"刚好难"的任务，RLVR Edge 研究有效训练区间
+- [[AI/3-LLM/RL/算法/Goldilocks-RL-Task-Difficulty-Curriculum|Goldilocks RL]] — 能力边界上的 curriculum：Goldilocks 选"刚好难"的任务，RLVR Edge 研究有效训练区间
 - [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 2026 全景]] — Exploration 维度：能力边界与探索策略的关系
 - [[AI/3-LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — 同为 difficulty-aware：MARS 在 reward model 层，RLVR Edge 在 policy 层
 -  — LLM 强化学习全图谱

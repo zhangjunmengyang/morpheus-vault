@@ -204,4 +204,4 @@ graph TD
 - [[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training]] — ASTRA：MCP 工具图 + SFT → RL 路线（ToRL 的对比基准，更重工程投入）
 - [[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题]] — Tool Use RL 训练专题（ToRL 在其中的位置和对比）
 - [[AI/2-Agent/Agentic-RL/Search-R1-Reasoning-Search-Engine-RL]] — Search-R1：单工具（搜索）专项 RL（与 ToRL 同路线，不同工具类型）
-- [[AI/3-LLM/RL/GRPO/GRPO 深度理解]] — GRPO 深度理解（ToRL 使用的底层 RL 算法）
+- [[AI/3-LLM/RL/算法/GRPO 深度理解]] — GRPO 深度理解（ToRL 使用的底层 RL 算法）

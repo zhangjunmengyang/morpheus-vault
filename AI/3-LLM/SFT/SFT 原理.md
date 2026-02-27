@@ -18,13 +18,13 @@ sources:
   - "WizardLM: Empowering Large Language Models to Follow Complex Instructions arXiv:2304.12244"
   - NEFTune arXiv:2310.05914 (Jain et al., 2023)
 related:
-  - "[[AI/3-LLM/RL/DPO/DPO-TRL实践|DPO]]"
-  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO]]"
-  - "[[AI/3-LLM/RL/PPO/PPO 原理|PPO]]"
+  - "[[AI/3-LLM/RL/实践/DPO-TRL实践|DPO]]"
+  - "[[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO]]"
+  - "[[AI/3-LLM/RL/算法/PPO 原理|PPO]]"
   - "[[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL]]"
   - "[[AI/3-LLM/SFT/LoRA|LoRA]]"
-  - "[[RLHF-DPO-2026-技术全景|RLHF-DPO 全景]]"
-  - "[[LLM-预训练与分布式训练-2026-全景|预训练与分布式训练]]"
+  - "RLHF-DPO 全景"
+  - "[[AI/3-LLM/Pretraining/预训练原理|预训练与分布式训练]]"
 ---
 
 # SFT（Supervised Fine-Tuning）原理与实践
@@ -68,7 +68,7 @@ flowchart LR
 
 > 来源：InstructGPT arXiv:2203.02155, Figure 2 展示了完整的三阶段流程
 >
-> 🔗 See also: [[RLHF-DPO-2026-技术全景|RLHF-DPO 全景]] — SFT 之后的对齐阶段
+> 🔗 See also: RLHF-DPO 全景 — SFT 之后的对齐阶段
 
 ---
 
@@ -379,9 +379,9 @@ LIMA 的"表面对齐假说"进一步说明：**对齐不是一个知识问题�
 - **SFT 数据能否全自动生成？**：Self-Instruct → Evol-Instruct → 未来是否可以完全闭环，人类只做最终质量把关？
 
 > 🔗 See also:
-> - [[AI/3-LLM/RL/DPO/DPO-TRL实践|DPO]] — SFT 之后的对齐方法，比 PPO 更简单
-> - [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO]] — DeepSeek 的 RL 方法，SFT 模型是起点
-> - [[AI/3-LLM/RL/PPO/PPO 原理|PPO]] — InstructGPT 使用的经典 RL 算法
+> - [[AI/3-LLM/RL/实践/DPO-TRL实践|DPO]] — SFT 之后的对齐方法，比 PPO 更简单
+> - [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO]] — DeepSeek 的 RL 方法，SFT 模型是起点
+> - [[AI/3-LLM/RL/算法/PPO 原理|PPO]] — InstructGPT 使用的经典 RL 算法
 > - [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL]] — HuggingFace 的训练框架，支持 SFT+DPO+PPO 全流程
 
 ---
@@ -405,5 +405,5 @@ LIMA 的"表面对齐假说"进一步说明：**对齐不是一个知识问题�
 - [Axolotl](https://github.com/OpenAccess-AI-Collective/axolotl) — 灵活的 SFT 训练配置框架 ⭐⭐⭐⭐
 
 ### 代码手撕（理论 → 代码）
-- [[AI/3-LLM/SFT/SFT-手撕实操|SFT-手撕实操]] — **必看**：从零实现 SFT 训练循环（数据格式化/loss mask/LoRA 集成），MA-RLHF 项目配套 ⭐⭐⭐⭐⭐
-- [[AI/3-LLM/Infra/MA-RLHF-手撕实操-系列索引|MA-RLHF 手撕实操系列索引]] — SFT → PPO → GRPO → DPO 完整对齐链路代码总索引
+- [[Projects/MA-RLHF/lc6/lc6-01-SFT-手撕实操|SFT-手撕实操]] — **必看**：从零实现 SFT 训练循环（数据格式化/loss mask/LoRA 集成），MA-RLHF 项目配套 ⭐⭐⭐⭐⭐
+- [[Projects/MA-RLHF/MA-RLHF-手撕实操-系列索引|MA-RLHF 手撕实操系列索引]] — SFT → PPO → GRPO → DPO 完整对齐链路代码总索引

@@ -223,7 +223,7 @@ Base Model → SFT → Reasoning RL → Agentic RL → General RL
 
 - **DSA**: 继承自 DeepSeek-V3.2，GLM-5 是首个在 744B MoE 上落地的公开报告
 - **MLA**: 继承自 DeepSeek-V2/V3，Muon Split 是 GLM-5 的增量改进
-- **Slime 框架**: [[AI/3-LLM/RL/Frameworks/Slime-RL-Framework]] — GLM 系列专用异步 RL infra
+- **Slime 框架**: [[AI/3-LLM/RL/算法/Slime-RL-Framework]] — GLM 系列专用异步 RL infra
 - **Sequential RL**: 与 InstructGPT 的 RLHF pipeline 精神类似，但扩展到三阶段
 
 ---
@@ -239,11 +239,14 @@ Base Model → SFT → Reasoning RL → Agentic RL → General RL
 
 ## 相关笔记
 
-- [[AI/3-LLM/RL/Frameworks/Slime-RL-Framework]] — 智谱异步 RL 框架
-- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO]] — GLM-5 使用的 RL 算法族
-- [[2026年2月模型潮（这篇毫无价值，哪怕梳理个从 deepseek R1 以来的时间线都比这强）]] — 竞争背景
+- [[AI/3-LLM/RL/算法/Slime-RL-Framework]] — 智谱异步 RL 框架
+- [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO]] — GLM-5 使用的 RL 算法族
+- 2026年2月模型潮（这篇毫无价值，哪怕梳理个从 deepseek R1 以来的时间线都比这强） — 竞争背景
 - [[AI/3-LLM/Evaluation/ICLR-2026-趋势分析]] — 学术趋势背景
 
 ---
 
 *Created: 2026-02-18 | Source: arXiv:2602.15763 直接精读 | Confidence: High（论文 primary source）*
+
+## See Also
+- [[AI/4-模型/GLM/GLM-5 Agentic Engineering]] — Agentic Engineering 应用视角（工具调用/长任务/工程落地）

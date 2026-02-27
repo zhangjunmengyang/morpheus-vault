@@ -22,8 +22,8 @@ sources:
 related:
   - "[[AI/2-Agent/Fundamentals/ReAct 与 CoT|ReAct 与 CoT]]"
   - "[[AI/2-Agent/Fundamentals/Tool Use|Tool Use]]"
-  - "[[AI-Agent-2026-技术全景|AI Agent 技术全景]]"
-  - "[[AI安全与对齐-2026技术全景|AI 安全与对齐]]"
+  - "AI Agent 技术全景"
+  - "AI 安全与对齐"
 ---
 
 # Agent 生产落地经验
@@ -32,7 +32,7 @@ related:
 
 > 参考：[Anthropic — Building Effective Agents](https://www.anthropic.com/research/building-effective-agents) ; [AgentBench](https://arxiv.org/abs/2308.03688) — 生产环境 Agent 可靠性评估框架
 
-[[AI-Agent-2026-技术全景|AI Agent]] 从原型演示到生产落地存在巨大鸿沟。生产环境中的 Agent 需要面对网络异常、API 限流、用户输入多样性等复杂挑战。本文基于实际项目经验，深入探讨错误处理、超时管理、可观测性建设、人机协作以及成本控制的最佳实践，为 Agent 系统的稳定运行提供全方位指导。
+AI Agent 从原型演示到生产落地存在巨大鸿沟。生产环境中的 Agent 需要面对网络异常、API 限流、用户输入多样性等复杂挑战。本文基于实际项目经验，深入探讨错误处理、超时管理、可观测性建设、人机协作以及成本控制的最佳实践，为 Agent 系统的稳定运行提供全方位指导。
 
 ## 错误处理策略
 
@@ -953,6 +953,6 @@ flowchart TD
 
 - [[AI/2-Agent/Fundamentals/ReAct 与 CoT|ReAct 与 CoT]] — Agent 推理模式的理论基础
 - [[AI/2-Agent/Fundamentals/Tool Use|Tool Use]] — 工具调用安全与最佳实践
-- [[AI-Agent-2026-技术全景|AI Agent 技术全景]] — Agent 生产架构在全景中的位置
-- [[AI安全与对齐-2026技术全景|AI 安全与对齐]] — Agent 安全防护的完整框架
+- AI Agent 技术全景 — Agent 生产架构在全景中的位置
+- AI 安全与对齐 — Agent 安全防护的完整框架
 - [[AI/3-LLM/Application/幻觉问题|幻觉问题]] — Agent 输出可靠性的核心挑战

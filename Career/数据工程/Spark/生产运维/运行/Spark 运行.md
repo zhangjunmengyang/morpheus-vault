@@ -206,10 +206,10 @@ spark.speculation.multiplier=1.5      # 比中位数慢 1.5 倍就推测
 
 ## 相关
 
-- [[Spark 概述|Spark 概述]]
-- [[Spark 提交流程]]
-- [[Spark on Yarn]]
-- [[Spark 生产运维|Spark 生产运维]]
-- [[Spark 内存模型|Spark 内存模型]]
-- [[Spark 调优|Spark 调优]]
-- [[Spark Shuffle|Spark Shuffle]]
+- [[Career/数据工程/Spark/Spark 概述|Spark 概述]]
+- [[Career/数据工程/Spark/生产运维/运行/Spark 提交流程]]
+- [[Career/数据工程/Spark/生产运维/运行/Spark on Yarn]]
+- [[Career/数据工程/Spark/生产运维/Spark 生产运维|Spark 生产运维]]
+- [[Career/数据工程/Spark/存储/Spark 内存模型|Spark 内存模型]]
+- [[Career/数据工程/Spark/生产运维/调优/Spark 调优|Spark 调优]]
+- [[Career/数据工程/Spark/SQL/Spark Shuffle|Spark Shuffle]]

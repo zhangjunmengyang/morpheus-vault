@@ -208,7 +208,7 @@ is_online() {
 discord_reachable() {
     local code
     code=$(/usr/bin/curl -s --max-time 5 -o /dev/null -w "%{http_code}" "$DISCORD_CHECK_URL" 2>/dev/null)
-    [[ "$code" == "200" ]]
+    "$code" == "200"
 }
 
 restart_gateway() {

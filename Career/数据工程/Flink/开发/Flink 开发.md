@@ -196,12 +196,12 @@ flink-job/
 
 ## 相关
 
-- [[Flink 概述|Flink 概述]]
-- [[Flink API（Java）]]
-- [[Flink SQL UDF]]
-- [[Flink CEP CDC|Flink CEP CDC]]
-- [[Flink 窗口和时间机制|Flink 窗口和时间机制]]
-- [[Flink 内存机制|Flink 内存机制]]
-- [[Flink CheckPoint|Flink CheckPoint]]
-- [[Flink 生产|Flink 生产]]
-- [[Flink SideOutput|Flink SideOutput]]
+- [[Career/数据工程/Flink/Flink 概述|Flink 概述]]
+- [[Career/数据工程/Flink/开发/Flink API（Java）]]
+- [[Career/数据工程/Flink/开发/Flink SQL UDF]]
+- [[Career/数据工程/Flink/Flink CEP CDC|Flink CEP CDC]]
+- [[Career/数据工程/Flink/Flink 窗口和时间机制|Flink 窗口和时间机制]]
+- [[Career/数据工程/Flink/Flink 内存机制|Flink 内存机制]]
+- [[Career/数据工程/Flink/CheckPoint/Flink CheckPoint|Flink CheckPoint]]
+- [[Career/数据工程/Flink/生产/Flink 生产|Flink 生产]]
+- [[Career/数据工程/Flink/生产/Flink SideOutput|Flink SideOutput]]

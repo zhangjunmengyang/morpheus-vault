@@ -181,7 +181,7 @@ Phase 2.4 目标：
 
 - **[[AI/5-AI 安全/PI-Landscape-SoK-Prompt-Injection-Taxonomy-Defense|PI-Landscape SoK]]**：提供理论分类框架，本文是实践实现
 - **[[AI/5-AI 安全/OMNI-LEAK-Multi-Agent-Orchestrator-Data-Exfiltration|OMNI-LEAK]]**：本文 Data Exfiltration 类别的真实攻击案例
-- **[[Agent 安全威胁全景 2026-02|Agent 安全威胁全景 2026-02]]**：宏观视角补充
+- **Agent 安全威胁全景 2026-02**：宏观视角补充
 
 ---
 

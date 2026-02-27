@@ -214,7 +214,7 @@ prompt = """
 ## 推荐阅读
 
 - 原论文：[arXiv:2503.21620](https://arxiv.org/abs/2503.21620)
-- 对比大系统：[[AI/2-Agent/Agentic-RL/UI-TARS-2 论文|UI-TARS-2]] — GUI Agent 工程极致路线（Data Flywheel + 异步 multi-turn RL）；UI-R1 可作其冷启动 warm-up
+- 对比大系统：[[AI/2-Agent/Agentic-RL/UI-TARS-2|UI-TARS-2]] — GUI Agent 工程极致路线（Data Flywheel + 异步 multi-turn RL）；UI-R1 可作其冷启动 warm-up
 - Reward 设计参考：[[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool Use RL 训练专题]] — ToolRL reward 粒度分析（坐标级 reward 思路相通）
 - 基础环境：[AndroidControl](https://arxiv.org/abs/2310.04716) | [ScreenSpot-Pro](https://arxiv.org/abs/2504.07981)
 - GUI Agent RL 综述定位：[Agentic RL Survey §4.4](https://arxiv.org/abs/2509.02547) — GUI Agent RL 章节

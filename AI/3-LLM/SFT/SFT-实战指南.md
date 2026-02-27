@@ -311,4 +311,4 @@ LoRA 合并后效果下降             检查 merge 时的 dtype（避免精度�
 
 ---
 
-**相关笔记**：[[AI/3-LLM/SFT/SFT 原理]] | [[AI/3-LLM/SFT/LoRA]] | [[AI/3-LLM/SFT/SFT-TRL实践]] | [[AI/3-LLM/SFT/Post-Training Unified View 论文]]
+**相关笔记**：[[AI/3-LLM/SFT/SFT 原理]] | [[AI/3-LLM/SFT/LoRA]] | [[AI/3-LLM/SFT/SFT-TRL实践]] | [[AI/3-LLM/SFT/Post-Training-Unified-View]]

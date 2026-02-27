@@ -19,7 +19,7 @@ related:
   - "[[AI/2-Agent/Agentic-RL/SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees]]"
   - "[[AI/2-Agent/Agentic-RL/Search-R1plus-Tool-Use-RL-Ablation]]"
   - "[[AI/2-Agent/Agentic-RL/LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL]]"
-  - "[[AI/3-LLM/RL/PPO/lc8-01-PPO-手撕实操]]"
+  - "[[Projects/MA-RLHF/lc8-PPO/lc8-01-PPO-手撕实操]]"
   - "[[AI/2-Agent/Agentic-RL/Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems]]"
   - "[[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL]]"
 ---
@@ -231,3 +231,4 @@ grad_norm = sum(p.grad.norm() for p in model.parameters())
 - [[AI/2-Agent/Agentic-RL/SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees]] — backward induction 理论解（不同角度解决 multi-turn GRPO 问题）
 - [[AI/2-Agent/Agentic-RL/Search-R1plus-Tool-Use-RL-Ablation]] — REINFORCE > PPO > GRPO 稳定性（Search-R1++ 的经验验证与本文机制分析互为佐证）
 - [[AI/2-Agent/Agentic-RL/LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL]] — LOOP 用 LOO baseline 替代 critic，避免 off-policy 问题（on-policy 方案）
+- [[AI/3-LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL 训练稳定性 2026 统一分析]] — 本文所在的稳定性图谱，Off-Policy 级别章节（反向链接）

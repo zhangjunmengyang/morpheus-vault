@@ -288,4 +288,4 @@ Tree-GRPO 用树结构重定义了 "group"：group = 同一状态的不同延续
 5. **Step-DPO**：step-level DPO 的原始论文（理解 Proposition 3.1 的理论背景）
 6. **对比阅读**：[[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR]]、[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|GiGPO/Long-Horizon Credit Assignment]]、[[AI/2-Agent/Agentic-RL/RC-GRPO-Reward-Conditioned-Tool-Calling-RL|RC-GRPO]]
 7. **元原则**：[[AI/3-LLM/RL/Theory/RL-Signal-Granularity-Causal-Structure-Principle|RL 信号粒度与因果结构匹配原则]] — Tree-GRPO 是该原则路径1（重定义 Group）的典型实现
-8. **理论基础**：[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — Tree-GRPO 是 GRPO 的树搜索改造：线性 rollout → 树状 rollout，双层 advantage 取代单层 group advantage
+8. **理论基础**：[[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO 深度理解]] — Tree-GRPO 是 GRPO 的树搜索改造：线性 rollout → 树状 rollout，双层 advantage 取代单层 group advantage

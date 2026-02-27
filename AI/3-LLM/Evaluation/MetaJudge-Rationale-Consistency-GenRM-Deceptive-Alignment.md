@@ -141,7 +141,7 @@ graph LR
 
 - [[AI/3-LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement]] — 同期工作，从 margin 角度改进 reward
 - [[AI/3-LLM/RL/Theory/Likelihood-Based-Reward-Designs-CoT-RL]] — 用 log-probability 替代 discrete outcome，避开 RC 问题的另一思路
-- [[Reward-Design-2026-Panorama]] — 三篇合并视角综合分析
+- Reward-Design-2026-Panorama — 三篇合并视角综合分析
 
 ## 学者评价
 
@@ -189,5 +189,5 @@ RC 问题说明 reward signal 本身可能有内在矛盾，导致 policy 优化
 - **原始论文**：[arXiv:2602.04649](https://arxiv.org/abs/2602.04649)
 - **同期工作**：[[AI/3-LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement]]（margin-aware reward）
 - **CoT 侧修复**：[[AI/3-LLM/RL/Theory/REMuL-CoT-Faithfulness-Multi-Listener-RL]]（policy 端 CoT faithfulness）
-- **综合视角**：[[Reward-Design-2026-Panorama]]（三篇合并分析）
+- **综合视角**：Reward-Design-2026-Panorama（三篇合并分析）
 - **Log-prob 方案**：[[AI/3-LLM/RL/Theory/Likelihood-Based-Reward-Designs-CoT-RL]]（避开 RC 问题的另一路）

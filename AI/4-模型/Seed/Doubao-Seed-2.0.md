@@ -17,7 +17,7 @@ sources:
   - Model Card：79 页 LaTeX 技术文档（2026-02-14）
 related:
   - ""
-  - "[[2026年2月模型潮（这篇毫无价值，哪怕梳理个从 deepseek R1 以来的时间线都比这强）]]"
+  - "2026年2月模型潮（这篇毫无价值，哪怕梳理个从 deepseek R1 以来的时间线都比这强）"
 ---
 
 # Doubao-Seed-2.0 技术分析
@@ -132,10 +132,13 @@ related:
 - 代码场景继续用 Claude/GPT
 
 ## 相关笔记
-- [[2026年2月模型潮（这篇毫无价值，哪怕梳理个从 deepseek R1 以来的时间线都比这强）|2026年2月模型潮（这篇毫无价值）]] — 7 款 frontier model 同月发布的整体分析
+- 2026年2月模型潮（这篇毫无价值） — 7 款 frontier model 同月发布的整体分析
 - [[AI/4-模型/GLM/GLM-5|GLM-5]] — 同期发布的另一款国产旗舰，744B MoE + Slime 异步 RL
-- [[AI/3-LLM/RL/Frameworks/Slime-RL-Framework|Slime RL Framework]] — GLM-5/Doubao 系共用异步 RL 基础设施对比
+- [[AI/3-LLM/RL/算法/Slime-RL-Framework|Slime RL Framework]] — GLM-5/Doubao 系共用异步 RL 基础设施对比
 -  — Doubao-Seed-2.0 定位 Agent-first，参见 Agent 全图谱
 
 ---
 *Created: 2026-02-16 | Source: ByteDance 官方 Model Card + 多方报道交叉验证*
+
+## See Also
+- [[AI/4-模型/Seed/豆包 Doubao 2.0]] — 产品与能力视角（中文理解/Agent/格局评估）

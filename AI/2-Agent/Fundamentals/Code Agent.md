@@ -9,14 +9,14 @@ status: draft
 
 ## 概述
 
-[[AI/2-Agent/Fundamentals/Code-Agent-深度|Code Agent]] 和 [[Computer Use Agent]] 代表了 AI Agent 技术的重要发展方向。Code Agent 专注于软件开发任务，如代码生成、bug 修复、代码审查等；Computer Use Agent 则更进一步，能够直接操作计算机界面，模拟人类的屏幕操作行为。本文将深入探讨这两类 Agent 的技术架构、代表性产品以及当前的局限性和发展方向。
+[[AI/2-Agent/Fundamentals/Code-Agent-深度|Code Agent]] 和 Computer Use Agent 代表了 AI Agent 技术的重要发展方向。Code Agent 专注于软件开发任务，如代码生成、bug 修复、代码审查等；Computer Use Agent 则更进一步，能够直接操作计算机界面，模拟人类的屏幕操作行为。本文将深入探讨这两类 Agent 的技术架构、代表性产品以及当前的局限性和发展方向。
 
 ## Code Agent
 
 ### 主要产品和平台
 
 #### SWE-Agent
-[[SWE-Agent]] 是专门为软件工程任务设计的 Agent：
+SWE-Agent 是专门为软件工程任务设计的 Agent：
 
 ```python
 # SWE-Agent 的基本工作流程
@@ -67,7 +67,7 @@ def swe_agent_workflow(issue_description, repository):
 ```
 
 #### Devin
-[[Devin]] 是 Cognition AI 开发的全栈软件工程师 Agent：
+Devin 是 Cognition AI 开发的全栈软件工程师 Agent：
 
 ```python
 def devin_capabilities():
@@ -100,7 +100,7 @@ def devin_capabilities():
 ```
 
 #### OpenHands (原 OpenDevin)
-[[OpenHands]] 是开源的软件开发 Agent 平台：
+OpenHands 是开源的软件开发 Agent 平台：
 
 ```python
 def openhands_architecture():
@@ -125,7 +125,7 @@ def openhands_architecture():
 ```
 
 #### Claude Code
-[[Claude Code]] 是 Anthropic 的代码专用 CLI 工具：
+Claude Code 是 Anthropic 的代码专用 CLI 工具：
 
 ```python
 def claude_code_features():
@@ -159,7 +159,7 @@ def claude_code_features():
 ```
 
 #### Codex CLI 
-[[Codex CLI]] 基于 GitHub Copilot 技术的命令行工具：
+Codex CLI 基于 GitHub Copilot 技术的命令行工具：
 
 ```bash
 # Codex CLI 使用示例
@@ -201,7 +201,7 @@ def code_agent_architecture():
 ### 核心产品
 
 #### Anthropic Computer Use Agent
-[[Anthropic Computer Use Agent]] 是首个商用级别的计算机使用 Agent：
+Anthropic Computer Use Agent 是首个商用级别的计算机使用 Agent：
 
 ```python
 def anthropic_cua_capabilities():
@@ -236,7 +236,7 @@ def anthropic_cua_capabilities():
 ```
 
 #### GPT-4o with Screen
-[[GPT-4o with Screen]] 提供视觉理解能力的计算机操作：
+GPT-4o with Screen 提供视觉理解能力的计算机操作：
 
 ```python
 def gpt4o_screen_interaction():
@@ -264,7 +264,7 @@ def gpt4o_screen_interaction():
 ```
 
 #### UI-TARS
-[[UI-TARS]] 专注于移动应用和 Web 界面的自动化操作：
+UI-TARS 专注于移动应用和 Web 界面的自动化操作：
 
 ```python
 def ui_tars_architecture():

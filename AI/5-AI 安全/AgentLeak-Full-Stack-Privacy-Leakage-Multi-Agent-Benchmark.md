@@ -32,7 +32,7 @@ status: active
 - [[AI/5-AI 安全/AutoInject-RL-Prompt-Injection-Attack|AutoInject]] — RL 生成 universal adversarial suffix（单 agent 攻击）；AgentLeak 的 A2 adversary 级别正是这类攻击，multi-agent 环境放大了攻击面
 - [[AI/2-Agent/Evaluation/CowCorpus-Human-Intervention-Modeling-Web-Agents|CowCorpus]] — 人类干预时机建模；AgentLeak 发现 C2 内部通信是最大泄漏渠道，指向在 C2 层引入 CowCorpus 式干预节点的高价值
 - [[AI/5-AI 安全/AI Agent 集体行为与安全漂移|AI Agent 集体行为与安全漂移]] — 多 Agent 安全漂移机制；AgentLeak 的 68.8% 内部泄漏率是"安全漂移"在隐私维度的量化证据
-- [[AI安全与对齐-2026技术全景|AI 安全与对齐 2026 全景]] — 全栈安全框架；AgentLeak 提供的 channel-level 泄漏分类补充了全景中 multi-agent 安全的实证数据
+- AI 安全与对齐 2026 全景 — 全栈安全框架；AgentLeak 提供的 channel-level 泄漏分类补充了全景中 multi-agent 安全的实证数据
 
 ---
 

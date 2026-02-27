@@ -11,10 +11,10 @@ tags:
   - context-engineering
   - weekly-scan
 related:
-  - "[[GitHub-Agentic-Workflows|GitHub Agentic Workflows]]"
-  - "[[KLong-Extremely-Long-Horizon-Agent-RL|KLong — context 管理的学术呼应]]"
-  - "[[OAPL-Off-Policy-RL-LLM-Reasoning|OAPL（Databricks+Cornell）— Databricks RL 研究端]]"
-  - "[[Agentic-RL-2026前沿综合分析|Agentic-RL 2026 综合分析]]"
+  - "[[AI/2-Agent/Fundamentals/GitHub-Agentic-Workflows|GitHub Agentic Workflows]]"
+  - "[[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent-RL|KLong — context 管理的学术呼应]]"
+  - "[[AI/3-LLM/RL/算法/OAPL-Off-Policy-RL-LLM-Reasoning|OAPL（Databricks+Cornell）— Databricks RL 研究端]]"
+  - "[[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL 2026 综合分析]]"
 ---
 
 > [!warning] 路径偏差

@@ -207,17 +207,17 @@ reward = sandbox_execute(generated_code, test_cases)
 - [[AI/3-LLM/Frameworks/verl/HybridFlow]] — verl 的核心架构
 - [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL 概述]] — 对比框架
 - [[AI/3-LLM/Frameworks/OpenRLHF/OpenRLHF|OpenRLHF]] — 另一个大规模 RL 框架
-- [[AI/3-LLM/RL/GRPO/GRPO-verl实践|GRPO-verl实践]] — verl 中 GRPO 实践
-- [[AI/3-LLM/RL/PPO/PPO-verl实践|PPO-verl实践]] — verl 中 PPO 实践
-- [[AI/3-LLM/RL/DAPO/DAPO-verl实践|DAPO-verl实践]] — verl 中 DAPO 实践
+- [[AI/3-LLM/RL/实践/GRPO-verl实践|GRPO-verl实践]] — verl 中 GRPO 实践
+- [[AI/3-LLM/RL/实践/PPO-verl实践|PPO-verl实践]] — verl 中 PPO 实践
+- [[AI/3-LLM/RL/实践/DAPO-verl实践|DAPO-verl实践]] — verl 中 DAPO 实践
 - [[AI/3-LLM/Infra/FSDP|FSDP]] — verl 的训练后端
-- [[vLLM|vLLM]] — verl 的推理后端
+- [[AI/3-LLM/Inference/vLLM|vLLM]] — verl 的推理后端
 - [[AI/3-LLM/Infra/Ray|Ray]] — verl 的资源编排
 - [[AI/3-LLM/Frameworks/verl/Reward Function]] — 自定义 reward 设计
 - [[AI/3-LLM/Frameworks/verl/verl 训练参数]] — 详细参数配置
 - [[AI/3-LLM/Frameworks/verl/性能调优]] — 性能优化技巧
 - [[AI/3-LLM/Frameworks/verl/硬件资源预估]] — 资源规划
-- [[AI/3-LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]
+- [[AI/4-模型/DeepSeek/DeepSeek-R1|DeepSeek-R1]]
 - [[AI/3-LLM/Infra/DeepSpeed|DeepSpeed]]
 - [[AI/3-LLM/Infra/Megatron-LM|Megatron-LM]]
 - [[AI/3-LLM/Infra/分布式训练|分布式训练]]

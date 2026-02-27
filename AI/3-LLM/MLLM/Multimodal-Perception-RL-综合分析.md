@@ -219,9 +219,9 @@ A: 目前没有成熟方案。单步推理有 Perception-R1（judging LLM 评估
 
 ## 推荐阅读
 
-- **[[AI/3-LLM/RL/Other-Algorithms/VPPO-Visually-Perceptive-Policy-Optimization|VPPO]]**：Token 级视觉依赖度，7B +19.2%
+- **[[AI/3-LLM/RL/算法/VPPO-Visually-Perceptive-Policy-Optimization|VPPO]]**：Token 级视觉依赖度，7B +19.2%
 - **[[AI/3-LLM/MLLM/Perception-R1-Visual-Perception-Reward-RLVR|Perception-R1]]**：显式感知 reward，1,442 样本达 SOTA
-- **[[AI/2-Agent/Agentic-RL/UI-TARS-2 论文|UI-TARS-2]]**：GUI Agent 感知的工程级解法
+- **[[AI/2-Agent/Agentic-RL/UI-TARS-2|UI-TARS-2]]**：GUI Agent 感知的工程级解法
 - **延伸**：VTPerception-R1 (2509.24776)、VisRL、PAPO
 - **基础**：[Agentic RL Survey §3.6](https://arxiv.org/abs/2509.02547)（感知 Agent 综述）
 

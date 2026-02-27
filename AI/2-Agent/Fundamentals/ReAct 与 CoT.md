@@ -26,9 +26,9 @@ sources:
 related:
   - "[[AI/2-Agent/Fundamentals/Agent 生产实践|Agent 生产实践]]"
   - "[[AI/2-Agent/Fundamentals/Tool Use|Tool Use]]"
-  - "[[AI-Agent-2026-技术全景|AI Agent 技术全景]]"
+  - "AI Agent 技术全景"
   - "[[AI/3-LLM/Application/幻觉问题|幻觉问题]]"
-  - "[[AI安全与对齐-2026技术全景|AI 安全与对齐]]"
+  - "AI 安全与对齐"
 ---
 
 # ReAct 与 CoT 推理模式：从思维链到行动循环
@@ -1289,7 +1289,7 @@ $$\text{最优方法} = \begin{cases} \text{Zero-shot CoT} & \text{if 无示例 
 
 ### 脑暴：如果往下延伸
 - 将 Reflexion 的自我反思与 [[AI/2-Agent/Fundamentals/Agent 生产实践|Agent 生产实践]] 中的错误处理结合：Agent 不只是重试，而是基于失败原因生成反思 → 修改策略 → 重新执行
-- CoT + [[AI安全与对齐-2026技术全景|安全对齐]]：如果强制模型在回答前展示 CoT，是否能让安全审查更精准？（检查推理链是否试图绕过安全原则）
+- CoT + 安全对齐：如果强制模型在回答前展示 CoT，是否能让安全审查更精准？（检查推理链是否试图绕过安全原则）
 - 6 个月预判：o1/o3 的"内隐 CoT"（hidden chain-of-thought）将成为主流范式——模型内部自动 CoT 而非用户显式提示
 
 ```mermaid
@@ -1311,6 +1311,6 @@ flowchart TD
 **相关链接**：
 - [[AI/2-Agent/Fundamentals/Agent 生产实践|Agent 生产实践]] — Agent 推理模式的生产落地经验
 - [[AI/2-Agent/Fundamentals/Tool Use|Tool Use]] — ReAct 中的工具调用最佳实践
-- [[AI-Agent-2026-技术全景|AI Agent 技术全景]] — Agent 推理在全景中的位置
+- AI Agent 技术全景 — Agent 推理在全景中的位置
 - [[AI/3-LLM/Application/幻觉问题|幻觉问题]] — CoT 推理链中的幻觉风险
-- [[AI安全与对齐-2026技术全景|AI 安全与对齐]] — 推理透明度对安全审查的价值
+- AI 安全与对齐 — 推理透明度对安全审查的价值

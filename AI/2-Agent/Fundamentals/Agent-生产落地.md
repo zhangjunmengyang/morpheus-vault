@@ -1,4 +1,8 @@
 ---
+
+> [!warning] 早期简版
+> 完整工程实践见 [[AI/2-Agent/Fundamentals/Agent 生产实践|Agent 生产实践]]（957行，含可观测性/人机协作/成本控制完整方案）。
+
 title: "AI Agent 生产落地经验"
 brief: "Demo→Production 的核心鸿沟：可靠性/成本/延迟/错误恢复；工程经验总结：幂等设计/人工兜底/成本控制/监控体系；面试热点——生产级 Agent 与 Demo 的本质差异"
 date: 2026-02-14

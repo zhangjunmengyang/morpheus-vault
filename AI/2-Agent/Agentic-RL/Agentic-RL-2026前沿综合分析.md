@@ -18,7 +18,7 @@ related:
   - "[[AI/2-Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|CM2]]"
   - "[[AI/2-Agent/Agentic-RL/HiPER-Hierarchical-Plan-Execute-RL-Credit-Assignment|HiPER（ICML 2026）]]"
   - "[[AI/2-Agent/Agentic-RL/EnterpriseGym-Corecraft|EnterpriseGym-Corecraft]]"
-  - "[[AI/3-LLM/RL/Other-Algorithms/OpenRS-Pairwise-Adaptive-Rubric|OpenRS-Pairwise-Adaptive-Rubric]]"
+  - "[[AI/3-LLM/RL/算法/OpenRS-Pairwise-Adaptive-Rubric|OpenRS-Pairwise-Adaptive-Rubric]]"
   - "[[AI/2-Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer-CWRPO-Workflow-Orchestration-RL]]"
   - "[[AI/2-Agent/Multi-Agent/AgentConductor-Topology-Evolution|AgentConductor]]"
   - "[[AI/2-Agent/Agentic-RL/SquRL-Dynamic-Workflow-Text-to-SQL|SquRL-Dynamic-Workflow-Text-to-SQL]]"
@@ -36,6 +36,8 @@ related:
 > v8.0（2026-02-25）：**ERL、CM2、TSR、SCoRe 正式入表**；Multi-Turn RL 三支柱升级为**四支柱**（新增 ERL 反思-内化支柱）；全景表补齐 2/25 五条新作。ERL（2602.13949，USC+Microsoft+UPenn）= experience-reflection-consolidation 循环嵌入 RL 训练，部署时零成本（SFT 蒸馏内化），Sokoban +81%，HotpotQA +11%；CM2（2602.12268）= Checklist Rewards + Sparse/Dense 解耦，multi-turn tool use；SCoRe（ICLR 2025）= 两阶段 KL 约束删除假纠错均衡。
 > v9.0（2026-02-25）：**SELAUR 入表**（2602.21158，JHU+ASU+Purdue）——失败轨迹 token-level 不确定性 reward shaping，零额外模型成本；新增「失败轨迹利用深度谱系」：SELAUR（浅·零成本）→ ERL（中·反思循环）→ CSO（深·反事实验证）；SELAUR 与 GiGPO 正交互补（成功信号精化 + 失败信号激活 = 完整 credit 覆盖）。
 > v11.0（2026-02-26）：**「关键决策天然稀疏」跨域实证固化**：CSO（Agent RL，16% critical steps）+ SIA（ICML 2026，推理时对齐，20% Junction token）从不同领域独立验证同一原则；补充到 CSO 面试补充段落；Papers/多Agent集体行为安全（Collective Behaviour+Colosseum）双向闭合，Wisdom层元问题笔记增加实证验证链。
+> v13.0（2026-02-27）：**Agent 进化模式谱系三层框架建立**（老板指令）；Reflexion/ExpeL/AgentQ 三篇 in-context 进化奠基论文入库。
+> v12.0（2026-02-27）：**SORL 入表**（2511.20718，Texas A&M，★★★★☆）——Off-policy multi-turn RL 崩溃诊断（粒度错配+方差累积两根因）+ 修复（Turn-Level IS 均值替代乘积 + CTN 自适应惩罚）；训练稳定性章节补充 off-policy 专项解法；更新 See Also 导航体系。
 > v10.0（2026-02-25）：**PyVision-RL 入表**（2602.20739，多模态 Agentic RL）——提出 Interaction Collapse（Echo Trap 的多模态版本：模型学会减少工具调用规避复杂性），Oversampling-Filtering-Ranking + Accumulative Tool Reward 修复；On-Demand Context Construction 解决视频 token 爆炸；跨模态验证了"RL 压力推向退化策略"根因的普遍性，新增训练失败模式跨模态谱系。
 
 > 这篇笔记是对 2026 年 2 月集中涌现的 Agentic RL 工作的综合理解，不是论文列表，是一个框架。
@@ -326,7 +328,7 @@ $$\text{Rollout quality} \uparrow \Rightarrow \text{Training signal quality} \up
 | HiPER | ❌ | ✅（trajectory）| ❌ | ❌（HAE 计算）| 无偏性 + 方差减少 |
 | **CSO** | **✅（验证 rollout）** | **✅（可验证结果）** | **❌** | **✅（expert model）** | **反事实因果（empirical）** |
 
-**面试补充（v7）**：CSO 的独特角色——其他方案都问"什么做对了"，CSO 问"什么换掉后能成功"，是 Credit Assignment 谱系里唯一开采失败轨迹的方案。16% 关键步骤 = 高熵步骤原则在 Agent 领域的首次系统验证。**跨域印证（v11）**：同一天 SIA（ICML 2026，arXiv:2602.21215）独立发现推理时对齐也是 sparse control problem——20% Junction token（高熵节点）承担 100% 对齐效果。CSO 16%（Agent RL credit） + SIA 20%（Inference Alignment）= **「关键决策天然稀疏」的跨领域双重实证**，面试时引用这个跨域一致性远比单讲论文更有深度。见：[[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO（2602.03412）]] + [[SIA-Sparse-Inference-time-Alignment|SIA（2602.21215）]]
+**面试补充（v7）**：CSO 的独特角色——其他方案都问"什么做对了"，CSO 问"什么换掉后能成功"，是 Credit Assignment 谱系里唯一开采失败轨迹的方案。16% 关键步骤 = 高熵步骤原则在 Agent 领域的首次系统验证。**跨域印证（v11）**：同一天 SIA（ICML 2026，arXiv:2602.21215）独立发现推理时对齐也是 sparse control problem——20% Junction token（高熵节点）承担 100% 对齐效果。CSO 16%（Agent RL credit） + SIA 20%（Inference Alignment）= **「关键决策天然稀疏」的跨领域双重实证**，面试时引用这个跨域一致性远比单讲论文更有深度。见：[[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO（2602.03412）]] + [[AI/3-LLM/Inference/SIA-Sparse-Inference-time-Alignment|SIA（2602.21215）]]
 
 ### Multi-Turn RL 四支柱（v8 新增）
 
@@ -483,7 +485,8 @@ Agentic RL 训练 Pipeline
 │   ├── 训练稳定性
 │   │   ├── RAGEN/StarPO — Echo Trap 诊断 + StarPO-S 三机制（trajectory filtering / critic baselining / decoupled clipping）
 │   │   ├── TSR — training-time tree search rollout（rollout quality → stability）
-│   │   └── SCoRe — Phase 1 KL 约束初始化（self-correction RL）
+│   │   ├── SCoRe — Phase 1 KL 约束初始化（self-correction RL）
+│   │   └── SORL — Off-policy multi-turn 专用：Turn-Level IS + CTN，实例化为 SO-PPO/SO-GRPO
 │   │
 │   └── Multi-agent RL
 │       ├── PARL — Freeze subagents，只训练 orchestrator（Kimi K2.5）
@@ -619,6 +622,7 @@ $$T^{(1)} < T^{(2)} < \cdots < T^{(M)} \quad (2h \to 4h \to 6h)$$
 | 2026/02/17 | AWM | 2602.10090 | 环境工程·合成 | ★★★★☆ |
 | 2026/02/18 | SHARP | 2602.08335 | 算法·Credit·Multi-agent | ★★★★☆ |
 | 2026/02/18 | Dr. MAS | 2602.08847 | 算法·Multi-agent 稳定性 | ★★★★☆ |
+| 2025/11/28 | SORL | 2511.20718 | 算法·Off-policy 稳定性·Multi-turn | ★★★★☆ |
 | 2026/02/23 | Search-R1++ | 2602.19526 | Reward Design·Policy Opt | ★★★☆☆ |
 | 2025/10 | SCoRe | 2501.09723 | 算法·均衡控制·多轮纠错 | ★★★★★ |
 | 2026/02/13 | CM2 | 2602.12268 | Reward·Unverifiable·工具调用 | ★★★★☆ |
@@ -668,9 +672,14 @@ $$T^{(1)} < T^{(2)} < \cdots < T^{(M)} \quad (2h \to 4h \to 6h)$$
 - [[AI/2-Agent/Agentic-RL/SquRL-Dynamic-Workflow-Text-to-SQL|SquRL]] — 维度 4：Workflow 选择级（解法 C，Theorem 3.1 形式化证明）
 - [[AI/3-LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — reward modeling 自适应分配（与 Reward 维度高度互补）
 - [[AI/5-AI 安全/Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization]] — Agentic RL × Safety 汇合点：pre-generation hidden state 安全门控
-- [[AI/2-Agent/Agentic-RL/UI-TARS-2 论文|UI-TARS-2]] — GUI Agent RL 工程极致路线：Data Flywheel + 异步 multi-turn RL + Hybrid 沙盒（★★★★★）
+- [[AI/2-Agent/Agentic-RL/UI-TARS-2|UI-TARS-2]] — GUI Agent RL 工程极致路线：Data Flywheel + 异步 multi-turn RL + Hybrid 沙盒（★★★★★）
 - [[AI/2-Agent/Agentic-RL/UI-R1-GUI-Action-Prediction-RL|UI-R1]] — GUI Agent RL 极简路线：136 条数据 rule-based GRPO，3B ≈ SFT 7B@76K（★★★★☆）
 - [[AI/2-Agent/Fundamentals/Memory-R1-RL-for-LLM-Memory-Management|Memory-R1]] — RL 训练 Memory Manager（ADD/UPDATE/DELETE/NOOP），记忆管理新范式（★★★★☆）
 - [[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training|ASTRA]] — 全自动 tool-use RL 流水线，MCP 工具图 + verifiable 环境（★★★★☆）
 - [[AI/2-Agent/Agentic-RL/RC-GRPO-Reward-Conditioned-Tool-Calling-RL|RC-GRPO]] — reward token conditioning 解决 multi-turn GRPO reward 同质化（★★★★☆）
 - [[AI/3-LLM/MLLM/PyVision-RL-Agentic-Vision-Interaction-Collapse|PyVision-RL（2602.20739）]] — **跨模态训练失败模式**：Interaction Collapse = Echo Trap 的多模态版本（v10 新增）；Oversampling-Filtering-Ranking + Accumulative Tool Reward；On-Demand Context Construction 解决视频 context 爆炸
+- [[AI/2-Agent/Agentic-RL/SORL-Stabilizing-Off-Policy-RL-Long-Horizon-Agent|SORL（2511.20718）]] — Off-policy multi-turn RL 崩溃的两根因诊断（粒度错配+方差累积）+ Turn-Level IS/CTN 修复，SO-PPO/SO-GRPO 实例化（**v12 新增**）
+- [[AI/2-Agent/Agentic-RL/Agent-进化模式谱系|🧠 Agent 进化模式谱系]] ⭐ — **三层统一框架**（训练时/in-context/运行时），附贾维斯实践映射与选型决策树（**v13 新增，老板指令产出**）
+- [[AI/2-Agent/Agentic-RL/Reflexion-Verbal-Reinforcement-Learning|Reflexion（NeurIPS 2023）]] — in-context 进化奠基：verbal reinforcement，episodic memory buffer，无需微调（**v13 新增**）
+- [[AI/2-Agent/Agentic-RL/ExpeL-Experiential-Learning-Agent|ExpeL（AAAI 2024）]] — 跨任务规则提炼：ADD/UPVOTE/DOWNVOTE/EDIT 规则库 + 相似案例检索（**v13 新增**）
+- [[AI/2-Agent/Agentic-RL/AgentQ-MCTS-Self-Critique-DPO|AgentQ]] — MCTS + 自我批判 + off-policy DPO，Llama-3 70B 真实预订 18.6%→81.7%（**v13 新增**）

@@ -29,7 +29,7 @@ status: active
 - [[AI/3-LLM/RL/Theory/Rationale-Consistency-GenRM-Deceptive-Alignment|Rationale Consistency]] — 本文三维框架之"推理质量维度"的核心来源：乘法门控R_rationale×R_outcome切断"猜对答案"捷径（arXiv:2602.04649，★★★★★）
 - [[AI/3-LLM/RL/Theory/Likelihood-Based-Reward-Designs-CoT-RL|Likelihood-Based Reward]] — 本文三维框架之"密度维度"的核心来源：log-prob作为通用密集reward信号（arXiv:2602.03979，★★★★☆）
 - [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO改进全景]] — reward设计质量直接影响GRPO训练效果；本文三维框架是对GRPO七维框架中"Sample效率"维度的深化
-- [[AI/3-LLM/RL/RARL-Reward-Modeling-Survey-论文笔记|RARL Reward Modeling综述]] — reward modeling领域综述；本文是该综述在2026年最新三篇论文上的聚焦元分析
+- [[AI/3-LLM/RL/实践/RARL-Reward-Modeling-Survey|RARL Reward Modeling综述]] — reward modeling领域综述；本文是该综述在2026年最新三篇论文上的聚焦元分析
 
 ---
 

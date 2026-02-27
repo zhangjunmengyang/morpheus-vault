@@ -26,7 +26,7 @@ related:
   - "[[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training]]"
   - "[[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题]]"
   - "[[AI/2-Agent/Agentic-RL/Search-R1-Reasoning-Search-Engine-RL]]"
-  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解]]"
+  - "[[AI/3-LLM/RL/算法/GRPO 深度理解]]"
 ---
 
 # ARTIST: Agentic Reasoning and Tool Integration in Self-Improving Transformers
@@ -279,4 +279,4 @@ graph LR
 - [[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training]] — ASTRA：MCP 工具图 + SFT + verifiable env（更重的工程投入，ARTIST 轻量替代）
 - [[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题]] — Tool Use RL 训练专题（ARTIST 的深入背景，ToolRL 细粒度 reward 研究）
 - [[AI/2-Agent/Agentic-RL/Search-R1-Reasoning-Search-Engine-RL]] — Search-R1：专注搜索工具的 GRPO 训练（单工具专项 vs ARTIST 多工具通用）
-- [[AI/3-LLM/RL/GRPO/GRPO 深度理解]] — GRPO 深度理解（ARTIST 的底层算法）
+- [[AI/3-LLM/RL/算法/GRPO 深度理解]] — GRPO 深度理解（ARTIST 的底层算法）

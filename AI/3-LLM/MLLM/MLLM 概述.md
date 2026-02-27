@@ -20,7 +20,7 @@ related:
   - "[[AI/3-LLM/MLLM/CLIP|CLIP]]"
   - "[[AI/3-LLM/MLLM/BLIP-2|BLIP-2]]"
   - "[[AI/3-LLM/MLLM/InternVL3|InternVL3]]"
-  - "[[AI/CV/ViT|ViT]]"
+  - "[[Projects/MA-RLHF/lc6/CLIP-ViT-LLaVA-手撕实操|ViT]]"
 ---
 
 # 多模态大语言模型 (MLLM) 概述
@@ -93,7 +93,7 @@ flowchart TD
 
 模态编码器对来自不同模态的输入进行编码：$F_X = \text{ME}_X(I_X)$
 
-**视觉模态编码器**（参见 [[AI/CV/ViT|ViT]]）：
+**视觉模态编码器**（参见 [[Projects/MA-RLHF/lc6/CLIP-ViT-LLaVA-手撕实操|ViT]]）：
 
 | 编码器 | 特点 | 代表使用 |
 |--------|------|---------|
@@ -194,7 +194,7 @@ PEFT 方法（Prefix-tuning、Adapter、LoRA）可以在 <0.1% 参数下实现�
 - **多模态推理**：跨模态的 CoT 推理（如"看图做数学"）仍是前沿难题
 
 ### 脑暴：如果往下延伸
-- MLLM + [[RAG-2026-技术全景|RAG]] = 多模态 RAG，是 2025-2026 的热门方向
+- MLLM + RAG = 多模态 RAG，是 2025-2026 的热门方向
 - 结合 [[AI/3-LLM/MLLM/多模态 LLM 架构|多模态 LLM 架构]] 理解不同 Projector 设计的 trade-off
 - 6 个月后 Any-to-Any 模型（文字→图→视频→音频的统一生成）可能进入实用阶段
 
@@ -206,4 +206,4 @@ PEFT 方法（Prefix-tuning、Adapter、LoRA）可以在 <0.1% 参数下实现�
 - [[AI/3-LLM/MLLM/Qwen-VL|Qwen-VL]] — 中文 MLLM 的代表
 - [[AI/3-LLM/MLLM/InternVL3|InternVL3]] — 最强开源 MLLM
 - [[AI/3-LLM/MLLM/DeepSeek-VL|DeepSeek-VL]] — DeepSeek 的多模态版本
-- [[AI/CV/ViT|ViT]] — 视觉编码器基础
+- [[Projects/MA-RLHF/lc6/CLIP-ViT-LLaVA-手撕实操|ViT]] — 视觉编码器基础

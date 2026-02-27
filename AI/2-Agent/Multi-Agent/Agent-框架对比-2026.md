@@ -1,4 +1,8 @@
 ---
+
+> [!warning] 内容已合并
+> 2026 年更新内容已合并进 [[AI/2-Agent/Multi-Agent/Agent-框架对比|Agent-框架对比]]（完整版）。
+
 brief: "Agent 框架对比 2026——LangGraph/CrewAI/AutoGen/DSPy/LlamaIndex 五大框架的完整对比；状态管理/多 Agent 协作/工具集成/调试能力的横向评估；Interview-prep 标注，框架选型的面试标准答案。"
 tags: [agent, framework, langgraph, crewai, autogen, dspy, interview-prep]
 created: 2026-02-14
@@ -27,7 +31,7 @@ LangGraph 是 LangChain 生态中专门用于构建有状态、多 Actor 应用�
 
 **适用场景**：复杂的多步骤推理任务、需要人工干预的工作流、长期运行的 Agent 系统
 
-参考：[[LangChain 生态系统]]、[[有状态 Agent 设计]]
+参考：LangChain 生态系统、有状态 Agent 设计
 
 ### CrewAI
 
@@ -43,7 +47,7 @@ CrewAI 专注于多 Agent 协作场景，通过预定义角色模板简化 Agent
 
 **适用场景**：内容创作、市场研究、数据分析等需要多角色协作的业务场景
 
-参考：[[多 Agent 系统设计]]、[[角色驱动架构]]
+参考：多 Agent 系统设计、角色驱动架构
 
 ### AutoGen
 
@@ -59,7 +63,7 @@ CrewAI 专注于多 Agent 协作场景，通过预定义角色模板简化 Agent
 
 **适用场景**：数据科学工作流、代码开发辅助、需要专家验证的分析任务
 
-参考：[[代码执行 Agent]]、[[人机协作模式]]
+参考：代码执行 Agent、人机协作模式
 
 ### DSPy
 
@@ -75,7 +79,7 @@ DSPy 是斯坦福开发的编程式 LLM 应用框架，强调自动化 prompt �
 
 **适用场景**：需要高性能 prompt 的生产环境、复杂推理任务、批量数据处理
 
-参考：[[Prompt 工程最佳实践]]、[[模块化 Agent 设计]]
+参考：Prompt 工程最佳实践、模块化 Agent 设计
 
 ### OpenAI Agents SDK
 
@@ -91,7 +95,7 @@ OpenAI 官方 Agent 框架，是早期 Swarm 实验项目的正式化版本。
 
 **适用场景**：基于 OpenAI 模型的 Agent 应用、需要频繁 Agent 切换的场景
 
-参考：[[OpenAI API 集成]]、[[Agent Handoff 模式]]
+参考：OpenAI API 集成、Agent Handoff 模式
 
 ### Anthropic MCP
 
@@ -107,7 +111,7 @@ Anthropic 推出的模型-计算机协议，专注于工具调用的标准化。
 
 **适用场景**：需要丰富工具集成的 Agent、跨平台部署的应用、企业级安全要求
 
-参考：[[工具调用标准化]]、[[Agent 安全机制]]
+参考：工具调用标准化、Agent 安全机制
 
 ## 选型建议
 
@@ -181,4 +185,4 @@ Anthropic 推出的模型-计算机协议，专注于工具调用的标准化。
 
 2026 年的 Agent 框架生态已经相当成熟，各框架在特定领域都有明显优势。选型时应重点考虑业务场景匹配度、技术团队能力和长期发展规划。随着技术快速演进，建议保持框架的模块化设计，降低后续迁移成本。
 
-参考：[[Agent 架构设计模式]]、[[AI 工程最佳实践]]
+参考：Agent 架构设计模式、AI 工程最佳实践

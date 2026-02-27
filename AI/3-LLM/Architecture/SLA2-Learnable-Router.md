@@ -76,5 +76,5 @@ SLA (Sparse-Linear Attention) 的原始想法：attention map P 可以分解为�
 
 - [[AI/3-LLM/Architecture/MiniCPM-SALA|MiniCPM SALA]] — 同期 MiniCPM 架构论文，互补
 - [[AI/3-LLM/Architecture/Attention 变体综述|Attention 变体综述]] — SLA2 在 Attention 变体谱系中的位置
-- [[Transformer|Transformer 通识]] — Learnable Router 的架构基础
+- Transformer 通识 — Learnable Router 的架构基础
 -  — 大语言模型知识全图谱

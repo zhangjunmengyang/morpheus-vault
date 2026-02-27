@@ -175,10 +175,10 @@ Spark UI 的 Stage 详情页：
 
 ## 相关
 
-- [[Spark SQL]]
-- [[Spark SQL 执行过程]]
-- [[数据倾斜优化|数据倾斜优化]]
-- [[一次特殊的数据倾斜优化|一次特殊的数据倾斜优化]]
-- [[Spark AQE + DDP]]
-- [[Spark Partitioner|Spark Partitioner]]
-- [[Spark 调优|Spark 调优]]
+- [[Career/数据工程/Spark/SQL/Spark SQL 执行过程]]
+- [[Career/数据工程/Spark/SQL/Spark SQL 执行过程]]
+- [[Career/数据工程/Spark/生产运维/数据倾斜优化/数据倾斜优化|数据倾斜优化]]
+- [[Career/数据工程/Spark/生产运维/数据倾斜优化/一次特殊的数据倾斜优化|一次特殊的数据倾斜优化]]
+- [[Career/数据工程/Spark/SQL/Spark AQE + DDP]]
+- [[Career/数据工程/Spark/存储/RDD/Spark Partitioner|Spark Partitioner]]
+- [[Career/数据工程/Spark/生产运维/调优/Spark 调优|Spark 调优]]

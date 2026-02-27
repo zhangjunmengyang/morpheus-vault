@@ -206,7 +206,7 @@ ToRL/ARTIST/Search-R1 mask 掉 tool output；WebAgent-R1 compress 掉历史 obse
 - [[AI/2-Agent/Agentic-RL/ToRL-Tool-Integrated-Reinforcement-Learning|ToRL（SJTU/GAIR）]] — base model 直接 RL，对比 BC 热启动策略
 
 **Web/GUI Agent**
-- [[AI/2-Agent/Agentic-RL/UI-TARS-2 论文|UI-TARS-2]] — 多模态 GUI Agent RL（视觉路线，对比 WebAgent-R1 的纯文本路线）
+- [[AI/2-Agent/Agentic-RL/UI-TARS-2|UI-TARS-2]] — 多模态 GUI Agent RL（视觉路线，对比 WebAgent-R1 的纯文本路线）
 
 **Tool Use RL 全景**
 - [[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool Use RL 训练专题]] — 完整谱系（ToolRL/ToRL/ARTIST/Search-R1/WebAgent-R1）

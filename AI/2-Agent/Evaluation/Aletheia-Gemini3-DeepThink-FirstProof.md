@@ -22,7 +22,7 @@ sources:
   - https://1stproof.org — FirstProof 挑战赛
 related:
   - "[[AI/2-Agent/Evaluation/Aletheia-Math-Research-Agent|Aletheia（前作：Erdős 问题，arXiv:2602.10177）]]"
-  - "[[Gemini-3-Deep-Think|Gemini 3 Deep Think（基础模型）]]"
+  - "[[AI/3-LLM/Inference/Gemini-3-Deep-Think|Gemini 3 Deep Think（基础模型）]]"
   - "[[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（推理时搜索 vs 训练时搜索对比）]]"
   - "[[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO（反事实验证，设计思路对比）]]"
 ---
@@ -185,7 +185,7 @@ Aletheia 不依赖 RL 训练（纯 Gemini 3 Deep Think + agentic scaffolding）�
 
 **Aletheia 系列（前作 → 续集）**
 - [[AI/2-Agent/Evaluation/Aletheia-Math-Research-Agent|Aletheia 前作（arXiv:2602.10177，Erdős 猜想数据库）]] — 同一 agent 系统的前一阶段：Erdős 4 个开放问题 → FirstProof 6/10 研究级数学题；前作覆盖 Generator-Verifier-Explorer 三组件架构，本文重点在 Best-of-2 策略与自我过滤设计
-- [[Gemini-3-Deep-Think|Gemini 3 Deep Think（基础模型）]] — Extended Thinking，AIME 2025/Codeforces frontier；FirstProof 是 Gemini 3 Deep Think 迄今最高难度的真实任务测试
+- [[AI/3-LLM/Inference/Gemini-3-Deep-Think|Gemini 3 Deep Think（基础模型）]] — Extended Thinking，AIME 2025/Codeforces frontier；FirstProof 是 Gemini 3 Deep Think 迄今最高难度的真实任务测试
 
 **推理时搜索 vs 训练时搜索（设计思路对比）**
 - [[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（ICML 2026，TU Munich）]] — 训练时树搜索选优 rollout；Aletheia 做的是推理时搜索（Best-of-2 + Verifier 筛选）；两者代表"搜索提升 agent 能力"在训练/推理两端的表现形式
@@ -203,7 +203,7 @@ Aletheia 不依赖 RL 训练（纯 Gemini 3 Deep Think + agentic scaffolding）�
 
 1. [原文（arXiv:2602.21201）](https://arxiv.org/abs/2602.21201) — FirstProof 完整实验报告
 2. [[AI/2-Agent/Evaluation/Aletheia-Math-Research-Agent|Aletheia 前作]] — 理解 Generator-Verifier 架构完整设计
-3. [[Gemini-3-Deep-Think|Gemini 3 Deep Think]] — 基础模型能力背景
+3. [[AI/3-LLM/Inference/Gemini-3-Deep-Think|Gemini 3 Deep Think]] — 基础模型能力背景
 4. [FirstProof 挑战赛（1stproof.org）](https://1stproof.org) — 10道题原题和背景
 
 ---

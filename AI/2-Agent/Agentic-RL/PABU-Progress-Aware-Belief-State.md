@@ -1348,6 +1348,6 @@ PABU代表了LLM Agent效率优化的一个重要里程碑，其创新性不仅�
 ## See Also
 
 - [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — PABU 在 credit assignment 问题框架中的位置
-- [[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]] — 同为长程 Agent 效率问题，KLong 解决训练 horizon，PABU 解决推理 state tracking
+- [[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent-RL|KLong]] — 同为长程 Agent 效率问题，KLong 解决训练 horizon，PABU 解决推理 state tracking
 - [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 2026 全景]] — PABU 的 RL 算法上游
--  — Agent 知识全图谱
+- [[AI/2-Agent/Agentic-RL/SORL-Stabilizing-Off-Policy-RL-Long-Horizon-Agent|SORL]] — PABU 解决推理阶段的高效 state tracking，SORL 解决训练阶段的 off-policy 崩溃——两者共同指向「长程 Agent 系统设计」的两个正交维度

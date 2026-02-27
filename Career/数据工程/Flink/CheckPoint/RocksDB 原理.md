@@ -192,9 +192,9 @@ state.backend.rocksdb.metrics.num-running-compactions=true
 
 ## 相关
 
-- [[Flink CheckPoint]]
-- [[Checkpoint|Checkpoint]]
-- [[Flink 内存机制|Flink 内存机制]]
-- [[Flink 调优|Flink 调优]]
-- [[Flink 生产|Flink 生产]]
-- [[存储结构|存储结构]]
+- [[Career/数据工程/Flink/CheckPoint/Flink CheckPoint]]
+- [[Career/数据工程/Flink/CheckPoint/Flink CheckPoint|Checkpoint]]
+- [[Career/数据工程/Flink/Flink 内存机制|Flink 内存机制]]
+- [[Career/数据工程/Flink/生产/调优/Flink 调优|Flink 调优]]
+- [[Career/数据工程/Flink/生产/Flink 生产|Flink 生产]]
+- [[Career/数据工程/Doris/底层存储/存储结构|存储结构]]

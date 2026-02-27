@@ -336,7 +336,7 @@ TSR 论文中把这个机制称为"instance filtering（retain top-p% most-uncer
 
 **同期稳定性研究**
 - [[AI/2-Agent/Agentic-RL/SCoRe-Self-Correction-via-Reinforcement-Learning|SCoRe（NeurIPS 2024，DeepMind）]] — 两阶段 RL + Phase 1 KL 约束，解决 multi-turn self-correction 的 behavior collapse（与 Echo Trap 同源问题）
-- [[AI/3-LLM/RL/GRPO/Blockwise-Advantage-Estimation|Blockwise Advantage Estimation]] — block-level credit 是 StarPO-S decoupled clipping 的变体思路
+- [[AI/3-LLM/RL/算法/Blockwise-Advantage-Estimation|Blockwise Advantage Estimation]] — block-level credit 是 StarPO-S decoupled clipping 的变体思路
 - [[AI/2-Agent/Agentic-RL/Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems|Dr. MAS（NTU）]] — **正交互补**：RAGEN 处理单 agent 内部多轮 Echo Trap（梯度趋零），Dr. MAS 处理跨 agent reward 异质导致的梯度范数爆炸；两者合起来覆盖 Multi-Agent RL 稳定性的完整版图
 - [[AI/3-LLM/MLLM/PyVision-RL-Agentic-Vision-Interaction-Collapse|PyVision-RL（2602.20739）]] — **Echo Trap 的多模态版本**：Interaction Collapse（模型学会减少工具调用规避复杂性）；Oversampling-Filtering-Ranking 修复思路与 StarPO-S trajectory filtering 同源；跨模态验证了"RL 压力推向退化策略"根因的普遍性
 
@@ -350,3 +350,4 @@ TSR 论文中把这个机制称为"instance filtering（retain top-p% most-uncer
 
 *Written: 2026-02-23（第19次心跳）*  
 *Category: Multi-Turn RL Stability*
+- [[AI/2-Agent/Agentic-RL/Agent-进化模式谱系|Agent 进化模式谱系]] — 三层框架：RAGEN/StarPO 属于第①层训练时进化；与 Reflexion/ExpeL 的 in-context 进化互补

@@ -155,7 +155,7 @@ LLM 模拟环境的根本问题是：state transition 由 LLM 生成 → 幻觉 
 
 - [[AI/2-Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO]] — §1.2 背景：Echo Trap = SeeUPO 理论证明的实验征兆
 - [[AI/2-Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent RL 环境工程系统论]] — §1.3 背景：自适应课程设计的工程框架
-- [[AI/3-LLM/RL/Other-Algorithms/PACED-RL-Partition-Function-Difficulty-Scheduler|PACED-RL]] — §1.3 提到的课程学习方向（数学场景，尚未迁移到工具调用）
+- [[AI/3-LLM/RL/算法/PACED-RL-Partition-Function-Difficulty-Scheduler|PACED-RL]] — §1.3 提到的课程学习方向（数学场景，尚未迁移到工具调用）
 - [[AI/2-Agent/Agentic-RL/SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL|SHARP（ICML 2026）]] — §二 短期判断的反例：credit assignment 横向维度已有实用方案
 
 **2026-02-25 新增实证（§四 第③问题的三个数据点）**
@@ -163,7 +163,7 @@ LLM 模拟环境的根本问题是：state transition 由 LLM 生成 → 幻觉 
 > 以下三篇论文共同回答了"验证器可用性"如何从根本上决定 RL 策略选择——直接关联§四第③open problem（可验证 ↔ 不可验证 reward 的桥梁）：
 
 - [[AI/2-Agent/Evaluation/Aletheia-Gemini3-DeepThink-FirstProof|Aletheia FirstProof（arXiv:2602.21201）]] — **有严格数学验证器**的极端案例：TTC scaling（推理计算扩展）比 RL 训练更快达到 frontier——说明当验证器足够可靠时，RL 的独特价值在于**无验证器任务**和**提升 base model 本身**；Weinberger 开放问题首次被 AI 自主解决
-- [[AI/3-LLM/RL/Other-Algorithms/NoRD-Dr-GRPO-Reasoning-Free-VLA-Autonomous-Driving|NoRD（arXiv:2602.21172，CVPR 2026）]] — **有 simulation-based dense 验证器**（PDM score）：弱 SFT + Dr. GRPO 可行，关键前提是验证器足够 dense；跨域实证 difficulty bias 的通用性，同时间接验证本文§四判断——**dense verifiable reward 是弱 SFT + 强 RL 范式的必要条件**
+- [[AI/3-LLM/RL/算法/NoRD-Dr-GRPO-Reasoning-Free-VLA-Autonomous-Driving|NoRD（arXiv:2602.21172，CVPR 2026）]] — **有 simulation-based dense 验证器**（PDM score）：弱 SFT + Dr. GRPO 可行，关键前提是验证器足够 dense；跨域实证 difficulty bias 的通用性，同时间接验证本文§四判断——**dense verifiable reward 是弱 SFT + 强 RL 范式的必要条件**
 - [[AI/3-LLM/MLLM/PyVision-RL-Agentic-Vision-Interaction-Collapse|PyVision-RL（arXiv:2602.20739）]] — **验证器不明确**的多模态 agent 场景：Interaction Collapse（模型退化为少工具少多轮路径）正是 reward 稀疏 + 无中间验证信号的症状；Accumulative Tool Reward 是一种人工设计的 dense 中间信号——验证了本文§四判断：**reward signal quality 是训练稳定性的根本瓶颈**
 
 *写作时间：2026-02-24 08:01 | 基于 37+ 篇 Vault 笔记的整合判断*

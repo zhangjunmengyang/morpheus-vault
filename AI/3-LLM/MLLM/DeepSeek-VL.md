@@ -128,5 +128,5 @@ DeepSeek-VL 系列的核心竞争力在于：
 - [[AI/3-LLM/MLLM/BLIP-2|BLIP-2]]
 - [[AI/3-LLM/MLLM/Qwen-VL|Qwen-VL]]
 - [[AI/3-LLM/MLLM/MLLM 概述|MLLM 概述]]
-- [[AI/CV/ViT|ViT]]
-- [[AI/3-LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]
+- [[Projects/MA-RLHF/lc6/CLIP-ViT-LLaVA-手撕实操|ViT]]
+- [[AI/4-模型/DeepSeek/DeepSeek-R1|DeepSeek-R1]]

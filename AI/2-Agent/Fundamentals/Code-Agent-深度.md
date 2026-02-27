@@ -133,7 +133,7 @@ Code Agent 是一类以 **LLM 为核心推理引擎**，能够自主完成软件
 
 ### 什么是 SWE-bench
 
-> 代码生成能力的系统性全景见 [[LLM代码生成-2026技术全景|LLM 代码生成 2026 技术全景]]
+> 代码生成能力的系统性全景见 LLM 代码生成 2026 技术全景
 
 - Princeton 发布的 Code Agent benchmark
 - 从 12 个 Python 开源仓库的真实 GitHub issue 构建

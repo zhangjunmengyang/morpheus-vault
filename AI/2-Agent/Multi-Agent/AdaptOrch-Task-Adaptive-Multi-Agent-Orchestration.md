@@ -223,7 +223,7 @@ PA-MoE 在 agent 内部做 phase-level routing（哪个 expert 处理哪个阶�
 
 **Multi-Agent 三维度（训练/推理/规模）**
 - [[AI/2-Agent/Agentic-RL/Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]] — 训练时：MAGRPO/AT-GRPO/MARS2；AdaptOrch 补推理时的编排维度
-- [[多智能体系统与协作框架-2026技术全景|多智能体系统与协作框架 2026 全景]] — Multi-Agent 宏观全景
+- 多智能体系统与协作框架 2026 全景 — Multi-Agent 宏观全景
 
 **Topology / Workflow 自动化同族**
 - [[AI/2-Agent/Multi-Agent/AgentConductor-Topology-Evolution|AgentConductor]] — RL 动态生成 DAG topology（训练时学习拓扑 vs AdaptOrch 推理时路由拓扑）

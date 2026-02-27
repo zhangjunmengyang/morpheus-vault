@@ -39,5 +39,5 @@ tags:
 
 - [[AI/3-LLM/Application/Embedding/Embedding 选型|Embedding 选型]] — 线上问题的根源：选型决策
 - [[AI/3-LLM/Application/Embedding/Embedding|Embedding 原理]] — 问题诊断的理论基础
-- [[KV Cache|KV Cache 优化]] — 线上推理常见性能问题
+- [[AI/3-LLM/Inference/KV Cache|KV Cache 优化]] — 线上推理常见性能问题
 -  — 大语言模型知识全图谱

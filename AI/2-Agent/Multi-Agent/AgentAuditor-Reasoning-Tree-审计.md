@@ -276,6 +276,6 @@ L_ACPO = -E_D_trap[log σ(β log π_θ(y_w|x)/π_ref(y_w|x)
 ## See Also
 
 - [[AI/2-Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]] — 被审计的系统架构
-- [[AI安全与对齐-2026技术全景|AI 安全与对齐 2026 全景]] — Agent 安全在对齐全景中的位置
+- AI 安全与对齐 2026 全景 — Agent 安全在对齐全景中的位置
 - [[AI/2-Agent/Multi-Agent/IMAGINE-多Agent蒸馏到单模型|IMAGINE]] — 多 Agent 系统的另一视角：蒸馏进单模型
 -  — Agent 知识全图谱

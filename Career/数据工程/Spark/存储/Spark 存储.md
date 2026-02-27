@@ -170,9 +170,9 @@ spark.local.dir=/data1/spark,/data2/spark,/data3/spark
 
 ## 相关
 
-- [[Spark 内存模型]]
-- [[Spark Shuffle|Spark Shuffle]]
-- [[Spark RDD|Spark RDD]]
-- [[Spark 调优|Spark 调优]]
-- [[小文件问题|小文件问题]]
-- [[Spark 概述|Spark 概述]]
+- [[Career/数据工程/Spark/存储/Spark 内存模型]]
+- [[Career/数据工程/Spark/SQL/Spark Shuffle|Spark Shuffle]]
+- [[Career/数据工程/Spark/存储/RDD/Spark RDD|Spark RDD]]
+- [[Career/数据工程/Spark/生产运维/调优/Spark 调优|Spark 调优]]
+- [[Career/数据工程/Spark/生产运维/小文件问题/小文件问题|小文件问题]]
+- [[Career/数据工程/Spark/Spark 概述|Spark 概述]]

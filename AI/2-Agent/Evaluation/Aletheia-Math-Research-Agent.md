@@ -160,13 +160,13 @@ Google Search grounding        →   RAG / tool use in agent
 - [[AI/2-Agent/Evaluation/Aletheia-Gemini3-DeepThink-FirstProof|Aletheia FirstProof（arXiv:2602.21201，2026-02-25 续集）]] ⭐ — **同一系统的下一级挑战**：Erdős 4题 → FirstProof 6/10 研究级数学题（8天限时，真实 open problems）；Best-of-2 策略 + 自我过滤设计；P7 解决 Weinberger 书中开放问题——AI 数学研究能力的最新 frontier
 
 **基础模型与推理体系**
-- [[Gemini-3-Deep-Think|Gemini-3-Deep-Think]] — TTC scaling 基础；Aletheia A 基础模型；FirstProof 是其迄今最高难度的真实任务测试
+- [[AI/3-LLM/Inference/Gemini-3-Deep-Think|Gemini-3-Deep-Think]] — TTC scaling 基础；Aletheia A 基础模型；FirstProof 是其迄今最高难度的真实任务测试
 - [[AI/3-LLM/RL/Theory/RLVR-Edge-of-Competence|RLVR-Edge-of-Competence]] — RL 训练动力学边界；Aletheia 用纯 TTC scaling 而非 RL，说明有验证器的任务 TTC 可能更快达到 frontier
 
 **Agent 架构设计同族**
 - [[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO（Tencent AI Lab）]] — 反事实验证 credit assignment；Aletheia 的 Generator-Verifier 架构与 CSO"关键步骤验证"设计哲学同源
 - [[AI/2-Agent/Fundamentals/GitHub-Agentic-Workflows|GitHub-Agentic-Workflows]] — Agentic workflow 设计模式
-- [[AI/3-LLM/RL/Other-Algorithms/MEL-Meta-Experience-Learning|MEL-Meta-Experience-Learning]] — 另一种 agent 自改进路线
+- [[AI/3-LLM/RL/算法/MEL-Meta-Experience-Learning|MEL-Meta-Experience-Learning]] — 另一种 agent 自改进路线
 
 ---
 *Created: 2026-02-19 by Scholar heartbeat | See Also updated: 2026-02-25 by Librarian*

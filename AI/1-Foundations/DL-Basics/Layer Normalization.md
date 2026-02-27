@@ -178,7 +178,7 @@ $\alpha$ 和 $\beta$ 的值由网络深度 $N$ 决定：
 
 ## See Also
 
-- [[Transformer|Transformer 通识]] — LayerNorm 在 Transformer 架构中的位置（Pre-Norm vs Post-Norm）
+- Transformer 通识 — LayerNorm 在 Transformer 架构中的位置（Pre-Norm vs Post-Norm）
 - [[AI/3-LLM/Architecture/Attention 变体综述|Attention 变体综述]] — RMSNorm 在各模型架构中的应用比较
-- [[Training Loss 分析|Training Loss 分析]] — 归一化层对训练稳定性的影响
+- Training Loss 分析 — 归一化层对训练稳定性的影响
 -  — 深度学习基础全图谱

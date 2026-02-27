@@ -22,7 +22,7 @@ related:
   - "[[AI/3-LLM/Architecture/FlashAttention|FlashAttention 深度解析]]"
   - "[[AI/3-LLM/Architecture/Multi-Head Latent Attention|MLA 详解]]"
   - "[[AI/3-LLM/Architecture/Mamba-SSM|Mamba/SSM]]"
-  - "[[KV Cache|KV Cache 原理与优化]]"
+  - "[[AI/3-LLM/Inference/KV Cache|KV Cache 原理与优化]]"
 ---
 
 # Attention 变体综述：从 MHA 到 Linear Attention
@@ -369,8 +369,8 @@ RoPE 对 Q 和 K 施加旋转变换（位置相关），这会**破坏低秩结�
 - [vLLM](https://github.com/vllm-project/vllm) — GQA + PagedAttention 的工业级推理框架
 
 ### 代码手撕（理论 → 代码）
-- [[AI/3-LLM/Inference/FlashAttention-手撕实操|FlashAttention-手撕实操]] — **必看**：从 Tiling/SRAM 管理到 CUDA kernel 的 IO-aware 完整实现，MA-RLHF 项目配套 ⭐⭐⭐⭐⭐
-- [[AI/3-LLM/Architecture/Transformer-手撕实操|Transformer-手撕实操]] — 包含 MHA 的完整 Transformer 从零实现（含 Self-Attention/Cross-Attention）
+- [[Projects/MA-RLHF/lc10/lc10-00-FlashAttention-手撕实操|FlashAttention-手撕实操]] — **必看**：从 Tiling/SRAM 管理到 CUDA kernel 的 IO-aware 完整实现，MA-RLHF 项目配套 ⭐⭐⭐⭐⭐
+- [[Projects/MA-RLHF/lc2/lc2-01-Transformer-手撕实操|Transformer-手撕实操]] — 包含 MHA 的完整 Transformer 从零实现（含 Self-Attention/Cross-Attention）
 
 ---
 
@@ -378,6 +378,6 @@ RoPE 对 Q 和 K 施加旋转变换（位置相关），这会**破坏低秩结�
 
 > 🔗 See also: [[AI/3-LLM/Architecture/GQA-MQA|GQA/MQA 深度解析]] — KV head 共享机制的详细实现和性能对比
 > 🔗 See also: [[AI/3-LLM/Architecture/FlashAttention|FlashAttention]] — Attention 计算加速，与本文架构优化互补
-> 🔗 See also: [[KV Cache|KV Cache]] — Attention 变体直接影响 KV Cache 大小，推理优化的核心关联
+> 🔗 See also: [[AI/3-LLM/Inference/KV Cache|KV Cache]] — Attention 变体直接影响 KV Cache 大小，推理优化的核心关联
 > 🔗 See also: [[AI/3-LLM/Architecture/Multi-Head Latent Attention|MLA 详解]] — DeepSeek MLA 的完整技术细节
 > 🔗 See also: [[AI/3-LLM/Architecture/Mamba-SSM|Mamba/SSM]] — Linear Attention 的替代路线：选择性状态空间模型

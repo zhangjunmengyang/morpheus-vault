@@ -208,11 +208,11 @@ spark.sql.adaptive.enabled=true
 
 ## 相关
 
-- [[Spark SQL|Spark SQL]]
-- [[Spark Shuffle|Spark Shuffle]]
-- [[Spark 调优|Spark 调优]]
-- [[数据倾斜优化|数据倾斜优化]]
-- [[小文件问题|小文件问题]]
-- [[Spark AQE + DDP|Spark AQE + DDP]]
-- [[Spark 生产运维]]
-- [[谓词下推|谓词下推]]
+- [[Career/数据工程/Spark/SQL/Spark SQL 执行过程|Spark SQL]]
+- [[Career/数据工程/Spark/SQL/Spark Shuffle|Spark Shuffle]]
+- [[Career/数据工程/Spark/生产运维/调优/Spark 调优|Spark 调优]]
+- [[Career/数据工程/Spark/生产运维/数据倾斜优化/数据倾斜优化|数据倾斜优化]]
+- [[Career/数据工程/Spark/生产运维/小文件问题/小文件问题|小文件问题]]
+- [[Career/数据工程/Spark/SQL/Spark AQE + DDP|Spark AQE + DDP]]
+- [[Career/数据工程/Spark/生产运维/Spark 生产运维]]
+- [[Career/数据工程/Spark/SQL/谓词下推|谓词下推]]

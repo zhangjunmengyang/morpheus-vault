@@ -211,8 +211,8 @@ MIG 是谱系中**唯一基于内在信息量**（模型自身条件似然）的
 - [[AI/2-Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar]] — unverifiable reward 场景下的 credit assignment
 - [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — Credit Assignment 全谱系综合
 - [[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR]] — 训练时树搜索提升 rollout 质量（与 MIG dense reward 正交互补）
-- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — MIG 是 GRPO episode-level reward 的信息论升级版；MIG 验证对比基准即 GRPO
-- [[AI/3-LLM/RL/Other-Algorithms/RICOL-Retrospective-In-Context-Online-Learning|RICOL（arXiv:2602.17497，NeurIPS 2025）]] — 同为 Credit Assignment 谱系的替代方案：RICOL 用 ICL 回顾估计 advantage，MIG 用信息论量化步骤贡献；方法论互为对照
+- [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO 深度理解]] — MIG 是 GRPO episode-level reward 的信息论升级版；MIG 验证对比基准即 GRPO
+- [[AI/3-LLM/RL/算法/RICOL-Retrospective-In-Context-Online-Learning|RICOL（arXiv:2602.17497，NeurIPS 2025）]] — 同为 Credit Assignment 谱系的替代方案：RICOL 用 ICL 回顾估计 advantage，MIG 用信息论量化步骤贡献；方法论互为对照
 - [[AI/5-AI 安全/CoT-Monitorability-Information-Theory|CoT Monitorability（arXiv:2602.18297，ICLR 2026）]] ⭐ — **信息论交叉**：MIG 量化 CoT 每步对正确答案的信息增益（RL训练视角）；CoT Monitorability 量化 CoT 对 misbehavior 的信息保留（安全监控视角）——同一问题"CoT 有多少信息"，一个从 RL 训练看，一个从安全监控看
 
 ---

@@ -269,3 +269,4 @@ for episode in training:
 
 **综述导航：**
 - [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL 2026 综合分析]] — ERL 在 Multi-Turn RL 四支柱框架中的定位
+- [[AI/2-Agent/Agentic-RL/Agent-进化模式谱系|Agent 进化模式谱系]] — 三层框架：ERL 属于第①层训练时进化

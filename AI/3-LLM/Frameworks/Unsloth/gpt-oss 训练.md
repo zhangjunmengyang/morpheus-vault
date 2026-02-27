@@ -229,6 +229,6 @@ model.save_pretrained_gguf(
 - [[AI/3-LLM/Frameworks/Unsloth/Unsloth 概述|Unsloth 概述]]
 - [[AI/3-LLM/Frameworks/Unsloth/训练示例概述|训练示例概述]]
 - [[AI/3-LLM/Frameworks/Unsloth/Qwen3 训练|Qwen3 训练]]
-- [[AI/3-LLM/RL/GRPO/GRPO|GRPO]]
+- [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO]]
 - [[AI/3-LLM/Frameworks/Unsloth/运行 & 保存模型|运行 & 保存模型]]
 - [[AI/3-LLM/Frameworks/Unsloth/量化 & 显存预估|量化 & 显存预估]]

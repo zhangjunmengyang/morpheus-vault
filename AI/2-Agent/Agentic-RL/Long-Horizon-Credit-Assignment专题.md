@@ -459,7 +459,7 @@ $$\pi^* \propto \pi_{\text{ref}} \exp\left(\frac{r}{\beta}\right) \quad \Rightar
 
 **设计启发**：iStar 和 OAPL 分别在 credit assignment 和 off-policy 训练两个维度利用了 KL-reg 框架的同一数学性质——两者可以组合：OAPL 提供稳定的 off-policy 训练框架，iStar 提供 step-level reward 信号，两者结合可能是 unverifiable reward + 数据复用场景的完整解法。
 
-相关笔记：[[AI/3-LLM/RL/Other-Algorithms/OAPL-Off-Policy-RL-LLM-Reasoning|OAPL（Off-policy RL for LLM Reasoning）]]
+相关笔记：[[AI/3-LLM/RL/算法/OAPL-Off-Policy-RL-LLM-Reasoning|OAPL（Off-policy RL for LLM Reasoning）]]
 
 ---
 
@@ -511,6 +511,65 @@ flowchart TD
 
 **Q: PRM 和 ORM 的区别，什么时候用哪个？**
 > ORM 对整条轨迹末端打分，简单但稀疏；PRM 对每步打分，dense 但需要 step 标注。实践原则：短任务 / 有中间检查点 → ORM 够用；长 horizon / reward 极稀疏 → 需要某种形式的 PRM；标注充足 → 离线训练 PRM；标注不足 → GiGPO（无标注）或 AgentPRM（MC rollout 自动估）。
+
+---
+
+---
+
+## 十四、SORL —— Off-Policy 训练稳定性（新维度，2026-02-24 v2）
+
+> **独立精读笔记**：[[AI/2-Agent/Agentic-RL/SORL-Stabilizing-Off-Policy-RL-Long-Horizon-Agent|SORL（arXiv:2511.20718）]]  
+> **作者**：Chenliang Li et al.（Texas A&M + GE HealthCare + Univ. Minnesota）
+
+### SORL 的位置：Credit Assignment 的前提条件
+
+以上所有方法（GiGPO/HiPER/AgentPRM/MIG/LOOP）都在回答“**credit 应该如何分配**”。但有一个前提问题被忽略了：**off-policy 训练时，credit 分配信号能否可靠传递？**
+
+SORL 发现：在 multi-turn agent RL 的 off-policy pipeline 中，即使 credit 分配方案是正确的，**训练本身也会因 off-policy 程度累积而崩溃**。这是所有上述方法的潜在底层 bug。
+
+### 两个崩溃根因
+
+**根因一：粒度错配（Granularity Mismatch）**
+
+标准 PPO 在 token 粒度计算 Importance Sampling (IS) ratio。在 multi-turn 场景中，turn 内所有 token 的 IS ratio 相乘：长 turn + 小 IS ratio 累积 → 指数爆炸，PPO clip 形同虚设。
+
+**根因二：方差累积（Variance Accumulation via Mini-batch Reuse）**
+
+Mini-batch reuse 在 long-horizon 场景中，第 k 次更新时的 off-policy 程度随 k 增大单调递增。Multi-turn 的时序依赖使 OOD token 的 advantage 估计不准，最终 gradient spike → policy collapse。
+
+### SORL 的两个修复机制
+
+**Turn-Level IS（替代 Token-Level IS）**：用 turn 内 IS ratio 的**均值**替代乘积——消除指数爆炸。
+
+**Clipping-Triggered Normalization（CTN）**：Clip 触发率 ρ_k 越高 → 当前批次 off-policy 程度越高 → **惩罚越重**（归一化使梯度缩小）。自适应检测并抑制 off-policy 更新。
+
+### 实例化：SO-PPO + SO-GRPO
+
+- **SO-PPO** = PPO + Turn-Level IS + CTN  
+- **SO-GRPO** = GRPO + Turn-Level IS + CTN（GRPO 原本不做 IS，SO-GRPO 补上了 off-policy 修正）
+
+**效果**：Gradient norm 稳定无 spike；Search agent（HotpotQA）持续提升 +5~8%；Training collapse 消除。
+
+### SORL 与其他方法的关系
+
+SORL 是 **orthogonal（正交）** 于所有 credit assignment 方法的：
+
+| 层次 | 解决什么 | 典型方法 |
+|------|---------|---------|
+| **Credit 如何分配**（信号层） | Traj-level → Step-level，稀疏 → 密集 | GiGPO / HiPER / AgentPRM / MIG |
+| **Credit 如何传递**（稳定性层） | Off-policy 训练 collapse | **SORL** |
+
+**组合建议**：SORL + GiGPO / SORL + LOOP 是合理的组合——前者负责精准的 step-level credit 分配，SORL 确保 off-policy pipeline 里这些 credit 信号能稳定地传递给 policy。
+
+### Multi-Turn RL 稳定性三角
+
+| 角度 | 论文 | 核心洞察 |
+|------|------|---------|
+| **现象描述** | RAGEN / Echo Trap（2504.20073） | Reward variance collapse → entropy drop → gradient spike 三联征 |
+| **理论下界** | SeeUPO（2602.06554）Theorem 3.2 | critic-free + 收敛保证在 multi-turn 不可同时满足；GRPO variance normalization 破坏 drift functional 单调性 |
+| **工程修复** | **SORL（2511.20718）** | Off-policy 崩溃的根因诊断 + Turn-Level IS + CTN 系统性修复 |
+
+三者互补：RAGEN 告诉你症状在哪，SeeUPO 告诉你理论边界在哪，SORL 告诉你工程上如何不崩。
 
 ---
 

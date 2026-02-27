@@ -185,4 +185,4 @@ print(f"Max:  {np.max(rewards):.3f}")
 - [[AI/3-LLM/Frameworks/verl/Sandbox Fusion 沙箱|Sandbox Fusion 沙箱]] — 代码执行类 reward
 - [[AI/3-LLM/Frameworks/verl/Post-Training 数据准备|Post-Training 数据准备]] — 数据中的 ground truth
 - [[AI/3-LLM/Frameworks/verl/性能调优|性能调优]] — reward 计算的性能
-- [[AI/2-Agent/Agentic-RL/Agentic RL Training|Agentic RL Training]] — Agent 场景的 reward 设计
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-Training-verl|Agentic RL Training]] — Agent 场景的 reward 设计

@@ -361,7 +361,7 @@ $$R = \begin{cases}
 
 - [[AI/2-Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]] — 多Agent系统架构基础
 - [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 2026 全景]] — IMAGINE 使用的 RL 算法七维全景
-- [[知识蒸馏与模型压缩-2026技术全景|知识蒸馏 2026 全景]] — 传统知识蒸馏 vs IMAGINE 的行为模式蒸馏
+- 知识蒸馏 2026 全景 — 传统知识蒸馏 vs IMAGINE 的行为模式蒸馏
 -  — Agent 研究全图谱
 - [[AI/2-Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer CWRPO]] — 同为 GRPO 扩展，workflow orchestration 方向
 

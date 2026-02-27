@@ -173,7 +173,7 @@ Rollout 用的是当前 actor weights，但 training 会更新 weights。verl �
 2. **micro-batch size 要分开配**：rollout 和 train 的 batch size 通常不同
 3. **Placement Group 配置**：确保 TP 组在同节点
 
-## 相关
+## See Also
 
 - [[AI/3-LLM/Infra/Ray|Ray]] — HybridFlow 的底层编排框架
 - [[AI/3-LLM/Infra/Megatron-LM|Megatron-LM]] — 训练后端之一

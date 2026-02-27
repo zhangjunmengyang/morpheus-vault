@@ -13,7 +13,7 @@ tags:
 related:
   - "[[AI/2-Agent/Agentic-RL/Search-R1-Reasoning-Search-Engine-RL]]"
   - "[[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题]]"
-  - "[[AI/3-LLM/RL/GRPO/lc8-01-GRPO-手撕实操]]"
+  - "[[Projects/MA-RLHF/lc8-GRPO/lc8-01-GRPO-手撕实操]]"
 ---
 
 # Search-R1++ — Deep Research RL 训练三要素消融

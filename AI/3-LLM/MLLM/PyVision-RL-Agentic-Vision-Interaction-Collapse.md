@@ -135,7 +135,7 @@ PDF: <https://arxiv.org/pdf/2602.20739>
 
 **多模态 RL 感知体系**
 - [[AI/3-LLM/MLLM/Multimodal-Perception-RL-综合分析|多模态感知 RL 综合分析]] — 四条多模态 RL 技术路线全景；Interaction Collapse 是感知之外的第五类问题（训练动态稳定性）
-- [[AI/3-LLM/RL/Other-Algorithms/AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL（Anchor Token，视觉 credit assignment）]] — 多模态 credit assignment 角度，与 PyVision-RL 的 rollout filtering 正交：AT-RL 解决"哪些视觉 token 值得信用"，PyVision-RL 解决"哪些轨迹值得训练"
+- [[AI/3-LLM/RL/算法/AT-RL-Anchor-Token-Reinforcement-Learning-Multimodal|AT-RL（Anchor Token，视觉 credit assignment）]] — 多模态 credit assignment 角度，与 PyVision-RL 的 rollout filtering 正交：AT-RL 解决"哪些视觉 token 值得信用"，PyVision-RL 解决"哪些轨迹值得训练"
 
 **Rollout 质量控制谱系**
 - [[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR（ICML 2026，TU Munich）]] — Trajectory Search Rollout：树搜索选优 rollout，与 Oversampling-Filtering-Ranking 同属"主动控制训练 rollout 质量"的思路，但 TSR 针对多轮任务搜索最优路径，PyVision-RL 针对多模态 agent 过滤退化轨迹

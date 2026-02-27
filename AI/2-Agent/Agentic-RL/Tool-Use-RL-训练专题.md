@@ -24,13 +24,13 @@ sources:
   - "Turn-Level Reward: Wei et al., arXiv 2505.11821"
   - "Agent-as-Tool: arXiv 2507.01489"
 related:
-  - "[[LLM工具调用与Function-Calling-2026技术全景|LLM工具调用与Function-Calling-2026技术全景]]"
-  - "[[AI/2-Agent/Agentic-RL/VerlTool 论文|VerlTool 论文]]"
+  - "LLM工具调用与Function-Calling-2026技术全景"
+  - "[[AI/2-Agent/Agentic-RL/VerlTool|VerlTool 论文]]"
   - "[[AI/2-Agent/Agentic-RL/Agent-RL-训练实战指南|Agent-RL-训练实战指南]]"
   - "[[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]]"
   - "[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]]"
   - "[[AI/2-Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent-RL-环境工程系统论]]"
-  - "[[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]]"
+  - "[[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent-RL|KLong]]"
 ---
 
 # Tool Use RL 训练专题 — 用 RL 教模型学会使用工具
@@ -428,8 +428,8 @@ Tool Use RL 的根本意义：LLM 从"知识检索机"进化为"策略性问题�
 | 搜索增强推理 | Search-R1 框架 | interleaved 搜索策略学习 |
 | 企业客服 agent | VerlTool + Corecraft | 异步 rollout + 高保真环境 |
 | Web 自动化 | WebAgent-R1 | behavior cloning warm-up 必须 |
-| 全自动工具 Agent 构建 | [[ASTRA-Automated-Tool-Agent-Training\|**ASTRA**]] (2601.21558) | MCP server → SFT 轨迹 + RL verifiable env，无人工标注，32B 超 o3 |
-| GRPO reward 同质化 | [[RC-GRPO-Reward-Conditioned-Tool-Calling-RL\|**RC-GRPO**]] (2602.03025) | reward token conditioning 强制组内多样性，7B 超闭源模型 |
+| 全自动工具 Agent 构建 | **ASTRA** (2601.21558) | MCP server → SFT 轨迹 + RL verifiable env，无人工标注，32B 超 o3 |
+| GRPO reward 同质化 | **RC-GRPO** (2602.03025) | reward token conditioning 强制组内多样性，7B 超闭源模型 |
 
 ### 工程要点
 
@@ -470,8 +470,8 @@ Tool Use RL 的根本意义：LLM 从"知识检索机"进化为"策略性问题�
 - [[AI/2-Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|**CM2**]] (2026-02): https://arxiv.org/abs/2602.12268 — **Unverifiable reward 路线**：Checklist Rewards（binary criteria decomposition），Sparse assign + Dense criteria 设计，LLM-simulated 工具环境；tau-Bench +8，BFCL-V4 +10，ToolSandbox +12
 
 ### 相关 Vault 笔记
-- [[LLM工具调用与Function-Calling-2026技术全景|LLM工具调用与Function-Calling-2026技术全景]] — 工具调用原理/MCP/生产实践
+- LLM工具调用与Function-Calling-2026技术全景 — 工具调用原理/MCP/生产实践
 - [[AI/2-Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent-RL-环境工程系统论]] — 训练环境设计 + Reward 工程
 - [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]] — Credit Assignment 全图谱
-- [[AI/2-Agent/Agentic-RL/VerlTool 论文|VerlTool 论文]] — VerlTool 单独深读
+- [[AI/2-Agent/Agentic-RL/VerlTool|VerlTool 论文]] — VerlTool 单独深读
 - [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL-2026前沿综合分析]] — 四大维度综合框架

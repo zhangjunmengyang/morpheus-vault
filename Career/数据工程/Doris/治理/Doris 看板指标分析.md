@@ -201,9 +201,9 @@ alerts:
 
 ## 相关
 
-- [[Doris 治理]]
-- [[Doris 架构|Doris 架构]]
-- [[Doris 底层存储|Doris 底层存储]]
-- [[Doris 生产|Doris 生产]]
-- [[grafana 看板|grafana 看板]]
-- [[监控指标|监控指标]]
+- [[Career/数据工程/Doris/治理/Doris 治理]]
+- [[Career/数据工程/Doris/Doris 架构|Doris 架构]]
+- [[Career/数据工程/Doris/底层存储/Doris 底层存储|Doris 底层存储]]
+- [[Career/数据工程/Doris/生产/Doris 生产|Doris 生产]]
+- [[AI/3-LLM/Frameworks/verl/grafana 看板|grafana 看板]]
+- [[Career/数据工程/Flink/生产/监控指标|监控指标]]

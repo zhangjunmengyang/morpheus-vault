@@ -117,10 +117,10 @@ GROUP BY department;
 
 ## 相关
 
-- [[Spark SQL 执行过程]]
-- [[Spark Shuffle]]
-- [[Spark AQE + DDP]]
-- [[谓词下推]]
-- [[Spark 调优|Spark 调优]]
-- [[Spark Join]]
-- [[Spark 概述|Spark 概述]]
+- [[Career/数据工程/Spark/SQL/Spark SQL 执行过程]]
+- [[Career/数据工程/Spark/SQL/Spark Shuffle]]
+- [[Career/数据工程/Spark/SQL/Spark AQE + DDP]]
+- [[Career/数据工程/Spark/SQL/谓词下推]]
+- [[Career/数据工程/Spark/生产运维/调优/Spark 调优|Spark 调优]]
+- [[Career/数据工程/Spark/SQL/Spark Join]]
+- [[Career/数据工程/Spark/Spark 概述|Spark 概述]]

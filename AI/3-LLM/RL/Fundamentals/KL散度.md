@@ -16,8 +16,8 @@ sources:
   - DeepSeekMath (GRPO) — arXiv:2402.03300
   - Cover & Thomas, Elements of Information Theory, 2nd ed., Wiley, 2006
 related:
-  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]"
-  - "[[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]]"
+  - "[[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO 深度理解]]"
+  - "[[AI/3-LLM/RL/算法/PPO 原理|PPO 原理]]"
   - "[[AI/1-Foundations/Math/信息论|信息论]]"
 ---
 #  K1-K3 & Forward vs. Reverse KL散度
@@ -146,7 +146,7 @@ $$D_{\text{KL}}(Q \| P) = \sum_x Q(x) \log \frac{Q(x)}{P(x)} = -\sum_x Q(x) \log
 | Forward KL | GAN 训练 | 希望生成样本覆盖数据所有变化 |
 | Forward KL | VAE 正则化 | 约束 $Q(z)$ 接近先验 $P(z) = \mathcal{N}(0, I)$ |
 | Reverse KL | 模型蒸馏 | 学生集中学教师的主要模式 |
-| Reverse KL | RL 对齐（[[GRPO 深度理解\|GRPO]]） | $D_{\text{KL}}(\pi_\theta \| \pi_{\text{ref}})$ 防止新策略偏离参考策略太远 |
+| Reverse KL | RL 对齐（GRPO） | $D_{\text{KL}}(\pi_\theta \| \pi_{\text{ref}})$ 防止新策略偏离参考策略太远 |
 
 > 延伸阅读：[Reverse vs Forward KL](https://www.tuananhle.co.uk/notes/reverse-forward-kl.html)
 # 三、GRPO 应用
@@ -222,14 +222,14 @@ plt.legend()
 - 是否存在比 K3 更优的 KL 估计器？自适应方差的估计器（如 RLOO）是否更好？
 
 ### 脑暴：如果往下延伸
-- 如果把 [[AI/3-LLM/RL/PPO/PPO 原理|PPO]] 的 clip ratio 和 KL 惩罚统一到一个框架，能否得到更优的策略约束？
+- 如果把 [[AI/3-LLM/RL/算法/PPO 原理|PPO]] 的 clip ratio 和 KL 惩罚统一到一个框架，能否得到更优的策略约束？
 - Jensen-Shannon 散度（Forward + Reverse 的对称平均）在 RLHF 中是否有应用潜力？
 
 ## 相关
 
-> 🔗 See also: [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — 使用 Reverse KL + K3 的主流 RL 对齐方法
-> 🔗 See also: [[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]] — KL 约束的另一种实现（clip ratio）
+> 🔗 See also: [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO 深度理解]] — 使用 Reverse KL + K3 的主流 RL 对齐方法
+> 🔗 See also: [[AI/3-LLM/RL/算法/PPO 原理|PPO 原理]] — KL 约束的另一种实现（clip ratio）
 > 🔗 See also: [[AI/1-Foundations/Math/信息论|信息论]] — KL 散度的数学基础
 
 - [[AI/1-Foundations/Math/概率与分布|概率与分布]]
-- [[AI/3-LLM/RL/DPO/DPO-TRL实践|DPO]]
+- [[AI/3-LLM/RL/实践/DPO-TRL实践|DPO]]

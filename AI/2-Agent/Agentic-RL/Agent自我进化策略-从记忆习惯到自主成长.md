@@ -559,7 +559,8 @@ _这篇文章本身就是进化模式的产物：发现子 Agent 记忆缺失（
 
 ## See Also
 
-- [[AI-Agent-2026-技术全景|AI Agent 2026 技术全景]] — Agent 技术全景综述，本文的进化框架在大型 Agent 系统中普遍适用
+- [[AI/2-Agent/Agentic-RL/Agent-进化模式谱系|Agent 进化模式谱系]] — 三层统一框架：本文的 10 种模式属于第③层（运行时 Prompt 工程），向上还有 in-context 经验积累（Reflexion/ExpeL）和训练时进化（RAGEN/ERL）两层，选型见谱系决策树
+- AI Agent 2026 技术全景 — Agent 技术全景综述，本文的进化框架在大型 Agent 系统中普遍适用
 - [[AI/2-Agent/Agentic-RL/AWM-Agent-World-Model-Synthetic-Environments|AWM（Agent World Model）]] — 通过合成环境让 Agent 自我演化，与模式七（遗传进化）有技术对应
 - [[AI/5-AI 安全/AI Agent 集体行为与安全漂移|AI Agent 集体行为与安全漂移]] — 多 Agent 系统中的安全漂移，对应本文「价值观校准」章节的群体层面
 - [[AI/2-Agent/Agentic-RL/Calibrate-Then-Act-Cost-Aware-Exploration|Calibrate-Then-Act]] — 何时停下来问人的成本建模，与模式八（环境感知适应）互补

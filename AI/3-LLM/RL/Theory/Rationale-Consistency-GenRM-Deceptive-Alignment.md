@@ -22,7 +22,7 @@ sources:
   - "RM-Bench: https://arxiv.org/abs/2410.16184"
 related:
   - "[[AI/3-LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]]"
-  - "[[AI/3-LLM/RL/Other-Algorithms/RICOL-Retrospective-In-Context-Online-Learning|RICOL]]"
+  - "[[AI/3-LLM/RL/算法/RICOL-Retrospective-In-Context-Online-Learning|RICOL]]"
   - "[[AI/3-LLM/RL/Theory/RLRR-Reference-Guided-Alignment-Non-Verifiable|RLRR]]"
   - "[[AI/5-AI 安全/AutoInject-RL-Prompt-Injection-Attack|AutoInject]]"
   - "[[AI/3-LLM/Evaluation/PERSIST-LLM-Personality-Stability-Benchmark|PERSIST]]"
@@ -40,7 +40,7 @@ related:
 ## See Also
 
 - [[AI/3-LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — margin-aware reward：关注判断边界处的样本；本文关注判断推理过程的质量——两者都在问"reward 信号是否够好"，方向不同（MARS=边界质量，本文=推理质量）
-- [[AI/3-LLM/RL/Other-Algorithms/RICOL-Retrospective-In-Context-Online-Learning|RICOL]] — 用 in-context learning 改善 RL 的 reward；本文直接改变 reward model 的训练目标——同为提升 reward 可靠性，路径不同
+- [[AI/3-LLM/RL/算法/RICOL-Retrospective-In-Context-Online-Learning|RICOL]] — 用 in-context learning 改善 RL 的 reward；本文直接改变 reward model 的训练目标——同为提升 reward 可靠性，路径不同
 - [[AI/3-LLM/RL/Theory/RLRR-Reference-Guided-Alignment-Non-Verifiable|RLRR]] — 非可验证任务的 reward modeling；本文关注 GenRM 的推理质量问题——两者共同指向：scalar reward 信号不足以对齐复杂任务
 - [[AI/5-AI 安全/AutoInject-RL-Prompt-Injection-Attack|AutoInject]] — reward 的另一失效模式：adversarial attack 操纵 reward；本文的"deceptive alignment"是训练目标设计缺陷导致的失效——两者共同构成 reward 可靠性的独立威胁图谱
 - [[AI/3-LLM/Evaluation/PERSIST-LLM-Personality-Stability-Benchmark|PERSIST]] — 行为一致性基准：本文证明 outcome-correct 模型推理过程可以完全不同（o3 vs o3-mini）；PERSIST 证明同一模型对同一问题回答可以不一致——两者从不同角度揭示当前LLM缺乏"真正理解"的结构性问题

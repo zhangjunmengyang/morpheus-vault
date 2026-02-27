@@ -165,7 +165,7 @@ graph TD
     B -->|同方向| A
 ```
 
-- **[[AI/3-LLM/RL/Other-Algorithms/VPPO-Visually-Perceptive-Policy-Optimization|VPPO]]**：同一问题（视觉捷径）的 token 级解法，两者互补
+- **[[AI/3-LLM/RL/算法/VPPO-Visually-Perceptive-Policy-Optimization|VPPO]]**：同一问题（视觉捷径）的 token 级解法，两者互补
 - **[[AI/2-Agent/Agentic-RL/Tree-GRPO-Tree-Search-LLM-Agent-RL|Tree-GRPO（ICLR 2026）]]**：同一原则——reward 应与因果结构对齐
 - **[[AI/2-Agent/Agentic-RL/UI-R1-GUI-Action-Prediction-RL|UI-R1]]**：极致数据效率的另一案例（136条）
 - **[[AI/3-LLM/RL/Theory/Rationale-Consistency-GenRM-Deceptive-Alignment|MetaJudge（Rationale Consistency）]]**：judging LLM 评估一致性的类似范式
@@ -204,7 +204,7 @@ A: 增加了感知维度的监督信号，每条数据的有效信息量提升�
 
 - **原论文**：[arXiv:2506.07218](https://arxiv.org/abs/2506.07218)（USTC + iFLYTEK）
 - **代码**：[github.com/tongxiao2002/Perception-R1](https://github.com/tongxiao2002/Perception-R1)
-- **对比**：[[AI/3-LLM/RL/Other-Algorithms/VPPO-Visually-Perceptive-Policy-Optimization|VPPO]]（同方向，token 级视觉依赖度方案）
+- **对比**：[[AI/3-LLM/RL/算法/VPPO-Visually-Perceptive-Policy-Optimization|VPPO]]（同方向，token 级视觉依赖度方案）
 - **延伸**：VTPerception-R1 (2509.24776)（扩展到文本视觉感知双维度）
 - **延伸**：VisRL（intention-guided focus selection 子策略，无需 region labels）
 - **元原则**：[[AI/3-LLM/RL/Theory/RL-Signal-Granularity-Causal-Structure-Principle|RL 信号粒度与因果结构匹配原则]] — Perception-R1 是路径4（设计 Reward 层次）的典型实现，与 Tree-GRPO/GiGPO/VPPO 共同印证该元命题

@@ -211,7 +211,7 @@ class MultiHeadLatentAttention(nn.Module):
 
 ### V3/V4 演进
 - V3: 优化 MLA 实现
-- V4: 预计结合 [[AI/3-LLM/Architecture/DeepSeek Engram|DeepSeek Engram]] 条件记忆
+- V4: 预计结合 [[AI/4-模型/DeepSeek/DeepSeek Engram|DeepSeek Engram]] 条件记忆
 
 ## 行业影响
 
@@ -358,4 +358,4 @@ A: 1）与条件记忆（Engram）结合；2）更智能的潜在空间设计；
 - [[AI/3-LLM/Architecture/Transformer 位置编码|Transformer 位置编码]] — 解耦 RoPE 是 MLA 的关键设计挑战；理解 RoPE 才能理解为什么低秩压缩和旋转操作不可交换
 - [[AI/3-LLM/Architecture/长上下文技术|长上下文技术]] — MLA 的低 KV Cache 是实现 128K+ 上下文的关键使能技术
 - [[AI/3-LLM/Architecture/FlashAttention|FlashAttention]] — MLA 的注意力计算仍可用 FlashAttention 加速；IO 感知优化与 KV 压缩互补
-- [[MoE 进阶|MoE 进阶]] — DeepSeek-V2/V3 同时采用 MLA + MoE，两者协同优化内存和计算
+- MoE 进阶 — DeepSeek-V2/V3 同时采用 MLA + MoE，两者协同优化内存和计算

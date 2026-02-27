@@ -22,7 +22,7 @@ related:
   - "[[AI/2-Agent/Agentic-RL/Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems|Dr. MAS]]"
   - "[[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]]"
   - "[[AI/2-Agent/Agentic-RL/LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL|LOOP]]"
-  - "[[AI/3-LLM/RL/GRPO深度理解|GRPO 深度理解]]"
+  - "[[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO 深度理解]]"
 updated: 2026-02-24
 ---
 
@@ -276,7 +276,7 @@ graph TD
 - [[AI/2-Agent/Agentic-RL/Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems|Dr. MAS]] — 多 Agent 跨 agent 异质性问题；与 SeeUPO 的 turn-level 建模互补（agent维度 vs turn维度）
 - [[AI/2-Agent/Agentic-RL/LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL|LOOP]] — Leave-One-Out PPO：同样是 critic-free long-horizon agent RL，不同角度解决 multi-turn 稳定性
 - [[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — step-level credit assignment（anchor state grouping）；与 SeeUPO 的 turn-level CA 粒度互补，可组合
-- [[AI/3-LLM/RL/GRPO深度理解|GRPO 深度理解]] — SeeUPO 证明 GRPO 在 multi-turn 场景无收敛保证；单轮任务仍首选 GRPO
+- [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO 深度理解]] — SeeUPO 证明 GRPO 在 multi-turn 场景无收敛保证；单轮任务仍首选 GRPO
 - [[AI/2-Agent/Agentic-RL/WebAgent-R1-Multi-Turn-RL-Web-Agent|WebAgent-R1]] — M-GRPO 的三层归一化工程实践规避部分问题，但缺乏 SeeUPO 级别的理论保证
 - [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — SeeUPO 是 turn-level CA 的理论保证版本，在该谱系中处于顶层
 

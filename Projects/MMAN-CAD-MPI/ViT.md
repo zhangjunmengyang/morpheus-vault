@@ -90,10 +90,10 @@ ViT 的影响远超图像分类本身：
 
 ## 相关
 
-- [[BERT|BERT]]
-- [[MAE]]
-- [[CLIP|CLIP]]
-- [[深度学习|深度学习]]
-- [[ControlNet]]
-- [[Transformer 通识|Transformer 通识]]
-- [[Attention 变体综述|Attention 详解]]
+- [[AI/4-模型/Google/BERT|BERT]]
+- [[Projects/MMAN-CAD-MPI/MAE]]
+- [[Projects/MA-RLHF/lc6/CLIP-ViT-LLaVA-手撕实操|CLIP]]
+- [[AI/1-Foundations/DL-Basics/深度学习|深度学习]]
+- [[AI/3-LLM/MLLM/ControlNet]]
+- Transformer 通识
+- [[AI/3-LLM/Architecture/Attention 变体综述|Attention 详解]]

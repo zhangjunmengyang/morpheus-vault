@@ -387,7 +387,7 @@ MCP的真正贡献，在于它通过“**关注点分离**”这一经典的工�
 
 ## See Also
 
-- [[AI/2-Agent/Fundamentals/HF-MCP-Course|HF MCP Course]] — MCP 的课程版（实践）
+- [[Projects/HF-MCP-Course|HF MCP Course]] — MCP 的课程版（实践）
 - [[AI/2-Agent/Fundamentals/Tool Use|Tool Use]] — Tool Use 是 MCP 的底层能力
 -  — Agent 知识全图谱
 -  — MCP 在 LLM 生态中的位置

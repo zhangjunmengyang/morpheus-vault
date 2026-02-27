@@ -219,7 +219,7 @@ AgentConductor 的密度函数更 principled，FlowSteer 的 operator 抽象更�
 - [[AI/2-Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer CWRPO]] — 同为 GRPO + workflow multi-turn RL，但拓扑表达力弱于 AgentConductor（chain/tree vs DAG）；FlowSteer 更通用，AgentConductor 更专精
 - [[AI/2-Agent/Multi-Agent/IMAGINE-多Agent蒸馏到单模型|IMAGINE]] — MAS 反方向：把多 Agent 集体能力蒸馏进单模型（能力集中）vs AgentConductor（动态组合）
 - [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 2026 全景]] — AgentConductor 使用 GRPO 训练 orchestrator 的算法基础
-- [[LLM代码生成-2026技术全景|LLM 代码生成 2026 全景]] — 代码生成赛道全局视图，AgentConductor 在竞赛级代码的位置
+- LLM 代码生成 2026 全景 — 代码生成赛道全局视图，AgentConductor 在竞赛级代码的位置
 -  — Agent 研究全图谱
 
 ## 连接

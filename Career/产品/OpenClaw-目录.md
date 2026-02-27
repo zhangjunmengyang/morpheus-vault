@@ -12,10 +12,10 @@ updated: 2026-02-15
 ## 文章索引
 
 ### 运维 & 稳定性
-- [[macOS-稳定运行实战指南]] — LaunchAgent 服务化、Network Watchdog、日志轮转、配置快照、记忆体系
+- [[Career/产品/OpenClaw-macOS-稳定运行实战指南]] — LaunchAgent 服务化、Network Watchdog、日志轮转、配置快照、记忆体系
 
 ### 工具集成
-- [[Chrome-DevTools-MCP|Chrome DevTools MCP]] — 浏览器调试 MCP 集成
+- [[AI/2-Agent/Fundamentals/Chrome-DevTools-MCP|Chrome DevTools MCP]] — 浏览器调试 MCP 集成
 
 ### 待写
 - [ ] 结构化记忆体系设计（contextPruning / compaction / distiller 深度解析）

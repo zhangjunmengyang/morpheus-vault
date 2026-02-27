@@ -133,6 +133,6 @@ tags:
 
 ## See Also
 
-- [[AI-Agent-2026-技术全景]] — Agent基础概念
-- [[对齐问题的本质]] — Agent安全的上游问题
-- [[LLM工具调用与Function-Calling-2026技术全景]] — 工具调用是多Agent的基础设施
+- AI-Agent-2026-技术全景 — Agent基础概念
+- [[思考/对齐问题的本质]] — Agent安全的上游问题
+- LLM工具调用与Function-Calling-2026技术全景 — 工具调用是多Agent的基础设施

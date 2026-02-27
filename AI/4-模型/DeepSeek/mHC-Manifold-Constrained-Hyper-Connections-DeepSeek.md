@@ -211,9 +211,9 @@ DeepSeek V4 =
 
 ## 与 Vault 其他笔记的连接
 
-- → [[AI/3-LLM/Architecture/Engram-Conditional-Memory-DeepSeek-V4|Engram-Conditional-Memory-DeepSeek-V4]] (mHC 是 Engram 的 backbone)
+- → [[AI/4-模型/DeepSeek/Engram-Conditional-Memory-DeepSeek-V4|Engram-Conditional-Memory-DeepSeek-V4]] (mHC 是 Engram 的 backbone)
 - → [[AI/4-模型/GLM/GLM-5|GLM-5-技术报告精读]] (Muon Split 等类似宏观架构创新)
 - → [[AI/3-LLM/Architecture/Growing-to-Looping-Iterative-Computation-Unification|Growing-to-Looping-Iterative-Computation-Unification]] (residual stream 的另一视角：迭代计算)
-- → [[KV Cache|KV Cache 优化]] (micro vs macro design 的区分)
-- → [[AI/3-LLM/RL/Frameworks/Slime-RL-Framework|Slime-RL-Framework]] (DeepSeek 基础设施背景)
+- → [[AI/3-LLM/Inference/KV Cache|KV Cache 优化]] (micro vs macro design 的区分)
+- → [[AI/3-LLM/RL/算法/Slime-RL-Framework|Slime-RL-Framework]] (DeepSeek 基础设施背景)
 - → [[AI/3-LLM/MA-RLHF课程/lc8-mHC-流形超连接从零手写|mHC 从零手写（MA-RLHF lc8）]] (Sinkhorn-Knopp 迭代 + doubly stochastic 约束的完整 PyTorch 实现)

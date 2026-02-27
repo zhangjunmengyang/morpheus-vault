@@ -75,6 +75,6 @@ Reranking 任务的数据集格式为：
 ## See Also
 
 - [[AI/3-LLM/Application/Embedding/Embedding 选型|Embedding 选型]] — 同方向实践版，与本篇互补
-- [[AI/6-应用/RAG/RAG 检索策略|RAG 检索策略]] — Embedding 在 RAG 中的核心角色
-- [[Transformer|Transformer 通识]] — Embedding 的架构基础
+- [[AI/3-LLM/Application/RAG/RAG 检索策略|RAG 检索策略]] — Embedding 在 RAG 中的核心角色
+- Transformer 通识 — Embedding 的架构基础
 -  — 大语言模型知识全图谱

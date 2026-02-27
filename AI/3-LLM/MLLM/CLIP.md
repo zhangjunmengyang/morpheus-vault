@@ -103,10 +103,10 @@ CLIP 在各种分布偏移测试（ImageNet-V2、ImageNet-Sketch、ImageNet-A �
 
 ## 相关
 
-- [[AI/CV/ViT|ViT]] — CLIP 的 Image Encoder 选项之一
+- [[Projects/MA-RLHF/lc6/CLIP-ViT-LLaVA-手撕实操|ViT]] — CLIP 的 Image Encoder 选项之一
 - [[AI/3-LLM/MLLM/BLIP-2|BLIP-2]] — 继承 CLIP 对比学习范式，用 Q-Former 解决 frozen encoder 对齐
 - [[AI/3-LLM/MLLM/Qwen-VL|Qwen-VL]] — 阿里 MLLM，使用 CLIP-style Vision Encoder 接 LLM
-- [[AI/3-LLM/Architecture/BERT|BERT]] — Transformer 编码器，CLIP Text Encoder 的架构基础
+- [[AI/4-模型/Google/BERT|BERT]] — Transformer 编码器，CLIP Text Encoder 的架构基础
 - [[AI/1-Foundations/DL-Basics/深度学习|深度学习]]
 - [[AI/3-LLM/MLLM/InternVL3|InternVL3]] — 后续 MLLM，同样基于 CLIP-style 视觉-语言对齐
 - [[AI/3-LLM/MLLM/DeepSeek-VL|DeepSeek-VL]] — DeepSeek 多模态，使用 SigLIP（CLIP 改进版）作 Vision Encoder
