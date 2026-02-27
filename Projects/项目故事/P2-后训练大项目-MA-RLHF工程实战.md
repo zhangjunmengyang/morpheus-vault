@@ -123,6 +123,116 @@ r_total = r_format + r_answer
 
 ---
 
+## 技术路径深化（面试追问完整版）
+
+### a. SFT 阶段：全参 vs LoRA vs QLoRA 选型逻辑
+
+**三种方案的核心差异：**
+
+| 方案 | 显存占用 | 效果上限 | 适用场景 |
+|------|---------|---------|---------|
+| 全参 SFT | 最高（约模型大小×18，混精度+梯度+优化器） | 最高 | 最终版本、有足够 GPU |
+| LoRA | 中（冻结基座，只训练 adapter） | 略低于全参（差距通常 1-2%） | 快速验证、资源受限 |
+| QLoRA | 最低（4bit 量化基座 + LoRA） | 再低一点（量化误差） | 单卡实验、消费级 GPU |
+
+**我的选择逻辑：**
+- 第一轮用 QLoRA：验证数据格式/chat template/loss 曲线——单卡跑通，省掉 90% 调试时间
+- 确认 pipeline 通了再切全参，这时候才是在比算法，不是在比工程
+
+**LoRA rank/alpha 怎么调：**
+- 起点：rank=16, alpha=32（alpha/rank=2）
+- rank 太小（4-8）：adapter 容量不够，复杂任务学不动
+- rank 太大（128-256）：慢，且数据量有限时过拟合
+- alpha/rank 控制 adapter 更新的 scaling，影响有效学习率量级
+- 面试官追问"为什么不用 DoRA"：DoRA 分解方向+大小更新，少量数据场景比 LoRA 好一点，但工程复杂，项目里标准 LoRA 已够用
+
+**面试官追问"为什么不用 QLoRA 做最终版本"：**
+量化误差在最终性能上是可测量的损失。7B 全参和 QLoRA 的 GSM8K 差距约 1-2%，乘上 DPO/GRPO 的复合效应，最终差距会被放大。实验预算够时，全参是更稳的选择。
+
+---
+
+### b. DPO 阶段：DPO vs SimPO vs IPO vs ORPO 区别与选型
+
+**各方案的核心机制差异：**
+
+| 方案 | 是否需要 reference model | 核心优化目标 | 主要问题 |
+|------|------------------------|------------|---------|
+| DPO | 是 | 最大化 chosen - rejected 的 logprob 差 | length bias（偏好更长的 chosen） |
+| SimPO | 否（用 sequence 平均 logprob 作 reward） | 直接最大化 margin | 不适合有明确 ref 的场景 |
+| IPO | 是 | 加 KL 约束避免 reward hacking | 超参数更多，调参复杂 |
+| ORPO | 否（在 SFT loss 上直接叠 odds ratio） | SFT + 对齐一步完成 | 不适合已有 SFT checkpoint 的场景 |
+
+**为什么选 DPO：**
+我的场景是 SFT 之后接 DPO——reference model 就是 SFT 后的 checkpoint，pipeline 自然衔接。SimPO 更适合没有明确 ref 的场景。
+
+**DPO 的 length bias 问题：**
+DPO 会偷学捷径：chosen 往往比 rejected 更长，模型发现"说得越多越容易被偏好"。应对方案：
+1. 构造偏好数据时控制 chosen/rejected 长度比（不要系统性让 chosen 更长）
+2. 加 length penalty：`r_total = r_dpo - β × len(output)`
+3. 用 SimPO（sequence-level 平均 logprob 天然规避 length 问题）
+
+**DPO 的 offline 限制：**
+DPO 用固定偏好数据集，不做 online 探索。模型学到一定程度后，它生成的新回答和数据集分布越来越远，梯度信号有效性下降。所以 DPO 通常只做 1-2 个 epoch，多了效果反降。这是 DPO 的根本局限，GRPO 的 online 采样解决了这个问题。
+
+---
+
+### c. GRPO 阶段：reward 设计迭代路径
+
+**为什么不用 PPO（补充详版）：**
+PPO 需要 4 个模型（actor/ref/critic/reward_model）。Critic 训练是独立难题——需要估计每个状态的期望 return，本身需要大量样本和调参；对于有精确验证器的任务，成本完全没必要。GRPO 用 group 内相对 reward 替代 critic 估计——Monte Carlo 近似，同一 prompt 多个采样，reward 均值即期望 return 的无偏估计。
+
+**Reward 设计三个阶段：**
+
+**阶段一（稀疏，失败）：**
+```python
+reward = 1.0 if answer_correct else 0.0
+```
+问题：200 个 token 的推理错了，reward=0，模型不知道哪步出了问题。训练信号几乎为 0，loss 下降但效果不变。
+
+**阶段二（格式+结果，成功）：**
+```python
+r_format = 0.2  # 有 <think>...</think> 格式就给
+r_answer = 0.8  # 答案精确匹配
+reward = r_format + r_answer
+```
+关键洞察：format reward 提供比 answer reward 更早的正反馈——模型先学会"用 CoT 格式思考"，再学"CoT 里怎么推理"。学习有了支撑点，曲线立刻稳定。
+
+**阶段三（进阶）：step-level reward：**
+更进一步是给推理链每一步单独打分（process reward），用 PRIME 或 AgentPRM——正确推理步骤给部分 credit，不必等到最后才知道对错。但实现复杂度高（需要 step 级别标注或隐式 PRM），数学推理任务上性价比不如 format+answer 两级奖励。
+
+**面试官追问"为什么不用 DAPO/REINFORCE++/Dr-GRPO"：**
+DAPO 解决 entropy collapse（训练后期策略过于确定性）；REINFORCE++ 去掉 baseline 估计方差；Dr-GRPO 修 std 归一化的 difficulty bias。三个都是 GRPO 的工程改进，效果差异通常 1% 以内。学习项目标准 GRPO 足够；生产系统才值得逐一 ablation。
+
+---
+
+### d. 分布式：verl Actor-Rollout 解耦的通信开销分析
+
+**weight sync 的具体机制：**
+
+verl 里 Actor（DeepSpeed ZeRO-3）和 Rollout（vLLM）是两套独立进程。每完成一个 rollout batch，需要把 Actor 最新参数同步给 Rollout worker：
+
+```
+1. Actor 训练完一个 batch，参数更新
+2. DeepSpeed ZeRO-3 参数分散在多个 GPU
+   → All-Gather 把完整参数汇聚到各 GPU
+3. 通过 NCCL broadcast 发给 vLLM workers
+4. vLLM 加载新参数，继续采样
+```
+
+**通信量估算：**
+7B 参数，bf16 精度，每次 weight sync 约传输 **14GB** 数据。InfiniBand 100Gb/s 机器上，单次 sync 约 **1-2 秒**。
+
+**什么时候通信是瓶颈：**
+rollout batch 太小（如每 prompt 只采 4 条），rollout 很快做完，weight sync 相对开销就大。建议每 prompt 至少采 8 条（G=8），让 vLLM 批量吞吐优势充分发挥，稀释同步开销。
+
+**版本兼容问题（真实踩坑）：**
+verl 0.7.0 + vLLM 0.11.0 不兼容——vLLM weight loading API 做了破坏性变更，weight sync 时 tensor shape 对不上，worker 启动直接失败。错误信息完全不指向版本问题。解法：锁版本，写启动前的 environment check 脚本强制验证环境。
+
+**面试官追问"为什么不用 Ray RLlib 或 OpenRLHF"：**
+Ray RLlib 是通用 RL 框架，没有专门针对 LLM 优化，没有 Actor/Rollout 解耦设计，采样和训练混在一起，吞吐量低。OpenRLHF 设计类似 verl，但生态和文档没 verl 成熟；两者都可以用，选 verl 主要是 DeepSeek 官方用这套，有更多实战参考。
+
+---
+
 ## 快速技术速查（面试追问备用）
 
 **"GRPO 的 advantage 是怎么算的？"**
