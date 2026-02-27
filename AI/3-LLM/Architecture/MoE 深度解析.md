@@ -24,7 +24,7 @@ related:
   - "[[AI/3-LLM/Architecture/DeepSeek Engram]]"
   - "[[AI/3-LLM/Infra/分布式训练]]"
   - "[[AI/3-LLM/Infra/DeepSpeed]]"
-  - "[[AI/3-LLM/Inference/vLLM]]"
+  - "[[vLLM]]"
   - "[[AI/3-LLM/SFT/LoRA]]"
 ---
 
@@ -130,7 +130,7 @@ flowchart TD
 #### Multi-head Latent Attention (MLA)
 - 压缩 KV Cache：将 Key-Value 压缩到低秩隐空间
 - 显存从标准 MHA 的 **100%** 降到约 **5-10%**
-- 这也是 [[AI/3-LLM/Inference/vLLM|vLLM]] 等推理框架需要适配的关键特性
+- 这也是 [[vLLM|vLLM]] 等推理框架需要适配的关键特性
 
 > 来源：DeepSeek-V2 arXiv:2405.04434, Sec. 3.1 (Multi-head Latent Attention)
 
@@ -182,7 +182,7 @@ def route_with_bias(x, W_gate, bias):
 #### Multi-Token Prediction (MTP)
 - 每个位置预测下一个 token 的同时，额外预测后续 1-2 个 token
 - 在训练时提供更丰富的监督信号
-- 推理时可用于 [[AI/3-LLM/Inference/推理优化|Speculative Decoding]]
+- 推理时可用于 [[推理优化|Speculative Decoding]]
 
 > 来源：DeepSeek-V3 arXiv:2412.19437, Sec. 3.4
 
@@ -289,7 +289,7 @@ DeepSeek-V3 的通信优化：
 
 - **显存需求**：即使只激活部分专家，所有参数都要加载
 - DeepSeek-V3 671B → 需要约 **350GB+ 显存**（FP8 量化后约 ~170GB）
-- [[AI/3-LLM/Inference/vLLM|vLLM]] 已支持 DeepSeek-V3 的 MoE 推理
+- [[vLLM|vLLM]] 已支持 DeepSeek-V3 的 MoE 推理
 - Expert offloading：冷门专家可以 offload 到 CPU/SSD
 
 ## 5. 面试常见问题

@@ -14,7 +14,7 @@ tags:
 related:
   - "[[AI/3-LLM/MA-RLHF课程/lc10-推理系统-MOC]]"
   - "[[LLM-推理优化-2026-全景]]"
-  - "[[AI/3-LLM/Inference/vLLM]]"
+  - "[[vLLM]]"
 ---
 
 # PD Disaggregation 手撕实操

@@ -94,6 +94,6 @@ Whether the folding agent can benefit from parallel branching — i.e., creating
 ## See Also
 
 - [[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent|KLong]] — 极长 horizon 下 context 压缩的另一路线
-- [[AI/3-LLM/Inference/KV Cache|KV Cache 优化]] — Context 压缩的底层机制
+- [[KV Cache|KV Cache 优化]] — Context 压缩的底层机制
 -  — Agent 知识全图谱
 -  — Context 管理在 LLM 层面的全景

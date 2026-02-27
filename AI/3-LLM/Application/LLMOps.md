@@ -88,9 +88,9 @@ Load Balancer → API Gateway → Model Server → GPU Cluster
 ```
 
 **推理优化**
-- **[[AI/3-LLM/Inference/KV Cache|KV Cache]]**: 减少重复计算
+- **[[KV Cache|KV Cache]]**: 减少重复计算
 - **[[Dynamic Batching]]**: 提高 GPU 利用率
-- **[[AI/3-LLM/Inference/Speculative Decoding|Speculative Decoding]]**: 加速生成过程
+- **[[Speculative Decoding|Speculative Decoding]]**: 加速生成过程
 
 ### 5. 监控阶段
 

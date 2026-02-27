@@ -23,7 +23,7 @@ Speculative Decoding 是一种 LLM 推理加速技术，核心思想是让小模
 2. **Verification 阶段**：大模型并行计算所有候选位置的概率分布
 3. **Acceptance 阶段**：通过 rejection sampling 决定接受多少个 token
 
-关键是这个过程与 [[AI/3-LLM/Inference/采样策略|采样策略]] 完全等价，不会改变最终的输出分布。
+关键是这个过程与 [[采样策略|采样策略]] 完全等价，不会改变最终的输出分布。
 
 ## 数学保证：Rejection Sampling
 
@@ -58,7 +58,7 @@ Medusa 在原模型基础上添加多个"medusa heads"，每个头预测不同�
 - **并行预测**：一次前向传播预测多个位置
 - **Tree-based sampling**：构建候选树而非序列
 
-与 [[AI/3-LLM/Inference/KV Cache|KV Cache]] 配合时需要小心处理分支状态。
+与 [[KV Cache|KV Cache]] 配合时需要小心处理分支状态。
 
 ### Eagle/Eagle-2：自回归草稿头
 
@@ -109,14 +109,14 @@ $$\text{Speedup} = \frac{K \cdot \alpha + (1-\alpha)}{1 + \gamma \cdot K}$$
 
 ### 与 Continuous Batching 的冲突
 
-[[AI/3-LLM/Inference/推理服务架构|推理服务架构]] 中的 continuous batching 假设所有请求按 token 同步推进，但 speculative decoding 会导致：
+[[推理服务架构|推理服务架构]] 中的 continuous batching 假设所有请求按 token 同步推进，但 speculative decoding 会导致：
 - **不同步进度**：某些请求可能一次处理多个 token
 - **调度复杂性**：需要重新设计 batch 调度算法
 - **内存管理**：KV cache 的增长模式不再可预测
 
 ### KV Cache 挑战
 
-与 [[AI/3-LLM/Inference/KV Cache|KV Cache]] 的集成面临：
+与 [[KV Cache|KV Cache]] 的集成面临：
 - **分支状态管理**：需要为候选序列维护多个 cache 分支
 - **内存开销**：worst-case 内存需求显著增加
 - **cache 一致性**：rejection 后需要正确回退 cache 状态
@@ -170,8 +170,8 @@ $$\text{Speedup} = \frac{K \cdot \alpha + (1-\alpha)}{1 + \gamma \cdot K}$$
 
 ## 相关笔记
 
-- [[AI/3-LLM/Inference/KV Cache|KV Cache]] - 缓存机制与内存优化
-- [[AI/3-LLM/Inference/推理服务架构|推理服务架构]] - 生产环境的服务设计
-- [[AI/3-LLM/Inference/采样策略|采样策略]] - 各种解码算法
+- [[KV Cache|KV Cache]] - 缓存机制与内存优化
+- [[推理服务架构|推理服务架构]] - 生产环境的服务设计
+- [[采样策略|采样策略]] - 各种解码算法
 - [[AI/3-LLM/Infra/模型并行策略|模型并行策略]] - 大模型分布式推理
-- [[AI/3-LLM/Inference/推理优化|推理优化]] - 其他加速技术
+- [[推理优化|推理优化]] - 其他加速技术

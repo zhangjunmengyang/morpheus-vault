@@ -338,5 +338,5 @@ A: 分层评估：1) 检索质量（Recall@K, MRR），2) Reranker 质量（NDCG
 
 - [[AI/3-LLM/Application/Embedding/Embedding|Embedding]] — 向量化基础
 - [[AI/3-LLM/Application/Embedding/Embedding 选型|Embedding 选型]] — 详细选型对比
-- [[AI/3-LLM/Inference/vLLM|vLLM]] — RAG 的 LLM 推理后端
+- [[vLLM|vLLM]] — RAG 的 LLM 推理后端
 - [[AI/3-LLM/Application/Prompt-Engineering-基础|Prompt Engineering]] — RAG prompt 设计

@@ -140,7 +140,7 @@ Kimi K2.5 的差异化：**Agent Swarm 原生支持 + 视觉 + 开权重**，三
 - [[2026年2月模型潮（这篇毫无价值，哪怕梳理个从 deepseek R1 以来的时间线都比这强）]] — 同期发布背景
 - [[AI/4-模型/GLM/GLM-5]] — 同级竞品（744B MoE，开权重）
 - [[AI/2-Agent/Fundamentals/Agent-World-Model]] — Agentic RL 背景
-- [[AI/3-LLM/Inference/Test-Time-Compute]] — Thinking 模式的 TTC 背景
+- [[Test-Time-Compute]] — Thinking 模式的 TTC 背景
 -  — PARL 所属的 RL 方法论
 - [[AI/2-Agent/Multi-Agent/Kimi-K2.5-PARL]] — PARL 深度精读版（Scholar 写，含 credit assignment / training instability 细节）
 

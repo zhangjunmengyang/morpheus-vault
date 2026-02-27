@@ -23,8 +23,8 @@ related:
   - "[[AI/3-LLM/Architecture/GQA-MQA|GQA/MQA]]"
   - "[[AI/3-LLM/Architecture/FlashAttention|FlashAttention]]"
   - "[[AI/3-LLM/Architecture/Attention 变体综述|Attention 变体综述]]"
-  - "[[AI/3-LLM/Inference/量化综述|量化综述]]"
-  - "[[AI/3-LLM/Inference/Continuous Batching|Continuous Batching]]"
+  - "[[量化综述|量化综述]]"
+  - "[[Continuous Batching|Continuous Batching]]"
 ---
 
 > [!info] 另有面试版
@@ -860,7 +860,7 @@ flowchart LR
 - KV Cache INT4/INT2 量化的精度损失在数学推理等高精度任务上仍需验证
 
 ### 脑暴：如果往下延伸
-- 如果把 [[AI/3-LLM/Architecture/GQA-MQA|GQA]] + [[AI/3-LLM/Inference/量化综述|FP8 量化]] + [[AI/3-LLM/Inference/KV Cache|PagedAttention]] 三者叠加，KV Cache 可压缩到原始的 ~6%（87.5% × 50%），使 128K 上下文长 batch 推理成为可能
+- 如果把 [[AI/3-LLM/Architecture/GQA-MQA|GQA]] + [[量化综述|FP8 量化]] + [[KV Cache|PagedAttention]] 三者叠加，KV Cache 可压缩到原始的 ~6%（87.5% × 50%），使 128K 上下文长 batch 推理成为可能
 - Prefix Caching + CacheBlend 的方向可能催生"KV Cache as a Service"——跨请求、跨用户的 KV Cache 共享池
 
 ---
@@ -904,5 +904,5 @@ flowchart LR
 > 🔗 See also: [[AI/3-LLM/Architecture/GQA-MQA|GQA/MQA]] — KV Cache 架构级优化的核心方案
 > 🔗 See also: [[AI/3-LLM/Architecture/FlashAttention|FlashAttention]] — Attention 计算加速，与 PagedAttention（内存管理）互补
 > 🔗 See also: [[AI/3-LLM/Architecture/Attention 变体综述|Attention 变体综述]] — 从 MHA→MLA 的演进直接决定 KV Cache 大小
-> 🔗 See also: [[AI/3-LLM/Inference/量化综述|量化综述]] — KV Cache 量化（FP8/INT8/INT4）的技术细节
-> 🔗 See also: [[AI/3-LLM/Inference/Continuous Batching|Continuous Batching]] — KV Cache 管理与请求调度的协同
+> 🔗 See also: [[量化综述|量化综述]] — KV Cache 量化（FP8/INT8/INT4）的技术细节
+> 🔗 See also: [[Continuous Batching|Continuous Batching]] — KV Cache 管理与请求调度的协同

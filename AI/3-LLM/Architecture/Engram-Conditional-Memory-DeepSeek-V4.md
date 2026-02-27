@@ -213,6 +213,6 @@ GLM-5 用的是 DeepSeek Sparse Attention（content-aware dynamic sparsity），
 - → [[AI/4-模型/GLM/GLM-5|GLM-5-技术报告精读]] (DSA attention 稀疏化，同类思路)
 - → [[AI/3-LLM/RL/Frameworks/Slime-RL-Framework|Slime-RL-Framework]] (DeepSeek post-training 框架)
 - → [[AI/3-LLM/Architecture/ReFINE-Fast-Weight-RL-Next-Sequence-Prediction|ReFINE-Fast-Weight-RL-Next-Sequence-Prediction]] (Fast weight 的记忆轴，不同实现)
-- → [[AI/3-LLM/Inference/MAGE-Block-Diffusion-LLM-Sparse-Attention|MAGE-Block-Diffusion-LLM-Sparse-Attention]] (稀疏注意力，同日读)
-- → [[AI/3-LLM/Inference/KV Cache|KV Cache 优化]] (记忆 vs 计算的权衡)
+- → [[MAGE-Block-Diffusion-LLM-Sparse-Attention|MAGE-Block-Diffusion-LLM-Sparse-Attention]] (稀疏注意力，同日读)
+- → [[KV Cache|KV Cache 优化]] (记忆 vs 计算的权衡)
 - → [[AI/3-LLM/Architecture/MoE 深度解析|MoE 架构]] (Engram 的互补轴)

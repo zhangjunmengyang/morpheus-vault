@@ -16,9 +16,9 @@ sources:
   - "Shah et al. FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision. arXiv:2407.08608"
 related:
   - "[[AI/3-LLM/Architecture/GQA-MQA|GQA/MQA]]"
-  - "[[AI/3-LLM/Inference/KV Cache|KV Cache 原理与优化]]"
+  - "[[KV Cache|KV Cache 原理与优化]]"
   - "[[AI/3-LLM/Architecture/Attention 变体综述|Attention 变体综述]]"
-  - "[[AI/3-LLM/Inference/量化综述|量化综述]]"
+  - "[[量化综述|量化综述]]"
   - "[[Transformer架构深度解析-2026技术全景|Transformer 架构全景]]"
 ---
 
@@ -244,7 +244,7 @@ flowchart TD
 | **作用阶段** | 训练 + 推理 | 仅推理 |
 | **协同** | FlashAttention 计算 Attention kernel，PagedAttention 管理 KV 存储 |
 
-在 [[AI/3-LLM/Inference/vLLM|vLLM]] 中，两者协同工作：PagedAttention 管理 KV Cache 的物理内存分页，FlashAttention 负责高效计算 Attention 得分。
+在 [[vLLM|vLLM]] 中，两者协同工作：PagedAttention 管理 KV Cache 的物理内存分页，FlashAttention 负责高效计算 Attention 得分。
 
 ## 7. 实际使用
 
@@ -293,11 +293,11 @@ python -c "import flash_attn; print(flash_attn.__version__)"
 
 ## 8. 与其他优化技术的关系
 
-- **[[AI/3-LLM/Inference/KV Cache|KV Cache 优化]]**：FlashAttention 降低计算开销，KV Cache 减少重复计算
-- **[[AI/3-LLM/Inference/量化综述|量化]]**：v3 的 FP8 支持与量化互补，进一步降低显存
+- **[[KV Cache|KV Cache 优化]]**：FlashAttention 降低计算开销，KV Cache 减少重复计算
+- **[[量化综述|量化]]**：v3 的 FP8 支持与量化互补，进一步降低显存
 - **[[AI/3-LLM/Architecture/GQA-MQA|GQA/MQA]]**：减少 KV head 数量 → KV Cache 更小 → FlashAttention 每块处理更高效
-- **[[AI/3-LLM/Inference/推理优化|推理优化]]**：FlashAttention 是推理优化 stack 中 Attention 层的核心组件
-- **[[AI/3-LLM/Inference/Speculative Decoding|Speculative Decoding]]**：正交优化，FlashAttention 加速单次 Attention，SD 减少解码步数
+- **[[推理优化|推理优化]]**：FlashAttention 是推理优化 stack 中 Attention 层的核心组件
+- **[[Speculative Decoding|Speculative Decoding]]**：正交优化，FlashAttention 加速单次 Attention，SD 减少解码步数
 
 ## 面试常见问题
 
@@ -382,6 +382,6 @@ python -c "import flash_attn; print(flash_attn.__version__)"
 
 > 🔗 See also: [[AI/3-LLM/Architecture/Attention 变体综述|Attention 变体综述]] — FlashAttention 加速的计算层与 Attention 变体的架构层互补
 > 🔗 See also: [[AI/3-LLM/Architecture/GQA-MQA|GQA/MQA]] — GQA 减少 KV 数量，FlashAttention 减少 IO，二者协同
-> 🔗 See also: [[AI/3-LLM/Inference/KV Cache|KV Cache]] — FlashAttention（计算加速）与 PagedAttention（内存管理）在 vLLM 中协同工作
-> 🔗 See also: [[AI/3-LLM/Inference/量化综述|量化综述]] — v3 的 FP8 支持与量化技术的交叉点
+> 🔗 See also: [[KV Cache|KV Cache]] — FlashAttention（计算加速）与 PagedAttention（内存管理）在 vLLM 中协同工作
+> 🔗 See also: [[量化综述|量化综述]] — v3 的 FP8 支持与量化技术的交叉点
 > 🔗 See also: [[Transformer架构深度解析-2026技术全景|Transformer 全景]] — FlashAttention 是 Transformer 推理优化 stack 的核心组件

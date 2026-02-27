@@ -152,5 +152,5 @@ OpenR1 的最大优势是背靠 HuggingFace 生态（TRL、datasets、accelerate
 - [[AI/3-LLM/RL/GRPO/DeepSeek-Math|DeepSeek-Math]] — GRPO 的起源
 - [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL 概述]] — OpenR1 依赖的训练框架
 - [[AI/3-LLM/RL/GRPO/GRPO-TRL实践|GRPO-TRL实践]] — TRL 中 GRPO 的实践
-- [[AI/3-LLM/Inference/vLLM|vLLM]] — RL 采样阶段使用的推理引擎
+- [[vLLM|vLLM]] — RL 采样阶段使用的推理引擎
 - [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]]

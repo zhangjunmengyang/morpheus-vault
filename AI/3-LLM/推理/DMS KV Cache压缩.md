@@ -485,7 +485,7 @@ DMS 训练效率高的根本原因在于三个设计选择：
 
 ## See Also
 
-- [[AI/3-LLM/Inference/KV Cache|KV Cache 优化]] — KV Cache 优化全貌
-- [[AI/3-LLM/Inference/Sparrow-Video-LLM-Speculative-Decoding|Sparrow 推测解码]] — 推理加速的另一路线
+- [[KV Cache|KV Cache 优化]] — KV Cache 优化全貌
+- [[Sparrow-Video-LLM-Speculative-Decoding|Sparrow 推测解码]] — 推理加速的另一路线
 - [[模型量化综述|模型量化综述]] — 量化与 KV Cache 压缩的结合
 -  — 大语言模型知识全图谱

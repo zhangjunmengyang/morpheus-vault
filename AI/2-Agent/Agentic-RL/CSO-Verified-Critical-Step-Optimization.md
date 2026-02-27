@@ -251,7 +251,7 @@ CSO 把 RLVR 中"只有高熵 token 驱动有效学习"的原则推广到了 Age
 - [[AI/2-Agent/Agentic-RL/SELAUR-Self-Evolving-LLM-Agent-Uncertainty-Rewards|SELAUR（arXiv:2602.21158）]] — 失败 → token-level 不确定性 → reward reshaping，零额外成本；信息最浅但工程成本最低；三种方法构成"失败信号利用深度谱系"（SELAUR 浅 → ERL 中 → CSO 深）
 
 **跨域稀疏原则验证：**
-- [[AI/3-LLM/Inference/SIA-Sparse-Inference-time-Alignment|SIA（ICML 2026，NTU）]] — **同一稀疏哲学的跨域实证**：CSO 发现 16% 关键步骤决定 Agent 成败，SIA 发现 20% Junction token 承担 100% 对齐负担——两个独立工作从不同领域（Agent RL credit ↔ 推理时对齐）证明了"关键决策天然稀疏"这一原则
+- [[SIA-Sparse-Inference-time-Alignment|SIA（ICML 2026，NTU）]] — **同一稀疏哲学的跨域实证**：CSO 发现 16% 关键步骤决定 Agent 成败，SIA 发现 20% Junction token 承担 100% 对齐负担——两个独立工作从不同领域（Agent RL credit ↔ 推理时对齐）证明了"关键决策天然稀疏"这一原则
 
 **工程应用：**
 - [[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL 训练专题]] — CSO 适用于 tool-use agent 后训练；关键步骤通常是工具选择分叉点

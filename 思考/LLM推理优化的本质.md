@@ -131,4 +131,4 @@ KV Cache 是推理优化的枢纽——几乎所有优化技术最终都和它�
 
 ---
 
-> 🔗 Related: [[思考/Transformer架构演化的逻辑|Transformer 架构演化的逻辑]] · [[AI/3-LLM/Inference/KV Cache|KV Cache]] · [[AI/3-LLM/Inference/Speculative Decoding|Speculative Decoding]] · [[MoE 深度解析|MoE 深度解析]]
+> 🔗 Related: [[思考/Transformer架构演化的逻辑|Transformer 架构演化的逻辑]] · [[KV Cache|KV Cache]] · [[Speculative Decoding|Speculative Decoding]] · [[MoE 深度解析|MoE 深度解析]]

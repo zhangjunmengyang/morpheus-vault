@@ -15,7 +15,7 @@ updated: 2026-02-23
 see-also:
   - "[[AI/3-LLM/RL/Other-Algorithms/E-SPL-Evolutionary-System-Prompt-Learning]]"
   - "[[AI/3-LLM/RL/Other-Algorithms/GEPA-Reflective-Prompt-Evolution]]"
-  - "[[AI/3-LLM/Inference/ConformalThinking-Risk-Control-Test-Time-Compute]]"
+  - "[[ConformalThinking-Risk-Control-Test-Time-Compute]]"
 ---
 
 # Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents

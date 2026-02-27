@@ -16,9 +16,9 @@ created: 2026-02-20
 authors: Libo Zhang, Zhaoning Zhang et al.
 affiliation: NUDT 国防科技大学
 see-also:
-  - "[[AI/3-LLM/Inference/Speculative Decoding]]"
-  - "[[AI/3-LLM/Inference/Deep-Thinking-Ratio-DTR]]"
-  - "[[AI/3-LLM/Inference/MAGE-Block-Diffusion-LLM-Sparse-Attention]]"
+  - "[[Speculative Decoding]]"
+  - "[[Deep-Thinking-Ratio-DTR]]"
+  - "[[MAGE-Block-Diffusion-LLM-Sparse-Attention]]"
 ---
 
 # Sparrow: Video LLM Speculative Decoding via Visual Semantic Offloading

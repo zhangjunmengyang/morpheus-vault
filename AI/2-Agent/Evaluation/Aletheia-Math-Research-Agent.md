@@ -160,7 +160,7 @@ Google Search grounding        →   RAG / tool use in agent
 - [[AI/2-Agent/Evaluation/Aletheia-Gemini3-DeepThink-FirstProof|Aletheia FirstProof（arXiv:2602.21201，2026-02-25 续集）]] ⭐ — **同一系统的下一级挑战**：Erdős 4题 → FirstProof 6/10 研究级数学题（8天限时，真实 open problems）；Best-of-2 策略 + 自我过滤设计；P7 解决 Weinberger 书中开放问题——AI 数学研究能力的最新 frontier
 
 **基础模型与推理体系**
-- [[AI/3-LLM/Inference/Gemini-3-Deep-Think|Gemini-3-Deep-Think]] — TTC scaling 基础；Aletheia A 基础模型；FirstProof 是其迄今最高难度的真实任务测试
+- [[Gemini-3-Deep-Think|Gemini-3-Deep-Think]] — TTC scaling 基础；Aletheia A 基础模型；FirstProof 是其迄今最高难度的真实任务测试
 - [[AI/3-LLM/RL/Theory/RLVR-Edge-of-Competence|RLVR-Edge-of-Competence]] — RL 训练动力学边界；Aletheia 用纯 TTC scaling 而非 RL，说明有验证器的任务 TTC 可能更快达到 frontier
 
 **Agent 架构设计同族**

@@ -233,11 +233,11 @@ vLLM 默认策略: Recomputation（开销更可预测）
 
 ## 8. 与其他优化技术的关系
 
-- **[[AI/3-LLM/Inference/KV Cache|PagedAttention]]**：Continuous Batching 的基础设施——分页内存管理使动态增减请求成为可能
+- **[[KV Cache|PagedAttention]]**：Continuous Batching 的基础设施——分页内存管理使动态增减请求成为可能
 - **[[AI/3-LLM/Architecture/FlashAttention|FlashAttention]]**：加速每一步的 Attention 计算，与 Continuous Batching 正交互补
-- **[[AI/3-LLM/Inference/Speculative Decoding|Speculative Decoding]]**：在 Continuous Batching 中实现 SD 需要特殊处理（验证 token 的动态 batch 大小变化）
-- **[[AI/3-LLM/Inference/推理优化|推理优化]]**：Continuous Batching 是推理优化 stack 的调度层核心
-- **[[AI/3-LLM/Inference/量化综述|量化]]**：量化减小模型和 KV Cache 大小 → 相同显存下 batch size 更大 → 吞吐更高
+- **[[Speculative Decoding|Speculative Decoding]]**：在 Continuous Batching 中实现 SD 需要特殊处理（验证 token 的动态 batch 大小变化）
+- **[[推理优化|推理优化]]**：Continuous Batching 是推理优化 stack 的调度层核心
+- **[[量化综述|量化]]**：量化减小模型和 KV Cache 大小 → 相同显存下 batch size 更大 → 吞吐更高
 
 ## 面试常见问题
 

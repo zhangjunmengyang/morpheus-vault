@@ -110,7 +110,7 @@ sq_config = QuantConfig(
 
 ### (3) In-flight Batching
 
-TensorRT-LLM 的 [[AI/3-LLM/Inference/Continuous Batching|Continuous Batching]] 实现：
+TensorRT-LLM 的 [[Continuous Batching|Continuous Batching]] 实现：
 
 ```
 In-flight Batching 特点:
@@ -322,11 +322,11 @@ trtllm-build \
 ## 7. 与其他优化技术的关系
 
 - **[[AI/3-LLM/Architecture/FlashAttention|FlashAttention]]**：TRT-LLM 使用 FlashAttention 的思想实现 fused attention kernel
-- **[[AI/3-LLM/Inference/Continuous Batching|Continuous Batching]]**：TRT-LLM 的 in-flight batching 是 continuous batching 的 C++ 高性能实现
-- **[[AI/3-LLM/Inference/量化综述|量化]]**：TRT-LLM 提供最完整的量化支持，尤其是 FP8 量化
-- **[[AI/3-LLM/Inference/KV Cache|KV Cache 优化]]**：Paged KV Cache + KV Cache 量化
-- **[[AI/3-LLM/Inference/Speculative Decoding|Speculative Decoding]]**：TRT-LLM 原生支持 draft model speculative decoding
-- **[[AI/3-LLM/Inference/推理优化|推理优化]]**：TRT-LLM 是推理优化技术的集大成者
+- **[[Continuous Batching|Continuous Batching]]**：TRT-LLM 的 in-flight batching 是 continuous batching 的 C++ 高性能实现
+- **[[量化综述|量化]]**：TRT-LLM 提供最完整的量化支持，尤其是 FP8 量化
+- **[[KV Cache|KV Cache 优化]]**：Paged KV Cache + KV Cache 量化
+- **[[Speculative Decoding|Speculative Decoding]]**：TRT-LLM 原生支持 draft model speculative decoding
+- **[[推理优化|推理优化]]**：TRT-LLM 是推理优化技术的集大成者
 
 ## 面试常见问题
 

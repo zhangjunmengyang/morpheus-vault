@@ -160,7 +160,7 @@ Jamba 的设计基于"取长补短"的思路：
 ### Q5: 从工程角度，部署 Mamba 模型需要考虑哪些因素？
 
 **答案**：
-1. **推理框架支持**：需要支持 selective scan 算子的框架，如 [[AI/3-LLM/Inference/TensorRT-LLM|TensorRT-LLM]]、vLLM 等
+1. **推理框架支持**：需要支持 selective scan 算子的框架，如 [[TensorRT-LLM|TensorRT-LLM]]、vLLM 等
 2. **内存规划**：虽然推理时内存占用更少，但训练时的选择性计算可能需要更多临时存储
 3. **硬件兼容性**：某些优化需要特定 GPU 架构支持（如 H100 的 FP8）
 4. **混合部署**：考虑与 Transformer 模型的混合使用策略

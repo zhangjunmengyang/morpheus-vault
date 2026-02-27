@@ -211,7 +211,7 @@ reward = sandbox_execute(generated_code, test_cases)
 - [[AI/3-LLM/RL/PPO/PPO-verl实践|PPO-verl实践]] — verl 中 PPO 实践
 - [[AI/3-LLM/RL/DAPO/DAPO-verl实践|DAPO-verl实践]] — verl 中 DAPO 实践
 - [[AI/3-LLM/Infra/FSDP|FSDP]] — verl 的训练后端
-- [[AI/3-LLM/Inference/vLLM|vLLM]] — verl 的推理后端
+- [[vLLM|vLLM]] — verl 的推理后端
 - [[AI/3-LLM/Infra/Ray|Ray]] — verl 的资源编排
 - [[AI/3-LLM/Frameworks/verl/Reward Function]] — 自定义 reward 设计
 - [[AI/3-LLM/Frameworks/verl/verl 训练参数]] — 详细参数配置

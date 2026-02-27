@@ -157,8 +157,8 @@ DLM 的推理加速是 2026 年最活跃的方向之一。已有：MAGE（注意
 
 ## 与 Vault 其他笔记的连接
 
-- → [[AI/3-LLM/Inference/MAGE-Block-Diffusion-LLM-Sparse-Attention|MAGE (DLM 稀疏优化，互补视角)]]
+- → [[MAGE-Block-Diffusion-LLM-Sparse-Attention|MAGE (DLM 稀疏优化，互补视角)]]
 - → [[AI/3-LLM/Inference/LaViDa-R1-Diffusion-LLM-Reasoning|LaViDa-R1 (DLM 能力边界)]]
-- → [[AI/3-LLM/Inference/Sparrow-Video-LLM-Speculative-Decoding|Sparrow (DLM 推理加速，不同工具)]]
+- → [[Sparrow-Video-LLM-Speculative-Decoding|Sparrow (DLM 推理加速，不同工具)]]
 - → [[LLM-推理优化-2026-全景|LLM 推理优化 2026 全景 (全局视角)]]
-- → [[AI/3-LLM/Inference/剪枝与蒸馏|剪枝与蒸馏 (权重压缩背景)]]
+- → [[剪枝与蒸馏|剪枝与蒸馏 (权重压缩背景)]]

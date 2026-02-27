@@ -326,7 +326,7 @@ $$\text{Rollout quality} \uparrow \Rightarrow \text{Training signal quality} \up
 | HiPER | ❌ | ✅（trajectory）| ❌ | ❌（HAE 计算）| 无偏性 + 方差减少 |
 | **CSO** | **✅（验证 rollout）** | **✅（可验证结果）** | **❌** | **✅（expert model）** | **反事实因果（empirical）** |
 
-**面试补充（v7）**：CSO 的独特角色——其他方案都问"什么做对了"，CSO 问"什么换掉后能成功"，是 Credit Assignment 谱系里唯一开采失败轨迹的方案。16% 关键步骤 = 高熵步骤原则在 Agent 领域的首次系统验证。**跨域印证（v11）**：同一天 SIA（ICML 2026，arXiv:2602.21215）独立发现推理时对齐也是 sparse control problem——20% Junction token（高熵节点）承担 100% 对齐效果。CSO 16%（Agent RL credit） + SIA 20%（Inference Alignment）= **「关键决策天然稀疏」的跨领域双重实证**，面试时引用这个跨域一致性远比单讲论文更有深度。见：[[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO（2602.03412）]] + [[AI/3-LLM/Inference/SIA-Sparse-Inference-time-Alignment|SIA（2602.21215）]]
+**面试补充（v7）**：CSO 的独特角色——其他方案都问"什么做对了"，CSO 问"什么换掉后能成功"，是 Credit Assignment 谱系里唯一开采失败轨迹的方案。16% 关键步骤 = 高熵步骤原则在 Agent 领域的首次系统验证。**跨域印证（v11）**：同一天 SIA（ICML 2026，arXiv:2602.21215）独立发现推理时对齐也是 sparse control problem——20% Junction token（高熵节点）承担 100% 对齐效果。CSO 16%（Agent RL credit） + SIA 20%（Inference Alignment）= **「关键决策天然稀疏」的跨领域双重实证**，面试时引用这个跨域一致性远比单讲论文更有深度。见：[[AI/2-Agent/Agentic-RL/CSO-Verified-Critical-Step-Optimization|CSO（2602.03412）]] + [[SIA-Sparse-Inference-time-Alignment|SIA（2602.21215）]]
 
 ### Multi-Turn RL 四支柱（v8 新增）
 

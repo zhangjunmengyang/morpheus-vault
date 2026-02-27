@@ -195,7 +195,7 @@ LLM(
 
 ## 相关
 
-- [[AI/3-LLM/Inference/Ollama|Ollama]] — 本地推理的另一个选择（面向个人用户）
+- [[Ollama|Ollama]] — 本地推理的另一个选择（面向个人用户）
 - [[AI/3-LLM/Architecture/DeepSeek-R1|DeepSeek-R1]] — vLLM 用于 R1 的推理部署
 - [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]] — vLLM 在 RL 训练中的角色
 - [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL 概述]] — 集成 vLLM 的训练框架

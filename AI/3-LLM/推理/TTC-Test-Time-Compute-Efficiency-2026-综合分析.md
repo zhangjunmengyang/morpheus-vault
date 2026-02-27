@@ -15,10 +15,10 @@ status: active
 
 ## See Also
 
-- [[AI/3-LLM/Inference/ConformalThinking-Risk-Control-Test-Time-Compute|ConformalThinking]] — 四大路线之"自适应早停"：distribution-free双阈值停止机制，本文§路线一的核心代表（JHU+DeepMind，ICML 2026，★★★★★）
-- [[AI/3-LLM/Inference/Deep-Thinking-Ratio-DTR-v2-Think-At-N|DTR v2 + Think@N]] — 四大路线之"Token质量控制"：深度思考比率识别，本文§路线三核心，50-token prefix预测推理深度（★★★★★）
-- [[AI/3-LLM/Inference/Accordion-Thinking-Self-Regulated-Step-Summaries|Accordion Thinking]] — 四大路线之"选择性遗忘"（压缩版）：RL主动生成step summary折叠CoT，4×throughput零精度损失（ICML 2026，★★★★☆）
-- [[AI/3-LLM/Inference/Progressive-Thought-Encoding-Cache-Efficient-RL|PTE]] — 四大路线之"选择性遗忘"（蒸馏版）：KV cache满时cross-attention压缩evicted token，AIME +33%，内存-40%（ICLR 2026，微软，★★★★★）
+- [[ConformalThinking-Risk-Control-Test-Time-Compute|ConformalThinking]] — 四大路线之"自适应早停"：distribution-free双阈值停止机制，本文§路线一的核心代表（JHU+DeepMind，ICML 2026，★★★★★）
+- [[Deep-Thinking-Ratio-DTR-v2-Think-At-N|DTR v2 + Think@N]] — 四大路线之"Token质量控制"：深度思考比率识别，本文§路线三核心，50-token prefix预测推理深度（★★★★★）
+- [[Accordion-Thinking-Self-Regulated-Step-Summaries|Accordion Thinking]] — 四大路线之"选择性遗忘"（压缩版）：RL主动生成step summary折叠CoT，4×throughput零精度损失（ICML 2026，★★★★☆）
+- [[Progressive-Thought-Encoding-Cache-Efficient-RL|PTE]] — 四大路线之"选择性遗忘"（蒸馏版）：KV cache满时cross-attention压缩evicted token，AIME +33%，内存-40%（ICLR 2026，微软，★★★★★）
 - [[AI/3-LLM/RL/Other-Algorithms/IntroLLM-Introspective-Temperature-Policy-Hierarchical-RL|IntroLLM]] — 四大路线之"训练时嵌入"：隐状态驱动temperature policy，Hierarchical RL联合优化（ICML 2026，★★★★☆）
 
 # Test-Time Compute (TTC) 效率 2026：综合分析与分类框架
