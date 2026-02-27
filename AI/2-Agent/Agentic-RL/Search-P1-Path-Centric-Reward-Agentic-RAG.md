@@ -209,6 +209,7 @@ Search-P1 是 Tool Use RL 中 credit assignment 的"路径级"解法：
 ## See Also
 
 - Search-R1（arXiv:2503.09516）— 直接被超越的 baseline
+- [[AI/2-Agent/Multi-Agent/AlphaEvolve-LLM-Discovers-MARL-Algorithms|AlphaEvolve]] ⭐ — **同为"AI主动发现"但路径不同**：Search-P1 用检索工具链（信息涌现），AlphaEvolve 用代码演化（算法创造）——两种 AI-for-Science 路径的对比
 - [[AI/2-Agent/Agentic-RL/Search-R1plus-Tool-Use-RL-Ablation]] — 并行工作，解决 reward 质量问题（F1+/REINFORCE稳定性）
 - [[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training]] — MCP 工具图 + verifiable RL，不同场景的 tool use RL
 - [[AI/2-Agent/Agentic-RL/SELAUR-Self-Evolving-LLM-Agent-Uncertainty-Rewards]] — token 不确定性 reward shaping，orthogonal 角度

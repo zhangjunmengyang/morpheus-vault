@@ -15,10 +15,10 @@ sources:
   - "arXiv:2602.09578 | Zhida Jiang et al. | Feb 2026"
 verdict: "★★★★☆"
 related:
-  - "[[AI/2-Agent/Multi-Agent/MARS2-Multi-Agent-Scaling-Law-RL-Code-Generation|MARS2（MARL 算法扩展律）]]"
-  - "[[AI/2-Agent/Multi-Agent/Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems|Dr. MAS（MARL 训练稳定性）]]"
-  - "[[AI/3-LLM/Frameworks/Agentic-RL-Training-verl|verl（单 Agent RL 基础设施）]]"
-  - "[[AI/2-Agent/Multi-Agent/Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]]"
+  - "[[AI/2-Agent/Agentic-RL/MARS2-Multi-Agent-Scaling-Law-RL-Code-Generation|MARS2（MARL 算法扩展律）]]"
+  - "[[AI/2-Agent/Agentic-RL/Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems|Dr. MAS（MARL 训练稳定性）]]"
+  - "[[AI/2-Agent/Agentic-RL/Agentic-RL-Training-verl|verl（单 Agent RL 基础设施）]]"
+  - "[[AI/2-Agent/Agentic-RL/Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]]"
 ---
 
 # FlexMARL: Rollout-Training Co-Design for Efficient LLM-Based MARL
@@ -175,9 +175,10 @@ FlexMARL 代表了 MARL 训练基础设施的第一个系统性解法。随着 M
 
 ## See Also
 
-- [[AI/2-Agent/Multi-Agent/MARS2-Multi-Agent-Scaling-Law-RL-Code-Generation|MARS2（arXiv:2602.07848）]] — 为什么 MARL 训练值得做：2×32B > 72B 的 scaling law
-- [[AI/2-Agent/Multi-Agent/Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems|Dr. MAS（arXiv:2602.08847）]] — 算法层互补：per-agent 归一化解决梯度不稳定
-- [[AI/2-Agent/Multi-Agent/Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]] — 系统性综述：MARL 训练的全维度覆盖
-- [[AI/3-LLM/Frameworks/Agentic-RL-Training-verl|verl]] — 单 agent RL 基础设施的 SOTA，FlexMARL 的出发点和对比基准
+- [[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent-RL|KLong（极长任务算法层）]] — **极长任务 MARL 训练双侧解法**：FlexMARL 解决系统层效率，KLong 解决算法层（轨迹切割 + 课程 RL）
+- [[AI/2-Agent/Agentic-RL/MARS2-Multi-Agent-Scaling-Law-RL-Code-Generation|MARS2（arXiv:2602.07848）]] — 为什么 MARL 训练值得做：2×32B > 72B 的 scaling law
+- [[AI/2-Agent/Agentic-RL/Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems|Dr. MAS（arXiv:2602.08847）]] — 算法层互补：per-agent 归一化解决梯度不稳定
+- [[AI/2-Agent/Agentic-RL/Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]] — 系统性综述：MARL 训练的全维度覆盖
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-Training-verl|verl]] — 单 agent RL 基础设施的 SOTA，FlexMARL 的出发点和对比基准
 
 *写作时间：2026-02-28 06:15 | arXiv:2602.09578 | ★★★★☆*

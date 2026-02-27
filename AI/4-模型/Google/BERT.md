@@ -154,7 +154,7 @@ BERT 和 GPT 代表了两种根本不同的预训练哲学：
 - **预训练目标决定模型能力**：MLM 让 BERT 擅长"理解"，Causal LM 让 GPT 擅长"生成"。这个设计选择在 2018 年就决定了两条路线的分野
 
 ### 未解问题与局限
-- BERT 的绝对位置编码无法外推到训练长度之外（对比 [[AI/3-LLM/Architecture/长上下文处理|长上下文处理]] 中的 RoPE）
+- BERT 的绝对位置编码无法外推到训练长度之外（对比 [[AI/3-LLM/Architecture/长上下文技术|长上下文处理]] 中的 RoPE）
 - MLM 的 15% mask 比例是否最优？SpanBERT 等工作在探索，但没有定论
 - Encoder 架构为何难以 scale 到 1T+ 参数？（对比 [[AI/4-模型/OpenAI/GPT|GPT]] 的 Decoder-Only 路线）
 

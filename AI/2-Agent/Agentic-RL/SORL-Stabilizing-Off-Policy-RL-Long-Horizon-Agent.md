@@ -232,3 +232,4 @@ grad_norm = sum(p.grad.norm() for p in model.parameters())
 - [[AI/2-Agent/Agentic-RL/Search-R1plus-Tool-Use-RL-Ablation]] — REINFORCE > PPO > GRPO 稳定性（Search-R1++ 的经验验证与本文机制分析互为佐证）
 - [[AI/2-Agent/Agentic-RL/LOOP-Leave-One-Out-PPO-Long-Horizon-Agent-RL]] — LOOP 用 LOO baseline 替代 critic，避免 off-policy 问题（on-policy 方案）
 - [[AI/3-LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL 训练稳定性 2026 统一分析]] — 本文所在的稳定性图谱，Off-Policy 级别章节（反向链接）
+- [[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent-RL|KLong（极长任务训练）]] ⭐ — **超长任务完整双侧解法**：KLong 切割超长轨迹（context 物理边界），SORL 稳定 off-policy multi-turn RL（训练算法边界）——两者组合覆盖 Extremely Long-Horizon 训练的全部挑战

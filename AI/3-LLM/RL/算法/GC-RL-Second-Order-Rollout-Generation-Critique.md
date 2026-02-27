@@ -6,7 +6,7 @@ status: permanent
 rating: ★★★☆
 arxiv: "2602.22765"
 related:
-  - "[[AI/3-LLM/RL/算法/GRPO-Group-Relative-Policy-Optimization]]"
+  - "[[AI/3-LLM/RL/算法/GRPO 深度理解]]"
   - "[[AI/2-Agent/Agentic-RL/AgentPRM-Process-Reward-Models-for-LLM-Agents]]"
   - "[[AI/2-Agent/Agentic-RL/Search-P1-Path-Centric-Reward-Agentic-RAG]]"
 ---

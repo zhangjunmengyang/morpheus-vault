@@ -10,7 +10,7 @@ related:
   - "[[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析]]"
   - "[[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization]]"
   - "[[AI/2-Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL]]"
-  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解]]"
+  - "[[AI/3-LLM/RL/算法/GRPO 深度理解]]"
   - "[[AI/2-Agent/Agentic-RL/SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees]]"
 ---
 
@@ -312,4 +312,4 @@ P2 是技术基础——搞清楚了 SFT/DPO/GRPO 的工程实现。P5 是往业
 - [[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization]]
 - [[AI/2-Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL]]
 - [[AI/2-Agent/Agentic-RL/SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees]]
-- [[AI/3-LLM/RL/GRPO/GRPO 深度理解]]
+- [[AI/3-LLM/RL/算法/GRPO 深度理解]]

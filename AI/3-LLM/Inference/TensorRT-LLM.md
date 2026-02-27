@@ -212,7 +212,7 @@ for output in outputs:
 
 ## 4. TensorRT-LLM vs vLLM 对比
 
-| 维度 | TensorRT-LLM | [[AI/3-LLM/推理/vLLM|vLLM]] |
+| 维度 | TensorRT-LLM | [[AI/3-LLM/Inference/vLLM|vLLM]] |
 |------|-------------|---------|
 | **厂商** | NVIDIA 官方 | UC Berkeley → 社区 |
 | **硬件** | 仅 NVIDIA GPU | NVIDIA + AMD ROCm + CPU |

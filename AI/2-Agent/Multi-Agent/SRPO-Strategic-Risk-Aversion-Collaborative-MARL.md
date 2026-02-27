@@ -14,7 +14,7 @@ tags:
   - type/paper
 related:
   - "[[AI/2-Agent/Multi-Agent/AlphaEvolve-LLM-Discovers-MARL-Algorithms]]"
-  - "[[AI/2-Agent/Multi-Agent/SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL]]"
+  - "[[AI/2-Agent/Agentic-RL/SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL]]"
   - "[[AI/2-Agent/Multi-Agent/Kimi-K2.5-PARL]]"
   - "[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题]]"
 ---
@@ -208,6 +208,6 @@ SRPO 填补了"协作 MARL 泛化"这个在 Vault 中之前完全空白的方向
 ## 七、See Also
 
 - [[AI/2-Agent/Multi-Agent/AlphaEvolve-LLM-Discovers-MARL-Algorithms]] — 同为 MARL 进展，AlphaEvolve 解决算法设计维度，SRPO 解决均衡选择维度；两者正交
-- [[AI/2-Agent/Multi-Agent/SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL]] — SHARP 解决横向 credit assignment（哪个 agent 贡献大），SRPO 解决训练泛化（如何训练出鲁棒协作策略）；同为协作 MARL 的不同维度
+- [[AI/2-Agent/Agentic-RL/SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL]] — SHARP 解决横向 credit assignment（哪个 agent 贡献大），SRPO 解决训练泛化（如何训练出鲁棒协作策略）；同为协作 MARL 的不同维度
 - [[AI/2-Agent/Multi-Agent/Kimi-K2.5-PARL]] — LLM multi-agent 工业实践，SRPO 的理论框架可能补充 PARL 的训练方法
 - [[AI/2-Agent/Agentic-RL/SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees]] — 同为理论驱动的均衡改进：SeeUPO 改变 single-agent multi-turn RL 的均衡分析，SRPO 改变 multi-agent 协作的均衡概念

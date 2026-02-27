@@ -1000,7 +1000,7 @@ def adapt_tokenizer_for_domain(base_tokenizer, domain_corpus):
 - [[LLaMA|LLaMA]] — 使用 SentencePiece BPE，多语言支持
 - [[Qwen|Qwen]] — 使用 SentencePiece，多语言优化，中文 token 效率高
 - [[AI/3-LLM/Architecture/Tokenizer深度理解]] — 同主题深度版（BPE/WordPiece/SentencePiece 原理对比 + 面试题）
-- [[AI/3-LLM/Architecture/Tokenizer-Embedding-手撕实操]] — 手撕实操版（BPE 算法 + Embedding 完整实现）
+- [[Projects/MA-RLHF/lc1/lc1-01-Tokenizer-Embedding-手撕实操]] — 手撕实操版（BPE 算法 + Embedding 完整实现）
 ## See Also
 
 - [[AI/3-LLM/Architecture/Tokenizer 深度理解|Tokenizer 深度理解]] — 深度版：BPE/WordPiece/SentencePiece/Tiktoken 算法对比 + 词表设计面试题

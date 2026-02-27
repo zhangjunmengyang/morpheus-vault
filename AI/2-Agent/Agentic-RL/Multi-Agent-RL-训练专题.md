@@ -1,7 +1,7 @@
 ---
 title: "Multi-Agent RL 训练专题 — 让多个 LLM 协作的 RL 方法论"
 date: 2026-02-23
-updated: 2026-02-24
+updated: 2026-02-28
 tags: [multi-agent, MARL, GRPO, MAGRPO, AT-GRPO, MARS2, SHARP, Dr-MAS, Dec-POMDP, credit-assignment, synthesis, interview-prep]
 brief: "系统整理 2025-2026 年用 RL 训练多 LLM 协作的方法。核心问题：standard GRPO 的 grouping 假设在多 agent 场景 break down（不同 agent 有不同 prompt/role/turn），需要专门的 multi-agent advantage 估计。三条技术路线：MAGRPO（joint reward + Dec-POMDP），AT-GRPO/Stronger-MAS（agent-and-turn-wise grouping），MARS2（异构 multi-agent tree search + diversity scaling law）。关键结论：Diversity 是独立的 scaling 维度，2个异构 32B agent > 单个 72B。v2更新：加入 SHARP（Shapley credit attribution，ICML 2026）和 Dr. MAS（per-agent normalization，训练稳定性）。"
 sources:
@@ -327,7 +327,51 @@ graph LR
 
 ---
 
-## 七、推荐阅读
+## 七、系统层：训练基础设施（2026-02-28 补充）
+
+> **补充动机**：算法层（MAGRPO/AT-GRPO/MARS2/SHARP/Dr.MAS）解决"怎么算 advantage / 怎么稳定训练"，但当真正要落地 MARS2 那样的 2×32B 训练时，**系统基础设施**才是真正的瓶颈。
+
+### 7.1 为什么单 agent 框架在 MARL 下失效
+
+现有框架（verl / OpenRLHF / TRL）对 MARL 有三个根本性系统挑战：
+
+**挑战 1：Rollout-Training 同步障碍**
+- 单 agent：Rollout 完成 → Training，串行可接受
+- MARL：必须等**最慢的 agent** 完成所有 rollout 才能开始 Training
+- 问题：不同 agent 的 trajectory 长度高度异构（功能专业化 → 计算量差异极大）
+- 后果：Rollout 延迟随 agent 数量线性放大
+
+**挑战 2：Rollout 负载不均（双层 Skewed）**
+- Inter-agent 层：不同 agent 请求量/长度差异大（设计 agent vs 实现 agent token 数截然不同）
+- Intra-agent 层：同一 agent 不同轮次计算量差异大（early turn 短，后期含长 context）
+- 传统静态负载均衡假设请求同质，在双层异构下失效
+
+**挑战 3：训练资源利用率低**
+- 不同 agent 的 policy 更新频率/需求动态变化
+- 静态资源分配 → GPU 大量空闲（MARL 版 GPU Bubble）
+- 无法支持跨节点 agent placement → 模型规模被限制在 3B 以下
+
+### 7.2 FlexMARL 的解法（arXiv:2602.09578，★★★★☆）
+
+三大挑战 → 三个核心机制：
+
+- **Joint Orchestrator + Experience Store**：每个 agent 独立 table（`policy_version` + `sample_id` 保证一致性），Rollout 完成立即写入，Training 异步读取 → 彻底解耦 Rollout-Training 时间依赖
+- **Micro-batch Async Pipeline**：大 batch 拆为 micro-batch，两阶段流水线化，消除同步 barrier（同 GPipe/DualPipe 逻辑，但应用在 Rollout-Training 边界）
+- **Hierarchical Load Balancing + Elastic Scaling**：inter/intra-agent 双层均衡，积压时动态 spawn inference instance
+
+**实测（大规模生产集群）**：7.3× 训练加速，5.6× GPU 利用率，Rollout 延迟降低 86%
+
+### 7.3 系统层 vs 算法层的完整图景
+
+**核心洞察**：MARS2 证明 2×32B > 72B（算法层结论），但真正运行这个配置需要 FlexMARL 这样的系统层支撑。**算法突破 + 系统落地，两条腿缺一不可。**
+
+**Co-Design 原则（可迁移）**：Rollout 是 I/O-bound，Training 是 Compute-bound → 资源需求分布根本不同 → 必须分离资源池 + 协同调度。与 LLM 推理的 PD Disaggregation（Prefill/Decode 分离）是完全相同的设计逻辑。
+
+> 完整笔记：[[AI/2-Agent/Multi-Agent/FlexMARL-Rollout-Training-CoDesign-MARL-System|FlexMARL（arXiv:2602.09578）]]
+
+---
+
+## 八、推荐阅读
 
 - **MAGRPO 原论文**：[arXiv:2508.04652](https://arxiv.org/abs/2508.04652) — Dec-POMDP 框架化 LLM 协作
 - **AT-GRPO 原论文**：[arXiv:2510.11062](https://arxiv.org/abs/2510.11062) — Agent-Turn-Wise grouping

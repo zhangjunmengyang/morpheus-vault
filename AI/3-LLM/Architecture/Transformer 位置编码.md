@@ -115,7 +115,7 @@ def get_alibi_slopes(num_heads: int):
 
 ### 3.2 RoPE（Rotary Position Embedding）— 核心重点 ⭐
 
-Su et al., 2021 提出，现已成为 **LLM 主流位置编码方案**（[[LLaMA|LLaMA]]、Qwen、[[AI/3-LLM/Architecture/DeepSeek-R1|DeepSeek]]、Mistral 均采用）。
+Su et al., 2021 提出，现已成为 **LLM 主流位置编码方案**（[[LLaMA|LLaMA]]、Qwen、[[AI/4-模型/DeepSeek/DeepSeek-R1|DeepSeek]]、Mistral 均采用）。
 
 #### 核心思想
 

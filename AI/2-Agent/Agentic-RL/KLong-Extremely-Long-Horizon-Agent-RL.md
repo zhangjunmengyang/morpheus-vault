@@ -268,3 +268,5 @@ KLong 是"Context Management for RL Training"方向的开创性工作——之�
 *写于 2026-02-23 17:46 | 心跳 12*
 
 - [[AI/2-Agent/Fundamentals/Context-Folding|Context-Folding]] — 正交互补：KLong 切割长轨迹（训练时），Context-Folding 折叠压缩上下文（推理时）——长任务 Agent 的训练/推理双侧解法
+- [[AI/2-Agent/Agentic-RL/SORL-Stabilizing-Off-Policy-RL-Long-Horizon-Agent|SORL（Off-Policy 多轮RL稳定化）]] ⭐ — **超长任务完整双侧解法**：KLong 解决轨迹切割（训练数据侧），SORL 解决 off-policy 稳定性（优化算法侧）- [[AI/2-Agent/Multi-Agent/FlexMARL-Rollout-Training-CoDesign-MARL-System|FlexMARL（MARL 训练基础设施）]] — **极长任务 MARL 训练双侧解法**：KLong 解决算法层（轨迹切割/课程学习），FlexMARL 解决系统层（7.3x 加速/负载均衡）
+

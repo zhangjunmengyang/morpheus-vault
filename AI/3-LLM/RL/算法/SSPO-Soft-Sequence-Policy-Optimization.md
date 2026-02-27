@@ -6,8 +6,8 @@ status: permanent
 rating: ★★★☆
 arxiv: "2602.19327"
 related:
-  - "[[AI/3-LLM/RL/算法/GRPO-Group-Relative-Policy-Optimization]]"
-  - "[[AI/3-LLM/RL/算法/DAPO-Decoupled-Clip-Dynamic-Sampling]]"
+  - "[[AI/3-LLM/RL/算法/GRPO 深度理解]]"
+  - "[[AI/3-LLM/RL/实践/DAPO-verl实践]]"
   - "[[AI/2-Agent/Agentic-RL/SORL-Stabilizing-Off-Policy-RL-Long-Horizon-Agent]]"
 ---
 
@@ -189,7 +189,7 @@ Multi-turn 稳定性：
 
 - [[AI/3-LLM/RL/算法/GC-RL-Second-Order-Rollout-Generation-Critique]] — 同日发现，另一类 RL 信号利用效率提升
 - [[AI/2-Agent/Agentic-RL/SORL-Stabilizing-Off-Policy-RL-Long-Horizon-Agent]] — multi-turn 维度的 off-policy 校正
-- [[AI/3-LLM/RL/算法/DAPO-Decoupled-Clip-Dynamic-Sampling]] — 同一 anti-clip 方向的工程实现
+- [[AI/3-LLM/RL/实践/DAPO-verl实践]] — 同一 anti-clip 方向的工程实现
 
 > 注：SSPO 的 benchmark 数字（在 MATH/GSM8K 等标准评测上的具体性能）未能获取（网络限制）。机制分析基于 abstract + snippet + VESPO 论文中对 SSPO 的引用推导，置信度高；实验部分待补充。
 

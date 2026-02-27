@@ -7,9 +7,9 @@ updated: 2026-02-28
 tags: [career, interview, pre-training, distributed-training, TP, PP, ZeRO]
 brief: 系统从零实现分布式训练全栈（通信原语→ZeRO→TP→PP→MoE），不是调库，是真正理解每一层。故事线：在后训练实验里反复被分布式问题卡住，倒逼自己把底层搞清楚。
 related:
-  - "[[AI/3-LLM/Infra/ZeRO-手撕实操]]"
-  - "[[AI/3-LLM/Infra/Tensor-Parallel-手撕实操]]"
-  - "[[AI/3-LLM/Infra/Pipeline-Parallel-手撕实操]]"
+  - "[[Projects/MA-RLHF/xtrain/xtrain-03-ZeRO优化器从零手写]]"
+  - "[[Projects/MA-RLHF/xtrain/xtrain-04-张量并行从零手写]]"
+  - "[[Projects/MA-RLHF/xtrain/xtrain-05-流水线并行从零手写]]"
   - "[[AI/3-LLM/Architecture/DeepSeek-V3-手撕实操]]"
 ---
 
@@ -258,7 +258,7 @@ GPipe bubble ratio = (p-1)/(m+p-1)，p 是流水线段数，m 是 micro-batch �
 ## See Also
 
 - [[Projects/项目故事/P2-后训练大项目-MA-RLHF工程实战]]
-- [[AI/3-LLM/Infra/ZeRO-手撕实操]]
-- [[AI/3-LLM/Infra/Tensor-Parallel-手撕实操]]
-- [[AI/3-LLM/Infra/Pipeline-Parallel-手撕实操]]
+- [[Projects/MA-RLHF/xtrain/xtrain-03-ZeRO优化器从零手写]]
+- [[Projects/MA-RLHF/xtrain/xtrain-04-张量并行从零手写]]
+- [[Projects/MA-RLHF/xtrain/xtrain-05-流水线并行从零手写]]
 - [[AI/3-LLM/Infra/分布式训练通信原语-手撕实操]]

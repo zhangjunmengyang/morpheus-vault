@@ -113,8 +113,8 @@ InternVL 系列的成功可以归结为几点：
 - [[AI/3-LLM/MLLM/DeepSeek-VL|DeepSeek-VL]] — DeepSeek 多模态系列
 - [[AI/3-LLM/MLLM/Seed1.5-VL|Seed1.5-VL]] — 字节多模态方案
 - [[AI/3-LLM/MLLM/Qwen 2.5 VL-Unsloth训练|Qwen 2.5 VL 训练]] — Qwen VLM 微调
-- [[AI/CV/ViT|ViT]] — Vision Transformer 基础
-- [[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO]] — InternVL3 使用的 RL 算法
+- [[AI/3-LLM/MLLM/CLIP|ViT（CLIP image encoder）]] — Vision Transformer 基础
+- [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO]] — InternVL3 使用的 RL 算法
 - [[AI/3-LLM/MLLM/CLIP|CLIP]]
 - [[AI/3-LLM/MLLM/BLIP-2|BLIP-2]]
 - [[AI/3-LLM/MLLM/Qwen-VL|Qwen-VL]]

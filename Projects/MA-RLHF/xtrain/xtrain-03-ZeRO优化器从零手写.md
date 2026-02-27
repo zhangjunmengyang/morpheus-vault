@@ -12,7 +12,7 @@ tags:
   - zero
   - xtrain
 related:
-  - "[[AI/3-LLM/Infra/xtrain-lc2-数据并行从零手写]]"
+  - "[[Projects/MA-RLHF/xtrain/xtrain-02-数据并行从零手写]]"
   - "[[Projects/MA-RLHF/xtrain/xtrain-04b-Tensor-Parallel-手撕实操]]"
   - "[[Projects/MA-RLHF/xtrain/xtrain-03b-ZeRO-手撕实操]]"
   - "[[Projects/MA-RLHF/MA-RLHF-手撕实操-系列索引]]"
@@ -437,7 +437,7 @@ A：`tmp_param = deepcopy(param.grad)` 是为了在 scatter 之前保存完整�
 
 ## 十、知识关联
 
-- **前置**：[[AI/3-LLM/Infra/xtrain-lc2-数据并行从零手写]] — DDP AllReduce 基础
+- **前置**：[[Projects/MA-RLHF/xtrain/xtrain-02-数据并行从零手写]] — DDP AllReduce 基础
 - **后置**：[[Projects/MA-RLHF/xtrain/xtrain-04b-Tensor-Parallel-手撕实操]] — TP 切计算不切存储
 - **横向**：[[Projects/MA-RLHF/xtrain/xtrain-03b-ZeRO-手撕实操]] — 更早的 ZeRO 原理笔记（更偏理论）
 - **深化**：DeepSpeed ZeRO-Infinity — 把 ZeRO-3 扩展到 CPU/NVMe offload
@@ -446,7 +446,7 @@ A：`tmp_param = deepcopy(param.grad)` 是为了在 scatter 之前保存完整�
 
 ## See Also
 
-- [[AI/3-LLM/Infra/xtrain-lc2-数据并行从零手写]] — 前置：DDP 数据并行基础
+- [[Projects/MA-RLHF/xtrain/xtrain-02-数据并行从零手写]] — 前置：DDP 数据并行基础
 - [[Projects/MA-RLHF/xtrain/xtrain-04b-Tensor-Parallel-手撕实操]] — 后置：TP 切计算不切存储（vs ZeRO 切存储）
 - [[Projects/MA-RLHF/xtrain/xtrain-03b-ZeRO-手撕实操]] — 横向：ZeRO 原理版（MA-RLHF lc9 版）
 - [[AI/3-LLM/Infra/分布式训练]] — 分布式训练理论全景

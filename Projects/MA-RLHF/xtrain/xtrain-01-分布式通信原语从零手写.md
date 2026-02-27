@@ -14,7 +14,7 @@ tags:
   - xtrain
 related:
   - "[[Projects/MA-RLHF/lc-comm/lc-comm-01-分布式训练通信原语-手撕实操]]"
-  - "[[AI/3-LLM/Infra/xtrain-lc2-数据并行从零手写]]"
+  - "[[Projects/MA-RLHF/xtrain/xtrain-02-数据并行从零手写]]"
   - "[[AI/3-LLM/Infra/分布式训练]]"
   - "[[Projects/MA-RLHF/MA-RLHF-手撕实操-系列索引]]"
 ---

@@ -118,8 +118,8 @@ related:
 
 | 笔记 | 核心内容 | 面试重点 |
 |------|----------|----------|
-| [[AI/3-LLM/Infra/xtrain-lc1-分布式通信原语从零手写|xtrain-lc1-通信原语]] | Ring-AllReduce + NCCL 8原语从零实现 | 各操作通信量公式 |
-| [[AI/3-LLM/Infra/xtrain-lc2-数据并行从零手写|xtrain-lc2-数据并行]] | DP/DDP 从零实现，gradient sync 机制 | 为什么 reduce 梯度而非 loss |
+| [[Projects/MA-RLHF/xtrain/xtrain-01-分布式通信原语从零手写|xtrain-lc1-通信原语]] | Ring-AllReduce + NCCL 8原语从零实现 | 各操作通信量公式 |
+| [[Projects/MA-RLHF/xtrain/xtrain-02-数据并行从零手写|xtrain-lc2-数据并行]] | DP/DDP 从零实现，gradient sync 机制 | 为什么 reduce 梯度而非 loss |
 | [[Projects/MA-RLHF/xtrain/xtrain-03b-ZeRO-手撕实操|xtrain-lc3-ZeRO]] | ZeRO-1/2/3 三阶段分片从零实现 | flatten 化切分 vs 按层切分 |
 | [[Projects/MA-RLHF/xtrain/xtrain-04b-Tensor-Parallel-手撕实操|xtrain-lc4-张量并行]] | 列/行并行 Linear + 序列并行从零实现 | MLP 并行只需 1 次 AllReduce 的原因 |
 | [[Projects/MA-RLHF/xtrain/xtrain-05b-Pipeline-Parallel-手撕实操|xtrain-lc5-流水线并行]] | 1F1B + DualPipe 从零实现（Bubble率推导） | DualPipe 如何将 bubble 降至接近零 |

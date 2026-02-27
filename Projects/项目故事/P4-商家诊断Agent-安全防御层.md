@@ -7,9 +7,9 @@ updated: 2026-02-28
 tags: [career, interview, agent, business-agent, security, prompt-injection, NL2SQL, meituan]
 brief: 美团商家端经营诊断 Agent 的完整落地过程：接口 mapping、prompt 架构、业务逻辑内化、延迟优化，以及上线后遭遇 Prompt Injection 攻击后设计的系统性安全防御层。真实业务踩坑，有细节，有演进。
 related:
-  - "[[AI/5-AI安全/Multi-Agent-Defense-Pipeline-Prompt-Injection]]"
-  - "[[AI/5-AI安全/CoT-Monitorability-Information-Theory]]"
-  - "[[AI/2-Agent/Fundamentals/ReAct与CoT]]"
+  - "[[AI/5-AI 安全/Multi-Agent-Defense-Pipeline-Prompt-Injection]]"
+  - "[[AI/5-AI 安全/CoT-Monitorability-Information-Theory]]"
+  - "[[AI/2-Agent/Fundamentals/ReAct 与 CoT]]"
 ---
 
 # P4：商家诊断 Agent——从业务落地到安全防御
@@ -238,7 +238,7 @@ CoT 监控（监控推理链是否出现异常模式）的核心难点在于**�
 
 - [[Projects/项目故事/P3-Agent自进化系统]]
 - [[Projects/项目故事/P5-分析Agent-从ReAct到RL训练闭环]]
-- [[AI/5-AI安全/Multi-Agent-Defense-Pipeline-Prompt-Injection]]
-- [[AI/5-AI安全/CoT-Monitorability-Information-Theory]]
-- [[AI/2-Agent/Fundamentals/ReAct与CoT]]
+- [[AI/5-AI 安全/Multi-Agent-Defense-Pipeline-Prompt-Injection]]
+- [[AI/5-AI 安全/CoT-Monitorability-Information-Theory]]
+- [[AI/2-Agent/Fundamentals/ReAct 与 CoT]]
 - [[AI/2-Agent/Agent评估体系批判-Goodhart法则与Benchmark陷阱]]

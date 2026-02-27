@@ -304,7 +304,7 @@ model.resize_token_embeddings(len(tokenizer))
 
 ## See Also
 
-- [[AI/3-LLM/Architecture/Tokenizer-Embedding-手撕实操|Tokenizer-Embedding 手撕实操]] — 手写 BPE 合并 + token embedding lookup 完整实现（工程配套）
+- [[Projects/MA-RLHF/lc1/lc1-01-Tokenizer-Embedding-手撕实操|Tokenizer-Embedding 手撕实操]] — 手写 BPE 合并 + token embedding lookup 完整实现（工程配套）
 - [[AI/3-LLM/Architecture/Transformer 位置编码|Transformer 位置编码]] — 位置信息编码与 tokenization 协同设计（RoPE 对词表大小敏感）
 - [[AI/3-LLM/Architecture/Attention 变体综述|Attention 变体综述]] — Tokenizer 词表大小影响 Attention 序列长度分布
 - [[AI/3-LLM/SFT/LoRA|LoRA]] — 扩词表后 CPT 的参数效率方案：新 token embedding 用 LoRA 微调

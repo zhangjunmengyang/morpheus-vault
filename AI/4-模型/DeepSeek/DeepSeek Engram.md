@@ -129,7 +129,7 @@ Engram 预计将成为即将发布的 DeepSeek V4（预计 2026 年 2 月中旬�
 
 ### 技术栈整合
 - **Engram**: 内存效率
-- **[[AI/3-LLM/Architecture/Manifold-Constrained Hyper-Connections|Manifold-Constrained Hyper-Connections]]**: 训练稳定性
+- **[[AI/4-模型/DeepSeek/mHC-Manifold-Constrained-Hyper-Connections-DeepSeek|Manifold-Constrained Hyper-Connections]]**: 训练稳定性
 - **[[AI/3-LLM/Architecture/Multi-Head Latent Attention|Multi-Head Latent Attention]]**: KV 缓存优化
 - **R1 强化学习**: 推理能力
 
@@ -208,6 +208,6 @@ A: 支持内存卸载到 DRAM，减少对昂贵 GPU HBM 的依赖。需要高带
 ## 相关技术
 
 - [[AI/3-LLM/Architecture/Multi-Head Latent Attention|Multi-Head Latent Attention]]：KV 缓存优化
-- [[AI/3-LLM/Architecture/Manifold-Constrained Hyper-Connections|Manifold-Constrained Hyper-Connections]]：训练稳定性
+- [[AI/4-模型/DeepSeek/mHC-Manifold-Constrained-Hyper-Connections-DeepSeek|Manifold-Constrained Hyper-Connections]]：训练稳定性
 - [[AI/3-LLM/Architecture/MoE 深度解析|Mixture of Experts]]：计算稀疏性
 - [[AI/4-模型/DeepSeek/DeepSeek-R1|DeepSeek V3 Architecture]]：基础架构

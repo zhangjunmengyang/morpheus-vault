@@ -205,3 +205,50 @@ LLM(
 - [[Projects/MA-RLHF/lc10/lc10-04-vLLM-V0-手撕实操|vLLM-手撕实操]] — **代码路径**：从零实现 PagedAttention + Continuous Batching 完整代码注解，理解 vLLM 内部机制 ⭐⭐⭐⭐⭐
 - [[AI/3-LLM/Inference/vLLM-V0-V1-完整系统实操|vLLM V0/V1 完整系统实操]] — **系统级深度**：V0 page-level Prefill 转换 + last-token 提取；V1 SchedulerInfo + merge_prompt + KV.split 统一调度；完整 10 文件代码结构 ⭐⭐⭐⭐⭐
 - LLM 推理优化 2026 全景 — vLLM 在整个推理优化生态中的位置
+
+---
+
+## vLLM v0.16 重要更新（2026-02-26 发布）
+
+### RLHF Workflow 支持（最重要）
+
+v0.16 首次将 vLLM 的推理引擎与 RL 训练流程深度集成：
+
+**1. Native NCCL-based Weight Syncing API（#31943）**
+- 在 RL 训练中，每次 policy 更新后需要把新权重同步到推理引擎
+- 原有方案：停止推理 → 保存权重 → 重载权重 → 恢复推理（串行，有 gap）
+- v0.16 方案：通过 NCCL 直接从训练节点 broadcast 权重到推理节点，无需落盘
+- **意义**：把 verl 等框架的 rollout 阶段和 training 阶段之间的权重同步延迟从秒级降到毫秒级
+
+**2. Layerwise Weight Reloading for QeRL（#32133）**
+- QeRL（Quantization-Enhanced RL）需要在不同量化精度间切换权重
+- 之前必须整体重载（显存波动大，延迟高）
+- v0.16 支持逐层重载：只更新变化的层，其余层 keep in-place
+
+**3. Engine Pause/Resume with Request Preservation（#32351）**
+- 训练时需要暂停推理引擎更新权重
+- 新机制：pause 时保留已有请求的状态（KV Cache 不清空），resume 后继续处理
+- 之前：pause → 清空 → 重建请求队列（用户体验差，吞吐量损失大）
+
+### Speculative Decoding 改进
+
+- **Unified Parallel Drafting（#32887）**：统一了多种 draft 策略（eagle/medusa/lookahead）的并行化实现，减少代码碎片化，统一接口
+- 结构化输出（structured output）现在支持 spec decode（#33374）
+- all-greedy rejection sampling 跳过 softmax（#32852），节省计算
+
+### 其他重要更新
+
+- **WebSocket Realtime API**：镜像 OpenAI Realtime API，流式音频支持，面向 voice agent 应用
+- **XPU 全面重构**：Huawei Ascend 支持大幅改进（MoE/MXFP4/FP8 MoE 等），对国产芯片生态有价值
+- **Scheduling 优化**：多项调度器改进，提升并发吞吐
+
+### 对 RL 训练实践的影响
+
+v0.16 的 RLHF workflow 功能直接影响 verl / OpenRLHF 的集成方式：
+- verl 的 hybrid engine（Rollout + Training 共享 GPU）可以利用 NCCL weight sync 进一步减少 Rollout-Training 切换延迟
+- QeRL（已有 Vault 笔记）现在有了 vLLM 层面的原生支持（layerwise reload）
+- engine pause/resume = FlexMARL 的 Rollout-Training Co-Design 在 vLLM 侧的对应实现
+
+> **版本迭代速度**：vLLM 的月发布节奏（v0.15 → v0.16）反映了推理引擎领域的快速演进。v0.17 预计会加入更多 MARL 相关功能。
+
+*更新时间：2026-02-28 | 来源：github.com/vllm-project/vllm/releases/tag/v0.16.0*

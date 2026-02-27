@@ -9,7 +9,7 @@ arxiv: "2602.16928"
 affiliation: Google DeepMind
 domain: ai/agent/multi-agent
 related:
-  - "[[AI/2-Agent/Multi-Agent/SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL]]"
+  - "[[AI/2-Agent/Agentic-RL/SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL]]"
   - "[[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization]]"
   - "[[AI/3-LLM/Architecture/Flow-Matching-手撕实操]]"
 ---
@@ -208,7 +208,8 @@ Credit Assignment 层：
 
 ## See Also
 
-- [[AI/2-Agent/Multi-Agent/SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL]] — MARL 中 credit assignment 的精确化（Shapley value），与 AlphaEvolve 在不同维度推进 MARL
+- [[AI/2-Agent/Agentic-RL/Search-P1-Path-Centric-Reward-Agentic-RAG|Search-P1（Agentic RAG RL）]] ⭐ — **同为"AI主动发现"但路径不同**：AlphaEvolve 代码演化发现算法，Search-P1 检索工具链发现知识——科学发现的两种 Agent 路径
+- [[AI/2-Agent/Agentic-RL/SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL]] — MARL 中 credit assignment 的精确化（Shapley value），与 AlphaEvolve 在不同维度推进 MARL
 - [[AI/3-LLM/RL/算法/SSPO-Soft-Sequence-Policy-Optimization]] — 同期工作，同样是在"已有算法框架内发现更好变体"，但路径是人工理论推导而非 LLM 演化
 - [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题]] — AlphaEvolve 框架如果应用于 Agent RL 的 credit assignment 算法，可以自动发现 GiGPO/HiPER 的变体
 

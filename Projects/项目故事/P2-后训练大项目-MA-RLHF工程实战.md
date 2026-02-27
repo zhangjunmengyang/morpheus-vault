@@ -7,10 +7,10 @@ updated: 2026-02-28
 tags: [career, interview, post-training, SFT, DPO, GRPO, verl, RLHF, DeepSeek-R1]
 brief: 系统实现了完整的后训练 pipeline：SFT（全参+LoRA）→ DPO 偏好对齐 → GRPO 强化学习推理增强，用 verl+Ray 跑分布式实验，复现了 DeepSeek-R1 训练流程。故事线：从业务 Agent 的 prompt 天花板出发，一路深入到模型训练层。
 related:
-  - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解]]"
-  - "[[AI/3-LLM/RL/RLHF-DPO-2026-技术全景]]"
+  - "[[AI/3-LLM/RL/算法/GRPO 深度理解]]"
+  - "[[AI/3-LLM/RL/算法/GRPO 深度理解]]"
   - "[[Projects/MA-RLHF/lc9/lc9-03-verl-R1复现全流程]]"
-  - "[[AI/3-LLM/RL/PPO/MA-RLHF-核心代码注解]]"
+  - "[[Projects/MA-RLHF/lc8-PPO/lc8-02-MA-RLHF-核心代码注解]]"
 ---
 
 # P2：后训练工程实战——SFT→DPO→GRPO 完整 Pipeline
@@ -253,7 +253,7 @@ DPO 适合有高质量偏好标注数据、任务相对静态的场景（对话�
 
 - [[Projects/项目故事/P1-xtrain-分布式预训练工程]] — 基础设施支撑
 - [[Projects/项目故事/P5-分析Agent-从ReAct到RL训练闭环]] — 把 GRPO 用在 Agent
-- [[AI/3-LLM/RL/GRPO/GRPO 深度理解]]
-- [[AI/3-LLM/RL/RLHF-DPO-2026-技术全景]]
-- [[AI/3-LLM/RL/PPO/MA-RLHF-核心代码注解]]
+- [[AI/3-LLM/RL/算法/GRPO 深度理解]]
+- [[AI/3-LLM/RL/算法/GRPO 深度理解]]
+- [[Projects/MA-RLHF/lc8-PPO/lc8-02-MA-RLHF-核心代码注解]]
 - [[AI/3-LLM/Frameworks/verl/训练后端]]

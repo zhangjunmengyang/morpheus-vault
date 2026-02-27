@@ -148,5 +148,5 @@ Prompt Engineering 的本质是**把人的意图无损传递给模型**。越是
 - [[Prompt-Engineering-基础|Prompt Engineering 实践]]
 - [[Prompt-攻击|Prompt 攻击与防御]]
 - [[Prompt-Tools|Prompt 工具集]]
-- [[AI/6-应用/Synthetic-Data/数据合成|数据合成]]
+- [[AI/6-应用/Synthetic-Data/Synthetic-Data|数据合成]]
 - [[AI/4-模型/DeepSeek/DeepSeek-R1|DeepSeek-R1]]

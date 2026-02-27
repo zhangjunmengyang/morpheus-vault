@@ -16,7 +16,7 @@ brief: mHC（Manifold-Constrained Hyper-Connections）手撕实操：从标准�
 related:
   - "lc5-DeepSeek-V3-MOC"
   - "[[Projects/MA-RLHF/lc5/lc5-01-DeepSeek-V3-手撕实操]]"
-  - "[[AI/3-LLM/Architecture/mHC-Manifold-Constrained-Hyper-Connections-DeepSeek]]"
+  - "[[AI/4-模型/DeepSeek/mHC-Manifold-Constrained-Hyper-Connections-DeepSeek]]"
   - "[[Projects/MA-RLHF/lc2/lc2-01-Transformer-手撕实操]]"
   - "[[Projects/MA-RLHF/lc5/lc5-02-DeepSeek-MLA-手撕实操]]"
 ---
@@ -272,7 +272,7 @@ A: SK 迭代是为了找归一化因子 U,V，这两个是常数（相对于当�
 ## See Also
 
 - [[Projects/MA-RLHF/lc5/lc5-02-DeepSeek-MLA-手撕实操]] — 同批次 Architecture notebook，MLA 低秩压缩（残差连接 vs Attention 压缩两个正交方向）
-- [[AI/3-LLM/Architecture/mHC-Manifold-Constrained-Hyper-Connections-DeepSeek]] — mHC 论文精读（arXiv:2512.24880），理论背景与实验结果
+- [[AI/4-模型/DeepSeek/mHC-Manifold-Constrained-Hyper-Connections-DeepSeek]] — mHC 论文精读（arXiv:2512.24880），理论背景与实验结果
 - [[Projects/MA-RLHF/lc5/lc5-01-DeepSeek-V3-手撕实操]] — DeepSeek V3 完整架构手撕，mHC 所在的架构体系
 - lc5-DeepSeek-V3-MOC — lc5 课程地图，DeepSeek 组件学习顺序
 - [[Projects/MA-RLHF/lc2/lc2-01-Transformer-手撕实操]] — 标准残差连接（mHC 的起点）手撕实操
