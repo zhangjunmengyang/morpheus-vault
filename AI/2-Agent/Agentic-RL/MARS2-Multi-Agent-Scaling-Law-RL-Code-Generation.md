@@ -52,21 +52,15 @@ graph LR
 
 MARS2 把多智能体协作搜索过程**建模为可学习的动态环境**：
 
-```
-问题 q
-   │
-   ▼
-Tree Search (深度 d 层)
-   ├── Node 1: Agent A₁ → 候选方案 o₁, reward r₁
-   ├── Node 2: Agent A₂ → 候选方案 o₂, reward r₂
-   ├── Node 3: Agent A₁ → 精炼方案 o₃, reward r₃ (基于 o₁ 失败反馈)
-   └── Node 4: Agent A₂ → 精炼方案 o₄, reward r₄ (基于 o₂ 错误)
-         │
-         ▼
-   Group-level advantage 计算（跨所有节点）
-         │
-         ▼
-   各 Agent 的 buffer 分发 → 异步触发参数更新
+```mermaid
+flowchart TD
+    Q["问题 q"] --> TS["Tree Search（深度 d 层）"]
+    TS --> N1["Node 1: Agent A₁ → 候选方案 o₁, reward r₁"]
+    TS --> N2["Node 2: Agent A₂ → 候选方案 o₂, reward r₂"]
+    TS --> N3["Node 3: Agent A₁ → 精炼方案 o₃, reward r₃<br/>（基于 o₁ 失败反馈）"]
+    TS --> N4["Node 4: Agent A₂ → 精炼方案 o₄, reward r₄<br/>（基于 o₂ 错误）"]
+    N1 & N2 & N3 & N4 --> GA["Group-level advantage 计算（跨所有节点）"]
+    GA --> BUF["各 Agent 的 buffer 分发 → 异步触发参数更新"]
 ```
 
 与 GRPO 的关键区别：**GRPO 的 group = 同一问题的多次独立采样；MARS2 的 group = 完整的多智能体轨迹树**。

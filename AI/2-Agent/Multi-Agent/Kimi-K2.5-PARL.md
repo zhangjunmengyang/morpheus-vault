@@ -123,28 +123,14 @@ Agent Swarm → 并行多 agent（PARL 训练的 orchestrator）
 
 ### 对比今天遇到的其他 Agentic RL 工作
 
-```
-今日 Agentic RL 方法论全景：
-┌─────────────────────────────────────────────────────────────┐
-│ 问题            │ 方法           │ 来源                      │
-├─────────────────┼────────────────┼───────────────────────────┤
-│ Multi-turn tool │ CM2 Checklist  │ arXiv 2602.12268           │
-│ use 无验证奖励  │ Rewards        │                           │
-├─────────────────┼────────────────┼───────────────────────────┤
-│ Multi-agent     │ PARL: 冻结     │ Kimi K2.5 (2602.02276)    │
-│ orchestrator    │ subagent，只   │                           │
-│ 训练           │ 训练 orchestr. │                           │
-├─────────────────┼────────────────┼───────────────────────────┤
-│ Open-ended 对齐 │ OpenRS Rubric  │ arXiv 2602.14069           │
-│ reward hacking  │ = constitution │                           │
-├─────────────────┼────────────────┼───────────────────────────┤
-│ 数学科研 agent  │ Aletheia NL    │ arXiv 2602.10177           │
-│ 无形式化反馈    │ Verifier + 失  │                           │
-│                │ 败承认机制     │                           │
-└─────────────────┴────────────────┴───────────────────────────┘
-共同主题：如何在缺乏 verifiable reward 或 multi-step 场景下
-         构建稳定的 RL 训练信号。
-```
+| 问题 | 方法 | 来源 |
+|------|------|------|
+| Multi-turn tool use 无验证奖励 | CM2 Checklist Rewards | arXiv 2602.12268 |
+| Multi-agent orchestrator 训练 | PARL：冻结 subagent，只训练 orchestrator | Kimi K2.5 (2602.02276) |
+| Open-ended 对齐 reward hacking | OpenRS Rubric = constitution | arXiv 2602.14069 |
+| 数学科研 agent 无形式化反馈 | Aletheia NL Verifier + 失败承认机制 | arXiv 2602.10177 |
+
+> **共同主题**：如何在缺乏 verifiable reward 或 multi-step 场景下构建稳定的 RL 训练信号。
 
 ## 关联笔记
 

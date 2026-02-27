@@ -169,15 +169,16 @@ guards:
 
 **Git-based 管理**
 ```
+# 提示词目录结构（版本控制）
 prompts/
-├── system/
-│   ├── assistant_v1.0.md
-│   ├── assistant_v1.1.md
-│   └── coding_assistant.md
-├── templates/
-│   └── question_answering.jinja2
-└── configs/
-    └── temperature_settings.yaml
+  system/
+    assistant_v1.0.md
+    assistant_v1.1.md
+    coding_assistant.md
+  templates/
+    question_answering.jinja2
+  configs/
+    temperature_settings.yaml
 ```
 
 **模板化设计**

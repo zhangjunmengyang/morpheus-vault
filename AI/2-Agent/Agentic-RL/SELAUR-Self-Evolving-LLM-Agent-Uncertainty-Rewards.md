@@ -200,15 +200,16 @@ SELAUR：失败轨迹 → token logits → 不确定性估计 → reward reshapi
 
 SELAUR 引入了一个新的 reward design 类别：**uncertainty-based intrinsic reward**
 
-```
-Reward 来源谱系（更新）：
-├── verifiable_binary：GiGPO / GRPO / Search-R1
-├── unverifiable_implicit：iStar（DPO ≡ step-BT model）
-├── unverifiable_checklist：CM2（sparse + dense，multi-turn tool use）
-├── process_reward：AgentPRM
-├── action_level_penalty：Search-R1++
-└── uncertainty_intrinsic：SELAUR ← 新增
-    特点：内生、零额外成本、仅适用于失败轨迹
+```mermaid
+graph TD
+    R["Reward 来源谱系（2026）"]
+    R --> A["verifiable_binary<br/>GiGPO / GRPO / Search-R1"]
+    R --> B["unverifiable_implicit<br/>iStar（DPO ≡ step-BT model）"]
+    R --> C["unverifiable_checklist<br/>CM2（sparse+dense，multi-turn tool use）"]
+    R --> D["process_reward<br/>AgentPRM"]
+    R --> E["action_level_penalty<br/>Search-R1++"]
+    R --> F["uncertainty_intrinsic ← SELAUR 新增<br/>内生、零额外成本、仅适用失败轨迹"]
+    style F fill:#d4edda
 ```
 
 ---

@@ -1283,18 +1283,14 @@ class ContinualPABU:
 ### PABU在Agent技术栈中的定位
 
 **技术栈分层**：
-```
-┌─────────────────────────────────────┐
-│ Application Layer (任务特定应用)      │
-├─────────────────────────────────────┤  
-│ Agent Reasoning Layer (推理决策)     │
-├─────────────────────────────────────┤
-│ PABU Belief Management (信念管理)    │ ← PABU核心位置
-├─────────────────────────────────────┤
-│ LLM Foundation (语言模型基础)        │
-├─────────────────────────────────────┤
-│ Environment Interface (环境接口)     │
-└─────────────────────────────────────┘
+```mermaid
+graph TD
+    A["Application Layer<br/>任务特定应用"]
+    --> B["Agent Reasoning Layer<br/>推理决策"]
+    --> C["PABU Belief Management<br/>信念管理 ← 核心位置"]
+    --> D["LLM Foundation<br/>语言模型基础"]
+    --> E["Environment Interface<br/>环境接口"]
+    style C fill:#d4edda
 ```
 
 **与其他组件的协同**：

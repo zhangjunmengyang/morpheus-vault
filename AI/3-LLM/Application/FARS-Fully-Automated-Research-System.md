@@ -119,12 +119,12 @@ Ideation ──→ Planning ──→ Experiment ──→ Writing
 
 四个 Agent **不通过 message passing**，而是通过**共享文件系统**协调：
 
-```
-项目目录（结构化）
-  ├── hypothesis.md        <- Ideation 写
-  ├── plan.md              <- Planning 写
-  ├── experiment_results/  <- Experiment 写
-  └── paper.pdf            <- Writing 写
+```mermaid
+graph TD
+    A[项目目录] --> B["hypothesis.md<br/>Ideation Agent 写"]
+    A --> C["plan.md<br/>Planning Agent 写"]
+    A --> D["experiment_results/<br/>Experiment Agent 写"]
+    A --> E["paper.pdf<br/>Writing Agent 写"]
 ```
 
 - 文件系统同时充当 workspace + 持久记忆
@@ -218,22 +218,12 @@ FARS 是前者，不是后者。前者已经 work，后者还在路上。
 
 ## 谱系定位
 
-```
-AI Scientist (Sakana, 2408.06292, 2024-08)
-  └─ 首次完整循环，单次运行，优化"像人写的论文"
-      ↓
-CycleResearcher / Zochi / DeepScientist (2024-2025)
-  └─ 特定领域改进，仍为单次或小规模
-      ↓
-FARS (Analemma, 2026-02)
-  ├─ 关键创新：工业化规模 + 持续运行 + 全程可观测
-  ├─ 哲学转变：从"符合格式"到"扩展知识边界"
-  └─ 限制：ML 领域为主，质量低于顶会接收线
-      ↓
-下一代（推断）
-  ├─ 质量飞轮：高质量论文 fine-tune Ideation Agent
-  ├─ 自适应课程：失败论文 -> 调整研究方向
-  └─ 领域扩展：需外部物理工具（化学/生物实验室）
+```mermaid
+graph TD
+    A["AI Scientist（Sakana, 2408.06292, 2024-08）<br/>首次完整循环，单次运行，优化「像人写的论文」"]
+    --> B["CycleResearcher / Zochi / DeepScientist（2024-2025）<br/>特定领域改进，仍为单次或小规模"]
+    --> C["FARS（Analemma, 2026-02）<br/>工业化规模 + 持续运行 + 全程可观测<br/>哲学转变：符合格式→扩展知识边界<br/>限制：ML领域为主，质量低于顶会"]
+    --> D["下一代（推断）<br/>质量飞轮：高质量论文 fine-tune Ideation Agent<br/>自适应课程：失败论文→调整研究方向<br/>领域扩展：需外部物理工具"]
 ```
 
 ---
