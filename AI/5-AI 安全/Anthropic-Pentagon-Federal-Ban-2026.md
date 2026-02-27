@@ -134,3 +134,9 @@ Anthropic vs Pentagon 事件（2026.2）是最佳案例。Anthropic 坚持两条
 ---
 
 *活文档。事件仍在发展中，将持续更新。*
+
+## See Also
+
+- [[AI/5-AI 安全/AI 伦理和治理|AI 伦理和治理]] — 宏观框架：AI 治理政策体系
+- [[AI/5-AI 安全/Anthropic Claude Opus 4.6 蓄意破坏风险报告|Claude 蓄意破坏风险报告]] — Anthropic 另一份安全立场文件，形成 AI Safety 政策系列
+- [[AI/5-AI 安全/CoT-Monitorability-Information-Theory|CoT 可监测性]] — 安全透明度：链式思维的可监测性是 Anthropic 安全框架的技术基础

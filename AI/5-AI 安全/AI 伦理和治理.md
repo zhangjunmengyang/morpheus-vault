@@ -91,3 +91,7 @@ AI 伦理最大的挑战不是技术问题，而是**激励不对齐** —— �
 - [[AI/5-AI 安全/AI 安全及隐私保护|AI 安全及隐私保护]]
 - [[Prompt-攻击|prompt 攻击]]
 - [[思考/AI 思考|AI 思考]]
+
+## See Also
+
+- [[AI/5-AI 安全/Anthropic-Pentagon-Federal-Ban-2026|Anthropic vs Pentagon（2026）]] — AI 治理的商业-安全博弈：安全红线在政治语境下的脆弱性
