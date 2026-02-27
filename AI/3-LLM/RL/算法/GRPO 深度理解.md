@@ -231,3 +231,7 @@ GRPO 是"极简主义 RL"的典范：PPO 用复杂的价值网络学基线，GRP
 - [[Projects/MA-RLHF/lc8-GRPO/lc8-04-GRPO-KL散度三种近似|GRPO KL 散度三种近似]] — k1/k2/k3 Schulman 近似实现对比：精度 vs 计算成本 tradeoff
 - [[Projects/MA-RLHF/lc8-PPO/lc8-01-PPO-手撕实操|PPO-手撕实操]] — PPO actor-critic 实现对照，理解 GRPO 为什么能去掉 critic
 - [[Projects/MA-RLHF/MA-RLHF-手撕实操-系列索引|MA-RLHF 手撕实操系列索引]] — 架构/推理/Infra/RL 全链路代码实操总索引
+
+## See Also
+
+- [[AI/3-LLM/RL/算法/DAR-Dual-Regularized-Advantage-Regression-Unifying-RLHF|DAR（ICLR 2026 ★★★★★）]] — GRPO 理论升级

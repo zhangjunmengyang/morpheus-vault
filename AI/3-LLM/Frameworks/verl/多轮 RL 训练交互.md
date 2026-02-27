@@ -27,22 +27,18 @@ tags:
 
 verl 基于 SGLang 实现了一套多轮交互系统：
 
-```
-┌─────────────────────────────────────────────────┐
-│                  Interaction Loop                 │
-│                                                   │
-│  ┌───────────┐    ┌──────────────┐    ┌────────┐ │
-│  │   Actor    │───▶│  Environment │───▶│ Actor  │ │
-│  │ (Turn 1)   │    │  (Tool Call) │    │(Turn 2)│ │
-│  └───────────┘    └──────────────┘    └────────┘ │
-│       │                                     │     │
-│       └──────────── Trajectory ─────────────┘     │
-│                        │                          │
-│                  ┌─────▼──────┐                   │
-│                  │   Reward    │                   │
-│                  │ (on final)  │                   │
-│                  └────────────┘                    │
-└─────────────────────────────────────────────────┘
+```mermaid
+sequenceDiagram
+    participant A1 as Actor（Turn 1）
+    participant E as Environment（Tool Call）
+    participant A2 as Actor（Turn 2）
+    participant R as Reward（on final）
+
+    A1->>E: action（tool call）
+    E->>A2: observation
+    A2->>R: trajectory complete
+    Note over A1,R: Trajectory = [Turn1, ToolCall, Turn2, ...]
+    R-->>A1: reward signal（训练时反传）
 ```
 
 关键设计：

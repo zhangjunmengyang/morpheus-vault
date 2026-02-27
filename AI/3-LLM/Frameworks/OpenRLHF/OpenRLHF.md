@@ -17,18 +17,24 @@ tags:
 
 OpenRLHF 的核心设计理念是**用 Ray 做分布式调度，把 RLHF 的四个模型（Actor、Critic、Reward、Reference）拆分到不同的 GPU 组上**。
 
-```
-┌─────────────────────────────────────────────┐
-│                 Ray Cluster                  │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  │
-│  │  Actor   │  │  Critic  │  │  Reward  │  │
-│  │ (GPU 0-3)│  │ (GPU 4-5)│  │ (GPU 6-7)│  │
-│  └──────────┘  └──────────┘  └──────────┘  │
-│  ┌──────────┐  ┌──────────┐               │
-│  │ Reference│  │  vLLM    │               │
-│  │ (GPU 6-7)│  │ Generate │               │
-│  └──────────┘  └──────────┘               │
-└─────────────────────────────────────────────┘
+```mermaid
+graph TD
+    subgraph RAY["Ray Cluster"]
+        A["Actor
+GPU 0-3"]
+        C["Critic
+GPU 4-5"]
+        RM["Reward Model
+GPU 6-7"]
+        REF["Reference Policy
+GPU 6-7"]
+        VLLM["vLLM Generate
+（rollout）"]
+    end
+    VLLM -->|生成轨迹| A
+    A -->|KL 计算| REF
+    A -->|score| RM
+    A -->|advantage| C
 ```
 
 关键设计：

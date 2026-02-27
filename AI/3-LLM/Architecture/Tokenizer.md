@@ -16,7 +16,7 @@ sources:
   - "Kudo. *Subword Regularization: Improving Neural Network Translation Models with Multiple Subword Candidates* arXiv:1804.10959 (Unigram LM)"
   - OpenAI tiktoken 文档 — https://github.com/openai/tiktoken
 related:
-  - "[[AI/3-LLM/Architecture/BERT|BERT]]"
+  - "[[AI/4-模型/Google/BERT|BERT]]"
   - "[[GPT|GPT]]"
   - "[[Qwen|Qwen]]"
   - "[[LLaMA|LLaMA]]"
@@ -995,7 +995,7 @@ def adapt_tokenizer_for_domain(base_tokenizer, domain_corpus):
 
 ## See Also
 
-- [[AI/3-LLM/Architecture/BERT|BERT]] — 使用 WordPiece 分词（子词级）
+- [[AI/4-模型/Google/BERT|BERT]] — 使用 WordPiece 分词（子词级）
 - [[GPT|GPT]] — 使用 Byte-level BPE (tiktoken)，字节级 BPE
 - [[LLaMA|LLaMA]] — 使用 SentencePiece BPE，多语言支持
 - [[Qwen|Qwen]] — 使用 SentencePiece，多语言优化，中文 token 效率高

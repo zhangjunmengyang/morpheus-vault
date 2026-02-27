@@ -25,6 +25,7 @@ status: active
 
 ## See Also
 
+- [[AI/3-LLM/RL/算法/DAR-Dual-Regularized-Advantage-Regression-Unifying-RLHF|DAR（Dual-KL 统一框架）]] — reward hacking 防御的算法层解法：Dual-KL 把 KL(π‖π₀)+KL(π‖πₜ) 统一推导为 weighted SFT，与本文"边界维度"的 reward 设计互为上下游
 - [[AI/3-LLM/RL/Theory/MARS-Margin-Aware-Reward-Modeling-Self-Refinement|MARS]] — 本文三维框架之"边界维度"的核心来源：Fisher information驱动低margin样本挖掘，最大化训练曲率（arXiv:2602.17658，★★★★）
 - [[AI/3-LLM/RL/Theory/Rationale-Consistency-GenRM-Deceptive-Alignment|Rationale Consistency]] — 本文三维框架之"推理质量维度"的核心来源：乘法门控R_rationale×R_outcome切断"猜对答案"捷径（arXiv:2602.04649，★★★★★）
 - [[AI/3-LLM/RL/Theory/Likelihood-Based-Reward-Designs-CoT-RL|Likelihood-Based Reward]] — 本文三维框架之"密度维度"的核心来源：log-prob作为通用密集reward信号（arXiv:2602.03979，★★★★☆）
