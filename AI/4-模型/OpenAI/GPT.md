@@ -165,7 +165,7 @@ GPT 的成功不在于某个单一的技术突破，而在于持续押注几个�
 - [[AI/4-模型/Google/BERT|BERT]] — Encoder-Only 路线对比，两条技术路线的分野
 - [[AI/4-模型/Meta/LLaMA|LLaMA]] — 开源 GPT 路线的代表
 - [[AI/4-模型/Google/T5|T5]] — Encoder-Decoder 路线对比（T5 笔记待建）
-- [[AI/3-LLM/Application/Prompt/Prompt-Engineering-概述|Prompt engineering 概述]] — ICL 能力的工程化应用
+- [[Prompt-Engineering-概述|Prompt engineering 概述]] — ICL 能力的工程化应用
 - [[AI/3-LLM/Infra/分布式训练|分布式训练]] — GPT-3/4 训练所需的基础设施
 - [[AI/4-模型/DeepSeek/DeepSeek-R1|DeepSeek-R1]] — 纯 RL 路线对 GPT RLHF 范式的挑战
 - Transformer 通识

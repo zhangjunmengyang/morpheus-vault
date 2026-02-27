@@ -104,7 +104,7 @@ response_b = model.generate(f"基于以下反馈改进回答：{critique}")
 
 ## See Also
 
-- [[AI/3-LLM/Application/Synthetic-Data/DataFlow|DataFlow 框架]]
+- [[DataFlow|DataFlow 框架]]
 - [[AI/3-LLM/Application/Synthetic-Data/数据合成|数据合成（Prompt 视角）]]
 - [[AI/3-LLM/Frameworks/Unsloth/数据合成|Unsloth 数据合成]]
 - [[AI/3-LLM/SFT/SFT 原理|SFT 原理]]
@@ -227,7 +227,7 @@ for i in range(len(sim_matrix)):
 ## 相关
 
 - [[AI/3-LLM/Application/Synthetic-Data/Synthetic Data|Synthetic Data 综述]]
-- [[AI/3-LLM/Application/Synthetic-Data/DataFlow|DataFlow 框架]]
+- [[DataFlow|DataFlow 框架]]
 - [[AI/3-LLM/Frameworks/Unsloth/数据合成|Unsloth 数据合成]]
 - [[AI/3-LLM/SFT/SFT 原理|SFT 原理]]
-- [[AI/3-LLM/Application/Prompt/Prompt-Engineering-概述|Prompt Engineering 概述]]
+- [[Prompt-Engineering-概述|Prompt Engineering 概述]]

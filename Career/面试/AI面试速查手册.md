@@ -1569,8 +1569,8 @@ related:
 
 ### RAG 方向
 -  — RAG 知识域全索引
-- [[AI/3-LLM/Application/RAG/Advanced RAG|Advanced RAG]] — Self-RAG/GraphRAG 进阶技术
-- [[AI/3-LLM/Application/RAG/向量数据库选型|向量数据库选型]] — FAISS/Milvus/Chroma 对比
+- [[Advanced RAG|Advanced RAG]] — Self-RAG/GraphRAG 进阶技术
+- [[向量数据库选型|向量数据库选型]] — FAISS/Milvus/Chroma 对比
 
 ### Transformer 架构方向
 - Transformer 架构深度解析 2026 — 注意力/位置编码/MoE/SSM/推理优化全栈，18 道面试题 + 42 篇文献 ⭐

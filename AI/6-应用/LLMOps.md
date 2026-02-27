@@ -108,7 +108,7 @@ Load Balancer → API Gateway → Model Server → GPU Cluster
 
 **模型更新**
 - **增量训练**：基于新数据持续优化
-- **[[AI/3-LLM/Application/Prompt/Prompt-Engineering-基础|Prompt-Engineering-基础]]**: 优化系统提示词
+- **[[Prompt-Engineering-基础|Prompt-Engineering-基础]]**: 优化系统提示词
 - **RAG 知识更新**：向量库更新和索引优化
 
 ## 关键工具链
@@ -293,6 +293,6 @@ def route_request(query):
 
 - MLOps 基础
 - LLM 部署架构
-- [[AI/3-LLM/Application/Prompt/Prompt-Engineering-基础|Prompt-Engineering-基础]]
+- [[Prompt-Engineering-基础|Prompt-Engineering-基础]]
 - 模型评估方法
 - 生产环境监控

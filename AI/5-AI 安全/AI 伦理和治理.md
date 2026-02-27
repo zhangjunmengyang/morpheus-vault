@@ -89,5 +89,5 @@ AI 伦理最大的挑战不是技术问题，而是**激励不对齐** —— �
 ## 相关
 
 - [[AI/5-AI 安全/AI 安全及隐私保护|AI 安全及隐私保护]]
-- [[AI/3-LLM/Application/Prompt/Prompt-攻击|prompt 攻击]]
+- [[Prompt-攻击|prompt 攻击]]
 - [[思考/AI 思考|AI 思考]]

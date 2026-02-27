@@ -229,7 +229,7 @@ A：常用指标包括：1）**MRR（Mean Reciprocal Rank）**：衡量第一个
 
 ## See Also
 
-- [[AI/3-LLM/Application/RAG/向量数据库选型|向量数据库选型]] — 召回阶段：Bi-Encoder 向量检索的基础设施
-- [[AI/3-LLM/Application/RAG/文本分块策略|文本分块策略]] — Reranker 上游：分块质量直接影响召回候选质量
-- [[AI/3-LLM/Application/RAG/Advanced RAG|Advanced RAG]] — 系统全貌：Reranker 是 Advanced RAG pipeline 的精排层
+- [[向量数据库选型|向量数据库选型]] — 召回阶段：Bi-Encoder 向量检索的基础设施
+- [[文本分块策略|文本分块策略]] — Reranker 上游：分块质量直接影响召回候选质量
+- [[Advanced RAG|Advanced RAG]] — 系统全貌：Reranker 是 Advanced RAG pipeline 的精排层
 - [[AI/3-LLM/Evaluation/LLM 评测体系|LLM 评测体系]] — 评估 Reranker 效果时参考的指标体系（MRR/NDCG@K）

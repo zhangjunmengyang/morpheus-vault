@@ -118,7 +118,7 @@ chunk_overlap: 10-20% of chunk_size
 
 ## 3. Embedding 选型
 
-参见 [[AI/3-LLM/Application/Embedding/Embedding 选型|Embedding 选型]] 了解基础内容。
+参见 [[Embedding 选型|Embedding 选型]] 了解基础内容。
 
 ### 3.1 2025-2026 推荐 Embedding
 
@@ -336,7 +336,7 @@ A: 分层评估：1) 检索质量（Recall@K, MRR），2) Reranker 质量（NDCG
 
 ## 相关链接
 
-- [[AI/3-LLM/Application/Embedding/Embedding|Embedding]] — 向量化基础
-- [[AI/3-LLM/Application/Embedding/Embedding 选型|Embedding 选型]] — 详细选型对比
+- [[Embedding|Embedding]] — 向量化基础
+- [[Embedding 选型|Embedding 选型]] — 详细选型对比
 - [[AI/3-LLM/Inference/vLLM|vLLM]] — RAG 的 LLM 推理后端
-- [[AI/3-LLM/Application/Prompt/Prompt-Engineering-基础|Prompt Engineering]] — RAG prompt 设计
+- [[Prompt-Engineering-基础|Prompt Engineering]] — RAG prompt 设计

@@ -140,7 +140,7 @@ AI 安全是一个「攻防对抗」的领域，没有银弹。最实用的策�
 ## 相关
 
 - [[AI/5-AI 安全/AI 伦理和治理]]
-- [[AI/3-LLM/Application/Prompt/Prompt-攻击|prompt 攻击]]
+- [[Prompt-攻击|prompt 攻击]]
 - [[思考/AI 思考|AI 思考]]
 
 ## See Also

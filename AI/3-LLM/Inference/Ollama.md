@@ -176,7 +176,7 @@ embedding = ollama.embeddings(model='nomic-embed-text', prompt='your text')
 
 **量化与模型格式**
 - [[AI/3-LLM/Frameworks/Unsloth/量化|量化]] — GGUF 量化技术详解
-- [[AI/3-LLM/Application/Embedding/Embedding|Embedding]] — Ollama 的 embedding 功能
+- [[Embedding|Embedding]] — Ollama 的 embedding 功能
 
 ## 推荐阅读
 

@@ -154,6 +154,6 @@ model = AutoModelForCausalLM.from_pretrained(
 - [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL 概述]]
 - [[AI/3-LLM/SFT/LoRA|LoRA]]
 - [[AI/3-LLM/SFT/SFT 原理|SFT 原理]]
-- [[AI/3-LLM/Application/Embedding/Embedding|Embedding]]
+- [[Embedding|Embedding]]
 - [[Projects/RAG-System/企业 RAG 系统|企业 RAG 系统]]
 - [[AI/3-LLM/Frameworks/Unsloth/notebook 合集|notebook 合集]]

@@ -80,7 +80,7 @@ result = app.invoke({"messages": [user_query], "next_action": ""})
 
 ### 架构特点
 
-LlamaIndex 从 RAG 工具演进为 Agent 框架。核心抽象：**Index → QueryEngine → AgentWorkflow**。v0.11+ 引入 `llama-index-agent` 模块，支持 [[AI/3-LLM/Application/RAG/RAG 工程实践|RAG]] 与 Agent 深度融合。
+LlamaIndex 从 RAG 工具演进为 Agent 框架。核心抽象：**Index → QueryEngine → AgentWorkflow**。v0.11+ 引入 `llama-index-agent` 模块，支持 [[RAG 工程实践|RAG]] 与 Agent 深度融合。
 
 ```python
 from llama_index.core.agent.workflow import AgentWorkflow
@@ -315,7 +315,7 @@ Dify 是 **低代码 LLMOps 平台**，提供可视化 Workflow 编辑器。支�
 - [[思考/Agent or Workflow？|Agent or Workflow？]] — 何时用 Agent，何时用固定流程
 - [[AI/2-Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]] — Multi-Agent 设计模式
 - [[AI/2-Agent/Fundamentals/Tool Use|Tool Use]] — Agent 工具调用机制
-- [[AI/3-LLM/Application/RAG/RAG 工程实践|RAG 工程实践]] — 检索增强生成
+- [[RAG 工程实践|RAG 工程实践]] — 检索增强生成
 - [[AI/2-Agent/Multi-Agent/AutoGen|AutoGen]] — AutoGen 详细笔记
 - [[AI/2-Agent/Fundamentals/记忆模块|记忆模块]] — Agent 记忆设计
 

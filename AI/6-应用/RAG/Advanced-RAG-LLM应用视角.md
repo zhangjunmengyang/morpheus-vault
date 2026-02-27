@@ -18,7 +18,7 @@ status: active
 
 ### Naive RAG 的局限性
 
-基础 [[AI/3-LLM/Application/RAG/RAG 工程实践|RAG]] 流程（Query → Retrieve → Generate）存在多个痛点：
+基础 [[RAG 工程实践|RAG]] 流程（Query → Retrieve → Generate）存在多个痛点：
 
 ```
 Naive RAG 的典型失败场景:
@@ -499,11 +499,11 @@ class MultiHopRAG:
 
 ## 8. 与其他主题的关系
 
-- **[[AI/3-LLM/Application/RAG/RAG 工程实践|RAG 工程实践]]**：本文是 RAG 工程实践的进阶，Naive RAG 的基础知识参见该文
-- **[[AI/3-LLM/Application/Embedding/Embedding|Embedding]]**：检索质量依赖 Embedding 模型，Advanced RAG 通过查询变换减少对 Embedding 的依赖
+- **[[RAG 工程实践|RAG 工程实践]]**：本文是 RAG 工程实践的进阶，Naive RAG 的基础知识参见该文
+- **[[Embedding|Embedding]]**：检索质量依赖 Embedding 模型，Advanced RAG 通过查询变换减少对 Embedding 的依赖
 - **[[AI/3-LLM/Architecture/FlashAttention|FlashAttention]]**：长上下文 Attention 优化使 RAG 可以传入更多检索结果
-- **[[AI/3-LLM/Application/LLMOps|LLMOps]]**：Advanced RAG 的监控和评估是 LLMOps 的重要组成部分
-- **[[AI/3-LLM/Application/Prompt/Prompt Engineering 高级|Prompt Engineering 高级]]**：Step-back prompting、CoT 等 prompt 技术在 Advanced RAG 中广泛使用
+- **[[LLMOps|LLMOps]]**：Advanced RAG 的监控和评估是 LLMOps 的重要组成部分
+- **[[Prompt Engineering 高级|Prompt Engineering 高级]]**：Step-back prompting、CoT 等 prompt 技术在 Advanced RAG 中广泛使用
 
 ## 面试常见问题
 

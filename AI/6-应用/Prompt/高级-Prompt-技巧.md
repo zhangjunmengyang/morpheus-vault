@@ -262,8 +262,8 @@ def sanitize_input(user_input):
 
 ## 参考链接
 
-- [[AI/3-LLM/Application/Prompt/Prompt-Engineering-基础|Prompt-Engineering-基础]]
-- [[AI/3-LLM/Application/Prompt/Prompt-攻击|Prompt-攻击]]
-- [[AI/3-LLM/Application/Prompt/Prompt-Tools|Prompt-Tools]]
+- [[Prompt-Engineering-基础|Prompt-Engineering-基础]]
+- [[Prompt-攻击|Prompt-攻击]]
+- [[Prompt-Tools|Prompt-Tools]]
 - [[AI/3-LLM/Evaluation/LLM 评测体系|LLM 评测体系]]
 - 幻觉问题与缓解

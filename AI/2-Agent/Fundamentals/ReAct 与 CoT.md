@@ -26,9 +26,9 @@ sources:
 related:
   - "[[AI/2-Agent/Fundamentals/Agent 生产实践|Agent 生产实践]]"
   - "[[AI/2-Agent/Fundamentals/Tool Use|Tool Use]]"
-  - "AI Agent 技术全景"
-  - "[[AI/3-LLM/Application/幻觉问题|幻觉问题]]"
-  - "AI 安全与对齐"
+  - AI Agent 技术全景
+  - "[[幻觉问题|幻觉问题]]"
+  - AI 安全与对齐
 ---
 
 # ReAct 与 CoT 推理模式：从思维链到行动循环
@@ -1283,7 +1283,7 @@ $$\text{最优方法} = \begin{cases} \text{Zero-shot CoT} & \text{if 无示例 
 - **推理方法的选择是工程决策**：不同方法在准确率/延迟/成本之间有明确的 tradeoff，应根据场景选型而非"最新=最好"
 
 ### 未解问题与局限
-- **CoT 推理链本身可能包含幻觉**：模型可能生成看似逻辑正确但前提错误的推理链（"幻觉推理链"），参见 [[AI/3-LLM/Application/幻觉问题|幻觉问题]]
+- **CoT 推理链本身可能包含幻觉**：模型可能生成看似逻辑正确但前提错误的推理链（"幻觉推理链"），参见 [[幻觉问题|幻觉问题]]
 - **ReAct 的工具依赖**：如果工具返回错误信息，ReAct 会基于错误 Observation 继续推理，错误放大
 - **ToT 的计算成本**：树形搜索的节点评估需要大量 LLM 调用，复杂问题可能需要数百次推理
 
@@ -1312,5 +1312,5 @@ flowchart TD
 - [[AI/2-Agent/Fundamentals/Agent 生产实践|Agent 生产实践]] — Agent 推理模式的生产落地经验
 - [[AI/2-Agent/Fundamentals/Tool Use|Tool Use]] — ReAct 中的工具调用最佳实践
 - AI Agent 技术全景 — Agent 推理在全景中的位置
-- [[AI/3-LLM/Application/幻觉问题|幻觉问题]] — CoT 推理链中的幻觉风险
+- [[幻觉问题|幻觉问题]] — CoT 推理链中的幻觉风险
 - AI 安全与对齐 — 推理透明度对安全审查的价值

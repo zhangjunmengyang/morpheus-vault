@@ -114,4 +114,4 @@ class SharedState:
 - [[AI/2-Agent/Multi-Agent/Multi-Agent-架构模式详解|Multi-Agent 架构模式详解]]
 - [[AI/2-Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]]
 - [[思考/AI 综合|AI 综合]]
-- [[AI/3-LLM/Application/Prompt/Prompt-Engineering-概述|Prompt Engineering 概述]]
+- [[Prompt-Engineering-概述|Prompt Engineering 概述]]

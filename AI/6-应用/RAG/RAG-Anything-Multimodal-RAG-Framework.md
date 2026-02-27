@@ -15,11 +15,11 @@ created: 2026-02-20
 authors: Zirui Guo, Xubin Ren et al.
 affiliation: HKU HKUDS Lab
 see-also:
-  - "[[AI/3-LLM/Application/RAG/Advanced RAG|Advanced RAG]]"
-  - "RAG 2026 技术全景"
-  - "[[AI/3-LLM/Application/RAG/RAG 检索策略|RAG 检索策略]]"
-  - "多模态大模型 2026 全景"
-  - "AI Agent 2026 技术全景"
+  - "[[Advanced RAG|Advanced RAG]]"
+  - RAG 2026 技术全景
+  - "[[RAG 检索策略|RAG 检索策略]]"
+  - 多模态大模型 2026 全景
+  - AI Agent 2026 技术全景
 ---
 
 # RAG-Anything: All-in-One Multimodal RAG Framework

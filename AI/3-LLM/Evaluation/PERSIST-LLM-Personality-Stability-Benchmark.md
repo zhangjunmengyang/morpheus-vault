@@ -224,4 +224,4 @@ PERSIST 测的是"模型填 BFI 问卷的稳定性"，不是"模型在真实任�
 - AI安全与对齐2026全景 ⭐ — 行为不稳定性是Agent安全部署的核心风险；PERSIST量化了"最坏情况下的不稳定性"（400B模型SD>0.3），为安全边界设定提供实证基础
 - [[AI/3-LLM/Evaluation/ICLR-2026-趋势分析|ICLR 2026趋势分析]] — PERSIST发现推理（CoT）放大人格不稳定性，与ICLR 2026中大量"CoT稳健性"工作形成对话；reasoning能力提升≠行为一致性提升
 - [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026前沿综合分析]] ⭐ — Agent行为一致性是Agentic RL的隐性前提；PERSIST说明这个前提在基础模型层面并未满足，agent部署必须额外设计稳定性机制而非假设模型天然一致
-- [[AI/3-LLM/Application/OpenCharacter-Large-Scale-Synthetic-Persona-Training|OpenCharacter（合成Persona训练）]] — 工程能做什么 vs 架构限制是什么：OpenCharacter用306k合成对话SFT提升角色风格一致性，PERSIST证明即使如此，结构性人格稳定性（SD>0.3）仍未被解决——"表面一致"与"深层稳定"是两个不同的问题
+- [[OpenCharacter-Large-Scale-Synthetic-Persona-Training|OpenCharacter（合成Persona训练）]] — 工程能做什么 vs 架构限制是什么：OpenCharacter用306k合成对话SFT提升角色风格一致性，PERSIST证明即使如此，结构性人格稳定性（SD>0.3）仍未被解决——"表面一致"与"深层稳定"是两个不同的问题

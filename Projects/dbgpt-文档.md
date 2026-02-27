@@ -51,5 +51,5 @@ Miniforge：
 
 - [[AI/2-Agent/Multi-Agent/Agent-框架对比-2026|Agent 框架对比 2026]] — dbgpt 在主流框架中的对比分析
 -  — Agent 知识全图谱
-- [[AI/3-LLM/Application/RAG/RAG 原理与架构|RAG 原理与架构]] — dbgpt 的核心应用场景
+- [[RAG 原理与架构|RAG 原理与架构]] — dbgpt 的核心应用场景
 -  — 检索增强生成知识图谱
