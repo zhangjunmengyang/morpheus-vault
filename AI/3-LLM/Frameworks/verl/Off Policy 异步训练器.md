@@ -57,20 +57,20 @@ loss = -(importance_weight * advantages).mean()
 
 ## verl 实现架构
 
-```
-┌─────────────────────────────────────────────┐
-│              AsyncTrainer                    │
-│                                              │
-│  ┌──────────────┐    ┌──────────────────┐   │
-│  │ Rollout Pool  │    │  Training Pool   │   │
-│  │ (GPU Group A) │    │  (GPU Group B)   │   │
-│  │               │    │                  │   │
-│  │ 生成 batch N+1│    │  训练 batch N    │   │
-│  └──────┬───────┘    └────────┬─────────┘   │
-│         │    Data Queue       │              │
-│         └────────────────────▶│              │
-│                                              │
-└─────────────────────────────────────────────┘
+```mermaid
+graph LR
+    subgraph ASYNC["AsyncTrainer"]
+        RP["Rollout Pool
+GPU Group A
+生成 batch N+1"]
+        TP["Training Pool
+GPU Group B
+训练 batch N"]
+        Q["Data Queue"]
+        RP -->|推入| Q
+        Q -->|取出| TP
+    end
+    Note["Rollout 与 Training 并行运行，互不阻塞"]
 ```
 
 两组 GPU 分别负责 rollout 和 training，通过数据队列解耦。

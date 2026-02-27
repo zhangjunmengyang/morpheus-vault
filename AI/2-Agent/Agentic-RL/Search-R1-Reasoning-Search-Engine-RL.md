@@ -202,3 +202,9 @@ Search-R1 / ToRL / ARTIST 都用 pure outcome reward 驱动工具/搜索使用�
 - Search-R1 vs RAG 的架构对比
 - 为什么 outcome reward 在搜索场景足够
 
+## See Also
+
+- [[AI/2-Agent/Agentic-RL/Search-R1plus-Tool-Use-RL-Ablation|Search-R1++（消融升级）]] — REINFORCE > PPO > GRPO 稳定性发现；F1 reward 崩溃根因；action-level penalty 修复——本文直接后续工作
+- [[AI/2-Agent/Agentic-RL/Search-P1-Path-Centric-Reward-Agentic-RAG|Search-P1（路径中心奖励）]] — 同类 Agentic RAG RL，奖励路径过程而非仅结果；与 Search-R1 outcome reward 形成对比
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL 综合分析]] — Search-R1 在工具调用 RL 时间线中的位置
+- [[AI/3-LLM/Inference/vLLM|vLLM]] — Token masking 的生产实现依赖 vLLM 的 attention mask 支持
