@@ -1,3 +1,23 @@
+---
+title: "DPO / IPO 手撕实操（MA-RLHF lc8）"
+brief: "DPO 和 IPO 从零手撕：DPO 用 log-ratio 差最大化 chosen vs rejected；IPO 改用 MSE 回归避免 DPO 过拟合问题；含完整数据格式、loss 实现、过拟合分析。MA-RLHF lc8 实操笔记。"
+type: code-practice
+date: 2026-02-26
+source: "MA-RLHF notebook/DPO/DPO.ipynb"
+rating: ★★★★★
+tags:
+  - DPO
+  - IPO
+  - 偏好对齐
+  - 实现细节
+  - 手撕实操
+  - MA-RLHF-lc8
+related:
+  - "[[AI/3-LLM/RL/DPO/lc8-01-DPO-手撕实操|lc8-01-DPO-手撕实操]]"
+  - "[[AI/3-LLM/RL/PPO/lc8-09-LLaMA2-Reward-Model手撕|lc8-09-LLaMA2-Reward-Model手撕]]"
+  - "[[AI/3-LLM/RL/RLHF-DPO-2026-技术全景|RLHF-DPO-2026-技术全景]]"
+---
+
 # lc8 DPO / IPO 手撕实操
 
 **来源**：MA-RLHF 课程 `notebook/DPO/DPO.ipynb`（27 cells，完整）
