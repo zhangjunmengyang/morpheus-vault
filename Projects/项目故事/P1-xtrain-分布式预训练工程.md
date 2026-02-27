@@ -1,11 +1,11 @@
 ---
-title: P1：xtrain——分布式预训练基础设施从零实现
+title: P1：xtrain——分布式训练基础设施，从零实现
 type: project-story
 status: active
 date: 2026-02-28
 updated: 2026-02-28
 tags: [career, interview, pre-training, distributed-training, TP, PP, ZeRO]
-brief: 从零手撕分布式训练基础设施，覆盖通信原语、数据并行、ZeRO、张量并行、流水线并行、MoE专家并行全栈，作为预训练工程能力的技术背书项目。
+brief: 系统从零实现分布式训练全栈（通信原语→ZeRO→TP→PP→MoE），不是调库，是真正理解每一层。故事线：在后训练实验里反复被分布式问题卡住，倒逼自己把底层搞清楚。
 related:
   - "[[AI/3-LLM/Infra/ZeRO-手撕实操]]"
   - "[[AI/3-LLM/Infra/Tensor-Parallel-手撕实操]]"
@@ -13,146 +13,101 @@ related:
   - "[[AI/3-LLM/Architecture/DeepSeek-V3-手撕实操]]"
 ---
 
-# P1：xtrain——分布式预训练基础设施从零实现
-
-> **一句话定位**：系统性地从零实现了现代大模型预训练的全套分布式技术栈，不是调 API，是真正理解每一层并能手写出来。
+# P1：xtrain——分布式训练基础设施，从零实现
 
 ---
 
-## 背景故事（面试口径）
-
-> 怎么引入：
-
-"在学习后训练的时候，发现一个问题：大家都在讨论 GRPO 怎么改、reward 怎么设计，但当你真正想跑一个实验——比如复现 DeepSeek-R1——你会发现卡在了分布式训练上：为什么显存不够？TP 的 AllReduce 怎么工作？ZeRO-3 为什么能把显存压到这么低？这些问题不搞清楚，工程上就会一直踩坑。
-
-所以我花了一段时间，系统地把这些东西从零实现了一遍——xtrain 这个项目。不是为了写个教程，是为了真正理解。"
+## 故事线（面试完整版，4-6 分钟）
 
 ---
 
-## 项目内容（技术全栈）
+### 第一幕：为什么要从零写，不直接用框架
 
-### 阶段一：通信原语（xtrain-01）
+在后训练项目（P2）里用 verl 跑 GRPO 的时候，遇到了一个让我很沮丧的处境——
 
-**做了什么**：从 socket 开始，手写 AllReduce 的几种实现：
-- Ring AllReduce（Bandwidth-optimal）
-- Tree AllReduce（Latency-optimal）
-- 理解什么时候用哪种，以及 NCCL 底层在做什么
+训练过程中，GPU 之间的 weight sync 会偶尔卡住，卡的时间从几秒到几分钟不等，没有规律。报错信息完全看不出根因，只说 timeout。我当时的调试方法是：改改配置，重启，看看好没好。
 
-**面试展开点**：
-- AllReduce 的 Ring 实现：为什么时间复杂度是 2(N-1)/N × data_size？
-- 同步 vs 异步通信的 trade-off（梯度 staleness）
-- NCCL 为什么能比手写实现快——RDMA、NVLink 的利用
+这是工程师最怕的状态：碰运气。
 
-### 阶段二：数据并行 + ZeRO（xtrain-02/03）
+我意识到问题在哪：我知道怎么用 verl，但我不知道 verl 在底层做了什么。当 weight sync 卡住，我不知道是 NCCL 的问题、还是 Ray 的调度问题、还是 vLLM 和 Actor 进程之间的通信问题。不知道是哪一层，就没办法系统排查。
 
-**做了什么**：实现了三个版本的数据并行：
-- 朴素 DDP（每个 GPU 保存完整参数）
-- ZeRO-1（分片 optimizer states）
-- ZeRO-2（+ 分片 gradients）
-- ZeRO-3（+ 分片 parameters）
-
-**核心理解**：ZeRO 不是减少计算，是减少冗余存储。用 AllGather 换显存。
-
-**面试展开点**：
-
-显存分析——一个 7B 模型在不同 ZeRO 级别下的显存占用：
-
-```
-全精度（fp32）参数占用：7B × 4 bytes = 28 GB
-
-训练时显存组成（AdamW）：
-  参数：28 GB
-  梯度：28 GB
-  Optimizer States（m + v + master weights）：28 × 3 = 84 GB
-  总计：~140 GB（单卡完全不可能）
-
-ZeRO-1（N=8 GPU）：
-  参数/梯度不分片：56 GB
-  Optimizer States 分片：84/8 = 10.5 GB
-  总计：~66 GB（A100 80GB 勉强能放一个 7B）
-
-ZeRO-3（N=8 GPU）：
-  全部分片：140/8 = 17.5 GB
-  + 通信 buffer 额外开销
-  代价：每个 forward/backward 需要 AllGather/ReduceScatter
-```
-
-**为什么不一直用 ZeRO-3**：通信开销，当节点间带宽低时（跨机器）ZeRO-3 可能比 ZeRO-1 慢。
-
-### 阶段三：张量并行（xtrain-04）
-
-**做了什么**：手实现 Megatron-LM 风格的张量并行：
-- Column Parallel Linear（前向 AllGather，反向 AllReduce）
-- Row Parallel Linear（前向 AllReduce，反向 AllGather）
-- Attention Head 并行（Q/K/V 分割到不同 GPU）
-
-**核心认知**：TP 的通信在每个 transformer layer 里都有，适合节点内（NVLink 速度）不适合跨节点。
-
-**面试展开点**：
-
-```
-为什么 Column → Row 的组合只需要两次通信？
-
-Column Parallel：
-  输入 X 复制到每个 GPU
-  每个 GPU 计算 Y_i = X × W_i（W 按列分割）
-  输出 Y_i 在各 GPU，不需要通信（下一层是 Row）
-
-Row Parallel：
-  输入 Y_i 已经在各 GPU（上层输出）
-  每个 GPU 计算 Z_i = Y_i × W_i（W 按行分割）
-  需要 AllReduce：Z = sum(Z_i)
-
-一个 MLP block 只需要 2 次 AllReduce，而不是 O(L) 次
-```
-
-### 阶段四：流水线并行（xtrain-05）
-
-**做了什么**：实现了 GPipe 和 1F1B（One-Forward-One-Backward）调度：
-- 理解 bubble ratio 的计算和优化
-- Micro-batch 的设计
-
-**面试展开点**：
-
-```
-Bubble Ratio（GPipe）= (p-1) / (m + p - 1)
-  p = pipeline stages
-  m = micro-batches
-
-当 m >> p 时，bubble 趋近于 0
-所以大模型训练 micro-batch 数量都很大（32、64 等）
-
-1F1B 为什么更好：同一时刻，GPU 不全部 forward 或全部 backward
-  → 显存峰值更低（不用同时存所有 micro-batch 的 activation）
-  → Bubble 比例与 GPipe 相同，但显存从 O(p×m) 降到 O(p)
-```
-
-### 阶段五：MoE 专家并行（xtrain-07）
-
-**做了什么**：实现了 MoE 的 Expert Parallel：
-- 每个 GPU 放一部分 Expert
-- Token routing（Top-K gating）的分发逻辑
-- All-to-All 通信（每个 GPU 的 token 发给对应的 expert GPU）
-
-**面试展开点**：
-- MoE 的 All-to-All 为什么比 AllReduce 难优化（点对点通信，负载不均匀问题）
-- Expert Load Balancing：auxiliary loss 为什么必要，不加会发生 expert collapse
-- DeepSeek MoE 的 Fine-Grained Expert + Shared Expert 设计思路
+所以我决定倒过来：**先把底层搞清楚，再用框架**。xtrain 这个项目，就是从零实现分布式训练的全栈，不调 NCCL、不调 DeepSpeed，自己写。
 
 ---
 
-## 一句话总结（面试结尾）
+### 第二幕：通信原语——第一步就很硬
 
-"xtrain 让我真正理解了大模型训练的工程本质——不是调参，是理解每一层显存和通信的 trade-off，然后根据硬件拓扑（NVLink 带宽、节点间带宽）做出正确的并行策略组合。这个认知直接帮助我在后训练 verl 实验中少踩了很多坑。"
+从最底层开始：AllReduce。
+
+AllReduce 是数据并行训练的核心——多个 GPU 各自算完梯度，需要聚合成全局梯度，再各自更新参数。怎么聚合，就是 AllReduce 要解决的问题。
+
+我先实现了最朴素的版本：所有 GPU 把梯度发给主 GPU，主 GPU 加完再发回去。跑了一下，确实能工作，但很慢。瓶颈很明显：主 GPU 是单点，所有流量都过它，带宽打满了。
+
+然后实现了 Ring AllReduce：把 GPU 排成一个环，每个 GPU 只和相邻的 GPU 通信，分多轮把数据传完。带宽利用率从单点的 1/N 变成接近 100%。
+
+实现完之后，我才真正理解了为什么 NCCL 快——它不只是 Ring AllReduce，还根据硬件拓扑（NVLink vs PCIe vs InfiniBand）自动选最优通信路径，同一台机器里的 GPU 用 NVLink（带宽 600GB/s），跨机器用 InfiniBand。这个选择是 NCCL 在运行时做的，你调 API 的时候感知不到。但当通信出问题时，理解这一层非常关键——是 NVLink 降速了，还是跨机器带宽被占满了，排查方向完全不同。
+
+---
+
+### 第三幕：ZeRO——显存的数学账
+
+通信搞清楚之后，下一个核心问题是显存。
+
+7B 参数的模型，全精度（fp32）存参数就要 28GB。但训练时还有梯度（28GB）和 AdamW 的 optimizer states（动量 + 方差 + master weights，大约 84GB）。加起来 140GB，单卡 A100（80GB）完全放不下。
+
+ZeRO 的思路是：这些数据在多卡 DDP 里是完全冗余的——每张 GPU 都存了一份一模一样的 optimizer state。把冗余去掉，每张 GPU 只存 1/N 的 optimizer state，需要用的时候 AllGather 拿过来，用完 ReduceScatter 分发出去。
+
+我把三个级别都实现了：ZeRO-1（只分片 optimizer state）、ZeRO-2（再分片梯度）、ZeRO-3（连参数也分片）。
+
+实现的过程里遇到了一个很细节但很重要的问题：ZeRO-3 的 AllGather 和 ReduceScatter 必须和 forward/backward 的计算严格交错，不然要么显存峰值反而更高（一次性 AllGather 所有参数），要么计算等待通信变成串行。这个 overlap 是性能的关键，也是实际工程里最难调的部分。
+
+做完这个之后，我对"为什么不是所有场景都用 ZeRO-3"有了真实的理解：ZeRO-3 的通信开销很高，当节点间带宽低时（跨机器），每次 forward 都要 AllGather 全部参数，反而比 ZeRO-1 更慢。工程上的选择总是 trade-off，不是越激进越好。
+
+---
+
+### 第四幕：张量并行——把模型切开
+
+ZeRO 解决了"参数怎么省"，张量并行（TP）解决的是"一个模型本身就太大，一张 GPU 放不下怎么办"。
+
+TP 的核心是把矩阵乘法按列或者按行切开，不同 GPU 算不同的部分，再用通信聚合结果。
+
+实现 MLP 层的 TP 时，有一个让我觉得很优雅的地方：Column Parallel（按列切）→ Row Parallel（按行切）这对组合，整个 MLP 只需要两次 AllReduce 通信，而不是每层都通信。因为 Column 的输出正好就是 Row 的输入格式，中间不需要通信。这个设计让 TP 的通信开销变得可接受。
+
+但 TP 有个硬约束：必须用在节点内，不能跨节点。原因是 TP 每个 transformer layer 都有通信，频率极高。NVLink 的带宽是 600GB/s，跨节点的 InfiniBand 是 100-400GB/s，差了几倍。频率高 × 带宽低，延迟会在整个训练里累积，吞吐量大幅下降。
+
+这个约束当时让我踩了一个坑：在双机实验里启用了 TP，结果比单机还慢。查了很久，才意识到是跨节点 TP 的问题。关掉 TP，用流水线并行（PP）处理跨节点，正常了。
+
+---
+
+### 第五幕：这些底层理解，怎么用回去
+
+xtrain 做完之后，回去继续跑 verl，那些之前排查不了的问题，大部分都能找到方向了。
+
+最典型的是最初的 weight sync 卡住问题。理解了 Actor（训练进程）和 Rollout（vLLM 进程）的通信机制之后，发现问题出在 weight sync 时 tensor 的 sharding 策略不一致——Actor 用 TP 分片了某些层的参数，Rollout 期望的是完整参数，shape 对不上，通信卡住。解法是 sync 时先做 AllGather 把分片参数聚合成完整参数，再发给 Rollout。
+
+这个 bug，如果不理解 TP 的分片机制，光看报错信息根本找不到。
+
+**这就是为什么要从零实现一遍：不是为了在生产里用自己写的代码，而是为了在框架出问题的时候知道该往哪看。**
+
+---
+
+## 快速技术速查（追问备用）
+
+**"ZeRO-1/2/3 分别解决了什么？"**
+ZeRO-1 分片 optimizer state（省最多，因为 Adam 的 state 是参数量的 3 倍）；ZeRO-2 再分片梯度；ZeRO-3 连参数也分片，显存几乎正比缩放，但通信开销最大。
+
+**"TP 的两次通信具体在哪里？"**
+Column Parallel Linear 的输出端（一次 AllReduce 或 AllGather），Row Parallel Linear 的输出端（一次 AllReduce）。整个 MLP 只有这两次，因为两层的 sharding 方式正好接续，不需要中间通信。
+
+**"PP 的 bubble 怎么计算和优化？"**
+GPipe bubble ratio = (p-1)/(m+p-1)，p 是流水线段数，m 是 micro-batch 数量。m 越大，bubble 越小。1F1B 调度（One Forward One Backward）不减小 bubble ratio，但把显存峰值从 O(p×m) 降到 O(p)，允许用更大的 m。
 
 ---
 
 ## See Also
 
-- [[Projects/项目故事/P2-后训练大项目-MA-RLHF工程实战]] — 预训练基础支撑后训练
+- [[Projects/项目故事/P2-后训练大项目-MA-RLHF工程实战]]
 - [[AI/3-LLM/Infra/ZeRO-手撕实操]]
 - [[AI/3-LLM/Infra/Tensor-Parallel-手撕实操]]
 - [[AI/3-LLM/Infra/Pipeline-Parallel-手撕实操]]
 - [[AI/3-LLM/Infra/分布式训练通信原语-手撕实操]]
-- [[AI/3-LLM/Infra/MoE-Context-Parallel-手撕实操]]
-- [[AI/3-LLM/Architecture/DeepSeek-V3-手撕实操]]
