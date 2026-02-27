@@ -14,7 +14,7 @@ sources:
   - "Liu et al. *RoBERTa: A Robustly Optimized BERT Pretraining Approach* arXiv:1907.11692"
   - "He et al. *DeBERTa: Decoding-enhanced BERT with Disentangled Attention* arXiv:2006.03654"
 related:
-  - "[[AI/3-LLM/Architecture/GPT|GPT]]"
+  - "[[GPT|GPT]]"
   - "[[AI/3-LLM/Architecture/Tokenizer|Tokenizer]]"
   - "[[Transformer 通识|Transformer 通识]]"
   - "[[AI/3-LLM/Application/Embedding/Embedding|Embedding]]"
@@ -156,7 +156,7 @@ BERT 和 GPT 代表了两种根本不同的预训练哲学：
 ### 未解问题与局限
 - BERT 的绝对位置编码无法外推到训练长度之外（对比 [[AI/3-LLM/Architecture/长上下文处理|长上下文处理]] 中的 RoPE）
 - MLM 的 15% mask 比例是否最优？SpanBERT 等工作在探索，但没有定论
-- Encoder 架构为何难以 scale 到 1T+ 参数？（对比 [[AI/3-LLM/Architecture/GPT|GPT]] 的 Decoder-Only 路线）
+- Encoder 架构为何难以 scale 到 1T+ 参数？（对比 [[GPT|GPT]] 的 Decoder-Only 路线）
 
 ### 脑暴：如果往下延伸
 - 如果把 BERT 的双向理解能力和 [[AI/3-LLM/Architecture/Mamba-SSM|Mamba]] 的线性复杂度结合，能否做出效率更高的 Embedding 模型？
@@ -164,13 +164,13 @@ BERT 和 GPT 代表了两种根本不同的预训练哲学：
 
 ## 相关
 
-- [[AI/3-LLM/Architecture/GPT|GPT]] — Decoder-Only 路线对比，理解两条技术路线的分野
+- [[GPT|GPT]] — Decoder-Only 路线对比，理解两条技术路线的分野
 - [[AI/CV/ViT|ViT]] — BERT 思想迁移到视觉领域
 - [[AI/3-LLM/MLLM/CLIP|CLIP]] — 多模态对比学习，Encoder 架构的跨模态应用
 - [[AI/1-Foundations/DL-Basics/深度学习|深度学习]]
 - [[AI/3-LLM/SFT/LoRA|LoRA]] — BERT 微调的高效方法
 - [[AI/3-LLM/Architecture/T5|T5]] — Encoder-Decoder 路线的代表
-- [[AI/3-LLM/Architecture/LLaMA|LLaMA]]
+- [[LLaMA|LLaMA]]
 - [[AI/3-LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]
 - [[Transformer 通识|Transformer 通识]]
 - [[AI/3-LLM/Architecture/Attention 变体综述|Attention 详解]]

@@ -119,4 +119,4 @@ InternVL 系列的成功可以归结为几点：
 - [[AI/3-LLM/MLLM/BLIP-2|BLIP-2]]
 - [[AI/3-LLM/MLLM/Qwen-VL|Qwen-VL]]
 - [[AI/3-LLM/MLLM/MLLM 概述|MLLM 概述]]
-- [[AI/3-LLM/Architecture/LLaMA|LLaMA]]
+- [[LLaMA|LLaMA]]

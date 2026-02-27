@@ -139,4 +139,4 @@ Unsloth 是个人开发者和小团队的利器 —— 一张 4090 就能微调 
 - [[AI/3-LLM/SFT/SFT 原理|SFT 原理]]
 - [[AI/3-LLM/RL/GRPO/GRPO-Unsloth实践|GRPO-Unsloth实践]]
 - [[AI/3-LLM/RL/DPO/DPO-Unsloth实践|DPO-Unsloth实践]]
-- [[AI/3-LLM/Architecture/LLaMA|LLaMA]]
+- [[LLaMA|LLaMA]]

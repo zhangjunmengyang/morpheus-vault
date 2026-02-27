@@ -15,7 +15,7 @@ sources:
   - Yang et al. *Qwen2 Technical Report* arXiv:2407.10671
   - "Qwen Team. *Qwen2.5: A Party of Foundation Models* 技术报告 2024"
 related:
-  - "[[AI/3-LLM/Architecture/LLaMA|LLaMA]]"
+  - "[[LLaMA|LLaMA]]"
   - "[[Transformer 通识|Transformer 通识]]"
   - "[[AI/3-LLM/Architecture/长上下文处理|长上下文处理]]"
   - "[[AI/3-LLM/Architecture/DeepSeek-R1|DeepSeek-R1]]"

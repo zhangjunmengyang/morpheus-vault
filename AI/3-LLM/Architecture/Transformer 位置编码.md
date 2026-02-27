@@ -115,7 +115,7 @@ def get_alibi_slopes(num_heads: int):
 
 ### 3.2 RoPE（Rotary Position Embedding）— 核心重点 ⭐
 
-Su et al., 2021 提出，现已成为 **LLM 主流位置编码方案**（[[AI/3-LLM/Architecture/LLaMA|LLaMA]]、Qwen、[[AI/3-LLM/Architecture/DeepSeek-R1|DeepSeek]]、Mistral 均采用）。
+Su et al., 2021 提出，现已成为 **LLM 主流位置编码方案**（[[LLaMA|LLaMA]]、Qwen、[[AI/3-LLM/Architecture/DeepSeek-R1|DeepSeek]]、Mistral 均采用）。
 
 #### 核心思想
 
@@ -373,4 +373,4 @@ graph LR
 - [[AI/3-LLM/Architecture/FlashAttention|FlashAttention]] — RoPE 的旋转操作与 FlashAttention 完美兼容；IO 感知计算不影响位置编码效果
 - [[AI/3-LLM/Architecture/Attention 变体综述|Attention 变体综述]] — 位置编码和注意力变体共同定义 Transformer 的信息处理方式
 - [[AI/3-LLM/Architecture/Multi-Head Latent Attention|MLA]] — MLA 中的解耦 RoPE 是位置编码与 KV 压缩结合的典型案例
-- [[AI/3-LLM/Architecture/LLaMA|LLaMA]] — RoPE 的最重要工业应用，LLaMA 系列推动了 RoPE 成为事实标准
+- [[LLaMA|LLaMA]] — RoPE 的最重要工业应用，LLaMA 系列推动了 RoPE 成为事实标准

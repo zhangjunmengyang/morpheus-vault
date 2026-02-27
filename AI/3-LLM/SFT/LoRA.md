@@ -17,7 +17,7 @@ sources:
   - rsLoRA arXiv:2312.03732 (Kalajdzievski, 2023)
 related:
   - "[[AI/3-LLM/Frameworks/Unsloth/Unsloth 概述]]"
-  - "[[AI/3-LLM/Architecture/LLaMA]]"
+  - "[[LLaMA]]"
   - "[[AI/3-LLM/SFT/SFT-TRL实践]]"
   - "[[AI/3-LLM/Infra/分布式训练]]"
   - "[[AI/3-LLM/Frameworks/Unsloth/量化]]"

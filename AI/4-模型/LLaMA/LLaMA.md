@@ -104,7 +104,7 @@ LLaMA 的成功给我最大的启发是：**架构创新远不如数据和工程
 
 ## 相关
 
-- [[AI/3-LLM/Architecture/GPT|GPT]]
+- [[GPT|GPT]]
 - [[AI/3-LLM/Architecture/BERT|BERT]]
 - [[AI/3-LLM/SFT/LoRA|LoRA]]
 - [[vLLM|vLLM]]

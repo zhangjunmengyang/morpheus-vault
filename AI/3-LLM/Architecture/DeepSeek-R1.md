@@ -17,7 +17,7 @@ sources:
 related:
   - "[[AI/3-LLM/RL/GRPO/GRPO 深度理解|GRPO 深度理解]]"
   - "[[AI/3-LLM/RL/PPO/PPO 原理|PPO 原理]]"
-  - "[[AI/3-LLM/Architecture/GPT|GPT]]"
+  - "[[GPT|GPT]]"
   - "[[MoE 基础|MoE 基础]]"
 ---
 # Deepseek-R1
@@ -180,8 +180,8 @@ R1-Zero 是论文中最令人兴奋的实验——直接在 base model 上做 RL
 - [[AI/3-LLM/RL/Fundamentals/RL 概览|RL 概览]] — 强化学习基础
 - [[AI/3-LLM/Infra/分布式训练|分布式训练]] — R1 训练所需的基础设施
 - [[AI/3-LLM/RL/GRPO/OpenR1|OpenR1]] — 社区复现项目
-- [[AI/3-LLM/Architecture/LLaMA|LLaMA]]
-- [[AI/3-LLM/Architecture/GPT|GPT]] — RLHF 路线 vs 纯 RL 路线的对比
+- [[LLaMA|LLaMA]]
+- [[GPT|GPT]] — RLHF 路线 vs 纯 RL 路线的对比
 - [[MoE 基础|MoE 基础]] — R1 底座的 MoE 架构
 - [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]]
 - [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL 概述]]

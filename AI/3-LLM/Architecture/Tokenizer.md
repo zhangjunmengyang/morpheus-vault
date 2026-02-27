@@ -17,9 +17,9 @@ sources:
   - OpenAI tiktoken 文档 — https://github.com/openai/tiktoken
 related:
   - "[[AI/3-LLM/Architecture/BERT|BERT]]"
-  - "[[AI/3-LLM/Architecture/GPT|GPT]]"
-  - "[[AI/3-LLM/Architecture/Qwen|Qwen]]"
-  - "[[AI/3-LLM/Architecture/LLaMA|LLaMA]]"
+  - "[[GPT|GPT]]"
+  - "[[Qwen|Qwen]]"
+  - "[[LLaMA|LLaMA]]"
 ---
 
 # Tokenizer 与分词：现代 LLM 的语言切分艺术
@@ -989,15 +989,15 @@ def adapt_tokenizer_for_domain(base_tokenizer, domain_corpus):
 
 ### 脑暴：如果往下延伸
 - 如果 [[AI/3-LLM/Architecture/Mamba-SSM|Mamba]] 的线性复杂度让超长序列变得廉价，字符级/字节级模型是否会卷土重来？（不再需要压缩序列长度）
-- [[AI/3-LLM/Architecture/Qwen|Qwen]] 的多语言分词策略 vs [[AI/3-LLM/Architecture/GPT|GPT-4]] 的 tiktoken：哪种对中文更友好？量化对比是一个有价值的实验
+- [[Qwen|Qwen]] 的多语言分词策略 vs [[GPT|GPT-4]] 的 tiktoken：哪种对中文更友好？量化对比是一个有价值的实验
 
 ---
 
 ## See Also
 
 - [[AI/3-LLM/Architecture/BERT|BERT]] — 使用 WordPiece 分词（子词级）
-- [[AI/3-LLM/Architecture/GPT|GPT]] — 使用 Byte-level BPE (tiktoken)，字节级 BPE
-- [[AI/3-LLM/Architecture/LLaMA|LLaMA]] — 使用 SentencePiece BPE，多语言支持
-- [[AI/3-LLM/Architecture/Qwen|Qwen]] — 使用 SentencePiece，多语言优化，中文 token 效率高
+- [[GPT|GPT]] — 使用 Byte-level BPE (tiktoken)，字节级 BPE
+- [[LLaMA|LLaMA]] — 使用 SentencePiece BPE，多语言支持
+- [[Qwen|Qwen]] — 使用 SentencePiece，多语言优化，中文 token 效率高
 - [[AI/3-LLM/Architecture/Tokenizer深度理解]] — 同主题深度版（BPE/WordPiece/SentencePiece 原理对比 + 面试题）
 - [[AI/3-LLM/Architecture/Tokenizer-Embedding-手撕实操]] — 手撕实操版（BPE 算法 + Embedding 完整实现）

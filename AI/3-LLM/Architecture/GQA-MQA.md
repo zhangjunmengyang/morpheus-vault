@@ -19,7 +19,7 @@ related:
   - "[[AI/3-LLM/Architecture/FlashAttention|FlashAttention]]"
   - "[[KV Cache|KV Cache 原理与优化]]"
   - "[[AI/3-LLM/Architecture/Multi-Head Latent Attention|MLA 详解]]"
-  - "[[AI/3-LLM/Architecture/LLaMA|LLaMA]]"
+  - "[[LLaMA|LLaMA]]"
 ---
 
 # GQA / MQA 深度解析
@@ -380,4 +380,4 @@ MLA (Multi-head Latent Attention) 比 GQA 更激进：不是简单减少 KV head
 > 🔗 See also: [[AI/3-LLM/Architecture/FlashAttention|FlashAttention]] — GQA 减少 KV 总量，FlashAttention 加速 Attention 计算，二者协同
 > 🔗 See also: [[KV Cache|KV Cache]] — GQA 是 KV Cache 架构层优化的核心，与 PagedAttention（系统层）互补
 > 🔗 See also: [[AI/3-LLM/Architecture/Multi-Head Latent Attention|MLA 详解]] — 比 GQA 更激进的 KV 压缩路线
-> 🔗 See also: [[AI/3-LLM/Architecture/LLaMA|LLaMA]] — GQA 在 LLaMA 2/3 系列中的实际部署
+> 🔗 See also: [[LLaMA|LLaMA]] — GQA 在 LLaMA 2/3 系列中的实际部署
