@@ -1,10 +1,10 @@
 ---
 title: Agentic RL 元问题：真正的瓶颈在哪，下一步突破在哪
-brief: 基于37+篇Agentic RL论文的整合判断性分析（Wisdom层）。核心命题：当前Agentic RL的主要瓶颈不是算法（credit assignment/稳定性/环境工程均已有可操作方案），而是Reward Signal Quality——如何为多步开放任务自动生成可靠的中间信号。三个open problem：①开放任务的intermediate verification signal自动化；②Goodhart's Law鲁棒的reward设计；③可验证/不可验证reward的桥梁。下一步突破预测：自适应课程（2026H2）→ 世界模型辅助RL（1-2年）→ multi-agent协作RL scalable理论（3年+）。
+brief: 基于48+篇Agentic RL论文的整合判断性分析（Wisdom层）。核心命题：当前Agentic RL的主要瓶颈不是算法（credit assignment/稳定性/环境工程均已有可操作方案），而是Reward Signal Quality——如何为多步开放任务自动生成可靠的中间信号。三个open problem：①开放任务的intermediate verification signal自动化；②Goodhart's Law鲁棒的reward设计；③可验证/不可验证reward的桥梁。下一步突破预测：自适应课程（2026H2）→ 世界模型辅助RL（1-2年）→ multi-agent协作RL scalable理论（3年+）。
 type: wisdom
 domain: ai/agent
 date: 2026-02-24
-updated: 2026-02-24
+updated: 2026-02-28
 tags:
   - ai/agent
   - agentic-rl
@@ -168,3 +168,74 @@ LLM 模拟环境的根本问题是：state transition 由 LLM 生成 → 幻觉 
 
 *写作时间：2026-02-24 08:01 | 基于 37+ 篇 Vault 笔记的整合判断*
 *馆长炼化（frontmatter/See Also）：2026-02-24 08:08 | 2026-02-25 15:14 补充三个验证器实证数据点*
+
+---
+
+## 2026-02-28 补充：四篇新论文对元判断的修正与强化
+
+基于 2026-02-25 之后新精读的 4 篇论文，对本文的三个核心判断做局部更新。
+
+---
+
+### 5.1 §1.1 修正：Search-P1 给出了 intermediate signal 自动化的新路径
+
+本文 §1.1 的核心判断是"CM2 的 checklist reward 还依赖人工设计"——这个判断仍然成立，但 Search-P1（arXiv:2602.22576）提供了一个新方向：
+
+**Path-Centric Reward（Tencent AI Lab + Westlake University）**，把"过程对不对"拆分为两个可自动判断的子信号：
+- **Self-Consistency Score**：多条路径是否收敛到同一中间结论（无需人工标注）
+- **Reference-Alignment Score**：中间步骤能否与参考文档对齐（利用现有文档作为弱监督）
+- **Soft Outcome Score**：最终答案的连续评分（取代二元 F1）
+
+关键在于：**不需要人工设计 checklist，而是利用数据内部一致性和现有知识库作为监督信号**。Agentic RAG 场景比 Search-R1 纯 outcome reward 提升 +7.7%，AD-QA（多跳）+20.6%。
+
+**修正**：§1.1 的 open problem 现在有了一个具体路径——**路径一致性 + 弱监督对齐**，不依赖人工验证器。这是 reward signal quality 问题的一个真实裂缝，但限制仍在：Self-Consistency 在低多样性任务里信号噪声大；Reference-Alignment 依赖高质量检索库。
+
+> 关联：[[AI/2-Agent/Agentic-RL/Search-P1-Path-Centric-Reward-Agentic-RAG|Search-P1（arXiv:2602.22576）]]
+
+---
+
+### 5.2 §1.2 补充：SORL 给出了 off-policy multi-turn RL 崩溃的工程解法
+
+**SORL（arXiv:2511.20718，Texas A&M）的诊断**：off-policy multi-turn RL 崩溃的两个根因：
+1. **粒度错配**：trajectory-level IS 把多轮 token 乘积压缩为单一比率，遇到长序列必然过大/过小
+2. **方差累积**：每轮 IS 校正误差在 T 轮乘积后指数放大
+
+**修复**：Turn-Level IS（均值替代乘积）+ CTN（Clipping-Triggered Normalization，自适应惩罚而非硬 clip）。
+
+SORL 与 SeeUPO 互补：SeeUPO 解决 on-policy 收敛理论（逆序更新），SORL 解决 off-policy 方差爆炸（IS 粒度+自适应 clip）。工程稳定性已有较完整方案；但"causal dependency 强的任务"（如 PaperBench）收敛理论仍然空白。
+
+**判断修正**：§1.2 open problem 范围收窄——工程稳定性已有解，强 causal dependency 设定的理论收敛保证仍缺失。
+
+> 关联：[[AI/2-Agent/Agentic-RL/SORL-Stabilizing-Off-Policy-RL-Long-Horizon-Agent|SORL（arXiv:2511.20718）]]
+
+---
+
+### 5.3 §二 修正：多 agent 协作 RL 有两个新突破，但问题规模更大
+
+本文 §二"多 agent 协作 RL 的理论基础仍然薄弱"——总判断不变，但两个具体进展改变了细节：
+
+**SRPO（arXiv:2602.21515，UT Austin）— 均衡概念重构**：
+- Nash 均衡在协作游戏中允许 free-riding，且对 partner 分布变化脆弱
+- 理论修复：RQE（Risk-averse Quantal Equilibria）——风险规避作为归纳偏置，协作游戏中严格优于部分 Nash，消除 free-riding 的形式化解释
+- Adversarial partners 提供在线风险估计（数据驱动，非先验假设）
+- **这是均衡概念重构，不是训练技巧**——理论深度比 FCP/TrajeDi/MEP 高出一个层次
+
+**AlphaEvolve（arXiv:2602.16928，Google DeepMind）— LLM 驱动算法自动发现**：
+- Gemini 2.5 Pro 驱动符号代码演化，自动发现 MARL 算法变体（VAD-CFR、SHOR-PSRO）
+- VAD-CFR 10/11 游戏超 SOTA；SHOR-PSRO 超所有 meta-solver
+- **开辟"算法自动发现层"**：不是调参，而是发现人类没有想到的算法结构，事后才能理解为什么有效
+
+**元判断精化**："多 agent 协作 RL 理论薄弱"拆分为两个维度：
+1. **均衡理论**：Nash → RQE 转型已有具体方案（SRPO），但需 follow-up 验证
+2. **算法发现**：AlphaEvolve 开辟 LLM+进化方向，可能绕过"人类设计算法"上限——场景仍局��于博弈论 MARL
+
+本文 §二 对"3年+"预测的具体化：**不是更多算法变体，而是更自动化的算法发现机制（AlphaEvolve 方向）**。
+
+> 关联：
+> - [[AI/2-Agent/Multi-Agent/SRPO-Strategic-Risk-Aversion-Collaborative-MARL|SRPO（arXiv:2602.21515）]]
+> - [[AI/2-Agent/Multi-Agent/AlphaEvolve-LLM-Discovers-MARL-Algorithms|AlphaEvolve（arXiv:2602.16928）]]
+
+---
+
+*2026-02-28 04:10 补充 | 基于新增 SRPO/AlphaEvolve/Search-P1/SORL 四篇精读的认知更新*
+*总精读基础：48+ 篇 Agent RL 方向 Vault 笔记*

@@ -140,3 +140,9 @@ Unsloth 是个人开发者和小团队的利器 —— 一张 4090 就能微调 
 - [[AI/3-LLM/RL/GRPO/GRPO-Unsloth实践|GRPO-Unsloth实践]]
 - [[AI/3-LLM/RL/DPO/DPO-Unsloth实践|DPO-Unsloth实践]]
 - [[LLaMA|LLaMA]]
+
+## See Also
+
+- [[AI/3-LLM/Frameworks/Unsloth/CPT|CPT（继续预训练）]] — Unsloth 框架下的继续预训练配置与实践
+- [[AI/3-LLM/Frameworks/Unsloth/TTS 训练|TTS 训练]] — Unsloth 框架下的语音模型训练配置
+- [[AI/3-LLM/Frameworks/Unsloth/训练示例概述|训练示例概述]] — Unsloth 全系列训练任务索引

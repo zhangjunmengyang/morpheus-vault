@@ -526,3 +526,9 @@ RAPTOR 适合需要 **多粒度理解** 的场景：既有细节查询（"第三
 ### Q5: 生产环境中如何选择 Advanced RAG 策略？
 
 **渐进式选择**：先用好 Naive RAG 基础（好的 chunking + embedding + reranker），然后根据失败模式选择进阶技术。检索质量差 → HyDE + Hybrid Search；结果不可靠 → CRAG；需要多步推理 → Query Decomposition + Multi-Hop；全局理解 → RAPTOR。**注意**：每增加一个组件都增加延迟和成本，不要过度设计。大部分场景下，好的 chunking + hybrid search + reranker 就能解决 80% 的问题。
+
+## See Also
+
+- [[AI/6-应用/RAG/Advanced RAG|Advanced RAG]] — 同主题深度版：技术机制侧，本文是 LLM 应用工程侧补充
+- [[AI/6-应用/RAG/RAG vs Fine-tuning|RAG vs Fine-tuning]] — 选型对照
+- [[AI/6-应用/RAG/RAG 评测|RAG 评测]] — 评测体系

@@ -205,8 +205,6 @@ Ming-Omni 隶属蚂蚁集团 **Ling（百灵）** 开源模型家族，包含三
 
 ## See Also
 
--  — 多模态大模型全景索引
--  — AI 知识域全索引
--  — 前沿模型追踪
+- [[AI/3-LLM/MLLM/PyVision-RL-Agentic-Vision-Interaction-Collapse|PyVision-RL]] — 同为多模态 Agent RL，Ming-Flash-Omni（Omni 架构）vs PyVision-RL（Interaction Collapse 防治）
 - [[AI/3-LLM/MLLM/Seed1.5-VL|Seed1.5-VL]] — 同类 Omni 方向竞品（字节）
-- [[AI/4-模型/GLM/GLM-5|GLM-5]] — 同期前沿模型对比参考
+- [[AI/4-模型/GLM/GLM-5-Agentic-Engineering|GLM-5]] — 同期前沿模型对比参考

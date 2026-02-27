@@ -299,3 +299,5 @@ A: 检测：监控 reward 上升但 win rate 下降。缓解：KL 惩罚、长�
 - [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]] / [[AI/3-LLM/Frameworks/OpenRLHF/OpenRLHF|OpenRLHF]]
 - [[AI/3-LLM/SFT/SFT 原理|SFT 原理]]
 - [[AI/3-LLM/RL/Fundamentals/RL 概览|RL 概览]]
+
+- [[AI/3-LLM/RL/算法/IOPO-Input-Output-Preference-Optimization|IOPO（arXiv:2411.06208）]] — DPO 扩展版：在 output preference 之外加入 input preference，处理复杂指令跟随场景（阿里 Tongyi Lab）

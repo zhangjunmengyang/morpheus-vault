@@ -329,3 +329,8 @@ def hybrid_strategy_selector(query, metadata):
    - Phase 3: 基于使用模式优化混合策略
 
 4. **持续优化**：建立反馈循环，根据用户行为调整策略权重
+## See Also
+
+- [[AI/6-应用/RAG/Advanced RAG|Advanced RAG]] — 技术体系母文档：本文是其 §8 的独立展开
+- [[AI/6-应用/RAG/RAG 评测|RAG 评测]] — 互补：选型后的效果评测
+- [[AI/6-应用/RAG/RAG-Anything-Multimodal-RAG-Framework|RAG-Anything]] — RAG 扩展到多模态的方案

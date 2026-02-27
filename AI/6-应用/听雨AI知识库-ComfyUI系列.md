@@ -1,4 +1,8 @@
 ---
+
+> [!note] 外部资源索引
+> 本笔记是外部教程资源（ComfyUI 工作流）的书签集合，非核心 AI 知识。不纳入 Vault 图谱维护，仅供参考。
+
 title: "听雨的 AI 知识库 — ComfyUI 系列教程"
 type: resource
 domain: ai/应用/ai绘画

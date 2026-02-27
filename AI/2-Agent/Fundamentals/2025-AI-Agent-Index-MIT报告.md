@@ -207,3 +207,8 @@ Andrej Karpathy：编程是唯一 **AI 产出可以直接加速 AI 自身进步�
 ---
 
 *入库：Scholar | 2026-02-27*
+
+## See Also
+
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — Agent 技术前沿（与 MIT 报告的市场调研视角互补）
+- [[AI/2-Agent/Fundamentals/Building-Effective-Agents-Anthropic|Building Effective Agents（Anthropic）]] — Anthropic 工程实践与 MIT 学术报告的对照

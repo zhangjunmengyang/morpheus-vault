@@ -69,5 +69,5 @@ OOD 提升更大，说明 input preference 学到的是更通用的指令理解�
 ## See Also
 
 - [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO]] — 另一主线：不从偏好对学习，而是组内相对优势
-- [[AI/3-LLM/RL/RLHF-工程全栈|RLHF 工程全栈]] — 偏好优化的完整技术路线
+- [[AI/3-LLM/RL/实践/RLHF-工程全栈|RLHF 工程全栈]] — 偏好优化的完整技术路线
 - [[AI/2-Agent/Fundamentals/Agent-Tool-Use|Agent Tool Use]] — 工具调用场景下复杂指令跟随的实际挑战

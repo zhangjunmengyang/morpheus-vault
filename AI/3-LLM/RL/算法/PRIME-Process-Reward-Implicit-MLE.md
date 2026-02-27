@@ -210,3 +210,10 @@ PRIME 打通了 "outcome reward → dense process reward" 的桥梁，意味着�
   - [[AI/3-LLM/RL/Theory/RL-Signal-Granularity-Causal-Structure-Principle|信号粒度匹配原则]] — PRIME 自动实现信号细化
   - [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进全景]] — PRIME 属于 Token 维度改进
   - [[AI/2-Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar]] — 另一种 implicit step reward 方案（DPO 视角）
+
+## See Also
+
+- [[AI/3-LLM/RL/Theory/Reward-Design-三维框架|Reward Design 三维框架]] — PRIME 是"过程奖励"维度的核心实现：隐式 MLE 无需人工 step-level 标注
+- [[AI/2-Agent/Agentic-RL/MIG-Step-Marginal-Information-Gain-Credit-Assignment|MIG]] — 同方向：信息论视角的 step-level credit assignment，与 PRIME 隐式 PRM 互补
+- [[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — 同类：step-level credit（anchor grouping），PRIME 用 reward，GiGPO 用 grouping
+- [[AI/3-LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL Training Stability 专题]] — 过程奖励对训练稳定性的影响（密集信号 vs 稀疏 reward）

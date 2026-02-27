@@ -185,3 +185,6 @@ Distribution-free 风险控制保证：`E[loss] ≤ ε`（用户指定的 error 
 
 ## Tags
 #TTC #TestTimeCompute #推理效率 #EarlyStopping #ConformalPrediction #KVCache #OverThinking #ICLR2026 #AdaptiveReasoning #survey
+
+- [[AI/3-LLM/Inference/Test-Time-Compute|Test-Time-Compute 基础综述]] — TTC 全景：CoT/BoN/PRM/搜索 + 与 training-time scaling 的关系，Inference 知识图谱的基础入口
+- [[AI/3-LLM/Inference/SNDT-Stitching-Noisy-Diffusion-Thoughts-Test-Time-Scaling|SNDT（扩散LLM的TTC）]] — dLLM 的跨轨迹拼接：并行采样 + PRM 评分 + 最优步骤拼接；免训练 +5pt；dLLM 版 test-time scaling 的独立路线

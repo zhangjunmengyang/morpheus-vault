@@ -166,3 +166,7 @@ VESPO（变分推导 optimal IS kernel，1/T 归一化被证伪为 length bias �
 - **Tags**: #GRPO #importance-sampling #sequence-level #MoE #Qwen3 #off-policy
 - **关联笔记**: [[AI/3-LLM/RL/算法/VESPO-Variational-Sequence-Policy-Optimization|VESPO]] ⭐ — VESPO 是 GSPO 的理论上界：GSPO 发现 1/T 归一化的 length bias 问题，VESPO 变分推导给出最优 IS kernel，证明为什么 GSPO 在高 staleness 时 collapse | [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进全景 2026]] | [[AI/3-LLM/RL/算法/Jet-RL-FP8-On-Policy-RL-Training|Jet-RL]] | [[AI/3-LLM/RL/算法/SAPO-Soft-Adaptive-Policy-Optimization|SAPO]] — **GSPO 的软门控继承版**：Qwen 团队同一路线上的后续工作，把 sequence-level hard clip 替换为 token-level sigmoid 软衰减；理论证明在 A1+A2 假设下 SAPO ≡ GSPO（连续版），在 MoE 异构 token 场景更鲁棒
 - **写于**: 2026-02-21
+
+## See Also
+
+- [[AI/3-LLM/RL/实践/GSPO-Unsloth实践|GSPO Unsloth 实践]] — 低显存环境下跑 GSPO 训练的工程实践

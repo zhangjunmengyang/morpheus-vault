@@ -182,3 +182,9 @@ GSPO (group_size=8, beta=0.1):
 - [[AI/3-LLM/Frameworks/Unsloth/训练示例概述|Unsloth 训练示例]]
 - [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO 深度理解]]
 - [[AI/3-LLM/RL/算法/PPO 原理|PPO 原理]]
+
+## See Also
+
+- [[AI/3-LLM/RL/实践/GRPO-Unsloth实践|GRPO-Unsloth 实践]] — 同框架对比：GRPO 是 token-level，GSPO 是 sequence-level IS ratio，区别在约束粒度
+- [[AI/3-LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL Training Stability]] — GSPO 的 sequence-level IS 约束是解决 off-policy 不稳定性的方案之一
+- [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 改进七维框架]] — GSPO 属于"IS ratio 粒度"维度的改进

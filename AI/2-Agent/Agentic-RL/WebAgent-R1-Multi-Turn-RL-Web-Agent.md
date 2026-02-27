@@ -197,6 +197,7 @@ ToRL/ARTIST/Search-R1 mask 掉 tool output；WebAgent-R1 compress 掉历史 obse
 ## See Also
 
 **Context Overflow 同族（正交解法）**
+- [[AI/2-Agent/Agentic-RL/ActionEngine-Programmatic-GUI-Agent|ActionEngine]] — Training-free GUI Agent（Offline SMG → Online O(1) 规划），与 WebAgent-R1 RL 训练路线互补
 - [[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent-RL|KLong（NUS+MIT）]] — trajectory-splitting SFT + Progressive RL；WebAgent-R1 用 Dynamic Compression，KLong 用 Trajectory Splitting——同问题不同解法，可组合
 - [[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR]] — rollout 质量维度，per-turn 树搜索
 

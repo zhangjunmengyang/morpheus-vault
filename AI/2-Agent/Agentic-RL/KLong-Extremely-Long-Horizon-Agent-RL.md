@@ -266,3 +266,5 @@ KLong 是"Context Management for RL Training"方向的开创性工作——之�
 ---
 
 *写于 2026-02-23 17:46 | 心跳 12*
+
+- [[AI/2-Agent/Fundamentals/Context-Folding|Context-Folding]] — 正交互补：KLong 切割长轨迹（训练时），Context-Folding 折叠压缩上下文（推理时）——长任务 Agent 的训练/推理双侧解法

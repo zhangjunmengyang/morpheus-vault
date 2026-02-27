@@ -5,6 +5,11 @@ created: 2026-02-14
 status: draft
 ---
 
+> [!warning] supplementary
+> 本笔记是 [[AI/6-应用/Prompt/Prompt Engineering 高级|Prompt Engineering 高级]] 的早期版本，内容已被正式版覆盖。请以正式版为准。
+
+
+
 # 高级 Prompt 技巧
 
 ## 1. Chain-of-Thought (CoT) 推理

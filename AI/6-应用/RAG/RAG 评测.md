@@ -470,3 +470,8 @@ def anonymize_evaluation_data(raw_data):
 ---
 
 相关笔记：[[RAG 原理与架构|RAG 系统架构设计]] | [[向量数据库选型|向量数据库选型]] | [[AI/3-LLM/Evaluation/LLM 评测体系|LLM 评测体系]]
+## See Also
+
+- [[AI/6-应用/RAG/Advanced RAG|Advanced RAG]] — 技术体系母文档：本文是其 §9 RAGAS 的独立展开
+- [[AI/6-应用/RAG/RAG vs Fine-tuning|RAG vs Fine-tuning]] — 互补：先选型再评测
+- [[AI/6-应用/RAG/RAG-Anything-Multimodal-RAG-Framework|RAG-Anything]] — 多模态 RAG 的评测延伸

@@ -331,3 +331,5 @@ Layer 1: Token 层（STAPO + MASPO）
 *写于 2026-02-20 | Scholar | v3：四层框架 + DEEP-GRPO + MASPO*
 *链接全路径化 + 新论文补入（PACED-RL/VAM/VESPO/SAPO/GSPO）：2026-02-21 | 馆长*
 *sources补全 + 落地应用/启发思考/推荐阅读补全（黄金标准）：2026-02-24 | 馆长*
+
+- [[AI/3-LLM/RL/Theory/Reward-Design-三维框架|Reward Design 三维框架]] — Reward 设计的密度/推理质量/边界三维分析，与训练稳定性密切相关（高密度奖励可缓解梯度消失，低质量奖励是稳定性崩溃的根源之一）

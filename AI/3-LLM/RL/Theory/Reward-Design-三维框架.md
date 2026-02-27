@@ -30,6 +30,7 @@ status: active
 - [[AI/3-LLM/RL/Theory/Likelihood-Based-Reward-Designs-CoT-RL|Likelihood-Based Reward]] — 本文三维框架之"密度维度"的核心来源：log-prob作为通用密集reward信号（arXiv:2602.03979，★★★★☆）
 - [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO改进全景]] — reward设计质量直接影响GRPO训练效果；本文三维框架是对GRPO七维框架中"Sample效率"维度的深化
 - [[AI/3-LLM/RL/实践/RARL-Reward-Modeling-Survey|RARL Reward Modeling综述]] — reward modeling领域综述；本文是该综述在2026年最新三篇论文上的聚焦元分析
+- [[AI/3-LLM/RL/算法/PROF-Process-Consistency-Filter|PROF（过程一致性过滤）]] — 过程奖励与结果奖励的一致性驱动过滤：同样关注推理质量维度，但从数据筛选角度（去掉PRM/ORM冲突样本）而非奖励设计本身
 
 ---
 

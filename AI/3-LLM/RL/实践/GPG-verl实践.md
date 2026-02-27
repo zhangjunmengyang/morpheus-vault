@@ -85,3 +85,9 @@ GPG 在 verl 的算法矩阵中属于「可用但不是首选」的位置。大�
 - [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO 深度理解]]
 - [[AI/3-LLM/RL/算法/PPO 原理|PPO 原理]]
 - [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]]
+
+## See Also
+
+- [[AI/3-LLM/RL/Fundamentals/RL & LLMs 入门|RL & LLMs 入门]] — GPG 是最早的 Group Policy Gradient，理解 GRPO 前身的基础
+- [[AI/3-LLM/RL/实践/GRPO-verl实践|GRPO-verl 实践]] — GPG 的进化版实践：GRPO 在 GPG 基础上加了归一化和 KL 约束
+- [[AI/3-LLM/Frameworks/verl/HybridFlow|verl HybridFlow]] — 工程框架共用，GPG/GRPO 使用相同 verl 训练栈

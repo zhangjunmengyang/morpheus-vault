@@ -1,8 +1,13 @@
 ---
 title: "GLM-5: 从 Vibe Coding 到 Agentic Engineering"
+brief: "智谱AI（Z.AI）744B MoE旗舰模型（激活40B），首个开源 Intelligence Index 50+；MIT 协议；华为昇腾910完全国产训练；面向长周期 Agent 工程任务；定价为闭源模型 1/16~1/45"
 date: 2026-02-14
-tags: [llm, open-source, glm, agentic]
+tags: [llm, open-source, glm, agentic, type/model-report]
 type: note
+domain: ai/models/glm
+sources:
+  - "Z.AI 技术博客 https://z.ai/blog/glm-5"
+  - "HuggingFace https://huggingface.co/zai-org/GLM-5"
 ---
 
 # GLM-5: 从 Vibe Coding 到 Agentic Engineering
@@ -173,3 +178,10 @@ Z.AI 提供订阅制编码方案，支持 Claude Code、Cursor、Cline、OpenCla
 - [Reuters 报道](https://www.reuters.com/technology/chinas-ai-startup-zhipu-releases-new-flagship-model-glm-5-2026-02-11/)
 - [llm-stats 分析](https://llm-stats.com/blog/research/glm-5-launch)
 - [Digital Applied 分析](https://www.digitalapplied.com/blog/zhipu-ai-glm-5-release-744b-moe-model-analysis)
+
+
+## See Also
+
+- [[AI/4-模型/Qwen/Qwen3.5|Qwen3.5]] — 同期开源旗舰对比：Qwen3.5 Plus 397B/17B MoE vs GLM-5 744B/40B MoE
+- [[AI/3-LLM/Architecture/MoE 深度解析|MoE 深度解析]] — GLM-5 使用 Sparse MoE（256 experts，每 token 激活 8 个）的技术基础
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 前沿综合分析]] — GLM-5 定位 Agentic Engineering，RL 训练体系与此综合分析直接相关

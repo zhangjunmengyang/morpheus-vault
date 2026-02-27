@@ -316,9 +316,9 @@ response = openai.chat.completions.create(
 
 ## 相关笔记
 
-- [[Prompt-Engineering-基础|Prompt Engineering 基础]] — 基础 Prompt Engineering
-- [[Prompt-Engineering-概述|Prompt Engineering 概述]] — PE 概述
+- [[AI/6-应用/Prompt/Prompt-Engineering-基础|]] — 基础 Prompt Engineering
+- [[AI/6-应用/Prompt/Prompt-Engineering-概述|]] — PE 概述
 - [[AI/3-LLM/RL/实践/RLHF-工程全栈|RLHF 全链路]] — RLHF 完整流程
 - [[AI/3-LLM/RL/算法/PPO 原理|PPO 原理]] — PPO 算法
-- [[RAG 工程实践]] — 检索增强生成
+- [[AI/6-应用/RAG/RAG 工程实践]] — 检索增强生成
 - Transformer — Transformer 架构基础

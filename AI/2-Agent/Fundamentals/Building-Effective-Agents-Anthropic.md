@@ -192,3 +192,10 @@ Anthropic 的关键区分：
 5. **自主性 = 更高成本 + 错误累积风险**——需要护栏和沙箱测试
 6. **工具集设计和文档清晰度是核心竞争力**——Anthropic 在 SWE-bench 上花在工具优化上的时间比 prompt 还多
 7. **透明度和人类监督不可或缺**——即使是最强的 Agent 也需要检查点和人类审查
+
+## See Also
+
+- [[AI/2-Agent/Fundamentals/2025-AI-Agent-Index-MIT报告|2025 AI Agent Index（MIT 报告）]] — Agent 市场现状调研：学术实践方法论（Anthropic）的外部背景
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — 本文是 Anthropic 的实践方法论，综合分析是学术前沿——互为"工程侧 vs 研究侧"视角
+- [[AI/2-Agent/Fundamentals/Agent-Tool-Use|Agent Tool Use]] — Anthropic 重点强调的 ACI 设计与工具调用深度
+- [[AI/2-Agent/Multi-Agent/Multi-Agent 概述|Multi-Agent 概述]] — Anthropic 分析的 orchestrator-subagent 架构模式

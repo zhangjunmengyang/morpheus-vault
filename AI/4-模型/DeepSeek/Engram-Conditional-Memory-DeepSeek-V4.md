@@ -201,7 +201,7 @@ GLM-5 用的是 DeepSeek Sparse Attention（content-aware dynamic sparsity），
 根据已知信息（待 V4 正式发布后核实）：
 
 1. **Engram Conditional Memory**（本文）— 记忆稀疏轴，O(1) lookup + host memory bypass
-2. **Manifold-Constrained Hyper-Connections (mHC)**（arxiv 待查）— 多分支 backbone，替代 residual stream
+2. [[AI/4-模型/DeepSeek/mHC-Manifold-Constrained-Hyper-Connections-DeepSeek|**Manifold-Constrained Hyper-Connections (mHC)**]]（arXiv:2512.24880）— 多分支 backbone，替代 residual stream
 3. **Dynamic Sparse Attention + Lightning Indexer** — 稀疏 attention 高效实现
 
 三者结合：Bi-axial Sparsity（MoE+Engram）× 多分支信息流（mHC）× 高效 Attention（DSA）= 参数规模与计算效率的双重突破。

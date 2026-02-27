@@ -906,3 +906,4 @@ flowchart LR
 > 🔗 See also: [[AI/3-LLM/Architecture/Attention 变体综述|Attention 变体综述]] — 从 MHA→MLA 的演进直接决定 KV Cache 大小
 > 🔗 See also: [[AI/3-LLM/Inference/量化综述|量化综述]] — KV Cache 量化（FP8/INT8/INT4）的技术细节
 > 🔗 See also: [[AI/3-LLM/Inference/Continuous Batching|Continuous Batching]] — KV Cache 管理与请求调度的协同
+> 🔗 See also: [[AI/3-LLM/Inference/DMS KV Cache压缩|DMS（动态内存稀疏化）]] — post-training 8× KV Cache 压缩，reasoning 任务几乎无精度损失（NVIDIA+Edinburgh，NeurIPS 2025）

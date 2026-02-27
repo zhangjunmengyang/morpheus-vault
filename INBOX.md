@@ -35,7 +35,7 @@ updated: 2026-02-27
 
 - [x] REINFORCE++ ✅ 已有笔记（REINFORCE-Plus-Plus-Global-Advantage-Normalization.md）
 - [x] GRPO / DeepSeekMath ✅ 已有深度笔记（GRPO 深度理解.md，含 arXiv:2402.03300 出处）
-- [ ] IOPO：复杂指令跟随，输入输出偏好优化 — [arXiv:2411.06208](https://arxiv.org/abs/2411.06208)
+- [x] IOPO ✅ 已有笔记（IOPO-Input-Output-Preference-Optimization.md）+ 链接修复完成
 - [ ] LLMs Get Lost In Multi-Turn Conversation — [arXiv:2505.06120](https://arxiv.org/abs/2505.06120)
 - [x] GRPO 完整流程实践 ✅ 已有（GRPO-verl实践.md / GRPO-Unsloth实践.md / GRPO-TRL实践.md 三份实践笔记）
 - [x] 知乎 GRPO 分析 ✅ 内容已被 GRPO深度理解.md 覆盖
@@ -67,7 +67,8 @@ updated: 2026-02-27
 
 - [x] **Agent 进化模式谱系** ✅ 2026-02-27 完成（Agent-进化模式谱系.md，200行，wisdom层，含贾维斯映射+选型决策树）
 - [ ] **Intermediate Verification Signal 自动化** — 开放任务 auxiliary reward 自动生成，当前最大学术空白
-  - 相关：CM2（Checklist Reward），待独立成研究专题
+  - ✅ CM2（arXiv:2602.12268）已有独立笔记（17233 bytes，★★★★☆，AI/2-Agent/Agentic-RL/，2026-02-25）
+  - 真正缺口：auxiliary reward **自动生成**（无需手工 checklist 设计），当前无系统性论文
 - [x] **预训练数据工程** — ✅ 已存在：（误报缺口，2026-02-27 确认）
 
 ### 中优先级

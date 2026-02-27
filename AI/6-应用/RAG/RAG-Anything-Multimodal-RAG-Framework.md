@@ -238,3 +238,9 @@ Vault 里有 LightRAG 相关内容（参考 ICLR-2026-趋势分析）。RAG-Anyt
 ---
 
 *笔记日期: 2026-02-20*
+
+## See Also
+
+- [[AI/6-应用/RAG/Advanced RAG|Advanced RAG]] — 技术体系母文档：本文是其多模态 RAG 章节的完整实现
+- [[AI/6-应用/RAG/RAG vs Fine-tuning|RAG vs Fine-tuning]] — 多模态场景下的选型参考
+- [[AI/6-应用/RAG/RAG 评测|RAG 评测]] — 多模态 RAG 的评测框架

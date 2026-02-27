@@ -73,3 +73,9 @@ def sanitize(text: str) -> str:
 - Moltwire: Reverse CAPTCHA Zero-Width Steganography (2026)
 - Promptfoo: The Invisible Threat - Zero-Width Unicode Characters (2025)
 - OWASP LLM Prompt Injection Prevention Cheat Sheet
+
+## See Also
+
+- [[AI/5-AI 安全/PI-Landscape-SoK-Prompt-Injection-Taxonomy-Defense|PI-Landscape（Prompt Injection分类学）]] — Unicode 隐写是 prompt injection 变体的一个实例（混淆攻击维度）
+- [[AI/5-AI 安全/Multi-Agent-Defense-Pipeline-Prompt-Injection|Multi-Agent 防御管线]] — Unicode 隐写在 multi-agent 管线中的防御位置
+- [[AI/5-AI 安全/Clinejection-AI-Coding-Agent-Supply-Chain-Attack|Clinejection（供应链攻击）]] — 同属「不可见攻击」类别：代码注入 vs 字符注入，隐蔽性相同

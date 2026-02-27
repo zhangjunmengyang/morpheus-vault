@@ -171,3 +171,8 @@ torchaudio.save("output.wav", audio, 24000)
 - [[AI/3-LLM/SFT/LoRA|LoRA]] — LoRA 技术详解
 - [[AI/3-LLM/SFT/SFT-TRL实践|SFT-TRL实践]] — SFT 训练实践
 - [[AI/3-LLM/MLLM/非文本的模态对齐|非文本的模态对齐]] — 多模态对齐
+
+## See Also
+
+- [[AI/3-LLM/Frameworks/Unsloth/Unsloth 概述|Unsloth 概述]] — 框架入口：本文是 Unsloth 框架下的专项训练配置
+- [[AI/3-LLM/Frameworks/Unsloth/CPT|CPT]] — 同框架其他训练类型

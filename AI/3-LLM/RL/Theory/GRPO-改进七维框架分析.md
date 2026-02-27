@@ -448,3 +448,14 @@ Dr. GRPO = 对 std 大的样本不惩罚（算法层）
 2. **MASPO**（arXiv:2602.17550）— 三维统一改进框架，是理解"trust region 改进全家桶"的好教材
 3. **SAPO**（arXiv:2511.20347）— Qwen 团队，sech² 软门控，生产验证；与 GSPO 一起读理解 Qwen RL 栈
 4. **SeeUPO**（arXiv:2602.06554）— 必读：理解 GRPO 的理论边界（multi-turn 无收敛保证），正确定位本全景的适用范围
+
+
+## See Also
+
+- [[AI/3-LLM/RL/算法/iGRPO|iGRPO]] — 迭代自反馈 GRPO：在 GRPO 基础上引入迭代式自我反馈机制，与本框架的"优势估计维度"直接相关
+- [[AI/3-LLM/RL/算法/SkillRL|SkillRL]] — 技能蒸馏 GRPO 变体：从历史轨迹抽象层次化技能库，递归演化，与七维框架中"经验利用维度"互补
+- [[AI/3-LLM/RL/算法/ExpLang-Multilingual-Thinking-RL|ExpLang]] — ICML 2026：多语言思维提升 RLVR 探索多样性，"探索策略维度"的代表方法
+- [[AI/3-LLM/RL/Theory/Reward-Design-三维框架|Reward Design 三维框架]] — 密度/推理质量/边界三维 Reward 设计全景，与本文 Reward Shaping 维度配套读
+- [[AI/3-LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL Training Stability 专题]] — 训练稳定性全景：本框架描述"改进方向"，训练稳定专题描述"何时崩溃"
+
+- [[AI/2-Agent/Agentic-RL/PVPO|PVPO]] — 参考值估计维度的改进：用参考模型静态 V 值替代 GRPO 组内动态均值，解决累积偏差和样本效率问题（阿里云）

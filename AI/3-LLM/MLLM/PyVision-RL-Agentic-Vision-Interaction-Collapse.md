@@ -128,6 +128,8 @@ PDF: <https://arxiv.org/pdf/2602.20739>
 ---
 
 ## See Also
+- [[AI/2-Agent/Agentic-RL/R-4B|R-4B（双模退火RL）]] — MLLM 自适应思考模式：根据问题复杂度切换 think/direct answer（腾讯混元+中科院）
+- [[AI/3-LLM/MLLM/LLaVA-Critic-R1|LLaVA-Critic-R1]] — 多模态 RL 对齐：批评能力→策略性能提升；与 PyVision-RL（Interaction Collapse）构成多模态 Agent RL 的两个互补维度
 
 **训练失败模式谱系（跨模态）**
 - [[AI/2-Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN（Echo Trap 奠基，Northwestern+Stanford）]] — Echo Trap：文本 agent RL 训练崩溃三联征；Interaction Collapse 是其多模态版本，共同指向"RL 压力推动退化策略"根因

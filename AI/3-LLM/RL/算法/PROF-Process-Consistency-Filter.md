@@ -29,3 +29,9 @@ PROF通过评估PRM与ORM的一致性，过滤掉 **结果正确但推理错误*
 
 - [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO 深度理解]]
 - [[AI/3-LLM/RL/算法/PPO 原理|PPO 原理]]
+
+## See Also
+
+- [[AI/3-LLM/RL/算法/PRIME-Process-Reward-Implicit-MLE|PRIME]] — 同维度：过程奖励，PRIME 用隐式 MLE，PROF 用过程一致性过滤
+- [[AI/3-LLM/RL/Theory/Reward-Design-三维框架|Reward Design 三维框架]] — PROF 属于"过程奖励质量"维度的解法
+- [[AI/3-LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL Training Stability 专题]] — 过程一致性过滤对训练稳定性的影响

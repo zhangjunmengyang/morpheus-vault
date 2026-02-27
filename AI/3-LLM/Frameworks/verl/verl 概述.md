@@ -221,3 +221,8 @@ reward = sandbox_execute(generated_code, test_cases)
 - [[AI/3-LLM/Infra/DeepSpeed|DeepSpeed]]
 - [[AI/3-LLM/Infra/Megatron-LM|Megatron-LM]]
 - [[AI/3-LLM/Infra/分布式训练|分布式训练]]
+
+## See Also
+
+- [[AI/3-LLM/Frameworks/verl/RL with Lora|RL with Lora]] — 配套实践：在 verl 框架内用 LoRA 做 RL 训练的具体操作
+- [[AI/3-LLM/Frameworks/verl/HybridFlow|HybridFlow]] — 架构原理：Actor-Rollout 解耦的底层设计

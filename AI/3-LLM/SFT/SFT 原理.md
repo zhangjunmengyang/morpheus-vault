@@ -407,3 +407,8 @@ LIMA 的"表面对齐假说"进一步说明：**对齐不是一个知识问题�
 ### 代码手撕（理论 → 代码）
 - [[Projects/MA-RLHF/lc6/lc6-01-SFT-手撕实操|SFT-手撕实操]] — **必看**：从零实现 SFT 训练循环（数据格式化/loss mask/LoRA 集成），MA-RLHF 项目配套 ⭐⭐⭐⭐⭐
 - [[Projects/MA-RLHF/MA-RLHF-手撕实操-系列索引|MA-RLHF 手撕实操系列索引]] — SFT → PPO → GRPO → DPO 完整对齐链路代码总索引
+
+## See Also
+
+- [[AI/3-LLM/RL/Fundamentals/PPL 计算 交叉熵损失与 ignore_index|PPL 计算（ignore_index=-100）]] — SFT 训练 loss 的底层：CrossEntropyLoss + ignore_index=-100 的 PPL 计算细节
+- [[AI/3-LLM/Architecture/模型蒸馏|模型蒸馏]] — SFT 的进化形式：黑盒蒸馏 = SFT on teacher outputs，白盒蒸馏 = SFT + soft KD loss

@@ -158,11 +158,13 @@ verl 的资源分配比较灵活，但需要合理规划：
 3. **奖励 hacking**：模型学会了投机取巧拿高分但输出质量差 → 加入格式/长度惩罚
 4. **Rollout 太慢**：增加 rollout worker 数量，或换用 SGLang
 
-## 相关
+## See Also
 
 - [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO 深度理解]] — 算法原理
 - [[AI/3-LLM/RL/实践/GRPO-Unsloth实践|GRPO Unsloth 实践]] — 轻量级方案
 - [[AI/3-LLM/RL/实践/GRPO-TRL实践|GRPO TRL 实践]] — TRL 框架方案
 - [[AI/3-LLM/RL/实践/DAPO-verl实践|DAPO verl 实践]] — GRPO 的改进版
+- [[AI/3-LLM/RL/实践/GPG-verl实践|GPG-verl 实践]] — GPG 是 GRPO 的前身：Group Policy Gradient 基础形式，无归一化/KL 约束
+- [[AI/3-LLM/RL/实践/CollabLLM-verl实践|CollabLLM-verl 实践]] — 多模型协同训练变体：多 LLM 互作 opponent/collaborator 的 verl 实验性功能
 - [[AI/3-LLM/Frameworks/verl/verl 训练参数|verl 训练参数]]
 - [[AI/3-LLM/Frameworks/verl/硬件资源预估|硬件资源预估]]

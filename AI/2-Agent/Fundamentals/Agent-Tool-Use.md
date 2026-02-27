@@ -269,3 +269,7 @@ follow_up = client.messages.create(
 
 ### Q5: 什么是 MCP？它解决了什么问题？
 **答**：MCP（Model Context Protocol）是 Anthropic 提出的开放标准，解决 M×N 问题——M 个 LLM 应用 × N 个外部工具的集成爆炸。它定义了标准化的 Server/Client 协议：Server 暴露 tools/resources/prompts，Client 通过 stdio 或 HTTP 连接。核心价值：(1) 工具开发者写一次 Server，所有支持 MCP 的 Client 都能用；(2) 支持运行时动态发现工具，不需要硬编码；(3) OpenAI、Google 已跟进支持，正在成为行业标准。
+
+## See Also
+
+- [[AI/2-Agent/Fundamentals/ReAct-推理模式|ReAct 推理模式]] — ReAct Thought-Action-Observation 模式：Function Calling 时代前的 Tool Use 基础，理解 Function Calling 为何更优需要先理解 ReAct

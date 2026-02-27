@@ -293,11 +293,15 @@ TTC 揭示了一个深刻的范式转变：**推理能力不仅可以通过训�
 - **TTC + MoE 的协同**：不同 expert 处理不同推理深度？浅层 expert 负责 System 1 推理，深层 expert 负责 System 2？
 - **DTR 作为 RL reward 信号**：在 RLVR 训练中用 DTR 代替（或辅助）ORM/PRM，鼓励模型生成"深度思考 token"而非"长但浅的 token"
 
-> 🔗 See also:
-> - [[AI/3-LLM/Inference/推理优化|推理优化]] — 工程层面的 inference 优化（减少 latency）
-> - [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO]] — RL 训练赋予模型 TTC 能力
-> - [[AI/4-模型/DeepSeek/DeepSeek-R1|DeepSeek-R1]] — GRPO + long CoT 的实践
-> - [[AI/3-LLM/Inference/Deep-Thinking-Ratio-DTR-v2-Think-At-N|Deep-Thinking-Ratio-DTR]] — 推理质量新指标，思考深度 > 思考长度
+## See Also
+
+- [[AI/3-LLM/Inference/Deep-Thinking-Ratio-DTR-v2-Think-At-N|Deep-Thinking-Ratio-DTR v2]] — TTC 推理质量的量化指标：思考深度 > 思考长度；DTR 高的模型才真正受益于 TTC scaling
+- [[AI/3-LLM/Inference/Deep-Thinking-Ratio-DTR|DTR v1（arXiv:2602.13517）]] — 原始 DTR 论文，定义了 Useful Verification Attempts 维度
+- [[AI/3-LLM/Inference/Accordion-Thinking-Self-Regulated-Step-Summaries|Accordion Thinking]] — 同方向：自适应压缩推理步骤，防止 TTC 资源浪费
+- [[AI/3-LLM/Inference/ConformalThinking-Risk-Control-Test-Time-Compute|ConformalThinking]] — TTC 风险控制：用 conformal prediction 为 TTC 设置统计覆盖保证
+- [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO]] — RL 训练赋予模型 TTC 能力：GRPO 训练出会「想更久」的模型
+- [[AI/4-模型/DeepSeek/DeepSeek-R1|DeepSeek-R1]] — TTC 能力工程化的最佳范例：GRPO + long CoT 训练
+- [[AI/3-LLM/Inference/Speculative Decoding|Speculative Decoding]] — 工程互补：TTC 增加思考量，SD 加速 token 生成速度
 
 ---
 

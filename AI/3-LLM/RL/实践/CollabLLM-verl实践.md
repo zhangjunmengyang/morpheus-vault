@@ -88,3 +88,9 @@ CollabLLM 是一个有趣的研究方向，但实际落地的门槛较高——�
 - [[思考/Multi-Agent 零碎的点|Multi-Agent 笔记]]
 - [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO 深度理解]]
 - [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]]
+
+## See Also
+
+- [[AI/3-LLM/Frameworks/verl/HybridFlow|verl HybridFlow]] — CollabLLM 的底层框架：Actor/Critic 混合并行架构
+- [[AI/3-LLM/RL/实践/GRPO-verl实践|GRPO-verl 实践]] — 同框架下的标准 RL 实践，与 CollabLLM 对比理解多模型协同训练的额外开销
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-Training-verl|Agentic-RL-Training-verl]] — verl 框架 Agentic RL 实战，CollabLLM 是其中的多 Agent 协同变体

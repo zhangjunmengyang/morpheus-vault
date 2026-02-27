@@ -99,6 +99,7 @@ graph LR
 
 ## See Also
 
+- [[AI/3-LLM/RL/Fundamentals/MCTS|MCTS（蒙特卡洛树搜索）]] — AgentQ 的核心探索机制：UCB + 4阶段循环
 - [[AI/2-Agent/Agentic-RL/ExpeL-Experiential-Learning-Agent|ExpeL]] — 前驱：in-context 规则提炼（不更新权重）
 - [[AI/2-Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN/StarPO]] — 同期：多轮 RL 进化（更大规模训练时进化）
 - [[AI/2-Agent/Agentic-RL/ERL-Experiential-Reinforcement-Learning|ERL]] — 相关：从经验中强化学习的另一路线

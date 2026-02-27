@@ -117,3 +117,7 @@ Multi-Agent 目前更偏「研究/探索」阶段，真正生产级的应用还�
 - [[AI/2-Agent/Fundamentals/Tool Use|Tool Use]]
 - [[AI/2-Agent/Fundamentals/记忆模块|记忆模块]]
 - [[思考/Multi-Agent 零碎的点|零碎的点]]
+
+## See Also
+
+- [[AI/2-Agent/Multi-Agent/Agent vs MAS|Agent vs MAS 选型框架]] — 单 Agent vs MAS 决策框架

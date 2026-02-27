@@ -125,7 +125,7 @@ CTA 通过注入这两个先验，让模型动态决定是否检索，相比静�
 
 | 工作 | 关注点 | CTA 的差异 |
 |------|--------|-----------|
-| PABU (Progress-Aware Belief) | 进度感知置信度 | CTA 更形式化，POMDP 建模 |
+| [[AI/2-Agent/Agentic-RL/PABU-Progress-Aware-Belief-State\|PABU]] (Progress-Aware Belief) | 进度感知置信度 | CTA 更形式化，POMDP 建模 |
 | Calibrate-before-Use (RAG) | 知识边界检测 | CTA 延伸到多步 agent 决策 |
 | LACONIC (Length-Constrained RL) | 输出长度控制 | CTA 控制"是否继续探索"而非长度 |
 | HiPER (Credit Assignment) | RL 训练中功劳分配 | 互补：HiPER 解决 RL 训练问题，CTA 解决 RL 未能学会的 meta 决策 |

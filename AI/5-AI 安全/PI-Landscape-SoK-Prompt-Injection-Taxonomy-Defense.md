@@ -256,3 +256,7 @@ A: LLM 安全主要是 context-independent 的——用户输入包含攻击。A
 **对盾卫的战略启示**：盾卫目前主要覆盖"文本层 × 启发式攻击"的交叉（正则模式 + 关键词）。Phase 2.4 需要往"文本层 × 优化型攻击 + 语义混淆"和"执行层 × context-dependent"两个方向延伸。
 
 **未解问题**：如何设计一个既能处理 context-dependent 任务（不误拦合法操作）又能防御 indirect injection 的防御？这是 AgentArmor 试图解决的问题，也是盾卫 Phase 2.4 的核心挑战。
+
+## See Also
+
+- [[AI/5-AI 安全/Unicode-Steganography-Invisible-Prompt-Injection|Unicode 隐写注入]] — 实例：零宽字符/Cf类字符的隐写攻击，混淆变体的工程实现
