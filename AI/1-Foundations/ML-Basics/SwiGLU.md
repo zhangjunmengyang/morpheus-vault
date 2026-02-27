@@ -165,11 +165,12 @@ class SwiGLU(nn.Module):
 - **渐进式训练**：可以先在小规模模型上验证效果
 - **超参调整**：学习率可能需要微调，通常可以设置得稍高一些
 
-## 相关概念
+## See Also
 
-- Transformer 架构深度解析
-- [[AI/3-LLM/Architecture/MoE 深度解析|MoE 架构深度解析]]（FFN 层设计的演进方向）
-- [[AI/3-LLM/Pretraining/预训练原理|预训练与分布式训练]]
+- [[AI/1-Foundations/ML-Basics/GELU|GELU]] — 前驱激活函数：SwiGLU = Swish 门控 × 线性变换，理解 GELU 是理解 SwiGLU 的基础
+- [[AI/1-Foundations/DL-Basics/Layer Normalization|Layer Normalization]] — 同为 Transformer FFN 基础组件（SwiGLU + RMSNorm 构成现代 LLM FFN 标准设计）
+- [[AI/3-LLM/Architecture/MoE 深度解析|MoE 架构深度解析]] — FFN 层设计的演进方向：MoE = 多个专家 FFN（每个 FFN 用 SwiGLU）
+- [[AI/3-LLM/Pretraining/预训练原理|预训练原理]] — SwiGLU 在预训练阶段的实验性能优势来源（LLaMA/PaLM 验证）
 
 ## 推荐阅读
 

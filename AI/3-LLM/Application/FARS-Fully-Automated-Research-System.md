@@ -257,3 +257,10 @@ FARS (Analemma, 2026-02)
 - Stanford Agentic Reviewer 原理：https://paperreview.ai/tech-overview
 - 36kr 中文报道：https://36kr.com/p/3696795271966336
 - YouTube 直播录像：https://www.youtube.com/watch?v=PDbQcoMRYLs
+
+## See Also
+
+- [[AI/2-Agent/Evaluation/Aletheia-Math-Research-Agent|Aletheia（DeepMind 数学研究 Agent）]] — 对比：Aletheia 专注单领域深度（数学证明），FARS 追求跨方向广度（100 篇，9 方向）；两者代表 AI4Science 的深度路线 vs 工厂路线
+- [[AI/2-Agent/Agentic-RL/Agent-进化模式谱系|Agent 进化模式谱系]] — FARS 没有跨课题记忆（每个课题独立），引入 Reflexion/ExpeL in-context 进化是最直接改进路径
+- [[AI/2-Agent/Agentic-RL/Agentic-Reasoning-Survey-arXiv-2601.12538|Agentic Reasoning Survey]] — 理论框架：FARS 在 Agentic Reasoning 谱系中的位置（规划 + 工具使用 + 多 Agent 协作）
+- [[AI/2-Agent/Multi-Agent/AgentConductor-Topology-Evolution|AgentConductor]] — 多 Agent 拓扑设计：FARS 用共享文件系统代替消息传递，与 AgentConductor 的 topology-evolution 设计哲学对比

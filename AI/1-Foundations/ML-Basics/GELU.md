@@ -191,5 +191,6 @@ plt.show()
 ## See Also
 
 - [[AI/1-Foundations/ML-Basics/激活函数|激活函数]] — GELU 所属的激活函数家族：ReLU/GELU/SiLU 对比
-- Transformer 通识 — GELU 在 Transformer FFN 层的应用
--  — ML 基础全图谱
+- [[AI/1-Foundations/ML-Basics/SwiGLU|SwiGLU]] — 进化版：SwiGLU = Swish(xW) × (xV)，实验上比 GELU 提升 ~1%（LLaMA/PaLM 均采用）
+- [[AI/3-LLM/SFT/LoRA|LoRA]] — 共同话题：激活函数选择对低秩适配的影响
+- [[AI/1-Foundations/DL-Basics/Layer Normalization|Layer Normalization]] — 同为 Transformer FFN 基础组件（激活函数 × 归一化共同设计）

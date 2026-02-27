@@ -178,7 +178,7 @@ $\alpha$ 和 $\beta$ 的值由网络深度 $N$ 决定：
 
 ## See Also
 
-- Transformer 通识 — LayerNorm 在 Transformer 架构中的位置（Pre-Norm vs Post-Norm）
 - [[AI/3-LLM/Architecture/Attention 变体综述|Attention 变体综述]] — RMSNorm 在各模型架构中的应用比较
-- Training Loss 分析 — 归一化层对训练稳定性的影响
--  — 深度学习基础全图谱
+- [[AI/1-Foundations/ML-Basics/激活函数|激活函数]] — 同为 DL 基础组件：激活函数 × 归一化层共同构成 Transformer FFN 的核心
+- [[AI/1-Foundations/ML-Basics/SwiGLU|SwiGLU]] — 现代 Transformer FFN = SwiGLU + RMSNorm 的组合设计
+- [[AI/3-LLM/Architecture/FlashAttention|FlashAttention]] — 高效 Attention 计算；RMSNorm 与 Fused Kernel 优化密切相关
