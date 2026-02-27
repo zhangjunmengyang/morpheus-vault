@@ -456,61 +456,58 @@ $$\frac{\text{Var}_\tau}{\text{Var}_M} \geq \frac{(\omega(G_T)-1)^2}{4\epsilon^2
 
 ## 整合框架：2026 Agentic RL 研究地图（v3）
 
-```
-Agentic RL 训练 Pipeline
-│
-├── 🏗️ 维度 1：环境设计
-│   └── EnterpriseGym Corecraft（高保真企业环境）
-│       原则：task diversity + expert rubrics + realistic workflows
-│
-├── 🎯 维度 2：Reward 设计
-│   ├── [Verifiable] ToRL/ARTIST/ASTRA/RC-GRPO
-│   ├── [Unverifiable·step] iStar — trajectory DPO → implicit PRM step reward
-│   ├── [Unverifiable·turn] CM2 — Checklist rewards（binary criteria decomposition）
-│   ├── OpenRS — Rubric-based reward（可解释，跨任务泛化）
-│   └── FlowSteer — 条件释放 reward（结构质量门控）
-│
-├── ⚙️ 维度 3：训练算法（Credit Assignment + 稳定性）
-│   │
-│   ├── Credit Assignment 谱系（9方案，v6 全覆盖含 iStar 正式入表）
-│   │   ├── [轨迹级] GRPO → LOOP（LOO baseline，免 critic）
-│   │   ├── [步骤级·anchor] GiGPO（状态重访 → 天然对比，免额外 rollout，NeurIPS 2025）
-│   │   ├── [步骤级·MC] AgentPRM（MC rollout Q-target，显式 PRM，3B > GPT-4o）
-│   │   ├── [步骤级·隐式 ★★★★★] iStar（trajectory DPO ≡ step-wise BT model，rolling ref=π_old，✅ unverifiable，SOTOPIA +48%，Tongyi 2025/09）
-│   │   ├── [步骤级·信息论] MIG（Marginal Information Gain，Monotonic Watermark）
-│   │   ├── [subgoal段级·层级] HiPER（Plan-Execute + HAE，双重理论保证，ICML 2026 ★★★★★）
-│   │   ├── [回合级·理论] SeeUPO（逆序更新，GRAE+PPU 不可能定理，AppWorld +43-54%）
-│   │   └── [横向·multi-agent] SHARP（Shapley + counterfactual masking，ICML 2026）
-│   │
-│   ├── 训练稳定性
-│   │   ├── RAGEN/StarPO — Echo Trap 诊断 + StarPO-S 三机制（trajectory filtering / critic baselining / decoupled clipping）
-│   │   ├── TSR — training-time tree search rollout（rollout quality → stability）
-│   │   ├── SCoRe — Phase 1 KL 约束初始化（self-correction RL）
-│   │   └── SORL — Off-policy multi-turn 专用：Turn-Level IS + CTN，实例化为 SO-PPO/SO-GRPO
-│   │
-│   └── Multi-agent RL
-│       ├── PARL — Freeze subagents，只训练 orchestrator（Kimi K2.5）
-│       ├── MAGRPO — Dec-POMDP + joint reward CTDE
-│       ├── AT-GRPO — Agent-and-Turn-Wise Grouping
-│       ├── MARS2 — diversity-as-scaling（2×32B > 72B）
-│       └── Dr. MAS — per-agent normalization，防梯度爆炸（NTU）
-│
-├── 🔗 维度 4：Workflow / Topology 设计
-│   ├── [训练时] AgentConductor — RL 生成 agent communication DAG（难度自适应密度）
-│   ├── [训练时] SquRL — RL 动态选择最优 workflow 组合（Theorem 3.1 形式化证明）
-│   ├── [训练时] PA-MoE — Phase-aware expert routing（8次/episode，1.5B > 7B baseline）
-│   ├── [训练时] FlowSteer — Operator 级 workflow RL（条件奖励门控）
-│   └── [推理时] AdaptOrch — 任务 DAG 结构性路由（Convergence Scaling Law，topology > model selection）
-│
-├── 📦 维度 5：Context Overflow（v3 新增）
-│   └── KLong — Trajectory-splitting SFT + Progressive RL
-│       ├── 解决：轨迹超过 context window 的物理边界问题
-│       ├── 方案：固定 prefix + 渐进截断 + 重叠子轨迹 + 逐步延伸 timeout
-│       └── 效果：106B 超 Kimi K2 Thinking 1T（10x 参数）11.28% on PaperBench
-│
-└── 📏 评估
-    └── PaperBench / MLE-bench / SWE-bench / ALFWorld / WebShop / SynSQL / tau-Bench
-```
+**Agentic RL 训练 Pipeline — 五维框架**
+
+**🏗️ 维度 1：环境设计**
+- EnterpriseGym Corecraft（高保真企业环境）— 原则：task diversity + expert rubrics + realistic workflows
+
+**🎯 维度 2：Reward 设计**
+- [Verifiable] ToRL / ARTIST / ASTRA / RC-GRPO
+- [Unverifiable·step] iStar — trajectory DPO → implicit PRM step reward
+- [Unverifiable·turn] CM2 — Checklist rewards（binary criteria decomposition）
+- OpenRS — Rubric-based reward（可解释，跨任务泛化）
+- FlowSteer — 条件释放 reward（结构质量门控）
+
+**⚙️ 维度 3：训练算法（Credit Assignment + 稳定性）**
+
+Credit Assignment 谱系（9方案）：
+- [轨迹级] GRPO → LOOP（LOO baseline，免 critic）
+- [步骤级·anchor] GiGPO（状态重访 → 天然对比，免额外 rollout，NeurIPS 2025）
+- [步骤级·MC] AgentPRM（MC rollout Q-target，显式 PRM，3B > GPT-4o）
+- [步骤级·隐式 ★★★★★] iStar（trajectory DPO ≡ step-wise BT model，SOTOPIA +48%）
+- [步骤级·信息论] MIG（Marginal Information Gain，Monotonic Watermark）
+- [subgoal段级·层级] HiPER（Plan-Execute + HAE，双重理论保证，ICML 2026 ★★★★★）
+- [回合级·理论] SeeUPO（逆序更新，GRAE+PPU 不可能定理，AppWorld +43-54%）
+- [横向·multi-agent] SHARP（Shapley + counterfactual masking，ICML 2026）
+
+训练稳定性：
+- RAGEN/StarPO — Echo Trap 诊断 + StarPO-S 三机制（trajectory filtering / critic baselining / decoupled clipping）
+- TSR — training-time tree search rollout（rollout quality → stability）
+- SCoRe — Phase 1 KL 约束初始化（self-correction RL）
+- SORL — Off-policy multi-turn 专用：Turn-Level IS + CTN，实例化为 SO-PPO/SO-GRPO
+
+Multi-agent RL：
+- PARL — Freeze subagents，只训练 orchestrator（Kimi K2.5）
+- MAGRPO — Dec-POMDP + joint reward CTDE
+- AT-GRPO — Agent-and-Turn-Wise Grouping
+- MARS2 — diversity-as-scaling（2×32B > 72B）
+- Dr. MAS — per-agent normalization，防梯度爆炸（NTU）
+
+**🔗 维度 4：Workflow / Topology 设计**
+- [训练时] AgentConductor — RL 生成 agent communication DAG（难度自适应密度）
+- [训练时] SquRL — RL 动态选择最优 workflow 组合（Theorem 3.1 形式化证明）
+- [训练时] PA-MoE — Phase-aware expert routing（8次/episode，1.5B > 7B baseline）
+- [训练时] FlowSteer — Operator 级 workflow RL（条件奖励门控）
+- [推理时] AdaptOrch — 任务 DAG 结构性路由（Convergence Scaling Law，topology > model selection）
+
+**📦 维度 5：Context Overflow**
+- KLong — Trajectory-splitting SFT + Progressive RL
+  - 解决：轨迹超过 context window 的物理边界问题
+  - 方案：固定 prefix + 渐进截断 + 重叠子轨迹 + 逐步延伸 timeout
+  - 效果：106B 超 Kimi K2 Thinking 1T（10x 参数）11.28% on PaperBench
+
+**📏 评估基准**
+PaperBench / MLE-bench / SWE-bench / ALFWorld / WebShop / SynSQL / tau-Bench
 
 ---
 

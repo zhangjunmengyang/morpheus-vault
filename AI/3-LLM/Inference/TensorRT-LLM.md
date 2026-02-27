@@ -21,32 +21,23 @@ TensorRT-LLM 是 NVIDIA 在 2023 年底开源的 LLM 推理框架，基于 Tenso
 
 ### 架构全景
 
-```
-                    ┌──────────────────────────┐
-                    │    Triton Inference Server │  ← 服务层（可选）
-                    └────────────┬─────────────┘
-                                 │
-                    ┌────────────▼─────────────┐
-                    │    TensorRT-LLM Runtime   │  ← 调度 + 内存管理
-                    │  ┌─────────────────────┐  │
-                    │  │ In-flight Batching   │  │
-                    │  │ Paged KV Cache       │  │
-                    │  │ Beam Search / Top-K  │  │
-                    │  └─────────────────────┘  │
-                    └────────────┬─────────────┘
-                                 │
-                    ┌────────────▼─────────────┐
-                    │    TensorRT Engine        │  ← 优化后的计算图
-                    │  ┌─────────────────────┐  │
-                    │  │ Kernel Fusion        │  │
-                    │  │ FP8/INT4 Quantization│  │
-                    │  │ Custom CUDA Kernels  │  │
-                    │  └─────────────────────┘  │
-                    └────────────┬─────────────┘
-                                 │
-                    ┌────────────▼─────────────┐
-                    │    NVIDIA GPU (A100/H100) │
-                    └──────────────────────────┘
+```mermaid
+flowchart TD
+    TIS["Triton Inference Server
+服务层（可选）"]
+    TRT["TensorRT-LLM Runtime
+调度 + 内存管理
+• In-flight Batching
+• Paged KV Cache
+• Beam Search / Top-K"]
+    ENG["TensorRT Engine
+优化后的计算图
+• Kernel Fusion
+• FP8/INT4 Quantization
+• Custom CUDA Kernels"]
+    GPU["NVIDIA GPU（A100/H100）"]
+
+    TIS --> TRT --> ENG --> GPU
 ```
 
 ## 2. 核心优化技术
@@ -55,13 +46,20 @@ TensorRT-LLM 是 NVIDIA 在 2023 年底开源的 LLM 推理框架，基于 Tenso
 
 将多个小的 GPU 操作合并为一个大 kernel，减少 kernel launch 开销和中间结果的 HBM 读写：
 
-```
-未融合:                          融合后:
-┌──────┐  ┌──────┐  ┌──────┐    ┌───────────────────────┐
-│MatMul│→ │ Bias │→ │ GELU │    │  MatMul+Bias+GELU     │
-└──────┘  └──────┘  └──────┘    │  (一个 kernel 完成)    │
-  ↑写HBM   ↑读写HBM  ↑读写HBM    └───────────────────────┘
-                                   只读写 HBM 一次
+```mermaid
+graph LR
+    subgraph BEFORE["未融合（3次 HBM 读写）"]
+        M1["MatMul
+写HBM"] --> B1["Bias
+读写HBM"] --> G1["GELU
+读写HBM"]
+    end
+    subgraph AFTER["融合后（1次 HBM 读写）"]
+        F1["MatMul + Bias + GELU
+一个 kernel 完成
+只读写 HBM 一次"]
+    end
+    BEFORE -.->|Kernel Fusion| AFTER
 ```
 
 TensorRT-LLM 的典型 fusion 模式：
@@ -284,22 +282,21 @@ kv_cache_config = {
 
 ### 选型决策树
 
-```
-开始
-  ├── 需要最极致性能 且 只用 NVIDIA GPU?
-  │   ├── Yes → TensorRT-LLM
-  │   │   ├── H100/B200 → FP8 量化
-  │   │   └── A100 → FP16 或 W4A16
-  │   └── No → 继续
-  │
-  ├── 需要快速部署 或 多硬件支持?
-  │   └── Yes → vLLM
-  │
-  ├── 单机简单推理?
-  │   └── Yes → [[AI/3-LLM/Inference/Ollama|Ollama]] / llama.cpp
-  │
-  └── 前沿功能 (RadixAttention, 结构化输出)?
-      └── SGLang
+```mermaid
+flowchart TD
+    START["选推理引擎"] --> Q1{"需要极致性能
+且只用 NVIDIA GPU?"}
+    Q1 -->|Yes| TRT2["TensorRT-LLM
+H100/B200 → FP8
+A100 → FP16/W4A16"]
+    Q1 -->|No| Q2{"需要快速部署
+或多硬件支持?"}
+    Q2 -->|Yes| VLLM["vLLM"]
+    Q2 -->|No| Q3{"单机简单推理?"}
+    Q3 -->|Yes| OLLAMA["Ollama / llama.cpp"]
+    Q3 -->|No| SGLang["SGLang
+RadixAttention
+结构化输出"]
 ```
 
 ### 生产环境配置建议

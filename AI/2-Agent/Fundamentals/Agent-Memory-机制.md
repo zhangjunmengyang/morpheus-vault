@@ -39,19 +39,18 @@ status: active
 
 ### 1.2 长期记忆的存储形式
 
-```
-┌─────────────────────────────────────────┐
-│            Long-term Memory             │
-├──────────────┬──────────┬───────────────┤
-│  Episodic    │ Semantic │  Procedural   │
-│  情景记忆     │ 语义记忆  │  程序记忆      │
-│              │          │               │
-│ "用户昨天说   │ "用户是   │ "处理退款时    │
-│  不喜欢辣"    │  素食者"  │  先查订单号"   │
-├──────────────┼──────────┼───────────────┤
-│ Vector DB    │ KV Store │ Tool/Workflow  │
-│ (时间戳索引)  │ (结构化)  │ (代码/规则)    │
-└──────────────┴──────────┴───────────────┘
+```mermaid
+graph LR
+    LTM["Long-term Memory"]
+    LTM --> EP["情景记忆 Episodic
+用户昨天说不喜欢辣
+存储：Vector DB（时间戳索引）"]
+    LTM --> SE["语义记忆 Semantic
+用户是素食者
+存储：KV Store（结构化）"]
+    LTM --> PR["程序记忆 Procedural
+处理退款时先查订单号
+存储：Tool/Workflow（代码/规则）"]
 ```
 
 - **情景记忆 (Episodic)**：具体事件和对话片段，带时间戳，用于"回忆过去发生了什么"
@@ -106,33 +105,36 @@ MemGPT（现已发展为 Letta 框架，暂无独立笔记）的核心洞察：*
 
 ### 3.1 架构设计
 
-```
-┌──────────────────────────────────────┐
-│           LLM (Processor)            │
-├──────────────────────────────────────┤
-│     Main Context (Working Memory)    │
-│  ┌────────┬─────────┬─────────────┐  │
-│  │ System │ Persona │ Human Block │  │
-│  │ Prompt │ Block   │   Block     │  │
-│  ├────────┴─────────┴─────────────┤  │
-│  │     FIFO Message Queue         │  │
-│  │  (recent conversation buffer)  │  │
-│  └────────────────────────────────┘  │
-├──────────────────────────────────────┤
-│     Memory Management Functions      │
-│  core_memory_append()                │
-│  core_memory_replace()               │
-│  archival_memory_insert()            │
-│  archival_memory_search()            │
-│  conversation_search()               │
-├──────────────────────────────────────┤
-│        External Storage (Disk)       │
-│  ┌────────────────┬─────────────────┐│
-│  │ Archival Memory│ Recall Memory   ││
-│  │ (Vector DB)    │ (Conversation   ││
-│  │                │  History DB)    ││
-│  └────────────────┴─────────────────┘│
-└──────────────────────────────────────┘
+```mermaid
+graph TD
+    LLM["LLM Processor"]
+
+    subgraph CTX["Main Context（Working Memory）"]
+        SYS["System Prompt Block"]
+        PER["Persona Block"]
+        HUM["Human Block"]
+        FIFO["FIFO Message Queue
+recent conversation buffer"]
+    end
+
+    subgraph MGT["Memory Management Functions"]
+        F1["core_memory_append()"]
+        F2["core_memory_replace()"]
+        F3["archival_memory_insert()"]
+        F4["archival_memory_search()"]
+        F5["conversation_search()"]
+    end
+
+    subgraph EXT["External Storage（Disk）"]
+        ARC["Archival Memory
+Vector DB"]
+        REC["Recall Memory
+Conversation History DB"]
+    end
+
+    LLM --> CTX
+    LLM --> MGT
+    MGT --> EXT
 ```
 
 ### 3.2 核心机制
