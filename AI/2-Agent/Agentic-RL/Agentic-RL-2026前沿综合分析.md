@@ -635,6 +635,8 @@ $$T^{(1)} < T^{(2)} < \cdots < T^{(M)} \quad (2h \to 4h \to 6h)$$
 | 2026/02/15 | PABU | — | Context管理·进度感知信念状态·效率 | ★★★★☆ |
 | — | WebPilot | — | Multi-Agent·MCTS战略探索·Web任务 | ★★★☆☆ |
 | 2026/02 | AgentAuditor | 2602.09341 | Multi-Agent·审计·反共识偏好优化 | ★★★★☆ |
+| 2026/02/24 | AlphaEvolve | 2602.16928 | MARL·算法自动发现·LLM代码演化 | ★★★★☆ |
+| 2026/02/28 | SRPO | 2602.21515 | MARL·协作泛化·风险规避均衡 | ★★★★☆ |
 
 ---
 
@@ -688,6 +690,8 @@ $$T^{(1)} < T^{(2)} < \cdots < T^{(M)} \quad (2h \to 4h \to 6h)$$
 - [[AI/2-Agent/Agentic-RL/Reflexion-Verbal-Reinforcement-Learning|Reflexion（NeurIPS 2023）]] — in-context 进化奠基：verbal reinforcement，episodic memory buffer，无需微调（**v13 新增**）
 - [[AI/2-Agent/Agentic-RL/ExpeL-Experiential-Learning-Agent|ExpeL（AAAI 2024）]] — 跨任务规则提炼：ADD/UPVOTE/DOWNVOTE/EDIT 规则库 + 相似案例检索（**v13 新增**）
 - [[AI/2-Agent/Agentic-RL/AgentQ-MCTS-Self-Critique-DPO|AgentQ]] — MCTS + 自我批判 + off-policy DPO，Llama-3 70B 真实预订 18.6%→81.7%（**v13 新增**）
+- [[AI/2-Agent/Multi-Agent/AlphaEvolve-LLM-Discovers-MARL-Algorithms|AlphaEvolve（arXiv:2602.16928）]] — MARL 算法自动发现：LLM 演化代码发现非直觉 CFR/PSRO 变体，10/11 游戏超 SOTA（**v14 新增**）
+- [[AI/2-Agent/Multi-Agent/SRPO-Strategic-Risk-Aversion-Collaborative-MARL|SRPO（arXiv:2602.21515）]] — 协作 MARL 泛化：Risk-averse Quantal Equilibria 替代 Nash，消除 free-riding（**v14 新增**）
 - [[AI/2-Agent/Agentic-RL/PABU-Progress-Aware-Belief-State|PABU（进度感知信念状态）]] — 推理阶段 Context 效率：显式建模任务进度+选择性历史保留；81% 完成率+26.9% 效率提升；与 KLong/SORL 正交（**v14 新增**）
 - [[AI/2-Agent/Agentic-RL/WebPilot|WebPilot（Multi-Agent Web任务）]] — Planner+Executor 架构 + MCTS 战略探索；WebArena/Mind2Web benchmark 验证（**v14 新增**）
 - [[AI/2-Agent/Multi-Agent/AgentAuditor-Reasoning-Tree-审计|AgentAuditor（arXiv:2602.09341）]] — Reasoning Tree 审计多 Agent 系统；ACPO（Anti-Consensus Preference Optimization）识别正确少数派；局部化审计比全局投票精准（**v14 新增**）

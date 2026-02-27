@@ -1,11 +1,13 @@
 ---
 title: "AlphaEvolve: LLM 驱动的多智能体算法演化发现"
-tags: [MARL, AlgorithmDiscovery, CFR, PSRO, LLM-for-Science, CodeEvolution]
+brief: "Google DeepMind（arXiv:2602.16928）：LLM 驱动代码进化自动发现更优 MARL 算法；在 CFR/PSRO 框架上发现非直觉变体 VAD-CFR/SHOR-PSRO，10/11 游戏超越 SOTA；开辟「算法自动发现层」——不是在已有层内改进，而是让 LLM 演化出人类未设计过的算法变体。"
+tags: [MARL, AlgorithmDiscovery, CFR, PSRO, LLM-for-Science, CodeEvolution, type/paper]
 created: 2026-02-28
 status: permanent
 rating: ★★★★☆
 arxiv: "2602.16928"
 affiliation: Google DeepMind
+domain: ai/agent/multi-agent
 related:
   - "[[AI/2-Agent/Multi-Agent/SHARP-Shapley-Credit-Multi-Agent-Tool-Use-RL]]"
   - "[[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization]]"

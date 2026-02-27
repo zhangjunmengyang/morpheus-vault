@@ -216,6 +216,8 @@ graph TD
 
 ## See Also
 
+- [[AI/2-Agent/Multi-Agent/AlphaEvolve-LLM-Discovers-MARL-Algorithms|AlphaEvolve]] — MARL 算法自动发现（算法设计维度），与 SHARP 信用归因正交
+- [[AI/2-Agent/Multi-Agent/SRPO-Strategic-Risk-Aversion-Collaborative-MARL|SRPO]] — 协作 MARL 泛化（均衡选择维度），与 SHARP 信用归因互补
 - [[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO（NeurIPS 2025）]] — **正交互补**：GiGPO 解决纵向（单 agent 不同时间步）credit，SHARP 解决横向（多 agent 之间）credit；两者可组合
 - [[AI/2-Agent/Agentic-RL/Dr-MAS-Stable-RL-Multi-Agent-LLM-Systems|Dr. MAS（NTU，arXiv:2602.08847）]] — **殊途同归**：Dr. MAS 从稳定性出发（per-agent normalization），SHARP 从准确性出发（Shapley reward）；两者都指向 per-agent 设计原则
 - [[AI/2-Agent/Agentic-RL/Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]] — MAGRPO/AT-GRPO/MARS2 全图谱，SHARP 是横向 credit 专项深挖
