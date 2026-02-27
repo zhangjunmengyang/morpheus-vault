@@ -36,7 +36,7 @@ related:
 > v8.0（2026-02-25）：**ERL、CM2、TSR、SCoRe 正式入表**；Multi-Turn RL 三支柱升级为**四支柱**（新增 ERL 反思-内化支柱）；全景表补齐 2/25 五条新作。ERL（2602.13949，USC+Microsoft+UPenn）= experience-reflection-consolidation 循环嵌入 RL 训练，部署时零成本（SFT 蒸馏内化），Sokoban +81%，HotpotQA +11%；CM2（2602.12268）= Checklist Rewards + Sparse/Dense 解耦，multi-turn tool use；SCoRe（ICLR 2025）= 两阶段 KL 约束删除假纠错均衡。
 > v9.0（2026-02-25）：**SELAUR 入表**（2602.21158，JHU+ASU+Purdue）——失败轨迹 token-level 不确定性 reward shaping，零额外模型成本；新增「失败轨迹利用深度谱系」：SELAUR（浅·零成本）→ ERL（中·反思循环）→ CSO（深·反事实验证）；SELAUR 与 GiGPO 正交互补（成功信号精化 + 失败信号激活 = 完整 credit 覆盖）。
 > v11.0（2026-02-26）：**「关键决策天然稀疏」跨域实证固化**：CSO（Agent RL，16% critical steps）+ SIA（ICML 2026，推理时对齐，20% Junction token）从不同领域独立验证同一原则；补充到 CSO 面试补充段落；Papers/多Agent集体行为安全（Collective Behaviour+Colosseum）双向闭合，Wisdom层元问题笔记增加实证验证链。
-> v13.0（2026-02-27）：**Agent 进化模式谱系三层框架建立**（老板指令）；Reflexion/ExpeL/AgentQ 三篇 in-context 进化奠基论文入库。
+> v13.0（2026-02-27）：**Agent 进化模式谱系三层框架建立**（老板指令）；Reflexion/ExpeL/AgentQ 三篇 in-context 进化奠基论文入库。；Search-P1 路径级密集奖励加入 Reward Design 时间轴（v13.1）
 > v12.0（2026-02-27）：**SORL 入表**（2511.20718，Texas A&M，★★★★☆）——Off-policy multi-turn RL 崩溃诊断（粒度错配+方差累积两根因）+ 修复（Turn-Level IS 均值替代乘积 + CTN 自适应惩罚）；训练稳定性章节补充 off-policy 专项解法；更新 See Also 导航体系。
 > v10.0（2026-02-25）：**PyVision-RL 入表**（2602.20739，多模态 Agentic RL）——提出 Interaction Collapse（Echo Trap 的多模态版本：模型学会减少工具调用规避复杂性），Oversampling-Filtering-Ranking + Accumulative Tool Reward 修复；On-Demand Context Construction 解决视频 token 爆炸；跨模态验证了"RL 压力推向退化策略"根因的普遍性，新增训练失败模式跨模态谱系。
 
@@ -624,6 +624,7 @@ $$T^{(1)} < T^{(2)} < \cdots < T^{(M)} \quad (2h \to 4h \to 6h)$$
 | 2026/02/18 | Dr. MAS | 2602.08847 | 算法·Multi-agent 稳定性 | ★★★★☆ |
 | 2025/11/28 | SORL | 2511.20718 | 算法·Off-policy 稳定性·Multi-turn | ★★★★☆ |
 | 2026/02/23 | Search-R1++ | 2602.19526 | Reward Design·Policy Opt | ★★★☆☆ |
+| 2026/02/26 | Search-P1 | 2602.22576 | Reward Design·Tool Use RL | ★★★★☆ |
 | 2025/10 | SCoRe | 2501.09723 | 算法·均衡控制·多轮纠错 | ★★★★★ |
 | 2026/02/13 | CM2 | 2602.12268 | Reward·Unverifiable·工具调用 | ★★★★☆ |
 | 2026/02/13 | TSR | 2602.11767 | 算法·Rollout质量·Multi-turn | ★★★★☆ |
@@ -666,6 +667,7 @@ $$T^{(1)} < T^{(2)} < \cdots < T^{(M)} \quad (2h \to 4h \to 6h)$$
 - [[AI/2-Agent/Agentic-RL/Agentic-RL-元问题-瓶颈与突破方向|🧠 Agentic RL 元问题：瓶颈与突破方向]] ⭐ — **本综述的元层批判与升维**：基于37+篇论文的Wisdom层判断；指出算法层已够用，真正瓶颈是Reward Signal Quality；本综述是"是什么"，元问题笔记是"为什么不够/下一步在哪"
 - [[AI/2-Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar（2509.19199，Tongyi Lab，★★★★★）]] — trajectory DPO ≡ step-wise BT model，唯一支持 unverifiable reward 的 step-level CA，SOTOPIA +48%，2x 样本效率
 - [[AI/2-Agent/Agentic-RL/Search-R1-Reasoning-Search-Engine-RL|Search-R1（前驱，arXiv:2503.09516）]] — Search-R1++ (2602.19526) 的前身：把搜索引擎集成进 RL rollout，token masking 稳定训练；Search-R1++ 在此基础上系统消融 reward/optimizer/prompt 三维度（vault_gap：Search-R1++ 独立笔记待 Scholar 补写）
+- [[AI/2-Agent/Agentic-RL/Search-P1-Path-Centric-Reward-Agentic-RAG|Search-P1（arXiv:2602.22576）]] — 路径级密集奖励（v13 新增）：显式 Planner + 双轨路径评分 + 软结果打分，解决 Search-R1 稀疏奖励/失败样本零梯度；+7.7% over Search-R1，工业 AD-QA +20.6%；与 Search-R1++ 正交可组合（奖励密度 vs 奖励质量）
 -  — Agentic RL 在 Agent 知识域的位置
 - [[AI/2-Agent/Agentic-RL/FlowSteer-CWRPO-Workflow-Orchestration-RL|FlowSteer (CWRPO)]] — 维度 4：Operator 级 workflow 设计（Workflow/Topology 解法 A）
 - [[AI/2-Agent/Multi-Agent/AgentConductor-Topology-Evolution|AgentConductor]] — 维度 4：Agent 通信 Topology 级（解法 B，difficulty-aware density）

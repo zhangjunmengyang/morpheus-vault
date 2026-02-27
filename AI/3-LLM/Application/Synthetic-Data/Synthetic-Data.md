@@ -5,6 +5,11 @@ type: concept
 domain: ai/llm/application/synthetic-data
 created: "2026-02-13"
 updated: "2026-02-13"
+sources:
+  - "Phi-1: arXiv:2306.11644 (Microsoft)"
+  - "WizardLM: arXiv:2304.12244"
+  - "FineWeb-Edu: HuggingFace 2024"
+  - "DeepSeek-R1: arXiv:2501.12948"
 tags:
   - ai/llm/application/synthetic-data
   - type/concept
@@ -97,7 +102,7 @@ response_b = model.generate(f"基于以下反馈改进回答：{critique}")
 - **[Magpie](https://github.com/magpie-align/magpie-align)**：对齐数据生成
 - **[Distilabel](https://github.com/argilla-io/distilabel)**：Argilla 的合成数据 pipeline
 
-## 相关
+## See Also
 
 - [[AI/3-LLM/Application/Synthetic-Data/DataFlow|DataFlow 框架]]
 - [[AI/3-LLM/Application/Synthetic-Data/数据合成|数据合成（Prompt 视角）]]

@@ -106,3 +106,20 @@ _（当前为空）_
 - [x] RAG 全景（11篇覆盖）→ 写「RAG的适用边界」✅
 - [x] 多模态大模型全景（22篇覆盖）→ 写「多模态融合的几种路线」✅ 2026-02-27
 - [x] RLHF/DPO 全景（RL 有大量手撕覆盖）→ 写「从RLHF到DPO的设计演化」✅
+
+---
+
+## 持续追踪（外部系统）
+
+### FARS — Analemma AI 自动科研系统
+
+> 状态：已完成 100 篇（228h），系统仍在运行，人工质量评估进行中。
+
+**笔记路径**：`AI/2-Agent/Fundamentals/FARS-Fully-Automated-Research-System.md`
+
+- [ ] **人工质量评估报告** — 发布后立即读取，关键数据点：AI 评分 vs 人类评分的差距分布，是否有任何论文通过顶会审稿
+- [ ] **系统停止后总结报告** — Analemma 团队发布后精读，重点：他们自己对 FARS 局限的分析
+- [ ] **GitLab 代码精读** — https://gitlab.com/fars-a，重点：Ideation Agent 的文献调研实现 + Experiment Agent 的 GPU 工具封装方式
+- [ ] **OpenFARS 开源版与原版差距** — https://github.com/open-fars/openfars，确认开源版是否包含完整流水线
+
+**关注信号**：analemma.ai 官方 Blog / X (@AnalemmaAI) / 36kr AI 频道

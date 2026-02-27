@@ -468,6 +468,7 @@ Tool Use RL 的根本意义：LLM 从"知识检索机"进化为"策略性问题�
 - [[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training|**ASTRA**]] (2026-01): https://arxiv.org/abs/2601.21558 | 代码: https://github.com/LianjiaTech/astra — 全自动 SFT+RL 流水线，MCP 工具图合成轨迹 + verifiable 环境，32B 超过 o3
 - [[AI/2-Agent/Agentic-RL/RC-GRPO-Reward-Conditioned-Tool-Calling-RL|**RC-GRPO**]] (2026-02): https://arxiv.org/abs/2602.03025 — reward token conditioning 解决 multi-turn GRPO reward 同质化，7B 超闭源
 - [[AI/2-Agent/Agentic-RL/CM2-Checklist-Rewards-Multi-Turn-Tool-Use-RL|**CM2**]] (2026-02): https://arxiv.org/abs/2602.12268 — **Unverifiable reward 路线**：Checklist Rewards（binary criteria decomposition），Sparse assign + Dense criteria 设计，LLM-simulated 工具环境；tau-Bench +8，BFCL-V4 +10，ToolSandbox +12
+- [[AI/2-Agent/Agentic-RL/Search-P1-Path-Centric-Reward-Agentic-RAG|**Search-P1**]] (2026-02): arXiv:2602.22576 — 路径级密集奖励解决 Search-R1 稀疏信号问题；显式 Planner + 双轨路径评分（Self-Consistency × Reference-Alignment，取 max）+ 软结果打分；7B +7.7% over Search-R1，工业 AD-QA +20.6%，训练收敛提速 2.5×
 
 ### 相关 Vault 笔记
 - LLM工具调用与Function-Calling-2026技术全景 — 工具调用原理/MCP/生产实践

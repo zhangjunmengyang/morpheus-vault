@@ -6,8 +6,9 @@ status: permanent
 rating: ★★★★
 arxiv: "2602.22576"
 authors: "Tianle Xia et al. (Tencent)"
+brief: "Search-P1（arXiv:2602.22576，Tencent）用路径级密集奖励解决 Search-R1 三大缺陷（奖励稀疏/失败样本零梯度/收敛慢）：显式 Planner + 双轨路径评分（Self-Consistency × Reference-Alignment，取 max）+ 软结果打分。7B 模型平均 +7.7% over Search-R1，工业 AD-QA +20.6%，训练收敛提速 2.5×。"
 related:
-  - "Search-R1-Retrieval-Augmented-Reasoning"
+  - "Search-R1（arXiv:2503.09516）"
   - "[[AI/2-Agent/Agentic-RL/Search-R1plus-Tool-Use-RL-Ablation]]"
   - "[[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training]]"
 ---
@@ -207,7 +208,7 @@ Search-P1 是 Tool Use RL 中 credit assignment 的"路径级"解法：
 
 ## See Also
 
-- Search-R1-Retrieval-Augmented-Reasoning — 直接被超越的 baseline，arXiv:2503.09516
+- Search-R1（arXiv:2503.09516）— 直接被超越的 baseline
 - [[AI/2-Agent/Agentic-RL/Search-R1plus-Tool-Use-RL-Ablation]] — 并行工作，解决 reward 质量问题（F1+/REINFORCE稳定性）
 - [[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training]] — MCP 工具图 + verifiable RL，不同场景的 tool use RL
 - [[AI/2-Agent/Agentic-RL/SELAUR-Self-Evolving-LLM-Agent-Uncertainty-Rewards]] — token 不确定性 reward shaping，orthogonal 角度

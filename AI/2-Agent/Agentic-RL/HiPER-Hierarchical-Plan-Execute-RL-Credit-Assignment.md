@@ -248,3 +248,10 @@ Plan-Execute Interface 需要修改 action space（增加 switch/subgoal 输出�
 3. **训练开销**：显式 subgoal 输出增加了每步 token 数，训练成本如何？论文未详细分析。
 
 4. **迁移学习**：在 ALFWorld 上学到的 subgoal switching 策略能否迁移到 WebShop？
+
+## See Also
+
+- [[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — 互补方案：通过 anchor state grouping 获取 step-level credit（通用性更高，不依赖 Plan-Execute 结构）
+- [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — HiPER 在 Credit Assignment 谱系中的位置（层级化路线）
+- [[AI/2-Agent/Agentic-RL/MIG-Step-Marginal-Information-Gain-Credit-Assignment|MIG]] — 信息论视角的 step-level credit（与 HiPER segment-level 互补）
+- [[AI/2-Agent/Agentic-RL/SeeUPO-Sequence-Level-Agentic-RL-Convergence-Guarantees|SeeUPO]] — 理论证明 flat multi-turn RL 的收敛问题（HiPER 层级化是一种解法）
