@@ -191,7 +191,7 @@ DPO 的价值在于简洁——不需要训 reward model、不需要复杂的 PP
 - [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO 深度理解]] — 对比 on-policy 方法
 - [[AI/3-LLM/RL/实践/GRPO-Unsloth实践|GRPO Unsloth 实践]] — on-policy RL 方案
 - [[AI/3-LLM/Frameworks/Unsloth/训练示例概述|Unsloth 训练示例]]
-- [[AI/3-LLM/Application/Synthetic-Data/Synthetic Data|Synthetic Data]] — 数据合成
+- [[AI/6-应用/Synthetic-Data/Synthetic Data|Synthetic Data]] — 数据合成
 - [[AI/3-LLM/RL/实践/RLOO-TRL实践|RLOO 实践]] — 另一种 off-policy 方法
 - [[AI/3-LLM/RL/算法/PPO 原理|PPO 原理]]
 - [[AI/3-LLM/RL/实践/DPO-TRL实践|DPO-TRL实践]]
