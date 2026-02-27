@@ -141,6 +141,7 @@ Diffusion LLM（SNDT 开辟的路径）：
 
 ## See Also
 
+- [[AI/3-LLM/Inference/Thinking-by-Subtraction-Confidence-Contrastive-Decoding-Reasoning|Thinking by Subtraction]] — 单轨迹精炼（与 SNDT 多轨迹拼接互补）：compute 受限用前者，充足用后者
 - [[AI/3-LLM/Architecture/LaViDa-R1-Diffusion-LLM-Reasoning]] — 训练时维度：diffu-GRPO 让 dLLM 获得推理能力，与 SNDT 形成训练/测试两端互补
 - [[AI/3-LLM/Inference/Sink-Aware-Pruning-Diffusion-LLM]] — dLLM 推理优化，侧重稀疏性/剪枝
 - [[AI/3-LLM/Inference/MAGE-Block-Diffusion-LLM-Sparse-Attention]] — Block diffusion + sparse attention，dLLM 推理加速
