@@ -233,3 +233,7 @@ MARS2 揭示了一个与 TTS（test-time compute scaling）平行的维度——
   - [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic RL 2026 前沿综合分析]] — Agentic RL 全景
   - [[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL 训练专题]] — 工具调用 RL 的相关设计
   - [[AI/2-Agent/Agentic-RL/Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]] — MAGRPO/AT-GRPO 系列与本文三条路线的系统性对比
+
+## See Also
+
+- [[AI/2-Agent/Multi-Agent/FlexMARL-Rollout-Training-CoDesign-MARL-System|FlexMARL]] — MARL 基础设施层

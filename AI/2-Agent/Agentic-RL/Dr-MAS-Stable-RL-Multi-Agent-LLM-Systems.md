@@ -176,6 +176,7 @@ Multi-Agent RL 训练
 ## See Also
 
 **Multi-Agent RL 训练稳定性谱系**
+- [[AI/2-Agent/Multi-Agent/FlexMARL-Rollout-Training-CoDesign-MARL-System|FlexMARL]] — MARL 基础设施层：Rollout-Training Co-Design，7.3x 加速（与算法层互补）
 - [[AI/2-Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN & StarPO]] — **正交互补**：RAGEN 处理单 agent 内部多轮训练的 Echo Trap（梯度趋零），Dr. MAS 处理跨 agent reward 异质导致的梯度范数爆炸；两者覆盖多 agent RL 稳定性的不同维度
 - [[AI/2-Agent/Agentic-RL/Multi-Agent-RL-训练专题|Multi-Agent RL 训练专题]] — AT-GRPO/MAGRPO/MARS2 全图谱；Dr. MAS 补稳定性维度
 
