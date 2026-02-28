@@ -1,225 +1,409 @@
+
 <!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OpenClaw Agent 进度看板</title>
+  <title>团队工作看板</title>
   <style>
     :root {
-      --bg: #0b1024;
-      --panel: #111a31;
-      --line: #2c3a6f;
-      --text: #edf0ff;
-      --muted: #a7b0d6;
-      --ok: #16bca4;
-      --warn: #f4b93a;
-      --bad: #ff6b6b;
-      --accent: #7c8cff;
-      --chip: rgba(144, 163, 255, 0.15);
+      --bg: #0d1117;
+      --card: #161b22;
+      --card-soft: #1f2731;
+      --border: #30363d;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+      --green: #3fb950;
+      --yellow: #d29922;
+      --red: #f85149;
+      --orange: #db6d28;
+      --purple: #bc8cff;
+      --cyan: #39d0d8;
     }
 
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      font-family: "Inter", "SF Pro Text", "PingFang SC", system-ui, -apple-system, Arial, sans-serif;
-      background:
-        radial-gradient(1200px 600px at 10% 0%, #1f2852 0%, transparent 60%),
-        radial-gradient(900px 500px at 90% 10%, #182b58 0%, transparent 55%),
-        var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', sans-serif;
+      background: var(--bg);
       color: var(--text);
+      line-height: 1.5;
+      padding: 24px;
+      max-width: 1320px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .wrap {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 22px;
+    header {
+      text-align: center;
+      padding: 8px 0 20px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 26px;
     }
 
-    .top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 12px;
-      margin-bottom: 14px;
-      flex-wrap: wrap;
-    }
-
-    .title h1 {
-      margin: 0;
-      font-size: 30px;
-      letter-spacing: 0.5px;
-    }
-
-    .title .sub {
-      margin-top: 6px;
+    header h1 { margin: 0; font-size: 2rem; }
+    .meta {
       color: var(--muted);
-      font-size: 13px;
+      margin-top: 8px;
+      font-size: 0.9em;
     }
 
-    .btn {
-      border: 1px solid var(--line);
-      background: rgba(124, 140, 255, 0.15);
-      color: var(--text);
-      padding: 9px 14px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-size: 13px;
+    .section {
+      margin-bottom: 26px;
     }
 
-    .panel-grid {
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .agent-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .panel {
-      background: linear-gradient(180deg, var(--panel) 0%, rgba(17, 26, 49, 0.92) 100%);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 12px;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
-    }
-
-    .panel .k { color: var(--muted); font-size: 12px; margin-bottom: 8px; line-height: 1.4; }
-    .panel .v { font-size: 28px; font-weight: 700; letter-spacing: 0.3px; }
-
-    .layout {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 14px;
-      align-items: start;
     }
 
-    .section-title { margin: 0 0 10px; font-size: 18px; font-weight: 600; }
-
-    .agents-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; margin-bottom: 14px; }
-
-    .agent {
+    .agent-card {
+      background: var(--card);
+      border: 1px solid var(--border);
       border-radius: 12px;
-      border: 1px solid var(--line);
-      background: rgba(24, 33, 64, 0.85);
-      padding: 10px;
+      padding: 14px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      min-height: 145px;
+      gap: 10px;
     }
 
-    .agent-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
-    .agent h3 { margin: 0; font-size: 16px; line-height: 1.3; }
-    .role { color: var(--muted); font-size: 12px; }
-
-    .status {
-      display: inline-flex;
+    .agent-header {
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 6px;
+      gap: 12px;
+    }
+
+    .agent-name {
+      font-size: 1.04rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .agent-status {
       border-radius: 999px;
-      padding: 3px 8px;
-      font-size: 11px;
-      width: max-content;
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border: 1px solid;
+      white-space: nowrap;
     }
-    .status.ok { background: rgba(22, 188, 164, 0.18); color: #8dffea; border: 1px solid rgba(22, 188, 164, 0.45); }
-    .status.warn { background: rgba(244, 185, 58, 0.2); color: #ffe7a9; border: 1px solid rgba(244, 185, 58, 0.45); }
-    .status.critical { background: rgba(255, 107, 107, 0.2); color: #ffc4c4; border: 1px solid rgba(255, 107, 107, 0.5); }
-    .status.unknown { background: rgba(124, 140, 255, 0.18); color: #d9deff; border: 1px solid rgba(124, 140, 255, 0.45); }
 
-    .meta { color: var(--muted); font-size: 12px; line-height: 1.55; }
-    .agent-note { color: #ced6ff; font-size: 12px; line-height: 1.5; border-top: 1px dashed var(--line); padding-top: 6px; }
-    .chips { margin-top: 2px; display: flex; flex-wrap: wrap; gap: 6px; }
-    .chip { padding: 2px 8px; border-radius: 999px; background: var(--chip); color: #d7ddff; font-size: 11px; border: 1px solid rgba(124, 140, 255, 0.25); }
+    .status-active { background: rgba(63, 185, 80, 0.15); color: var(--green); border-color: rgba(63, 185, 80, 0.35); }
+    .status-warn { background: rgba(210, 153, 34, 0.15); color: var(--yellow); border-color: rgba(210, 153, 34, 0.35); }
+    .status-blocked { background: rgba(248, 81, 73, 0.15); color: var(--red); border-color: rgba(248, 81, 73, 0.35); }
+    .status-idle { background: rgba(139, 148, 158, 0.15); color: var(--muted); border-color: rgba(139, 148, 158, 0.3); }
 
-    .task-columns { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .agent-model {
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      background: rgba(88, 166, 255, 0.1);
+      border-radius: 6px;
+      padding: 2px 8px;
+      width: fit-content;
+      line-height: 1.4;
+    }
+
+    .agent-meta, .agent-task {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .agent-task {
+      color: var(--text);
+      line-height: 1.45;
+      background: rgba(139, 148, 158, 0.08);
+      border: 1px solid #222c3a;
+      padding: 6px 8px;
+      border-radius: 8px;
+    }
+
+    .agent-task-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 2px;
+    }
+
+    .mini-task {
+      border-left: 3px solid var(--border);
+      padding-left: 8px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      line-height: 1.45;
+    }
+
+    .mini-task .state {
+      color: var(--text);
+      font-size: 0.75rem;
+      margin-right: 6px;
+      font-weight: 600;
+    }
+
+    .task-board {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
     .task-col {
+      background: var(--card);
+      border: 1px solid var(--border);
       border-radius: 12px;
-      border: 1px solid var(--line);
-      background: rgba(24, 33, 64, 0.85);
-      padding: 10px;
+      padding: 12px;
       min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
-    .task-col h4 { margin: 0 0 10px; color: #d8ddff; font-size: 14px; font-weight: 600; display: flex; justify-content: space-between; gap: 6px; align-items: center; }
-    .task-count { color: var(--muted); font-size: 12px; background: rgba(124, 140, 255, 0.18); border: 1px solid rgba(124, 140, 255, 0.3); border-radius: 999px; padding: 2px 8px; }
 
-    .task-card {
-      border: 1px solid #2d3a6f;
-      border-left: 4px solid var(--accent);
+    .task-col h4 {
+      margin: 0;
+      font-size: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      color: var(--text);
+    }
+
+    .task-count {
+      color: var(--muted);
+      font-size: 0.8rem;
+      background: rgba(88, 166, 255, 0.12);
+      border: 1px solid rgba(88, 166, 255, 0.2);
+      border-radius: 999px;
+      padding: 2px 8px;
+      white-space: nowrap;
+    }
+
+    .todo-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .todo-card {
+      border: 1px solid var(--border);
       border-radius: 10px;
-      background: #121f45;
-      padding: 8px 9px;
-      margin-bottom: 8px;
-      font-size: 12px;
+      padding: 12px 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: #121a29;
     }
-    .task-card .title { font-weight: 600; margin-bottom: 6px; line-height: 1.45; }
-    .task-card .meta-line { color: var(--muted); margin: 3px 0; line-height: 1.45; }
-    .task-open { border-left-color: #7ab7ff; }
-    .task-claimed { border-left-color: #f4b93a; }
-    .task-blocked { border-left-color: #ff6b6b; }
-    .task-done { border-left-color: #16bca4; }
-    .empty { color: var(--muted); font-size: 12px; padding: 12px 0; }
 
-    .footer { margin-top: 12px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+    .todo-card.high { border-left: 3px solid var(--red); }
+    .todo-card.medium { border-left: 3px solid var(--yellow); }
+    .todo-card.low { border-left: 3px solid var(--green); }
+
+    .todo-card.claimed { border-left-color: var(--cyan); }
+    .todo-card.blocked { border-left-color: var(--orange); }
+    .todo-card.done { border-left-color: var(--green); opacity: 0.95; }
+
+    .todo-priority {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-top: 2px;
+      flex-shrink: 0;
+      width: 34px;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .priority-high { background: rgba(248, 81, 73, 0.18); color: var(--red); }
+    .priority-medium { background: rgba(210, 153, 34, 0.18); color: var(--yellow); }
+    .priority-low { background: rgba(63, 185, 80, 0.18); color: var(--green); }
+
+    .todo-content h3 {
+      margin: 0 0 4px;
+      font-size: 0.94rem;
+      line-height: 1.35;
+    }
+
+    .todo-content p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.35;
+    }
+
+    .todo-tags { display: inline-flex; gap: 4px; flex-wrap: wrap; margin-top: 6px; }
+    .todo-tag {
+      display: inline-block;
+      background: rgba(188, 140, 255, 0.15);
+      color: var(--purple);
+      border: 1px solid rgba(188, 140, 255, 0.2);
+      border-radius: 4px;
+      padding: 1px 6px;
+      font-size: 0.72rem;
+    }
+
+    .completed-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px;
+    }
+
+    .completed-item {
+      display: grid;
+      grid-template-columns: 64px 1fr auto;
+      gap: 12px;
+      align-items: center;
+      background: #1a2230;
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 0.82rem;
+    }
+
+    .completed-date {
+      color: var(--muted);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+    .completed-task { color: var(--text); }
+    .completed-owner {
+      color: var(--purple);
+      white-space: nowrap;
+      font-size: 0.77rem;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+    }
+
+    .kpi {
+      background: var(--card-soft);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+    }
+
+    .kpi .label {
+      color: var(--muted);
+      font-size: 0.78rem;
+      margin-bottom: 6px;
+    }
+
+    .kpi .value {
+      font-size: 1.35rem;
+      font-weight: 700;
+    }
+
+    .empty {
+      color: var(--muted);
+      font-size: 0.82rem;
+      padding: 10px 2px;
+    }
+
+    a.refresh {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.88rem;
+      display: inline-block;
+      margin-top: 4px;
+    }
+
+    .footer {
+      margin-top: 10px;
+      padding: 10px 0 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
 
     @media (max-width: 1200px) {
-      .layout { grid-template-columns: 1fr; }
-      .task-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .task-board { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
+
     @media (max-width: 760px) {
-      .wrap { padding: 14px; }
-      .title h1 { font-size: 24px; }
-      .task-columns { grid-template-columns: 1fr; }
+      body { padding: 12px; }
+      header h1 { font-size: 1.5rem; }
+      .task-board { grid-template-columns: 1fr; }
+      .agent-grid { grid-template-columns: 1fr; }
+      .completed-item { grid-template-columns: 1fr; gap: 4px; }
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="top">
-      <div class="title">
-        <h1>OpenClaw Agent 进度看板</h1>
-        <div class="sub">数据源：shared/bulletin.md · heartbeat-state.json · 生成于 <span id="genAt"></span></div>
+  <header>
+    <h1>🏗️ 团队工作看板</h1>
+    <div class="meta">最后更新：<span id="genAt">—</span> · 数据源：shared/bulletin.md / heartbeat-state.json</div>
+    <a href="javascript:location.reload()" class="refresh">↻ 刷新页面</a>
+  </header>
+
+  <section class="section">
+    <div class="section-title">🧠 团队运作状态</div>
+    <div class="agent-grid" id="teamGrid"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">📋 任务看板（当前活跃）</div>
+    <div class="task-board">
+      <div class="task-col">
+        <h4>OPEN <span class="task-count" id="cnt-open">0</span></h4>
+        <div id="col-open" class="todo-list"></div>
       </div>
-      <a class="btn" href="#" onclick="location.reload(); return false;">刷新页面</a>
+      <div class="task-col">
+        <h4>CLAIMED <span class="task-count" id="cnt-claimed">0</span></h4>
+        <div id="col-claimed" class="todo-list"></div>
+      </div>
+      <div class="task-col">
+        <h4>BLOCKED <span class="task-count" id="cnt-blocked">0</span></h4>
+        <div id="col-blocked" class="todo-list"></div>
+      </div>
+      <div class="task-col">
+        <h4>DONE <span class="task-count" id="cnt-done">0</span></h4>
+        <div id="col-done" class="todo-list"></div>
+      </div>
     </div>
+  </section>
 
-    <div class="panel-grid" id="summary"></div>
+  <section class="section">
+    <div class="section-title">✅ 近期完成</div>
+    <div id="doneList" class="completed-list"></div>
+  </section>
 
-    <div class="layout">
-      <section>
-        <h2 class="section-title">Agent 运作状态</h2>
-        <div class="agents-grid" id="team"></div>
-      </section>
+  <section class="section">
+    <div class="section-title">📈 指标快照</div>
+    <div id="kpi" class="kpi-grid"></div>
+  </section>
 
-      <section>
-        <h2 class="section-title">任务看板（shared/bulletin.md）</h2>
-        <div class="task-columns">
-          <div class="task-col">
-            <h4>OPEN <span class="task-count" id="cnt-open">0</span></h4>
-            <div id="col-open" class="col-list"></div>
-          </div>
-          <div class="task-col">
-            <h4>CLAIMED <span class="task-count" id="cnt-claimed">0</span></h4>
-            <div id="col-claimed" class="col-list"></div>
-          </div>
-          <div class="task-col">
-            <h4>BLOCKED <span class="task-count" id="cnt-blocked">0</span></h4>
-            <div id="col-blocked" class="col-list"></div>
-          </div>
-          <div class="task-col">
-            <h4>DONE <span class="task-count" id="cnt-done">0</span></h4>
-            <div id="col-done" class="col-list"></div>
-          </div>
-        </div>
-        <div class="footer">未分配 / 任意任务会回显给所有 Agent；每 5 分钟更新一次来源文件。优先处理 OPEN 与 BLOCKED。</div>
-      </section>
-    </div>
-  </div>
+  <div class="footer">未分配任务会同步提示给所有 Agent；建议优先处理 OPEN 与 BLOCKED。页面每 5 分钟重生成。</div>
 
   <script id="payload" type="application/json">{
-  "generatedAt": "2026-03-01T02:19:42.413029+08:00",
+  "generatedAt": "2026-03-01T02:41:04.491533+08:00",
   "team": [
     {
       "id": "jarvis",
       "name": "贾维斯",
       "en": "JARVIS",
+      "icon": "🧠",
       "role": "总管/调度",
       "workspace": "/Users/peterzhang/.openclaw/workspace",
       "heartbeat": {
@@ -227,8 +411,8 @@
         "raw": "2026-03-01T01:42:00+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 37,
-        "hint": "37 分钟内有心跳",
+        "ageMin": 59,
+        "hint": "59 分钟内有心跳",
         "count": 703,
         "latestCheck": "03-01 01:42"
       },
@@ -260,15 +444,16 @@
       "id": "sentinel",
       "name": "哨兵",
       "en": "Sentinel",
+      "icon": "🛰️",
       "role": "情报扫描",
       "workspace": "/Users/peterzhang/.openclaw/workspace-sentinel",
       "heartbeat": {
-        "display": "03-01 02:16",
-        "raw": "2026-03-01T02:16+08:00",
+        "display": "03-01 02:21",
+        "raw": "2026-03-01T02:21+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 3,
-        "hint": "3 分钟内有心跳",
+        "ageMin": 20,
+        "hint": "20 分钟内有心跳",
         "count": null,
         "latestCheck": "02-26 04:32"
       },
@@ -279,17 +464,18 @@
       "id": "scholar",
       "name": "学者",
       "en": "Scholar",
+      "icon": "📚",
       "role": "论文/知识",
       "workspace": "/Users/peterzhang/.openclaw/workspace-scholar",
       "heartbeat": {
-        "display": "03-01 02:05",
-        "raw": "2026-03-01T02:05:00+08:00",
+        "display": "03-01 02:22",
+        "raw": "2026-03-01T02:22:00+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 14,
-        "hint": "14 分钟内有心跳",
+        "ageMin": 19,
+        "hint": "19 分钟内有心跳",
         "count": 1,
-        "latestCheck": "03-01 02:05"
+        "latestCheck": "03-01 02:22"
       },
       "snippet": "HB:23:07 已执行(Flow Matching边界澄清+MA-RLHF计划更新)，但 lastHeartbeat 未更新（修复：由总管手动校正）。",
       "tasks": [
@@ -319,17 +505,18 @@
       "id": "librarian",
       "name": "馆长",
       "en": "Librarian",
+      "icon": "🗂️",
       "role": "知识治理",
       "workspace": "/Users/peterzhang/.openclaw/workspace-librarian",
       "heartbeat": {
-        "display": "03-01 01:08",
-        "raw": "2026-03-01T01:08:00+08:00",
+        "display": "03-01 02:23",
+        "raw": "2026-03-01T02:23:00+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 71,
-        "hint": "71 分钟内有心跳",
+        "ageMin": 18,
+        "hint": "18 分钟内有心跳",
         "count": null,
-        "latestCheck": "03-01 01:08"
+        "latestCheck": "03-01 02:23"
       },
       "snippet": "",
       "tasks": [
@@ -380,6 +567,7 @@
       "id": "datasci",
       "name": "多比",
       "en": "DataSci",
+      "icon": "📈",
       "role": "数据科学",
       "workspace": "/Users/peterzhang/.openclaw/workspace-datasci",
       "heartbeat": {
@@ -387,8 +575,8 @@
         "raw": "2026-02-26T14:16",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 3603,
-        "hint": "3603 分钟未更新",
+        "ageMin": 3625,
+        "hint": "3625 分钟未更新",
         "count": null,
         "latestCheck": "未记录"
       },
@@ -420,6 +608,7 @@
       "id": "agent_father",
       "name": "智能之父",
       "en": "AgentFather",
+      "icon": "🧬",
       "role": "人格引擎",
       "workspace": "/Users/peterzhang/.openclaw/workspace-agent-father",
       "heartbeat": {
@@ -439,6 +628,7 @@
       "id": "alfred",
       "name": "阿尔弗雷德",
       "en": "Alfred",
+      "icon": "🧭",
       "role": "生活提醒",
       "workspace": "/Users/peterzhang/.openclaw/workspace-alfred",
       "heartbeat": {
@@ -446,8 +636,8 @@
         "raw": "2026-02-20T18:24:00+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 11995,
-        "hint": "11995 分钟未更新",
+        "ageMin": 12017,
+        "hint": "12017 分钟未更新",
         "count": null,
         "latestCheck": "02-20 18:24"
       },
@@ -458,6 +648,7 @@
       "id": "quant",
       "name": "执政官",
       "en": "Quant/Archon",
+      "icon": "📉",
       "role": "量化/市场",
       "workspace": "/Users/peterzhang/.openclaw/workspace-quant",
       "heartbeat": {
@@ -465,8 +656,8 @@
         "raw": "2026-02-21T00:32+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 11627,
-        "hint": "11627 分钟未更新",
+        "ageMin": 11649,
+        "hint": "11649 分钟未更新",
         "count": null,
         "latestCheck": "02-21 00:32"
       },
@@ -593,74 +784,109 @@
   <script>
     const data = JSON.parse(document.getElementById('payload').textContent);
 
-    const summary = document.getElementById('summary');
-    const teamEl = document.getElementById('team');
-    const statusClassMap = { ok: 'ok', warn: 'warn', critical: 'critical', unknown: 'unknown' };
-    const taskClassMap = { OPEN: 'task-open', CLAIMED: 'task-claimed', BLOCKED: 'task-blocked', DONE: 'task-done' };
+    const statusMap = {
+      ok: { text: '在线', cls: 'status-active', type: 'ok' },
+      warn: { text: '偏慢', cls: 'status-warn', type: 'warn' },
+      critical: { text: '告警', cls: 'status-blocked', type: 'blocked' },
+      unknown: { text: '未打卡', cls: 'status-idle', type: 'idle' },
+    };
 
-    function fmtAge(mins) {
-      if (mins === null || mins === undefined) return '未知';
-      if (mins < 60) return `${mins} 分钟`;
-      const h = Math.floor(mins / 60);
-      const m = mins % 60;
-      return `${h} 小时 ${m} 分钟`;
+    const priorityMap = {
+      high: { text: '高', cls: 'priority-high' },
+      medium: { text: '中', cls: 'priority-medium' },
+      low: { text: '低', cls: 'priority-low' },
+    };
+
+    const stateCls = {
+      OPEN: 'open',
+      CLAIMED: 'claimed',
+      BLOCKED: 'blocked',
+      DONE: 'done'
+    };
+
+    function fmtDateTimeMini(input) {
+      if (!input) return '—';
+      try {
+        const d = new Date(input.replace('—', '-'));
+        if (Number.isNaN(d.getTime())) return input;
+        const mm = String(d.getMonth() + 1).padStart(2, '0');
+        const dd = String(d.getDate()).padStart(2, '0');
+        const hh = String(d.getHours()).padStart(2, '0');
+        const mi = String(d.getMinutes()).padStart(2, '0');
+        return `${mm}-${dd} ${hh}:${mi}`;
+      } catch (_) {
+        return input;
+      }
+    }
+
+    function escapeHtml(s) {
+      return String(s || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
     }
 
     function taskCard(task) {
-      const cls = taskClassMap[task.state] || 'task-open';
       const state = task.state || 'OPEN';
-      return `<div class="task-card ${cls}">
-        <div class="title">${state} · ${task.task || '(无任务文本)'}</div>
-        <div class="meta-line">指派：${task.delegator || '—'} → ${task.assigneeRaw || '任意'}</div>
-        <div class="meta-line">时间：${task.time || '—'}</div>
-        <div class="meta-line">状态：${task.status || '—'}</div>
-        ${task.tags && task.tags.length ? `<div class="meta-line">标签：${task.tags.join(' · ')}</div>` : ''}
+      const prio = (task.priority || 'medium').toLowerCase();
+      const pri = priorityMap[prio] || priorityMap.medium;
+      const assignee = task.assigneeRaw || '任意';
+      const text = task.task || '（未命名任务）';
+      const desc = task.bg || task.deliver || '';
+      const tags = (task.tags || []).slice(0, 3);
+
+      return `<div class="todo-card ${pri.cls} ${stateCls[state] || ''}">
+        <span class="todo-priority ${pri.cls}">${pri.text}</span>
+        <div class="todo-content">
+          <h3>${escapeHtml(text)}</h3>
+          <p>${escapeHtml(desc)}</p>
+          <div class="todo-tags">
+            <span class="todo-tag">${escapeHtml(state)} · ${escapeHtml(assignee)}</span>
+            ${tags.map(t => `<span class="todo-tag">${escapeHtml(t)}</span>`).join('')}
+          </div>
+        </div>
       </div>`;
     }
 
     document.getElementById('genAt').textContent = new Date(data.generatedAt).toLocaleString('zh-CN', { hour12: false });
 
-    summary.innerHTML = `
-      <div class="panel"><div class="k">当前可见任务</div><div class="v">${data.summary.totalTasks}</div></div>
-      <div class="panel"><div class="k">OPEN</div><div class="v">${data.summary.openTasks}</div></div>
-      <div class="panel"><div class="k">CLAIMED</div><div class="v">${data.summary.claimedTasks}</div></div>
-      <div class="panel"><div class="k">BLOCKED</div><div class="v">${data.summary.blockedTasks}</div></div>
-      <div class="panel"><div class="k">DONE</div><div class="v">${data.summary.doneTasks}</div></div>
-    `;
-
+    const teamGrid = document.getElementById('teamGrid');
     const order = ['jarvis', 'sentinel', 'scholar', 'librarian', 'datasci', 'agent_father', 'alfred', 'quant'];
-    const teamMap = Object.fromEntries(data.team.map(x => [x.id, x]));
+    const teamMap = Object.fromEntries(data.team.map((m) => [m.id, m]));
+    let activeCnt = 0, warnCnt = 0, blockedCnt = 0, idleCnt = 0;
 
     for (const id of order) {
       const member = teamMap[id];
       if (!member) continue;
+      const state = statusMap[member.heartbeat.statusClass] || statusMap.unknown;
       const hb = member.heartbeat;
-      const taskRows = member.tasks || [];
+      if (hb.statusClass === 'ok') {
+        activeCnt += 1;
+      } else if (hb.statusClass === 'warn') {
+        warnCnt += 1;
+      } else if (hb.statusClass === 'critical') {
+        blockedCnt += 1;
+      } else {
+        idleCnt += 1;
+      }
 
-      const chips = [
-        `<span class="chip">${hb.hint || '健康'}</span>`,
-        `<span class="chip">任务 ${taskRows.length} 条</span>`
-      ];
-      if (hb.count !== null && hb.count !== undefined) chips.push(`<span class="chip">heartbeatCount: ${hb.count}</span>`);
+      const recentTasks = (member.tasks || []).slice(0, 3);
+      const taskHints = recentTasks.length
+        ? recentTasks.map(t => `<div class="mini-task"><span class="state">${escapeHtml(t.state || 'OPEN')}</span>${escapeHtml(t.task || '—')}</div>`).join('')
+        : '<div class="mini-task">暂无待办</div>';
 
-      const taskPreview = taskRows.length
-        ? taskRows.slice(0, 3).map(task => `<div>${taskCard(task)}</div>`).join('')
-        : '<div class="empty">当前无任务分配</div>';
-
-      teamEl.insertAdjacentHTML('beforeend', `
-        <article class="agent">
-          <div class="agent-head">
-            <div>
-              <h3>${member.name}（${member.en}）</h3>
-              <div class="role">${member.role}</div>
-            </div>
-            <span class="status ${statusClassMap[hb.statusClass] || 'unknown'}">● ${hb.status}</span>
+      teamGrid.insertAdjacentHTML('beforeend', `
+        <article class="agent-card">
+          <div class="agent-header">
+            <div class="agent-name">${escapeHtml(member.icon || '🤖')} ${escapeHtml(member.name)}（${escapeHtml(member.en)}）</div>
+            <span class="agent-status ${state.cls}">${state.text}</span>
           </div>
-          <div class="meta">最后心跳：${hb.display}（${fmtAge(hb.ageMin)}）</div>
-          <div class="meta">最后检查：${hb.latestCheck || '未记录'}</div>
-          <div class="chips">${chips.join('')}</div>
-          <div class="agent-note">${member.snippet || '备注：—'}</div>
-          <div>${taskPreview}</div>
+          <div class="agent-model">${escapeHtml(member.role)}</div>
+          <div class="agent-meta">最后心跳：${escapeHtml(hb.display)} · ${escapeHtml(hb.status)}（${escapeHtml(hb.hint)}）</div>
+          <div class="agent-task">${escapeHtml(member.snippet || '无备注')}</div>
+          <div class="agent-task-list">${taskHints}</div>
         </article>
       `);
     }
@@ -673,21 +899,53 @@
     };
 
     const counts = { OPEN: 0, CLAIMED: 0, BLOCKED: 0, DONE: 0 };
-    data.tasks.filter(t => t.section === 'active').forEach(task => {
+    const activeTasks = (data.tasks || []).filter((t) => t.section === 'active');
+
+    activeTasks.forEach((task) => {
       const state = task.state || 'OPEN';
-      if (columns[state]) {
-        columns[state].insertAdjacentHTML('beforeend', taskCard(task));
-        counts[state] = (counts[state] || 0) + 1;
-      }
+      if (!columns[state]) return;
+      columns[state].insertAdjacentHTML('beforeend', taskCard(task));
+      counts[state] = (counts[state] || 0) + 1;
     });
 
     for (const state of ['OPEN', 'CLAIMED', 'BLOCKED', 'DONE']) {
       const el = document.getElementById(`cnt-${state.toLowerCase()}`);
-      if (el) el.textContent = String(counts[state]);
-      if ((columns[state] || {}).children.length === 0) {
-        columns[state].innerHTML = '<div class="empty">暂无任务</div>';
+      if (el) el.textContent = String(counts[state] || 0);
+      const box = columns[state];
+      if (box && !box.children.length) {
+        box.innerHTML = '<div class="empty">暂无任务</div>';
       }
     }
+
+    const doneList = document.getElementById('doneList');
+    const doneItems = (data.tasks || [])
+      .filter((t) => (t.state || '').toUpperCase() === 'DONE')
+      .sort((a, b) => new Date((b.time || '').replace(/-/g, '/')) - new Date((a.time || '').replace(/-/g, '/')))
+      .slice(0, 8);
+
+    if (!doneItems.length) {
+      doneList.innerHTML = '<div class="empty">最近暂无完成项</div>';
+    } else {
+      doneList.innerHTML = doneItems.map((item) => `
+        <div class="completed-item">
+          <span class="completed-date">${escapeHtml(fmtDateTimeMini(item.time || ''))}</span>
+          <span class="completed-task">${escapeHtml(item.task || '—')}</span>
+          <span class="completed-owner">${escapeHtml(item.delegator || '—')}</span>
+        </div>
+      `).join('');
+    }
+
+    const kpi = document.getElementById('kpi');
+    kpi.innerHTML = `
+      <div class="kpi"><div class="label">团队在线</div><div class="value">${activeCnt}/${data.team.length}</div></div>
+      <div class="kpi"><div class="label">偏慢</div><div class="value" style="color: var(--yellow)">${warnCnt}</div></div>
+      <div class="kpi"><div class="label">告警</div><div class="value" style="color: var(--red)">${blockedCnt}</div></div>
+      <div class="kpi"><div class="label">OPEN 任务</div><div class="value" style="color: var(--accent)">${data.summary.openTasks}</div></div>
+      <div class="kpi"><div class="label">DONE 任务</div><div class="value" style="color: var(--green)">${data.summary.doneTasks}</div></div>
+      <div class="kpi"><div class="label">未记录</div><div class="value" style="color: var(--muted)">${idleCnt}</div></div>
+    `;
   </script>
 </body>
 </html>
+
+    

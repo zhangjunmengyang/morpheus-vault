@@ -1,10 +1,11 @@
 {
-  "generatedAt": "2026-03-01T02:19:42.413029+08:00",
+  "generatedAt": "2026-03-01T02:41:04.491533+08:00",
   "team": [
     {
       "id": "jarvis",
       "name": "贾维斯",
       "en": "JARVIS",
+      "icon": "🧠",
       "role": "总管/调度",
       "workspace": "/Users/peterzhang/.openclaw/workspace",
       "heartbeat": {
@@ -12,8 +13,8 @@
         "raw": "2026-03-01T01:42:00+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 37,
-        "hint": "37 分钟内有心跳",
+        "ageMin": 59,
+        "hint": "59 分钟内有心跳",
         "count": 703,
         "latestCheck": "03-01 01:42"
       },
@@ -45,15 +46,16 @@
       "id": "sentinel",
       "name": "哨兵",
       "en": "Sentinel",
+      "icon": "🛰️",
       "role": "情报扫描",
       "workspace": "/Users/peterzhang/.openclaw/workspace-sentinel",
       "heartbeat": {
-        "display": "03-01 02:16",
-        "raw": "2026-03-01T02:16+08:00",
+        "display": "03-01 02:21",
+        "raw": "2026-03-01T02:21+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 3,
-        "hint": "3 分钟内有心跳",
+        "ageMin": 20,
+        "hint": "20 分钟内有心跳",
         "count": null,
         "latestCheck": "02-26 04:32"
       },
@@ -64,17 +66,18 @@
       "id": "scholar",
       "name": "学者",
       "en": "Scholar",
+      "icon": "📚",
       "role": "论文/知识",
       "workspace": "/Users/peterzhang/.openclaw/workspace-scholar",
       "heartbeat": {
-        "display": "03-01 02:05",
-        "raw": "2026-03-01T02:05:00+08:00",
+        "display": "03-01 02:22",
+        "raw": "2026-03-01T02:22:00+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 14,
-        "hint": "14 分钟内有心跳",
+        "ageMin": 19,
+        "hint": "19 分钟内有心跳",
         "count": 1,
-        "latestCheck": "03-01 02:05"
+        "latestCheck": "03-01 02:22"
       },
       "snippet": "HB:23:07 已执行(Flow Matching边界澄清+MA-RLHF计划更新)，但 lastHeartbeat 未更新（修复：由总管手动校正）。",
       "tasks": [
@@ -104,17 +107,18 @@
       "id": "librarian",
       "name": "馆长",
       "en": "Librarian",
+      "icon": "🗂️",
       "role": "知识治理",
       "workspace": "/Users/peterzhang/.openclaw/workspace-librarian",
       "heartbeat": {
-        "display": "03-01 01:08",
-        "raw": "2026-03-01T01:08:00+08:00",
+        "display": "03-01 02:23",
+        "raw": "2026-03-01T02:23:00+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 71,
-        "hint": "71 分钟内有心跳",
+        "ageMin": 18,
+        "hint": "18 分钟内有心跳",
         "count": null,
-        "latestCheck": "03-01 01:08"
+        "latestCheck": "03-01 02:23"
       },
       "snippet": "",
       "tasks": [
@@ -165,6 +169,7 @@
       "id": "datasci",
       "name": "多比",
       "en": "DataSci",
+      "icon": "📈",
       "role": "数据科学",
       "workspace": "/Users/peterzhang/.openclaw/workspace-datasci",
       "heartbeat": {
@@ -172,8 +177,8 @@
         "raw": "2026-02-26T14:16",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 3603,
-        "hint": "3603 分钟未更新",
+        "ageMin": 3625,
+        "hint": "3625 分钟未更新",
         "count": null,
         "latestCheck": "未记录"
       },
@@ -205,6 +210,7 @@
       "id": "agent_father",
       "name": "智能之父",
       "en": "AgentFather",
+      "icon": "🧬",
       "role": "人格引擎",
       "workspace": "/Users/peterzhang/.openclaw/workspace-agent-father",
       "heartbeat": {
@@ -224,6 +230,7 @@
       "id": "alfred",
       "name": "阿尔弗雷德",
       "en": "Alfred",
+      "icon": "🧭",
       "role": "生活提醒",
       "workspace": "/Users/peterzhang/.openclaw/workspace-alfred",
       "heartbeat": {
@@ -231,8 +238,8 @@
         "raw": "2026-02-20T18:24:00+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 11995,
-        "hint": "11995 分钟未更新",
+        "ageMin": 12017,
+        "hint": "12017 分钟未更新",
         "count": null,
         "latestCheck": "02-20 18:24"
       },
@@ -243,6 +250,7 @@
       "id": "quant",
       "name": "执政官",
       "en": "Quant/Archon",
+      "icon": "📉",
       "role": "量化/市场",
       "workspace": "/Users/peterzhang/.openclaw/workspace-quant",
       "heartbeat": {
@@ -250,8 +258,8 @@
         "raw": "2026-02-21T00:32+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 11627,
-        "hint": "11627 分钟未更新",
+        "ageMin": 11649,
+        "hint": "11649 分钟未更新",
         "count": null,
         "latestCheck": "02-21 00:32"
       },
