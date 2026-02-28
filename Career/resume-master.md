@@ -4,7 +4,7 @@ type: career
 date: 2026-02-28
 updated: 2026-02-28
 tags: [resume, career]
-brief: 张钧梦阳个人简历，唯一维护版本，随新项目/经历持续打磨，可直接复制投递。
+brief: 张钧梦阳个人简历，唯一维护版本，面向 Agent 算法工程师岗位，可直接复制投递。
 ---
 
 # 张钧梦阳
@@ -48,21 +48,14 @@ brief: 张钧梦阳个人简历，唯一维护版本，随新项目/经历持续
 
 ### 美团 · 到店住宿业务 | 大数据开发工程师 | 2023.10 - 2024.11
 
-**住宿交易实时数仓建设**
-
-- 建设住宿核心交易链路实时数仓，保障关键数据的时效性与稳定性
-
-**到店数据资源治理专项**
-
-- 主导住宿实时（Flink）+ 离线（Spark）+ OLAP（Doris）全栈资源治理，沉淀方法论、SOP 和工具，推广至到综到餐等其他 BU
-- 建设 Flink 压测工具，分场景对存量作业进行资源治理与性能调优；治理前住宿 Doris 单日成本 10k+，治理后显著缩减
-- 住宿 2025 H1 主 R AI 战役保障工具，推广内部各战役场景，战役提效 30%，全年节省 50 PD+
+- 建设住宿核心交易链路实时数仓；主导 Flink + Spark + Doris 全栈资源治理并推广至多 BU
+- 住宿 2025 H1 主 R **AI 战役保障工具**，战役提效 30%，全年节省 50 PD+
 
 ---
 
 ### 算法实习生 · 新加坡科技研究局（A\*STAR MedImage A3 Lab）| 2023.03 - 2023.08
 
-- 设计多模态心脏病风险预测框架：基于 MAE 架构预训练提取心肌灌注影像特征，结合临床数据设计多模态融合网络（MMAN），用于冠状动脉疾病（CAD）自动诊断
+- 设计多模态心脏病风险预测框架（MAE 预训练 + 多模态融合网络 MMAN），用于冠状动脉疾病自动诊断
 - **并列第一作者**发表 IEEE JBHI（[DOI: 10.1109/JBHI.2024.3523476](https://ieeexplore.ieee.org/document/10817502)）
 
 ---
@@ -73,23 +66,24 @@ brief: 张钧梦阳个人简历，唯一维护版本，随新项目/经历持续
 
 ---
 
-### 算法实习 · 四川省网络空间与数据安全重点实验室 | 2020.12 - 2021.02
+## 开源贡献
 
-- 广告 / 推荐数据清洗与特征工程
+**OpenClaw** — AI Agent 运行时框架贡献者（[openclaw.ai](https://openclaw.ai)）
+
+- 参与多 Agent 协作机制设计：公告板通信协议、心跳调度器、Agent 记忆继承体系
+- 在个人 6-Agent 系统上持续验证 Agent 自进化、横向信息流、故障驱动进化等实验
 
 ---
 
 ## 技能
 
-**AI / Agent**：AI Agent 架构（单 / 多 / supervisor / swarm）、NL2SQL、NL2Param、Prompt 工程、ReAct、多模态深度学习
+**AI / Agent**：Agent 架构设计（单 / 多 / supervisor / swarm）、NL2SQL、NL2Param、Prompt 工程、ReAct、工具调用、上下文管理
 
 **后训练**：SFT（全参 / LoRA / QLoRA）、DPO、GRPO、PPO、verl + Ray + vLLM 分布式训练框架
 
 **分布式训练**：数据并行（ZeRO-1/2/3）、张量并行（TP）、流水线并行（PP）、MoE 训练
 
-**大数据**：Flink（源码级）、Spark、Doris、Hudi、Hadoop / HDFS / Hive / HBase、Lambda 架构
-
-**编程**：Python、Java（并发 / 集合 / 内存）、Scala、Shell、Git
+**编程**：Python、Java、Scala、Shell、Git
 
 **语言**：CET-4 603 / CET-6 471 / 雅思口语 6.5，全英文环境实习经历
 
