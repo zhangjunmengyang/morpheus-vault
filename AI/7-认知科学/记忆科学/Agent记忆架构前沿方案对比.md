@@ -11,7 +11,7 @@ source: "OpenClaw Issue #13991 + ehartford Hexis + globalcaos fork"
 
 # Agent 记忆架构前沿方案对比
 
-> 待扩展为完整横评。当前概览已收录于 [[Agent记忆的认知科学基础]] §6。
+> 待扩展为完整横评。当前概览已收录于 [[AI/7-认知科学/记忆科学/Agent记忆的认知科学基础]] §6。
 
 ## 待填充内容
 

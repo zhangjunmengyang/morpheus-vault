@@ -99,8 +99,8 @@ ARC-AGI 不测记忆，测的是 **novel task generalization**：
 
 **推理体系**
 - LLM 推理优化 2026 全景 — TTC scaling 在推理优化整体框架中的位置
-- [[AI/3-LLM/Inference/SpeculativeDecoding|Speculative Decoding]] — 推理加速体系
-- [[AI/3-LLM/Inference/KV-Cache优化|KV Cache 优化]] — 推理内存优化
+- [[AI/3-LLM/Inference/Speculative Decoding|Speculative Decoding]] — 推理加速体系
+- [[AI/3-LLM/Inference/KV Cache|KV Cache 优化]] — 推理内存优化
 
 ---
 *Created: 2026-02-16 by Scholar heartbeat | See Also updated: 2026-02-25 by Librarian*

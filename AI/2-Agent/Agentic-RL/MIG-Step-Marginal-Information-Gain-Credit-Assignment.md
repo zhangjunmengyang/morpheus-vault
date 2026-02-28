@@ -207,7 +207,7 @@ MIG 是谱系中**唯一基于内在信息量**（模型自身条件似然）的
 
 - [arXiv:2602.01034](https://arxiv.org/abs/2602.01034) — 原文
 - [[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]] — Anchor State Grouping（Credit Assignment 谱系对比）
-- [[AI/2-Agent/Agentic-RL/AgentPRM-Process-Reward-Models-LLM-Agents|AgentPRM]] — MC rollout Q-value（绝对 Q vs 相对 advantage）
+- [[AI/2-Agent/Agentic-RL/AgentPRM-Process-Reward-Models-for-LLM-Agents|AgentPRM]] — MC rollout Q-value（绝对 Q vs 相对 advantage）
 - [[AI/2-Agent/Agentic-RL/iStar-Implicit-Step-Rewards-Agentic-RL|iStar]] — unverifiable reward 场景下的 credit assignment
 - [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon Credit Assignment 专题]] — Credit Assignment 全谱系综合
 - [[AI/2-Agent/Agentic-RL/TSR-Trajectory-Search-Rollouts-Multi-Turn-RL|TSR]] — 训练时树搜索提升 rollout 质量（与 MIG dense reward 正交互补）

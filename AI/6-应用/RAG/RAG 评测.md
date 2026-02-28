@@ -469,7 +469,7 @@ def anonymize_evaluation_data(raw_data):
 
 ---
 
-相关笔记：[[RAG 原理与架构|RAG 系统架构设计]] | [[向量数据库选型|向量数据库选型]] | [[AI/3-LLM/Evaluation/LLM 评测体系|LLM 评测体系]]
+相关笔记：[[AI/6-应用/RAG/RAG 原理与架构|RAG 系统架构设计]] | [[AI/6-应用/RAG/向量数据库选型|向量数据库选型]] | [[AI/3-LLM/Evaluation/LLM 评测体系|LLM 评测体系]]
 ## See Also
 
 - [[AI/6-应用/RAG/Advanced RAG|Advanced RAG]] — 技术体系母文档：本文是其 §9 RAGAS 的独立展开

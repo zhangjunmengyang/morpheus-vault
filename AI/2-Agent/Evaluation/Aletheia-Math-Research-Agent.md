@@ -170,6 +170,6 @@ Google Search grounding        →   RAG / tool use in agent
 
 ---
 **AI4Science 工厂路线（对比视角）**
-- [[AI/2-Agent/Fundamentals/FARS-Fully-Automated-Research-System|FARS（Analemma AI）]] — 对比：FARS 是工厂路线（228h，100篇，9方向，评分3.75），Aletheia 是深度路线（单领域，研究级问题，可突破 frontier）；两者代表 AI4Science 的不同设计哲学
+- [[AI/6-应用/FARS-Fully-Automated-Research-System|FARS（Analemma AI）]] — 对比：FARS 是工厂路线（228h，100篇，9方向，评分3.75），Aletheia 是深度路线（单领域，研究级问题，可突破 frontier）；两者代表 AI4Science 的不同设计哲学
 
 *Created: 2026-02-19 by Scholar heartbeat | See Also updated: 2026-02-27 by Librarian*

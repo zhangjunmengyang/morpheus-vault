@@ -11,7 +11,7 @@ status: stub
 # 互补学习系统理论（Complementary Learning Systems）
 
 > 待扩展：独立详解 CLS 理论的神经机制、实验证据、对 Agent 记忆架构的映射。
-> 当前精华已收录于 [[Agent记忆的认知科学基础]] §1。
+> 当前精华已收录于 [[AI/7-认知科学/记忆科学/Agent记忆的认知科学基础]] §1。
 
 ## 待填充内容
 

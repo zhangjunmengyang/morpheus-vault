@@ -88,5 +88,5 @@ Reflexion 做的正是我们 MEMORY.md 机制的理论化版本：
 
 - [[AI/2-Agent/Agentic-RL/ExpeL-Experiential-Learning-Agent|ExpeL]] — 进化版：从 Reflexion 的单任务反思 → 跨任务规则提炼（解决了泛化问题）
 - [[AI/2-Agent/Agentic-RL/RAGEN-StarPO-Multi-Turn-RL-Self-Evolution|RAGEN/StarPO]] — 训练时多轮 RL 进化（与 Reflexion in-context 进化互补）
-- [[AI/2-Agent/Fundamentals/Agent自我进化策略-从记忆习惯到自主成长|Agent 自我进化策略]] — 10 种 Agent 进化模式（Reflexion 是其中第3种）
+- [[AI/2-Agent/Agentic-RL/Agent自我进化策略-从记忆习惯到自主成长|Agent 自我进化策略]] — 10 种 Agent 进化模式（Reflexion 是其中第3种）
 - [[AI/2-Agent/Agentic-RL/Agent-进化模式谱系|Agent 进化模式谱系]] — 三层统一框架（训练时/in-context/运行时）

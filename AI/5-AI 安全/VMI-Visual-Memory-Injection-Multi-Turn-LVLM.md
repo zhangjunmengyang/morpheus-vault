@@ -180,7 +180,7 @@ Kill Chain 阶段     VMI 对应机制
 
 **相关 Vault 笔记**：
 - [[AI/5-AI 安全/Promptware-Kill-Chain-LLM-Malware|Promptware Kill Chain（正式版）]] — Kill Chain 框架，VMI 是 Retrieval-Independent Persistence（§IV-D）的多模态实现
-- [[AI/5-AI 安全/Promptware-Kill-Chain-Multi-Turn-Persistence|Promptware Kill Chain（Persistence 详解版）]] — Persistence 两分法（RAG-dep vs RAG-indep）详细展开
+- [[AI/5-AI 安全/Promptware-Kill-Chain-LLM-Malware|Promptware Kill Chain（Persistence 详解版）]] — Persistence 两分法（RAG-dep vs RAG-indep）详细展开
 - [[AI/5-AI 安全/PI-Landscape-SoK-Prompt-Injection-Taxonomy-Defense|PI-Landscape SoK]] — 整体 PI 分类法
 - [[AI/5-AI 安全/OMNI-LEAK-Multi-Agent-Orchestrator-Data-Exfiltration|OMNI-LEAK]] — 文字版 indirect injection 的 persistence 案例（文字 vs 图像，同一 kill chain 阶段）
 

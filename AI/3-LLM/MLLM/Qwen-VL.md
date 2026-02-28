@@ -96,5 +96,5 @@ Qwen-VL 系列是目前开源 MLLM 中工程完成度最高的之一。几个值
 - [[AI/3-LLM/MLLM/BLIP-2|BLIP-2]]
 - [[AI/3-LLM/MLLM/MLLM 概述|MLLM 概述]]
 - [[AI/3-LLM/MLLM/CLIP|ViT（CLIP image encoder）]]
-- [[LLaMA|LLaMA]]
-- [[Transformer 位置编码详解|Transformer 位置编码详解]]
+- [[AI/4-模型/Meta/LLaMA|LLaMA]]
+- [[AI/3-LLM/Architecture/Transformer 位置编码|Transformer 位置编码详解]]

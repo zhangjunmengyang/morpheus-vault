@@ -190,7 +190,7 @@ ActionEngine 是 **非 RL 路线**——用符号规划替代 end-to-end RL。
 - [[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training|ASTRA]] — MCP 工具图结构化（与 ActionEngine 的 SMG 同一设计哲学：把环境结构化）
 
 **设计哲学关联**
-- [[AI/6-应用/RAG/RAG-原理与架构|RAG 原理与架构]] — Offline indexing/Online retrieval 分离（与 ActionEngine Offline SMG/Online Planning 同构）
+- [[AI/6-应用/RAG/RAG 原理与架构|RAG 原理与架构]] — Offline indexing/Online retrieval 分离（与 ActionEngine Offline SMG/Online Planning 同构）
 - [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL 2026 综合分析]] — Training-free 与 RL 训练范式的对比框架
 
 ## 推荐阅读

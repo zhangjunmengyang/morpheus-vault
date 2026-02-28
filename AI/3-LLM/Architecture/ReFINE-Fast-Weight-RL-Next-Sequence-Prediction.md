@@ -18,7 +18,7 @@ venue: ICML (submitted)
 see-also:
   - "[[AI/3-LLM/Architecture/Mamba-SSM]]"
   - "[[AI/3-LLM/Architecture/Attention 变体综述]]"
-  - "[[AI/3-LLM/RL/GRPO/_MOC]]"
+  - "[[AI/3-LLM/RL/实践/GRPO-Unsloth实践]]"
 ---
 
 # ReFINE: RL 让 Fast Weight 学会长程记忆

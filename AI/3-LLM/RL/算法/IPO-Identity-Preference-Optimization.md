@@ -21,7 +21,7 @@ sources:
 venue: AISTATS 2024
 related:
   - "[[AI/3-LLM/RL/实践/DPO-TRL实践]]"
-  - "[[AI/3-LLM/RL/Preference-Optimization/SimPO-Simple-Preference-Optimization-Reference-Free]]"
+  - "[[AI/3-LLM/RL/算法/SimPO-Simple-Preference-Optimization-Reference-Free]]"
   - "[[AI/3-LLM/RL/算法/REBEL-Regret-Based-RL-LLM-Alignment]]"
 ---
 

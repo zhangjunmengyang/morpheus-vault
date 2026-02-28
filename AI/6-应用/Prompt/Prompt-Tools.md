@@ -125,7 +125,7 @@ optimized = optimizer.compile(Classifier(), trainset=train_data)
 
 ## 相关
 
-- [[Prompt-Engineering-概述|Prompt Engineering 概述]]
-- [[Prompt-攻击|Prompt 攻击]]
+- [[AI/6-应用/Prompt/Prompt-Engineering-概述|Prompt Engineering 概述]]
+- [[AI/6-应用/Prompt/Prompt-攻击|Prompt 攻击]]
 - [[AI/6-应用/Synthetic-Data/Synthetic-Data|数据合成]]
-- [[Prompt-Engineering-基础|Prompt Engineering 实践]]
+- [[AI/6-应用/Prompt/Prompt-Engineering-基础|Prompt Engineering 实践]]

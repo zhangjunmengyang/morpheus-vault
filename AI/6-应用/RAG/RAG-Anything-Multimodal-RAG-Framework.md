@@ -15,9 +15,9 @@ created: 2026-02-20
 authors: Zirui Guo, Xubin Ren et al.
 affiliation: HKU HKUDS Lab
 see-also:
-  - "[[Advanced RAG|Advanced RAG]]"
+  - "[[AI/6-应用/RAG/Advanced RAG|Advanced RAG]]"
   - RAG 2026 技术全景
-  - "[[RAG 检索策略|RAG 检索策略]]"
+  - "[[AI/6-应用/RAG/RAG 检索策略|RAG 检索策略]]"
   - 多模态大模型 2026 全景
   - AI Agent 2026 技术全景
 ---

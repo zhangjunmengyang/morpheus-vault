@@ -173,7 +173,7 @@ ReAct 框架允许 LLMs 与外部工具交互来获取额外信息，从而给�
 
 ## See Also
 
-- [[AI/3-LLM/Prompt-Engineering/Prompt Engineering 高级|高级 Prompt 技巧]] — 进阶篇
+- [[AI/6-应用/Prompt/Prompt Engineering 高级|高级 Prompt 技巧]] — 进阶篇
 - Prompt Engineering 2026 实战全景 — 2026 年完整全景版（2784行）
 - [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 2026 全景]] — 自动 PE 方向：E-SPL/GEPA 用 RL 进化 prompt
 -  — 大语言模型知识全图谱

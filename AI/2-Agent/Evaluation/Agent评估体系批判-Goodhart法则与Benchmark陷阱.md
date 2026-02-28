@@ -375,7 +375,7 @@ A: (1) 多维度报告而非单一分数；(2) 定期更新（使用近期发布
 - [[AI/2-Agent/Evaluation/Evaluating-AGENTS-Context|Evaluating AGENTS.md（上下文文件效果）]] — context file 设计质量的实证研究（ETH Zurich, ICML 2026）
 - [[AI/2-Agent/Evaluation/DeepSynth-Deep-Information-Synthesis-Benchmark|DeepSynth（arXiv:2602.21143）]] — 本文理论框架的实证案例：DeepSynth 在设计上主动对抗 Goodhart's Law（答案不可直接搜索 + 双重验证），但规模仅 120 题是统计弱点；对照 Q4 答案的五维设计原则
 - [[AI/2-Agent/Evaluation/Gaia2-Dynamic-Async-Agent-Benchmark|Gaia2]] — 动态异步 Agent benchmark，与 DeepSynth 互补（动态性 vs 信息综合深度）
-- [[AI/2-Agent/Agentic-RL/EnterpriseGym-Corecraft-Agent-RL-Benchmark|EnterpriseGym / Corecraft]] — 真实企业任务 benchmark，Goodhart's Law 的另一实证方向（真实工作场景 vs 合成数据）
+- [[AI/2-Agent/Agentic-RL/EnterpriseGym-Corecraft|EnterpriseGym / Corecraft]] — 真实企业任务 benchmark，Goodhart's Law 的另一实证方向（真实工作场景 vs 合成数据）
 - [[AI/2-Agent/Evaluation/Aletheia-Gemini3-DeepThink-FirstProof|Aletheia FirstProof]] — 研究级数学任务的 beyond-benchmark 评估：严格验证器（Lean 4 可机检）是 benchmark 设计理想方向的极端案例
 - [[AI/2-Agent/Agentic-RL/Agentic-RL-2026前沿综合分析|Agentic-RL 2026 综合分析]] — Reward Design 章节与本文的评估批判形成方法论闭环
 

@@ -203,7 +203,7 @@ LLM(
 - [[AI/3-LLM/Infra/分布式训练|分布式训练]] — Tensor Parallel 基础
 - [[AI/4-模型/Meta/LLaMA|LLaMA]]
 - [[Projects/MA-RLHF/lc10/lc10-04-vLLM-V0-手撕实操|vLLM-手撕实操]] — **代码路径**：从零实现 PagedAttention + Continuous Batching 完整代码注解，理解 vLLM 内部机制 ⭐⭐⭐⭐⭐
-- [[AI/3-LLM/Inference/vLLM-V0-V1-完整系统实操|vLLM V0/V1 完整系统实操]] — **系统级深度**：V0 page-level Prefill 转换 + last-token 提取；V1 SchedulerInfo + merge_prompt + KV.split 统一调度；完整 10 文件代码结构 ⭐⭐⭐⭐⭐
+- [[Projects/MA-RLHF/lc10/lc10-04b-vLLM-V0-V1-完整系统实操|vLLM V0/V1 完整系统实操]] — **系统级深度**：V0 page-level Prefill 转换 + last-token 提取；V1 SchedulerInfo + merge_prompt + KV.split 统一调度；完整 10 文件代码结构 ⭐⭐⭐⭐⭐
 - LLM 推理优化 2026 全景 — vLLM 在整个推理优化生态中的位置
 
 ---

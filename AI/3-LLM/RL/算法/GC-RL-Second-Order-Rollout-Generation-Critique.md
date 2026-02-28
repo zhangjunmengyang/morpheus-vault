@@ -178,7 +178,7 @@ GC-RL 属于第三类，思路最新颖：不是换更好的数据，而是从�
 
 ## See Also
 
-- [[AI/3-LLM/RL/Fundamentals/SCoRe-Self-Correction-Two-Phase-RL]] — 另一种双阶段结构（Phase 1 初始化 + Phase 2 精炼），与 GC-RL 的 generation-critique 双轮不同但都是两层结构
+- [[AI/2-Agent/Agentic-RL/SCoRe-Self-Correction-via-Reinforcement-Learning]] — 另一种双阶段结构（Phase 1 初始化 + Phase 2 精炼），与 GC-RL 的 generation-critique 双轮不同但都是两层结构
 - [[AI/2-Agent/Agentic-RL/Search-P1-Path-Centric-Reward-Agentic-RAG]] — 同样"挖掘已有数据的未利用信号"，RAG 场景路径级 soft scoring
 - [[AI/2-Agent/Agentic-RL/AgentPRM-Process-Reward-Models-for-LLM-Agents]] — forward MC rollout vs. GC-RL backward critique rollout
 

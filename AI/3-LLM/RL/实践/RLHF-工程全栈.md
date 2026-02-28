@@ -248,7 +248,7 @@ reward:
   # 或 type: model_based + reward_model_path
 ```
 
-参见 [[AI/3-LLM/Frameworks/verl/GRPO-verl实践|GRPO-verl 实践]] 和 [[AI/3-LLM/RL/实践/GRPO-TRL实践|GRPO-TRL 实践]]。
+参见 [[AI/3-LLM/RL/实践/GRPO-verl实践|GRPO-verl 实践]] 和 [[AI/3-LLM/RL/实践/GRPO-TRL实践|GRPO-TRL 实践]]。
 
 ## 7. 前沿趋势 (2025-2026)
 

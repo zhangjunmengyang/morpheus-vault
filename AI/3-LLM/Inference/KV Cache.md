@@ -28,7 +28,7 @@ related:
 ---
 
 > [!info] 另有面试版
-> Foundations 精简版：[[AI/1-Foundations/Inference/KV Cache]]
+> Foundations 精简版：[[AI/3-LLM/Inference/KV Cache]]
 
 # KV Cache 原理与优化：深度面试笔记
 

@@ -337,5 +337,5 @@ result = evaluate(
 - [[AI/6-应用/RAG/RAG 评测|RAG 评测]] — 评测体系：本文 §9 RAGAS 框架的完整展开，Faithfulness/Relevance 各指标计算方法
 - [[AI/6-应用/RAG/RAG-Anything-Multimodal-RAG-Framework|RAG-Anything]] — 多模态 RAG：本文 §10 多模态 RAG 的完整实现参考
 - [[AI/6-应用/RAG/Advanced-RAG-LLM应用视角|Advanced-RAG-LLM应用视角]] — 工程视角补充：同一主题的 LLM 应用工程落地侧补充
-- [[RAG 检索策略|RAG 检索策略]] — 本文进阶技术的基础层
-- [[向量数据库选型|向量数据库选型]] — 稠密检索的基础设施选型
+- [[AI/6-应用/RAG/RAG 检索策略|RAG 检索策略]] — 本文进阶技术的基础层
+- [[AI/6-应用/RAG/向量数据库选型|向量数据库选型]] — 稠密检索的基础设施选型

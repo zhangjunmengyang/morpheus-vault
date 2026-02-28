@@ -30,7 +30,12 @@ PaperScope.ai 解读：https://paperscope.ai/hf/2509.01055
 - 其次，* ****工具管理 *****仍然分散**：现有的 RLAT 代码库通常针对特定工具定制，使得扩展或复现结果变得困难。
 - 最后，* ****多模态支持 *****仍不成熟**，虽然大多数 RL 框架狭隘地关注文本，但新兴的多模态推理代理需要在统一设计中处理包含图像、视频或其他结构化模态的工具输出。
 
-## 相关
+## See Also
 
-- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]]
-- [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO 深度理解]]
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-Training-verl|Agentic RL Training (verl)]] — VerlTool 解决的是这里描述的核心工程挑战（多工具异步/工具管理碎片化）
+- [[AI/2-Agent/Agentic-RL/ASTRA-Automated-Tool-Agent-Training|ASTRA]] — 自动化工具 Agent 训练框架，覆盖了 VerlTool 尝试统一的工具调用训练问题
+- [[AI/2-Agent/Agentic-RL/Tool-Use-RL-训练专题|Tool-Use-RL 训练专题]] — 工具调用 RL 训练方法综述
+- [[AI/2-Agent/Agentic-RL/RC-GRPO-Reward-Conditioned-Tool-Calling-RL|RC-GRPO]] — 同框架下解决 GRPO 在 multi-turn tool use 中的 reward 同质化问题
+- [[AI/2-Agent/Agentic-RL/EnterpriseGym-Corecraft|EnterpriseGym/Corecraft]] — 工具调用训练环境，可与 VerlTool 框架配合使用
+- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]] — VerlTool 的基础框架
+- [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO 深度理解]] — 核心 RL 算法

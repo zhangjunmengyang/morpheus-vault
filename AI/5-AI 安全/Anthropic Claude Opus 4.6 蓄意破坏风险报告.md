@@ -113,8 +113,9 @@ updated: 2026-02-22
 
 ## See Also
 
--  — AI 安全全景索引
+- [[AI/5-AI 安全/AI 伦理和治理|AI 伦理和治理]] — AI 安全全景索引
+- [[AI/5-AI 安全/Anthropic-Pentagon-Federal-Ban-2026|Anthropic vs Pentagon 联邦禁令事件]] — 安全红线的政治脆弱性（蓄意破坏报告发布后9天的治理危机，互为上下文）
 - AI安全与对齐 2026 全景 — 宏观技术综述
 - [[AI/5-AI 安全/对齐技术总结|对齐技术总结]] — RLHF/宪法 AI 技术路线
 - [[AI/5-AI 安全/Adaptive-Regularization-Safety-Degradation-Finetuning|Adaptive-Regularization]] — hidden state 安全探测研究
-- [[AI/Frontiers/Claude Opus 4.6|Claude Opus 4.6]] — 对应的模型技术分析
+- [[AI/4-模型/Claude/Claude-Opus-4.6|Claude Opus 4.6]] — 对应的模型技术分析

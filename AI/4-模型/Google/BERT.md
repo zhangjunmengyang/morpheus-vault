@@ -17,7 +17,7 @@ related:
   - "[[AI/4-模型/OpenAI/GPT|GPT]]"
   - "[[AI/3-LLM/Architecture/Tokenizer|Tokenizer]]"
   - Transformer 通识
-  - "[[Embedding|Embedding]]"
+  - "[[AI/6-应用/Embedding/Embedding|Embedding]]"
 ---
 # BERT
 
@@ -174,4 +174,4 @@ BERT 和 GPT 代表了两种根本不同的预训练哲学：
 - [[AI/4-模型/DeepSeek/DeepSeek-R1|DeepSeek-R1]]
 - Transformer 通识
 - [[AI/3-LLM/Architecture/Attention 变体综述|Attention 详解]]
-- [[Embedding|Embedding]] — BERT 在 RAG 中的核心应用
+- [[AI/6-应用/Embedding/Embedding|Embedding]] — BERT 在 RAG 中的核心应用

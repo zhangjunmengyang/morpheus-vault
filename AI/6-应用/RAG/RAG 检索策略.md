@@ -444,7 +444,7 @@ Parent Chunk（大块，如 2000 tokens）
 ## See Also
 
 -  — 检索增强生成全景索引
-- [[Advanced RAG|Advanced RAG]] — 本文检索策略的进阶应用
-- [[向量数据库选型|向量数据库选型]] — 实现稠密检索的基础设施
+- [[AI/6-应用/RAG/Advanced RAG|Advanced RAG]] — 本文检索策略的进阶应用
+- [[AI/6-应用/RAG/向量数据库选型|向量数据库选型]] — 实现稠密检索的基础设施
 - RAG 2026 技术全景 — 宏观综述，包含检索策略在完整系统中的位置
 - [[AI/3-LLM/Inference/量化综述|模型量化综述]] — 向量检索中 embedding 压缩的相关技术
