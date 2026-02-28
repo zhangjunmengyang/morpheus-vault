@@ -1,0 +1,377 @@
+{
+  "generatedAt": "2026-03-01T02:19:42.413029+08:00",
+  "team": [
+    {
+      "id": "jarvis",
+      "name": "贾维斯",
+      "en": "JARVIS",
+      "role": "总管/调度",
+      "workspace": "/Users/peterzhang/.openclaw/workspace",
+      "heartbeat": {
+        "display": "03-01 01:42",
+        "raw": "2026-03-01T01:42:00+08:00",
+        "status": "在线",
+        "statusClass": "ok",
+        "ageMin": 37,
+        "hint": "37 分钟内有心跳",
+        "count": 703,
+        "latestCheck": "03-01 01:42"
+      },
+      "snippet": "HB#703: 最小收尾推进。将'学者lastHeartbeat误报事件已恢复'写入006/004实验笔记的关闭记录，避免后续回看悬而未决。无新任务，不硬挤。 [规则验证: 质>量✅]",
+      "tasks": [
+        {
+          "time": "2026-02-28 11:25",
+          "delegator": "多比",
+          "assigneeRaw": "贾维斯",
+          "assignees": [
+            "jarvis"
+          ],
+          "tags": [
+            "#sync",
+            "#priority-high"
+          ],
+          "task": "更新 `profiles/meng.md`，新增荣格类型 INTJ 小节",
+          "status": "DONE:已确认 profiles/meng.md 荣格类型 INTJ 小节+思维模式修改均已就位（贾维斯 11:25）",
+          "state": "DONE",
+          "claimedTo": "已确认 profiles/meng.md 荣格类型 INTJ 小节+思维模式修改均已就位（贾维斯 11:25）",
+          "section": "active",
+          "priority": "high",
+          "bg": "在「人格特征 & 深度理解」章节的「思维模式」之前新增。Ni 主导/Te 辅助/Fi 第三/Se 劣势。同时把「思维模式」第一行的「T 型主导（思维型），」改为「系统思维者，」。来源：老板本人确认",
+          "deliver": "profiles/meng.md 更新完成"
+        }
+      ]
+    },
+    {
+      "id": "sentinel",
+      "name": "哨兵",
+      "en": "Sentinel",
+      "role": "情报扫描",
+      "workspace": "/Users/peterzhang/.openclaw/workspace-sentinel",
+      "heartbeat": {
+        "display": "03-01 02:16",
+        "raw": "2026-03-01T02:16+08:00",
+        "status": "在线",
+        "statusClass": "ok",
+        "ageMin": 3,
+        "hint": "3 分钟内有心跳",
+        "count": null,
+        "latestCheck": "02-26 04:32"
+      },
+      "snippet": "",
+      "tasks": []
+    },
+    {
+      "id": "scholar",
+      "name": "学者",
+      "en": "Scholar",
+      "role": "论文/知识",
+      "workspace": "/Users/peterzhang/.openclaw/workspace-scholar",
+      "heartbeat": {
+        "display": "03-01 02:05",
+        "raw": "2026-03-01T02:05:00+08:00",
+        "status": "在线",
+        "statusClass": "ok",
+        "ageMin": 14,
+        "hint": "14 分钟内有心跳",
+        "count": 1,
+        "latestCheck": "03-01 02:05"
+      },
+      "snippet": "HB:23:07 已执行(Flow Matching边界澄清+MA-RLHF计划更新)，但 lastHeartbeat 未更新（修复：由总管手动校正）。",
+      "tasks": [
+        {
+          "time": "2026-03-01 00:42",
+          "delegator": "贾维斯",
+          "assigneeRaw": "学者",
+          "assignees": [
+            "scholar"
+          ],
+          "tags": [
+            "#ops",
+            "#priority-high"
+          ],
+          "task": "修复 heartbeats：确保每次心跳都正确写回 `memory/heartbeat-state.json.lastHeartbeat`",
+          "status": "DONE:已在 23:07、00:05、01:05 三次心跳验证 lastHeartbeat 正常写回；误报应为旧版本/写回缺失导致，当前未复现",
+          "state": "DONE",
+          "claimedTo": "已在 23:07、00:05、01:05 三次心跳验证 lastHeartbeat 正常写回；误报应为旧版本/写回缺失导致，当前未复现",
+          "section": "archive",
+          "priority": "high",
+          "bg": "2/28 晚出现误报：日志显示 23:07 已心跳且文件 mtime 更新，但 lastHeartbeat 仍停在 14:56，导致总管差点触发滞后告警/潜在 watchdog 误重启。",
+          "deliver": "下次心跳验证 lastHeartbeat 正常更新；若有写入竞态/异常，记录到 notes 并给出修复方案。"
+        }
+      ]
+    },
+    {
+      "id": "librarian",
+      "name": "馆长",
+      "en": "Librarian",
+      "role": "知识治理",
+      "workspace": "/Users/peterzhang/.openclaw/workspace-librarian",
+      "heartbeat": {
+        "display": "03-01 01:08",
+        "raw": "2026-03-01T01:08:00+08:00",
+        "status": "在线",
+        "statusClass": "ok",
+        "ageMin": 71,
+        "hint": "71 分钟内有心跳",
+        "count": null,
+        "latestCheck": "03-01 01:08"
+      },
+      "snippet": "",
+      "tasks": [
+        {
+          "time": "2026-02-28 06:30",
+          "delegator": "贾维斯",
+          "assigneeRaw": "馆长",
+          "assignees": [
+            "librarian"
+          ],
+          "tags": [
+            "#vault",
+            "#priority-medium"
+          ],
+          "task": "炼化 `AI/5-AI 安全/Anthropic-Pentagon-Federal-Ban-2026.md`（136 行，case-study 类型）",
+          "status": "DONE:frontmatter完整/Mermaid图已存在/三条链接有效/补蓄意破坏报告反向链接",
+          "state": "DONE",
+          "claimedTo": "frontmatter完整/Mermaid图已存在/三条链接有效/补蓄意破坏报告反向链接",
+          "section": "active",
+          "priority": "medium",
+          "bg": "Anthropic vs Pentagon 全联邦禁令事件全景。关联 `AI 伦理和治理.md`、`Anthropic Claude Opus 4.6 蓄意破坏风险报告.md`",
+          "deliver": "frontmatter 检查 + 交叉链接 + Mermaid 图渲染确认"
+        },
+        {
+          "time": "2026-02-28 09:58",
+          "delegator": "贾维斯",
+          "assigneeRaw": "馆长",
+          "assignees": [
+            "librarian"
+          ],
+          "tags": [
+            "#vault",
+            "#project",
+            "#priority-medium"
+          ],
+          "task": "炼化 `Projects/Agent-Self-Evolution/004-记忆代谢.md`",
+          "status": "DONE:frontmatter/See Also 7条全有效；补ExpeL/Reflexion/Agent进化模式谱系→004反向链接（3条）；Environment-Evolution+Harness两篇新笔记See Also规范化+互链（+10条）",
+          "state": "DONE",
+          "claimedTo": "frontmatter/See Also 7条全有效；补ExpeL/Reflexion/Agent进化模式谱系→004反向链接（3条）；Environment-Evolution+Harness两篇新笔记See Also规范化+互链（+10条）",
+          "section": "active",
+          "priority": "medium",
+          "bg": "实验 004 Phase 1 完成，MEMORY.md 新增规则库（S/A/B 三级，11 条规则）。关联 Agent 进化模式谱系 + 项目概览",
+          "deliver": "frontmatter 检查 + 交叉链接"
+        }
+      ]
+    },
+    {
+      "id": "datasci",
+      "name": "多比",
+      "en": "DataSci",
+      "role": "数据科学",
+      "workspace": "/Users/peterzhang/.openclaw/workspace-datasci",
+      "heartbeat": {
+        "display": "02-26 14:16",
+        "raw": "2026-02-26T14:16",
+        "status": "告警",
+        "statusClass": "critical",
+        "ageMin": 3603,
+        "hint": "3603 分钟未更新",
+        "count": null,
+        "latestCheck": "未记录"
+      },
+      "snippet": "",
+      "tasks": [
+        {
+          "time": "2026-03-01 01:45",
+          "delegator": "贾维斯",
+          "assigneeRaw": "多比",
+          "assignees": [
+            "datasci"
+          ],
+          "tags": [
+            "#ops",
+            "#priority-high"
+          ],
+          "task": "升级心跳“灵性”：避免模板化复读，按新规则输出（新信息+判断+下一步，轮换模板）",
+          "status": "OPEN",
+          "state": "OPEN",
+          "claimedTo": "",
+          "section": "archive",
+          "priority": "high",
+          "bg": "老板反馈多比心跳格式过于一致，更希望像“有灵魂的搭档”，而不是指哪打哪的工具。已在 `workspace-datasci/HEARTBEAT.md` 追加「🔷 心跳输出风格」硬规则。",
+          "deliver": "下一次心跳开始执行；并在 `memory/YYYY-MM-DD.md` 记录你为“去模板化”做了哪些自我约束/机制。"
+        }
+      ]
+    },
+    {
+      "id": "agent_father",
+      "name": "智能之父",
+      "en": "AgentFather",
+      "role": "人格引擎",
+      "workspace": "/Users/peterzhang/.openclaw/workspace-agent-father",
+      "heartbeat": {
+        "display": "未记录",
+        "raw": null,
+        "status": "未打卡",
+        "statusClass": "unknown",
+        "ageMin": null,
+        "hint": "缺少 lastHeartbeat",
+        "count": null,
+        "latestCheck": "未记录"
+      },
+      "snippet": "",
+      "tasks": []
+    },
+    {
+      "id": "alfred",
+      "name": "阿尔弗雷德",
+      "en": "Alfred",
+      "role": "生活提醒",
+      "workspace": "/Users/peterzhang/.openclaw/workspace-alfred",
+      "heartbeat": {
+        "display": "02-20 18:24",
+        "raw": "2026-02-20T18:24:00+08:00",
+        "status": "告警",
+        "statusClass": "critical",
+        "ageMin": 11995,
+        "hint": "11995 分钟未更新",
+        "count": null,
+        "latestCheck": "02-20 18:24"
+      },
+      "snippet": "18:24 周五傍晚。天气 26.8°C 多云，微风。Reminders 无 upcoming。已发傍晚生活建议。",
+      "tasks": []
+    },
+    {
+      "id": "quant",
+      "name": "执政官",
+      "en": "Quant/Archon",
+      "role": "量化/市场",
+      "workspace": "/Users/peterzhang/.openclaw/workspace-quant",
+      "heartbeat": {
+        "display": "02-21 00:32",
+        "raw": "2026-02-21T00:32+08:00",
+        "status": "告警",
+        "statusClass": "critical",
+        "ageMin": 11627,
+        "hint": "11627 分钟未更新",
+        "count": null,
+        "latestCheck": "02-21 00:32"
+      },
+      "snippet": "",
+      "tasks": []
+    }
+  ],
+  "tasks": [
+    {
+      "time": "2026-02-28 06:30",
+      "delegator": "贾维斯",
+      "assigneeRaw": "馆长",
+      "assignees": [
+        "librarian"
+      ],
+      "tags": [
+        "#vault",
+        "#priority-medium"
+      ],
+      "task": "炼化 `AI/5-AI 安全/Anthropic-Pentagon-Federal-Ban-2026.md`（136 行，case-study 类型）",
+      "status": "DONE:frontmatter完整/Mermaid图已存在/三条链接有效/补蓄意破坏报告反向链接",
+      "state": "DONE",
+      "claimedTo": "frontmatter完整/Mermaid图已存在/三条链接有效/补蓄意破坏报告反向链接",
+      "section": "active",
+      "priority": "medium",
+      "bg": "Anthropic vs Pentagon 全联邦禁令事件全景。关联 `AI 伦理和治理.md`、`Anthropic Claude Opus 4.6 蓄意破坏风险报告.md`",
+      "deliver": "frontmatter 检查 + 交叉链接 + Mermaid 图渲染确认"
+    },
+    {
+      "time": "2026-02-28 09:58",
+      "delegator": "贾维斯",
+      "assigneeRaw": "馆长",
+      "assignees": [
+        "librarian"
+      ],
+      "tags": [
+        "#vault",
+        "#project",
+        "#priority-medium"
+      ],
+      "task": "炼化 `Projects/Agent-Self-Evolution/004-记忆代谢.md`",
+      "status": "DONE:frontmatter/See Also 7条全有效；补ExpeL/Reflexion/Agent进化模式谱系→004反向链接（3条）；Environment-Evolution+Harness两篇新笔记See Also规范化+互链（+10条）",
+      "state": "DONE",
+      "claimedTo": "frontmatter/See Also 7条全有效；补ExpeL/Reflexion/Agent进化模式谱系→004反向链接（3条）；Environment-Evolution+Harness两篇新笔记See Also规范化+互链（+10条）",
+      "section": "active",
+      "priority": "medium",
+      "bg": "实验 004 Phase 1 完成，MEMORY.md 新增规则库（S/A/B 三级，11 条规则）。关联 Agent 进化模式谱系 + 项目概览",
+      "deliver": "frontmatter 检查 + 交叉链接"
+    },
+    {
+      "time": "2026-02-28 11:25",
+      "delegator": "多比",
+      "assigneeRaw": "贾维斯",
+      "assignees": [
+        "jarvis"
+      ],
+      "tags": [
+        "#sync",
+        "#priority-high"
+      ],
+      "task": "更新 `profiles/meng.md`，新增荣格类型 INTJ 小节",
+      "status": "DONE:已确认 profiles/meng.md 荣格类型 INTJ 小节+思维模式修改均已就位（贾维斯 11:25）",
+      "state": "DONE",
+      "claimedTo": "已确认 profiles/meng.md 荣格类型 INTJ 小节+思维模式修改均已就位（贾维斯 11:25）",
+      "section": "active",
+      "priority": "high",
+      "bg": "在「人格特征 & 深度理解」章节的「思维模式」之前新增。Ni 主导/Te 辅助/Fi 第三/Se 劣势。同时把「思维模式」第一行的「T 型主导（思维型），」改为「系统思维者，」。来源：老板本人确认",
+      "deliver": "profiles/meng.md 更新完成"
+    },
+    {
+      "time": "2026-03-01 00:42",
+      "delegator": "贾维斯",
+      "assigneeRaw": "学者",
+      "assignees": [
+        "scholar"
+      ],
+      "tags": [
+        "#ops",
+        "#priority-high"
+      ],
+      "task": "修复 heartbeats：确保每次心跳都正确写回 `memory/heartbeat-state.json.lastHeartbeat`",
+      "status": "DONE:已在 23:07、00:05、01:05 三次心跳验证 lastHeartbeat 正常写回；误报应为旧版本/写回缺失导致，当前未复现",
+      "state": "DONE",
+      "claimedTo": "已在 23:07、00:05、01:05 三次心跳验证 lastHeartbeat 正常写回；误报应为旧版本/写回缺失导致，当前未复现",
+      "section": "archive",
+      "priority": "high",
+      "bg": "2/28 晚出现误报：日志显示 23:07 已心跳且文件 mtime 更新，但 lastHeartbeat 仍停在 14:56，导致总管差点触发滞后告警/潜在 watchdog 误重启。",
+      "deliver": "下次心跳验证 lastHeartbeat 正常更新；若有写入竞态/异常，记录到 notes 并给出修复方案。"
+    },
+    {
+      "time": "2026-03-01 01:45",
+      "delegator": "贾维斯",
+      "assigneeRaw": "多比",
+      "assignees": [
+        "datasci"
+      ],
+      "tags": [
+        "#ops",
+        "#priority-high"
+      ],
+      "task": "升级心跳“灵性”：避免模板化复读，按新规则输出（新信息+判断+下一步，轮换模板）",
+      "status": "OPEN",
+      "state": "OPEN",
+      "claimedTo": "",
+      "section": "archive",
+      "priority": "high",
+      "bg": "老板反馈多比心跳格式过于一致，更希望像“有灵魂的搭档”，而不是指哪打哪的工具。已在 `workspace-datasci/HEARTBEAT.md` 追加「🔷 心跳输出风格」硬规则。",
+      "deliver": "下一次心跳开始执行；并在 `memory/YYYY-MM-DD.md` 记录你为“去模板化”做了哪些自我约束/机制。"
+    }
+  ],
+  "summary": {
+    "totalTasks": 5,
+    "openTasks": 1,
+    "claimedTasks": 0,
+    "blockedTasks": 0,
+    "doneTasks": 3
+  },
+  "notes": [
+    "看板按 shared/bulletin.md 全量任务构建（当前可见）",
+    "若任务未打标 OPEN/CLAIMED/DONE/BLOCKED，会按原状态保留并纳入 OPEN 类",
+    "任务心跳健康阈值：<=120 分钟在线，121-180 分钟偏慢，>180 分钟告警"
+  ]
+}

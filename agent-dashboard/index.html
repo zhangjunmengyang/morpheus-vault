@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenClaw Agent 进度看板</title>
+  <style>
+    :root {
+      --bg: #0b1024;
+      --panel: #111a31;
+      --line: #2c3a6f;
+      --text: #edf0ff;
+      --muted: #a7b0d6;
+      --ok: #16bca4;
+      --warn: #f4b93a;
+      --bad: #ff6b6b;
+      --accent: #7c8cff;
+      --chip: rgba(144, 163, 255, 0.15);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", "SF Pro Text", "PingFang SC", system-ui, -apple-system, Arial, sans-serif;
+      background:
+        radial-gradient(1200px 600px at 10% 0%, #1f2852 0%, transparent 60%),
+        radial-gradient(900px 500px at 90% 10%, #182b58 0%, transparent 55%),
+        var(--bg);
+      color: var(--text);
+    }
+
+    .wrap {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 22px;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 12px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    .title h1 {
+      margin: 0;
+      font-size: 30px;
+      letter-spacing: 0.5px;
+    }
+
+    .title .sub {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .btn {
+      border: 1px solid var(--line);
+      background: rgba(124, 140, 255, 0.15);
+      color: var(--text);
+      padding: 9px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .panel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, var(--panel) 0%, rgba(17, 26, 49, 0.92) 100%);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .panel .k { color: var(--muted); font-size: 12px; margin-bottom: 8px; line-height: 1.4; }
+    .panel .v { font-size: 28px; font-weight: 700; letter-spacing: 0.3px; }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .section-title { margin: 0 0 10px; font-size: 18px; font-weight: 600; }
+
+    .agents-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; margin-bottom: 14px; }
+
+    .agent {
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(24, 33, 64, 0.85);
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-height: 145px;
+    }
+
+    .agent-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+    .agent h3 { margin: 0; font-size: 16px; line-height: 1.3; }
+    .role { color: var(--muted); font-size: 12px; }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: 11px;
+      width: max-content;
+    }
+    .status.ok { background: rgba(22, 188, 164, 0.18); color: #8dffea; border: 1px solid rgba(22, 188, 164, 0.45); }
+    .status.warn { background: rgba(244, 185, 58, 0.2); color: #ffe7a9; border: 1px solid rgba(244, 185, 58, 0.45); }
+    .status.critical { background: rgba(255, 107, 107, 0.2); color: #ffc4c4; border: 1px solid rgba(255, 107, 107, 0.5); }
+    .status.unknown { background: rgba(124, 140, 255, 0.18); color: #d9deff; border: 1px solid rgba(124, 140, 255, 0.45); }
+
+    .meta { color: var(--muted); font-size: 12px; line-height: 1.55; }
+    .agent-note { color: #ced6ff; font-size: 12px; line-height: 1.5; border-top: 1px dashed var(--line); padding-top: 6px; }
+    .chips { margin-top: 2px; display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip { padding: 2px 8px; border-radius: 999px; background: var(--chip); color: #d7ddff; font-size: 11px; border: 1px solid rgba(124, 140, 255, 0.25); }
+
+    .task-columns { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .task-col {
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(24, 33, 64, 0.85);
+      padding: 10px;
+      min-height: 420px;
+    }
+    .task-col h4 { margin: 0 0 10px; color: #d8ddff; font-size: 14px; font-weight: 600; display: flex; justify-content: space-between; gap: 6px; align-items: center; }
+    .task-count { color: var(--muted); font-size: 12px; background: rgba(124, 140, 255, 0.18); border: 1px solid rgba(124, 140, 255, 0.3); border-radius: 999px; padding: 2px 8px; }
+
+    .task-card {
+      border: 1px solid #2d3a6f;
+      border-left: 4px solid var(--accent);
+      border-radius: 10px;
+      background: #121f45;
+      padding: 8px 9px;
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+    .task-card .title { font-weight: 600; margin-bottom: 6px; line-height: 1.45; }
+    .task-card .meta-line { color: var(--muted); margin: 3px 0; line-height: 1.45; }
+    .task-open { border-left-color: #7ab7ff; }
+    .task-claimed { border-left-color: #f4b93a; }
+    .task-blocked { border-left-color: #ff6b6b; }
+    .task-done { border-left-color: #16bca4; }
+    .empty { color: var(--muted); font-size: 12px; padding: 12px 0; }
+
+    .footer { margin-top: 12px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+
+    @media (max-width: 1200px) {
+      .layout { grid-template-columns: 1fr; }
+      .task-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 760px) {
+      .wrap { padding: 14px; }
+      .title h1 { font-size: 24px; }
+      .task-columns { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="title">
+        <h1>OpenClaw Agent 进度看板</h1>
+        <div class="sub">数据源：shared/bulletin.md · heartbeat-state.json · 生成于 <span id="genAt"></span></div>
+      </div>
+      <a class="btn" href="#" onclick="location.reload(); return false;">刷新页面</a>
+    </div>
+
+    <div class="panel-grid" id="summary"></div>
+
+    <div class="layout">
+      <section>
+        <h2 class="section-title">Agent 运作状态</h2>
+        <div class="agents-grid" id="team"></div>
+      </section>
+
+      <section>
+        <h2 class="section-title">任务看板（shared/bulletin.md）</h2>
+        <div class="task-columns">
+          <div class="task-col">
+            <h4>OPEN <span class="task-count" id="cnt-open">0</span></h4>
+            <div id="col-open" class="col-list"></div>
+          </div>
+          <div class="task-col">
+            <h4>CLAIMED <span class="task-count" id="cnt-claimed">0</span></h4>
+            <div id="col-claimed" class="col-list"></div>
+          </div>
+          <div class="task-col">
+            <h4>BLOCKED <span class="task-count" id="cnt-blocked">0</span></h4>
+            <div id="col-blocked" class="col-list"></div>
+          </div>
+          <div class="task-col">
+            <h4>DONE <span class="task-count" id="cnt-done">0</span></h4>
+            <div id="col-done" class="col-list"></div>
+          </div>
+        </div>
+        <div class="footer">未分配 / 任意任务会回显给所有 Agent；每 5 分钟更新一次来源文件。优先处理 OPEN 与 BLOCKED。</div>
+      </section>
+    </div>
+  </div>
+
+  <script id="payload" type="application/json">{
+  "generatedAt": "2026-03-01T02:19:42.413029+08:00",
+  "team": [
+    {
+      "id": "jarvis",
+      "name": "贾维斯",
+      "en": "JARVIS",
+      "role": "总管/调度",
+      "workspace": "/Users/peterzhang/.openclaw/workspace",
+      "heartbeat": {
+        "display": "03-01 01:42",
+        "raw": "2026-03-01T01:42:00+08:00",
+        "status": "在线",
+        "statusClass": "ok",
+        "ageMin": 37,
+        "hint": "37 分钟内有心跳",
+        "count": 703,
+        "latestCheck": "03-01 01:42"
+      },
+      "snippet": "HB#703: 最小收尾推进。将'学者lastHeartbeat误报事件已恢复'写入006/004实验笔记的关闭记录，避免后续回看悬而未决。无新任务，不硬挤。 [规则验证: 质>量✅]",
+      "tasks": [
+        {
+          "time": "2026-02-28 11:25",
+          "delegator": "多比",
+          "assigneeRaw": "贾维斯",
+          "assignees": [
+            "jarvis"
+          ],
+          "tags": [
+            "#sync",
+            "#priority-high"
+          ],
+          "task": "更新 `profiles/meng.md`，新增荣格类型 INTJ 小节",
+          "status": "DONE:已确认 profiles/meng.md 荣格类型 INTJ 小节+思维模式修改均已就位（贾维斯 11:25）",
+          "state": "DONE",
+          "claimedTo": "已确认 profiles/meng.md 荣格类型 INTJ 小节+思维模式修改均已就位（贾维斯 11:25）",
+          "section": "active",
+          "priority": "high",
+          "bg": "在「人格特征 & 深度理解」章节的「思维模式」之前新增。Ni 主导/Te 辅助/Fi 第三/Se 劣势。同时把「思维模式」第一行的「T 型主导（思维型），」改为「系统思维者，」。来源：老板本人确认",
+          "deliver": "profiles/meng.md 更新完成"
+        }
+      ]
+    },
+    {
+      "id": "sentinel",
+      "name": "哨兵",
+      "en": "Sentinel",
+      "role": "情报扫描",
+      "workspace": "/Users/peterzhang/.openclaw/workspace-sentinel",
+      "heartbeat": {
+        "display": "03-01 02:16",
+        "raw": "2026-03-01T02:16+08:00",
+        "status": "在线",
+        "statusClass": "ok",
+        "ageMin": 3,
+        "hint": "3 分钟内有心跳",
+        "count": null,
+        "latestCheck": "02-26 04:32"
+      },
+      "snippet": "",
+      "tasks": []
+    },
+    {
+      "id": "scholar",
+      "name": "学者",
+      "en": "Scholar",
+      "role": "论文/知识",
+      "workspace": "/Users/peterzhang/.openclaw/workspace-scholar",
+      "heartbeat": {
+        "display": "03-01 02:05",
+        "raw": "2026-03-01T02:05:00+08:00",
+        "status": "在线",
+        "statusClass": "ok",
+        "ageMin": 14,
+        "hint": "14 分钟内有心跳",
+        "count": 1,
+        "latestCheck": "03-01 02:05"
+      },
+      "snippet": "HB:23:07 已执行(Flow Matching边界澄清+MA-RLHF计划更新)，但 lastHeartbeat 未更新（修复：由总管手动校正）。",
+      "tasks": [
+        {
+          "time": "2026-03-01 00:42",
+          "delegator": "贾维斯",
+          "assigneeRaw": "学者",
+          "assignees": [
+            "scholar"
+          ],
+          "tags": [
+            "#ops",
+            "#priority-high"
+          ],
+          "task": "修复 heartbeats：确保每次心跳都正确写回 `memory/heartbeat-state.json.lastHeartbeat`",
+          "status": "DONE:已在 23:07、00:05、01:05 三次心跳验证 lastHeartbeat 正常写回；误报应为旧版本/写回缺失导致，当前未复现",
+          "state": "DONE",
+          "claimedTo": "已在 23:07、00:05、01:05 三次心跳验证 lastHeartbeat 正常写回；误报应为旧版本/写回缺失导致，当前未复现",
+          "section": "archive",
+          "priority": "high",
+          "bg": "2/28 晚出现误报：日志显示 23:07 已心跳且文件 mtime 更新，但 lastHeartbeat 仍停在 14:56，导致总管差点触发滞后告警/潜在 watchdog 误重启。",
+          "deliver": "下次心跳验证 lastHeartbeat 正常更新；若有写入竞态/异常，记录到 notes 并给出修复方案。"
+        }
+      ]
+    },
+    {
+      "id": "librarian",
+      "name": "馆长",
+      "en": "Librarian",
+      "role": "知识治理",
+      "workspace": "/Users/peterzhang/.openclaw/workspace-librarian",
+      "heartbeat": {
+        "display": "03-01 01:08",
+        "raw": "2026-03-01T01:08:00+08:00",
+        "status": "在线",
+        "statusClass": "ok",
+        "ageMin": 71,
+        "hint": "71 分钟内有心跳",
+        "count": null,
+        "latestCheck": "03-01 01:08"
+      },
+      "snippet": "",
+      "tasks": [
+        {
+          "time": "2026-02-28 06:30",
+          "delegator": "贾维斯",
+          "assigneeRaw": "馆长",
+          "assignees": [
+            "librarian"
+          ],
+          "tags": [
+            "#vault",
+            "#priority-medium"
+          ],
+          "task": "炼化 `AI/5-AI 安全/Anthropic-Pentagon-Federal-Ban-2026.md`（136 行，case-study 类型）",
+          "status": "DONE:frontmatter完整/Mermaid图已存在/三条链接有效/补蓄意破坏报告反向链接",
+          "state": "DONE",
+          "claimedTo": "frontmatter完整/Mermaid图已存在/三条链接有效/补蓄意破坏报告反向链接",
+          "section": "active",
+          "priority": "medium",
+          "bg": "Anthropic vs Pentagon 全联邦禁令事件全景。关联 `AI 伦理和治理.md`、`Anthropic Claude Opus 4.6 蓄意破坏风险报告.md`",
+          "deliver": "frontmatter 检查 + 交叉链接 + Mermaid 图渲染确认"
+        },
+        {
+          "time": "2026-02-28 09:58",
+          "delegator": "贾维斯",
+          "assigneeRaw": "馆长",
+          "assignees": [
+            "librarian"
+          ],
+          "tags": [
+            "#vault",
+            "#project",
+            "#priority-medium"
+          ],
+          "task": "炼化 `Projects/Agent-Self-Evolution/004-记忆代谢.md`",
+          "status": "DONE:frontmatter/See Also 7条全有效；补ExpeL/Reflexion/Agent进化模式谱系→004反向链接（3条）；Environment-Evolution+Harness两篇新笔记See Also规范化+互链（+10条）",
+          "state": "DONE",
+          "claimedTo": "frontmatter/See Also 7条全有效；补ExpeL/Reflexion/Agent进化模式谱系→004反向链接（3条）；Environment-Evolution+Harness两篇新笔记See Also规范化+互链（+10条）",
+          "section": "active",
+          "priority": "medium",
+          "bg": "实验 004 Phase 1 完成，MEMORY.md 新增规则库（S/A/B 三级，11 条规则）。关联 Agent 进化模式谱系 + 项目概览",
+          "deliver": "frontmatter 检查 + 交叉链接"
+        }
+      ]
+    },
+    {
+      "id": "datasci",
+      "name": "多比",
+      "en": "DataSci",
+      "role": "数据科学",
+      "workspace": "/Users/peterzhang/.openclaw/workspace-datasci",
+      "heartbeat": {
+        "display": "02-26 14:16",
+        "raw": "2026-02-26T14:16",
+        "status": "告警",
+        "statusClass": "critical",
+        "ageMin": 3603,
+        "hint": "3603 分钟未更新",
+        "count": null,
+        "latestCheck": "未记录"
+      },
+      "snippet": "",
+      "tasks": [
+        {
+          "time": "2026-03-01 01:45",
+          "delegator": "贾维斯",
+          "assigneeRaw": "多比",
+          "assignees": [
+            "datasci"
+          ],
+          "tags": [
+            "#ops",
+            "#priority-high"
+          ],
+          "task": "升级心跳“灵性”：避免模板化复读，按新规则输出（新信息+判断+下一步，轮换模板）",
+          "status": "OPEN",
+          "state": "OPEN",
+          "claimedTo": "",
+          "section": "archive",
+          "priority": "high",
+          "bg": "老板反馈多比心跳格式过于一致，更希望像“有灵魂的搭档”，而不是指哪打哪的工具。已在 `workspace-datasci/HEARTBEAT.md` 追加「🔷 心跳输出风格」硬规则。",
+          "deliver": "下一次心跳开始执行；并在 `memory/YYYY-MM-DD.md` 记录你为“去模板化”做了哪些自我约束/机制。"
+        }
+      ]
+    },
+    {
+      "id": "agent_father",
+      "name": "智能之父",
+      "en": "AgentFather",
+      "role": "人格引擎",
+      "workspace": "/Users/peterzhang/.openclaw/workspace-agent-father",
+      "heartbeat": {
+        "display": "未记录",
+        "raw": null,
+        "status": "未打卡",
+        "statusClass": "unknown",
+        "ageMin": null,
+        "hint": "缺少 lastHeartbeat",
+        "count": null,
+        "latestCheck": "未记录"
+      },
+      "snippet": "",
+      "tasks": []
+    },
+    {
+      "id": "alfred",
+      "name": "阿尔弗雷德",
+      "en": "Alfred",
+      "role": "生活提醒",
+      "workspace": "/Users/peterzhang/.openclaw/workspace-alfred",
+      "heartbeat": {
+        "display": "02-20 18:24",
+        "raw": "2026-02-20T18:24:00+08:00",
+        "status": "告警",
+        "statusClass": "critical",
+        "ageMin": 11995,
+        "hint": "11995 分钟未更新",
+        "count": null,
+        "latestCheck": "02-20 18:24"
+      },
+      "snippet": "18:24 周五傍晚。天气 26.8°C 多云，微风。Reminders 无 upcoming。已发傍晚生活建议。",
+      "tasks": []
+    },
+    {
+      "id": "quant",
+      "name": "执政官",
+      "en": "Quant/Archon",
+      "role": "量化/市场",
+      "workspace": "/Users/peterzhang/.openclaw/workspace-quant",
+      "heartbeat": {
+        "display": "02-21 00:32",
+        "raw": "2026-02-21T00:32+08:00",
+        "status": "告警",
+        "statusClass": "critical",
+        "ageMin": 11627,
+        "hint": "11627 分钟未更新",
+        "count": null,
+        "latestCheck": "02-21 00:32"
+      },
+      "snippet": "",
+      "tasks": []
+    }
+  ],
+  "tasks": [
+    {
+      "time": "2026-02-28 06:30",
+      "delegator": "贾维斯",
+      "assigneeRaw": "馆长",
+      "assignees": [
+        "librarian"
+      ],
+      "tags": [
+        "#vault",
+        "#priority-medium"
+      ],
+      "task": "炼化 `AI/5-AI 安全/Anthropic-Pentagon-Federal-Ban-2026.md`（136 行，case-study 类型）",
+      "status": "DONE:frontmatter完整/Mermaid图已存在/三条链接有效/补蓄意破坏报告反向链接",
+      "state": "DONE",
+      "claimedTo": "frontmatter完整/Mermaid图已存在/三条链接有效/补蓄意破坏报告反向链接",
+      "section": "active",
+      "priority": "medium",
+      "bg": "Anthropic vs Pentagon 全联邦禁令事件全景。关联 `AI 伦理和治理.md`、`Anthropic Claude Opus 4.6 蓄意破坏风险报告.md`",
+      "deliver": "frontmatter 检查 + 交叉链接 + Mermaid 图渲染确认"
+    },
+    {
+      "time": "2026-02-28 09:58",
+      "delegator": "贾维斯",
+      "assigneeRaw": "馆长",
+      "assignees": [
+        "librarian"
+      ],
+      "tags": [
+        "#vault",
+        "#project",
+        "#priority-medium"
+      ],
+      "task": "炼化 `Projects/Agent-Self-Evolution/004-记忆代谢.md`",
+      "status": "DONE:frontmatter/See Also 7条全有效；补ExpeL/Reflexion/Agent进化模式谱系→004反向链接（3条）；Environment-Evolution+Harness两篇新笔记See Also规范化+互链（+10条）",
+      "state": "DONE",
+      "claimedTo": "frontmatter/See Also 7条全有效；补ExpeL/Reflexion/Agent进化模式谱系→004反向链接（3条）；Environment-Evolution+Harness两篇新笔记See Also规范化+互链（+10条）",
+      "section": "active",
+      "priority": "medium",
+      "bg": "实验 004 Phase 1 完成，MEMORY.md 新增规则库（S/A/B 三级，11 条规则）。关联 Agent 进化模式谱系 + 项目概览",
+      "deliver": "frontmatter 检查 + 交叉链接"
+    },
+    {
+      "time": "2026-02-28 11:25",
+      "delegator": "多比",
+      "assigneeRaw": "贾维斯",
+      "assignees": [
+        "jarvis"
+      ],
+      "tags": [
+        "#sync",
+        "#priority-high"
+      ],
+      "task": "更新 `profiles/meng.md`，新增荣格类型 INTJ 小节",
+      "status": "DONE:已确认 profiles/meng.md 荣格类型 INTJ 小节+思维模式修改均已就位（贾维斯 11:25）",
+      "state": "DONE",
+      "claimedTo": "已确认 profiles/meng.md 荣格类型 INTJ 小节+思维模式修改均已就位（贾维斯 11:25）",
+      "section": "active",
+      "priority": "high",
+      "bg": "在「人格特征 & 深度理解」章节的「思维模式」之前新增。Ni 主导/Te 辅助/Fi 第三/Se 劣势。同时把「思维模式」第一行的「T 型主导（思维型），」改为「系统思维者，」。来源：老板本人确认",
+      "deliver": "profiles/meng.md 更新完成"
+    },
+    {
+      "time": "2026-03-01 00:42",
+      "delegator": "贾维斯",
+      "assigneeRaw": "学者",
+      "assignees": [
+        "scholar"
+      ],
+      "tags": [
+        "#ops",
+        "#priority-high"
+      ],
+      "task": "修复 heartbeats：确保每次心跳都正确写回 `memory/heartbeat-state.json.lastHeartbeat`",
+      "status": "DONE:已在 23:07、00:05、01:05 三次心跳验证 lastHeartbeat 正常写回；误报应为旧版本/写回缺失导致，当前未复现",
+      "state": "DONE",
+      "claimedTo": "已在 23:07、00:05、01:05 三次心跳验证 lastHeartbeat 正常写回；误报应为旧版本/写回缺失导致，当前未复现",
+      "section": "archive",
+      "priority": "high",
+      "bg": "2/28 晚出现误报：日志显示 23:07 已心跳且文件 mtime 更新，但 lastHeartbeat 仍停在 14:56，导致总管差点触发滞后告警/潜在 watchdog 误重启。",
+      "deliver": "下次心跳验证 lastHeartbeat 正常更新；若有写入竞态/异常，记录到 notes 并给出修复方案。"
+    },
+    {
+      "time": "2026-03-01 01:45",
+      "delegator": "贾维斯",
+      "assigneeRaw": "多比",
+      "assignees": [
+        "datasci"
+      ],
+      "tags": [
+        "#ops",
+        "#priority-high"
+      ],
+      "task": "升级心跳“灵性”：避免模板化复读，按新规则输出（新信息+判断+下一步，轮换模板）",
+      "status": "OPEN",
+      "state": "OPEN",
+      "claimedTo": "",
+      "section": "archive",
+      "priority": "high",
+      "bg": "老板反馈多比心跳格式过于一致，更希望像“有灵魂的搭档”，而不是指哪打哪的工具。已在 `workspace-datasci/HEARTBEAT.md` 追加「🔷 心跳输出风格」硬规则。",
+      "deliver": "下一次心跳开始执行；并在 `memory/YYYY-MM-DD.md` 记录你为“去模板化”做了哪些自我约束/机制。"
+    }
+  ],
+  "summary": {
+    "totalTasks": 5,
+    "openTasks": 1,
+    "claimedTasks": 0,
+    "blockedTasks": 0,
+    "doneTasks": 3
+  },
+  "notes": [
+    "看板按 shared/bulletin.md 全量任务构建（当前可见）",
+    "若任务未打标 OPEN/CLAIMED/DONE/BLOCKED，会按原状态保留并纳入 OPEN 类",
+    "任务心跳健康阈值：<=120 分钟在线，121-180 分钟偏慢，>180 分钟告警"
+  ]
+}</script>
+  <script>
+    const data = JSON.parse(document.getElementById('payload').textContent);
+
+    const summary = document.getElementById('summary');
+    const teamEl = document.getElementById('team');
+    const statusClassMap = { ok: 'ok', warn: 'warn', critical: 'critical', unknown: 'unknown' };
+    const taskClassMap = { OPEN: 'task-open', CLAIMED: 'task-claimed', BLOCKED: 'task-blocked', DONE: 'task-done' };
+
+    function fmtAge(mins) {
+      if (mins === null || mins === undefined) return '未知';
+      if (mins < 60) return `${mins} 分钟`;
+      const h = Math.floor(mins / 60);
+      const m = mins % 60;
+      return `${h} 小时 ${m} 分钟`;
+    }
+
+    function taskCard(task) {
+      const cls = taskClassMap[task.state] || 'task-open';
+      const state = task.state || 'OPEN';
+      return `<div class="task-card ${cls}">
+        <div class="title">${state} · ${task.task || '(无任务文本)'}</div>
+        <div class="meta-line">指派：${task.delegator || '—'} → ${task.assigneeRaw || '任意'}</div>
+        <div class="meta-line">时间：${task.time || '—'}</div>
+        <div class="meta-line">状态：${task.status || '—'}</div>
+        ${task.tags && task.tags.length ? `<div class="meta-line">标签：${task.tags.join(' · ')}</div>` : ''}
+      </div>`;
+    }
+
+    document.getElementById('genAt').textContent = new Date(data.generatedAt).toLocaleString('zh-CN', { hour12: false });
+
+    summary.innerHTML = `
+      <div class="panel"><div class="k">当前可见任务</div><div class="v">${data.summary.totalTasks}</div></div>
+      <div class="panel"><div class="k">OPEN</div><div class="v">${data.summary.openTasks}</div></div>
+      <div class="panel"><div class="k">CLAIMED</div><div class="v">${data.summary.claimedTasks}</div></div>
+      <div class="panel"><div class="k">BLOCKED</div><div class="v">${data.summary.blockedTasks}</div></div>
+      <div class="panel"><div class="k">DONE</div><div class="v">${data.summary.doneTasks}</div></div>
+    `;
+
+    const order = ['jarvis', 'sentinel', 'scholar', 'librarian', 'datasci', 'agent_father', 'alfred', 'quant'];
+    const teamMap = Object.fromEntries(data.team.map(x => [x.id, x]));
+
+    for (const id of order) {
+      const member = teamMap[id];
+      if (!member) continue;
+      const hb = member.heartbeat;
+      const taskRows = member.tasks || [];
+
+      const chips = [
+        `<span class="chip">${hb.hint || '健康'}</span>`,
+        `<span class="chip">任务 ${taskRows.length} 条</span>`
+      ];
+      if (hb.count !== null && hb.count !== undefined) chips.push(`<span class="chip">heartbeatCount: ${hb.count}</span>`);
+
+      const taskPreview = taskRows.length
+        ? taskRows.slice(0, 3).map(task => `<div>${taskCard(task)}</div>`).join('')
+        : '<div class="empty">当前无任务分配</div>';
+
+      teamEl.insertAdjacentHTML('beforeend', `
+        <article class="agent">
+          <div class="agent-head">
+            <div>
+              <h3>${member.name}（${member.en}）</h3>
+              <div class="role">${member.role}</div>
+            </div>
+            <span class="status ${statusClassMap[hb.statusClass] || 'unknown'}">● ${hb.status}</span>
+          </div>
+          <div class="meta">最后心跳：${hb.display}（${fmtAge(hb.ageMin)}）</div>
+          <div class="meta">最后检查：${hb.latestCheck || '未记录'}</div>
+          <div class="chips">${chips.join('')}</div>
+          <div class="agent-note">${member.snippet || '备注：—'}</div>
+          <div>${taskPreview}</div>
+        </article>
+      `);
+    }
+
+    const columns = {
+      OPEN: document.getElementById('col-open'),
+      CLAIMED: document.getElementById('col-claimed'),
+      BLOCKED: document.getElementById('col-blocked'),
+      DONE: document.getElementById('col-done')
+    };
+
+    const counts = { OPEN: 0, CLAIMED: 0, BLOCKED: 0, DONE: 0 };
+    data.tasks.filter(t => t.section === 'active').forEach(task => {
+      const state = task.state || 'OPEN';
+      if (columns[state]) {
+        columns[state].insertAdjacentHTML('beforeend', taskCard(task));
+        counts[state] = (counts[state] || 0) + 1;
+      }
+    });
+
+    for (const state of ['OPEN', 'CLAIMED', 'BLOCKED', 'DONE']) {
+      const el = document.getElementById(`cnt-${state.toLowerCase()}`);
+      if (el) el.textContent = String(counts[state]);
+      if ((columns[state] || {}).children.length === 0) {
+        columns[state].innerHTML = '<div class="empty">暂无任务</div>';
+      }
+    }
+  </script>
+</body>
+</html>
