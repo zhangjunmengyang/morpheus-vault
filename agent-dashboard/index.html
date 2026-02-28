@@ -65,6 +65,99 @@
       gap: 8px;
     }
 
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .kpi-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .kpi-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-top: 4px;
+      color: var(--text);
+    }
+
+    .kpi-label {
+      color: var(--text-dim);
+      font-size: 0.78rem;
+    }
+
+    .collab-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .collab-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+
+    .collab-title {
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 8px;
+      font-size: 0.96rem;
+    }
+
+    .trend-list {
+      display: grid;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    .trend-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .trend-name {
+      color: var(--text);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 72%;
+    }
+
+    .trend-badge {
+      color: var(--text);
+      background: rgba(139, 148, 158, 0.16);
+      border-radius: 999px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      border: 1px solid rgba(139, 148, 158, 0.2);
+      flex-shrink: 0;
+    }
+
+    .trend-sub {
+      color: var(--text-dim);
+      font-size: 0.72rem;
+      text-align: right;
+      margin-top: 2px;
+    }
+
+    .mini-task {
+      color: var(--text-dim);
+      font-size: 0.8rem;
+      padding: 4px 0;
+      border-top: 1px dashed rgba(139, 148, 158, 0.18);
+    }
+
     .agent-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -337,6 +430,29 @@
   </header>
 
   <section class="section">
+    <div class="section-title">🤝 协作与派发机制</div>
+    <div class="kpi-grid" id="dispatchKpi"></div>
+    <div class="collab-grid" id="collabGrid">
+      <article class="collab-card">
+        <div class="collab-title">派发者活跃榜（任务入口）</div>
+        <div id="delegatorBoard" class="trend-list"></div>
+      </article>
+      <article class="collab-card">
+        <div class="collab-title">派发承接榜（任务承担）</div>
+        <div id="assigneeBoard" class="trend-list"></div>
+      </article>
+      <article class="collab-card">
+        <div class="collab-title">主要派发路径</div>
+        <div id="flowBoard" class="trend-list"></div>
+      </article>
+      <article class="collab-card">
+        <div class="collab-title">派发机制健康提示</div>
+        <div id="warningBoard" class="trend-list"></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="section-title">👥 牛马阵容</div>
     <div class="agent-grid" id="teamGrid"></div>
   </section>
@@ -366,7 +482,7 @@
   </footer>
 
   <script id="payload" type="application/json">{
-  "generatedAt": "2026-03-01T02:47:39.114822+08:00",
+  "generatedAt": "2026-03-01T02:55:39.604334+08:00",
   "team": [
     {
       "id": "jarvis",
@@ -380,8 +496,8 @@
         "raw": "2026-03-01T01:42:00+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 65,
-        "hint": "65 分钟内有心跳",
+        "ageMin": 73,
+        "hint": "73 分钟内有心跳",
         "count": 703,
         "latestCheck": "03-01 01:42"
       },
@@ -389,6 +505,7 @@
       "tasks": [
         {
           "time": "2026-02-28 11:25",
+          "timeParsed": "2026-02-28T11:25:00+08:00",
           "delegator": "多比",
           "assigneeRaw": "贾维斯",
           "assignees": [
@@ -405,7 +522,9 @@
           "section": "active",
           "priority": "high",
           "bg": "在「人格特征 & 深度理解」章节的「思维模式」之前新增。Ni 主导/Te 辅助/Fi 第三/Se 劣势。同时把「思维模式」第一行的「T 型主导（思维型），」改为「系统思维者，」。来源：老板本人确认",
-          "deliver": "profiles/meng.md 更新完成"
+          "deliver": "profiles/meng.md 更新完成",
+          "ageMin": 930,
+          "isRecent": true
         }
       ]
     },
@@ -421,8 +540,8 @@
         "raw": "2026-03-01T02:21+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 26,
-        "hint": "26 分钟内有心跳",
+        "ageMin": 34,
+        "hint": "34 分钟内有心跳",
         "count": null,
         "latestCheck": "02-26 04:32"
       },
@@ -441,8 +560,8 @@
         "raw": "2026-03-01T02:22:00+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 25,
-        "hint": "25 分钟内有心跳",
+        "ageMin": 33,
+        "hint": "33 分钟内有心跳",
         "count": 1,
         "latestCheck": "03-01 02:22"
       },
@@ -450,6 +569,7 @@
       "tasks": [
         {
           "time": "2026-03-01 00:42",
+          "timeParsed": "2026-03-01T00:42:00+08:00",
           "delegator": "贾维斯",
           "assigneeRaw": "学者",
           "assignees": [
@@ -466,7 +586,9 @@
           "section": "archive",
           "priority": "high",
           "bg": "2/28 晚出现误报：日志显示 23:07 已心跳且文件 mtime 更新，但 lastHeartbeat 仍停在 14:56，导致总管差点触发滞后告警/潜在 watchdog 误重启。",
-          "deliver": "下次心跳验证 lastHeartbeat 正常更新；若有写入竞态/异常，记录到 notes 并给出修复方案。"
+          "deliver": "下次心跳验证 lastHeartbeat 正常更新；若有写入竞态/异常，记录到 notes 并给出修复方案。",
+          "ageMin": 133,
+          "isRecent": true
         }
       ]
     },
@@ -482,8 +604,8 @@
         "raw": "2026-03-01T02:23:00+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 24,
-        "hint": "24 分钟内有心跳",
+        "ageMin": 32,
+        "hint": "32 分钟内有心跳",
         "count": null,
         "latestCheck": "03-01 02:23"
       },
@@ -491,6 +613,7 @@
       "tasks": [
         {
           "time": "2026-02-28 06:30",
+          "timeParsed": "2026-02-28T06:30:00+08:00",
           "delegator": "贾维斯",
           "assigneeRaw": "馆长",
           "assignees": [
@@ -507,10 +630,13 @@
           "section": "active",
           "priority": "medium",
           "bg": "Anthropic vs Pentagon 全联邦禁令事件全景。关联 `AI 伦理和治理.md`、`Anthropic Claude Opus 4.6 蓄意破坏风险报告.md`",
-          "deliver": "frontmatter 检查 + 交叉链接 + Mermaid 图渲染确认"
+          "deliver": "frontmatter 检查 + 交叉链接 + Mermaid 图渲染确认",
+          "ageMin": 1225,
+          "isRecent": true
         },
         {
           "time": "2026-02-28 09:58",
+          "timeParsed": "2026-02-28T09:58:00+08:00",
           "delegator": "贾维斯",
           "assigneeRaw": "馆长",
           "assignees": [
@@ -528,7 +654,9 @@
           "section": "active",
           "priority": "medium",
           "bg": "实验 004 Phase 1 完成，MEMORY.md 新增规则库（S/A/B 三级，11 条规则）。关联 Agent 进化模式谱系 + 项目概览",
-          "deliver": "frontmatter 检查 + 交叉链接"
+          "deliver": "frontmatter 检查 + 交叉链接",
+          "ageMin": 1017,
+          "isRecent": true
         }
       ]
     },
@@ -544,8 +672,8 @@
         "raw": "2026-02-26T14:16",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 3631,
-        "hint": "3631 分钟未更新",
+        "ageMin": 3639,
+        "hint": "3639 分钟未更新",
         "count": null,
         "latestCheck": "未记录"
       },
@@ -553,6 +681,7 @@
       "tasks": [
         {
           "time": "2026-03-01 01:45",
+          "timeParsed": "2026-03-01T01:45:00+08:00",
           "delegator": "贾维斯",
           "assigneeRaw": "多比",
           "assignees": [
@@ -569,7 +698,9 @@
           "section": "archive",
           "priority": "high",
           "bg": "老板反馈多比心跳格式过于一致，更希望像“有灵魂的搭档”，而不是指哪打哪的工具。已在 `workspace-datasci/HEARTBEAT.md` 追加「🔷 心跳输出风格」硬规则。",
-          "deliver": "下一次心跳开始执行；并在 `memory/YYYY-MM-DD.md` 记录你为“去模板化”做了哪些自我约束/机制。"
+          "deliver": "下一次心跳开始执行；并在 `memory/YYYY-MM-DD.md` 记录你为“去模板化”做了哪些自我约束/机制。",
+          "ageMin": 70,
+          "isRecent": true
         }
       ]
     },
@@ -605,8 +736,8 @@
         "raw": "2026-02-20T18:24:00+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 12023,
-        "hint": "12023 分钟未更新",
+        "ageMin": 12031,
+        "hint": "12031 分钟未更新",
         "count": null,
         "latestCheck": "02-20 18:24"
       },
@@ -625,8 +756,8 @@
         "raw": "2026-02-21T00:32+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 11655,
-        "hint": "11655 分钟未更新",
+        "ageMin": 11663,
+        "hint": "11663 分钟未更新",
         "count": null,
         "latestCheck": "02-21 00:32"
       },
@@ -637,6 +768,7 @@
   "tasks": [
     {
       "time": "2026-02-28 06:30",
+      "timeParsed": "2026-02-28T06:30:00+08:00",
       "delegator": "贾维斯",
       "assigneeRaw": "馆长",
       "assignees": [
@@ -653,10 +785,13 @@
       "section": "active",
       "priority": "medium",
       "bg": "Anthropic vs Pentagon 全联邦禁令事件全景。关联 `AI 伦理和治理.md`、`Anthropic Claude Opus 4.6 蓄意破坏风险报告.md`",
-      "deliver": "frontmatter 检查 + 交叉链接 + Mermaid 图渲染确认"
+      "deliver": "frontmatter 检查 + 交叉链接 + Mermaid 图渲染确认",
+      "ageMin": 1225,
+      "isRecent": true
     },
     {
       "time": "2026-02-28 09:58",
+      "timeParsed": "2026-02-28T09:58:00+08:00",
       "delegator": "贾维斯",
       "assigneeRaw": "馆长",
       "assignees": [
@@ -674,10 +809,13 @@
       "section": "active",
       "priority": "medium",
       "bg": "实验 004 Phase 1 完成，MEMORY.md 新增规则库（S/A/B 三级，11 条规则）。关联 Agent 进化模式谱系 + 项目概览",
-      "deliver": "frontmatter 检查 + 交叉链接"
+      "deliver": "frontmatter 检查 + 交叉链接",
+      "ageMin": 1017,
+      "isRecent": true
     },
     {
       "time": "2026-02-28 11:25",
+      "timeParsed": "2026-02-28T11:25:00+08:00",
       "delegator": "多比",
       "assigneeRaw": "贾维斯",
       "assignees": [
@@ -694,10 +832,13 @@
       "section": "active",
       "priority": "high",
       "bg": "在「人格特征 & 深度理解」章节的「思维模式」之前新增。Ni 主导/Te 辅助/Fi 第三/Se 劣势。同时把「思维模式」第一行的「T 型主导（思维型），」改为「系统思维者，」。来源：老板本人确认",
-      "deliver": "profiles/meng.md 更新完成"
+      "deliver": "profiles/meng.md 更新完成",
+      "ageMin": 930,
+      "isRecent": true
     },
     {
       "time": "2026-03-01 00:42",
+      "timeParsed": "2026-03-01T00:42:00+08:00",
       "delegator": "贾维斯",
       "assigneeRaw": "学者",
       "assignees": [
@@ -714,10 +855,13 @@
       "section": "archive",
       "priority": "high",
       "bg": "2/28 晚出现误报：日志显示 23:07 已心跳且文件 mtime 更新，但 lastHeartbeat 仍停在 14:56，导致总管差点触发滞后告警/潜在 watchdog 误重启。",
-      "deliver": "下次心跳验证 lastHeartbeat 正常更新；若有写入竞态/异常，记录到 notes 并给出修复方案。"
+      "deliver": "下次心跳验证 lastHeartbeat 正常更新；若有写入竞态/异常，记录到 notes 并给出修复方案。",
+      "ageMin": 133,
+      "isRecent": true
     },
     {
       "time": "2026-03-01 01:45",
+      "timeParsed": "2026-03-01T01:45:00+08:00",
       "delegator": "贾维斯",
       "assigneeRaw": "多比",
       "assignees": [
@@ -734,7 +878,9 @@
       "section": "archive",
       "priority": "high",
       "bg": "老板反馈多比心跳格式过于一致，更希望像“有灵魂的搭档”，而不是指哪打哪的工具。已在 `workspace-datasci/HEARTBEAT.md` 追加「🔷 心跳输出风格」硬规则。",
-      "deliver": "下一次心跳开始执行；并在 `memory/YYYY-MM-DD.md` 记录你为“去模板化”做了哪些自我约束/机制。"
+      "deliver": "下一次心跳开始执行；并在 `memory/YYYY-MM-DD.md` 记录你为“去模板化”做了哪些自我约束/机制。",
+      "ageMin": 70,
+      "isRecent": true
     }
   ],
   "summary": {
@@ -744,10 +890,85 @@
     "blockedTasks": 0,
     "doneTasks": 3
   },
-  "version": "v2-参考风格重构",
+  "version": "v2-协作派发机制强化",
+  "collaboration": {
+    "open": 1,
+    "claimed": 0,
+    "blocked": 0,
+    "done": 3,
+    "claimRate": 0.0,
+    "anyAssignments": 0,
+    "delegators": [
+      {
+        "name": "贾维斯",
+        "OPEN": 1,
+        "CLAIMED": 0,
+        "DONE": 2,
+        "BLOCKED": 0,
+        "total": 3
+      },
+      {
+        "name": "多比",
+        "OPEN": 0,
+        "CLAIMED": 0,
+        "DONE": 1,
+        "BLOCKED": 0,
+        "total": 1
+      }
+    ],
+    "assignees": [
+      {
+        "name": "馆长",
+        "OPEN": 0,
+        "CLAIMED": 0,
+        "DONE": 2,
+        "BLOCKED": 0,
+        "total": 2
+      },
+      {
+        "name": "多比",
+        "OPEN": 1,
+        "CLAIMED": 0,
+        "DONE": 0,
+        "BLOCKED": 0,
+        "total": 1
+      },
+      {
+        "name": "贾维斯",
+        "OPEN": 0,
+        "CLAIMED": 0,
+        "DONE": 1,
+        "BLOCKED": 0,
+        "total": 1
+      }
+    ],
+    "flows": [
+      {
+        "from": "贾维斯",
+        "to": "馆长",
+        "count": 2
+      },
+      {
+        "from": "多比",
+        "to": "贾维斯",
+        "count": 1
+      },
+      {
+        "from": "贾维斯",
+        "to": "多比",
+        "count": 1
+      },
+      {
+        "from": "贾维斯",
+        "to": "学者",
+        "count": 1
+      }
+    ],
+    "warnings": []
+  },
   "notes": [
     "看板按 shared/bulletin.md 全量任务构建（当前可见）",
-    "若任务未打标 OPEN/CLAIMED/DONE/BLOCKED，会按原状态保留并纳入 OPEN 类",
+    "派发链路：从发布者 -> 指派方 -> 任务状态（OPEN/CLAIMED/BLOCKED/DONE）",
     "任务心跳健康阈值：<=120 分钟在线，121-180 分钟偏慢，>180 分钟告警"
   ]
 }</script>
@@ -870,6 +1091,72 @@
 
     document.getElementById('buildTag').textContent = data.version || 'v2';
     document.getElementById('genAt').textContent = new Date(data.generatedAt).toLocaleString('zh-CN', { hour12: false });
+
+    function renderKpiCard(value, label, unit = '') {
+      return `
+        <article class="kpi-card">
+          <div class="kpi-label">${safeText(label)}</div>
+          <div class="kpi-value">${safeText(value)}${safeText(unit)}</div>
+        </article>
+      `;
+    }
+
+    function renderTrendRows(rows, type = 'total') {
+      if (!Array.isArray(rows) || !rows.length) {
+        return '<div class="empty">暂无数据</div>';
+      }
+      return rows.slice(0, 6).map((item) => {
+        const name = safeText(item.name || '—');
+        const num = item[type] ?? item.total ?? 0;
+        const open = item.OPEN || 0;
+        const claimed = item.CLAIMED || 0;
+        const blocked = item.BLOCKED || 0;
+        const done = item.DONE || 0;
+        return `
+          <div class="trend-row">
+            <span class="trend-name">${name}</span>
+            <span class="trend-badge">${safeText(String(num))}</span>
+          </div>
+          <div class="trend-sub">OPEN ${safeText(String(open))} · CLAIMED ${safeText(String(claimed))} · BLOCKED ${safeText(String(blocked))} · DONE ${safeText(String(done))}</div>
+        `;
+      }).join('');
+    }
+
+    function renderFlowRows(rows) {
+      if (!Array.isArray(rows) || !rows.length) {
+        return '<div class="empty">暂无派发路径</div>';
+      }
+      return rows.slice(0, 6).map((item) => `
+        <div class="trend-row">
+          <span class="trend-name">${safeText(item.from || '—')} → ${safeText(item.to || '—')}</span>
+          <span class="trend-badge">${safeText(String(item.count || 0))}</span>
+        </div>
+      `).join('');
+    }
+
+    const collab = data.collaboration || {};
+    const open = Number(collab.open || 0);
+    const claimed = Number(collab.claimed || 0);
+    const blocked = Number(collab.blocked || 0);
+    const done = Number(collab.done || 0);
+    const activeTotal = open + claimed;
+    const claimRate = activeTotal > 0 ? Math.round((claimed / activeTotal) * 100) : 0;
+    document.getElementById('dispatchKpi').innerHTML = [
+      renderKpiCard(open, '待认领 OPEN'),
+      renderKpiCard(claimed, '认领中 CLAIMED'),
+      renderKpiCard(blocked, '阻塞 BLOCKED'),
+      renderKpiCard(done, '已完成 DONE'),
+      renderKpiCard(claimRate + '%', '认领转化率'),
+      renderKpiCard(String(collab.anyAssignments || 0), '任意分配'),
+    ].join('');
+
+    const collabMetaWarnings = Array.isArray(collab.warnings) ? collab.warnings.filter(Boolean).slice(0, 4) : [];
+    document.getElementById('warningBoard').innerHTML = collabMetaWarnings.length
+      ? collabMetaWarnings.map((w) => `<div class="trend-row"><span class="trend-name">${safeText(w)}</span></div>`).join('')
+      : '<div class="empty">派发链路较稳，无异常告警</div>';
+    document.getElementById('delegatorBoard').innerHTML = renderTrendRows(collab.delegators || []);
+    document.getElementById('assigneeBoard').innerHTML = renderTrendRows(collab.assignees || []);
+    document.getElementById('flowBoard').innerHTML = renderFlowRows(collab.flows || []);
 
     const teamGrid = document.getElementById('teamGrid');
     for (const member of data.team || []) {
