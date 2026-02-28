@@ -107,7 +107,20 @@ updated: 2026-02-27
 ### 算法实习生 - 新加坡科技研究局（MedImage A3 Lab - Dr. Huang Weimin）| 2023.03 - 2023.08
 
 - 设计多模态风险预测框架，基于 MAE 架构预训练提取图像信息，使用多种特征融合方式结合 Clinic Data 设计多模态风险预测框架
-- **成果**：第一作者发表 IEEE JBHI（https://ieeexplore.ieee.org/document/10817502）
+- **成果**：第一作者发表 IEEE JBHI（DOI: [10.1109/JBHI.2024.3523476](https://ieeexplore.ieee.org/document/10817502)）
+
+## 论文发表
+
+**Junmengyang Zhang**, Xiaohong Wang, Xuefen Teng, Kok Wei Aik, Larry Natividad, Charmaine Cheng.
+"A Multi-Modality Attention Network for Coronary Artery Disease Evaluation From Routine Myocardial Perfusion Imaging and Clinical Data."
+*IEEE Journal of Biomedical and Health Informatics (JBHI)*, Vol. 29, Issue 5, pp. 3272–3281, May 2025.
+DOI: [10.1109/JBHI.2024.3523476](https://ieeexplore.ieee.org/document/10817502) | PubMed: 40030779
+
+> 第一作者。提出多模态注意力网络（MMAN），融合心肌灌注影像（MPI）与临床数据用于冠状动脉疾病（CAD）诊断。
+> 核心模块：图像相关交叉注意力（ICCA）+ 临床数据引导注意力（CDGA）+ MAE 自监督预训练。
+> 新加坡科技研究局 MedImage A3 Lab 实习产出，2024-12-27 在线发表。
+
+---
 
 ## 技能
 
