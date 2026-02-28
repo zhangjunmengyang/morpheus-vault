@@ -4,60 +4,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>团队工作看板</title>
+  <title>🏗️ 团队工作看板</title>
   <style>
     :root {
       --bg: #0d1117;
       --card: #161b22;
-      --card-soft: #1f2731;
       --border: #30363d;
       --text: #e6edf3;
-      --muted: #8b949e;
+      --text-dim: #8b949e;
       --accent: #58a6ff;
       --green: #3fb950;
       --yellow: #d29922;
       --red: #f85149;
       --orange: #db6d28;
       --purple: #bc8cff;
-      --cyan: #39d0d8;
+      --pink: #f778ba;
     }
 
-    * { box-sizing: border-box; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.5;
+      line-height: 1.6;
       padding: 24px;
-      max-width: 1320px;
-      margin-left: auto;
-      margin-right: auto;
+      max-width: 1180px;
+      margin: 0 auto;
     }
 
     header {
       text-align: center;
-      padding: 8px 0 20px;
+      padding: 28px 0 20px;
       border-bottom: 1px solid var(--border);
-      margin-bottom: 26px;
+      margin-bottom: 30px;
     }
 
-    header h1 { margin: 0; font-size: 2rem; }
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
     .meta {
-      color: var(--muted);
-      margin-top: 8px;
+      color: var(--text-dim);
       font-size: 0.9em;
     }
 
     .section {
-      margin-bottom: 26px;
+      margin-bottom: 30px;
     }
 
     .section-title {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: 600;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       padding-bottom: 8px;
       border-bottom: 2px solid var(--border);
       display: flex;
@@ -75,329 +75,298 @@
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+      padding: 16px;
+      transition: border-color 0.2s;
+    }
+
+    .agent-card:hover {
+      border-color: var(--accent);
     }
 
     .agent-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-bottom: 10px;
       gap: 12px;
     }
 
     .agent-name {
-      font-size: 1.04rem;
+      font-size: 1.1rem;
       font-weight: 600;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
 
     .agent-status {
-      border-radius: 999px;
+      padding: 2px 10px;
+      border-radius: 20px;
       font-size: 0.74rem;
-      font-weight: 700;
+      font-weight: 600;
       text-transform: uppercase;
-      padding: 2px 8px;
-      border: 1px solid;
       white-space: nowrap;
+      border: 1px solid;
     }
 
-    .status-active { background: rgba(63, 185, 80, 0.15); color: var(--green); border-color: rgba(63, 185, 80, 0.35); }
-    .status-warn { background: rgba(210, 153, 34, 0.15); color: var(--yellow); border-color: rgba(210, 153, 34, 0.35); }
-    .status-blocked { background: rgba(248, 81, 73, 0.15); color: var(--red); border-color: rgba(248, 81, 73, 0.35); }
-    .status-idle { background: rgba(139, 148, 158, 0.15); color: var(--muted); border-color: rgba(139, 148, 158, 0.3); }
+    .status-active { background: rgba(63, 185, 80, 0.15); color: var(--green); border-color: rgba(63, 185, 80, 0.3); }
+    .status-warn { background: rgba(210, 153, 34, 0.15); color: var(--yellow); border-color: rgba(210, 153, 34, 0.3); }
+    .status-blocked { background: rgba(248, 81, 73, 0.15); color: var(--red); border-color: rgba(248, 81, 73, 0.3); }
+    .status-idle { background: rgba(139, 148, 158, 0.15); color: var(--text-dim); border-color: rgba(139, 148, 158, 0.3); }
 
     .agent-model {
-      color: var(--accent);
-      font-size: 0.8rem;
-      font-family: 'SF Mono', 'Fira Code', monospace;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
       background: rgba(88, 166, 255, 0.1);
-      border-radius: 6px;
+      color: var(--accent);
       padding: 2px 8px;
-      width: fit-content;
-      line-height: 1.4;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-family: "SF Mono", "Fira Code", monospace;
+      margin-bottom: 8px;
     }
 
-    .agent-meta, .agent-task {
-      color: var(--muted);
-      font-size: 0.86rem;
+    .agent-meta,
+    .agent-task {
+      color: var(--text-dim);
+      font-size: 0.9rem;
     }
 
     .agent-task {
-      color: var(--text);
-      line-height: 1.45;
+      margin-top: 6px;
+      color: #d2dee8;
       background: rgba(139, 148, 158, 0.08);
       border: 1px solid #222c3a;
-      padding: 6px 8px;
       border-radius: 8px;
+      padding: 8px;
+      min-height: 44px;
     }
 
-    .agent-task-list {
-      display: grid;
-      gap: 8px;
-      margin-top: 2px;
+    .active-list,
+    .todo-list,
+    .issues-grid,
+    .completed-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
-    .mini-task {
-      border-left: 3px solid var(--border);
-      padding-left: 8px;
-      color: var(--muted);
-      font-size: 0.8rem;
-      line-height: 1.45;
+    .active-card {
+      background: linear-gradient(135deg, rgba(63, 185, 80, 0.08), rgba(88, 166, 255, 0.08));
+      border: 1px solid rgba(63, 185, 80, 0.3);
+      border-radius: 12px;
+      padding: 16px 18px;
     }
 
-    .mini-task .state {
-      color: var(--text);
-      font-size: 0.75rem;
-      margin-right: 6px;
-      font-weight: 600;
+    .active-card h3 {
+      color: var(--green);
+      margin-bottom: 8px;
+      font-size: 1rem;
     }
 
-    .task-board {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+    .active-detail {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      margin: 4px 0;
+    }
+
+    .active-detail strong { color: var(--text); }
+
+    .todo-card,
+    .issue-row,
+    .empty-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: flex-start;
       gap: 12px;
     }
 
-    .task-col {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px;
-      min-height: 420px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .task-col h4 {
-      margin: 0;
-      font-size: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 8px;
-      color: var(--text);
-    }
-
-    .task-count {
-      color: var(--muted);
-      font-size: 0.8rem;
-      background: rgba(88, 166, 255, 0.12);
-      border: 1px solid rgba(88, 166, 255, 0.2);
-      border-radius: 999px;
-      padding: 2px 8px;
-      white-space: nowrap;
-    }
-
-    .todo-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
     .todo-card {
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 12px 12px;
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      background: #121a29;
+      min-height: 92px;
     }
 
     .todo-card.high { border-left: 3px solid var(--red); }
     .todo-card.medium { border-left: 3px solid var(--yellow); }
     .todo-card.low { border-left: 3px solid var(--green); }
 
-    .todo-card.claimed { border-left-color: var(--cyan); }
+    .todo-card.claimed { border-left-color: var(--accent); }
     .todo-card.blocked { border-left-color: var(--orange); }
-    .todo-card.done { border-left-color: var(--green); opacity: 0.95; }
 
     .todo-priority {
       font-size: 0.72rem;
       font-weight: 700;
       padding: 2px 6px;
       border-radius: 4px;
-      margin-top: 2px;
-      flex-shrink: 0;
-      width: 34px;
-      text-align: center;
       white-space: nowrap;
+      flex-shrink: 0;
+      margin-top: 2px;
     }
 
-    .priority-high { background: rgba(248, 81, 73, 0.18); color: var(--red); }
-    .priority-medium { background: rgba(210, 153, 34, 0.18); color: var(--yellow); }
-    .priority-low { background: rgba(63, 185, 80, 0.18); color: var(--green); }
+    .priority-high { background: rgba(248, 81, 73, 0.15); color: var(--red); }
+    .priority-medium { background: rgba(210, 153, 34, 0.15); color: var(--yellow); }
+    .priority-low { background: rgba(63, 185, 80, 0.15); color: var(--green); }
 
     .todo-content h3 {
-      margin: 0 0 4px;
-      font-size: 0.94rem;
+      font-size: 0.98rem;
+      margin-bottom: 4px;
       line-height: 1.35;
     }
 
     .todo-content p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.78rem;
+      color: var(--text-dim);
+      font-size: 0.82rem;
       line-height: 1.35;
+      margin-bottom: 6px;
     }
 
-    .todo-tags { display: inline-flex; gap: 4px; flex-wrap: wrap; margin-top: 6px; }
     .todo-tag {
       display: inline-block;
-      background: rgba(188, 140, 255, 0.15);
+      background: rgba(188, 140, 255, 0.12);
       color: var(--purple);
-      border: 1px solid rgba(188, 140, 255, 0.2);
-      border-radius: 4px;
       padding: 1px 6px;
-      font-size: 0.72rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      margin-right: 4px;
+      margin-top: 4px;
+      white-space: nowrap;
     }
 
-    .completed-list {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 10px;
+    .todo-blocker {
+      display: inline-block;
+      background: rgba(248, 81, 73, 0.12);
+      color: var(--red);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      margin-top: 4px;
+      margin-left: 4px;
+      white-space: nowrap;
+    }
+
+    .issue-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: 12px;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+
+    .issue-name { font-weight: 500; }
+    .issue-impact { color: var(--text-dim); }
+
+    .issue-status {
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      background: rgba(210, 153, 34, 0.12);
+      color: var(--yellow);
+      white-space: nowrap;
+      border: 1px solid rgba(210, 153, 34, 0.25);
     }
 
     .completed-item {
       display: grid;
-      grid-template-columns: 64px 1fr auto;
+      grid-template-columns: 70px 1fr auto auto;
       gap: 12px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
       align-items: center;
-      background: #1a2230;
-      border-radius: 8px;
-      padding: 8px 10px;
-      font-size: 0.82rem;
+    }
+
+    .completed-item:nth-child(odd) {
+      background: rgba(22, 27, 34, 0.5);
     }
 
     .completed-date {
-      color: var(--muted);
-      font-family: 'SF Mono', 'Fira Code', monospace;
+      color: var(--text-dim);
+      font-family: "SF Mono", "Fira Code", monospace;
     }
+
     .completed-task { color: var(--text); }
-    .completed-owner {
-      color: var(--purple);
-      white-space: nowrap;
-      font-size: 0.77rem;
-    }
-
-    .kpi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 10px;
-    }
-
-    .kpi {
-      background: var(--card-soft);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 12px;
-    }
-
-    .kpi .label {
-      color: var(--muted);
-      font-size: 0.78rem;
-      margin-bottom: 6px;
-    }
-
-    .kpi .value {
-      font-size: 1.35rem;
-      font-weight: 700;
-    }
+    .completed-owner { color: var(--purple); font-size: 0.82rem; }
+    .completed-note { color: var(--text-dim); font-size: 0.8rem; text-align: right; }
 
     .empty {
-      color: var(--muted);
-      font-size: 0.82rem;
+      color: var(--text-dim);
+      font-size: 0.9rem;
       padding: 10px 2px;
     }
 
-    a.refresh {
-      color: var(--accent);
-      text-decoration: none;
-      font-size: 0.88rem;
-      display: inline-block;
-      margin-top: 4px;
-    }
-
-    .footer {
-      margin-top: 10px;
-      padding: 10px 0 0;
-      color: var(--muted);
-      font-size: 0.82rem;
-      border-top: 1px solid var(--border);
+    footer {
       text-align: center;
+      padding: 24px 0;
+      color: var(--text-dim);
+      font-size: 0.8em;
+      border-top: 1px solid var(--border);
+      margin-top: 12px;
     }
 
-    @media (max-width: 1200px) {
-      .task-board { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pulse {
+      animation: pulse 2s infinite;
     }
 
-    @media (max-width: 760px) {
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.55; }
+    }
+
+    @media (max-width: 768px) {
       body { padding: 12px; }
-      header h1 { font-size: 1.5rem; }
-      .task-board { grid-template-columns: 1fr; }
       .agent-grid { grid-template-columns: 1fr; }
-      .completed-item { grid-template-columns: 1fr; gap: 4px; }
+      .agent-card { padding: 14px; }
+      .issue-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+      .completed-item {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>🏗️ 团队工作看板</h1>
-    <div class="meta">最后更新：<span id="genAt">—</span> · 数据源：shared/bulletin.md / heartbeat-state.json</div>
-    <a href="javascript:location.reload()" class="refresh">↻ 刷新页面</a>
+    <div class="meta">最后更新：<span id="genAt">—</span> · 维护人：总管（贾维斯）</div>
   </header>
 
   <section class="section">
-    <div class="section-title">🧠 团队运作状态</div>
+    <div class="section-title">👥 牛马阵容</div>
     <div class="agent-grid" id="teamGrid"></div>
   </section>
 
   <section class="section">
-    <div class="section-title">📋 任务看板（当前活跃）</div>
-    <div class="task-board">
-      <div class="task-col">
-        <h4>OPEN <span class="task-count" id="cnt-open">0</span></h4>
-        <div id="col-open" class="todo-list"></div>
-      </div>
-      <div class="task-col">
-        <h4>CLAIMED <span class="task-count" id="cnt-claimed">0</span></h4>
-        <div id="col-claimed" class="todo-list"></div>
-      </div>
-      <div class="task-col">
-        <h4>BLOCKED <span class="task-count" id="cnt-blocked">0</span></h4>
-        <div id="col-blocked" class="todo-list"></div>
-      </div>
-      <div class="task-col">
-        <h4>DONE <span class="task-count" id="cnt-done">0</span></h4>
-        <div id="col-done" class="todo-list"></div>
-      </div>
-    </div>
+    <div class="section-title">🏃 进行中</div>
+    <div class="active-list" id="activeList"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">📋 待办事项</div>
+    <div class="todo-list" id="todoList"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">⚠️ 已知问题</div>
+    <div class="issues-grid" id="issueList"></div>
   </section>
 
   <section class="section">
     <div class="section-title">✅ 近期完成</div>
-    <div id="doneList" class="completed-list"></div>
+    <div class="completed-list" id="doneList"></div>
   </section>
 
-  <section class="section">
-    <div class="section-title">📈 指标快照</div>
-    <div id="kpi" class="kpi-grid"></div>
-  </section>
-
-  <div class="footer">未分配任务会同步提示给所有 Agent；建议优先处理 OPEN 与 BLOCKED。页面每 5 分钟重生成。</div>
+  <footer>
+    Powered by OpenClaw 🐾 &nbsp;|&nbsp; 自动维护，模型变更时同步更新
+  </footer>
 
   <script id="payload" type="application/json">{
-  "generatedAt": "2026-03-01T02:41:04.491533+08:00",
+  "generatedAt": "2026-03-01T02:45:19.765703+08:00",
   "team": [
     {
       "id": "jarvis",
@@ -411,8 +380,8 @@
         "raw": "2026-03-01T01:42:00+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 59,
-        "hint": "59 分钟内有心跳",
+        "ageMin": 63,
+        "hint": "63 分钟内有心跳",
         "count": 703,
         "latestCheck": "03-01 01:42"
       },
@@ -452,8 +421,8 @@
         "raw": "2026-03-01T02:21+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 20,
-        "hint": "20 分钟内有心跳",
+        "ageMin": 24,
+        "hint": "24 分钟内有心跳",
         "count": null,
         "latestCheck": "02-26 04:32"
       },
@@ -472,8 +441,8 @@
         "raw": "2026-03-01T02:22:00+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 19,
-        "hint": "19 分钟内有心跳",
+        "ageMin": 23,
+        "hint": "23 分钟内有心跳",
         "count": 1,
         "latestCheck": "03-01 02:22"
       },
@@ -513,8 +482,8 @@
         "raw": "2026-03-01T02:23:00+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 18,
-        "hint": "18 分钟内有心跳",
+        "ageMin": 22,
+        "hint": "22 分钟内有心跳",
         "count": null,
         "latestCheck": "03-01 02:23"
       },
@@ -575,8 +544,8 @@
         "raw": "2026-02-26T14:16",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 3625,
-        "hint": "3625 分钟未更新",
+        "ageMin": 3629,
+        "hint": "3629 分钟未更新",
         "count": null,
         "latestCheck": "未记录"
       },
@@ -636,8 +605,8 @@
         "raw": "2026-02-20T18:24:00+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 12017,
-        "hint": "12017 分钟未更新",
+        "ageMin": 12021,
+        "hint": "12021 分钟未更新",
         "count": null,
         "latestCheck": "02-20 18:24"
       },
@@ -656,8 +625,8 @@
         "raw": "2026-02-21T00:32+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 11649,
-        "hint": "11649 分钟未更新",
+        "ageMin": 11653,
+        "hint": "11653 分钟未更新",
         "count": null,
         "latestCheck": "02-21 00:32"
       },
@@ -785,10 +754,10 @@
     const data = JSON.parse(document.getElementById('payload').textContent);
 
     const statusMap = {
-      ok: { text: '在线', cls: 'status-active', type: 'ok' },
-      warn: { text: '偏慢', cls: 'status-warn', type: 'warn' },
-      critical: { text: '告警', cls: 'status-blocked', type: 'blocked' },
-      unknown: { text: '未打卡', cls: 'status-idle', type: 'idle' },
+      ok: { text: '在线', cls: 'status-active' },
+      warn: { text: '偏慢', cls: 'status-warn' },
+      critical: { text: '告警', cls: 'status-blocked' },
+      unknown: { text: '未打卡', cls: 'status-idle' },
     };
 
     const priorityMap = {
@@ -797,17 +766,20 @@
       low: { text: '低', cls: 'priority-low' },
     };
 
-    const stateCls = {
-      OPEN: 'open',
-      CLAIMED: 'claimed',
-      BLOCKED: 'blocked',
-      DONE: 'done'
-    };
+    function safeText(v) {
+      return String(v || '').replace(/[&<>"']/g, (m) => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;',
+      }[m]));
+    }
 
-    function fmtDateTimeMini(input) {
+    function shortDate(input) {
       if (!input) return '—';
       try {
-        const d = new Date(input.replace('—', '-'));
+        const d = new Date(input.replace(/-/g, '/').replace('—', '-'));
         if (Number.isNaN(d.getTime())) return input;
         const mm = String(d.getMonth() + 1).padStart(2, '0');
         const dd = String(d.getDate()).padStart(2, '0');
@@ -819,131 +791,164 @@
       }
     }
 
-    function escapeHtml(s) {
-      return String(s || '')
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#39;');
+    function normalizeState(state) {
+      const upper = String(state || '').toUpperCase();
+      if (upper === 'OPEN' || upper === 'TODO') return 'OPEN';
+      if (upper === 'CLAIMED' || upper === 'IN_PROGRESS' || upper === 'INPROGRESS') return 'CLAIMED';
+      if (upper === 'BLOCKED') return 'BLOCKED';
+      if (upper === 'DONE' || upper === 'FINISHED' || upper === 'CLOSED') return 'DONE';
+      return 'OPEN';
     }
 
-    function taskCard(task) {
-      const state = task.state || 'OPEN';
-      const prio = (task.priority || 'medium').toLowerCase();
-      const pri = priorityMap[prio] || priorityMap.medium;
-      const assignee = task.assigneeRaw || '任意';
-      const text = task.task || '（未命名任务）';
-      const desc = task.bg || task.deliver || '';
-      const tags = (task.tags || []).slice(0, 3);
+    function taskPriority(task) {
+      return (task.priority || 'medium').toLowerCase();
+    }
 
-      return `<div class="todo-card ${pri.cls} ${stateCls[state] || ''}">
-        <span class="todo-priority ${pri.cls}">${pri.text}</span>
-        <div class="todo-content">
-          <h3>${escapeHtml(text)}</h3>
-          <p>${escapeHtml(desc)}</p>
-          <div class="todo-tags">
-            <span class="todo-tag">${escapeHtml(state)} · ${escapeHtml(assignee)}</span>
-            ${tags.map(t => `<span class="todo-tag">${escapeHtml(t)}</span>`).join('')}
+    function taskTags(task) {
+      const tags = Array.isArray(task.tags) ? task.tags : [];
+      return tags.map((t) => `<span class="todo-tag">${safeText(t)}</span>`).join('');
+    }
+
+    function blockerBadge(task) {
+      const statusText = String(task.status || '').trim();
+      if (!statusText) return '';
+      return `<span class="todo-tag">${safeText(statusText.slice(0, 40))}</span>`;
+    }
+
+    function renderTaskCard(task, withStatePrefix = true) {
+      const state = normalizeState(task.state);
+      const pri = priorityMap[taskPriority(task)] || priorityMap.medium;
+      const who = task.assigneeRaw || task.delegator || '任意';
+      const title = task.task || '（未命名任务）';
+      const desc = task.bg || task.deliver || '';
+      const suffix = task.section === 'archive' ? '' : ` · ${safeText(who)}`;
+      const header = withStatePrefix ? `[${state}] ${safeText(title)}` : safeText(title);
+
+      return `
+        <div class="todo-card ${pri.cls} ${state === 'CLAIMED' ? 'claimed' : ''} ${state === 'BLOCKED' ? 'blocked' : ''}">
+          <span class="todo-priority ${pri.cls}">${pri.text}</span>
+          <div class="todo-content">
+            <h3>${header}${suffix}</h3>
+            ${desc ? `<p>${safeText(desc)}</p>` : ''}
+            <div>
+              ${taskTags(task)}
+              ${state === 'BLOCKED' ? blockerBadge(task) : ''}
+            </div>
           </div>
         </div>
+      `;
+    }
+
+    function renderIssue(task) {
+      const name = safeText(task.task || '未知问题');
+      const impact = safeText(task.bg || task.deliver || task.status || '影响未记录');
+      const owner = safeText(task.delegator || task.assigneeRaw || '未分配');
+
+      return `<div class="issue-row">
+        <span class="issue-name">${name}</span>
+        <span class="issue-impact">${impact}</span>
+        <span class="issue-status">${owner}</span>
+      </div>`;
+    }
+
+    function renderActive(task) {
+      const who = safeText(task.assigneeRaw || task.delegator || '未指定');
+      const state = normalizeState(task.state);
+      const pri = (task.priority || 'medium').toLowerCase();
+      const tags = task.tags || [];
+      return `<div class="active-card">
+        <h3>${safeText(task.task || '进行中任务')}</h3>
+        <div class="active-detail"><strong>分发：</strong>${safeText(task.delegator || '—')} → ${who}</div>
+        <div class="active-detail"><strong>频率：</strong>当前状态 ${state}</div>
+        <div class="active-detail"><strong>优先级：</strong>${safeText(pri)}</div>
+        <div class="active-detail"><strong>更新时间：</strong>${safeText(task.time || '—')}</div>
+        ${tags.length ? `<div class="active-detail"><strong>标签：</strong>${safeText(tags.join(' '))}</div>` : ''}
+        ${task.bg ? `<div class="active-detail"><strong>说明：</strong>${safeText(task.bg)}</div>` : ''}
       </div>`;
     }
 
     document.getElementById('genAt').textContent = new Date(data.generatedAt).toLocaleString('zh-CN', { hour12: false });
 
     const teamGrid = document.getElementById('teamGrid');
-    const order = ['jarvis', 'sentinel', 'scholar', 'librarian', 'datasci', 'agent_father', 'alfred', 'quant'];
-    const teamMap = Object.fromEntries(data.team.map((m) => [m.id, m]));
-    let activeCnt = 0, warnCnt = 0, blockedCnt = 0, idleCnt = 0;
-
-    for (const id of order) {
-      const member = teamMap[id];
-      if (!member) continue;
-      const state = statusMap[member.heartbeat.statusClass] || statusMap.unknown;
-      const hb = member.heartbeat;
-      if (hb.statusClass === 'ok') {
-        activeCnt += 1;
-      } else if (hb.statusClass === 'warn') {
-        warnCnt += 1;
-      } else if (hb.statusClass === 'critical') {
-        blockedCnt += 1;
-      } else {
-        idleCnt += 1;
-      }
-
-      const recentTasks = (member.tasks || []).slice(0, 3);
-      const taskHints = recentTasks.length
-        ? recentTasks.map(t => `<div class="mini-task"><span class="state">${escapeHtml(t.state || 'OPEN')}</span>${escapeHtml(t.task || '—')}</div>`).join('')
+    for (const member of data.team || []) {
+      const hb = member.heartbeat || {};
+      const st = statusMap[hb.statusClass] || statusMap.unknown;
+      const cards = (member.tasks && member.tasks.length)
+        ? member.tasks.slice(0, 3).map((t) => `
+      <div class="mini-task">${safeText(t.task || '—')}</div>`).join('')
         : '<div class="mini-task">暂无待办</div>';
 
       teamGrid.insertAdjacentHTML('beforeend', `
         <article class="agent-card">
           <div class="agent-header">
-            <div class="agent-name">${escapeHtml(member.icon || '🤖')} ${escapeHtml(member.name)}（${escapeHtml(member.en)}）</div>
-            <span class="agent-status ${state.cls}">${state.text}</span>
+            <div class="agent-name">${safeText(member.icon || '🤖')} ${safeText(member.name)}（${safeText(member.en || '')}）</div>
+            <span class="agent-status ${st.cls}">${safeText(st.text)}</span>
           </div>
-          <div class="agent-model">${escapeHtml(member.role)}</div>
-          <div class="agent-meta">最后心跳：${escapeHtml(hb.display)} · ${escapeHtml(hb.status)}（${escapeHtml(hb.hint)}）</div>
-          <div class="agent-task">${escapeHtml(member.snippet || '无备注')}</div>
-          <div class="agent-task-list">${taskHints}</div>
+          <div class="agent-model">${safeText(member.role || '')}</div>
+          <div class="agent-meta">最后心跳：${safeText(hb.display || '—')} · ${safeText(hb.status || '—')}（${safeText(hb.hint || '—')}）</div>
+          <div class="agent-task">${safeText(member.snippet || '无备注')}</div>
+          <div class="agent-task-list" style="margin-top:8px; display:grid; gap:6px;">${cards}</div>
         </article>
       `);
     }
 
-    const columns = {
-      OPEN: document.getElementById('col-open'),
-      CLAIMED: document.getElementById('col-claimed'),
-      BLOCKED: document.getElementById('col-blocked'),
-      DONE: document.getElementById('col-done')
-    };
+    if (!data.team || !data.team.length) {
+      teamGrid.innerHTML = '<div class="empty">暂无成员数据</div>';
+    }
 
-    const counts = { OPEN: 0, CLAIMED: 0, BLOCKED: 0, DONE: 0 };
-    const activeTasks = (data.tasks || []).filter((t) => t.section === 'active');
+    const tasks = Array.isArray(data.tasks) ? data.tasks : [];
+    const activeTasks = tasks.filter(t => normalizeState(t.state) === 'CLAIMED').slice(0, 6);
+    const todoTasks = tasks.filter(t => normalizeState(t.state) === 'OPEN');
+    const blockedTasks = tasks.filter(t => normalizeState(t.state) === 'BLOCKED');
+    const doneTasks = tasks.filter(t => normalizeState(t.state) === 'DONE');
 
-    activeTasks.forEach((task) => {
-      const state = task.state || 'OPEN';
-      if (!columns[state]) return;
-      columns[state].insertAdjacentHTML('beforeend', taskCard(task));
-      counts[state] = (counts[state] || 0) + 1;
-    });
+    const activeList = document.getElementById('activeList');
+    if (activeTasks.length) {
+      activeList.innerHTML = activeTasks.map(renderActive).join('');
+    } else {
+      activeList.innerHTML = '<div class="empty">暂无进行中任务</div>';
+    }
 
-    for (const state of ['OPEN', 'CLAIMED', 'BLOCKED', 'DONE']) {
-      const el = document.getElementById(`cnt-${state.toLowerCase()}`);
-      if (el) el.textContent = String(counts[state] || 0);
-      const box = columns[state];
-      if (box && !box.children.length) {
-        box.innerHTML = '<div class="empty">暂无任务</div>';
-      }
+    const todoList = document.getElementById('todoList');
+    if (todoTasks.length) {
+      todoList.innerHTML = todoTasks
+        .sort((a, b) => {
+          const pa = { high: 0, medium: 1, low: 2 }[(taskPriority(a))] || 1;
+          const pb = { high: 0, medium: 1, low: 2 }[(taskPriority(b))] || 1;
+          return pa - pb;
+        })
+        .map((t) => renderTaskCard(t, false))
+        .join('');
+    } else {
+      todoList.innerHTML = '<div class="empty">暂无待办事项</div>';
+    }
+
+    const issueList = document.getElementById('issueList');
+    if (blockedTasks.length) {
+      issueList.innerHTML = blockedTasks.map(renderIssue).join('');
+    } else {
+      issueList.innerHTML = '<div class="empty">暂无阻塞问题</div>';
     }
 
     const doneList = document.getElementById('doneList');
-    const doneItems = (data.tasks || [])
-      .filter((t) => (t.state || '').toUpperCase() === 'DONE')
-      .sort((a, b) => new Date((b.time || '').replace(/-/g, '/')) - new Date((a.time || '').replace(/-/g, '/')))
-      .slice(0, 8);
+    const doneSorted = doneTasks.sort((a, b) => {
+      const ta = new Date((a.time || '').replace(/-/g, '/'));
+      const tb = new Date((b.time || '').replace(/-/g, '/'));
+      return tb - ta;
+    });
 
-    if (!doneItems.length) {
-      doneList.innerHTML = '<div class="empty">最近暂无完成项</div>';
-    } else {
-      doneList.innerHTML = doneItems.map((item) => `
+    if (doneSorted.length) {
+      doneList.innerHTML = doneSorted.slice(0, 12).map((item) => `
         <div class="completed-item">
-          <span class="completed-date">${escapeHtml(fmtDateTimeMini(item.time || ''))}</span>
-          <span class="completed-task">${escapeHtml(item.task || '—')}</span>
-          <span class="completed-owner">${escapeHtml(item.delegator || '—')}</span>
+          <span class="completed-date">${shortDate(item.time || '')}</span>
+          <span class="completed-task">${safeText(item.task || '—')}</span>
+          <span class="completed-owner">${safeText(item.delegator || item.assigneeRaw || '—')}</span>
+          <span class="completed-note">${safeText(item.deliver || '')}</span>
         </div>
       `).join('');
+    } else {
+      doneList.innerHTML = '<div class="empty">近期暂无完成项</div>';
     }
-
-    const kpi = document.getElementById('kpi');
-    kpi.innerHTML = `
-      <div class="kpi"><div class="label">团队在线</div><div class="value">${activeCnt}/${data.team.length}</div></div>
-      <div class="kpi"><div class="label">偏慢</div><div class="value" style="color: var(--yellow)">${warnCnt}</div></div>
-      <div class="kpi"><div class="label">告警</div><div class="value" style="color: var(--red)">${blockedCnt}</div></div>
-      <div class="kpi"><div class="label">OPEN 任务</div><div class="value" style="color: var(--accent)">${data.summary.openTasks}</div></div>
-      <div class="kpi"><div class="label">DONE 任务</div><div class="value" style="color: var(--green)">${data.summary.doneTasks}</div></div>
-      <div class="kpi"><div class="label">未记录</div><div class="value" style="color: var(--muted)">${idleCnt}</div></div>
-    `;
   </script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-01T02:41:04.491533+08:00",
+  "generatedAt": "2026-03-01T02:45:19.765703+08:00",
   "team": [
     {
       "id": "jarvis",
@@ -13,8 +13,8 @@
         "raw": "2026-03-01T01:42:00+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 59,
-        "hint": "59 分钟内有心跳",
+        "ageMin": 63,
+        "hint": "63 分钟内有心跳",
         "count": 703,
         "latestCheck": "03-01 01:42"
       },
@@ -54,8 +54,8 @@
         "raw": "2026-03-01T02:21+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 20,
-        "hint": "20 分钟内有心跳",
+        "ageMin": 24,
+        "hint": "24 分钟内有心跳",
         "count": null,
         "latestCheck": "02-26 04:32"
       },
@@ -74,8 +74,8 @@
         "raw": "2026-03-01T02:22:00+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 19,
-        "hint": "19 分钟内有心跳",
+        "ageMin": 23,
+        "hint": "23 分钟内有心跳",
         "count": 1,
         "latestCheck": "03-01 02:22"
       },
@@ -115,8 +115,8 @@
         "raw": "2026-03-01T02:23:00+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 18,
-        "hint": "18 分钟内有心跳",
+        "ageMin": 22,
+        "hint": "22 分钟内有心跳",
         "count": null,
         "latestCheck": "03-01 02:23"
       },
@@ -177,8 +177,8 @@
         "raw": "2026-02-26T14:16",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 3625,
-        "hint": "3625 分钟未更新",
+        "ageMin": 3629,
+        "hint": "3629 分钟未更新",
         "count": null,
         "latestCheck": "未记录"
       },
@@ -238,8 +238,8 @@
         "raw": "2026-02-20T18:24:00+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 12017,
-        "hint": "12017 分钟未更新",
+        "ageMin": 12021,
+        "hint": "12021 分钟未更新",
         "count": null,
         "latestCheck": "02-20 18:24"
       },
@@ -258,8 +258,8 @@
         "raw": "2026-02-21T00:32+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 11649,
-        "hint": "11649 分钟未更新",
+        "ageMin": 11653,
+        "hint": "11653 分钟未更新",
         "count": null,
         "latestCheck": "02-21 00:32"
       },
