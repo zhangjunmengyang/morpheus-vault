@@ -174,5 +174,7 @@ Reward Hacking 防御方法谱系：
 - [[AI/3-LLM/RL/算法/DAR-Dual-Regularized-Advantage-Regression-Unifying-RLHF|DAR（ICLR 2026）]] — 同为反 reward hacking，DAR 从 policy space 视角（Dual-KL），GR 从 loss landscape 视角，互补
 - [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO]] — GR 在 GRPO 基础上增加梯度范数惩罚
 - [[AI/3-LLM/RL/实践/RLHF-工程全栈|RLHF Pipeline]] — reward hacking 是 RLHF 的核心挑战之一
+- [[AI/3-LLM/RL/Theory/Reward-Design-三维框架|Reward Design 三维框架]] — GR 是"维度三：Reward 边界"的防御工程实现
+- [[AI/3-LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL 训练稳定性分析]] — GR 的 loss landscape 框架与训练稳定性全景互为补充
 
 *写作时间：2026-02-28 08:42 | arXiv:2602.18037 | ★★★★*

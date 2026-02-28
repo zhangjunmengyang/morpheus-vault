@@ -95,3 +95,4 @@ AI 伦理最大的挑战不是技术问题，而是**激励不对齐** —— �
 ## See Also
 
 - [[AI/5-AI 安全/Anthropic-Pentagon-Federal-Ban-2026|Anthropic vs Pentagon（2026）]] — AI 治理的商业-安全博弈：安全红线在政治语境下的脆弱性
+- [[AI/7-认知科学/认知科学-MOC|认知科学 MOC]] — 人格商品化·情感依赖红线·AI伦理的认知科学基础（`意识与AI`子目录直接相关）

@@ -322,3 +322,4 @@ response = openai.chat.completions.create(
 - [[AI/3-LLM/RL/算法/PPO 原理|PPO 原理]] — PPO 算法
 - [[AI/6-应用/RAG/RAG 工程实践]] — 检索增强生成
 - Transformer — Transformer 架构基础
+- [[AI/6-应用/Prompt/高级-Prompt-技巧|高级 Prompt 技巧汇总]] — CoT/ToT/Self-Consistency/ReAct 完整对比 + 面试速查

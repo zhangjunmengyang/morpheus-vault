@@ -220,7 +220,7 @@ for i in range(len(sim_matrix)):
 
 ## 注意事项
 
-⚠️ **模型坍缩**：如果用模型 A 的输出训练模型 A，多轮后会质量退化（Model Collapse）。解决方案是用更强的模型生成，或掺入真实数据。
+⚠️ **模型坍缩**：如果用模型 A 的输出训练模型 A，多轮后会质量退化（Model Collapse）。解决方案是用更强的模型生成，或掺入真实数据。参见 [[AI/3-LLM/Architecture/AI-Models-Collapse|AI Models Collapse（Nature 2024）]] — 递归合成数据训练的不可逆崩溃实验证明。
 
 ⚠️ **License 风险**：用 GPT-4 生成的数据训练竞品模型可能违反 ToS，需要关注。
 

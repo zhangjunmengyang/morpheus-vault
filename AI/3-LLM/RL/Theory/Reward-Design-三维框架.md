@@ -244,5 +244,10 @@ SFT 项 `∇log π(a*|p,z)` 是在直接监督参考答案，相当于给所有�
 
 ---
 
+## See Also
+
+- [[AI/3-LLM/RL/算法/GR-Gradient-Regularization-Prevents-Reward-Hacking|GR（arXiv:2602.18037）]] — 梯度范数惩罚防 reward hacking：loss landscape 视角（sharp region = RM 泛化差的区域），是"维度三：Reward 边界"的防御工程实现
+- [[AI/3-LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL 训练稳定性分析]] — Reward 质量崩塌 → 训练不稳定：两篇互为因果链
+
 ## Tags
 #RewardDesign #RewardModel #RLHF #RLVR #MetaAnalysis #原创综合 #面试级 #LogProbability #RationaleConsistency #MARS #DeceptiveAlignment #2026

@@ -121,3 +121,4 @@ Multi-Agent 目前更偏「研究/探索」阶段，真正生产级的应用还�
 ## See Also
 
 - [[AI/2-Agent/Multi-Agent/Agent vs MAS|Agent vs MAS 选型框架]] — 单 Agent vs MAS 决策框架
+- [[AI/2-Agent/Multi-Agent/Multi-Agent-架构模式详解|Multi-Agent 架构模式详解]] — Supervisor/Pipeline/Debate 三种架构含代码，是本文的深化版

@@ -336,3 +336,4 @@ Layer 1: Token 层（STAPO + MASPO）
 ## See Also
 
 - [[AI/3-LLM/RL/算法/DAR-Dual-Regularized-Advantage-Regression-Unifying-RLHF|DAR（ICLR 2026 ★★★★★）]] — Dual-KL 统一 reward hacking 防御与稳定优化，与本文稳定性图谱直接相关
+- [[AI/3-LLM/RL/算法/GR-Gradient-Regularization-Prevents-Reward-Hacking|GR（arXiv:2602.18037）]] — 梯度范数惩罚防止 reward hacking：loss landscape 视角（sharp region = RM 不准确区域），与本文稳定性框架互补（本文解决梯度爆炸/崩塌，GR 解决 reward hacking）

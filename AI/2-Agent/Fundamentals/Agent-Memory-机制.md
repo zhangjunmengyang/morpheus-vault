@@ -272,3 +272,4 @@ class HybridMemory:
 - Generative Agents：arXiv:2304.03442 — 三层记忆架构（Stream/Retrieval/Reflection）
 
 *笔记覆盖：短期/长期/情景/语义记忆四类 + MemGPT/Generative Agents 实现 + 面试5题*
+- [[AI/7-认知科学/认知科学-MOC|认知科学 MOC]] — 记忆科学理论基础（本文工程实现的认知科学基础在此域）

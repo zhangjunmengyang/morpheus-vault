@@ -139,6 +139,7 @@ Agent Swarm → 并行多 agent（PARL 训练的 orchestrator）
 - [[AI/3-LLM/RL/算法/OpenRS-Pairwise-Adaptive-Rubric|OpenRS]] — 同方向互补：non-verifiable reward 对齐
 - [[AI/4-模型/GLM/GLM-5-Agentic-Engineering|GLM-5-Agentic-Engineering]] — Slime 框架下的 agentic RL infra 对比
 - [[AI/2-Agent/Fundamentals/GitHub-Agentic-Workflows|GitHub-Agentic-Workflows]] — 工程侧的 multi-agent 应用
+- [[AI/4-模型/Kimi/Kimi-K2.5|Kimi K2.5 技术分析]] — Kimi K2.5 模型整体技术报告，PARL 框架的完整上下文
 
 ---
 *Created: 2026-02-19 by Scholar heartbeat*

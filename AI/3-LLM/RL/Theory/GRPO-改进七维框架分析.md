@@ -459,3 +459,4 @@ Dr. GRPO = 对 std 大的样本不惩罚（算法层）
 - [[AI/3-LLM/RL/Theory/RL-Training-Stability-2026-Unified-Analysis|RL Training Stability 专题]] — 训练稳定性全景：本框架描述"改进方向"，训练稳定专题描述"何时崩溃"
 
 - [[AI/2-Agent/Agentic-RL/PVPO|PVPO]] — 参考值估计维度的改进：用参考模型静态 V 值替代 GRPO 组内动态均值，解决累积偏差和样本效率问题（阿里云）
+- [[AI/3-LLM/RL/算法/DCPO|DCPO（百川）]] — Trust Region维度：动态调节 clip ratio（低概率 token 扩宽探索空间）+ 累积优势标准化，非零梯度比例 +28%，训练效率较 DAPO 提升 2×

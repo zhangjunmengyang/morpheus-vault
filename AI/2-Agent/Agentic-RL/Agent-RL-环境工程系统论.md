@@ -476,3 +476,4 @@ $$\text{评估分层} = \begin{cases} \text{Task-level} & \text{整体任务成�
 - [[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon-Credit-Assignment专题]] — 长任务 credit assignment 算法
 - [[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent-RL|KLong-Extremely-Long-Horizon-Agent]] — KLong 单独深读
 - [[AI/2-Agent/Evaluation/Agent-评测与-Benchmark|Agent 评测与 Benchmark]] — 评估体系
+- [[AI/2-Agent/Fundamentals/Agent-Harness-Engineering-Infrastructure|Agent Harness Engineering]] — 生产级 Agent 稳定运行的外部基础设施（检查点/工具协议/可观测性），与本文"环境工程"互补：本文讲训练环境，Harness 讲部署基础设施

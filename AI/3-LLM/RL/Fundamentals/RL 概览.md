@@ -101,3 +101,4 @@ https://github.com/chunhuizhang/llm_rl/blob/main/tutorials/objectives_adv/core_a
 - [[AI/3-LLM/RL/Theory/GRPO-改进七维框架分析|GRPO 2026 全景]] — 概览之后的前沿：GRPO 七维改进体系
 -  — LLM 强化学习全图谱
 - [[AI/1-Foundations/ML-Basics/机器学习|机器学习]] — 监督学习到 RL 的演化
+- [[AI/3-LLM/RL/Fundamentals/马尔科夫|马尔科夫/MDP]] — RL 的数学框架（状态转移矩阵/平稳分布），是理解 RL 算法收敛的前提
