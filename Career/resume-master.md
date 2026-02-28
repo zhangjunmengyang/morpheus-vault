@@ -23,15 +23,6 @@ brief: 张钧梦阳个人简历，唯一维护版本，随新项目/经历持续
 
 ---
 
-## 论文发表
-
-**Junmengyang Zhang**\*, Xiaohong Wang\*, Xuefen Teng, Kok Wei Aik, Larry Natividad, Charmaine Cheng.
-"A Multi-Modality Attention Network for Coronary Artery Disease Evaluation From Routine Myocardial Perfusion Imaging and Clinical Data."
-*IEEE Journal of Biomedical and Health Informatics (JBHI)*, Vol. 29, Issue 5, pp. 3272–3281, May 2025.
-[DOI: 10.1109/JBHI.2024.3523476](https://ieeexplore.ieee.org/document/10817502)（\* 并列第一作者）
-
----
-
 ## 工作经历
 
 ### 美团 · 本地核心商业 | AI 应用算法工程师 | 2024.11 - 至今
@@ -50,7 +41,7 @@ brief: 张钧梦阳个人简历，唯一维护版本，随新项目/经历持续
 
 **Agent 架构**
 
-- 深度参与 Agent 架构演进全过程：单 Agent → 多 Agent（supervisor/swarm）→ 回归超级单 Agent
+- 深度参与 Agent 架构演进全过程：单 Agent → 多 Agent（supervisor / swarm）→ 回归超级单 Agent
 - 形成系统性判断：高泛化选 Agent，快落地选 Workflow，两者不互斥
 
 ---
@@ -90,7 +81,7 @@ brief: 张钧梦阳个人简历，唯一维护版本，随新项目/经历持续
 
 ## 技能
 
-**AI / Agent**：AI Agent 架构（单 / 多 / supervisor / swarm）���NL2SQL、NL2Param、Prompt 工程、ReAct、多模态深度学习
+**AI / Agent**：AI Agent 架构（单 / 多 / supervisor / swarm）、NL2SQL、NL2Param、Prompt 工程、ReAct、多模态深度学习
 
 **后训练**：SFT（全参 / LoRA / QLoRA）、DPO、GRPO、PPO、verl + Ray + vLLM 分布式训练框架
 
@@ -101,3 +92,12 @@ brief: 张钧梦阳个人简历，唯一维护版本，随新项目/经历持续
 **编程**：Python、Java（并发 / 集合 / 内存）、Scala、Shell、Git
 
 **语言**：CET-4 603 / CET-6 471 / 雅思口语 6.5，全英文环境实习经历
+
+---
+
+## 论文发表
+
+**Junmengyang Zhang**\*, Xiaohong Wang\*, Xuefen Teng, Kok Wei Aik, Larry Natividad, Charmaine Cheng.
+"A Multi-Modality Attention Network for Coronary Artery Disease Evaluation From Routine Myocardial Perfusion Imaging and Clinical Data."
+*IEEE Journal of Biomedical and Health Informatics (JBHI)*, Vol. 29, Issue 5, pp. 3272–3281, May 2025.
+[DOI: 10.1109/JBHI.2024.3523476](https://ieeexplore.ieee.org/document/10817502)（\* 并列第一作者）
