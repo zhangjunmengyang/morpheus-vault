@@ -333,7 +333,7 @@
 <body>
   <header>
     <h1>🏗️ 团队工作看板</h1>
-    <div class="meta">最后更新：<span id="genAt">—</span> · 维护人：总管（贾维斯）</div>
+    <div class="meta">版本：<span id="buildTag">—</span> | 最后更新：<span id="genAt">—</span> | 维护人：总管（贾维斯）</div>
   </header>
 
   <section class="section">
@@ -366,7 +366,7 @@
   </footer>
 
   <script id="payload" type="application/json">{
-  "generatedAt": "2026-03-01T02:45:19.765703+08:00",
+  "generatedAt": "2026-03-01T02:47:39.114822+08:00",
   "team": [
     {
       "id": "jarvis",
@@ -380,8 +380,8 @@
         "raw": "2026-03-01T01:42:00+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 63,
-        "hint": "63 分钟内有心跳",
+        "ageMin": 65,
+        "hint": "65 分钟内有心跳",
         "count": 703,
         "latestCheck": "03-01 01:42"
       },
@@ -421,8 +421,8 @@
         "raw": "2026-03-01T02:21+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 24,
-        "hint": "24 分钟内有心跳",
+        "ageMin": 26,
+        "hint": "26 分钟内有心跳",
         "count": null,
         "latestCheck": "02-26 04:32"
       },
@@ -441,8 +441,8 @@
         "raw": "2026-03-01T02:22:00+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 23,
-        "hint": "23 分钟内有心跳",
+        "ageMin": 25,
+        "hint": "25 分钟内有心跳",
         "count": 1,
         "latestCheck": "03-01 02:22"
       },
@@ -482,8 +482,8 @@
         "raw": "2026-03-01T02:23:00+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 22,
-        "hint": "22 分钟内有心跳",
+        "ageMin": 24,
+        "hint": "24 分钟内有心跳",
         "count": null,
         "latestCheck": "03-01 02:23"
       },
@@ -544,8 +544,8 @@
         "raw": "2026-02-26T14:16",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 3629,
-        "hint": "3629 分钟未更新",
+        "ageMin": 3631,
+        "hint": "3631 分钟未更新",
         "count": null,
         "latestCheck": "未记录"
       },
@@ -605,8 +605,8 @@
         "raw": "2026-02-20T18:24:00+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 12021,
-        "hint": "12021 分钟未更新",
+        "ageMin": 12023,
+        "hint": "12023 分钟未更新",
         "count": null,
         "latestCheck": "02-20 18:24"
       },
@@ -625,8 +625,8 @@
         "raw": "2026-02-21T00:32+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 11653,
-        "hint": "11653 分钟未更新",
+        "ageMin": 11655,
+        "hint": "11655 分钟未更新",
         "count": null,
         "latestCheck": "02-21 00:32"
       },
@@ -744,6 +744,7 @@
     "blockedTasks": 0,
     "doneTasks": 3
   },
+  "version": "v2-参考风格重构",
   "notes": [
     "看板按 shared/bulletin.md 全量任务构建（当前可见）",
     "若任务未打标 OPEN/CLAIMED/DONE/BLOCKED，会按原状态保留并纳入 OPEN 类",
@@ -867,6 +868,7 @@
       </div>`;
     }
 
+    document.getElementById('buildTag').textContent = data.version || 'v2';
     document.getElementById('genAt').textContent = new Date(data.generatedAt).toLocaleString('zh-CN', { hour12: false });
 
     const teamGrid = document.getElementById('teamGrid');
