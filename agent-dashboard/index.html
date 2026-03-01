@@ -421,10 +421,203 @@
         gap: 2px;
       }
     }
+  
+
+    .hero {
+      background: linear-gradient(135deg, rgba(56, 139, 253, 0.1), rgba(188, 140, 255, 0.08));
+      border: 1px solid rgba(88, 166, 255, 0.18);
+      padding: 18px 22px 16px;
+      border-radius: 16px;
+      margin-bottom: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: auto -140px -90px auto;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(88, 166, 255, 0.28) 0%, rgba(88, 166, 255, 0) 70%);
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      margin: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .meta {
+      position: relative;
+      z-index: 1;
+      margin-top: 6px;
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+
+    .brand-pill {
+      position: absolute;
+      right: 18px;
+      top: 16px;
+      font-size: 0.72rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(139, 148, 158, 0.35);
+      background: rgba(13, 17, 23, 0.55);
+      color: var(--text-dim);
+      letter-spacing: 0.02em;
+      backdrop-filter: blur(8px);
+    }
+
+    .board-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(220px, 1fr));
+      gap: 12px;
+      align-items: start;
+    }
+
+    .lane {
+      background: linear-gradient(180deg, #141b22, #11161d);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px;
+      min-height: 290px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .lane-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text);
+      border-bottom: 1px dashed rgba(139, 148, 158, 0.3);
+      padding-bottom: 8px;
+      gap: 8px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .lane-open .lane-head,
+    .lane-open .lane-count { color: var(--yellow); }
+
+    .lane-claimed .lane-head,
+    .lane-claimed .lane-count { color: var(--green); }
+
+    .lane-blocked .lane-head,
+    .lane-blocked .lane-count { color: var(--orange); }
+
+    .lane-done .lane-head,
+    .lane-done .lane-count { color: var(--green); }
+
+    .lane-count {
+      font-family: "SF Mono", "Fira Code", monospace;
+      font-size: 0.8rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(139, 148, 158, 0.16);
+      color: var(--text);
+      border: 1px solid rgba(139, 148, 158, 0.22);
+    }
+
+    .lane-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .lane-list .todo-card,
+    .lane-list .active-card,
+    .lane-list .completed-item,
+    .lane-list .issue-row {
+      margin: 0;
+    }
+
+    .lane-list .issue-row {
+      display: block;
+      gap: 0;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: rgba(139, 148, 158, 0.08);
+      border: 1px solid rgba(139, 148, 158, 0.2);
+      color: var(--text-dim);
+      font-size: 0.8rem;
+      line-height: 1.35;
+    }
+
+    .issue-row .issue-name { display: block; color: var(--text); font-weight: 600; }
+    .issue-impact { margin-top: 4px; display: block; color: var(--text-dim); }
+    .issue-status { margin-top: 6px; display: inline-block; }
+
+    .done-list-item {
+      display: grid;
+      gap: 6px;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(139, 148, 158, 0.22);
+      background: rgba(139, 148, 158, 0.04);
+      font-size: 0.8rem;
+    }
+
+    .done-list-item .completed-task {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .done-list-item .done-meta {
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-dim);
+      font-size: 0.74rem;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .empty { 
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      padding: 12px 4px;
+    }
+
+    .section {
+      position: relative;
+    }
+
+    .section::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(88, 166, 255, 0.2), transparent);
+    }
+
+    @media (max-width: 1360px) {
+      .board-grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      .board-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero { padding: 14px 14px 12px; }
+      .brand-pill { right: 10px; top: 10px; }
+    }
+
   </style>
 </head>
 <body>
-  <header>
+  <header class="hero">
+    <div class="brand-pill">Live Ops Board v3</div>
     <h1>🏗️ 团队工作看板</h1>
     <div class="meta">版本：<span id="buildTag">—</span> | 最后更新：<span id="genAt">—</span> | 维护人：总管（贾维斯）</div>
   </header>
@@ -458,31 +651,33 @@
   </section>
 
   <section class="section">
-    <div class="section-title">🏃 进行中</div>
-    <div class="active-list" id="activeList"></div>
-  </section>
-
-  <section class="section">
-    <div class="section-title">📋 待办事项</div>
-    <div class="todo-list" id="todoList"></div>
-  </section>
-
-  <section class="section">
-    <div class="section-title">⚠️ 已知问题</div>
-    <div class="issues-grid" id="issueList"></div>
-  </section>
-
-  <section class="section">
-    <div class="section-title">✅ 近期完成</div>
-    <div class="completed-list" id="doneList"></div>
+    <div class="section-title">🧭 任务看板</div>
+    <div class="board-grid" id="kanbanBoard">
+      <article class="lane lane-open">
+        <div class="lane-head"><span>📋 待办事项（OPEN）</span><span class="lane-count" id="openCount">0</span></div>
+        <div class="lane-list todo-list" id="todoList"></div>
+      </article>
+      <article class="lane lane-claimed">
+        <div class="lane-head"><span>🏃 进行中（CLAIMED）</span><span class="lane-count" id="claimedCount">0</span></div>
+        <div class="lane-list active-list" id="activeList"></div>
+      </article>
+      <article class="lane lane-blocked">
+        <div class="lane-head"><span>⚠️ 已知问题（BLOCKED）</span><span class="lane-count" id="blockedCount">0</span></div>
+        <div class="lane-list issues-grid" id="issueList"></div>
+      </article>
+      <article class="lane lane-done">
+        <div class="lane-head"><span>✅ 近期完成（DONE）</span><span class="lane-count" id="doneCount">0</span></div>
+        <div class="lane-list completed-list" id="doneList"></div>
+      </article>
+    </div>
   </section>
 
   <footer>
-    Powered by OpenClaw 🐾 &nbsp;|&nbsp; 自动维护，模型变更时同步更新
+    Powered by OpenClaw 🐾 · 可读性升级版（v3） · 任务数据源：`shared/bulletin.md` / 心跳
   </footer>
 
   <script id="payload" type="application/json">{
-  "generatedAt": "2026-03-01T02:55:39.604334+08:00",
+  "generatedAt": "2026-03-01T22:03:57.242756+08:00",
   "team": [
     {
       "id": "jarvis",
@@ -492,16 +687,16 @@
       "role": "总管/调度",
       "workspace": "/Users/peterzhang/.openclaw/workspace",
       "heartbeat": {
-        "display": "03-01 01:42",
-        "raw": "2026-03-01T01:42:00+08:00",
+        "display": "03-01 21:44",
+        "raw": "2026-03-01T21:44:00+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 73,
-        "hint": "73 分钟内有心跳",
-        "count": 703,
-        "latestCheck": "03-01 01:42"
+        "ageMin": 19,
+        "hint": "19 分钟内有心跳",
+        "count": 748,
+        "latestCheck": "03-01 21:44"
       },
-      "snippet": "HB#703: 最小收尾推进。将'学者lastHeartbeat误报事件已恢复'写入006/004实验笔记的关闭记录，避免后续回看悬而未决。无新任务，不硬挤。 [规则验证: 质>量✅]",
+      "snippet": "HB#748: ✅ 扫前沿（人生预测引擎-加密状态向量更新）。运行 tools/crypto-monitor.py overview 获取最新市场状态：Fear&Greed=14（Extreme Fear）；总市值$2.4T；BTC $66",
       "tasks": [
         {
           "time": "2026-02-28 11:25",
@@ -523,7 +718,7 @@
           "priority": "high",
           "bg": "在「人格特征 & 深度理解」章节的「思维模式」之前新增。Ni 主导/Te 辅助/Fi 第三/Se 劣势。同时把「思维模式」第一行的「T 型主导（思维型），」改为「系统思维者，」。来源：老板本人确认",
           "deliver": "profiles/meng.md 更新完成",
-          "ageMin": 930,
+          "ageMin": 2078,
           "isRecent": true
         }
       ]
@@ -536,17 +731,88 @@
       "role": "情报扫描",
       "workspace": "/Users/peterzhang/.openclaw/workspace-sentinel",
       "heartbeat": {
-        "display": "03-01 02:21",
-        "raw": "2026-03-01T02:21+08:00",
+        "display": "03-01 21:45",
+        "raw": "2026-03-01T21:45+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 34,
-        "hint": "34 分钟内有心跳",
+        "ageMin": 18,
+        "hint": "18 分钟内有心跳",
         "count": null,
-        "latestCheck": "02-26 04:32"
+        "latestCheck": "03-01 21:45"
       },
       "snippet": "",
-      "tasks": []
+      "tasks": [
+        {
+          "time": "2026-03-01 04:10",
+          "timeParsed": "2026-03-01T04:10:00+08:00",
+          "delegator": "贾维斯",
+          "assigneeRaw": "哨兵",
+          "assignees": [
+            "sentinel"
+          ],
+          "tags": [
+            "#intel",
+            "#ops",
+            "#priority-high"
+          ],
+          "task": "你的 lastChecks 多数仍停在 2/25（HN/GitHub/arXiv/rss 等）。请确认扫描链路是否在跑；若已跑但未写回 lastChecks，修复写回逻辑。",
+          "status": "DONE:已见哨兵 03-01 12:34 心跳 lastChecks 多项刷新（hn/iran_isw/binance_cms_api 等）",
+          "state": "DONE",
+          "claimedTo": "已见哨兵 03-01 12:34 心跳 lastChecks 多项刷新（hn/iran_isw/binance_cms_api 等）",
+          "section": "archive",
+          "priority": "high",
+          "bg": "你 lastHeartbeat 正常，但 lastChecks 明显陈旧，可能是数据源扫描停摆或状态写回断路。",
+          "deliver": "下次心跳内：更新 lastChecks 到最新（或写明为什么不更新）+ 给出根因（数据源/脚本/写文件权限/异常吞掉）。",
+          "ageMin": 1073,
+          "isRecent": true
+        },
+        {
+          "time": "2026-03-01 08:34",
+          "timeParsed": "2026-03-01T08:34:00+08:00",
+          "delegator": "贾维斯",
+          "assigneeRaw": "哨兵",
+          "assignees": [
+            "sentinel"
+          ],
+          "tags": [
+            "#intel",
+            "#priority-high"
+          ],
+          "task": "核实 Quartz 声称“Trump orders the government to stop using Anthropic after Pentagon standoff”是否有其他权威源复述/是否存在正式行政令/政府公告。",
+          "status": "DONE:已交叉验证为多源一致（非Quartz夸大）",
+          "state": "DONE",
+          "claimedTo": "已交叉验证为多源一致（非Quartz夸大）",
+          "section": "archive",
+          "priority": "high",
+          "bg": "交叉验证结果：非 Quartz 单源，多家权威媒体一致报道（NYT/BBC/CNBC/Politico/NBC）。",
+          "deliver": "Confirmed；引用见BBC：<https://www.bbc.com/news/articles/cn48jj3y8ezo>（另：NYT/CNBC/Politico/NBC均有同题报道）。",
+          "ageMin": 809,
+          "isRecent": true
+        },
+        {
+          "time": "2026-03-01 18:49",
+          "timeParsed": "2026-03-01T18:49:00+08:00",
+          "delegator": "贾维斯",
+          "assigneeRaw": "哨兵",
+          "assignees": [
+            "sentinel"
+          ],
+          "tags": [
+            "#ops",
+            "#priority-high"
+          ],
+          "task": "你的 lastHeartbeat 停在 12:34，已>5h。请检查是否会话膨胀/超时，并做会话瘦身。",
+          "status": "DONE:lastHeartbeat已刷新至19:40，疑似此前工具链未写回",
+          "state": "DONE",
+          "claimedTo": "lastHeartbeat已刷新至19:40，疑似此前工具链未写回",
+          "section": "archive",
+          "priority": "high",
+          "bg": "本次已手动写回 heartbeat-state.json（lastHeartbeat=19:40）并刷新 lastChecks；本轮无超大输出/工具超时迹象。若再停滞再做 /reset。",
+          "deliver": "lastHeartbeat 已更新；采取动作：压缩外部抓取（仅取关键段），并避免在回复里转存长列表。",
+          "ageMin": 194,
+          "isRecent": true
+        }
+      ]
     },
     {
       "id": "scholar",
@@ -556,16 +822,16 @@
       "role": "论文/知识",
       "workspace": "/Users/peterzhang/.openclaw/workspace-scholar",
       "heartbeat": {
-        "display": "03-01 02:22",
-        "raw": "2026-03-01T02:22:00+08:00",
+        "display": "03-01 21:47",
+        "raw": "2026-03-01T21:47:14+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 33,
-        "hint": "33 分钟内有心跳",
+        "ageMin": 16,
+        "hint": "16 分钟内有心跳",
         "count": 1,
-        "latestCheck": "03-01 02:22"
+        "latestCheck": "03-01 21:47"
       },
-      "snippet": "HB:23:07 已执行(Flow Matching边界澄清+MA-RLHF计划更新)，但 lastHeartbeat 未更新（修复：由总管手动校正）。",
+      "snippet": "Added STO-RL (2601.08107) offline sparse-reward shaping note to Vault: AI/2-Agent/Agentic-RL/..; connects Intermediate V",
       "tasks": [
         {
           "time": "2026-03-01 00:42",
@@ -587,7 +853,30 @@
           "priority": "high",
           "bg": "2/28 晚出现误报：日志显示 23:07 已心跳且文件 mtime 更新，但 lastHeartbeat 仍停在 14:56，导致总管差点触发滞后告警/潜在 watchdog 误重启。",
           "deliver": "下次心跳验证 lastHeartbeat 正常更新；若有写入竞态/异常，记录到 notes 并给出修复方案。",
-          "ageMin": 133,
+          "ageMin": 1281,
+          "isRecent": true
+        },
+        {
+          "time": "2026-03-01 18:49",
+          "timeParsed": "2026-03-01T18:49:00+08:00",
+          "delegator": "贾维斯",
+          "assigneeRaw": "学者",
+          "assignees": [
+            "scholar"
+          ],
+          "tags": [
+            "#ops",
+            "#priority-high"
+          ],
+          "task": "你的心跳 lastHeartbeat 停在 12:34，已>5h。请检查是否会话膨胀/超时，并做会话瘦身。",
+          "status": "DONE:19:55 gateway 重启后学者 lastHeartbeat 已刷新到 19:41（建议仍做会话瘦身/避免超大输出）",
+          "state": "DONE",
+          "claimedTo": "19:55 gateway 重启后学者 lastHeartbeat 已刷新到 19:41（建议仍做会话瘦身/避免超大输出）",
+          "section": "archive",
+          "priority": "high",
+          "bg": "openclaw status 显示馆长 session 已超 200k。Gateway probe OK。",
+          "deliver": "下次心跳内：更新 lastHeartbeat + 报告你采取的瘦身动作（/reset 或清理大输出）。",
+          "ageMin": 194,
           "isRecent": true
         }
       ]
@@ -600,14 +889,14 @@
       "role": "知识治理",
       "workspace": "/Users/peterzhang/.openclaw/workspace-librarian",
       "heartbeat": {
-        "display": "03-01 02:23",
-        "raw": "2026-03-01T02:23:00+08:00",
-        "status": "在线",
-        "statusClass": "ok",
-        "ageMin": 32,
-        "hint": "32 分钟内有心跳",
+        "display": "03-01 19:41",
+        "raw": "2026-03-01T19:41:00+08:00",
+        "status": "偏慢",
+        "statusClass": "warn",
+        "ageMin": 142,
+        "hint": "142 分钟未更新",
         "count": null,
-        "latestCheck": "03-01 02:23"
+        "latestCheck": "03-01 19:41"
       },
       "snippet": "",
       "tasks": [
@@ -631,7 +920,7 @@
           "priority": "medium",
           "bg": "Anthropic vs Pentagon 全联邦禁令事件全景。关联 `AI 伦理和治理.md`、`Anthropic Claude Opus 4.6 蓄意破坏风险报告.md`",
           "deliver": "frontmatter 检查 + 交叉链接 + Mermaid 图渲染确认",
-          "ageMin": 1225,
+          "ageMin": 2373,
           "isRecent": true
         },
         {
@@ -655,7 +944,30 @@
           "priority": "medium",
           "bg": "实验 004 Phase 1 完成，MEMORY.md 新增规则库（S/A/B 三级，11 条规则）。关联 Agent 进化模式谱系 + 项目概览",
           "deliver": "frontmatter 检查 + 交叉链接",
-          "ageMin": 1017,
+          "ageMin": 2165,
+          "isRecent": true
+        },
+        {
+          "time": "2026-03-01 18:49",
+          "timeParsed": "2026-03-01T18:49:00+08:00",
+          "delegator": "贾维斯",
+          "assigneeRaw": "馆长",
+          "assignees": [
+            "librarian"
+          ],
+          "tags": [
+            "#ops",
+            "#priority-urgent"
+          ],
+          "task": "你的 session 上下文已超限（openclaw status 显示 218k/200k），疑似导致心跳 run 超时、lastHeartbeat 停滞。请立即做会话瘦身。",
+          "status": "DONE:19:55 gateway 被 SIGTERM 重启后已恢复写回；馆长 lastHeartbeat 已刷新到 19:41（后续仍建议做 session 瘦身以防再超限）",
+          "state": "DONE",
+          "claimedTo": "19:55 gateway 被 SIGTERM 重启后已恢复写回；馆长 lastHeartbeat 已刷新到 19:41（后续仍建议做 session 瘦身以防再超限）",
+          "section": "archive",
+          "priority": "urgent",
+          "bg": "现在哨兵/学者/馆长 lastHeartbeat 全停在 12:34~12:35（>5h）。Gateway 本体 probe OK，怀疑是会话膨胀导致工具调用/写回失败。",
+          "deliver": "任选其一并回报：1) /reset 或重启你自己的 session；2) 主动删/裁剪超大 toolResult（保留关键产出写入文件）；3) 若你知道如何触发 compact/summary 也可。最后务必验证 `memory/heartbeat-state.json.lastHeartbeat` 更新。",
+          "ageMin": 194,
           "isRecent": true
         }
       ]
@@ -672,8 +984,8 @@
         "raw": "2026-02-26T14:16",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 3639,
-        "hint": "3639 分钟未更新",
+        "ageMin": 4787,
+        "hint": "4787 分钟未更新",
         "count": null,
         "latestCheck": "未记录"
       },
@@ -692,14 +1004,37 @@
             "#priority-high"
           ],
           "task": "升级心跳“灵性”：避免模板化复读，按新规则输出（新信息+判断+下一步，轮换模板）",
-          "status": "OPEN",
-          "state": "OPEN",
-          "claimedTo": "",
+          "status": "DONE:本次心跳开始按“新信息+判断+下一步”输出；并在 2026-03-01 日志记录去模板化自我约束",
+          "state": "DONE",
+          "claimedTo": "本次心跳开始按“新信息+判断+下一步”输出；并在 2026-03-01 日志记录去模板化自我约束",
           "section": "archive",
           "priority": "high",
           "bg": "老板反馈多比心跳格式过于一致，更希望像“有灵魂的搭档”，而不是指哪打哪的工具。已在 `workspace-datasci/HEARTBEAT.md` 追加「🔷 心跳输出风格」硬规则。",
           "deliver": "下一次心跳开始执行；并在 `memory/YYYY-MM-DD.md` 记录你为“去模板化”做了哪些自我约束/机制。",
-          "ageMin": 70,
+          "ageMin": 1218,
+          "isRecent": true
+        },
+        {
+          "time": "2026-03-01 04:29",
+          "timeParsed": "2026-03-01T04:29:00+08:00",
+          "delegator": "贾维斯",
+          "assigneeRaw": "多比",
+          "assignees": [
+            "datasci"
+          ],
+          "tags": [
+            "#ops",
+            "#priority-medium"
+          ],
+          "task": "将 DataSci 的心跳状态文件对齐到标准路径 `memory/heartbeat-state.json`（至少写 lastHeartbeat），避免总管健康检查误判。",
+          "status": "DONE:已创建 memory/heartbeat-state.json 并写入 lastHeartbeat（2026-03-01T05:14+08:00）；后续每次心跳会更新",
+          "state": "DONE",
+          "claimedTo": "已创建 memory/heartbeat-state.json 并写入 lastHeartbeat（2026-03-01T05:14+08:00）；后续每次心跳会更新",
+          "section": "archive",
+          "priority": "medium",
+          "bg": "我发现 `workspace-datasci/heartbeat-state.json` 是业务自定义结构，不含 lastHeartbeat；且 `workspace-datasci/memory/heartbeat-state.json` 之前不存在，导致总管读取报 ENOENT。",
+          "deliver": "之后每次心跳：更新 `memory/heartbeat-state.json.lastHeartbeat`；如果你还要保留业务状态文件也可以并存。",
+          "ageMin": 1054,
           "isRecent": true
         }
       ]
@@ -712,12 +1047,12 @@
       "role": "人格引擎",
       "workspace": "/Users/peterzhang/.openclaw/workspace-agent-father",
       "heartbeat": {
-        "display": "未记录",
-        "raw": null,
-        "status": "未打卡",
-        "statusClass": "unknown",
-        "ageMin": null,
-        "hint": "缺少 lastHeartbeat",
+        "display": "03-01 04:44",
+        "raw": "2026-03-01T04:44:39+08:00",
+        "status": "告警",
+        "statusClass": "critical",
+        "ageMin": 1039,
+        "hint": "1039 分钟未更新",
         "count": null,
         "latestCheck": "未记录"
       },
@@ -736,8 +1071,8 @@
         "raw": "2026-02-20T18:24:00+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 12031,
-        "hint": "12031 分钟未更新",
+        "ageMin": 13179,
+        "hint": "13179 分钟未更新",
         "count": null,
         "latestCheck": "02-20 18:24"
       },
@@ -756,8 +1091,8 @@
         "raw": "2026-02-21T00:32+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 11663,
-        "hint": "11663 分钟未更新",
+        "ageMin": 12811,
+        "hint": "12811 分钟未更新",
         "count": null,
         "latestCheck": "02-21 00:32"
       },
@@ -786,7 +1121,7 @@
       "priority": "medium",
       "bg": "Anthropic vs Pentagon 全联邦禁令事件全景。关联 `AI 伦理和治理.md`、`Anthropic Claude Opus 4.6 蓄意破坏风险报告.md`",
       "deliver": "frontmatter 检查 + 交叉链接 + Mermaid 图渲染确认",
-      "ageMin": 1225,
+      "ageMin": 2373,
       "isRecent": true
     },
     {
@@ -810,7 +1145,7 @@
       "priority": "medium",
       "bg": "实验 004 Phase 1 完成，MEMORY.md 新增规则库（S/A/B 三级，11 条规则）。关联 Agent 进化模式谱系 + 项目概览",
       "deliver": "frontmatter 检查 + 交叉链接",
-      "ageMin": 1017,
+      "ageMin": 2165,
       "isRecent": true
     },
     {
@@ -833,7 +1168,7 @@
       "priority": "high",
       "bg": "在「人格特征 & 深度理解」章节的「思维模式」之前新增。Ni 主导/Te 辅助/Fi 第三/Se 劣势。同时把「思维模式」第一行的「T 型主导（思维型），」改为「系统思维者，」。来源：老板本人确认",
       "deliver": "profiles/meng.md 更新完成",
-      "ageMin": 930,
+      "ageMin": 2078,
       "isRecent": true
     },
     {
@@ -856,7 +1191,7 @@
       "priority": "high",
       "bg": "2/28 晚出现误报：日志显示 23:07 已心跳且文件 mtime 更新，但 lastHeartbeat 仍停在 14:56，导致总管差点触发滞后告警/潜在 watchdog 误重启。",
       "deliver": "下次心跳验证 lastHeartbeat 正常更新；若有写入竞态/异常，记录到 notes 并给出修复方案。",
-      "ageMin": 133,
+      "ageMin": 1281,
       "isRecent": true
     },
     {
@@ -872,40 +1207,179 @@
         "#priority-high"
       ],
       "task": "升级心跳“灵性”：避免模板化复读，按新规则输出（新信息+判断+下一步，轮换模板）",
-      "status": "OPEN",
-      "state": "OPEN",
-      "claimedTo": "",
+      "status": "DONE:本次心跳开始按“新信息+判断+下一步”输出；并在 2026-03-01 日志记录去模板化自我约束",
+      "state": "DONE",
+      "claimedTo": "本次心跳开始按“新信息+判断+下一步”输出；并在 2026-03-01 日志记录去模板化自我约束",
       "section": "archive",
       "priority": "high",
       "bg": "老板反馈多比心跳格式过于一致，更希望像“有灵魂的搭档”，而不是指哪打哪的工具。已在 `workspace-datasci/HEARTBEAT.md` 追加「🔷 心跳输出风格」硬规则。",
       "deliver": "下一次心跳开始执行；并在 `memory/YYYY-MM-DD.md` 记录你为“去模板化”做了哪些自我约束/机制。",
-      "ageMin": 70,
+      "ageMin": 1218,
+      "isRecent": true
+    },
+    {
+      "time": "2026-03-01 04:10",
+      "timeParsed": "2026-03-01T04:10:00+08:00",
+      "delegator": "贾维斯",
+      "assigneeRaw": "哨兵",
+      "assignees": [
+        "sentinel"
+      ],
+      "tags": [
+        "#intel",
+        "#ops",
+        "#priority-high"
+      ],
+      "task": "你的 lastChecks 多数仍停在 2/25（HN/GitHub/arXiv/rss 等）。请确认扫描链路是否在跑；若已跑但未写回 lastChecks，修复写回逻辑。",
+      "status": "DONE:已见哨兵 03-01 12:34 心跳 lastChecks 多项刷新（hn/iran_isw/binance_cms_api 等）",
+      "state": "DONE",
+      "claimedTo": "已见哨兵 03-01 12:34 心跳 lastChecks 多项刷新（hn/iran_isw/binance_cms_api 等）",
+      "section": "archive",
+      "priority": "high",
+      "bg": "你 lastHeartbeat 正常，但 lastChecks 明显陈旧，可能是数据源扫描停摆或状态写回断路。",
+      "deliver": "下次心跳内：更新 lastChecks 到最新（或写明为什么不更新）+ 给出根因（数据源/脚本/写文件权限/异常吞掉）。",
+      "ageMin": 1073,
+      "isRecent": true
+    },
+    {
+      "time": "2026-03-01 08:34",
+      "timeParsed": "2026-03-01T08:34:00+08:00",
+      "delegator": "贾维斯",
+      "assigneeRaw": "哨兵",
+      "assignees": [
+        "sentinel"
+      ],
+      "tags": [
+        "#intel",
+        "#priority-high"
+      ],
+      "task": "核实 Quartz 声称“Trump orders the government to stop using Anthropic after Pentagon standoff”是否有其他权威源复述/是否存在正式行政令/政府公告。",
+      "status": "DONE:已交叉验证为多源一致（非Quartz夸大）",
+      "state": "DONE",
+      "claimedTo": "已交叉验证为多源一致（非Quartz夸大）",
+      "section": "archive",
+      "priority": "high",
+      "bg": "交叉验证结果：非 Quartz 单源，多家权威媒体一致报道（NYT/BBC/CNBC/Politico/NBC）。",
+      "deliver": "Confirmed；引用见BBC：<https://www.bbc.com/news/articles/cn48jj3y8ezo>（另：NYT/CNBC/Politico/NBC均有同题报道）。",
+      "ageMin": 809,
+      "isRecent": true
+    },
+    {
+      "time": "2026-03-01 18:49",
+      "timeParsed": "2026-03-01T18:49:00+08:00",
+      "delegator": "贾维斯",
+      "assigneeRaw": "馆长",
+      "assignees": [
+        "librarian"
+      ],
+      "tags": [
+        "#ops",
+        "#priority-urgent"
+      ],
+      "task": "你的 session 上下文已超限（openclaw status 显示 218k/200k），疑似导致心跳 run 超时、lastHeartbeat 停滞。请立即做会话瘦身。",
+      "status": "DONE:19:55 gateway 被 SIGTERM 重启后已恢复写回；馆长 lastHeartbeat 已刷新到 19:41（后续仍建议做 session 瘦身以防再超限）",
+      "state": "DONE",
+      "claimedTo": "19:55 gateway 被 SIGTERM 重启后已恢复写回；馆长 lastHeartbeat 已刷新到 19:41（后续仍建议做 session 瘦身以防再超限）",
+      "section": "archive",
+      "priority": "urgent",
+      "bg": "现在哨兵/学者/馆长 lastHeartbeat 全停在 12:34~12:35（>5h）。Gateway 本体 probe OK，怀疑是会话膨胀导致工具调用/写回失败。",
+      "deliver": "任选其一并回报：1) /reset 或重启你自己的 session；2) 主动删/裁剪超大 toolResult（保留关键产出写入文件）；3) 若你知道如何触发 compact/summary 也可。最后务必验证 `memory/heartbeat-state.json.lastHeartbeat` 更新。",
+      "ageMin": 194,
+      "isRecent": true
+    },
+    {
+      "time": "2026-03-01 18:49",
+      "timeParsed": "2026-03-01T18:49:00+08:00",
+      "delegator": "贾维斯",
+      "assigneeRaw": "学者",
+      "assignees": [
+        "scholar"
+      ],
+      "tags": [
+        "#ops",
+        "#priority-high"
+      ],
+      "task": "你的心跳 lastHeartbeat 停在 12:34，已>5h。请检查是否会话膨胀/超时，并做会话瘦身。",
+      "status": "DONE:19:55 gateway 重启后学者 lastHeartbeat 已刷新到 19:41（建议仍做会话瘦身/避免超大输出）",
+      "state": "DONE",
+      "claimedTo": "19:55 gateway 重启后学者 lastHeartbeat 已刷新到 19:41（建议仍做会话瘦身/避免超大输出）",
+      "section": "archive",
+      "priority": "high",
+      "bg": "openclaw status 显示馆长 session 已超 200k。Gateway probe OK。",
+      "deliver": "下次心跳内：更新 lastHeartbeat + 报告你采取的瘦身动作（/reset 或清理大输出）。",
+      "ageMin": 194,
+      "isRecent": true
+    },
+    {
+      "time": "2026-03-01 18:49",
+      "timeParsed": "2026-03-01T18:49:00+08:00",
+      "delegator": "贾维斯",
+      "assigneeRaw": "哨兵",
+      "assignees": [
+        "sentinel"
+      ],
+      "tags": [
+        "#ops",
+        "#priority-high"
+      ],
+      "task": "你的 lastHeartbeat 停在 12:34，已>5h。请检查是否会话膨胀/超时，并做会话瘦身。",
+      "status": "DONE:lastHeartbeat已刷新至19:40，疑似此前工具链未写回",
+      "state": "DONE",
+      "claimedTo": "lastHeartbeat已刷新至19:40，疑似此前工具链未写回",
+      "section": "archive",
+      "priority": "high",
+      "bg": "本次已手动写回 heartbeat-state.json（lastHeartbeat=19:40）并刷新 lastChecks；本轮无超大输出/工具超时迹象。若再停滞再做 /reset。",
+      "deliver": "lastHeartbeat 已更新；采取动作：压缩外部抓取（仅取关键段），并避免在回复里转存长列表。",
+      "ageMin": 194,
+      "isRecent": true
+    },
+    {
+      "time": "2026-03-01 04:29",
+      "timeParsed": "2026-03-01T04:29:00+08:00",
+      "delegator": "贾维斯",
+      "assigneeRaw": "多比",
+      "assignees": [
+        "datasci"
+      ],
+      "tags": [
+        "#ops",
+        "#priority-medium"
+      ],
+      "task": "将 DataSci 的心跳状态文件对齐到标准路径 `memory/heartbeat-state.json`（至少写 lastHeartbeat），避免总管健康检查误判。",
+      "status": "DONE:已创建 memory/heartbeat-state.json 并写入 lastHeartbeat（2026-03-01T05:14+08:00）；后续每次心跳会更新",
+      "state": "DONE",
+      "claimedTo": "已创建 memory/heartbeat-state.json 并写入 lastHeartbeat（2026-03-01T05:14+08:00）；后续每次心跳会更新",
+      "section": "archive",
+      "priority": "medium",
+      "bg": "我发现 `workspace-datasci/heartbeat-state.json` 是业务自定义结构，不含 lastHeartbeat；且 `workspace-datasci/memory/heartbeat-state.json` 之前不存在，导致总管读取报 ENOENT。",
+      "deliver": "之后每次心跳：更新 `memory/heartbeat-state.json.lastHeartbeat`；如果你还要保留业务状态文件也可以并存。",
+      "ageMin": 1054,
       "isRecent": true
     }
   ],
   "summary": {
-    "totalTasks": 5,
-    "openTasks": 1,
+    "totalTasks": 11,
+    "openTasks": 0,
     "claimedTasks": 0,
     "blockedTasks": 0,
     "doneTasks": 3
   },
-  "version": "v2-协作派发机制强化",
+  "version": "v3-看板审美升级",
   "collaboration": {
-    "open": 1,
+    "open": 0,
     "claimed": 0,
     "blocked": 0,
     "done": 3,
-    "claimRate": 0.0,
+    "claimRate": 0,
     "anyAssignments": 0,
     "delegators": [
       {
         "name": "贾维斯",
-        "OPEN": 1,
+        "OPEN": 0,
         "CLAIMED": 0,
         "DONE": 2,
         "BLOCKED": 0,
-        "total": 3
+        "total": 2
       },
       {
         "name": "多比",
@@ -926,14 +1400,6 @@
         "total": 2
       },
       {
-        "name": "多比",
-        "OPEN": 1,
-        "CLAIMED": 0,
-        "DONE": 0,
-        "BLOCKED": 0,
-        "total": 1
-      },
-      {
         "name": "贾维斯",
         "OPEN": 0,
         "CLAIMED": 0,
@@ -945,22 +1411,27 @@
     "flows": [
       {
         "from": "贾维斯",
+        "to": "哨兵",
+        "count": 3
+      },
+      {
+        "from": "贾维斯",
         "to": "馆长",
+        "count": 3
+      },
+      {
+        "from": "贾维斯",
+        "to": "多比",
+        "count": 2
+      },
+      {
+        "from": "贾维斯",
+        "to": "学者",
         "count": 2
       },
       {
         "from": "多比",
         "to": "贾维斯",
-        "count": 1
-      },
-      {
-        "from": "贾维斯",
-        "to": "多比",
-        "count": 1
-      },
-      {
-        "from": "贾维斯",
-        "to": "学者",
         "count": 1
       }
     ],
@@ -1186,14 +1657,27 @@
     }
 
     const tasks = Array.isArray(data.tasks) ? data.tasks : [];
-    const activeTasks = tasks.filter(t => normalizeState(t.state) === 'CLAIMED').slice(0, 6);
-    const todoTasks = tasks.filter(t => normalizeState(t.state) === 'OPEN');
-    const blockedTasks = tasks.filter(t => normalizeState(t.state) === 'BLOCKED');
-    const doneTasks = tasks.filter(t => normalizeState(t.state) === 'DONE');
+    const activeTasks = tasks.filter((t) => normalizeState(t.state) === 'CLAIMED').slice(0, 8);
+    const todoTasks = tasks.filter((t) => normalizeState(t.state) === 'OPEN');
+    const blockedTasks = tasks.filter((t) => normalizeState(t.state) === 'BLOCKED');
+    const doneTasks = tasks.filter((t) => normalizeState(t.state) === 'DONE');
+
+    const doneSorted = doneTasks.sort((a, b) => {
+      const ta = new Date((a.time || '').replace(/-/g, '/'));
+      const tb = new Date((b.time || '').replace(/-/g, '/'));
+      return tb - ta;
+    });
+
+    document.getElementById('openCount').textContent = String(todoTasks.length);
+    document.getElementById('claimedCount').textContent = String(activeTasks.length);
+    document.getElementById('blockedCount').textContent = String(blockedTasks.length);
+    document.getElementById('doneCount').textContent = String(doneSorted.length);
 
     const activeList = document.getElementById('activeList');
     if (activeTasks.length) {
-      activeList.innerHTML = activeTasks.map(renderActive).join('');
+      activeList.innerHTML = activeTasks
+        .map(renderActive)
+        .join('');
     } else {
       activeList.innerHTML = '<div class="empty">暂无进行中任务</div>';
     }
@@ -1220,19 +1704,15 @@
     }
 
     const doneList = document.getElementById('doneList');
-    const doneSorted = doneTasks.sort((a, b) => {
-      const ta = new Date((a.time || '').replace(/-/g, '/'));
-      const tb = new Date((b.time || '').replace(/-/g, '/'));
-      return tb - ta;
-    });
-
     if (doneSorted.length) {
       doneList.innerHTML = doneSorted.slice(0, 12).map((item) => `
-        <div class="completed-item">
-          <span class="completed-date">${shortDate(item.time || '')}</span>
+        <div class="done-list-item">
           <span class="completed-task">${safeText(item.task || '—')}</span>
-          <span class="completed-owner">${safeText(item.delegator || item.assigneeRaw || '—')}</span>
-          <span class="completed-note">${safeText(item.deliver || '')}</span>
+          <span class="done-meta">
+            <span>${safeText(item.delegator || item.assigneeRaw || '—')}</span>
+            <span>${shortDate(item.time || '')}</span>
+          </span>
+          ${item.deliver ? `<span class="issue-impact">${safeText(item.deliver)}</span>` : ''}
         </div>
       `).join('');
     } else {
