@@ -21,7 +21,13 @@
       --pink: #f778ba;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif;
@@ -31,6 +37,8 @@
       padding: 24px;
       max-width: 1180px;
       margin: 0 auto;
+      min-width: 0;
+      overflow-wrap: anywhere;
     }
 
     header {
@@ -124,6 +132,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 8px;
+      min-width: 0;
     }
 
     .trend-name {
@@ -132,6 +141,7 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       max-width: 72%;
+      min-width: 0;
     }
 
     .trend-badge {
@@ -170,6 +180,7 @@
       border-radius: 12px;
       padding: 16px;
       transition: border-color 0.2s;
+      min-width: 0;
     }
 
     .agent-card:hover {
@@ -243,6 +254,7 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
+      min-width: 0;
     }
 
     .active-card {
@@ -262,6 +274,8 @@
       color: var(--text-dim);
       font-size: 0.9rem;
       margin: 4px 0;
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
 
     .active-detail strong { color: var(--text); }
@@ -280,6 +294,16 @@
 
     .todo-card {
       min-height: 92px;
+      min-width: 0;
+    }
+
+    .todo-card .todo-content { min-width: 0; }
+
+    .todo-content {
+      min-width: 0;
+      width: 100%;
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
 
     .todo-card.high { border-left: 3px solid var(--red); }
@@ -307,6 +331,12 @@
       font-size: 0.98rem;
       margin-bottom: 4px;
       line-height: 1.35;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
     }
 
     .todo-content p {
@@ -314,6 +344,12 @@
       font-size: 0.82rem;
       line-height: 1.35;
       margin-bottom: 6px;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
     }
 
     .todo-tag {
@@ -325,7 +361,10 @@
       font-size: 0.75rem;
       margin-right: 4px;
       margin-top: 4px;
-      white-space: nowrap;
+      white-space: normal;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+      line-height: 1.4;
     }
 
     .todo-blocker {
@@ -337,19 +376,37 @@
       font-size: 0.75rem;
       margin-top: 4px;
       margin-left: 4px;
-      white-space: nowrap;
+      white-space: normal;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+      line-height: 1.4;
     }
 
     .issue-row {
       display: grid;
       grid-template-columns: 1fr 1fr auto;
       gap: 12px;
-      align-items: center;
+      align-items: start;
       font-size: 0.9rem;
+      min-width: 0;
     }
 
-    .issue-name { font-weight: 500; }
-    .issue-impact { color: var(--text-dim); }
+    .issue-name {
+      font-weight: 500;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      min-width: 0;
+      white-space: normal;
+      display: block;
+    }
+    .issue-impact {
+      color: var(--text-dim);
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      min-width: 0;
+      white-space: normal;
+      display: block;
+    }
 
     .issue-status {
       padding: 2px 8px;
@@ -359,30 +416,63 @@
       color: var(--yellow);
       white-space: nowrap;
       border: 1px solid rgba(210, 153, 34, 0.25);
+      max-width: 42%;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      line-height: 1.2;
     }
 
     .completed-item {
       display: grid;
-      grid-template-columns: 70px 1fr auto auto;
+      grid-template-columns: minmax(62px, auto) 1fr auto auto;
       gap: 12px;
       padding: 8px 12px;
       border-radius: 6px;
       font-size: 0.85rem;
-      align-items: center;
-    }
-
-    .completed-item:nth-child(odd) {
-      background: rgba(22, 27, 34, 0.5);
+      align-items: start;
+      min-width: 0;
     }
 
     .completed-date {
       color: var(--text-dim);
       font-family: "SF Mono", "Fira Code", monospace;
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
 
-    .completed-task { color: var(--text); }
-    .completed-owner { color: var(--purple); font-size: 0.82rem; }
-    .completed-note { color: var(--text-dim); font-size: 0.8rem; text-align: right; }
+    .completed-task {
+      color: var(--text);
+      font-weight: 600;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      min-width: 0;
+    }
+
+    .completed-owner {
+      color: var(--purple);
+      font-size: 0.82rem;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      min-width: 0;
+    }
+
+    .completed-note {
+      color: var(--text-dim);
+      font-size: 0.8rem;
+      text-align: right;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      min-width: 0;
+      white-space: normal;
+      display: block;
+      max-width: 240px;
+    }
+
+    .completed-item:nth-child(odd) {
+      background: rgba(22, 27, 34, 0.5);
+    }
 
     .empty {
       color: var(--text-dim);
@@ -488,6 +578,17 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
+      min-width: 0;
+    }
+
+    .lane-list {
+      display: grid;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .active-card {
+      min-width: 0;
     }
 
     .lane-head {
@@ -527,15 +628,11 @@
       border: 1px solid rgba(139, 148, 158, 0.22);
     }
 
-    .lane-list {
-      display: grid;
-      gap: 8px;
-    }
-
     .lane-list .todo-card,
     .lane-list .active-card,
     .lane-list .completed-item,
-    .lane-list .issue-row {
+    .lane-list .issue-row,
+    .lane-list .done-list-item {
       margin: 0;
     }
 
@@ -551,10 +648,6 @@
       line-height: 1.35;
     }
 
-    .issue-row .issue-name { display: block; color: var(--text); font-weight: 600; }
-    .issue-impact { margin-top: 4px; display: block; color: var(--text-dim); }
-    .issue-status { margin-top: 6px; display: inline-block; }
-
     .done-list-item {
       display: grid;
       gap: 6px;
@@ -563,11 +656,15 @@
       border: 1px solid rgba(139, 148, 158, 0.22);
       background: rgba(139, 148, 158, 0.04);
       font-size: 0.8rem;
+      min-width: 0;
+      align-items: start;
     }
 
     .done-list-item .completed-task {
       color: var(--text);
       font-weight: 600;
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
 
     .done-list-item .done-meta {
@@ -577,6 +674,7 @@
       font-size: 0.74rem;
       gap: 8px;
       flex-wrap: wrap;
+      min-width: 0;
     }
 
     .empty { 
@@ -677,7 +775,7 @@
   </footer>
 
   <script id="payload" type="application/json">{
-  "generatedAt": "2026-03-01T22:05:29.554575+08:00",
+  "generatedAt": "2026-03-01T22:18:19.103634+08:00",
   "team": [
     {
       "id": "jarvis",
@@ -691,8 +789,8 @@
         "raw": "2026-03-01T21:44:00+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 21,
-        "hint": "21 分钟内有心跳",
+        "ageMin": 34,
+        "hint": "34 分钟内有心跳",
         "count": 748,
         "latestCheck": "03-01 21:44"
       },
@@ -718,7 +816,7 @@
           "priority": "high",
           "bg": "在「人格特征 & 深度理解」章节的「思维模式」之前新增。Ni 主导/Te 辅助/Fi 第三/Se 劣势。同时把「思维模式」第一行的「T 型主导（思维型），」改为「系统思维者，」。来源：老板本人确认",
           "deliver": "profiles/meng.md 更新完成",
-          "ageMin": 2080,
+          "ageMin": 2093,
           "isRecent": true
         }
       ]
@@ -735,8 +833,8 @@
         "raw": "2026-03-01T21:45+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 20,
-        "hint": "20 分钟内有心跳",
+        "ageMin": 33,
+        "hint": "33 分钟内有心跳",
         "count": null,
         "latestCheck": "03-01 21:45"
       },
@@ -763,7 +861,7 @@
           "priority": "high",
           "bg": "你 lastHeartbeat 正常，但 lastChecks 明显陈旧，可能是数据源扫描停摆或状态写回断路。",
           "deliver": "下次心跳内：更新 lastChecks 到最新（或写明为什么不更新）+ 给出根因（数据源/脚本/写文件权限/异常吞掉）。",
-          "ageMin": 1075,
+          "ageMin": 1088,
           "isRecent": true
         },
         {
@@ -786,7 +884,7 @@
           "priority": "high",
           "bg": "交叉验证结果：非 Quartz 单源，多家权威媒体一致报道（NYT/BBC/CNBC/Politico/NBC）。",
           "deliver": "Confirmed；引用见BBC：<https://www.bbc.com/news/articles/cn48jj3y8ezo>（另：NYT/CNBC/Politico/NBC均有同题报道）。",
-          "ageMin": 811,
+          "ageMin": 824,
           "isRecent": true
         },
         {
@@ -809,7 +907,7 @@
           "priority": "high",
           "bg": "本次已手动写回 heartbeat-state.json（lastHeartbeat=19:40）并刷新 lastChecks；本轮无超大输出/工具超时迹象。若再停滞再做 /reset。",
           "deliver": "lastHeartbeat 已更新；采取动作：压缩外部抓取（仅取关键段），并避免在回复里转存长列表。",
-          "ageMin": 196,
+          "ageMin": 209,
           "isRecent": true
         }
       ]
@@ -826,8 +924,8 @@
         "raw": "2026-03-01T21:47:14+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 18,
-        "hint": "18 分钟内有心跳",
+        "ageMin": 31,
+        "hint": "31 分钟内有心跳",
         "count": 1,
         "latestCheck": "03-01 21:47"
       },
@@ -853,7 +951,7 @@
           "priority": "high",
           "bg": "2/28 晚出现误报：日志显示 23:07 已心跳且文件 mtime 更新，但 lastHeartbeat 仍停在 14:56，导致总管差点触发滞后告警/潜在 watchdog 误重启。",
           "deliver": "下次心跳验证 lastHeartbeat 正常更新；若有写入竞态/异常，记录到 notes 并给出修复方案。",
-          "ageMin": 1283,
+          "ageMin": 1296,
           "isRecent": true
         },
         {
@@ -876,7 +974,7 @@
           "priority": "high",
           "bg": "openclaw status 显示馆长 session 已超 200k。Gateway probe OK。",
           "deliver": "下次心跳内：更新 lastHeartbeat + 报告你采取的瘦身动作（/reset 或清理大输出）。",
-          "ageMin": 196,
+          "ageMin": 209,
           "isRecent": true
         }
       ]
@@ -893,8 +991,8 @@
         "raw": "2026-03-01T19:41:00+08:00",
         "status": "偏慢",
         "statusClass": "warn",
-        "ageMin": 144,
-        "hint": "144 分钟未更新",
+        "ageMin": 157,
+        "hint": "157 分钟未更新",
         "count": null,
         "latestCheck": "03-01 19:41"
       },
@@ -920,7 +1018,7 @@
           "priority": "medium",
           "bg": "Anthropic vs Pentagon 全联邦禁令事件全景。关联 `AI 伦理和治理.md`、`Anthropic Claude Opus 4.6 蓄意破坏风险报告.md`",
           "deliver": "frontmatter 检查 + 交叉链接 + Mermaid 图渲染确认",
-          "ageMin": 2375,
+          "ageMin": 2388,
           "isRecent": true
         },
         {
@@ -944,7 +1042,7 @@
           "priority": "medium",
           "bg": "实验 004 Phase 1 完成，MEMORY.md 新增规则库（S/A/B 三级，11 条规则）。关联 Agent 进化模式谱系 + 项目概览",
           "deliver": "frontmatter 检查 + 交叉链接",
-          "ageMin": 2167,
+          "ageMin": 2180,
           "isRecent": true
         },
         {
@@ -967,7 +1065,7 @@
           "priority": "urgent",
           "bg": "现在哨兵/学者/馆长 lastHeartbeat 全停在 12:34~12:35（>5h）。Gateway 本体 probe OK，怀疑是会话膨胀导致工具调用/写回失败。",
           "deliver": "任选其一并回报：1) /reset 或重启你自己的 session；2) 主动删/裁剪超大 toolResult（保留关键产出写入文件）；3) 若你知道如何触发 compact/summary 也可。最后务必验证 `memory/heartbeat-state.json.lastHeartbeat` 更新。",
-          "ageMin": 196,
+          "ageMin": 209,
           "isRecent": true
         }
       ]
@@ -984,8 +1082,8 @@
         "raw": "2026-02-26T14:16",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 4789,
-        "hint": "4789 分钟未更新",
+        "ageMin": 4802,
+        "hint": "4802 分钟未更新",
         "count": null,
         "latestCheck": "未记录"
       },
@@ -1011,7 +1109,7 @@
           "priority": "high",
           "bg": "老板反馈多比心跳格式过于一致，更希望像“有灵魂的搭档”，而不是指哪打哪的工具。已在 `workspace-datasci/HEARTBEAT.md` 追加「🔷 心跳输出风格」硬规则。",
           "deliver": "下一次心跳开始执行；并在 `memory/YYYY-MM-DD.md` 记录你为“去模板化”做了哪些自我约束/机制。",
-          "ageMin": 1220,
+          "ageMin": 1233,
           "isRecent": true
         },
         {
@@ -1034,7 +1132,7 @@
           "priority": "medium",
           "bg": "我发现 `workspace-datasci/heartbeat-state.json` 是业务自定义结构，不含 lastHeartbeat；且 `workspace-datasci/memory/heartbeat-state.json` 之前不存在，导致总管读取报 ENOENT。",
           "deliver": "之后每次心跳：更新 `memory/heartbeat-state.json.lastHeartbeat`；如果你还要保留业务状态文件也可以并存。",
-          "ageMin": 1056,
+          "ageMin": 1069,
           "isRecent": true
         }
       ]
@@ -1051,8 +1149,8 @@
         "raw": "2026-03-01T04:44:39+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 1040,
-        "hint": "1040 分钟未更新",
+        "ageMin": 1053,
+        "hint": "1053 分钟未更新",
         "count": null,
         "latestCheck": "未记录"
       },
@@ -1071,8 +1169,8 @@
         "raw": "2026-02-20T18:24:00+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 13181,
-        "hint": "13181 分钟未更新",
+        "ageMin": 13194,
+        "hint": "13194 分钟未更新",
         "count": null,
         "latestCheck": "02-20 18:24"
       },
@@ -1091,8 +1189,8 @@
         "raw": "2026-02-21T00:32+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 12813,
-        "hint": "12813 分钟未更新",
+        "ageMin": 12826,
+        "hint": "12826 分钟未更新",
         "count": null,
         "latestCheck": "02-21 00:32"
       },
@@ -1121,7 +1219,7 @@
       "priority": "medium",
       "bg": "Anthropic vs Pentagon 全联邦禁令事件全景。关联 `AI 伦理和治理.md`、`Anthropic Claude Opus 4.6 蓄意破坏风险报告.md`",
       "deliver": "frontmatter 检查 + 交叉链接 + Mermaid 图渲染确认",
-      "ageMin": 2375,
+      "ageMin": 2388,
       "isRecent": true
     },
     {
@@ -1145,7 +1243,7 @@
       "priority": "medium",
       "bg": "实验 004 Phase 1 完成，MEMORY.md 新增规则库（S/A/B 三级，11 条规则）。关联 Agent 进化模式谱系 + 项目概览",
       "deliver": "frontmatter 检查 + 交叉链接",
-      "ageMin": 2167,
+      "ageMin": 2180,
       "isRecent": true
     },
     {
@@ -1168,7 +1266,7 @@
       "priority": "high",
       "bg": "在「人格特征 & 深度理解」章节的「思维模式」之前新增。Ni 主导/Te 辅助/Fi 第三/Se 劣势。同时把「思维模式」第一行的「T 型主导（思维型），」改为「系统思维者，」。来源：老板本人确认",
       "deliver": "profiles/meng.md 更新完成",
-      "ageMin": 2080,
+      "ageMin": 2093,
       "isRecent": true
     },
     {
@@ -1191,7 +1289,7 @@
       "priority": "high",
       "bg": "2/28 晚出现误报：日志显示 23:07 已心跳且文件 mtime 更新，但 lastHeartbeat 仍停在 14:56，导致总管差点触发滞后告警/潜在 watchdog 误重启。",
       "deliver": "下次心跳验证 lastHeartbeat 正常更新；若有写入竞态/异常，记录到 notes 并给出修复方案。",
-      "ageMin": 1283,
+      "ageMin": 1296,
       "isRecent": true
     },
     {
@@ -1214,7 +1312,7 @@
       "priority": "high",
       "bg": "老板反馈多比心跳格式过于一致，更希望像“有灵魂的搭档”，而不是指哪打哪的工具。已在 `workspace-datasci/HEARTBEAT.md` 追加「🔷 心跳输出风格」硬规则。",
       "deliver": "下一次心跳开始执行；并在 `memory/YYYY-MM-DD.md` 记录你为“去模板化”做了哪些自我约束/机制。",
-      "ageMin": 1220,
+      "ageMin": 1233,
       "isRecent": true
     },
     {
@@ -1238,7 +1336,7 @@
       "priority": "high",
       "bg": "你 lastHeartbeat 正常，但 lastChecks 明显陈旧，可能是数据源扫描停摆或状态写回断路。",
       "deliver": "下次心跳内：更新 lastChecks 到最新（或写明为什么不更新）+ 给出根因（数据源/脚本/写文件权限/异常吞掉）。",
-      "ageMin": 1075,
+      "ageMin": 1088,
       "isRecent": true
     },
     {
@@ -1261,7 +1359,7 @@
       "priority": "high",
       "bg": "交叉验证结果：非 Quartz 单源，多家权威媒体一致报道（NYT/BBC/CNBC/Politico/NBC）。",
       "deliver": "Confirmed；引用见BBC：<https://www.bbc.com/news/articles/cn48jj3y8ezo>（另：NYT/CNBC/Politico/NBC均有同题报道）。",
-      "ageMin": 811,
+      "ageMin": 824,
       "isRecent": true
     },
     {
@@ -1284,7 +1382,7 @@
       "priority": "urgent",
       "bg": "现在哨兵/学者/馆长 lastHeartbeat 全停在 12:34~12:35（>5h）。Gateway 本体 probe OK，怀疑是会话膨胀导致工具调用/写回失败。",
       "deliver": "任选其一并回报：1) /reset 或重启你自己的 session；2) 主动删/裁剪超大 toolResult（保留关键产出写入文件）；3) 若你知道如何触发 compact/summary 也可。最后务必验证 `memory/heartbeat-state.json.lastHeartbeat` 更新。",
-      "ageMin": 196,
+      "ageMin": 209,
       "isRecent": true
     },
     {
@@ -1307,7 +1405,7 @@
       "priority": "high",
       "bg": "openclaw status 显示馆长 session 已超 200k。Gateway probe OK。",
       "deliver": "下次心跳内：更新 lastHeartbeat + 报告你采取的瘦身动作（/reset 或清理大输出）。",
-      "ageMin": 196,
+      "ageMin": 209,
       "isRecent": true
     },
     {
@@ -1330,7 +1428,7 @@
       "priority": "high",
       "bg": "本次已手动写回 heartbeat-state.json（lastHeartbeat=19:40）并刷新 lastChecks；本轮无超大输出/工具超时迹象。若再停滞再做 /reset。",
       "deliver": "lastHeartbeat 已更新；采取动作：压缩外部抓取（仅取关键段），并避免在回复里转存长列表。",
-      "ageMin": 196,
+      "ageMin": 209,
       "isRecent": true
     },
     {
@@ -1353,7 +1451,7 @@
       "priority": "medium",
       "bg": "我发现 `workspace-datasci/heartbeat-state.json` 是业务自定义结构，不含 lastHeartbeat；且 `workspace-datasci/memory/heartbeat-state.json` 之前不存在，导致总管读取报 ENOENT。",
       "deliver": "之后每次心跳：更新 `memory/heartbeat-state.json.lastHeartbeat`；如果你还要保留业务状态文件也可以并存。",
-      "ageMin": 1056,
+      "ageMin": 1069,
       "isRecent": true
     }
   ],
