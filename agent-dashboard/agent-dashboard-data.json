@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-01T22:03:57.242756+08:00",
+  "generatedAt": "2026-03-01T22:05:29.554575+08:00",
   "team": [
     {
       "id": "jarvis",
@@ -13,8 +13,8 @@
         "raw": "2026-03-01T21:44:00+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 19,
-        "hint": "19 分钟内有心跳",
+        "ageMin": 21,
+        "hint": "21 分钟内有心跳",
         "count": 748,
         "latestCheck": "03-01 21:44"
       },
@@ -40,7 +40,7 @@
           "priority": "high",
           "bg": "在「人格特征 & 深度理解」章节的「思维模式」之前新增。Ni 主导/Te 辅助/Fi 第三/Se 劣势。同时把「思维模式」第一行的「T 型主导（思维型），」改为「系统思维者，」。来源：老板本人确认",
           "deliver": "profiles/meng.md 更新完成",
-          "ageMin": 2078,
+          "ageMin": 2080,
           "isRecent": true
         }
       ]
@@ -57,8 +57,8 @@
         "raw": "2026-03-01T21:45+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 18,
-        "hint": "18 分钟内有心跳",
+        "ageMin": 20,
+        "hint": "20 分钟内有心跳",
         "count": null,
         "latestCheck": "03-01 21:45"
       },
@@ -85,7 +85,7 @@
           "priority": "high",
           "bg": "你 lastHeartbeat 正常，但 lastChecks 明显陈旧，可能是数据源扫描停摆或状态写回断路。",
           "deliver": "下次心跳内：更新 lastChecks 到最新（或写明为什么不更新）+ 给出根因（数据源/脚本/写文件权限/异常吞掉）。",
-          "ageMin": 1073,
+          "ageMin": 1075,
           "isRecent": true
         },
         {
@@ -108,7 +108,7 @@
           "priority": "high",
           "bg": "交叉验证结果：非 Quartz 单源，多家权威媒体一致报道（NYT/BBC/CNBC/Politico/NBC）。",
           "deliver": "Confirmed；引用见BBC：<https://www.bbc.com/news/articles/cn48jj3y8ezo>（另：NYT/CNBC/Politico/NBC均有同题报道）。",
-          "ageMin": 809,
+          "ageMin": 811,
           "isRecent": true
         },
         {
@@ -131,7 +131,7 @@
           "priority": "high",
           "bg": "本次已手动写回 heartbeat-state.json（lastHeartbeat=19:40）并刷新 lastChecks；本轮无超大输出/工具超时迹象。若再停滞再做 /reset。",
           "deliver": "lastHeartbeat 已更新；采取动作：压缩外部抓取（仅取关键段），并避免在回复里转存长列表。",
-          "ageMin": 194,
+          "ageMin": 196,
           "isRecent": true
         }
       ]
@@ -148,8 +148,8 @@
         "raw": "2026-03-01T21:47:14+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 16,
-        "hint": "16 分钟内有心跳",
+        "ageMin": 18,
+        "hint": "18 分钟内有心跳",
         "count": 1,
         "latestCheck": "03-01 21:47"
       },
@@ -175,7 +175,7 @@
           "priority": "high",
           "bg": "2/28 晚出现误报：日志显示 23:07 已心跳且文件 mtime 更新，但 lastHeartbeat 仍停在 14:56，导致总管差点触发滞后告警/潜在 watchdog 误重启。",
           "deliver": "下次心跳验证 lastHeartbeat 正常更新；若有写入竞态/异常，记录到 notes 并给出修复方案。",
-          "ageMin": 1281,
+          "ageMin": 1283,
           "isRecent": true
         },
         {
@@ -198,7 +198,7 @@
           "priority": "high",
           "bg": "openclaw status 显示馆长 session 已超 200k。Gateway probe OK。",
           "deliver": "下次心跳内：更新 lastHeartbeat + 报告你采取的瘦身动作（/reset 或清理大输出）。",
-          "ageMin": 194,
+          "ageMin": 196,
           "isRecent": true
         }
       ]
@@ -215,8 +215,8 @@
         "raw": "2026-03-01T19:41:00+08:00",
         "status": "偏慢",
         "statusClass": "warn",
-        "ageMin": 142,
-        "hint": "142 分钟未更新",
+        "ageMin": 144,
+        "hint": "144 分钟未更新",
         "count": null,
         "latestCheck": "03-01 19:41"
       },
@@ -242,7 +242,7 @@
           "priority": "medium",
           "bg": "Anthropic vs Pentagon 全联邦禁令事件全景。关联 `AI 伦理和治理.md`、`Anthropic Claude Opus 4.6 蓄意破坏风险报告.md`",
           "deliver": "frontmatter 检查 + 交叉链接 + Mermaid 图渲染确认",
-          "ageMin": 2373,
+          "ageMin": 2375,
           "isRecent": true
         },
         {
@@ -266,7 +266,7 @@
           "priority": "medium",
           "bg": "实验 004 Phase 1 完成，MEMORY.md 新增规则库（S/A/B 三级，11 条规则）。关联 Agent 进化模式谱系 + 项目概览",
           "deliver": "frontmatter 检查 + 交叉链接",
-          "ageMin": 2165,
+          "ageMin": 2167,
           "isRecent": true
         },
         {
@@ -289,7 +289,7 @@
           "priority": "urgent",
           "bg": "现在哨兵/学者/馆长 lastHeartbeat 全停在 12:34~12:35（>5h）。Gateway 本体 probe OK，怀疑是会话膨胀导致工具调用/写回失败。",
           "deliver": "任选其一并回报：1) /reset 或重启你自己的 session；2) 主动删/裁剪超大 toolResult（保留关键产出写入文件）；3) 若你知道如何触发 compact/summary 也可。最后务必验证 `memory/heartbeat-state.json.lastHeartbeat` 更新。",
-          "ageMin": 194,
+          "ageMin": 196,
           "isRecent": true
         }
       ]
@@ -306,8 +306,8 @@
         "raw": "2026-02-26T14:16",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 4787,
-        "hint": "4787 分钟未更新",
+        "ageMin": 4789,
+        "hint": "4789 分钟未更新",
         "count": null,
         "latestCheck": "未记录"
       },
@@ -333,7 +333,7 @@
           "priority": "high",
           "bg": "老板反馈多比心跳格式过于一致，更希望像“有灵魂的搭档”，而不是指哪打哪的工具。已在 `workspace-datasci/HEARTBEAT.md` 追加「🔷 心跳输出风格」硬规则。",
           "deliver": "下一次心跳开始执行；并在 `memory/YYYY-MM-DD.md` 记录你为“去模板化”做了哪些自我约束/机制。",
-          "ageMin": 1218,
+          "ageMin": 1220,
           "isRecent": true
         },
         {
@@ -356,7 +356,7 @@
           "priority": "medium",
           "bg": "我发现 `workspace-datasci/heartbeat-state.json` 是业务自定义结构，不含 lastHeartbeat；且 `workspace-datasci/memory/heartbeat-state.json` 之前不存在，导致总管读取报 ENOENT。",
           "deliver": "之后每次心跳：更新 `memory/heartbeat-state.json.lastHeartbeat`；如果你还要保留业务状态文件也可以并存。",
-          "ageMin": 1054,
+          "ageMin": 1056,
           "isRecent": true
         }
       ]
@@ -373,8 +373,8 @@
         "raw": "2026-03-01T04:44:39+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 1039,
-        "hint": "1039 分钟未更新",
+        "ageMin": 1040,
+        "hint": "1040 分钟未更新",
         "count": null,
         "latestCheck": "未记录"
       },
@@ -393,8 +393,8 @@
         "raw": "2026-02-20T18:24:00+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 13179,
-        "hint": "13179 分钟未更新",
+        "ageMin": 13181,
+        "hint": "13181 分钟未更新",
         "count": null,
         "latestCheck": "02-20 18:24"
       },
@@ -413,8 +413,8 @@
         "raw": "2026-02-21T00:32+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 12811,
-        "hint": "12811 分钟未更新",
+        "ageMin": 12813,
+        "hint": "12813 分钟未更新",
         "count": null,
         "latestCheck": "02-21 00:32"
       },
@@ -443,7 +443,7 @@
       "priority": "medium",
       "bg": "Anthropic vs Pentagon 全联邦禁令事件全景。关联 `AI 伦理和治理.md`、`Anthropic Claude Opus 4.6 蓄意破坏风险报告.md`",
       "deliver": "frontmatter 检查 + 交叉链接 + Mermaid 图渲染确认",
-      "ageMin": 2373,
+      "ageMin": 2375,
       "isRecent": true
     },
     {
@@ -467,7 +467,7 @@
       "priority": "medium",
       "bg": "实验 004 Phase 1 完成，MEMORY.md 新增规则库（S/A/B 三级，11 条规则）。关联 Agent 进化模式谱系 + 项目概览",
       "deliver": "frontmatter 检查 + 交叉链接",
-      "ageMin": 2165,
+      "ageMin": 2167,
       "isRecent": true
     },
     {
@@ -490,7 +490,7 @@
       "priority": "high",
       "bg": "在「人格特征 & 深度理解」章节的「思维模式」之前新增。Ni 主导/Te 辅助/Fi 第三/Se 劣势。同时把「思维模式」第一行的「T 型主导（思维型），」改为「系统思维者，」。来源：老板本人确认",
       "deliver": "profiles/meng.md 更新完成",
-      "ageMin": 2078,
+      "ageMin": 2080,
       "isRecent": true
     },
     {
@@ -513,7 +513,7 @@
       "priority": "high",
       "bg": "2/28 晚出现误报：日志显示 23:07 已心跳且文件 mtime 更新，但 lastHeartbeat 仍停在 14:56，导致总管差点触发滞后告警/潜在 watchdog 误重启。",
       "deliver": "下次心跳验证 lastHeartbeat 正常更新；若有写入竞态/异常，记录到 notes 并给出修复方案。",
-      "ageMin": 1281,
+      "ageMin": 1283,
       "isRecent": true
     },
     {
@@ -536,7 +536,7 @@
       "priority": "high",
       "bg": "老板反馈多比心跳格式过于一致，更希望像“有灵魂的搭档”，而不是指哪打哪的工具。已在 `workspace-datasci/HEARTBEAT.md` 追加「🔷 心跳输出风格」硬规则。",
       "deliver": "下一次心跳开始执行；并在 `memory/YYYY-MM-DD.md` 记录你为“去模板化”做了哪些自我约束/机制。",
-      "ageMin": 1218,
+      "ageMin": 1220,
       "isRecent": true
     },
     {
@@ -560,7 +560,7 @@
       "priority": "high",
       "bg": "你 lastHeartbeat 正常，但 lastChecks 明显陈旧，可能是数据源扫描停摆或状态写回断路。",
       "deliver": "下次心跳内：更新 lastChecks 到最新（或写明为什么不更新）+ 给出根因（数据源/脚本/写文件权限/异常吞掉）。",
-      "ageMin": 1073,
+      "ageMin": 1075,
       "isRecent": true
     },
     {
@@ -583,7 +583,7 @@
       "priority": "high",
       "bg": "交叉验证结果：非 Quartz 单源，多家权威媒体一致报道（NYT/BBC/CNBC/Politico/NBC）。",
       "deliver": "Confirmed；引用见BBC：<https://www.bbc.com/news/articles/cn48jj3y8ezo>（另：NYT/CNBC/Politico/NBC均有同题报道）。",
-      "ageMin": 809,
+      "ageMin": 811,
       "isRecent": true
     },
     {
@@ -606,7 +606,7 @@
       "priority": "urgent",
       "bg": "现在哨兵/学者/馆长 lastHeartbeat 全停在 12:34~12:35（>5h）。Gateway 本体 probe OK，怀疑是会话膨胀导致工具调用/写回失败。",
       "deliver": "任选其一并回报：1) /reset 或重启你自己的 session；2) 主动删/裁剪超大 toolResult（保留关键产出写入文件）；3) 若你知道如何触发 compact/summary 也可。最后务必验证 `memory/heartbeat-state.json.lastHeartbeat` 更新。",
-      "ageMin": 194,
+      "ageMin": 196,
       "isRecent": true
     },
     {
@@ -629,7 +629,7 @@
       "priority": "high",
       "bg": "openclaw status 显示馆长 session 已超 200k。Gateway probe OK。",
       "deliver": "下次心跳内：更新 lastHeartbeat + 报告你采取的瘦身动作（/reset 或清理大输出）。",
-      "ageMin": 194,
+      "ageMin": 196,
       "isRecent": true
     },
     {
@@ -652,7 +652,7 @@
       "priority": "high",
       "bg": "本次已手动写回 heartbeat-state.json（lastHeartbeat=19:40）并刷新 lastChecks；本轮无超大输出/工具超时迹象。若再停滞再做 /reset。",
       "deliver": "lastHeartbeat 已更新；采取动作：压缩外部抓取（仅取关键段），并避免在回复里转存长列表。",
-      "ageMin": 194,
+      "ageMin": 196,
       "isRecent": true
     },
     {
@@ -675,7 +675,7 @@
       "priority": "medium",
       "bg": "我发现 `workspace-datasci/heartbeat-state.json` 是业务自定义结构，不含 lastHeartbeat；且 `workspace-datasci/memory/heartbeat-state.json` 之前不存在，导致总管读取报 ENOENT。",
       "deliver": "之后每次心跳：更新 `memory/heartbeat-state.json.lastHeartbeat`；如果你还要保留业务状态文件也可以并存。",
-      "ageMin": 1054,
+      "ageMin": 1056,
       "isRecent": true
     }
   ],
