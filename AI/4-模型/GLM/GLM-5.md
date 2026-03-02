@@ -249,4 +249,4 @@ Base Model → SFT → Reasoning RL → Agentic RL → General RL
 *Created: 2026-02-18 | Source: arXiv:2602.15763 直接精读 | Confidence: High（论文 primary source）*
 
 ## See Also
-- [[AI/4-模型/GLM/GLM-5 Agentic Engineering]] — Agentic Engineering 应用视角（工具调用/长任务/工程落地）
+- [[AI/4-模型/GLM/GLM-5-Agentic-Engineering]] — Agentic Engineering 应用视角（工具调用/长任务/工程落地）

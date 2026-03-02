@@ -295,7 +295,7 @@ A: 检测：监控 reward 上升但 win rate 下降。缓解：KL 惩罚、长�
 - [[AI/3-LLM/RL/算法/PPO 原理|PPO 原理]] / [[AI/3-LLM/RL/实践/PPO-TRL实践|PPO-TRL 实践]]
 - [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO 深度理解]] / [[AI/3-LLM/RL/实践/GRPO-TRL实践|GRPO-TRL 实践]]
 - [[AI/3-LLM/RL/实践/DPO-TRL实践|DPO-TRL 实践]]
-- [[AI/3-LLM/RL/DAPO/|DAPO]]
+- [[AI/3-LLM/RL/实践/DAPO-verl实践|DAPO]]
 - [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]] / [[AI/3-LLM/Frameworks/OpenRLHF/OpenRLHF|OpenRLHF]]
 - [[AI/3-LLM/SFT/SFT 原理|SFT 原理]]
 - [[AI/3-LLM/RL/Fundamentals/RL 概览|RL 概览]]

@@ -370,5 +370,5 @@ A: Critic 优势：dense reward 场景下 GAE 比 MC 更稳定；能正确处理
 - [[Projects/MA-RLHF/lc8-PPO/lc8-03-RLHF-PPO-完整Pytorch实现]] — 同内容 Batch A 版（Notebook 端到端）
 - [[Projects/MA-RLHF/lc8-PPO/lc8-01-PPO-手撕实操]] — 同算法手撕实操版
 - [[Projects/MA-RLHF/lc8-PPO/lc8-05-LLaMA2-Reward-Model实现]] — 同系列：RM 实现（PPO 前置）
-- [[AI/3-LLM/MA-RLHF课程/lc8-GRPO-notebook-Pytorch从零手写]] — 同系列：GRPO（无 Critic 的轻量版）
+- [[Projects/MA-RLHF/lc8-GRPO/lc8-03-GRPO-notebook|lc8-GRPO-notebook（PyTorch）]] — 同系列：GRPO（无 Critic 的轻量版）
 - [[AI/3-LLM/RL/算法/PPO 原理]] — PPO 算法理论深度解析

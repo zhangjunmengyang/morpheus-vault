@@ -24,7 +24,7 @@ related:
   - "[[AI/2-Agent/Agentic-RL/Environment-Evolution-Agent-Training-Taxonomy|环境进化与 Agent 训练谱系]]"
   - "[[AI/2-Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent RL 环境工程系统论]]"
   - "[[AI/2-Agent/Agentic-RL/Agent-进化模式谱系|Agent 进化模式谱系]]"
-  - "[[AI/2-Agent/Agentic-RL/FlexMARL-Rollout-Training-CoDesign-MARL-System|FlexMARL（训练基础设施）]]"
+  - "[[AI/2-Agent/Multi-Agent/FlexMARL-Rollout-Training-CoDesign-MARL-System|FlexMARL（训练基础设施）]]"
 ---
 
 # Agent Harness Engineering：让 Agent 稳定工作的基础设施工程
@@ -320,10 +320,12 @@ RL 训练强化弱项
 
 ---
 
-See Also:
-- [[AI/2-Agent/Agentic-RL/Environment-Evolution-Agent-Training-Taxonomy|环境进化与 Agent 训练谱系]] — Harness Engineering 是运行时；这是训练时
-- [[AI/2-Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent RL 环境工程系统论]] — 训练环境设计的系统论
-- [[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent-RL|KLong]] — 极长任务 RL 训练的工程解法（渐进式 timeout）
+## See Also
+
+- [[AI/2-Agent/Agentic-RL/Environment-Evolution-Agent-Training-Taxonomy|环境进化与 Agent 训练谱系]] — Harness Engineering 是运行时基础设施；训练环境设计是 Layer 1-4 谱系
+- [[AI/2-Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent RL 环境工程系统论]] — 训练环境设计的系统论（Harness 是生产运行时那侧）
+- [[AI/2-Agent/Agentic-RL/KLong-Extremely-Long-Horizon-Agent-RL|KLong]] — 极长任务 RL 训练的工程解法（渐进式 timeout），Harness 的检查点机制与之互补
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-元问题-瓶颈与突破方向|Agentic RL 元问题]] — Harness 可靠性是 reward signal quality 的工程前提
 
 ---
 

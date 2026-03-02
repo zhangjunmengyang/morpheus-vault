@@ -177,4 +177,4 @@ Encoder-Decoder 退场的原因不是它差，而是 Decoder-only 更统一、�
 
 ---
 
-> 🔗 Related: [[思考/LLM推理优化的本质|LLM 推理优化的本质]] · [[AI/3-LLM/Architecture/MoE 深度解析|MoE 深度解析]] · [[AI/3-LLM/Architecture/FlashAttention|FlashAttention]] · [[AI/3-LLM/Architecture/_MOC|Architecture MOC]]
+> 🔗 Related: [[思考/LLM推理优化的本质|LLM 推理优化的本质]] · [[AI/3-LLM/Architecture/MoE 深度解析|MoE 深度解析]] · [[AI/3-LLM/Architecture/FlashAttention|FlashAttention]] · [[AI/3-LLM/Architecture/Attention 变体综述|Architecture 入口（Attention 变体综述）]]

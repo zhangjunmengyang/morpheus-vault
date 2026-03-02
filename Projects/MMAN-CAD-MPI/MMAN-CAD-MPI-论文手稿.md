@@ -100,8 +100,8 @@ $$Q_{s,r} = F_{s,r} W^q_{s,r},\quad K_{r,s} = F_{r,s} W^k_{r,s},\quad V_{r,s} = 
 ## 推荐阅读
 
 - Transformer架构深度解析-2026技术全景 — ViT 架构基础
-- [[AI/MLLM/_MOC]] — 多模态融合相关方法
-- [[AI/2-Agent/_MOC]] — 医疗 AI Agent 方向延伸
+- [[AI/3-LLM/MLLM/MLLM 概述]] — 多模态融合相关方法
+- [[AI/2-Agent/Multi-Agent/Multi-Agent 概述]] — 医疗 AI Agent 方向延伸
 
 ## 元信息
 

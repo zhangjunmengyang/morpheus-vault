@@ -13,7 +13,7 @@ tags:
   - MA-RLHF-lc8
 related:
   - [[Projects/MA-RLHF/lc8-DPO/lc8-05-DPO-IPO-手撕实操|lc8-DPO-IPO-手撕实操]]
-  - [[AI/3-LLM/MA-RLHF课程/lc8-KTO-手撕实操|lc8-KTO-手撕实操]]
+  - [[Projects/MA-RLHF/lc8-KTO/lc8-01-KTO-手撕实操|lc8-KTO-手撕实操]]
   - [[AI/3-LLM/RL/实践/RLHF-工程全栈|RLHF-DPO-2026-技术全景]]
   - [[Projects/MA-RLHF/MA-RLHF-手撕实操-系列索引|MA-RLHF 手撕实操系列索引]]
 ---

@@ -365,4 +365,4 @@ SFT → DPO（偏好对比）→ PPO/GRPO（RL）：能力边界逐渐拓宽，�
 
 - 原课程代码：[MA-RLHF/lecture/lc6_sft](https://github.com/dhcode-cpp/MA-RLHF/tree/main/lecture/lc6_sft)
 - [[AI/3-LLM/SFT/SFT 原理|SFT 原理]] — Chat Template / Loss Mask 的理论背景
-- [[AI/3-LLM/Frameworks/TRL/SFT实践|TRL SFT 实践]] — HuggingFace TRL SFTTrainer 生产用法
+- [[AI/3-LLM/SFT/SFT-TRL实践|TRL SFT 实践]] — HuggingFace TRL SFTTrainer 生产用法

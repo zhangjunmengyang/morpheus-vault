@@ -216,4 +216,4 @@ DeepSeek V4 =
 - → [[AI/3-LLM/Architecture/Growing-to-Looping-Iterative-Computation-Unification|Growing-to-Looping-Iterative-Computation-Unification]] (residual stream 的另一视角：迭代计算)
 - → [[AI/3-LLM/Inference/KV Cache|KV Cache 优化]] (micro vs macro design 的区分)
 - → [[AI/3-LLM/RL/算法/Slime-RL-Framework|Slime-RL-Framework]] (DeepSeek 基础设施背景)
-- → [[AI/3-LLM/MA-RLHF课程/lc8-mHC-流形超连接从零手写|mHC 从零手写（MA-RLHF lc8）]] (Sinkhorn-Knopp 迭代 + doubly stochastic 约束的完整 PyTorch 实现)
+- → [[Projects/MA-RLHF/lc5/lc5-01-DeepSeek-V3-手撕实操|mHC 从零手写（见 DeepSeek-V3 手撕实操）]] (Sinkhorn-Knopp 迭代 + doubly stochastic 约束的完整 PyTorch 实现)

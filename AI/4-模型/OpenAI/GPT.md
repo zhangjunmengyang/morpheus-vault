@@ -160,15 +160,15 @@ GPT 的成功不在于某个单一的技术突破，而在于持续押注几个�
 - GPT 的 RLHF 三阶段 vs [[AI/4-模型/DeepSeek/DeepSeek-R1|DeepSeek-R1]] 的纯 RL 路线：哪条路更有前途？R1 证明 RL 可以激发推理，但 GPT 的对齐更全面
 - 如果把 [[AI/3-LLM/Architecture/Mamba-SSM|Mamba]] 的线性复杂度和 GPT 的自回归范式结合，能否突破 Transformer 的长度瓶颈？
 
-## 相关
+## See Also
 
-- [[AI/4-模型/Google/BERT|BERT]] — Encoder-Only 路线对比，两条技术路线的分野
-- [[AI/4-模型/Meta/LLaMA|LLaMA]] — 开源 GPT 路线的代表
-- [[AI/4-模型/Google/T5|T5]] — Encoder-Decoder 路线对比（T5 笔记待建）
-- [[AI/6-应用/Prompt/Prompt-Engineering-概述|Prompt engineering 概述]] — ICL 能力的工程化应用
-- [[AI/3-LLM/Infra/分布式训练|分布式训练]] — GPT-3/4 训练所需的基础设施
-- [[AI/4-模型/DeepSeek/DeepSeek-R1|DeepSeek-R1]] — 纯 RL 路线对 GPT RLHF 范式的挑战
-- Transformer 通识
-- [[AI/3-LLM/Architecture/Attention 变体综述|Attention 详解]]
-- [[AI/3-LLM/RL/算法/PPO 原理|PPO 原理]] — InstructGPT 使用的 RL 算法
-- [[AI/3-LLM/SFT/SFT 原理|SFT 原理]] — RLHF 三阶段的第一步
+- [[AI/4-模型/Google/BERT|BERT]] — Encoder-Only 路线对比
+- [[AI/4-模型/Meta/LLaMA|LLaMA]] — 开源 GPT 路线代表（decoder-only）
+- [[AI/4-模型/Google/T5|T5]] — Encoder-Decoder 路线对比
+- [[AI/6-应用/Prompt/Prompt-Engineering-概述|Prompt engineering 概述]] — ICL / few-shot 的工程化入口
+- [[AI/3-LLM/Infra/分布式训练|分布式训练]] — GPT-3/4 训练基础设施（并行/吞吐/通信）
+- [[AI/4-模型/DeepSeek/DeepSeek-R1|DeepSeek-R1]] — “纯 RL”路线对 GPT RLHF 范式的挑战
+- [[AI/3-LLM/Architecture/架构范式对比|Transformer 架构范式对比]] — Encoder/Decoder 三范式的统一视角
+- [[AI/3-LLM/Architecture/Attention 变体综述|Attention 变体综述]] — 注意力机制与优化变体总览
+- [[AI/3-LLM/RL/算法/PPO 原理|PPO 原理]] — InstructGPT / RLHF 常用 RL 算法
+- [[AI/3-LLM/SFT/SFT 原理|SFT 原理]] — RLHF 三阶段的第一步（监督微调）

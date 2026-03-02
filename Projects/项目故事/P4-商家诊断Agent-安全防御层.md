@@ -241,4 +241,4 @@ CoT 监控（监控推理链是否出现异常模式）的核心难点在于**�
 - [[AI/5-AI 安全/Multi-Agent-Defense-Pipeline-Prompt-Injection]]
 - [[AI/5-AI 安全/CoT-Monitorability-Information-Theory]]
 - [[AI/2-Agent/Fundamentals/ReAct 与 CoT]]
-- [[AI/2-Agent/Agent评估体系批判-Goodhart法则与Benchmark陷阱]]
+- [[AI/2-Agent/Evaluation/Agent评估体系批判-Goodhart法则与Benchmark陷阱]]

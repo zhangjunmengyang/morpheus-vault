@@ -33,35 +33,41 @@ tags:
 
 ## 全局架构
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     macOS launchd                           │
-│                                                             │
-│  ┌──────────────────┐  ┌──────────────────┐                │
-│  │ ai.openclaw       │  │ ai.openclaw       │                │
-│  │ .gateway          │  │ .network-watchdog  │                │
-│  │ KeepAlive=true    │  │ KeepAlive=true     │                │
-│  │ 崩溃→自动拉起     │  │ 断网→恢复→重启GW   │                │
-│  └────────┬─────────┘  └────────┬──────────┘                │
-│           │                      │                           │
-│  ┌────────┴──────────────────────┴──────────┐               │
-│  │          OpenClaw Gateway (:18789)        │               │
-│  │   Discord / Telegram / WebChat / Nodes   │               │
-│  └──────────────────────────────────────────┘               │
-│                                                             │
-│  ┌──────────────────┐  ┌──────────────────┐                │
-│  │ ai.openclaw       │  │ ai.openclaw       │                │
-│  │ .log-rotate       │  │ .config-backup     │                │
-│  │ 每天 03:00        │  │ 每小时             │                │
-│  │ >10MB 自动轮转    │  │ git 增量快照       │                │
-│  └──────────────────┘  └──────────────────┘                │
-│                                                             │
-│  ┌──────────────────────────────────────────┐               │
-│  │        结构化记忆体系                      │               │
-│  │  contextPruning → compaction → distiller  │               │
-│  │  MEMORY.md ← memory/YYYY-MM-DD.md        │               │
-│  └──────────────────────────────────────────┘               │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+  subgraph LD[macOS launchd]
+    GW[ai.openclaw.gateway
+KeepAlive=true
+崩溃→自动拉起]
+    NW[ai.openclaw.network-watchdog
+KeepAlive=true
+断网→恢复→重启GW]
+    LR[ai.openclaw.log-rotate
+每天 03:00
+>10MB 自动轮转]
+    CB[ai.openclaw.config-backup
+每小时
+git 增量快照]
+  end
+
+  GWD[OpenClaw Gateway (:18789)
+Discord / Telegram / WebChat / Nodes]
+
+  subgraph MEM[结构化记忆体系]
+    CP[contextPruning]
+    CC[compaction]
+    DS[distiller]
+    MM[MEMORY.md]
+    DY[memory/YYYY-MM-DD.md]
+    CP --> CC --> DS
+    DY --> MM
+  end
+
+  GW --> GWD
+  NW --> GWD
+  LR --> GWD
+  CB --> GWD
+  GWD --> MEM
 ```
 
 4 个 LaunchAgent 各司其职：Gateway 本体保活、网络看门狗、日志轮转、配置快照。下面逐项展开。
@@ -612,24 +618,22 @@ echo "验证: launchctl list | grep openclaw"
 
 ### 记忆架构
 
-```
-┌─────────────────────────────────────────┐
-│              用户对话                    │
-│                  │                       │
-│    ┌─────────────┼─────────────┐        │
-│    ▼             ▼             ▼        │
-│ contextPruning  compaction  distiller   │
-│ (每次请求)      (~160k触发)  (每天02:50) │
-│    │             │             │        │
-│    ▼             ▼             ▼        │
-│ 软/硬剪枝     总结压缩    session摘要   │
-│ (只改发送)   (持久化)    (写入文件)     │
-│                              │          │
-│                              ▼          │
-│                    memory/YYYY-MM-DD.md  │
-│                              │          │
-│                    定期提炼 → MEMORY.md  │
-└─────────────────────────────────────────┘
+```mermaid
+flowchart TD
+  U[用户对话]
+
+  U --> CP[contextPruning
+每次请求
+软/硬剪枝（只改发送，不改磁盘）]
+  U --> CC[compaction
+~160k 触发
+总结压缩（持久化）]
+  U --> DS[distiller
+每天 02:50
+session 摘要（写入文件）]
+
+  DS --> D1[memory/YYYY-MM-DD.md]
+  D1 -->|定期提炼| D2[MEMORY.md]
 ```
 
 ### 三层机制详解
@@ -711,27 +715,43 @@ echo "验证: launchctl list | grep openclaw"
 
 一个干净的 workspace 结构能显著提升 AI 的上下文效率：
 
-```
-~/.openclaw/workspace/
-├── AGENTS.md          ← 启动序列、安全红线、行为规则
-├── SOUL.md            ← 性格、语气、原则
-├── USER.md            ← 用户信息（私密，不在群聊加载）
-├── IDENTITY.md        ← 名字、头像、emoji
-├── MEMORY.md          ← 长期记忆（从日记提炼）
-├── HEARTBEAT.md       ← 心跳流程、周期检查清单
-├── TOOLS.md           ← 工具使用笔记、环境配置
-│
-├── memory/            ← 每日原始记录
-│   ├── 2026-02-14.md
-│   ├── 2026-02-15.md
-│   └── session-distill-2026-02-14.md
-│
-├── notes/             ← 笔记、文章
-├── research/          ← 调研报告
-├── reports/           ← 生成的报告
-├── tools/             ← 自建工具脚本
-├── skills/            ← 可复用的技能模板
-└── avatars/           ← 头像资源
+```mermaid
+flowchart TD
+  W[~/.openclaw/workspace/]
+
+  W --> AG[AGENTS.md
+启动序列 / 安全红线 / 行为规则]
+  W --> SO[SOUL.md
+性格 / 语气 / 原则]
+  W --> US[USER.md
+用户信息（私密）]
+  W --> ID[IDENTITY.md
+名字 / 头像 / emoji]
+  W --> ME[MEMORY.md
+长期记忆（提炼版）]
+  W --> HB[HEARTBEAT.md
+心跳流程 / 周期检查]
+  W --> TL[TOOLS.md
+工具使用 / 环境配置]
+
+  W --> MEMDIR[memory/
+每日原始记录]
+  MEMDIR --> D1[2026-02-14.md]
+  MEMDIR --> D2[2026-02-15.md]
+  MEMDIR --> SD[session-distill-2026-02-14.md]
+
+  W --> NT[notes/
+笔记 / 文章]
+  W --> RS[research/
+调研报告]
+  W --> RP[reports/
+生成的报告]
+  W --> TS[tools/
+自建工具脚本]
+  W --> SK[skills/
+可复用技能模板]
+  W --> AV[avatars/
+头像资源]
 ```
 
 核心原则：
@@ -820,32 +840,43 @@ ls -la ~/Library/LaunchAgents/ai.openclaw.*.plist
 
 装完后你的 `~/.openclaw` 应该长这样：
 
-```
-~/.openclaw/
-├── openclaw.json                              ← 核心配置
-├── workspace/                                 ← AI workspace
-├── logs/
-│   ├── gateway.log
-│   ├── gateway.err.log
-│   ├── network-watchdog.log
-│   ├── log-rotate.log
-│   └── config-backup.log
-├── scripts/
-│   ├── network-watchdog.sh
-│   ├── log-rotate.sh
-│   └── config-backup.sh
-└── config-snapshots/                          ← git 快照仓库
-    ├── .git/
-    ├── openclaw.json
-    ├── workspace/
-    ├── launchagents/
-    └── scripts/
+```mermaid
+flowchart TD
+  OC[~/.openclaw/]
+  OC --> CFG[openclaw.json
+核心配置]
+  OC --> WS[workspace/
+AI workspace]
 
-~/Library/LaunchAgents/
-├── ai.openclaw.gateway.plist                  ← 核心服务
-├── ai.openclaw.network-watchdog.plist         ← 网络看门狗
-├── ai.openclaw.log-rotate.plist               ← 日志轮转
-└── ai.openclaw.config-backup.plist            ← 配置快照
+  OC --> LG[logs/]
+  LG --> L1[gateway.log]
+  LG --> L2[gateway.err.log]
+  LG --> L3[network-watchdog.log]
+  LG --> L4[log-rotate.log]
+  LG --> L5[config-backup.log]
+
+  OC --> SC[scripts/]
+  SC --> S1[network-watchdog.sh]
+  SC --> S2[log-rotate.sh]
+  SC --> S3[config-backup.sh]
+
+  OC --> SNAP[config-snapshots/
+git 快照仓库]
+  SNAP --> GIT[.git/]
+  SNAP --> CFG2[openclaw.json]
+  SNAP --> WS2[workspace/]
+  SNAP --> LA[launchagents/]
+  SNAP --> SC2[scripts/]
+
+  LAUNCH[~/Library/LaunchAgents/]
+  LAUNCH --> P1[ai.openclaw.gateway.plist
+核心服务]
+  LAUNCH --> P2[ai.openclaw.network-watchdog.plist
+网络看门狗]
+  LAUNCH --> P3[ai.openclaw.log-rotate.plist
+日志轮转]
+  LAUNCH --> P4[ai.openclaw.config-backup.plist
+配置快照]
 ```
 
 ---

@@ -14,7 +14,7 @@ brief: Flow Matching 从零手撕：学习噪声分布到目标分布的向量�
 rating: ★★★☆
 related:
   - "[[AI/3-LLM/Architecture/Mamba-SSM]]"
-  - "[[Projects/MA-RLHF/lc5/lc5-03-Flow-Attention-架构手撕实操]]"
+  - "Flow-Attention 架构手撕实操（待补写/已移除）"
   - "[[Projects/MA-RLHF/课程索引]]"
 ---
 
@@ -68,6 +68,11 @@ loss = F.mse_loss(v_pred, v_target)
 ```
 
 这比 DDPM 的 noise schedule + ELBO 优化简单得多。
+
+> 边界澄清：上面这个推导（线性插值 + $v_{target}=x_1-x_0$）对应的是 **straight-line coupling** 的最简版本。
+> 更一般的 Flow Matching/CFM 表述里，最优向量场满足
+> $$v^*(x_t,t)=\mathbb{E}[x_1-x_0\mid x_t]$$
+> 也就是说，当同一个 $x_t$ 可能来自不同的 $(x_0,x_1)$ 配对时，目标速度是条件期望，而不一定是常量。
 
 ---
 

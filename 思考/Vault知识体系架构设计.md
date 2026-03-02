@@ -22,14 +22,20 @@ tags:
 
 ### 1.1 当前结构
 
-```
-morpheus-vault/
-├── 1. AI/          (133篇) — 数学基础 → 基础知识 → LLM → Agent
-├── 2. 工程/         (84篇) — Data Engineering: Flink/Spark/Doris
-├── 3. 认知/         (45篇) — 混合内容：AI思考 + 职场 + 方法论 + PMO模板
-├── 4. 学习实践/      (48篇) — 课程学习 + 企业项目 + 训练实验
-├── 7. 论文精读/      (36篇) — 按领域分：Agent/CV/LLM/MLLM/NLP
-└── 其他            (1篇)
+```mermaid
+flowchart TD
+  V[morpheus-vault/]
+  V --> AI[AI/
+数学基础→基础知识→LLM→Agent]
+  V --> ENG[工程/
+Data Engineering: Flink/Spark/Doris]
+  V --> COG[认知/
+AI思考 + 职场 + 方法论 + PMO 模板]
+  V --> PRAC[学习实践/
+课程学习 + 企业项目 + 训练实验]
+  V --> PAP[论文精读/
+Agent/CV/LLM/MLLM/NLP]
+  V --> OTHER[其他]
 ```
 
 ### 1.2 现有问题诊断
@@ -106,220 +112,77 @@ AI/LLM/强化学习/GRPO/
 
 **核心思路**：文件夹按知识域分 2-3 层 + 嵌套标签做跨域维度 + MOC 做导航
 
-```
-morpheus-vault/
-│
-├── 00-Home/                           # 导航中枢
-│   ├── HOME.md                        # 全局入口
-│   └── Inbox.md                       # 每日收集箱
-│
-├── AI/                                # ★ 核心知识域（原 1.AI + 7.论文精读(AI部分) + 4.学习实践(AI部分)）
-│   ├── _MOC.md                        # AI 总览 MOC
-│   │
-│   ├── Foundations/                    # AI 基础
-│   │   ├── _MOC.md
-│   │   ├── Math/                      # 数学基础
-│   │   │   ├── 线性代数.md
-│   │   │   ├── 概率与分布.md
-│   │   │   ├── 信息论.md
-│   │   │   └── ...
-│   │   ├── ML-Basics/                 # 机器学习基础
-│   │   │   ├── 损失函数.md
-│   │   │   ├── 激活函数.md
-│   │   │   ├── 过拟合欠拟合.md
-│   │   │   └── ...
-│   │   └── DL-Basics/                 # 深度学习基础
-│   │       ├── Transformer.md
-│   │       ├── Attention 详解.md
-│   │       ├── 位置编码详解.md
-│   │       └── ...
-│   │
-│   ├── LLM/                           # 大语言模型
-│   │   ├── _MOC.md
-│   │   ├── Architecture/              # 模型架构
-│   │   │   ├── MoE 基础.md
-│   │   │   ├── BERT.md                # ← 论文精读合并进来
-│   │   │   ├── GPT.md
-│   │   │   ├── LLaMA.md
-│   │   │   ├── T5.md
-│   │   │   └── DeepSeek-R1.md         # ← 从论文精读迁入
-│   │   ├── Prompt-Engineering/
-│   │   │   ├── Prompt Engineering.md
-│   │   │   ├── prompt 攻击.md
-│   │   │   └── 数据合成.md
-│   │   ├── SFT/                       # 监督微调
-│   │   │   ├── SFT.md
-│   │   │   ├── LoRA.md                # ← 论文精读合并
-│   │   │   └── 数据准备.md
-│   │   ├── RL/                        # 强化学习 for LLM（★ 重点领域）
-│   │   │   ├── _MOC.md
-│   │   │   ├── Fundamentals/          # RL 基础理论
-│   │   │   │   ├── 马尔科夫.md
-│   │   │   │   ├── 贝尔曼方程.md
-│   │   │   │   ├── 策略梯度方法.md
-│   │   │   │   ├── On-Policy vs Off-Policy.md
-│   │   │   │   ├── KL散度.md
-│   │   │   │   ├── MCTS.md
-│   │   │   │   └── 强化学习的数学原理.md   # ← 从学习实践迁入
-│   │   │   ├── PPO/
-│   │   │   │   ├── PPO 原理.md             # 合并多个 PPO.md
-│   │   │   │   ├── PPO-TRL实践.md
-│   │   │   │   └── PPO-verl实践.md
-│   │   │   ├── GRPO/
-│   │   │   │   ├── GRPO 原理.md
-│   │   │   │   ├── GRPO 深度理解.md         # ← 从 HF 学习迁入
-│   │   │   │   ├── GRPO-TRL实践.md
-│   │   │   │   ├── GRPO-verl实践.md
-│   │   │   │   ├── GRPO-unsloth实践.md
-│   │   │   │   ├── GRPO-demo.md             # ← 从训练微调项目迁入
-│   │   │   │   └── DeepSeek-Math.md         # ← 论文精读
-│   │   │   ├── DPO/
-│   │   │   ├── DAPO/
-│   │   │   ├── KTO/
-│   │   │   ├── RLOO/
-│   │   │   └── Other-Algorithms/        # SPIN, SPPO, GPG, OPO, DCPO 等
-│   │   ├── Inference/                   # 推理部署
-│   │   │   ├── vLLM.md
-│   │   │   ├── Ollama.md
-│   │   │   └── 量化.md
-│   │   ├── Infra/                       # 训练基础设施
-│   │   │   ├── DeepSpeed.md
-│   │   │   ├── FSDP.md
-│   │   │   ├── Megatron-LM.md
-│   │   │   ├── Ray.md
-│   │   │   └── 分布式训练.md
-│   │   └── Frameworks/                  # 训练/微调框架
-│   │       ├── TRL/
-│   │       ├── Unsloth/
-│   │       ├── verl/
-│   │       └── OpenRLHF/
-│   │
-│   ├── MLLM/                           # 多模态大模型
-│   │   ├── _MOC.md
-│   │   ├── MLLM 概述.md
-│   │   ├── CLIP.md                     # ← 论文精读/CV
-│   │   ├── BLIP-2.md                   # ← 论文精读/MLLM
-│   │   ├── LLaVA-Critic-R1.md
-│   │   ├── Qwen-VL.md
-│   │   ├── DeepSeek-VL.md
-│   │   ├── InternVL3.md
-│   │   ├── Seed1.5-VL.md
-│   │   ├── DeepSeek-OCR.md
-│   │   ├── 非文本的模态对齐.md           # ← 从科研迁入
-│   │   └── 玩玩多模态大模型.md           # ← 从训练微调项目迁入
-│   │
-│   ├── Agent/                          # Agent 智能体
-│   │   ├── _MOC.md
-│   │   ├── Fundamentals/
-│   │   │   ├── Agent 架构.md
-│   │   │   ├── Planning.md
-│   │   │   ├── 记忆模块.md
-│   │   │   ├── Tool Use.md
-│   │   │   └── Agent or Workflow？.md    # ← 从认知迁入
-│   │   ├── Multi-Agent/
-│   │   │   ├── Multi-Agent 概述.md
-│   │   │   ├── Agent vs MAS.md          # ← 从认知迁入
-│   │   │   ├── AutoGen.md
-│   │   │   └── Planner.md
-│   │   ├── Agentic-RL/                  # Agent + RL 交叉（前沿方向）
-│   │   │   ├── Agentic RL Training.md
-│   │   │   ├── VerlTool 论文.md
-│   │   │   ├── PVPO 论文.md
-│   │   │   ├── UI-TARS-2 论文.md
-│   │   │   └── WebPilot 论文.md
-│   │   ├── MCP/
-│   │   │   ├── 如何给人深度科普 MCP.md    # ← 从认知迁入
-│   │   │   └── MCP Course.md             # ← 从 HF 学习迁入
-│   │   └── Frameworks/
-│   │       ├── AutoGen.md
-│   │       └── dbgpt 文档.md
-│   │
-│   ├── CV/                              # 计算机视觉（较少内容，预留扩展）
-│   │   ├── ViT.md
-│   │   ├── MAE.md
-│   │   └── ControlNet.md
-│   │
-│   ├── Safety/                          # AI 安全（预留扩展）
-│   │   ├── AI 安全及隐私保护.md          # ← 从认知迁入
-│   │   └── AI 伦理和治理.md
-│   │
-│   └── Frontiers/                       # 前沿方向（预留）
-│       ├── Embodied-AI/                 # 具身智能
-│       ├── World-Models/                # 世界模型
-│       └── AI-for-Science/              # AI4Science
-│
-├── Engineering/                         # 数据/软件工程（原 2.工程）
-│   ├── _MOC.md
-│   ├── Flink/
-│   ├── Spark/
-│   └── Doris/
-│
-├── Career/                              # 职业发展（原 3.认知 中非技术部分）
-│   ├── _MOC.md
-│   ├── 述职-晋升/
-│   ├── PMO/
-│   └── 产品方法论/
-│
-├── Projects/                            # 企业级项目实战（原 4.学习实践/企业级项目）
-│   ├── _MOC.md
-│   ├── Multi-Agent-Holiday/             # Multi-Agent 节假日
-│   ├── Data-Agent/                      # 取数/分析 Agent
-│   ├── RAG-System/                      # 企业 RAG 系统
-│   ├── Store-Diagnosis/                 # 商家端经营诊断
-│   └── LLM-Recommendation/             # LLM 推荐系统
-│
-├── Resources/                           # 学习资源索引
-│   ├── _MOC.md
-│   ├── 论文待学习列表.md
-│   ├── 关于 AI 好玩的.md
-│   ├── KP 大神亲授课.md
-│   └── 小冬瓜 AIGC 学习笔记.md
-│
-├── Templates/                           # 模板
-│   ├── concept.md
-│   ├── paper.md
-│   ├── project.md
-│   └── tutorial.md
-│
-└── assets/                              # 全局附件
+```mermaid
+flowchart TD
+  V[morpheus-vault/]
+  V --> HOME[00-Home/
+HOME.md + Inbox.md]
+  V --> AI[AI/
+核心知识域]
+  V --> CAREER[Career/
+职业与产品认知]
+  V --> PROJ[Projects/
+课程/实验/项目]
+  V --> THINK[思考/
+输出与方法论]
+  V --> DAILY[日报/
+新闻与快讯]
+  V --> ASSETS[assets/
+全局附件]
+
+  AI --> FND[Foundations/
+Math / ML-Basics / DL-Basics]
+  AI --> LLM[3-LLM/
+Architecture / SFT / RL / Inference / Infra / Evaluation]
+  AI --> AG[2-Agent/
+Fundamentals / Multi-Agent / Agentic-RL]
+  AI --> SAF[5-AI安全/
+对齐 / 攻防 / 治理]
+  AI --> MOD[4-模型/
+各家模型卡与分析]
+  AI --> APP[6-应用/
+RAG / Prompt / Embedding / Synthetic-Data]
 ```
 
 ### 方案 B：极简扁平制
 
 **核心思路**：只用 2 个顶层文件夹（Notes + Projects），完全依赖标签和 MOC
 
-```
-morpheus-vault/
-├── Notes/                    # 所有知识笔记，不分子文件夹
-│   ├── GRPO 原理.md
-│   ├── DeepSeek-R1 论文.md
-│   ├── Flink 架构.md
-│   └── ... (342篇全部平铺)
-├── Projects/                 # 项目文档
-├── Templates/
-└── MOCs/                     # 所有 MOC 集中管理
-    ├── AI.md
-    ├── LLM.md
-    ├── RL.md
-    └── ...
+```mermaid
+flowchart TD
+  V[morpheus-vault/]
+  V --> N[Notes/
+所有知识笔记（平铺）]
+  V --> P[Projects/
+项目文档]
+  V --> T[Templates/]
+  V --> M[MOCs/
+AI / LLM / RL / ...]
 ```
 
 ### 方案 C：PARA 改良制
 
 **核心思路**：按 PARA（Projects/Areas/Resources/Archive）+ 领域细分
 
-```
-morpheus-vault/
-├── 1-Projects/              # 进行中的项目
-├── 2-Areas/                 # 持续关注的领域
-│   ├── AI-ML/
-│   ├── Data-Engineering/
-│   └── Career/
-├── 3-Resources/             # 参考资料
-│   ├── Papers/
-│   ├── Tutorials/
-│   └── Tools/
-└── 4-Archive/               # 已完成/不再活跃
+```mermaid
+flowchart TD
+  V[morpheus-vault/]
+  V --> P[1-Projects/
+进行中的项目]
+  V --> A[2-Areas/
+持续关注的领域]
+  V --> R[3-Resources/
+参考资料]
+  V --> AR[4-Archive/
+已完成/不再活跃]
+
+  A --> AI[AI-ML/]
+  A --> DE[Data-Engineering/]
+  A --> CA[Career/]
+
+  R --> PAP[Papers/]
+  R --> TUT[Tutorials/]
+  R --> TO[Tools/]
 ```
 
 ### 三方案对比
@@ -527,8 +390,8 @@ type: moc
 - [[AI/2-Agent/Agentic-RL/Agentic-RL-Training-verl]] — Agent + RL 融合趋势
 
 ## 相关 MOC
-- ← 上级：[[AI/LLM/_MOC]]
-- → 相关：[[AI/Agent/_MOC]]（Agentic RL 交叉领域）
+- ← 上级：[[AI/3-LLM/Pretraining/预训练原理|3-LLM 入口（预训练原理）]]
+- → 相关：[[AI/2-Agent/Multi-Agent/Multi-Agent 概述|2-Agent 入口]]（Agentic RL 交叉领域）
 ```
 
 ### 5.3 MOC 维护策略

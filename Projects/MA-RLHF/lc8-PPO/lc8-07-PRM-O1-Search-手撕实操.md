@@ -16,7 +16,7 @@ related:
   - "[[Projects/MA-RLHF/lc8-PPO/lc8-01-PPO-手撕实操|PPO-手撕实操-MA-RLHF]]"
   - "[[Projects/MA-RLHF/lc8-GRPO/lc8-01-GRPO-手撕实操|GRPO-手撕实操]]"
   - "[[AI/2-Agent/Agentic-RL/GiGPO-Group-in-Group-Policy-Optimization|GiGPO]]"
-  - "[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment-专题综述|Long-Horizon CA专题]]"
+  - "[[AI/2-Agent/Agentic-RL/Long-Horizon-Credit-Assignment专题|Long-Horizon CA专题]]"
 ---
 
 # PRM + O1 推理搜索 手撕实操 —— MA-RLHF

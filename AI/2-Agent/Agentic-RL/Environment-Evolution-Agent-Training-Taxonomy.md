@@ -31,6 +31,8 @@ related:
   - "[[AI/2-Agent/Multi-Agent/AlphaEvolve-LLM-Discovers-MARL-Algorithms|AlphaEvolve]]"
   - "[[AI/2-Agent/Agentic-RL/Agentic-RL-元问题-瓶颈与突破方向|Agentic RL 元问题]]"
   - "[[AI/2-Agent/Agentic-RL/Agent-进化模式谱系|Agent 进化模式谱系]]"
+  - "[[AI/2-Agent/Agentic-RL/GenEnv-Difficulty-Aligned-CoEvolution-LLM-Agent-Environment|GenEnv]]"
+  - "[[AI/2-Agent/Agentic-RL/EnvGen-LLM-Generates-Environments-for-RL-Agent-Training|EnvGen]]"
 ---
 
 # 环境进化与 Agent 训练：从静态环境到算法自动发现的完整谱系
@@ -330,12 +332,14 @@ AlphaEvolve 的本质：**把 RL 算法设计的 inductive bias 从人类直觉�
 
 ---
 
-See Also:
-- [[AI/2-Agent/Agentic-RL/AWM-Agent-World-Model-Synthetic-Environments|AWM]]
-- [[AI/2-Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent RL 环境工程系统论]]
-- [[AI/2-Agent/Multi-Agent/AlphaEvolve-LLM-Discovers-MARL-Algorithms|AlphaEvolve]]
-- [[AI/2-Agent/Agentic-RL/Agentic-RL-元问题-瓶颈与突破方向|Agentic RL 元问题]]
-- [[AI/2-Agent/Agentic-RL/Agent-进化模式谱系|Agent 进化模式谱系]]
+## See Also
+
+- [[AI/2-Agent/Agentic-RL/AWM-Agent-World-Model-Synthetic-Environments|AWM]] — Layer 1 当前最高水位：任务先于世界、MCP 标准接口
+- [[AI/2-Agent/Agentic-RL/Agent-RL-环境工程系统论|Agent RL 环境工程系统论]] — 同一领域的系统论分析（互补视角）
+- [[AI/2-Agent/Multi-Agent/AlphaEvolve-LLM-Discovers-MARL-Algorithms|AlphaEvolve]] — Layer 4 的成功案例：LLM 驱动 MARL 算法自动发现
+- [[AI/2-Agent/Agentic-RL/Agentic-RL-元问题-瓶颈与突破方向|Agentic RL 元问题]] — 元框架：环境设计本身是 reward signal quality 三大 open problem 之一
+- [[AI/2-Agent/Agentic-RL/Agent-进化模式谱系|Agent 进化模式谱系]] — 训练时进化（Layer 1-4）vs in-context 进化的关系
+- [[AI/2-Agent/Fundamentals/Agent-Harness-Engineering-Infrastructure|Agent Harness Engineering]] — 本文是训练时环境设计；Harness 是运行时基础设施——互补而非重叠
 
 ---
 

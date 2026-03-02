@@ -1,5 +1,6 @@
 ---
 title: Search-R1++ — Deep Research RL 训练三要素消融
+brief: "对 Deep Research 场景做系统性 RL 消融：Slow Thinking 会被 <think> 捷径 exploit、F1 reward 诱发 answer avoidance、GRPO 稳定性最差；最终推荐 Fast Thinking + F1+ action penalty + REINFORCE 作为稳健配置。"
 arxiv: "2602.19526"
 date: 2026-02-23
 rating: ★★★★☆

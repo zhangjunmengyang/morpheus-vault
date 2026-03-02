@@ -78,16 +78,16 @@ async def execute_with_fallback(task):
 
 ### 3.1 三层超时机制
 
-```
-┌─────────────────────────────────────────────┐
-│  总超时（Session Timeout）: 5min            │
-│  ┌──────────────────────────────────────┐   │
-│  │  单步超时（Step Timeout）: 30s       │   │
-│  │  ┌───────────────────────────────┐   │   │
-│  │  │  工具超时（Tool Timeout）: 10s│   │   │
-│  │  └───────────────────────────────┘   │   │
-│  └──────────────────────────────────────┘   │
-└─────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    A["总超时（Session Timeout）: 5min"]
+    B["单步超时（Step Timeout）: 30s"]
+    C["工具超时（Tool Timeout）: 10s"]
+    A --> B
+    B --> C
+    style A fill:#f0f4ff,stroke:#6b9dfc
+    style B fill:#e8f4ea,stroke:#5aad6a
+    style C fill:#fff3e0,stroke:#ff8c42
 ```
 
 - **Tool Timeout**：单个工具调用的超时，如 HTTP 请求 10s、数据库查询 5s
@@ -116,14 +116,22 @@ async def execute_with_fallback(task):
 
 Agent 的一次完整执行是一个 **Trace**，其中每个 LLM 调用、tool call 是一个 **Span**：
 
-```
-Trace: user_query_12345
-├── Span: llm_call_1 (model=gpt-4, tokens=1200, latency=2.3s)
-│   └── Span: tool_call_search (query="...", latency=0.8s, status=ok)
-├── Span: llm_call_2 (model=gpt-4, tokens=800, latency=1.5s)
-│   └── Span: tool_call_database (query="...", latency=0.3s, status=ok)
-└── Span: llm_call_3 (model=gpt-4, tokens=600, latency=1.1s)
-    └── result: "最终回答..."
+```mermaid
+graph TD
+    T["Trace: user_query_12345"]
+    T --> L1["Span: llm_call_1
+(gpt-4, 1200 tokens, 2.3s)"]
+    T --> L2["Span: llm_call_2
+(gpt-4, 800 tokens, 1.5s)"]
+    T --> L3["Span: llm_call_3
+(gpt-4, 600 tokens, 1.1s)"]
+    L1 --> S1["tool_call_search
+(0.8s, ok)"]
+    L2 --> S2["tool_call_database
+(0.3s, ok)"]
+    L3 --> R["result: 最终回答"]
+    style T fill:#e0e0ff
+    style R fill:#e0ffe0
 ```
 
 主流工具：

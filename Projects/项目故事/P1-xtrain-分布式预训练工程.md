@@ -10,7 +10,7 @@ related:
   - "[[Projects/MA-RLHF/xtrain/xtrain-03-ZeRO优化器从零手写]]"
   - "[[Projects/MA-RLHF/xtrain/xtrain-04-张量并行从零手写]]"
   - "[[Projects/MA-RLHF/xtrain/xtrain-05-流水线并行从零手写]]"
-  - "[[AI/3-LLM/Architecture/DeepSeek-V3-手撕实操]]"
+  - "[[Projects/MA-RLHF/lc5/lc5-01-DeepSeek-V3-手撕实操|DeepSeek-V3-手撕实操]]"
 ---
 
 # P1：xtrain——分布式训练基础设施，从零实现
@@ -261,4 +261,4 @@ GPipe bubble ratio = (p-1)/(m+p-1)，p 是流水线段数，m 是 micro-batch �
 - [[Projects/MA-RLHF/xtrain/xtrain-03-ZeRO优化器从零手写]]
 - [[Projects/MA-RLHF/xtrain/xtrain-04-张量并行从零手写]]
 - [[Projects/MA-RLHF/xtrain/xtrain-05-流水线并行从零手写]]
-- [[AI/3-LLM/Infra/分布式训练通信原语-手撕实操]]
+- [[Projects/MA-RLHF/lc-comm/lc-comm-01-分布式训练通信原语-手撕实操|分布式训练通信原语-手撕实操]]

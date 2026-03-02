@@ -93,7 +93,7 @@ GPT-4 在部分 Theory of Mind 测试中表现接近成年人水平。但这到�
 
 - [[思考/AI 综合|AI 综合]]
 - [[思考/AI 思考|AI 思考]]
-- [[Projects/提效-Agent/AI 分身|AI 分身]]
+- AI 分身（待补写/已移除）
 - [[思考/AI 学习提效|关于 AI 学习提效思考]]
 - [[AI/3-LLM/MLLM/MLLM 概述|MLLM 概述]]
 - [[AI/3-LLM/Architecture/AI-Models-Collapse|AI Models Collapse 论文]]

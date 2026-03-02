@@ -50,12 +50,12 @@ related:
 | [[Projects/MA-RLHF/lc4/lc4-01-Llama-手撕实操|Llama-手撕实操]] | RoPE/RMSNorm/SwiGLU/GQA/KV Cache | MHA→GQA 效率提升路径 |
 | [[Projects/MA-RLHF/lc5/lc5-01-DeepSeek-V3-手撕实操|DeepSeek-V3-手撕实操]] | MLA（KV cache降16x）+ MoE + mHC | 当前最高效 MoE 架构 |
 | [[Projects/MA-RLHF/lc1/lc1-01-Tokenizer-Embedding-手撕实操|Tokenizer-Embedding-手撕实操]] | BPE/WP/SP + 位置编码谱系 | RoPE 和 ALiBi 对比 |
-| [[AI/3-LLM/MA-RLHF课程/lc8-DeepSeek-MLA-从零手写\|lc8-MLA 从零手写]] | MHA→MLA：低秩压缩/矩阵吸收/RoPE 分离/c-cache | MLA vs MQA 本质区别（低秩表示 vs 共享头） |
-| [[AI/3-LLM/MA-RLHF课程/lc8-TPA-YaRN-RoPE外推从零手写\|lc8-TPA+YaRN 从零手写]] | TPA 张量积低秩分解 + YaRN NTK-by-parts 分段外推 | 长上下文外推三策略对比（PI/NTK/YaRN） |
-| [[AI/3-LLM/MA-RLHF课程/lc8-mHC-流形超连接从零手写\|lc8-mHC 从零手写]] | 残差→HC→mHC：doubly stochastic + Sinkhorn-Knopp | DeepSeek V4 预研，residual 系统性重设计 |
-| [[AI/3-LLM/MA-RLHF课程/lc8-RoPE全家桶手撕实操\|lc8-RoPE 全家桶]] | 标准 RoPE 推导 + 衰减分析 + PI/NTK/YaRN 三策略对比 | RoPE 外推失效原因 + YaRN 为何更优 |
-| [[AI/3-LLM/MA-RLHF课程/lc8-GQA-KVCache-手撕实操\|lc8-GQA+KV Cache]] | GQA repeat_kv + KV Cache 增量解码 position 追踪 | GQA 如何实现：Q 头复用 vs 共享 K/V |
-| [[AI/3-LLM/MA-RLHF课程/lc8-GPTLoss-Muon优化器-手撕实操\|lc8-GPT Loss+Muon]] | GPT 训练 Loss 格式 + Muon Newton-Schulz 正交化 | Muon 比 Adam 好在哪里（梯度方向偏差问题） |
+| [[Projects/MA-RLHF/lc5/lc5-01-DeepSeek-V3-手撕实操|lc8-MLA 从零手写]] | MHA→MLA：低秩压缩/矩阵吸收/RoPE 分离/c-cache | MLA vs MQA 本质区别（低秩表示 vs 共享头） |
+| [[Projects/MA-RLHF/lc4/lc4-03-RoPE-全家桶-notebook|lc8-TPA+YaRN 从零手写]] | TPA 张量积低秩分解 + YaRN NTK-by-parts 分段外推 | 长上下文外推三策略对比（PI/NTK/YaRN） |
+| [[AI/4-模型/DeepSeek/mHC-Manifold-Constrained-Hyper-Connections-DeepSeek|lc8-mHC 从零手写]] | 残差→HC→mHC：doubly stochastic + Sinkhorn-Knopp | DeepSeek V4 预研，residual 系统性重设计 |
+| [[Projects/MA-RLHF/lc4/lc4-03-RoPE-全家桶-notebook|lc8-RoPE 全家桶]] | 标准 RoPE 推导 + 衰减分析 + PI/NTK/YaRN 三策略对比 | RoPE 外推失效原因 + YaRN 为何更优 |
+| [[AI/3-LLM/Architecture/GQA-MQA|lc8-GQA+KV Cache]] | GQA repeat_kv + KV Cache 增量解码 position 追踪 | GQA 如何实现：Q 头复用 vs 共享 K/V |
+| [[Projects/MA-RLHF/lc3/lc3-03-GPTLoss-Muon优化器手撕实操|lc8-GPT Loss+Muon]] | GPT 训练 Loss 格式 + Muon Newton-Schulz 正交化 | Muon 比 Adam 好在哪里（梯度方向偏差问题） |
 
 ### ⚡ 推理优化（8 篇）
 
@@ -67,7 +67,7 @@ related:
 | [[Projects/MA-RLHF/lc10/lc10-02-vLLM-PageKVCache-手撕实操|vLLM-PageKVCache-手撕实操]] | 分页 KV Cache 管理（BlockTable + 逻辑→物理映射） | Prefix Caching + CoW 机制 |
 | [[Projects/MA-RLHF/lc10/lc10-03-vLLM-PageAttention-手撕实操|vLLM-PageAttention-手撕实操]] | PagedAttention Kernel（非连续块 Attention 计算） | Triton/CUDA Kernel 接口 |
 | [[Projects/MA-RLHF/lc10/lc10-05-Chunked-Prefill-手撕实操|Chunked-Prefill-手撕实操]] | SARATHI: Prefill 分块 + Decode piggybacking | TTFT vs TPOT 两难 |
-| [[AI/3-LLM/Inference/Speculative-Decoding-手撕实操|Speculative-Decoding-手撕实操]] | Draft-Target 对 + 拒绝采样（无偏推断） | γ=4 猜测窗口加速比估算 |
+| [[Projects/MA-RLHF/lc10/lc10-06-Speculative-Decoding-手撕实操|Speculative-Decoding-手撕实操]] | Draft-Target 对 + 拒绝采样（无偏推断） | γ=4 猜测窗口加速比估算 |
 | [[Projects/MA-RLHF/lc10/lc10-07-PD-Disaggregation-手撕实操|PD-Disaggregation-手撕实操]] | Prefill-Decode 物理分离 + Ray Actor + KV 异步传输 | compute-bound vs memory-bound 分离设计 |
 
 ### 🔧 分布式训练（7 篇）
@@ -90,7 +90,7 @@ related:
 |------|----------|----------|
 | [[Projects/MA-RLHF/lc7/lc7-01-RL基础算法手撕实操|RL基础算法手撕实操]] | REINFORCE/A2C/PPO/DQN | LLM 对齐中各算法选择 |
 | [[Projects/MA-RLHF/lc6/lc6-01-SFT-手撕实操|SFT-手撕实操]] | Chat Template + Loss Mask + LoRA | RLHF 流水线第一阶段 |
-| [[AI/3-LLM/MA-RLHF课程/lc6-SFT全链路-PyTorch手撕实操|lc6-SFT全链路 PyTorch 手撕实操]] ★★★★★ | SFT 全链路：Dataset→Collate→Loss Mask→纯PyTorch→SFTTrainer，三路径完整对比 | SFT Loss vs 预训练 Loss 本质区别；Chat Template 为何必要 |
+| [[Projects/MA-RLHF/lc6/lc6-03-SFT-PyTorch全流程实操|lc6-SFT全链路 PyTorch 手撕实操]] ★★★★★ | SFT 全链路：Dataset→Collate→Loss Mask→纯PyTorch→SFTTrainer，三路径完整对比 | SFT Loss vs 预训练 Loss 本质区别；Chat Template 为何必要 |
 | [[Projects/MA-RLHF/lc6/lc6-02-LoRA-手撕实操|lc6-LoRA 手撕实操]] ★★★★★ | LoRA 原理推导+梯度推导+QLoRA/DoRA/LoRA+三变体实操，41 cells | rank 为什么可以极低；QLoRA 的 NF4 量化原理 |
 | [[Projects/MA-RLHF/lc8-PPO/lc8-01-PPO-手撕实操|PPO-手撕实操-MA-RLHF]] | 四模型架构 + GAE + MA-PPO | 多适配器节省 3x 显存 |
 | [[Projects/MA-RLHF/lc8-PPO/lc8-02-MA-RLHF-核心代码注解|MA-RLHF-核心代码注解]] | 完整项目代码注解 | MA-PPO Trainer 逐行解析 |

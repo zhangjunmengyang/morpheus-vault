@@ -141,4 +141,4 @@ related:
 *Created: 2026-02-16 | Source: ByteDance 官方 Model Card + 多方报道交叉验证*
 
 ## See Also
-- [[AI/4-模型/Seed/豆包 Doubao 2.0]] — 产品与能力视角（中文理解/Agent/格局评估）
+- [[AI/4-模型/Seed/Doubao-Seed-2.0|豆包 Doubao 2.0]] — 产品与能力视角（中文理解/Agent/格局评估）

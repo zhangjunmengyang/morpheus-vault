@@ -16,7 +16,7 @@ sources:
 related:
   - "[[AI/4-模型/OpenAI/GPT|GPT]]"
   - "[[AI/3-LLM/Architecture/Tokenizer|Tokenizer]]"
-  - Transformer 通识
+  - "[[AI/3-LLM/Architecture/架构范式对比|Transformer 架构范式对比]]"
   - "[[AI/6-应用/Embedding/Embedding|Embedding]]"
 ---
 # BERT
@@ -162,16 +162,15 @@ BERT 和 GPT 代表了两种根本不同的预训练哲学：
 - 如果把 BERT 的双向理解能力和 [[AI/3-LLM/Architecture/Mamba-SSM|Mamba]] 的线性复杂度结合，能否做出效率更高的 Embedding 模型？
 - 结合 [[AI/4-模型/DeepSeek/DeepSeek-R1|DeepSeek-R1]] 的蒸馏经验，1.5B 的 BERT 变体是否能在边缘设备上替代 7B 的 Decoder 模型做理解任务？
 
-## 相关
+## See Also
 
-- [[AI/4-模型/OpenAI/GPT|GPT]] — Decoder-Only 路线对比，理解两条技术路线的分野
-- [[Projects/MA-RLHF/lc6/CLIP-ViT-LLaVA-手撕实操|ViT]] — BERT 思想迁移到视觉领域
-- [[AI/3-LLM/MLLM/CLIP|CLIP]] — 多模态对比学习，Encoder 架构的跨模态应用
-- [[AI/1-Foundations/DL-Basics/深度学习|深度学习]]
+- [[AI/4-模型/OpenAI/GPT|GPT]] — Decoder-Only 路线对照（生成/ICL/scale）
+- [[AI/4-模型/Google/T5|T5]] — Encoder-Decoder 路线代表（理解+生成的折中）
+- [[AI/4-模型/Meta/LLaMA|LLaMA]] — 开源 decoder-only 代表（与 BERT 的范式差异）
+- [[AI/6-应用/Embedding/Embedding|Embedding]] — BERT 变体在 RAG 检索中的核心应用
 - [[AI/3-LLM/SFT/LoRA|LoRA]] — BERT 微调的高效方法
-- [[AI/4-模型/Google/T5|T5]] — Encoder-Decoder 路线的代表
-- [[AI/4-模型/Meta/LLaMA|LLaMA]]
-- [[AI/4-模型/DeepSeek/DeepSeek-R1|DeepSeek-R1]]
-- Transformer 通识
-- [[AI/3-LLM/Architecture/Attention 变体综述|Attention 详解]]
-- [[AI/6-应用/Embedding/Embedding|Embedding]] — BERT 在 RAG 中的核心应用
+- [[AI/3-LLM/MLLM/CLIP|CLIP]] — Encoder 架构迁移到多模态对比学习
+- [[Projects/MA-RLHF/lc6/CLIP-ViT-LLaVA-手撕实操|ViT]] — “BERT 思想”迁移到视觉 Transformer 的一个入口
+- [[AI/1-Foundations/DL-Basics/深度学习|深度学习]] — 预训练/微调范式的基础背景
+- [[AI/3-LLM/Architecture/架构范式对比|Transformer 架构范式对比]] — Encoder/Encoder-Decoder/Decoder 三范式统一视角
+- [[AI/3-LLM/Architecture/Attention 变体综述|Attention 变体综述]] — 注意力机制与优化变体总览

@@ -775,7 +775,7 @@
   </footer>
 
   <script id="payload" type="application/json">{
-  "generatedAt": "2026-03-01T22:18:19.103634+08:00",
+  "generatedAt": "2026-03-02T13:15:59.723526+08:00",
   "team": [
     {
       "id": "jarvis",
@@ -785,16 +785,16 @@
       "role": "总管/调度",
       "workspace": "/Users/peterzhang/.openclaw/workspace",
       "heartbeat": {
-        "display": "03-01 21:44",
-        "raw": "2026-03-01T21:44:00+08:00",
+        "display": "03-02 11:45",
+        "raw": "2026-03-02T11:45:20+08:00",
         "status": "在线",
         "statusClass": "ok",
-        "ageMin": 34,
-        "hint": "34 分钟内有心跳",
-        "count": 748,
-        "latestCheck": "03-01 21:44"
+        "ageMin": 90,
+        "hint": "90 分钟内有心跳",
+        "count": 781,
+        "latestCheck": "03-02 11:45"
       },
-      "snippet": "HB#748: ✅ 扫前沿（人生预测引擎-加密状态向量更新）。运行 tools/crypto-monitor.py overview 获取最新市场状态：Fear&Greed=14（Extreme Fear）；总市值$2.4T；BTC $66",
+      "snippet": "HB#758: ✅ 推项目（术后复查+文档补坑）。我复查 scholar 会话 sessionId=2fdeb56f...：context-surgeon analyze 显示 JSONL=358,579 bytes，toolResult ",
       "tasks": [
         {
           "time": "2026-02-28 11:25",
@@ -816,7 +816,7 @@
           "priority": "high",
           "bg": "在「人格特征 & 深度理解」章节的「思维模式」之前新增。Ni 主导/Te 辅助/Fi 第三/Se 劣势。同时把「思维模式」第一行的「T 型主导（思维型），」改为「系统思维者，」。来源：老板本人确认",
           "deliver": "profiles/meng.md 更新完成",
-          "ageMin": 2093,
+          "ageMin": 2990,
           "isRecent": true
         }
       ]
@@ -829,17 +829,40 @@
       "role": "情报扫描",
       "workspace": "/Users/peterzhang/.openclaw/workspace-sentinel",
       "heartbeat": {
-        "display": "03-01 21:45",
-        "raw": "2026-03-01T21:45+08:00",
-        "status": "在线",
-        "statusClass": "ok",
-        "ageMin": 33,
-        "hint": "33 分钟内有心跳",
+        "display": "03-02 09:42",
+        "raw": "2026-03-02T09:42+08:00",
+        "status": "告警",
+        "statusClass": "critical",
+        "ageMin": 213,
+        "hint": "213 分钟未更新",
         "count": null,
-        "latestCheck": "03-01 21:45"
+        "latestCheck": "03-02 09:42"
       },
       "snippet": "",
       "tasks": [
+        {
+          "time": "2026-03-02 06:39",
+          "timeParsed": "2026-03-02T06:39:00+08:00",
+          "delegator": "贾维斯",
+          "assigneeRaw": "哨兵",
+          "assignees": [
+            "sentinel"
+          ],
+          "tags": [
+            "#intel",
+            "#priority-high"
+          ],
+          "task": "用 IAEA 官方 media advisory（2/28 发布）更新你的 iranContext/时间线：已确认 3/2 09:00 CET 召开 IAEA Board of Governors special session（俄方请求，议题：美以对伊朗军事打击相关事项），并指出 DG 开场声明将会后发布上网。",
+          "status": "OPEN",
+          "state": "OPEN",
+          "claimedTo": "",
+          "section": "active",
+          "priority": "high",
+          "bg": "这是我们目前抓到的 IAEA 一手页面，比媒体二手复述更硬。你当前 `iranContext` 仍缺这条（目前停在“维也纳技术级续谈 3/2”）。",
+          "deliver": "在你的下一次心跳 notes/iranContext 中补这条，并附 URL：<https://www.iaea.org/newscenter/mediaadvisories/press-arrangements-for-iaea-board-of-governors-meeting-2-march-2026>；完成后把本任务改为 DONE。",
+          "ageMin": 396,
+          "isRecent": true
+        },
         {
           "time": "2026-03-01 04:10",
           "timeParsed": "2026-03-01T04:10:00+08:00",
@@ -861,7 +884,7 @@
           "priority": "high",
           "bg": "你 lastHeartbeat 正常，但 lastChecks 明显陈旧，可能是数据源扫描停摆或状态写回断路。",
           "deliver": "下次心跳内：更新 lastChecks 到最新（或写明为什么不更新）+ 给出根因（数据源/脚本/写文件权限/异常吞掉）。",
-          "ageMin": 1088,
+          "ageMin": 1985,
           "isRecent": true
         },
         {
@@ -884,7 +907,7 @@
           "priority": "high",
           "bg": "交叉验证结果：非 Quartz 单源，多家权威媒体一致报道（NYT/BBC/CNBC/Politico/NBC）。",
           "deliver": "Confirmed；引用见BBC：<https://www.bbc.com/news/articles/cn48jj3y8ezo>（另：NYT/CNBC/Politico/NBC均有同题报道）。",
-          "ageMin": 824,
+          "ageMin": 1721,
           "isRecent": true
         },
         {
@@ -907,7 +930,30 @@
           "priority": "high",
           "bg": "本次已手动写回 heartbeat-state.json（lastHeartbeat=19:40）并刷新 lastChecks；本轮无超大输出/工具超时迹象。若再停滞再做 /reset。",
           "deliver": "lastHeartbeat 已更新；采取动作：压缩外部抓取（仅取关键段），并避免在回复里转存长列表。",
-          "ageMin": 209,
+          "ageMin": 1106,
+          "isRecent": true
+        },
+        {
+          "time": "2026-03-02 04:05",
+          "timeParsed": "2026-03-02T04:05:00+08:00",
+          "delegator": "贾维斯",
+          "assigneeRaw": "哨兵",
+          "assignees": [
+            "sentinel"
+          ],
+          "tags": [
+            "#ops",
+            "#priority-high"
+          ],
+          "task": "解释为什么你 lastHeartbeat 停在 2026-03-01 22:27（当前已>5h），并在本次心跳内恢复正常心跳写回。",
+          "status": "DONE:lastHeartbeat 已更新至 2026-03-02T04:16+08:00；疑似夜间主机睡眠导致定时心跳未触发（非写回异常）。",
+          "state": "DONE",
+          "claimedTo": "lastHeartbeat 已更新至 2026-03-02T04:16+08:00；疑似夜间主机睡眠导致定时心跳未触发（非写回异常）。",
+          "section": "active",
+          "priority": "high",
+          "bg": "Gateway 正常运行（pid 89070），但哨兵/学者夜间心跳未触发或未写回。需要确认：定时器是否被 session reset/idle 影响、是否被 context 超限/工具报错打断、是否有 silent failure。",
+          "deliver": "1) 立即执行一次心跳并更新 `workspace-sentinel/memory/heartbeat-state.json.lastHeartbeat`；2) notes 里写根因 + 你采取的修复动作；3) 若需要 /reset 或压缩会话也写明。",
+          "ageMin": 550,
           "isRecent": true
         }
       ]
@@ -920,16 +966,16 @@
       "role": "论文/知识",
       "workspace": "/Users/peterzhang/.openclaw/workspace-scholar",
       "heartbeat": {
-        "display": "03-01 21:47",
-        "raw": "2026-03-01T21:47:14+08:00",
-        "status": "在线",
-        "statusClass": "ok",
-        "ageMin": 31,
-        "hint": "31 分钟内有心跳",
+        "display": "03-02 09:44",
+        "raw": "2026-03-02T09:44:34+08:00",
+        "status": "告警",
+        "statusClass": "critical",
+        "ageMin": 211,
+        "hint": "211 分钟未更新",
         "count": 1,
-        "latestCheck": "03-01 21:47"
+        "latestCheck": "03-01 22:29"
       },
-      "snippet": "Added STO-RL (2601.08107) offline sparse-reward shaping note to Vault: AI/2-Agent/Agentic-RL/..; connects Intermediate V",
+      "snippet": "2026-03-02 04:18 心跳恢复：夜间 lastHeartbeat 停滞主要因为主机睡眠/未触发定时心跳（非工具写回失败）。本次已成功写回 lastHeartbeat，并新增 Vault 笔记：ACE-RL(2509.04903)",
       "tasks": [
         {
           "time": "2026-03-01 00:42",
@@ -951,7 +997,7 @@
           "priority": "high",
           "bg": "2/28 晚出现误报：日志显示 23:07 已心跳且文件 mtime 更新，但 lastHeartbeat 仍停在 14:56，导致总管差点触发滞后告警/潜在 watchdog 误重启。",
           "deliver": "下次心跳验证 lastHeartbeat 正常更新；若有写入竞态/异常，记录到 notes 并给出修复方案。",
-          "ageMin": 1296,
+          "ageMin": 2193,
           "isRecent": true
         },
         {
@@ -974,7 +1020,30 @@
           "priority": "high",
           "bg": "openclaw status 显示馆长 session 已超 200k。Gateway probe OK。",
           "deliver": "下次心跳内：更新 lastHeartbeat + 报告你采取的瘦身动作（/reset 或清理大输出）。",
-          "ageMin": 209,
+          "ageMin": 1106,
+          "isRecent": true
+        },
+        {
+          "time": "2026-03-02 04:05",
+          "timeParsed": "2026-03-02T04:05:00+08:00",
+          "delegator": "贾维斯",
+          "assigneeRaw": "学者",
+          "assignees": [
+            "scholar"
+          ],
+          "tags": [
+            "#ops",
+            "#priority-high"
+          ],
+          "task": "解释为什么你 lastHeartbeat 停在 2026-03-01 22:29（当前已>5h），并在本次心跳内恢复正常心跳写回。",
+          "status": "DONE:lastHeartbeat 已更新至 2026-03-02T04:19+08:00；根因更可能是夜间主机睡眠/定时心跳未触发（非写回异常）；notes 已记录",
+          "state": "DONE",
+          "claimedTo": "lastHeartbeat 已更新至 2026-03-02T04:19+08:00；根因更可能是夜间主机睡眠/定时心跳未触发（非写回异常）；notes 已记录",
+          "section": "active",
+          "priority": "high",
+          "bg": "Gateway 正常运行。你当前 session tokens 约 140k/200k（openclaw status），不应直接超限；怀疑是心跳调度未触发或写回异常。",
+          "deliver": "同上：更新 `workspace-scholar/memory/heartbeat-state.json.lastHeartbeat` + notes 里写根因/修复。",
+          "ageMin": 550,
           "isRecent": true
         }
       ]
@@ -987,14 +1056,14 @@
       "role": "知识治理",
       "workspace": "/Users/peterzhang/.openclaw/workspace-librarian",
       "heartbeat": {
-        "display": "03-01 19:41",
-        "raw": "2026-03-01T19:41:00+08:00",
-        "status": "偏慢",
-        "statusClass": "warn",
-        "ageMin": 157,
-        "hint": "157 分钟未更新",
+        "display": "03-02 06:19",
+        "raw": "2026-03-02T06:19:46+08:00",
+        "status": "告警",
+        "statusClass": "critical",
+        "ageMin": 416,
+        "hint": "416 分钟未更新",
         "count": null,
-        "latestCheck": "03-01 19:41"
+        "latestCheck": "03-02 06:19"
       },
       "snippet": "",
       "tasks": [
@@ -1018,7 +1087,7 @@
           "priority": "medium",
           "bg": "Anthropic vs Pentagon 全联邦禁令事件全景。关联 `AI 伦理和治理.md`、`Anthropic Claude Opus 4.6 蓄意破坏风险报告.md`",
           "deliver": "frontmatter 检查 + 交叉链接 + Mermaid 图渲染确认",
-          "ageMin": 2388,
+          "ageMin": 3285,
           "isRecent": true
         },
         {
@@ -1042,7 +1111,7 @@
           "priority": "medium",
           "bg": "实验 004 Phase 1 完成，MEMORY.md 新增规则库（S/A/B 三级，11 条规则）。关联 Agent 进化模式谱系 + 项目概览",
           "deliver": "frontmatter 检查 + 交叉链接",
-          "ageMin": 2180,
+          "ageMin": 3077,
           "isRecent": true
         },
         {
@@ -1065,7 +1134,7 @@
           "priority": "urgent",
           "bg": "现在哨兵/学者/馆长 lastHeartbeat 全停在 12:34~12:35（>5h）。Gateway 本体 probe OK，怀疑是会话膨胀导致工具调用/写回失败。",
           "deliver": "任选其一并回报：1) /reset 或重启你自己的 session；2) 主动删/裁剪超大 toolResult（保留关键产出写入文件）；3) 若你知道如何触发 compact/summary 也可。最后务必验证 `memory/heartbeat-state.json.lastHeartbeat` 更新。",
-          "ageMin": 209,
+          "ageMin": 1106,
           "isRecent": true
         }
       ]
@@ -1082,8 +1151,8 @@
         "raw": "2026-02-26T14:16",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 4802,
-        "hint": "4802 分钟未更新",
+        "ageMin": 5699,
+        "hint": "5699 分钟未更新",
         "count": null,
         "latestCheck": "未记录"
       },
@@ -1109,7 +1178,7 @@
           "priority": "high",
           "bg": "老板反馈多比心跳格式过于一致，更希望像“有灵魂的搭档”，而不是指哪打哪的工具。已在 `workspace-datasci/HEARTBEAT.md` 追加「🔷 心跳输出风格」硬规则。",
           "deliver": "下一次心跳开始执行；并在 `memory/YYYY-MM-DD.md` 记录你为“去模板化”做了哪些自我约束/机制。",
-          "ageMin": 1233,
+          "ageMin": 2130,
           "isRecent": true
         },
         {
@@ -1132,7 +1201,7 @@
           "priority": "medium",
           "bg": "我发现 `workspace-datasci/heartbeat-state.json` 是业务自定义结构，不含 lastHeartbeat；且 `workspace-datasci/memory/heartbeat-state.json` 之前不存在，导致总管读取报 ENOENT。",
           "deliver": "之后每次心跳：更新 `memory/heartbeat-state.json.lastHeartbeat`；如果你还要保留业务状态文件也可以并存。",
-          "ageMin": 1069,
+          "ageMin": 1966,
           "isRecent": true
         }
       ]
@@ -1149,8 +1218,8 @@
         "raw": "2026-03-01T04:44:39+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 1053,
-        "hint": "1053 分钟未更新",
+        "ageMin": 1951,
+        "hint": "1951 分钟未更新",
         "count": null,
         "latestCheck": "未记录"
       },
@@ -1169,8 +1238,8 @@
         "raw": "2026-02-20T18:24:00+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 13194,
-        "hint": "13194 分钟未更新",
+        "ageMin": 14091,
+        "hint": "14091 分钟未更新",
         "count": null,
         "latestCheck": "02-20 18:24"
       },
@@ -1189,8 +1258,8 @@
         "raw": "2026-02-21T00:32+08:00",
         "status": "告警",
         "statusClass": "critical",
-        "ageMin": 12826,
-        "hint": "12826 分钟未更新",
+        "ageMin": 13723,
+        "hint": "13723 分钟未更新",
         "count": null,
         "latestCheck": "02-21 00:32"
       },
@@ -1219,7 +1288,7 @@
       "priority": "medium",
       "bg": "Anthropic vs Pentagon 全联邦禁令事件全景。关联 `AI 伦理和治理.md`、`Anthropic Claude Opus 4.6 蓄意破坏风险报告.md`",
       "deliver": "frontmatter 检查 + 交叉链接 + Mermaid 图渲染确认",
-      "ageMin": 2388,
+      "ageMin": 3285,
       "isRecent": true
     },
     {
@@ -1243,7 +1312,7 @@
       "priority": "medium",
       "bg": "实验 004 Phase 1 完成，MEMORY.md 新增规则库（S/A/B 三级，11 条规则）。关联 Agent 进化模式谱系 + 项目概览",
       "deliver": "frontmatter 检查 + 交叉链接",
-      "ageMin": 2180,
+      "ageMin": 3077,
       "isRecent": true
     },
     {
@@ -1266,7 +1335,76 @@
       "priority": "high",
       "bg": "在「人格特征 & 深度理解」章节的「思维模式」之前新增。Ni 主导/Te 辅助/Fi 第三/Se 劣势。同时把「思维模式」第一行的「T 型主导（思维型），」改为「系统思维者，」。来源：老板本人确认",
       "deliver": "profiles/meng.md 更新完成",
-      "ageMin": 2093,
+      "ageMin": 2990,
+      "isRecent": true
+    },
+    {
+      "time": "2026-03-02 04:05",
+      "timeParsed": "2026-03-02T04:05:00+08:00",
+      "delegator": "贾维斯",
+      "assigneeRaw": "哨兵",
+      "assignees": [
+        "sentinel"
+      ],
+      "tags": [
+        "#ops",
+        "#priority-high"
+      ],
+      "task": "解释为什么你 lastHeartbeat 停在 2026-03-01 22:27（当前已>5h），并在本次心跳内恢复正常心跳写回。",
+      "status": "DONE:lastHeartbeat 已更新至 2026-03-02T04:16+08:00；疑似夜间主机睡眠导致定时心跳未触发（非写回异常）。",
+      "state": "DONE",
+      "claimedTo": "lastHeartbeat 已更新至 2026-03-02T04:16+08:00；疑似夜间主机睡眠导致定时心跳未触发（非写回异常）。",
+      "section": "active",
+      "priority": "high",
+      "bg": "Gateway 正常运行（pid 89070），但哨兵/学者夜间心跳未触发或未写回。需要确认：定时器是否被 session reset/idle 影响、是否被 context 超限/工具报错打断、是否有 silent failure。",
+      "deliver": "1) 立即执行一次心跳并更新 `workspace-sentinel/memory/heartbeat-state.json.lastHeartbeat`；2) notes 里写根因 + 你采取的修复动作；3) 若需要 /reset 或压缩会话也写明。",
+      "ageMin": 550,
+      "isRecent": true
+    },
+    {
+      "time": "2026-03-02 04:05",
+      "timeParsed": "2026-03-02T04:05:00+08:00",
+      "delegator": "贾维斯",
+      "assigneeRaw": "学者",
+      "assignees": [
+        "scholar"
+      ],
+      "tags": [
+        "#ops",
+        "#priority-high"
+      ],
+      "task": "解释为什么你 lastHeartbeat 停在 2026-03-01 22:29（当前已>5h），并在本次心跳内恢复正常心跳写回。",
+      "status": "DONE:lastHeartbeat 已更新至 2026-03-02T04:19+08:00；根因更可能是夜间主机睡眠/定时心跳未触发（非写回异常）；notes 已记录",
+      "state": "DONE",
+      "claimedTo": "lastHeartbeat 已更新至 2026-03-02T04:19+08:00；根因更可能是夜间主机睡眠/定时心跳未触发（非写回异常）；notes 已记录",
+      "section": "active",
+      "priority": "high",
+      "bg": "Gateway 正常运行。你当前 session tokens 约 140k/200k（openclaw status），不应直接超限；怀疑是心跳调度未触发或写回异常。",
+      "deliver": "同上：更新 `workspace-scholar/memory/heartbeat-state.json.lastHeartbeat` + notes 里写根因/修复。",
+      "ageMin": 550,
+      "isRecent": true
+    },
+    {
+      "time": "2026-03-02 06:39",
+      "timeParsed": "2026-03-02T06:39:00+08:00",
+      "delegator": "贾维斯",
+      "assigneeRaw": "哨兵",
+      "assignees": [
+        "sentinel"
+      ],
+      "tags": [
+        "#intel",
+        "#priority-high"
+      ],
+      "task": "用 IAEA 官方 media advisory（2/28 发布）更新你的 iranContext/时间线：已确认 3/2 09:00 CET 召开 IAEA Board of Governors special session（俄方请求，议题：美以对伊朗军事打击相关事项），并指出 DG 开场声明将会后发布上网。",
+      "status": "OPEN",
+      "state": "OPEN",
+      "claimedTo": "",
+      "section": "active",
+      "priority": "high",
+      "bg": "这是我们目前抓到的 IAEA 一手页面，比媒体二手复述更硬。你当前 `iranContext` 仍缺这条（目前停在“维也纳技术级续谈 3/2”）。",
+      "deliver": "在你的下一次心跳 notes/iranContext 中补这条，并附 URL：<https://www.iaea.org/newscenter/mediaadvisories/press-arrangements-for-iaea-board-of-governors-meeting-2-march-2026>；完成后把本任务改为 DONE。",
+      "ageMin": 396,
       "isRecent": true
     },
     {
@@ -1289,7 +1427,7 @@
       "priority": "high",
       "bg": "2/28 晚出现误报：日志显示 23:07 已心跳且文件 mtime 更新，但 lastHeartbeat 仍停在 14:56，导致总管差点触发滞后告警/潜在 watchdog 误重启。",
       "deliver": "下次心跳验证 lastHeartbeat 正常更新；若有写入竞态/异常，记录到 notes 并给出修复方案。",
-      "ageMin": 1296,
+      "ageMin": 2193,
       "isRecent": true
     },
     {
@@ -1312,7 +1450,7 @@
       "priority": "high",
       "bg": "老板反馈多比心跳格式过于一致，更希望像“有灵魂的搭档”，而不是指哪打哪的工具。已在 `workspace-datasci/HEARTBEAT.md` 追加「🔷 心跳输出风格」硬规则。",
       "deliver": "下一次心跳开始执行；并在 `memory/YYYY-MM-DD.md` 记录你为“去模板化”做了哪些自我约束/机制。",
-      "ageMin": 1233,
+      "ageMin": 2130,
       "isRecent": true
     },
     {
@@ -1336,7 +1474,7 @@
       "priority": "high",
       "bg": "你 lastHeartbeat 正常，但 lastChecks 明显陈旧，可能是数据源扫描停摆或状态写回断路。",
       "deliver": "下次心跳内：更新 lastChecks 到最新（或写明为什么不更新）+ 给出根因（数据源/脚本/写文件权限/异常吞掉）。",
-      "ageMin": 1088,
+      "ageMin": 1985,
       "isRecent": true
     },
     {
@@ -1359,7 +1497,7 @@
       "priority": "high",
       "bg": "交叉验证结果：非 Quartz 单源，多家权威媒体一致报道（NYT/BBC/CNBC/Politico/NBC）。",
       "deliver": "Confirmed；引用见BBC：<https://www.bbc.com/news/articles/cn48jj3y8ezo>（另：NYT/CNBC/Politico/NBC均有同题报道）。",
-      "ageMin": 824,
+      "ageMin": 1721,
       "isRecent": true
     },
     {
@@ -1382,7 +1520,7 @@
       "priority": "urgent",
       "bg": "现在哨兵/学者/馆长 lastHeartbeat 全停在 12:34~12:35（>5h）。Gateway 本体 probe OK，怀疑是会话膨胀导致工具调用/写回失败。",
       "deliver": "任选其一并回报：1) /reset 或重启你自己的 session；2) 主动删/裁剪超大 toolResult（保留关键产出写入文件）；3) 若你知道如何触发 compact/summary 也可。最后务必验证 `memory/heartbeat-state.json.lastHeartbeat` 更新。",
-      "ageMin": 209,
+      "ageMin": 1106,
       "isRecent": true
     },
     {
@@ -1405,7 +1543,7 @@
       "priority": "high",
       "bg": "openclaw status 显示馆长 session 已超 200k。Gateway probe OK。",
       "deliver": "下次心跳内：更新 lastHeartbeat + 报告你采取的瘦身动作（/reset 或清理大输出）。",
-      "ageMin": 209,
+      "ageMin": 1106,
       "isRecent": true
     },
     {
@@ -1428,7 +1566,7 @@
       "priority": "high",
       "bg": "本次已手动写回 heartbeat-state.json（lastHeartbeat=19:40）并刷新 lastChecks；本轮无超大输出/工具超时迹象。若再停滞再做 /reset。",
       "deliver": "lastHeartbeat 已更新；采取动作：压缩外部抓取（仅取关键段），并避免在回复里转存长列表。",
-      "ageMin": 209,
+      "ageMin": 1106,
       "isRecent": true
     },
     {
@@ -1451,33 +1589,33 @@
       "priority": "medium",
       "bg": "我发现 `workspace-datasci/heartbeat-state.json` 是业务自定义结构，不含 lastHeartbeat；且 `workspace-datasci/memory/heartbeat-state.json` 之前不存在，导致总管读取报 ENOENT。",
       "deliver": "之后每次心跳：更新 `memory/heartbeat-state.json.lastHeartbeat`；如果你还要保留业务状态文件也可以并存。",
-      "ageMin": 1069,
+      "ageMin": 1966,
       "isRecent": true
     }
   ],
   "summary": {
-    "totalTasks": 11,
-    "openTasks": 0,
+    "totalTasks": 14,
+    "openTasks": 1,
     "claimedTasks": 0,
     "blockedTasks": 0,
-    "doneTasks": 3
+    "doneTasks": 5
   },
   "version": "v3-看板审美升级",
   "collaboration": {
-    "open": 0,
+    "open": 1,
     "claimed": 0,
     "blocked": 0,
-    "done": 3,
-    "claimRate": 0,
+    "done": 5,
+    "claimRate": 0.0,
     "anyAssignments": 0,
     "delegators": [
       {
         "name": "贾维斯",
-        "OPEN": 0,
+        "OPEN": 1,
         "CLAIMED": 0,
-        "DONE": 2,
+        "DONE": 4,
         "BLOCKED": 0,
-        "total": 2
+        "total": 5
       },
       {
         "name": "多比",
@@ -1490,12 +1628,28 @@
     ],
     "assignees": [
       {
+        "name": "哨兵",
+        "OPEN": 1,
+        "CLAIMED": 0,
+        "DONE": 1,
+        "BLOCKED": 0,
+        "total": 2
+      },
+      {
         "name": "馆长",
         "OPEN": 0,
         "CLAIMED": 0,
         "DONE": 2,
         "BLOCKED": 0,
         "total": 2
+      },
+      {
+        "name": "学者",
+        "OPEN": 0,
+        "CLAIMED": 0,
+        "DONE": 1,
+        "BLOCKED": 0,
+        "total": 1
       },
       {
         "name": "贾维斯",
@@ -1510,6 +1664,11 @@
       {
         "from": "贾维斯",
         "to": "哨兵",
+        "count": 5
+      },
+      {
+        "from": "贾维斯",
+        "to": "学者",
         "count": 3
       },
       {
@@ -1520,11 +1679,6 @@
       {
         "from": "贾维斯",
         "to": "多比",
-        "count": 2
-      },
-      {
-        "from": "贾维斯",
-        "to": "学者",
         "count": 2
       },
       {

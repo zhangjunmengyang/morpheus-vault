@@ -200,6 +200,7 @@ PEFT 方法（Prefix-tuning、Adapter、LoRA）可以在 <0.1% 参数下实现�
 
 ## 相关
 
+- [[AI/3-LLM/MLLM/Evaluation/Reporting-Bias-Impairs-Vision-Language-Reasoning-Scale-Cant-Overcome-Pragmatics|Scale Can't Overcome Pragmatics]] — Reporting bias 解释“scale 不带来计数/空间/否定”等推理能力
 - [[AI/3-LLM/MLLM/多模态 LLM 架构]] — 架构细节深入，Projector 对比
 - [[AI/3-LLM/MLLM/CLIP|CLIP]] — 多模态对齐的基石
 - [[AI/3-LLM/MLLM/BLIP-2|BLIP-2]] — Q-Former 的原始设计

@@ -204,3 +204,6 @@ flowchart TD
 
 **第③层（运行时）**
 - [[AI/2-Agent/Agentic-RL/Agent自我进化策略-从记忆习惯到自主成长|Agent 自我进化策略]] — 10 种 Prompt 工程进化模式
+
+**工程实现案例**
+- [[Projects/Agent-Self-Evolution/004-记忆代谢|实验 004：记忆代谢]] — 贾维斯从第②层 Reflexion 升级到 ExpeL 的实际工程路径（S/A/B 三级规则库 + Phase 2 Evaluator 机制）

@@ -1308,9 +1308,10 @@ flowchart TD
 
 ---
 
-**相关链接**：
+## See Also
+
 - [[AI/2-Agent/Fundamentals/Agent 生产实践|Agent 生产实践]] — Agent 推理模式的生产落地经验
 - [[AI/2-Agent/Fundamentals/Tool Use|Tool Use]] — ReAct 中的工具调用最佳实践
-- AI Agent 技术全景 — Agent 推理在全景中的位置
 - [[AI/6-应用/幻觉问题|幻觉问题]] — CoT 推理链中的幻觉风险
-- AI 安全与对齐 — 推理透明度对安全审查的价值
+- [[AI/2-Agent/Agentic-RL/Reflexion-Verbal-Reinforcement-Learning|Reflexion]] — ReAct 的进化版：在行动循环基础上加入自我反思和经验积累
+- [[AI/2-Agent/Agentic-RL/Agent-进化模式谱系|Agent 进化模式谱系]] — ReAct/Reflexion/ToT 在三层进化框架中的位置（第②层 in-context 进化的奠基工作）

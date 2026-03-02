@@ -99,3 +99,4 @@ flowchart TD
 - [[AI/2-Agent/Agentic-RL/AgentQ-MCTS-Self-Critique-DPO|AgentQ]] — 进一步进化：用 MCTS + DPO 做系统性探索（训练权重而非 in-context）
 - [[AI/2-Agent/Agentic-RL/Agent-进化模式谱系|Agent 进化模式谱系]] — 三层框架（ExpeL 是 in-context 进化层的进阶版）
 - [[AI/2-Agent/Fundamentals/Agent-Memory-机制|Agent Memory 机制]] — 更宽泛的 Agent 记忆系统设计
+- [[Projects/Agent-Self-Evolution/004-记忆代谢|实验 004：记忆代谢]] — ExpeL 规则库机制在贾维斯 MEMORY.md 的工程实现（ADD/UPVOTE/DOWNVOTE → S/A/B 三级置信度）

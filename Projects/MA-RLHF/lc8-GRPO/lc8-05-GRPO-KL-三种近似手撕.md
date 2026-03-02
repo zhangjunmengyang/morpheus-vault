@@ -22,7 +22,7 @@ related:
 **来源**：MA-RLHF `notebook/GRPO/GRPO_KL.ipynb`  
 **参考**：Schulman 博客 http://joschu.net/blog/kl-approx.html  
 **难度**：★★★★☆（数学基础，理解 GRPO/PPO KL 惩罚的正确实现）  
-**关联**：[[AI/3-LLM/MA-RLHF课程/lc8-GRPO-手撕实操|lc8-GRPO-手撕实操]] | [[Projects/MA-RLHF/lc8-PPO/lc8-01-PPO-手撕实操|lc8-RLHF-PPO-手撕实操]]
+**关联**：[[Projects/MA-RLHF/lc8-GRPO/lc8-01-GRPO-手撕实操|lc8-GRPO-手撕实操]] | [[Projects/MA-RLHF/lc8-PPO/lc8-01-PPO-手撕实操|lc8-RLHF-PPO-手撕实操]]
 
 ---
 

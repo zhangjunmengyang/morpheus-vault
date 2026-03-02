@@ -143,10 +143,10 @@ Prompt Engineering 的本质是**把人的意图无损传递给模型**。越是
 
 另外一个反直觉的点：prompt 并不是越长越好。很多时候一个精炼的 prompt 比一个冗长的 prompt 效果更好，因为噪音少了，模型更容易抓住重点。
 
-## 相关
+## See Also
 
-- [[AI/6-应用/Prompt/Prompt-Engineering-基础|Prompt Engineering 实践]]
-- [[AI/6-应用/Prompt/Prompt-攻击|Prompt 攻击与防御]]
-- [[AI/6-应用/Prompt/Prompt-Tools|Prompt 工具集]]
-- [[AI/6-应用/Synthetic-Data/Synthetic-Data|数据合成]]
-- [[AI/4-模型/DeepSeek/DeepSeek-R1|DeepSeek-R1]]
+- [[AI/6-应用/Prompt/Prompt-Engineering-基础|Prompt Engineering 实践]] — 基础模板/工程化写法
+- [[AI/6-应用/Prompt/Prompt-攻击|Prompt 攻击与防御]] — 安全视角：注入/越狱/防御
+- [[AI/6-应用/Prompt/Prompt-Tools|Prompt 工具集]] — 常用工具与工作流
+- [[AI/6-应用/Synthetic-Data/Synthetic-Data|数据合成]] — 用 Prompt 生成训练数据
+- [[AI/4-模型/DeepSeek/DeepSeek-R1|DeepSeek-R1]] — 推理类模型与 GRPO 背景（Prompt 与 RL 的交界）

@@ -171,22 +171,21 @@ R1-Zero 是论文中最令人兴奋的实验——直接在 base model 上做 RL
 - [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO]] + [[AI/3-LLM/Architecture/Mamba-SSM|Mamba]] 的组合：SSM 的线性推理效率 + RL 的推理能力激发，能否做出推理效率极高的小模型？
 - R1 的蒸馏成功说明 CoT 是可迁移的"知识"。那 Agent 的 ReAct 轨迹能否类似地蒸馏？这对  领域有重大意义
 
-## 相关
+## See Also
 
-- [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO 深度理解]] — R1 使用的核心 RL 算法
-- [[Projects/DeepSeek-R1-学习笔记|DeepSeek R1 学习笔记]] — 更详细的学习记录
-- [[AI/3-LLM/RL/算法/DeepSeek-Math|DeepSeek-Math]] — GRPO 最初提出的论文
-- [[AI/3-LLM/RL/算法/PPO 原理|PPO 原理]] — GRPO 的前身对比
-- [[AI/3-LLM/RL/Fundamentals/RL 概览|RL 概览]] — 强化学习基础
-- [[AI/3-LLM/Infra/分布式训练|分布式训练]] — R1 训练所需的基础设施
-- [[AI/3-LLM/RL/实践/OpenR1|OpenR1]] — 社区复现项目
-- [[AI/4-模型/Meta/LLaMA|LLaMA]]
-- [[AI/4-模型/OpenAI/GPT|GPT]] — RLHF 路线 vs 纯 RL 路线的对比
-- MoE 基础 — R1 底座的 MoE 架构
-- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]]
-- [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL 概述]]
+- [[AI/3-LLM/RL/算法/GRPO 深度理解|GRPO 深度理解]] — R1 使用的核心 RL 算法（critic-free + group advantage）
+- [[Projects/DeepSeek-R1-学习笔记|DeepSeek R1 学习笔记]] — 更细的学习记录/复现过程
+- [[AI/3-LLM/RL/算法/DeepSeek-Math|DeepSeek-Math]] — GRPO 的起源论文与可验证任务范式
+- [[AI/3-LLM/RL/算法/PPO 原理|PPO 原理]] — 对照：为什么 GRPO 取代 PPO（尤其在大模型显存约束下）
+- [[AI/3-LLM/RL/Fundamentals/RL 概览|RL 概览]] — 强化学习基础（便于面试回忆）
+- [[AI/3-LLM/Infra/分布式训练|分布式训练]] — 训练基础设施（并行/通信/吞吐）
+- [[AI/3-LLM/RL/实践/OpenR1|OpenR1]] — 社区复现路线
+- [[AI/4-模型/OpenAI/GPT|GPT]] — RLHF（SFT→RM→PPO）路线对照“纯 RL 激发能力”路线
+- [[AI/3-LLM/Architecture/MoE 深度解析|MoE 深度解析]] — R1/V3 底座的 MoE 关键机制
+- [[AI/3-LLM/Frameworks/verl/verl 概述|verl 概述]] — 工具链：用 verl 复现/跑 GRPO
+- [[AI/3-LLM/Frameworks/TRL/TRL 概述|TRL 概述]] — 替代工具链：偏好优化/对齐训练实践
 
 **代码手撕（理论 → 代码）：**
-- [[Projects/MA-RLHF/lc5/lc5-01-DeepSeek-V3-手撕实操|DeepSeek-V3-手撕实操]] ⭐⭐⭐⭐⭐ — MLA（KV cache 降 16x）+ MoE + mHC 架构从零实现，面试高频考点
+- [[Projects/MA-RLHF/lc5/lc5-01-DeepSeek-V3-手撕实操|DeepSeek-V3-手撕实操]] ⭐⭐⭐⭐⭐ — MLA（KV cache 降 16x）+ MoE + mHC 架构从零实现
 - [[Projects/MA-RLHF/lc8-GRPO/lc8-01-GRPO-手撕实操|GRPO-手撕实操]] ⭐⭐⭐⭐⭐ — R1 核心训练算法从零实现
 - [[Projects/MA-RLHF/lc8-PPO/lc8-02-MA-RLHF-核心代码注解|MA-RLHF 核心代码注解]] — PPO/GRPO 在 LLM RLHF 中的完整训练框架
